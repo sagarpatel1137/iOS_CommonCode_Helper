@@ -13,6 +13,8 @@
 		8121DD732C6216E8003460A5 /* iOS_CommonCode.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8121DD682C6216E8003460A5 /* iOS_CommonCode.framework */; };
 		8121DD782C6216E8003460A5 /* iOS_CommonCodeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8121DD772C6216E8003460A5 /* iOS_CommonCodeTests.swift */; };
 		8121DD792C6216E8003460A5 /* iOS_CommonCode.h in Headers */ = {isa = PBXBuildFile; fileRef = 8121DD6B2C6216E8003460A5 /* iOS_CommonCode.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8121DD842C621A66003460A5 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8121DD832C621A66003460A5 /* Reachability.swift */; };
+		8121DD852C621A66003460A5 /* ForceUpdate_Manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8121DD822C621A66003460A5 /* ForceUpdate_Manager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +36,8 @@
 		8121DD6C2C6216E8003460A5 /* iOS_CommonCode.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = iOS_CommonCode.docc; sourceTree = "<group>"; };
 		8121DD722C6216E8003460A5 /* iOS_CommonCodeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iOS_CommonCodeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8121DD772C6216E8003460A5 /* iOS_CommonCodeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOS_CommonCodeTests.swift; sourceTree = "<group>"; };
+		8121DD822C621A66003460A5 /* ForceUpdate_Manager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForceUpdate_Manager.swift; sourceTree = "<group>"; };
+		8121DD832C621A66003460A5 /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		8CB1A3EF2516A69D9EFEC7EC /* Pods_iOS_CommonCode_iOS_CommonCodeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iOS_CommonCode_iOS_CommonCodeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4941E8D2AA44D193221D9A4 /* Pods-iOS_CommonCode.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS_CommonCode.debug.xcconfig"; path = "Target Support Files/Pods-iOS_CommonCode/Pods-iOS_CommonCode.debug.xcconfig"; sourceTree = "<group>"; };
 		E51CAB480268FCF6E60B27A3 /* Pods-iOS_CommonCode-iOS_CommonCodeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS_CommonCode-iOS_CommonCodeTests.release.xcconfig"; path = "Target Support Files/Pods-iOS_CommonCode-iOS_CommonCodeTests/Pods-iOS_CommonCode-iOS_CommonCodeTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -93,6 +97,8 @@
 			isa = PBXGroup;
 			children = (
 				8121DD6B2C6216E8003460A5 /* iOS_CommonCode.h */,
+				8121DD822C621A66003460A5 /* ForceUpdate_Manager.swift */,
+				8121DD832C621A66003460A5 /* Reachability.swift */,
 				8121DD6C2C6216E8003460A5 /* iOS_CommonCode.docc */,
 			);
 			path = iOS_CommonCode;
@@ -114,7 +120,6 @@
 				7F0C20E3808B740DA5FD3F72 /* Pods-iOS_CommonCode-iOS_CommonCodeTests.debug.xcconfig */,
 				E51CAB480268FCF6E60B27A3 /* Pods-iOS_CommonCode-iOS_CommonCodeTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -276,6 +281,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8121DD852C621A66003460A5 /* ForceUpdate_Manager.swift in Sources */,
+				8121DD842C621A66003460A5 /* Reachability.swift in Sources */,
 				8121DD6D2C6216E8003460A5 /* iOS_CommonCode.docc in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -490,6 +497,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 7F0C20E3808B740DA5FD3F72 /* Pods-iOS_CommonCode-iOS_CommonCodeTests.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -506,6 +514,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = E51CAB480268FCF6E60B27A3 /* Pods-iOS_CommonCode-iOS_CommonCodeTests.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
