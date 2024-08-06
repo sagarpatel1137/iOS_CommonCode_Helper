@@ -16,6 +16,8 @@
 		8121DD842C621A66003460A5 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8121DD832C621A66003460A5 /* Reachability.swift */; };
 		8121DD852C621A66003460A5 /* ForceUpdate_Manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8121DD822C621A66003460A5 /* ForceUpdate_Manager.swift */; };
 		8121DD872C622128003460A5 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 8121DD862C622128003460A5 /* README.md */; };
+		8121DD8A2C6222C8003460A5 /* iOS_CommonCode_Helper.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 8121DD882C6222C8003460A5 /* iOS_CommonCode_Helper.podspec */; };
+		8121DD8B2C6222C8003460A5 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 8121DD892C6222C8003460A5 /* LICENSE */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +42,8 @@
 		8121DD822C621A66003460A5 /* ForceUpdate_Manager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForceUpdate_Manager.swift; sourceTree = "<group>"; };
 		8121DD832C621A66003460A5 /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		8121DD862C622128003460A5 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		8121DD882C6222C8003460A5 /* iOS_CommonCode_Helper.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = iOS_CommonCode_Helper.podspec; sourceTree = "<group>"; };
+		8121DD892C6222C8003460A5 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		8CB1A3EF2516A69D9EFEC7EC /* Pods_iOS_CommonCode_iOS_CommonCodeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iOS_CommonCode_iOS_CommonCodeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4941E8D2AA44D193221D9A4 /* Pods-iOS_CommonCode.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS_CommonCode.debug.xcconfig"; path = "Target Support Files/Pods-iOS_CommonCode/Pods-iOS_CommonCode.debug.xcconfig"; sourceTree = "<group>"; };
 		E51CAB480268FCF6E60B27A3 /* Pods-iOS_CommonCode-iOS_CommonCodeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS_CommonCode-iOS_CommonCodeTests.release.xcconfig"; path = "Target Support Files/Pods-iOS_CommonCode-iOS_CommonCodeTests/Pods-iOS_CommonCode-iOS_CommonCodeTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -78,6 +82,8 @@
 		8121DD5E2C6216E8003460A5 = {
 			isa = PBXGroup;
 			children = (
+				8121DD882C6222C8003460A5 /* iOS_CommonCode_Helper.podspec */,
+				8121DD892C6222C8003460A5 /* LICENSE */,
 				8121DD862C622128003460A5 /* README.md */,
 				8121DD6A2C6216E8003460A5 /* iOS_CommonCode */,
 				8121DD762C6216E8003460A5 /* iOS_CommonCodeTests */,
@@ -220,6 +226,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8121DD8B2C6222C8003460A5 /* LICENSE in Resources */,
+				8121DD8A2C6222C8003460A5 /* iOS_CommonCode_Helper.podspec in Resources */,
 				8121DD872C622128003460A5 /* README.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -23,7 +23,7 @@ public final class ForceUpdate_Manager: NSObject {
     private let timeoutInterval :TimeInterval = 120
     private let appVersion = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as! String
     
-    public static var isAppNeedForceUpdate = false
+    public var isAppNeedForceUpdate = false
     
     public static func configure(withAppID appId: Int) {
         
@@ -81,7 +81,7 @@ extension ForceUpdate_Manager
                             if status_bool {
                                 if let isNeed = jsonResponse["is_need_to_update"] as? Bool {
                                     if isNeed {
-                                        ForceUpdate_Manager.isAppNeedForceUpdate = true
+                                        self.isAppNeedForceUpdate = true
                                         self.showForceAlert()
                                     }
                                 }
@@ -127,7 +127,7 @@ extension ForceUpdate_Manager {
     }
     
     @objc func applicationWillEnterForeground(_ notification: NSNotification) {
-        if ForceUpdate_Manager.isAppNeedForceUpdate {
+        if self.isAppNeedForceUpdate {
             self.showForceAlert()
         }
     }
