@@ -1,3 +1,16 @@
-PODFILE CHECKSUM: d2dce5cb0ba4de57f112edbfe6349edc570d8c80
+PODS:
+  - RevenueCat (5.2.2)
+
+DEPENDENCIES:
+  - RevenueCat
+
+SPEC REPOS:
+  trunk:
+    - RevenueCat
+
+SPEC CHECKSUMS:
+  RevenueCat: ba985d80069c1c4b9c9e0763f1852f2a0bdcc2d6
+
+PODFILE CHECKSUM: dcc4ca82065857658836b3e411518f291dc1d1a1
 
 COCOAPODS: 1.15.2

@@ -6,9 +6,6 @@ target 'iOS_CommonCode' do
   use_frameworks!
 
   # Pods for iOS_CommonCode
-
-  target 'iOS_CommonCodeTests' do
-    # Pods for testing
-  end
+  pod 'RevenueCat'
 
 end
