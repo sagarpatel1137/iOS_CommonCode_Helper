@@ -7,7 +7,7 @@
 
 import SystemConfiguration
 
-class Reachability {
+public class Reachability {
 
     class func isConnectedToNetwork() -> Bool {
 
