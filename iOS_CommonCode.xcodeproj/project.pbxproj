@@ -10,9 +10,6 @@
 		2C49534270C1DA445E8353B4 /* Pods_iOS_CommonCode.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4950068404D277B80DED25 /* Pods_iOS_CommonCode.framework */; };
 		8113BEC42C6324190081B3F8 /* RevenueCat_Manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8113BEC22C6324190081B3F8 /* RevenueCat_Manager.swift */; };
 		8113BEC52C6324190081B3F8 /* Const For Subscription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8113BEC32C6324190081B3F8 /* Const For Subscription.swift */; };
-		8121DD6D2C6216E8003460A5 /* iOS_CommonCode.docc in Sources */ = {isa = PBXBuildFile; fileRef = 8121DD6C2C6216E8003460A5 /* iOS_CommonCode.docc */; };
-		8121DD732C6216E8003460A5 /* iOS_CommonCode.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8121DD682C6216E8003460A5 /* iOS_CommonCode.framework */; };
-		8121DD782C6216E8003460A5 /* iOS_CommonCodeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8121DD772C6216E8003460A5 /* iOS_CommonCodeTests.swift */; };
 		8121DD792C6216E8003460A5 /* iOS_CommonCode.h in Headers */ = {isa = PBXBuildFile; fileRef = 8121DD6B2C6216E8003460A5 /* iOS_CommonCode.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8121DD842C621A66003460A5 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8121DD832C621A66003460A5 /* Reachability.swift */; };
 		8121DD852C621A66003460A5 /* ForceUpdate_Manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8121DD822C621A66003460A5 /* ForceUpdate_Manager.swift */; };
@@ -21,16 +18,6 @@
 		8121DD8B2C6222C8003460A5 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 8121DD892C6222C8003460A5 /* LICENSE */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		8121DD742C6216E8003460A5 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 8121DD5F2C6216E8003460A5 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 8121DD672C6216E8003460A5;
-			remoteInfo = iOS_CommonCode;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
 		1922D597FB5C7C197BA10876 /* Pods-iOS_CommonCode.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS_CommonCode.release.xcconfig"; path = "Target Support Files/Pods-iOS_CommonCode/Pods-iOS_CommonCode.release.xcconfig"; sourceTree = "<group>"; };
 		3E4950068404D277B80DED25 /* Pods_iOS_CommonCode.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iOS_CommonCode.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -38,9 +25,6 @@
 		8113BEC32C6324190081B3F8 /* Const For Subscription.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Const For Subscription.swift"; sourceTree = "<group>"; };
 		8121DD682C6216E8003460A5 /* iOS_CommonCode.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = iOS_CommonCode.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8121DD6B2C6216E8003460A5 /* iOS_CommonCode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iOS_CommonCode.h; sourceTree = "<group>"; };
-		8121DD6C2C6216E8003460A5 /* iOS_CommonCode.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = iOS_CommonCode.docc; sourceTree = "<group>"; };
-		8121DD722C6216E8003460A5 /* iOS_CommonCodeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iOS_CommonCodeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		8121DD772C6216E8003460A5 /* iOS_CommonCodeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOS_CommonCodeTests.swift; sourceTree = "<group>"; };
 		8121DD822C621A66003460A5 /* ForceUpdate_Manager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForceUpdate_Manager.swift; sourceTree = "<group>"; };
 		8121DD832C621A66003460A5 /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		8121DD862C622128003460A5 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
@@ -55,14 +39,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				2C49534270C1DA445E8353B4 /* Pods_iOS_CommonCode.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		8121DD6F2C6216E8003460A5 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				8121DD732C6216E8003460A5 /* iOS_CommonCode.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -109,7 +85,6 @@
 				8121DD892C6222C8003460A5 /* LICENSE */,
 				8121DD862C622128003460A5 /* README.md */,
 				8121DD6A2C6216E8003460A5 /* iOS_CommonCode */,
-				8121DD762C6216E8003460A5 /* iOS_CommonCodeTests */,
 				8121DD692C6216E8003460A5 /* Products */,
 				FB405D856584EFA8ACBC95F6 /* Pods */,
 				5BA89E27F88D04139ADDADC2 /* Frameworks */,
@@ -120,7 +95,6 @@
 			isa = PBXGroup;
 			children = (
 				8121DD682C6216E8003460A5 /* iOS_CommonCode.framework */,
-				8121DD722C6216E8003460A5 /* iOS_CommonCodeTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -128,21 +102,12 @@
 		8121DD6A2C6216E8003460A5 /* iOS_CommonCode */ = {
 			isa = PBXGroup;
 			children = (
-				8121DD6C2C6216E8003460A5 /* iOS_CommonCode.docc */,
 				8121DD6B2C6216E8003460A5 /* iOS_CommonCode.h */,
 				8113BEC12C6324190081B3F8 /* RevenueCat */,
 				8113BEC02C6324040081B3F8 /* Reachability */,
 				8113BEBF2C6323FD0081B3F8 /* ForceUpdate */,
 			);
 			path = iOS_CommonCode;
-			sourceTree = "<group>";
-		};
-		8121DD762C6216E8003460A5 /* iOS_CommonCodeTests */ = {
-			isa = PBXGroup;
-			children = (
-				8121DD772C6216E8003460A5 /* iOS_CommonCodeTests.swift */,
-			);
-			path = iOS_CommonCodeTests;
 			sourceTree = "<group>";
 		};
 		FB405D856584EFA8ACBC95F6 /* Pods */ = {
@@ -187,24 +152,6 @@
 			productReference = 8121DD682C6216E8003460A5 /* iOS_CommonCode.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		8121DD712C6216E8003460A5 /* iOS_CommonCodeTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 8121DD7F2C6216E8003460A5 /* Build configuration list for PBXNativeTarget "iOS_CommonCodeTests" */;
-			buildPhases = (
-				8121DD6E2C6216E8003460A5 /* Sources */,
-				8121DD6F2C6216E8003460A5 /* Frameworks */,
-				8121DD702C6216E8003460A5 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				8121DD752C6216E8003460A5 /* PBXTargetDependency */,
-			);
-			name = iOS_CommonCodeTests;
-			productName = iOS_CommonCodeTests;
-			productReference = 8121DD722C6216E8003460A5 /* iOS_CommonCodeTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -216,9 +163,6 @@
 				LastUpgradeCheck = 1500;
 				TargetAttributes = {
 					8121DD672C6216E8003460A5 = {
-						CreatedOnToolsVersion = 15.0;
-					};
-					8121DD712C6216E8003460A5 = {
 						CreatedOnToolsVersion = 15.0;
 					};
 				};
@@ -237,7 +181,6 @@
 			projectRoot = "";
 			targets = (
 				8121DD672C6216E8003460A5 /* iOS_CommonCode */,
-				8121DD712C6216E8003460A5 /* iOS_CommonCodeTests */,
 			);
 		};
 /* End PBXProject section */
@@ -250,13 +193,6 @@
 				8121DD8B2C6222C8003460A5 /* LICENSE in Resources */,
 				8121DD8A2C6222C8003460A5 /* iOS_CommonCode_Helper.podspec in Resources */,
 				8121DD872C622128003460A5 /* README.md in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		8121DD702C6216E8003460A5 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -295,28 +231,11 @@
 				8121DD852C621A66003460A5 /* ForceUpdate_Manager.swift in Sources */,
 				8113BEC52C6324190081B3F8 /* Const For Subscription.swift in Sources */,
 				8121DD842C621A66003460A5 /* Reachability.swift in Sources */,
-				8121DD6D2C6216E8003460A5 /* iOS_CommonCode.docc in Sources */,
 				8113BEC42C6324190081B3F8 /* RevenueCat_Manager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8121DD6E2C6216E8003460A5 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				8121DD782C6216E8003460A5 /* iOS_CommonCodeTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		8121DD752C6216E8003460A5 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 8121DD672C6216E8003460A5 /* iOS_CommonCode */;
-			targetProxy = 8121DD742C6216E8003460A5 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		8121DD7A2C6216E8003460A5 /* Debug */ = {
@@ -506,38 +425,6 @@
 			};
 			name = Release;
 		};
-		8121DD802C6216E8003460A5 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.iOS-CommonCodeTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		8121DD812C6216E8003460A5 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.iOS-CommonCodeTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -555,15 +442,6 @@
 			buildConfigurations = (
 				8121DD7D2C6216E8003460A5 /* Debug */,
 				8121DD7E2C6216E8003460A5 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		8121DD7F2C6216E8003460A5 /* Build configuration list for PBXNativeTarget "iOS_CommonCodeTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				8121DD802C6216E8003460A5 /* Debug */,
-				8121DD812C6216E8003460A5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
