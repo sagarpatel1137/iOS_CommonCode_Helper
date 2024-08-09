@@ -23,22 +23,57 @@ public var Purchase_flag: Bool {
 }
 
 //MARK: - Prodcut Ids
-public struct SubscriptionProductIds {
-    var oneWeek = ""
-    var oneMonth = ""
-    var twoMonth = ""
-    var threeMonth = ""
-    var sixMonth = ""
-    var oneYear = ""
-    var lifeTime = ""
+public struct SubscriptionProductIds 
+{
+    public var offer1_oneWeek = ""
+    public var offer1_oneMonth = ""
+    public var offer1_twoMonth = ""
+    public var offer1_threeMonth = ""
+    public var offer1_sixMonth = ""
+    public var offer1_oneYear = ""
+    public var offer1_oneWeek_Discount = ""
+    public var offer1_oneMonth_Discount = ""
+    public var offer1_twoMonth_Discount = ""
+    public var offer1_threeMonth_Discount = ""
+    public var offer1_sixMonth_Discount = ""
+    public var offer1_oneYear_Discount = ""
+    public var offer1_lifeTime = ""
     
-    var oneWeekExp = ""
-    var oneMonthExp = ""
-    var twoMonthExp = ""
-    var threeMonthExp = ""
-    var sixMonthExp = ""
-    var oneYearExp = ""
-    var lifeTimeExp = ""
+    public var offer2_oneWeek = ""
+    public var offer2_oneMonth = ""
+    public var offer2_twoMonth = ""
+    public var offer2_threeMonth = ""
+    public var offer2_sixMonth = ""
+    public var offer2_oneYear = ""
+    public var offer2_oneWeek_Discount = ""
+    public var offer2_oneMonth_Discount = ""
+    public var offer2_twoMonth_Discount = ""
+    public var offer2_threeMonth_Discount = ""
+    public var offer2_sixMonth_Discount = ""
+    public var offer2_oneYear_Discount = ""
+    public var offer2_lifeTime = ""
+    
+    public var offer3_oneWeek = ""
+    public var offer3_oneMonth = ""
+    public var offer3_twoMonth = ""
+    public var offer3_threeMonth = ""
+    public var offer3_sixMonth = ""
+    public var offer3_oneYear = ""
+    public var offer3_oneWeek_Discount = ""
+    public var offer3_oneMonth_Discount = ""
+    public var offer3_twoMonth_Discount = ""
+    public var offer3_threeMonth_Discount = ""
+    public var offer3_sixMonth_Discount = ""
+    public var offer3_oneYear_Discount = ""
+    public var offer3_lifeTime = ""
+}
+
+public enum SubscriptionOfferType
+{
+    case noOffer
+    case offer1
+    case offer2
+    case offer3
 }
 
 //MARK: -
@@ -53,26 +88,33 @@ public struct SubscriptionConst
     
     //MARK: - Available Plans
     public struct ActivePlans {
-        public static var one_Week : PlanInfo!
-        public static var one_Month : PlanInfo!
-        public static var two_Month : PlanInfo!
-        public static var three_Month : PlanInfo!
-        public static var six_Month : PlanInfo!
-        public static var one_Year : PlanInfo!
-        public static var life_Time : PlanInfo!
+        public static var one_Week = PlanInfo()
+        public static var one_Month = PlanInfo()
+        public static var two_Month = PlanInfo()
+        public static var three_Month = PlanInfo()
+        public static var six_Month = PlanInfo()
+        public static var one_Year = PlanInfo()
+        public static var one_Week_Discount = PlanInfo()
+        public static var one_Month_Discount = PlanInfo()
+        public static var two_Month_Discount = PlanInfo()
+        public static var three_Month_Discount = PlanInfo()
+        public static var six_Month_Discount = PlanInfo()
+        public static var one_Year_Discount = PlanInfo()
+        public static var life_Time = PlanInfo()
     }
     
     //MARK: - Plans
     public struct PlanInfo {
-        public var plan_Id : String
-        public var plan_Type : SubscriptionType
-        public var plan_Price_String : String
-        public var plan_Price : Double
-        public var plan_Currancy_Code : String
-        public var plan_Free_Trail : PlanIntroductoryInfo
-        public var plan_Promotional_Offer : PlanPromotionalOffer = PlanPromotionalOffer(isPromotionalOffer: false)
+        public var plan_Id : String = ""
+        public var plan_Type : SubscriptionType = .unknown
+        public var plan_Price_String : String = "$0"
+        public var plan_Price : Double = 0
+        public var plan_Currancy_Code : String = "$"
+        public var plan_Free_Trail : PlanIntroductoryInfo = PlanIntroductoryInfo()
+        public var plan_Promotional_Offer : PlanPromotionalOffer = PlanPromotionalOffer()
     }
     public enum SubscriptionType {
+        case unknown
         case week
         case onemonth
         case twomonth
@@ -85,10 +127,10 @@ public struct SubscriptionConst
     //MARK: - Introductory
     public struct PlanIntroductoryInfo
     {
-        public var isFreeTrail : Bool
+        public var isFreeTrail : Bool = false
         public var paymentMode : PaymentType = .none
-        public var duration : Int
-        public var unittype : String
+        public var duration : Int = 0
+        public var unittype : String = ""
         public var price_String : String = ""
         public var price : Double = 0.0
     }
@@ -109,7 +151,7 @@ public struct SubscriptionConst
     //MARK: - Promotional
     public struct PlanPromotionalOffer
     {
-        public var isPromotionalOffer : Bool
+        public var isPromotionalOffer : Bool = false
         public var promoOffer : PromotionalOffer?
         public var identifier: String = ""
         public var price : Double = 0.0
