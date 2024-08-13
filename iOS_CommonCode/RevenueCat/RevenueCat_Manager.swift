@@ -498,7 +498,7 @@ extension RevenueCat_Manager
                                                               unittype: GetUnit(unit: UInt(intOffer.subscriptionPeriod.unit.rawValue)))
             }
         }
-        return SubscriptionConst.PlanIntroductoryInfo(isFreeTrail: false, duration: 0, unittype: "day")
+        return SubscriptionConst.PlanIntroductoryInfo(isFreeTrail: false, duration: 0, unittype: "days")
     }
     
     private func GetUnit(unit: UInt) -> String {
