@@ -53,10 +53,7 @@ public class RevenueCat_Manager : NSObject {
     ///   - sharedSecret: sharedSecret of the application
     public func initialiseRevenueCat(APIKey: String, AppId: String = "", sharedSecret: String = "", productIds: SubscriptionProductIds) {
     
-        //Purchases.logLevel = .debug
-        //Purchases.configure(withAPIKey: APIKey)
         Purchases.configure(with: Configuration.Builder(withAPIKey: APIKey)
-            //.with(usesStoreKit2IfAvailable: true)
             .with(storeKitVersion: .storeKit2)
             .build()
         )
