@@ -8,7 +8,7 @@
 import UIKit
 import Foundation
 
-struct AlertForceUpdate {
+public struct AlertForceUpdate {
     var alertTitle = "Update Required"
     var alertMessage = "We've noticed that you've been using the deprecated application version for a long time. Please update to the latest version and enjoy the app."
     var alertActionUpdate = "Update"

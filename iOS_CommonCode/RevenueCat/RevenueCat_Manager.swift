@@ -130,6 +130,31 @@ public class RevenueCat_Manager : NSObject {
                             self.LifetimeSubscriptionID = package.storeProduct.productIdentifier
                         case .custom:
                             print("Custom Package : \(package.storeProduct.productIdentifier)")
+                            
+                            if (package.storeProduct.productIdentifier == subProductIds.offer1_oneWeek_Discount || package.storeProduct.productIdentifier == subProductIds.offer2_oneWeek_Discount || package.storeProduct.productIdentifier == subProductIds.offer3_oneWeek_Discount) {
+                                
+                                self.WeekDiscountSubscriptionID = package.storeProduct.productIdentifier
+                            }
+                            else if (package.storeProduct.productIdentifier == subProductIds.offer1_oneMonth_Discount || package.storeProduct.productIdentifier == subProductIds.offer2_oneMonth_Discount || package.storeProduct.productIdentifier == subProductIds.offer3_oneMonth_Discount) {
+                                
+                                self.OneMonthDiscountSubscriptionID = package.storeProduct.productIdentifier
+                            }
+                            else if (package.storeProduct.productIdentifier == subProductIds.offer1_twoMonth_Discount || package.storeProduct.productIdentifier == subProductIds.offer2_twoMonth_Discount || package.storeProduct.productIdentifier == subProductIds.offer3_twoMonth_Discount) {
+                                
+                                self.TwoMonthDiscountSubscriptionID = package.storeProduct.productIdentifier
+                            }
+                            else if (package.storeProduct.productIdentifier == subProductIds.offer1_threeMonth_Discount || package.storeProduct.productIdentifier == subProductIds.offer2_threeMonth_Discount || package.storeProduct.productIdentifier == subProductIds.offer3_threeMonth_Discount) {
+                                
+                                self.ThreeMonthDiscountSubscriptionID = package.storeProduct.productIdentifier
+                            }
+                            else if (package.storeProduct.productIdentifier == subProductIds.offer1_sixMonth_Discount || package.storeProduct.productIdentifier == subProductIds.offer2_sixMonth_Discount || package.storeProduct.productIdentifier == subProductIds.offer3_sixMonth_Discount) {
+                                
+                                self.SixMonthDiscountSubscriptionID = package.storeProduct.productIdentifier
+                            }
+                            else if (package.storeProduct.productIdentifier == subProductIds.offer1_oneYear_Discount || package.storeProduct.productIdentifier == subProductIds.offer2_oneYear_Discount || package.storeProduct.productIdentifier == subProductIds.offer3_oneYear_Discount) {
+                                
+                                self.YearDiscountSubscriptionID = package.storeProduct.productIdentifier
+                            }
                         case .unknown:
                             print("Unknown Package : \(package.storeProduct.productIdentifier)")
                         }
@@ -143,37 +168,37 @@ public class RevenueCat_Manager : NSObject {
                         if eligibility[self.WeekSubscriptionID]?.status == .eligible {
                             self.isWeekIntroductoryAvailable = true
                         }
-                        if eligibility[self.OneMonthSubscriptionID]?.status == .eligible {
+                        else if eligibility[self.OneMonthSubscriptionID]?.status == .eligible {
                             self.isOneMonthIntroductoryAvailable = true
                         }
-                        if eligibility[self.TwoMonthSubscriptionID]?.status == .eligible {
+                        else if eligibility[self.TwoMonthSubscriptionID]?.status == .eligible {
                             self.isTwoMonthIntroductoryAvailable = true
                         }
-                        if eligibility[self.ThreeMonthSubscriptionID]?.status == .eligible {
+                        else if eligibility[self.ThreeMonthSubscriptionID]?.status == .eligible {
                             self.isThreeMonthIntroductoryAvailable = true
                         }
-                        if eligibility[self.SixMonthSubscriptionID]?.status == .eligible {
+                        else if eligibility[self.SixMonthSubscriptionID]?.status == .eligible {
                             self.isSixMonthIntroductoryAvailable = true
                         }
-                        if eligibility[self.YearSubscriptionID]?.status == .eligible {
+                        else if eligibility[self.YearSubscriptionID]?.status == .eligible {
                             self.isYearIntroductoryAvailable = true
                         }
-                        if eligibility[self.WeekDiscountSubscriptionID]?.status == .eligible {
+                        else if eligibility[self.WeekDiscountSubscriptionID]?.status == .eligible {
                             self.isWeekDiscountIntroductoryAvailable = true
                         }
-                        if eligibility[self.OneMonthDiscountSubscriptionID]?.status == .eligible {
+                        else if eligibility[self.OneMonthDiscountSubscriptionID]?.status == .eligible {
                             self.isOneMonthDiscountIntroductoryAvailable = true
                         }
-                        if eligibility[self.TwoMonthDiscountSubscriptionID]?.status == .eligible {
+                        else if eligibility[self.TwoMonthDiscountSubscriptionID]?.status == .eligible {
                             self.isTwoMonthDiscountIntroductoryAvailable = true
                         }
-                        if eligibility[self.ThreeMonthDiscountSubscriptionID]?.status == .eligible {
+                        else if eligibility[self.ThreeMonthDiscountSubscriptionID]?.status == .eligible {
                             self.isThreeMonthDiscountIntroductoryAvailable = true
                         }
-                        if eligibility[self.SixMonthDiscountSubscriptionID]?.status == .eligible {
+                        else if eligibility[self.SixMonthDiscountSubscriptionID]?.status == .eligible {
                             self.isSixMonthDiscountIntroductoryAvailable = true
                         }
-                        if eligibility[self.YearDiscountSubscriptionID]?.status == .eligible {
+                        else if eligibility[self.YearDiscountSubscriptionID]?.status == .eligible {
                             self.isYearDiscountIntroductoryAvailable = true
                         }
                         self.GetPackageDetail {

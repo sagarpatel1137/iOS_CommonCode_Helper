@@ -10,12 +10,9 @@
 		2C49534270C1DA445E8353B4 /* Pods_iOS_CommonCode.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4950068404D277B80DED25 /* Pods_iOS_CommonCode.framework */; };
 		8113BEC42C6324190081B3F8 /* RevenueCat_Manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8113BEC22C6324190081B3F8 /* RevenueCat_Manager.swift */; };
 		8113BEC52C6324190081B3F8 /* Const For Subscription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8113BEC32C6324190081B3F8 /* Const For Subscription.swift */; };
-		8121DD792C6216E8003460A5 /* iOS_CommonCode.h in Headers */ = {isa = PBXBuildFile; fileRef = 8121DD6B2C6216E8003460A5 /* iOS_CommonCode.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8121DD842C621A66003460A5 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8121DD832C621A66003460A5 /* Reachability.swift */; };
 		8121DD852C621A66003460A5 /* ForceUpdate_Manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8121DD822C621A66003460A5 /* ForceUpdate_Manager.swift */; };
-		8121DD872C622128003460A5 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 8121DD862C622128003460A5 /* README.md */; };
 		8121DD8A2C6222C8003460A5 /* iOS_CommonCode_Helper.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 8121DD882C6222C8003460A5 /* iOS_CommonCode_Helper.podspec */; };
-		8121DD8B2C6222C8003460A5 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 8121DD892C6222C8003460A5 /* LICENSE */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,12 +21,9 @@
 		8113BEC22C6324190081B3F8 /* RevenueCat_Manager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RevenueCat_Manager.swift; sourceTree = "<group>"; };
 		8113BEC32C6324190081B3F8 /* Const For Subscription.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Const For Subscription.swift"; sourceTree = "<group>"; };
 		8121DD682C6216E8003460A5 /* iOS_CommonCode.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = iOS_CommonCode.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		8121DD6B2C6216E8003460A5 /* iOS_CommonCode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iOS_CommonCode.h; sourceTree = "<group>"; };
 		8121DD822C621A66003460A5 /* ForceUpdate_Manager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForceUpdate_Manager.swift; sourceTree = "<group>"; };
 		8121DD832C621A66003460A5 /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
-		8121DD862C622128003460A5 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		8121DD882C6222C8003460A5 /* iOS_CommonCode_Helper.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = iOS_CommonCode_Helper.podspec; sourceTree = "<group>"; };
-		8121DD892C6222C8003460A5 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		D4941E8D2AA44D193221D9A4 /* Pods-iOS_CommonCode.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS_CommonCode.debug.xcconfig"; path = "Target Support Files/Pods-iOS_CommonCode/Pods-iOS_CommonCode.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -53,37 +47,10 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		8113BEBF2C6323FD0081B3F8 /* ForceUpdate */ = {
-			isa = PBXGroup;
-			children = (
-				8121DD822C621A66003460A5 /* ForceUpdate_Manager.swift */,
-			);
-			path = ForceUpdate;
-			sourceTree = "<group>";
-		};
-		8113BEC02C6324040081B3F8 /* Reachability */ = {
-			isa = PBXGroup;
-			children = (
-				8121DD832C621A66003460A5 /* Reachability.swift */,
-			);
-			path = Reachability;
-			sourceTree = "<group>";
-		};
-		8113BEC12C6324190081B3F8 /* RevenueCat */ = {
-			isa = PBXGroup;
-			children = (
-				8113BEC22C6324190081B3F8 /* RevenueCat_Manager.swift */,
-				8113BEC32C6324190081B3F8 /* Const For Subscription.swift */,
-			);
-			path = RevenueCat;
-			sourceTree = "<group>";
-		};
 		8121DD5E2C6216E8003460A5 = {
 			isa = PBXGroup;
 			children = (
 				8121DD882C6222C8003460A5 /* iOS_CommonCode_Helper.podspec */,
-				8121DD892C6222C8003460A5 /* LICENSE */,
-				8121DD862C622128003460A5 /* README.md */,
 				8121DD6A2C6216E8003460A5 /* iOS_CommonCode */,
 				8121DD692C6216E8003460A5 /* Products */,
 				FB405D856584EFA8ACBC95F6 /* Pods */,
@@ -102,12 +69,36 @@
 		8121DD6A2C6216E8003460A5 /* iOS_CommonCode */ = {
 			isa = PBXGroup;
 			children = (
-				8121DD6B2C6216E8003460A5 /* iOS_CommonCode.h */,
-				8113BEC12C6324190081B3F8 /* RevenueCat */,
-				8113BEC02C6324040081B3F8 /* Reachability */,
-				8113BEBF2C6323FD0081B3F8 /* ForceUpdate */,
+				819E6FB22C6CB9FD00D4914E /* RevenueCat */,
+				819E6FB52C6CBA7500D4914E /* ForceUpdate */,
+				819E6FB62C6CBA7D00D4914E /* Other */,
 			);
 			path = iOS_CommonCode;
+			sourceTree = "<group>";
+		};
+		819E6FB22C6CB9FD00D4914E /* RevenueCat */ = {
+			isa = PBXGroup;
+			children = (
+				8113BEC22C6324190081B3F8 /* RevenueCat_Manager.swift */,
+				8113BEC32C6324190081B3F8 /* Const For Subscription.swift */,
+			);
+			path = RevenueCat;
+			sourceTree = "<group>";
+		};
+		819E6FB52C6CBA7500D4914E /* ForceUpdate */ = {
+			isa = PBXGroup;
+			children = (
+				8121DD822C621A66003460A5 /* ForceUpdate_Manager.swift */,
+			);
+			path = ForceUpdate;
+			sourceTree = "<group>";
+		};
+		819E6FB62C6CBA7D00D4914E /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				8121DD832C621A66003460A5 /* Reachability.swift */,
+			);
+			path = Other;
 			sourceTree = "<group>";
 		};
 		FB405D856584EFA8ACBC95F6 /* Pods */ = {
@@ -126,7 +117,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8121DD792C6216E8003460A5 /* iOS_CommonCode.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -190,9 +180,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8121DD8B2C6222C8003460A5 /* LICENSE in Resources */,
 				8121DD8A2C6222C8003460A5 /* iOS_CommonCode_Helper.podspec in Resources */,
-				8121DD872C622128003460A5 /* README.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
