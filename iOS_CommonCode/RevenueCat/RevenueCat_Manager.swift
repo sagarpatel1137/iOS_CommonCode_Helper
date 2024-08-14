@@ -56,7 +56,8 @@ public class RevenueCat_Manager : NSObject {
         //Purchases.logLevel = .debug
         //Purchases.configure(withAPIKey: APIKey)
         Purchases.configure(with: Configuration.Builder(withAPIKey: APIKey)
-            .with(usesStoreKit2IfAvailable: true)
+            //.with(usesStoreKit2IfAvailable: true)
+            .with(storeKitVersion: .storeKit2)
             .build()
         )
         
