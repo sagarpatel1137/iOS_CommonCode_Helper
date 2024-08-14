@@ -93,7 +93,7 @@ public class RevenueCat_Manager : NSObject {
     }
     
     // MARK: - Get Packages
-    public func GetAllAvailablePackages(complition : @escaping(Bool,Error?)-> Void)
+    private func GetAllAvailablePackages(complition : @escaping(Bool,Error?)-> Void)
     {
         if RevenueCat_Manager.AvailableProducts.count == 0
         {
