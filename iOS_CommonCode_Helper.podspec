@@ -21,5 +21,6 @@ spec.source_files      = "iOS_CommonCode/**/*.swift"
 spec.frameworks        = 'UIKit', 'Foundation', 'SystemConfiguration'
 
 spec.dependency 'RevenueCat'
+spec.dependency 'Alamofire'
 
 end

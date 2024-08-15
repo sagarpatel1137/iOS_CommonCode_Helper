@@ -7,10 +7,10 @@
 
 import UIKit
 import RevenueCat
+import Alamofire
 
 public class RevenueCat_Manager : NSObject {
     
-    public static let shared = RevenueCat_Manager()
     static var AvailableProducts = [Package]()
     static var purchaseInfo : CustomerInfo?
     
@@ -46,12 +46,12 @@ public class RevenueCat_Manager : NSObject {
     public var isOfferType: SubscriptionOfferType = .noOffer
     
     
-    /// Initialise RevenueCat
+    //MARK: -  Initialise RevenueCat
     /// - Parameters:
     ///   - APIKey: RevenueCat APIKey
     ///   - AppId: RevenueCat AppId
     ///   - sharedSecret: sharedSecret of the application
-    public func initialiseRevenueCat(APIKey: String, AppId: String = "", sharedSecret: String = "", productIds: SubscriptionProductIds) {
+    public func initialiseRevenueCat(APIKey: String, AppId: String = "", sharedSecret: String = "", productIds: SubscriptionProductIds?) {
     
         Purchases.configure(with: Configuration.Builder(withAPIKey: APIKey)
             .with(storeKitVersion: .storeKit2)
@@ -62,7 +62,7 @@ public class RevenueCat_Manager : NSObject {
         SubscriptionConst.GeneralConst.revanueKitAppId = AppId
         SubscriptionConst.GeneralConst.sharedSecret = sharedSecret
         
-        subProductIds = productIds
+        subProductIds = productIds ?? SubscriptionProductIds()
     }
     
     // MARK: - Check Purchase
@@ -79,20 +79,33 @@ public class RevenueCat_Manager : NSObject {
                             Purchase_flag = true
                         }
                         self.GetAllAvailablePackages { (state,err) in
+                            
                             completion()
+                            
+                            if SubscriptionConst.isGet {
+                                print("Vasundhara 🏢 - Revenue Package Fetched Succesfully 🟢🟢🟢")
+                            } else {
+                                print("Vasundhara 🏢 - Revenue Package Fetched Failed 🔴🔴🔴")
+                                self.checkForNetworkReachability()
+                            }
                         }
                     } else {
                         completion()
+                        self.checkForNetworkReachability()
                     }
                 }
             }
         }
         else {
             completion()
+            self.checkForNetworkReachability()
         }
     }
-    
-    // MARK: - Get Packages
+}
+
+// MARK: - Get Packages
+extension RevenueCat_Manager
+{
     private func GetAllAvailablePackages(complition : @escaping(Bool,Error?)-> Void)
     {
         if RevenueCat_Manager.AvailableProducts.count == 0
@@ -100,6 +113,7 @@ public class RevenueCat_Manager : NSObject {
             Purchases.shared.getOfferings { [self] (offerings, error) in
                 
                 if let err = error {
+                    print("Vasundhara 🏢 - Revenue Get Package Error ⚠️⚠️⚠️: \(err)")
                     complition(false,err)
                     return
                 }
@@ -123,7 +137,7 @@ public class RevenueCat_Manager : NSObject {
                         case .sixMonth:
                             self.SixMonthSubscriptionID = package.storeProduct.productIdentifier
                         case .annual:
-                            self.LifetimeSubscriptionID = package.storeProduct.productIdentifier
+                            self.YearSubscriptionID = package.storeProduct.productIdentifier
                         case .lifetime:
                             self.LifetimeSubscriptionID = package.storeProduct.productIdentifier
                         case .custom:
@@ -216,7 +230,6 @@ public class RevenueCat_Manager : NSObject {
     
     private func GetPackageDetail(complition : @escaping()-> Void) {
         
-        //MARK: - Basic Plans
         //One Week
         SubscriptionConst.ActivePlans.one_Week = SubscriptionConst.PlanInfo(plan_Id: WeekSubscriptionID,
                                                                             plan_Type: SubscriptionConst.SubscriptionType.week,
@@ -225,7 +238,7 @@ public class RevenueCat_Manager : NSObject {
                                                                             plan_Currancy_Code: GetCurrncyCode(productId: WeekSubscriptionID),
                                                                             plan_Free_Trail: GetIntroductioyOfProduct(productId: WeekSubscriptionID))
 
-        RevenueCat_Manager.shared.GetPromotionalOfferOfProduct(WeekSubscriptionID, completion: { promOffer in
+        GetPromotionalOfferOfProduct(WeekSubscriptionID, completion: { promOffer in
             SubscriptionConst.ActivePlans.one_Week.plan_Promotional_Offer = promOffer
         })
         
@@ -237,7 +250,7 @@ public class RevenueCat_Manager : NSObject {
                                                                             plan_Currancy_Code: GetCurrncyCode(productId: OneMonthSubscriptionID),
                                                                             plan_Free_Trail: GetIntroductioyOfProduct(productId: OneMonthSubscriptionID))
 
-        RevenueCat_Manager.shared.GetPromotionalOfferOfProduct(OneMonthSubscriptionID, completion: { promOffer in
+        GetPromotionalOfferOfProduct(OneMonthSubscriptionID, completion: { promOffer in
             SubscriptionConst.ActivePlans.one_Month.plan_Promotional_Offer = promOffer
         })
         
@@ -249,7 +262,7 @@ public class RevenueCat_Manager : NSObject {
                                                                             plan_Currancy_Code: GetCurrncyCode(productId: TwoMonthSubscriptionID),
                                                                             plan_Free_Trail: GetIntroductioyOfProduct(productId: TwoMonthSubscriptionID))
 
-        RevenueCat_Manager.shared.GetPromotionalOfferOfProduct(TwoMonthSubscriptionID, completion: { promOffer in
+        GetPromotionalOfferOfProduct(TwoMonthSubscriptionID, completion: { promOffer in
             SubscriptionConst.ActivePlans.two_Month.plan_Promotional_Offer = promOffer
         })
         
@@ -261,7 +274,7 @@ public class RevenueCat_Manager : NSObject {
                                                                             plan_Currancy_Code: GetCurrncyCode(productId: ThreeMonthSubscriptionID),
                                                                             plan_Free_Trail: GetIntroductioyOfProduct(productId: ThreeMonthSubscriptionID))
 
-        RevenueCat_Manager.shared.GetPromotionalOfferOfProduct(ThreeMonthSubscriptionID, completion: { promOffer in
+        GetPromotionalOfferOfProduct(ThreeMonthSubscriptionID, completion: { promOffer in
             SubscriptionConst.ActivePlans.three_Month.plan_Promotional_Offer = promOffer
         })
         
@@ -273,7 +286,7 @@ public class RevenueCat_Manager : NSObject {
                                                                             plan_Currancy_Code: GetCurrncyCode(productId: SixMonthSubscriptionID),
                                                                             plan_Free_Trail: GetIntroductioyOfProduct(productId: SixMonthSubscriptionID))
 
-        RevenueCat_Manager.shared.GetPromotionalOfferOfProduct(SixMonthSubscriptionID, completion: { promOffer in
+        GetPromotionalOfferOfProduct(SixMonthSubscriptionID, completion: { promOffer in
             SubscriptionConst.ActivePlans.six_Month.plan_Promotional_Offer = promOffer
         })
         
@@ -285,12 +298,11 @@ public class RevenueCat_Manager : NSObject {
                                                                            plan_Currancy_Code: GetCurrncyCode(productId: YearSubscriptionID),
                                                                            plan_Free_Trail: GetIntroductioyOfProduct(productId: YearSubscriptionID))
         
-        RevenueCat_Manager.shared.GetPromotionalOfferOfProduct(YearSubscriptionID, completion: { promOffer in
+        GetPromotionalOfferOfProduct(YearSubscriptionID, completion: { promOffer in
             SubscriptionConst.ActivePlans.one_Year.plan_Promotional_Offer = promOffer
         })
         
         
-        //MARK: - Discount Plans
         //One Week Discount
         SubscriptionConst.ActivePlans.one_Week_Discount = SubscriptionConst.PlanInfo(plan_Id: WeekDiscountSubscriptionID,
                                                                                      plan_Type: SubscriptionConst.SubscriptionType.week,
@@ -299,7 +311,7 @@ public class RevenueCat_Manager : NSObject {
                                                                                      plan_Currancy_Code: GetCurrncyCode(productId: WeekDiscountSubscriptionID),
                                                                                      plan_Free_Trail: GetIntroductioyOfProduct(productId: WeekDiscountSubscriptionID))
 
-        RevenueCat_Manager.shared.GetPromotionalOfferOfProduct(WeekDiscountSubscriptionID, completion: { promOffer in
+        GetPromotionalOfferOfProduct(WeekDiscountSubscriptionID, completion: { promOffer in
             SubscriptionConst.ActivePlans.one_Week_Discount.plan_Promotional_Offer = promOffer
         })
         
@@ -311,7 +323,7 @@ public class RevenueCat_Manager : NSObject {
                                                                             plan_Currancy_Code: GetCurrncyCode(productId: OneMonthDiscountSubscriptionID),
                                                                             plan_Free_Trail: GetIntroductioyOfProduct(productId: OneMonthDiscountSubscriptionID))
 
-        RevenueCat_Manager.shared.GetPromotionalOfferOfProduct(OneMonthDiscountSubscriptionID, completion: { promOffer in
+        GetPromotionalOfferOfProduct(OneMonthDiscountSubscriptionID, completion: { promOffer in
             SubscriptionConst.ActivePlans.one_Month_Discount.plan_Promotional_Offer = promOffer
         })
         
@@ -323,7 +335,7 @@ public class RevenueCat_Manager : NSObject {
                                                                             plan_Currancy_Code: GetCurrncyCode(productId: TwoMonthDiscountSubscriptionID),
                                                                             plan_Free_Trail: GetIntroductioyOfProduct(productId: TwoMonthDiscountSubscriptionID))
 
-        RevenueCat_Manager.shared.GetPromotionalOfferOfProduct(TwoMonthDiscountSubscriptionID, completion: { promOffer in
+        GetPromotionalOfferOfProduct(TwoMonthDiscountSubscriptionID, completion: { promOffer in
             SubscriptionConst.ActivePlans.two_Month_Discount.plan_Promotional_Offer = promOffer
         })
         
@@ -335,7 +347,7 @@ public class RevenueCat_Manager : NSObject {
                                                                             plan_Currancy_Code: GetCurrncyCode(productId: ThreeMonthDiscountSubscriptionID),
                                                                             plan_Free_Trail: GetIntroductioyOfProduct(productId: ThreeMonthDiscountSubscriptionID))
 
-        RevenueCat_Manager.shared.GetPromotionalOfferOfProduct(ThreeMonthDiscountSubscriptionID, completion: { promOffer in
+        GetPromotionalOfferOfProduct(ThreeMonthDiscountSubscriptionID, completion: { promOffer in
             SubscriptionConst.ActivePlans.three_Month_Discount.plan_Promotional_Offer = promOffer
         })
         
@@ -347,7 +359,7 @@ public class RevenueCat_Manager : NSObject {
                                                                             plan_Currancy_Code: GetCurrncyCode(productId: SixMonthDiscountSubscriptionID),
                                                                             plan_Free_Trail: GetIntroductioyOfProduct(productId: SixMonthDiscountSubscriptionID))
 
-        RevenueCat_Manager.shared.GetPromotionalOfferOfProduct(SixMonthDiscountSubscriptionID, completion: { promOffer in
+        GetPromotionalOfferOfProduct(SixMonthDiscountSubscriptionID, completion: { promOffer in
             SubscriptionConst.ActivePlans.six_Month_Discount.plan_Promotional_Offer = promOffer
         })
         
@@ -359,14 +371,14 @@ public class RevenueCat_Manager : NSObject {
                                                                            plan_Currancy_Code: GetCurrncyCode(productId: YearDiscountSubscriptionID),
                                                                            plan_Free_Trail: GetIntroductioyOfProduct(productId: YearDiscountSubscriptionID))
         
-        RevenueCat_Manager.shared.GetPromotionalOfferOfProduct(YearDiscountSubscriptionID, completion: { promOffer in
+        GetPromotionalOfferOfProduct(YearDiscountSubscriptionID, completion: { promOffer in
             SubscriptionConst.ActivePlans.one_Year_Discount.plan_Promotional_Offer = promOffer
             SubscriptionConst.isGet = true
             complition()
         })
         
         
-        //MARK: - LifeTime
+        //LifeTime
         SubscriptionConst.ActivePlans.life_Time = SubscriptionConst.PlanInfo(plan_Id: LifetimeSubscriptionID,
                                                                              plan_Type: SubscriptionConst.SubscriptionType.lifetime,
                                                                              plan_Price_String: GetPriceOfProduct_String(productId: LifetimeSubscriptionID),
@@ -375,7 +387,38 @@ public class RevenueCat_Manager : NSObject {
                                                                              plan_Free_Trail: GetIntroductioyOfProduct(productId: LifetimeSubscriptionID))
     }
     
-    //MARK: - Offer Type
+}
+
+// MARK: - Network Reachability
+extension RevenueCat_Manager
+{
+    private func checkForNetworkReachability()
+    {
+        let reachabilityManager = NetworkReachabilityManager()
+        reachabilityManager?.startListening( onUpdatePerforming: { [self] _ in
+            if let isNetworkReachable = reachabilityManager?.isReachable,
+               isNetworkReachable == true
+            {
+                if !SubscriptionConst.isGet {
+                    
+                    self.GetAllAvailablePackages { (state,err) in
+                        
+                        if SubscriptionConst.isGet {
+                            print("Vasundhara 🏢 - Revenue Package Fetched Succesfully 🟢🟢🟢")
+                            reachabilityManager?.stopListening()
+                        } else {
+                            print("Vasundhara 🏢 - Revenue Package Fetched Failed 🔴🔴🔴")
+                        }
+                    }
+                }
+            }
+        })
+    }
+}
+
+//MARK: - Offer Type
+extension RevenueCat_Manager
+{
     private func checkOfferType() {
         
         if self.WeekSubscriptionID == subProductIds.offer1_oneWeek || self.OneMonthSubscriptionID == subProductIds.offer1_oneMonth || self.TwoMonthSubscriptionID == subProductIds.offer1_twoMonth || self.ThreeMonthSubscriptionID == subProductIds.offer1_threeMonth || self.SixMonthSubscriptionID == subProductIds.offer1_sixMonth || self.YearSubscriptionID == subProductIds.offer1_oneYear || self.LifetimeSubscriptionID == subProductIds.offer1_lifeTime
@@ -391,9 +434,12 @@ public class RevenueCat_Manager : NSObject {
             self.isOfferType = .offer3
         }
     }
-    
-    // MARK: - Purchase
-    public func purchaseProductWithPromo(ProductID : String, promoOffers: PromotionalOffer,completion : @escaping(Bool,CustomerInfo?,Error?,Bool)->Void)
+}
+
+// MARK: - Purchase & Restore
+extension RevenueCat_Manager
+{
+    public class func purchaseProductWithPromo(ProductID : String, promoOffers: PromotionalOffer,completion : @escaping(Bool,CustomerInfo?,Error?,Bool)->Void)
     {
         let p1 = RevenueCat_Manager.AvailableProducts.first { (p) -> Bool in
             return p.storeProduct.productIdentifier ==  ProductID
@@ -419,7 +465,7 @@ public class RevenueCat_Manager : NSObject {
         }
     }
     
-    public func purchaseProduct(ProductID : String,completion : @escaping(Bool,CustomerInfo?,Error?,Bool)->Void)
+    public class func purchaseProduct(ProductID : String,completion : @escaping(Bool,CustomerInfo?,Error?,Bool)->Void)
     {
         let p1 = RevenueCat_Manager.AvailableProducts.first { (p) -> Bool in
             return p.storeProduct.productIdentifier ==  ProductID
@@ -443,8 +489,7 @@ public class RevenueCat_Manager : NSObject {
         }
     }
     
-    // MARK: - Restore
-    public func restoreProduct(completion : @escaping(Bool,CustomerInfo?,Error?)->Void)
+    public class func restoreProduct(completion : @escaping(Bool,CustomerInfo?,Error?)->Void)
     {
         Purchases.shared.restorePurchases { (purchaseInfo, error) in
             if let error = error {
@@ -459,7 +504,8 @@ public class RevenueCat_Manager : NSObject {
 }
 
 // MARK: - Get Product
-extension RevenueCat_Manager {
+extension RevenueCat_Manager 
+{
     private func GetProduct(productId : String)->StoreProduct? {
         let p1 =  RevenueCat_Manager.AvailableProducts.first { (p) -> Bool in
             return p.storeProduct.productIdentifier ==  productId
@@ -495,7 +541,7 @@ extension RevenueCat_Manager
 {
     private func GetIntroductioyOfProduct(productId : String)-> SubscriptionConst.PlanIntroductoryInfo
     {
-        let product = RevenueCat_Manager.shared.GetProduct(productId: productId)
+        let product = GetProduct(productId: productId)
         if let intOffer = product?.introductoryDiscount, checkIsIntroOfferAvailable(product: productId) {
             
             if intOffer.paymentMode == .payAsYouGo {
@@ -564,7 +610,7 @@ extension RevenueCat_Manager
 {
     private func GetPromotionalOfferOfProduct(_ productId : String, completion : @escaping(SubscriptionConst.PlanPromotionalOffer)->Void)
     {
-        if let product = RevenueCat_Manager.shared.GetProduct(productId: productId)
+        if let product = GetProduct(productId: productId)
         {
             if let discount = product.discounts.first {
                 Purchases.shared.getPromotionalOffer(forProductDiscount: discount,
@@ -619,8 +665,9 @@ extension RevenueCat_Manager
     private func getPurchaseProductInfo(completion:@escaping((Bool,Error?)->Void))
     {
         Purchases.shared.getCustomerInfo { (purchaserInfo, error) in
+            
             if error != nil {
-                print("purchaserInfo Errr : \(error?.localizedDescription ?? "")")
+                print("Vasundhara 🏢 - Revenue PurchaserInfo Error ⚠️⚠️⚠️: \(error!)")
                 completion(false,error)
                 return
             }
@@ -629,7 +676,7 @@ extension RevenueCat_Manager
             {
                 Purchases.shared.syncPurchases { (purchaserInfo, error) in
                     if error != nil {
-                        print("purchaserInfo Errr : \(error?.localizedDescription ?? "")")
+                        print("Vasundhara 🏢 - Revenue PurchaserInfo Sync Error ⚠️⚠️⚠️: \(error!)")
                         completion(false,error)
                         UserDefaults.standard.setValue(true, forKey: "appOpenFirstTime")
                         return

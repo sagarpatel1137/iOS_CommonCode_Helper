@@ -23,49 +23,92 @@ public var Purchase_flag: Bool {
 }
 
 //MARK: - Prodcut Ids
-public struct SubscriptionProductIds 
+public struct SubscriptionProductIds
 {
-    public var offer1_oneWeek = ""
-    public var offer1_oneMonth = ""
-    public var offer1_twoMonth = ""
-    public var offer1_threeMonth = ""
-    public var offer1_sixMonth = ""
-    public var offer1_oneYear = ""
-    public var offer1_oneWeek_Discount = ""
-    public var offer1_oneMonth_Discount = ""
-    public var offer1_twoMonth_Discount = ""
-    public var offer1_threeMonth_Discount = ""
-    public var offer1_sixMonth_Discount = ""
-    public var offer1_oneYear_Discount = ""
-    public var offer1_lifeTime = ""
+    public let offer1_oneWeek: String
+    public let offer1_oneMonth: String
+    public let offer1_twoMonth: String
+    public let offer1_threeMonth: String
+    public let offer1_sixMonth: String
+    public let offer1_oneYear: String
+    public let offer1_oneWeek_Discount: String
+    public let offer1_oneMonth_Discount: String
+    public let offer1_twoMonth_Discount: String
+    public let offer1_threeMonth_Discount: String
+    public let offer1_sixMonth_Discount: String
+    public let offer1_oneYear_Discount: String
+    public let offer1_lifeTime: String
     
-    public var offer2_oneWeek = ""
-    public var offer2_oneMonth = ""
-    public var offer2_twoMonth = ""
-    public var offer2_threeMonth = ""
-    public var offer2_sixMonth = ""
-    public var offer2_oneYear = ""
-    public var offer2_oneWeek_Discount = ""
-    public var offer2_oneMonth_Discount = ""
-    public var offer2_twoMonth_Discount = ""
-    public var offer2_threeMonth_Discount = ""
-    public var offer2_sixMonth_Discount = ""
-    public var offer2_oneYear_Discount = ""
-    public var offer2_lifeTime = ""
+    public let offer2_oneWeek: String
+    public let offer2_oneMonth: String
+    public let offer2_twoMonth: String
+    public let offer2_threeMonth: String
+    public let offer2_sixMonth: String
+    public let offer2_oneYear: String
+    public let offer2_oneWeek_Discount: String
+    public let offer2_oneMonth_Discount: String
+    public let offer2_twoMonth_Discount: String
+    public let offer2_threeMonth_Discount: String
+    public let offer2_sixMonth_Discount: String
+    public let offer2_oneYear_Discount: String
+    public let offer2_lifeTime: String
     
-    public var offer3_oneWeek = ""
-    public var offer3_oneMonth = ""
-    public var offer3_twoMonth = ""
-    public var offer3_threeMonth = ""
-    public var offer3_sixMonth = ""
-    public var offer3_oneYear = ""
-    public var offer3_oneWeek_Discount = ""
-    public var offer3_oneMonth_Discount = ""
-    public var offer3_twoMonth_Discount = ""
-    public var offer3_threeMonth_Discount = ""
-    public var offer3_sixMonth_Discount = ""
-    public var offer3_oneYear_Discount = ""
-    public var offer3_lifeTime = ""
+    public let offer3_oneWeek: String
+    public let offer3_oneMonth: String
+    public let offer3_twoMonth: String
+    public let offer3_threeMonth: String
+    public let offer3_sixMonth: String
+    public let offer3_oneYear: String
+    public let offer3_oneWeek_Discount: String
+    public let offer3_oneMonth_Discount: String
+    public let offer3_twoMonth_Discount: String
+    public let offer3_threeMonth_Discount: String
+    public let offer3_sixMonth_Discount: String
+    public let offer3_oneYear_Discount: String
+    public let offer3_lifeTime: String
+    
+    public init(offer1_oneWeek: String = "", offer1_oneMonth: String = "", offer1_twoMonth: String = "", offer1_threeMonth: String = "", offer1_sixMonth: String = "", offer1_oneYear: String = "", offer1_oneWeek_Discount: String = "", offer1_oneMonth_Discount: String = "", offer1_twoMonth_Discount: String = "", offer1_threeMonth_Discount: String = "", offer1_sixMonth_Discount: String = "", offer1_oneYear_Discount: String = "", offer1_lifeTime: String = "", offer2_oneWeek: String = "", offer2_oneMonth: String = "", offer2_twoMonth: String = "", offer2_threeMonth: String = "", offer2_sixMonth: String = "", offer2_oneYear: String = "", offer2_oneWeek_Discount: String = "", offer2_oneMonth_Discount: String = "", offer2_twoMonth_Discount: String = "", offer2_threeMonth_Discount: String = "", offer2_sixMonth_Discount: String = "", offer2_oneYear_Discount: String = "", offer2_lifeTime: String = "", offer3_oneWeek: String = "", offer3_oneMonth: String = "", offer3_twoMonth: String = "", offer3_threeMonth: String = "", offer3_sixMonth: String = "", offer3_oneYear: String = "", offer3_oneWeek_Discount: String = "", offer3_oneMonth_Discount: String = "", offer3_twoMonth_Discount: String = "", offer3_threeMonth_Discount: String = "", offer3_sixMonth_Discount: String = "", offer3_oneYear_Discount: String = "", offer3_lifeTime: String = "")
+    {
+        self.offer1_oneWeek = offer1_oneWeek
+        self.offer1_oneMonth = offer1_oneMonth
+        self.offer1_twoMonth = offer1_twoMonth
+        self.offer1_threeMonth = offer1_threeMonth
+        self.offer1_sixMonth = offer1_sixMonth
+        self.offer1_oneYear = offer1_oneYear
+        self.offer1_oneWeek_Discount = offer1_oneWeek_Discount
+        self.offer1_oneMonth_Discount = offer1_oneMonth_Discount
+        self.offer1_twoMonth_Discount = offer1_twoMonth_Discount
+        self.offer1_threeMonth_Discount = offer1_threeMonth_Discount
+        self.offer1_sixMonth_Discount = offer1_sixMonth_Discount
+        self.offer1_oneYear_Discount = offer1_oneYear_Discount
+        self.offer1_lifeTime = offer1_lifeTime
+        self.offer2_oneWeek = offer2_oneWeek
+        self.offer2_oneMonth = offer2_oneMonth
+        self.offer2_twoMonth = offer2_twoMonth
+        self.offer2_threeMonth = offer2_threeMonth
+        self.offer2_sixMonth = offer2_sixMonth
+        self.offer2_oneYear = offer2_oneYear
+        self.offer2_oneWeek_Discount = offer2_oneWeek_Discount
+        self.offer2_oneMonth_Discount = offer2_oneMonth_Discount
+        self.offer2_twoMonth_Discount = offer2_twoMonth_Discount
+        self.offer2_threeMonth_Discount = offer2_threeMonth_Discount
+        self.offer2_sixMonth_Discount = offer2_sixMonth_Discount
+        self.offer2_oneYear_Discount = offer2_oneYear_Discount
+        self.offer2_lifeTime = offer2_lifeTime
+        self.offer3_oneWeek = offer3_oneWeek
+        self.offer3_oneMonth = offer3_oneMonth
+        self.offer3_twoMonth = offer3_twoMonth
+        self.offer3_threeMonth = offer3_threeMonth
+        self.offer3_sixMonth = offer3_sixMonth
+        self.offer3_oneYear = offer3_oneYear
+        self.offer3_oneWeek_Discount = offer3_oneWeek_Discount
+        self.offer3_oneMonth_Discount = offer3_oneMonth_Discount
+        self.offer3_twoMonth_Discount = offer3_twoMonth_Discount
+        self.offer3_threeMonth_Discount = offer3_threeMonth_Discount
+        self.offer3_sixMonth_Discount = offer3_sixMonth_Discount
+        self.offer3_oneYear_Discount = offer3_oneYear_Discount
+        self.offer3_lifeTime = offer3_lifeTime
+    }
 }
 
 public enum SubscriptionOfferType
