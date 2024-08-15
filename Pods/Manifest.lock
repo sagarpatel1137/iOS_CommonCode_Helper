@@ -75,6 +75,52 @@ PODS:
   - KSCrash/Recording (1.17.4):
     - KSCrash/Recording/Tools (= 1.17.4)
   - KSCrash/Recording/Tools (1.17.4)
+  - OneSignal (5.2.3):
+    - OneSignal/OneSignalComplete (= 5.2.3)
+  - OneSignal/OneSignal (5.2.3):
+    - OneSignal/OneSignalCore
+    - OneSignal/OneSignalExtension
+    - OneSignal/OneSignalLiveActivities
+    - OneSignal/OneSignalNotifications
+    - OneSignal/OneSignalOSCore
+    - OneSignal/OneSignalOutcomes
+    - OneSignal/OneSignalUser
+  - OneSignal/OneSignalComplete (5.2.3):
+    - OneSignal/OneSignal
+    - OneSignal/OneSignalInAppMessages
+    - OneSignal/OneSignalLocation
+  - OneSignal/OneSignalCore (5.2.3)
+  - OneSignal/OneSignalExtension (5.2.3):
+    - OneSignal/OneSignalCore
+    - OneSignal/OneSignalOutcomes
+  - OneSignal/OneSignalInAppMessages (5.2.3):
+    - OneSignal/OneSignalCore
+    - OneSignal/OneSignalNotifications
+    - OneSignal/OneSignalOSCore
+    - OneSignal/OneSignalOutcomes
+    - OneSignal/OneSignalUser
+  - OneSignal/OneSignalLiveActivities (5.2.3):
+    - OneSignal/OneSignalCore
+    - OneSignal/OneSignalOSCore
+    - OneSignal/OneSignalUser
+  - OneSignal/OneSignalLocation (5.2.3):
+    - OneSignal/OneSignalCore
+    - OneSignal/OneSignalNotifications
+    - OneSignal/OneSignalOSCore
+    - OneSignal/OneSignalUser
+  - OneSignal/OneSignalNotifications (5.2.3):
+    - OneSignal/OneSignalCore
+    - OneSignal/OneSignalExtension
+    - OneSignal/OneSignalOutcomes
+  - OneSignal/OneSignalOSCore (5.2.3):
+    - OneSignal/OneSignalCore
+  - OneSignal/OneSignalOutcomes (5.2.3):
+    - OneSignal/OneSignalCore
+  - OneSignal/OneSignalUser (5.2.3):
+    - OneSignal/OneSignalCore
+    - OneSignal/OneSignalNotifications
+    - OneSignal/OneSignalOSCore
+    - OneSignal/OneSignalOutcomes
   - RevenueCat (5.2.2)
   - TikTokBusinessSDK (1.3.5)
 
@@ -84,6 +130,7 @@ DEPENDENCIES:
   - FBSDKCoreKit
   - FBSDKLoginKit
   - FBSDKShareKit
+  - OneSignal
   - RevenueCat
   - TikTokBusinessSDK
 
@@ -112,6 +159,7 @@ SPEC REPOS:
     - FBSDKLoginKit
     - FBSDKShareKit
     - KSCrash
+    - OneSignal
     - RevenueCat
     - TikTokBusinessSDK
 
@@ -139,9 +187,10 @@ SPEC CHECKSUMS:
   FBSDKLoginKit: b4a4eba1d62eb452544411824f41689adabd5bd2
   FBSDKShareKit: eb1169eafe3c06f881dc6deed2d7979585b16959
   KSCrash: 158a0998f08ae7d4e54ef8a2da62d6e08b46d03a
+  OneSignal: 916eee4ffe4762f387ae0e28b6541bce8a824d10
   RevenueCat: ba985d80069c1c4b9c9e0763f1852f2a0bdcc2d6
   TikTokBusinessSDK: 36d609fa83d6135ce29ed1541913adb97208ba6e
 
-PODFILE CHECKSUM: fae34e6fe6211ce0c051e3c84f3112b1931884ee
+PODFILE CHECKSUM: de8201426f405da60d03959b4f0610abd31c3c21
 
 COCOAPODS: 1.15.2

@@ -27,6 +27,9 @@ target 'iOS_CommonCode' do
   
   #Tiktok
   pod 'TikTokBusinessSDK'
+  
+  #OneSignal
+  pod 'OneSignal'
 
 end
 

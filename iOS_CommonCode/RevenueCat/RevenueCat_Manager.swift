@@ -53,6 +53,7 @@ public class RevenueCat_Manager : NSObject {
     ///   - APIKey: RevenueCat APIKey
     ///   - AppId: RevenueCat AppId
     ///   - sharedSecret: sharedSecret of the application
+    ///   - productIds: Product ids for offer code to find out for which offers fetched from revenuecat
     public func initialiseRevenueCat(APIKey: String, AppId: String = "", sharedSecret: String = "", productIds: SubscriptionProductIds?) {
     
         Purchases.configure(with: Configuration.Builder(withAPIKey: APIKey)
@@ -101,6 +102,72 @@ public class RevenueCat_Manager : NSObject {
         else {
             completion()
             self.checkForNetworkReachability()
+        }
+    }
+    
+    // MARK: - Purchase with Promo
+    public func purchaseProductWithPromo(ProductID : String, promoOffers: PromotionalOffer,completion : @escaping(Bool,CustomerInfo?,Error?,Bool)->Void)
+    {
+        let p1 = RevenueCat_Manager.AvailableProducts.first { (p) -> Bool in
+            return p.storeProduct.productIdentifier ==  ProductID
+        }
+        if let p1 = p1 {
+            Purchases.shared.purchase(package: p1, promotionalOffer: promoOffers) { (trans, info, error, cancelled) in
+                if let error = error {
+                    if !cancelled {
+                        RevenueCat_Manager.purchaseInfo = info
+                        Purchase_flag = info?.entitlements.active.count ?? 0 > 0 ? true :  false
+                        completion(true,info,error,false)
+                    }
+                    else{
+                        completion(true,info,error,true)
+                    }
+                } else {
+                    completion(true,info,nil,false)
+                }
+            }
+        }
+        else{
+            completion(false,nil,nil,true)
+        }
+    }
+    
+    // MARK: - Purchase
+    public func purchaseProduct(ProductID : String,completion : @escaping(Bool,CustomerInfo?,Error?,Bool)->Void)
+    {
+        let p1 = RevenueCat_Manager.AvailableProducts.first { (p) -> Bool in
+            return p.storeProduct.productIdentifier ==  ProductID
+        }
+        if let p1 = p1 {
+            Purchases.shared.purchase(package: p1) { (trans, info, error, cancelled) in
+                if let error = error {
+                    if !cancelled {
+                        RevenueCat_Manager.purchaseInfo = info
+                        Purchase_flag = info?.entitlements.active.count ?? 0 > 0 ? true :  false
+                        completion(true,info,error,false)
+                    } else{
+                        completion(true,info,error,true)
+                    }
+                } else {
+                    completion(true,info,nil,false)
+                }
+            }
+        } else {
+            completion(false,nil,nil,false)
+        }
+    }
+    
+    // MARK: - Restore
+    public func restoreProduct(completion : @escaping(Bool,CustomerInfo?,Error?)->Void)
+    {
+        Purchases.shared.restorePurchases { (purchaseInfo, error) in
+            if let error = error {
+                completion(false,purchaseInfo,error)
+            } else {
+                RevenueCat_Manager.purchaseInfo = purchaseInfo
+                Purchase_flag = purchaseInfo?.entitlements.active.count ?? 0 > 0 ? true :  false
+                completion(true,purchaseInfo,nil)
+            }
         }
     }
 }
@@ -434,73 +501,6 @@ extension RevenueCat_Manager
         else if self.WeekSubscriptionID == subProductIds.offer3_oneWeek || self.OneMonthSubscriptionID == subProductIds.offer3_oneMonth || self.TwoMonthSubscriptionID == subProductIds.offer3_twoMonth || self.ThreeMonthSubscriptionID == subProductIds.offer3_threeMonth || self.SixMonthSubscriptionID == subProductIds.offer3_sixMonth || self.YearSubscriptionID == subProductIds.offer3_oneYear || self.LifetimeSubscriptionID == subProductIds.offer3_lifeTime
         {
             self.isOfferType = .offer3
-        }
-    }
-}
-
-// MARK: - Purchase & Restore
-extension RevenueCat_Manager
-{
-    public func purchaseProductWithPromo(ProductID : String, promoOffers: PromotionalOffer,completion : @escaping(Bool,CustomerInfo?,Error?,Bool)->Void)
-    {
-        let p1 = RevenueCat_Manager.AvailableProducts.first { (p) -> Bool in
-            return p.storeProduct.productIdentifier ==  ProductID
-        }
-        if let p1 = p1 {
-            Purchases.shared.purchase(package: p1, promotionalOffer: promoOffers) { (trans, info, error, cancelled) in
-                if let error = error {
-                    if !cancelled {
-                        RevenueCat_Manager.purchaseInfo = info
-                        Purchase_flag = info?.entitlements.active.count ?? 0 > 0 ? true :  false
-                        completion(true,info,error,false)
-                    }
-                    else{
-                        completion(true,info,error,true)
-                    }
-                } else {
-                    completion(true,info,nil,false)
-                }
-            }
-        }
-        else{
-            completion(false,nil,nil,true)
-        }
-    }
-    
-    public func purchaseProduct(ProductID : String,completion : @escaping(Bool,CustomerInfo?,Error?,Bool)->Void)
-    {
-        let p1 = RevenueCat_Manager.AvailableProducts.first { (p) -> Bool in
-            return p.storeProduct.productIdentifier ==  ProductID
-        }
-        if let p1 = p1 {
-            Purchases.shared.purchase(package: p1) { (trans, info, error, cancelled) in
-                if let error = error {
-                    if !cancelled {
-                        RevenueCat_Manager.purchaseInfo = info
-                        Purchase_flag = info?.entitlements.active.count ?? 0 > 0 ? true :  false
-                        completion(true,info,error,false)
-                    } else{
-                        completion(true,info,error,true)
-                    }
-                } else {
-                    completion(true,info,nil,false)
-                }
-            }
-        } else {
-            completion(false,nil,nil,false)
-        }
-    }
-    
-    public func restoreProduct(completion : @escaping(Bool,CustomerInfo?,Error?)->Void)
-    {
-        Purchases.shared.restorePurchases { (purchaseInfo, error) in
-            if let error = error {
-                completion(false,purchaseInfo,error)
-            } else {
-                RevenueCat_Manager.purchaseInfo = purchaseInfo
-                Purchase_flag = purchaseInfo?.entitlements.active.count ?? 0 > 0 ? true :  false
-                completion(true,purchaseInfo,nil)
-            }
         }
     }
 }

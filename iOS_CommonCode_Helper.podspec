@@ -2,7 +2,7 @@
 Pod::Spec.new do |spec|
 
 spec.name              = "iOS_CommonCode_Helper"
-spec.version           = "0.0.6"
+spec.version           = "0.0.7"
 spec.summary           = "CommonCode Code iOS"
 spec.description       = <<-DESC
 Common Code for Vasundhara iOS App Developing.
@@ -26,5 +26,6 @@ spec.dependency 'FBSDKCoreKit'
 spec.dependency 'FBSDKLoginKit'
 spec.dependency 'FBSDKShareKit'
 spec.dependency 'TikTokBusinessSDK'
+spec.dependency 'OneSignal'
 
 end
