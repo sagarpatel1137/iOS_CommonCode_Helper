@@ -12,6 +12,21 @@ target 'iOS_CommonCode' do
   
   #API
   pod 'Alamofire'
+  
+  # AppFlyer
+  #pod 'AppsFlyerFramework'
+  #pod 'PurchaseConnector'
+  
+  #AppMetrica
+  pod 'AppMetricaAnalytics'
+  
+  # Facebook
+  pod 'FBSDKCoreKit'
+  pod 'FBSDKLoginKit'
+  pod 'FBSDKShareKit'
+  
+  #Tiktok
+  pod 'TikTokBusinessSDK'
 
 end
 

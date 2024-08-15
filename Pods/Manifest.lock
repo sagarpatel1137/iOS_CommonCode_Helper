@@ -1,20 +1,147 @@
 PODS:
   - Alamofire (5.9.1)
+  - AppMetricaAdSupport (5.7.0):
+    - AppMetricaCore (= 5.7.0)
+    - AppMetricaCoreExtension (= 5.7.0)
+  - AppMetricaAnalytics (5.7.0):
+    - AppMetricaAdSupport (= 5.7.0)
+    - AppMetricaCore (= 5.7.0)
+    - AppMetricaCrashes (= 5.7.0)
+    - AppMetricaWebKit (= 5.7.0)
+  - AppMetricaCore (5.7.0):
+    - AppMetricaCoreUtils (= 5.7.0)
+    - AppMetricaEncodingUtils (= 5.7.0)
+    - AppMetricaFMDB (= 5.7.0)
+    - AppMetricaHostState (= 5.7.0)
+    - AppMetricaLog (= 5.7.0)
+    - AppMetricaNetwork (= 5.7.0)
+    - AppMetricaPlatform (= 5.7.0)
+    - AppMetricaProtobuf (= 5.7.0)
+    - AppMetricaProtobufUtils (= 5.7.0)
+    - AppMetricaStorageUtils (= 5.7.0)
+  - AppMetricaCoreExtension (5.7.0):
+    - AppMetricaCore (= 5.7.0)
+    - AppMetricaStorageUtils (= 5.7.0)
+  - AppMetricaCoreUtils (5.7.0):
+    - AppMetricaLog (= 5.7.0)
+  - AppMetricaCrashes (5.7.0):
+    - AppMetricaCore (= 5.7.0)
+    - AppMetricaCoreExtension (= 5.7.0)
+    - AppMetricaCoreUtils (= 5.7.0)
+    - AppMetricaEncodingUtils (= 5.7.0)
+    - AppMetricaHostState (= 5.7.0)
+    - AppMetricaLog (= 5.7.0)
+    - AppMetricaPlatform (= 5.7.0)
+    - AppMetricaProtobufUtils (= 5.7.0)
+    - AppMetricaStorageUtils (= 5.7.0)
+    - KSCrash/Recording (~> 1.17.0)
+    - KSCrash/Recording/Tools
+  - AppMetricaEncodingUtils (5.7.0):
+    - AppMetricaCoreUtils (= 5.7.0)
+    - AppMetricaLog (= 5.7.0)
+    - AppMetricaPlatform (= 5.7.0)
+  - AppMetricaFMDB (5.7.0)
+  - AppMetricaHostState (5.7.0):
+    - AppMetricaCoreUtils (= 5.7.0)
+    - AppMetricaLog (= 5.7.0)
+  - AppMetricaLog (5.7.0)
+  - AppMetricaNetwork (5.7.0):
+    - AppMetricaCoreUtils (= 5.7.0)
+    - AppMetricaLog (= 5.7.0)
+    - AppMetricaPlatform (= 5.7.0)
+  - AppMetricaPlatform (5.7.0):
+    - AppMetricaCoreUtils (= 5.7.0)
+    - AppMetricaLog (= 5.7.0)
+  - AppMetricaProtobuf (5.7.0)
+  - AppMetricaProtobufUtils (5.7.0):
+    - AppMetricaProtobuf (= 5.7.0)
+  - AppMetricaStorageUtils (5.7.0):
+    - AppMetricaCoreUtils (= 5.7.0)
+    - AppMetricaLog (= 5.7.0)
+  - AppMetricaWebKit (5.7.0):
+    - AppMetricaCore (= 5.7.0)
+    - AppMetricaCoreUtils (= 5.7.0)
+    - AppMetricaLog (= 5.7.0)
+  - FBAEMKit (17.0.3):
+    - FBSDKCoreKit_Basics (= 17.0.3)
+  - FBSDKCoreKit (17.0.3):
+    - FBAEMKit (= 17.0.3)
+    - FBSDKCoreKit_Basics (= 17.0.3)
+  - FBSDKCoreKit_Basics (17.0.3)
+  - FBSDKLoginKit (17.0.3):
+    - FBSDKCoreKit (= 17.0.3)
+  - FBSDKShareKit (17.0.3):
+    - FBSDKCoreKit (= 17.0.3)
+  - KSCrash/Recording (1.17.4):
+    - KSCrash/Recording/Tools (= 1.17.4)
+  - KSCrash/Recording/Tools (1.17.4)
   - RevenueCat (5.2.2)
+  - TikTokBusinessSDK (1.3.5)
 
 DEPENDENCIES:
   - Alamofire
+  - AppMetricaAnalytics
+  - FBSDKCoreKit
+  - FBSDKLoginKit
+  - FBSDKShareKit
   - RevenueCat
+  - TikTokBusinessSDK
 
 SPEC REPOS:
   trunk:
     - Alamofire
+    - AppMetricaAdSupport
+    - AppMetricaAnalytics
+    - AppMetricaCore
+    - AppMetricaCoreExtension
+    - AppMetricaCoreUtils
+    - AppMetricaCrashes
+    - AppMetricaEncodingUtils
+    - AppMetricaFMDB
+    - AppMetricaHostState
+    - AppMetricaLog
+    - AppMetricaNetwork
+    - AppMetricaPlatform
+    - AppMetricaProtobuf
+    - AppMetricaProtobufUtils
+    - AppMetricaStorageUtils
+    - AppMetricaWebKit
+    - FBAEMKit
+    - FBSDKCoreKit
+    - FBSDKCoreKit_Basics
+    - FBSDKLoginKit
+    - FBSDKShareKit
+    - KSCrash
     - RevenueCat
+    - TikTokBusinessSDK
 
 SPEC CHECKSUMS:
   Alamofire: f36a35757af4587d8e4f4bfa223ad10be2422b8c
+  AppMetricaAdSupport: c1888375a6e85bb55d1e36cc8c2a86b1dcc3e88d
+  AppMetricaAnalytics: 3eba443a50eb56085dc69a6efb82aed7ff0fbb8b
+  AppMetricaCore: 2b88e6d5a5aafd9663bbc6056388ac0e95b6e2f1
+  AppMetricaCoreExtension: 1d7924bb168f7238fffeecaeea0a04a0b29037c5
+  AppMetricaCoreUtils: 9ed2396aa229554bd6b7532b5f52c638275bba67
+  AppMetricaCrashes: 1a9d2e68cfa92425d6ce3a997287db051219263d
+  AppMetricaEncodingUtils: b789fa4c1e65291751d2f2ddf71f63e097abfcc8
+  AppMetricaFMDB: adc2ca20358239db4c246113e2d4f0663779839c
+  AppMetricaHostState: 70a575d9226ae3fcf9adc3f948403e45a8199a60
+  AppMetricaLog: 8903049a47249067f01839f392552e91feb72171
+  AppMetricaNetwork: a738841c6987ca81da92ba721edcda3ebced351a
+  AppMetricaPlatform: 456d620ca7816ae57d9b94c19bddc10f36fab7b3
+  AppMetricaProtobuf: 4d9c8e28bc7ee7f2df7bc0b5882b5b8734add7a5
+  AppMetricaProtobufUtils: 69272f30e19e30d814b7f05cbd1130e888764c8d
+  AppMetricaStorageUtils: d72c866868dce22626441349bcd45eeec43b9e86
+  AppMetricaWebKit: bf5a05e7ed13857807522639c8984a1c192e88ef
+  FBAEMKit: 9900b2edd99a2d21629a6277e6166f14c6215799
+  FBSDKCoreKit: 0791f8f68a8630931a4c12aa23a56cc021551596
+  FBSDKCoreKit_Basics: 46d6b472c0dd0a5a7e972c025033d1c567f54eb4
+  FBSDKLoginKit: b4a4eba1d62eb452544411824f41689adabd5bd2
+  FBSDKShareKit: eb1169eafe3c06f881dc6deed2d7979585b16959
+  KSCrash: 158a0998f08ae7d4e54ef8a2da62d6e08b46d03a
   RevenueCat: ba985d80069c1c4b9c9e0763f1852f2a0bdcc2d6
+  TikTokBusinessSDK: 36d609fa83d6135ce29ed1541913adb97208ba6e
 
-PODFILE CHECKSUM: 2ba000fdca26a995f378c187db513f8a220b43ae
+PODFILE CHECKSUM: fae34e6fe6211ce0c051e3c84f3112b1931884ee
 
 COCOAPODS: 1.15.2
