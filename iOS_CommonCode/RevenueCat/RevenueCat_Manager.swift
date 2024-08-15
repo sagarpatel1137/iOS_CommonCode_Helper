@@ -11,8 +11,10 @@ import Alamofire
 
 public class RevenueCat_Manager : NSObject {
     
-    static var AvailableProducts = [Package]()
-    static var purchaseInfo : CustomerInfo?
+    public static var shared = RevenueCat_Manager()
+    
+    private static var AvailableProducts = [Package]()
+    private static var purchaseInfo : CustomerInfo?
     
     private var WeekSubscriptionID = String()
     private var OneMonthSubscriptionID = String()
@@ -439,7 +441,7 @@ extension RevenueCat_Manager
 // MARK: - Purchase & Restore
 extension RevenueCat_Manager
 {
-    public class func purchaseProductWithPromo(ProductID : String, promoOffers: PromotionalOffer,completion : @escaping(Bool,CustomerInfo?,Error?,Bool)->Void)
+    public func purchaseProductWithPromo(ProductID : String, promoOffers: PromotionalOffer,completion : @escaping(Bool,CustomerInfo?,Error?,Bool)->Void)
     {
         let p1 = RevenueCat_Manager.AvailableProducts.first { (p) -> Bool in
             return p.storeProduct.productIdentifier ==  ProductID
@@ -465,7 +467,7 @@ extension RevenueCat_Manager
         }
     }
     
-    public class func purchaseProduct(ProductID : String,completion : @escaping(Bool,CustomerInfo?,Error?,Bool)->Void)
+    public func purchaseProduct(ProductID : String,completion : @escaping(Bool,CustomerInfo?,Error?,Bool)->Void)
     {
         let p1 = RevenueCat_Manager.AvailableProducts.first { (p) -> Bool in
             return p.storeProduct.productIdentifier ==  ProductID
@@ -489,7 +491,7 @@ extension RevenueCat_Manager
         }
     }
     
-    public class func restoreProduct(completion : @escaping(Bool,CustomerInfo?,Error?)->Void)
+    public func restoreProduct(completion : @escaping(Bool,CustomerInfo?,Error?)->Void)
     {
         Purchases.shared.restorePurchases { (purchaseInfo, error) in
             if let error = error {

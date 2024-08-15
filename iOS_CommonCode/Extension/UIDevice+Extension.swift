@@ -9,14 +9,14 @@ import UIKit
 
 extension UIDevice
 {
-    var isiPhone: Bool {
+    public var isiPhone: Bool {
         return UIDevice.current.userInterfaceIdiom == .phone
     }
-    var isiPad: Bool {
+    public var isiPad: Bool {
         return UIDevice.current.userInterfaceIdiom == .pad
     }
     
-    var isSimulator: Bool {
+    public var isSimulator: Bool {
         #if targetEnvironment(simulator)
             return true
         #else
