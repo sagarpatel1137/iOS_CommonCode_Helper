@@ -319,7 +319,7 @@ DEPENDENCIES:
   - PurchaseConnector
   - RevenueCat
   - TikTokBusinessSDK
-  - UIView-Shimmer (~> 1.0)
+  - UIView-Shimmer
 
 SPEC REPOS:
   trunk:
@@ -438,6 +438,6 @@ SPEC CHECKSUMS:
   TikTokBusinessSDK: 36d609fa83d6135ce29ed1541913adb97208ba6e
   UIView-Shimmer: ff0a32c73d67c7dbdea3d9e530538b10d18aea56
 
-PODFILE CHECKSUM: ace23379504e0e3c05369ad510dfc323d4c326a2
+PODFILE CHECKSUM: c6639bfcc56f5e865b9d6adb91159a1dacf5c63e
 
 COCOAPODS: 1.15.2

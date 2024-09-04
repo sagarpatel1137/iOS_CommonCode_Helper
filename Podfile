@@ -42,7 +42,7 @@ target 'iOS_CommonCode' do
   pod 'Google-Mobile-Ads-SDK'
   
   # Other
-  pod 'UIView-Shimmer', '~> 1.0'
+  pod 'UIView-Shimmer'
 
 end
 
