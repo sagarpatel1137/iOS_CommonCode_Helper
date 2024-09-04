@@ -106,73 +106,97 @@ extension GoogleAd_Manager
 //MARK: - Ad Show
 extension GoogleAd_Manager
 {
-    public func funShowInterstitialAd(rootVC: UIViewController, adLoadDone : (() -> Void)?, isPresentAd : ((Bool) -> Void),adDidDismiss : @escaping (() -> Void),didFailToPresent : @escaping (() -> Void))
+    public func funShowInterstitialAd(rootVC: UIViewController, isWaitUntillShow: Bool = false, isPresentAd : @escaping ((Bool) -> Void),adDidDismiss : @escaping (() -> Void),didFailToPresent : @escaping ((String) -> Void))
     {
         checkIntAdIsReadyForShow(rootVC) { (isADPresented) in
-            isPresentAd(isADPresented)
-        }
-        interstitialAd_LoadDone = {
-            adLoadDone?()
+            if isWaitUntillShow && !isADPresented {
+                interstitialAd_LoadDone = {
+                    self.interstitialAd.present(fromRootViewController: rootVC)
+                    isPresentAd(true)
+                }
+            }
+            else {
+                isPresentAd(isADPresented)
+            }
         }
         interstitialAd_DidDismiss = {
             adDidDismiss()
         }
         interstitialAd_DidFailToPresent = { (error) in
-            didFailToPresent()
+            didFailToPresent(error)
         }
     }
     
-    public func funShowRewardedAd(rootVC: UIViewController, adLoadDone : (() -> Void)?, isPresentAd : ((Bool) -> Void),adDidDismiss : @escaping (() -> Void),adRewarded : @escaping (() -> Void),didFailToPresent : @escaping (() -> Void))
+    public func funShowRewardedAd(rootVC: UIViewController, isWaitUntillShow: Bool = false, isPresentAd : @escaping ((Bool) -> Void),adDidDismiss : @escaping (() -> Void),adRewarded : @escaping (() -> Void),didFailToPresent : @escaping ((String) -> Void))
     {
         checkRewardedAdIsReadyForShow(rootVC) { (isADPresented) in
-            isPresentAd(isADPresented)
-        }
-        rewardedAd_LoadDone = {
-            adLoadDone?()
+            if isWaitUntillShow && !isADPresented {
+                rewardedAd_LoadDone = {
+                    self.rewardedAd.present(fromRootViewController: rootVC) {
+                        self.rewardedAd_Rewarded?()
+                    }
+                    isPresentAd(true)
+                }
+            }
+            else {
+                isPresentAd(isADPresented)
+            }
         }
         rewardedAd_DidDismiss = {
             adDidDismiss()
         }
         rewardedAd_DidFailToPresent = { (error) in
-            didFailToPresent()
+            didFailToPresent(error)
         }
         rewardedAd_Rewarded = {
             adRewarded()
         }
     }
     
-    public func funShowRewardedIntAd(rootVC: UIViewController, adLoadDone : (() -> Void)?, isPresentAd : ((Bool) -> Void),adDidDismiss : @escaping (() -> Void),adRewarded : @escaping (() -> Void),didFailToPresent : @escaping (() -> Void))
+    public func funShowRewardedIntAd(rootVC: UIViewController, isWaitUntillShow: Bool = false, isPresentAd : @escaping ((Bool) -> Void),adDidDismiss : @escaping (() -> Void),adRewarded : @escaping (() -> Void),didFailToPresent : @escaping ((String) -> Void))
     {
         checkRewardedIntAdIsReadyForShow(rootVC) { (isADPresented) in
-            isPresentAd(isADPresented)
-        }
-        rewardedAd_LoadDone = {
-            adLoadDone?()
+            if isWaitUntillShow && !isADPresented {
+                rewardedIntAd_LoadDone = {
+                    self.rewardedIntAd.present(fromRootViewController: rootVC) {
+                        self.rewardedIntAd_Rewarded?()
+                    }
+                    isPresentAd(true)
+                }
+            }
+            else {
+                isPresentAd(isADPresented)
+            }
         }
         rewardedIntAd_DidDismiss = {
             adDidDismiss()
         }
         rewardedIntAd_DidFailToPresent = { (error) in
-            didFailToPresent()
+            didFailToPresent(error)
         }
         rewardedIntAd_Rewarded = {
             adRewarded()
         }
     }
     
-    public func funShowAppOpenAd(rootVC: UIViewController, adLoadDone : (() -> Void)?, isPresentAd : ((Bool) -> Void),adDidDismiss : @escaping (() -> Void),didFailToPresent : @escaping (() -> Void))
+    public func funShowAppOpenAd(rootVC: UIViewController, isWaitUntillShow: Bool = false, isPresentAd : @escaping ((Bool) -> Void),adDidDismiss : @escaping (() -> Void),didFailToPresent : @escaping ((String) -> Void))
     {
         checkAppOpenAdIsReadyForShow(rootVC) { (isADPresented) in
-            isPresentAd(isADPresented)
-        }
-        appOpenAd_LoadDone = {
-            adLoadDone?()
+            if isWaitUntillShow && !isADPresented {
+                appOpenAd_LoadDone = {
+                    self.appOpenAd.present(fromRootViewController: rootVC)
+                    isPresentAd(true)
+                }
+            }
+            else {
+                isPresentAd(isADPresented)
+            }
         }
         appOpenAd_DidDismiss = {
             adDidDismiss()
         }
         appOpenAd_DidFailToPresent = { (error) in
-            didFailToPresent()
+            didFailToPresent(error)
         }
     }
 }
