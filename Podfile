@@ -7,17 +7,17 @@ target 'iOS_CommonCode' do
 
   # Pods for iOS_CommonCode
   
-  #Purchase
+  # Purchase
   pod 'RevenueCat'
   
-  #API
+  # API
   pod 'Alamofire'
   
   # AppFlyer
-  #pod 'AppsFlyerFramework'
-  #pod 'PurchaseConnector'
+  pod 'AppsFlyerFramework'
+  pod 'PurchaseConnector'
   
-  #AppMetrica
+  # AppMetrica
   pod 'AppMetricaAnalytics'
   
   # Facebook
@@ -25,11 +25,24 @@ target 'iOS_CommonCode' do
   pod 'FBSDKLoginKit'
   pod 'FBSDKShareKit'
   
-  #Tiktok
+  # Tiktok
   pod 'TikTokBusinessSDK'
   
-  #OneSignal
+  # OneSignal
   pod 'OneSignal'
+  
+  # Firebase
+  pod 'Firebase/Auth'
+  pod 'Firebase/Analytics'
+  pod 'Firebase/Performance'
+  pod 'Firebase/Crashlytics'
+  pod 'FirebaseMessaging'
+  
+  # Ads
+  pod 'Google-Mobile-Ads-SDK'
+  
+  # Other
+  pod 'UIView-Shimmer', '~> 1.0'
 
 end
 

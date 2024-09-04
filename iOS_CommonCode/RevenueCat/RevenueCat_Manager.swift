@@ -306,7 +306,6 @@ extension RevenueCat_Manager
                                                                             plan_Price: GetPriceOfProduct_Int(productId: WeekSubscriptionID),
                                                                             plan_Currancy_Code: GetCurrncyCode(productId: WeekSubscriptionID),
                                                                             plan_Free_Trail: GetIntroductioyOfProduct(productId: WeekSubscriptionID))
-
         GetPromotionalOfferOfProduct(WeekSubscriptionID, completion: { promOffer in
             SubscriptionConst.ActivePlans.one_Week.plan_Promotional_Offer = promOffer
         })
@@ -520,11 +519,20 @@ extension RevenueCat_Manager
 extension RevenueCat_Manager
 {
     private func GetPriceOfProduct_String(productId : String) -> String {
-        let product =  RevenueCat_Manager.AvailableProducts.first { (p) -> Bool in
+        /*let product =  RevenueCat_Manager.AvailableProducts.first { (p) -> Bool in
             return p.storeProduct.productIdentifier ==  productId
         }
         let priceString = "\(product?.localizedPriceString ?? "$0.0")".trimmingCharacters(in: .whitespaces)
         return priceString
+        */
+        
+        let currCode = GetCurrncyCode(productId: productId)
+        let price = GetPriceOfProduct_Int(productId: productId)
+        if GetDecimalPart(of: price) > 0 {
+            return "\(currCode)" + String(format:"%.2f", price)
+        } else {
+            return "\(currCode)" + String(format:"%.f", price)
+        }
     }
     
     private func GetPriceOfProduct_Int(productId : String) -> Double {
@@ -535,6 +543,12 @@ extension RevenueCat_Manager
     private func GetCurrncyCode(productId : String) -> String {
         let product = self.GetProduct(productId: productId)
         return product?.priceFormatter?.currencySymbol ?? "$"
+    }
+    
+    private func GetDecimalPart(of value: Double) -> Double {
+        let integerPart = floor(value)
+        let decimalPart = value - integerPart
+        return decimalPart
     }
 }
 
@@ -635,11 +649,20 @@ extension RevenueCat_Manager
                             default: break
                         }
                         
+                        let currCode = self.GetCurrncyCode(productId: productId)
+                        let price = NSDecimalNumber(decimal: promoOffer.price).doubleValue
+                        var priceStr = ""
+                        if self.GetDecimalPart(of: price) > 0 { 
+                            priceStr = "\(currCode)" + String(format:"%.2f", price)
+                        } else {
+                            priceStr = "\(currCode)" + String(format:"%.f", price)
+                        }
+                        
                         let planPromotionalOffer = SubscriptionConst.PlanPromotionalOffer(isPromotionalOffer: true,
                                                                                           promoOffer: promOffer,
                                                                                           identifier: promoOffer.offerIdentifier ?? "",
                                                                                           price: NSDecimalNumber(decimal: promoOffer.price).doubleValue,
-                                                                                          price_String: promoOffer.localizedPriceString,
+                                                                                          price_String: priceStr /*promoOffer.localizedPriceString*/,
                                                                                           paymentMode: paymentMode,
                                                                                           subscriptionDuration: promoOffer.subscriptionPeriod.value,
                                                                                           subscriptionUnittype: self.GetUnit(unit: UInt(promoOffer.subscriptionPeriod.unit.rawValue)),

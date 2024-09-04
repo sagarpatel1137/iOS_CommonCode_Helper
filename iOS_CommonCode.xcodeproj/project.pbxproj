@@ -13,6 +13,17 @@
 		8121DD842C621A66003460A5 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8121DD832C621A66003460A5 /* Reachability.swift */; };
 		8121DD852C621A66003460A5 /* ForceUpdate_Manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8121DD822C621A66003460A5 /* ForceUpdate_Manager.swift */; };
 		8121DD8A2C6222C8003460A5 /* iOS_CommonCode_Helper.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 8121DD882C6222C8003460A5 /* iOS_CommonCode_Helper.podspec */; };
+		817DCDF72C6F0A4C004BA1C2 /* GoogleMobileAdsConsentManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 817DCDF62C6F0A4C004BA1C2 /* GoogleMobileAdsConsentManager.swift */; };
+		81BA8AF12C881BE100F8A3C5 /* Constant_Function.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81BA8AF02C881BE100F8A3C5 /* Constant_Function.swift */; };
+		81BA8AFE2C881F4700F8A3C5 /* GoogleAd_Manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81BA8AFD2C881F4700F8A3C5 /* GoogleAd_Manager.swift */; };
+		81BA8B042C88364C00F8A3C5 /* CustomShimmer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81BA8B002C88364500F8A3C5 /* CustomShimmer.swift */; };
+		81BA8B052C88364C00F8A3C5 /* Shimmer_FullNative.xib in Resources */ = {isa = PBXBuildFile; fileRef = 81BA8B012C88364700F8A3C5 /* Shimmer_FullNative.xib */; };
+		81BA8B062C88364C00F8A3C5 /* Shimmer_Adptiv_Banner.xib in Resources */ = {isa = PBXBuildFile; fileRef = 81BA8B022C88364A00F8A3C5 /* Shimmer_Adptiv_Banner.xib */; };
+		81BA8B072C88364C00F8A3C5 /* Shimmer_FullNative.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81BA8B032C88364C00F8A3C5 /* Shimmer_FullNative.swift */; };
+		81BA8B092C88376E00F8A3C5 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81BA8B082C88376E00F8A3C5 /* UIView+Extension.swift */; };
+		81BA8B0B2C8837AE00F8A3C5 /* GoogleAd_Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81BA8B0A2C8837AE00F8A3C5 /* GoogleAd_Constant.swift */; };
+		81BA8B0D2C883D6600F8A3C5 /* Asset.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 81BA8B0C2C883D6600F8A3C5 /* Asset.xcassets */; };
+		81BA8B632C88507600F8A3C5 /* Shimmer_NativeBannerAd.xib in Resources */ = {isa = PBXBuildFile; fileRef = 81BA8B622C88507600F8A3C5 /* Shimmer_NativeBannerAd.xib */; };
 		81CAB5E82C6DD2640050F848 /* Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81CAB5E72C6DD2640050F848 /* Alamofire.swift */; };
 		81CAB5F42C6DF2AB0050F848 /* AppFlyer_Manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81CAB5F32C6DF2AB0050F848 /* AppFlyer_Manager.swift */; };
 		81CAB5F62C6DF2BF0050F848 /* AppMetrica_Manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81CAB5F52C6DF2BF0050F848 /* AppMetrica_Manager.swift */; };
@@ -23,6 +34,23 @@
 		81CAB6022C6E20DB0050F848 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81CAB6012C6E20DB0050F848 /* UIViewController+Extension.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		81BA8B482C884F5F00F8A3C5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8121DD5F2C6216E8003460A5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 81BA8B312C884F5D00F8A3C5;
+			remoteInfo = Example;
+		};
+		81BA8B522C884F5F00F8A3C5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8121DD5F2C6216E8003460A5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 81BA8B312C884F5D00F8A3C5;
+			remoteInfo = Example;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		1922D597FB5C7C197BA10876 /* Pods-iOS_CommonCode.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS_CommonCode.release.xcconfig"; path = "Target Support Files/Pods-iOS_CommonCode/Pods-iOS_CommonCode.release.xcconfig"; sourceTree = "<group>"; };
 		3E4950068404D277B80DED25 /* Pods_iOS_CommonCode.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iOS_CommonCode.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -32,6 +60,20 @@
 		8121DD822C621A66003460A5 /* ForceUpdate_Manager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForceUpdate_Manager.swift; sourceTree = "<group>"; };
 		8121DD832C621A66003460A5 /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		8121DD882C6222C8003460A5 /* iOS_CommonCode_Helper.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = iOS_CommonCode_Helper.podspec; sourceTree = "<group>"; };
+		817DCDF62C6F0A4C004BA1C2 /* GoogleMobileAdsConsentManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleMobileAdsConsentManager.swift; sourceTree = "<group>"; };
+		81BA8AF02C881BE100F8A3C5 /* Constant_Function.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant_Function.swift; sourceTree = "<group>"; };
+		81BA8AFD2C881F4700F8A3C5 /* GoogleAd_Manager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleAd_Manager.swift; sourceTree = "<group>"; };
+		81BA8B002C88364500F8A3C5 /* CustomShimmer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomShimmer.swift; sourceTree = "<group>"; };
+		81BA8B012C88364700F8A3C5 /* Shimmer_FullNative.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Shimmer_FullNative.xib; sourceTree = "<group>"; };
+		81BA8B022C88364A00F8A3C5 /* Shimmer_Adptiv_Banner.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Shimmer_Adptiv_Banner.xib; sourceTree = "<group>"; };
+		81BA8B032C88364C00F8A3C5 /* Shimmer_FullNative.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Shimmer_FullNative.swift; sourceTree = "<group>"; };
+		81BA8B082C88376E00F8A3C5 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		81BA8B0A2C8837AE00F8A3C5 /* GoogleAd_Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleAd_Constant.swift; sourceTree = "<group>"; };
+		81BA8B0C2C883D6600F8A3C5 /* Asset.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Asset.xcassets; sourceTree = "<group>"; };
+		81BA8B322C884F5D00F8A3C5 /* Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		81BA8B472C884F5F00F8A3C5 /* ExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		81BA8B512C884F5F00F8A3C5 /* ExampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ExampleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		81BA8B622C88507600F8A3C5 /* Shimmer_NativeBannerAd.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Shimmer_NativeBannerAd.xib; sourceTree = "<group>"; };
 		81CAB5E72C6DD2640050F848 /* Alamofire.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alamofire.swift; sourceTree = "<group>"; };
 		81CAB5F32C6DF2AB0050F848 /* AppFlyer_Manager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppFlyer_Manager.swift; sourceTree = "<group>"; };
 		81CAB5F52C6DF2BF0050F848 /* AppMetrica_Manager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppMetrica_Manager.swift; sourceTree = "<group>"; };
@@ -49,6 +91,27 @@
 			buildActionMask = 2147483647;
 			files = (
 				2C49534270C1DA445E8353B4 /* Pods_iOS_CommonCode.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		81BA8B2F2C884F5D00F8A3C5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		81BA8B442C884F5F00F8A3C5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		81BA8B4E2C884F5F00F8A3C5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +141,9 @@
 			isa = PBXGroup;
 			children = (
 				8121DD682C6216E8003460A5 /* iOS_CommonCode.framework */,
+				81BA8B322C884F5D00F8A3C5 /* Example.app */,
+				81BA8B472C884F5F00F8A3C5 /* ExampleTests.xctest */,
+				81BA8B512C884F5F00F8A3C5 /* ExampleUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -85,6 +151,8 @@
 		8121DD6A2C6216E8003460A5 /* iOS_CommonCode */ = {
 			isa = PBXGroup;
 			children = (
+				81BA8AEF2C881BC000F8A3C5 /* Constant  */,
+				817DCDF52C6F09CE004BA1C2 /* GDPR */,
 				81CAB5FB2C6DF4E00050F848 /* Extension */,
 				81CAB5FE2C6E17870050F848 /* OneSignal */,
 				81CAB5F22C6DF1250050F848 /* Tiktok */,
@@ -94,9 +162,19 @@
 				81CAB5E62C6DD1D80050F848 /* Alamofire */,
 				819E6FB22C6CB9FD00D4914E /* RevenueCat */,
 				819E6FB52C6CBA7500D4914E /* ForceUpdate */,
+				81BA8AF22C881CDD00F8A3C5 /* Google Ad's */,
 				819E6FB62C6CBA7D00D4914E /* Other */,
+				81BA8B0C2C883D6600F8A3C5 /* Asset.xcassets */,
 			);
 			path = iOS_CommonCode;
+			sourceTree = "<group>";
+		};
+		817DCDF52C6F09CE004BA1C2 /* GDPR */ = {
+			isa = PBXGroup;
+			children = (
+				817DCDF62C6F0A4C004BA1C2 /* GoogleMobileAdsConsentManager.swift */,
+			);
+			path = GDPR;
 			sourceTree = "<group>";
 		};
 		819E6FB22C6CB9FD00D4914E /* RevenueCat */ = {
@@ -120,8 +198,38 @@
 			isa = PBXGroup;
 			children = (
 				8121DD832C621A66003460A5 /* Reachability.swift */,
+				81BA8AFF2C88362E00F8A3C5 /* Shimmer */,
 			);
 			path = Other;
+			sourceTree = "<group>";
+		};
+		81BA8AEF2C881BC000F8A3C5 /* Constant  */ = {
+			isa = PBXGroup;
+			children = (
+				81BA8AF02C881BE100F8A3C5 /* Constant_Function.swift */,
+			);
+			path = "Constant ";
+			sourceTree = "<group>";
+		};
+		81BA8AF22C881CDD00F8A3C5 /* Google Ad's */ = {
+			isa = PBXGroup;
+			children = (
+				81BA8AFD2C881F4700F8A3C5 /* GoogleAd_Manager.swift */,
+				81BA8B0A2C8837AE00F8A3C5 /* GoogleAd_Constant.swift */,
+			);
+			path = "Google Ad's";
+			sourceTree = "<group>";
+		};
+		81BA8AFF2C88362E00F8A3C5 /* Shimmer */ = {
+			isa = PBXGroup;
+			children = (
+				81BA8B002C88364500F8A3C5 /* CustomShimmer.swift */,
+				81BA8B032C88364C00F8A3C5 /* Shimmer_FullNative.swift */,
+				81BA8B012C88364700F8A3C5 /* Shimmer_FullNative.xib */,
+				81BA8B622C88507600F8A3C5 /* Shimmer_NativeBannerAd.xib */,
+				81BA8B022C88364A00F8A3C5 /* Shimmer_Adptiv_Banner.xib */,
+			);
+			path = Shimmer;
 			sourceTree = "<group>";
 		};
 		81CAB5E62C6DD1D80050F848 /* Alamofire */ = {
@@ -169,6 +277,7 @@
 			children = (
 				81CAB5FC2C6DF4FF0050F848 /* UIDevice+Extension.swift */,
 				81CAB6012C6E20DB0050F848 /* UIViewController+Extension.swift */,
+				81BA8B082C88376E00F8A3C5 /* UIView+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -212,6 +321,7 @@
 				8121DD642C6216E8003460A5 /* Sources */,
 				8121DD652C6216E8003460A5 /* Frameworks */,
 				8121DD662C6216E8003460A5 /* Resources */,
+				A56AB0BB871CE5402F699DBF /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -222,6 +332,59 @@
 			productReference = 8121DD682C6216E8003460A5 /* iOS_CommonCode.framework */;
 			productType = "com.apple.product-type.framework";
 		};
+		81BA8B312C884F5D00F8A3C5 /* Example */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 81BA8B592C884F5F00F8A3C5 /* Build configuration list for PBXNativeTarget "Example" */;
+			buildPhases = (
+				81BA8B2E2C884F5D00F8A3C5 /* Sources */,
+				81BA8B2F2C884F5D00F8A3C5 /* Frameworks */,
+				81BA8B302C884F5D00F8A3C5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Example;
+			productName = Example;
+			productReference = 81BA8B322C884F5D00F8A3C5 /* Example.app */;
+			productType = "com.apple.product-type.application";
+		};
+		81BA8B462C884F5F00F8A3C5 /* ExampleTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 81BA8B5C2C884F5F00F8A3C5 /* Build configuration list for PBXNativeTarget "ExampleTests" */;
+			buildPhases = (
+				81BA8B432C884F5F00F8A3C5 /* Sources */,
+				81BA8B442C884F5F00F8A3C5 /* Frameworks */,
+				81BA8B452C884F5F00F8A3C5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				81BA8B492C884F5F00F8A3C5 /* PBXTargetDependency */,
+			);
+			name = ExampleTests;
+			productName = ExampleTests;
+			productReference = 81BA8B472C884F5F00F8A3C5 /* ExampleTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		81BA8B502C884F5F00F8A3C5 /* ExampleUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 81BA8B5F2C884F5F00F8A3C5 /* Build configuration list for PBXNativeTarget "ExampleUITests" */;
+			buildPhases = (
+				81BA8B4D2C884F5F00F8A3C5 /* Sources */,
+				81BA8B4E2C884F5F00F8A3C5 /* Frameworks */,
+				81BA8B4F2C884F5F00F8A3C5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				81BA8B532C884F5F00F8A3C5 /* PBXTargetDependency */,
+			);
+			name = ExampleUITests;
+			productName = ExampleUITests;
+			productReference = 81BA8B512C884F5F00F8A3C5 /* ExampleUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -229,11 +392,22 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1500;
+				LastSwiftUpdateCheck = 1540;
 				LastUpgradeCheck = 1500;
 				TargetAttributes = {
 					8121DD672C6216E8003460A5 = {
 						CreatedOnToolsVersion = 15.0;
+					};
+					81BA8B312C884F5D00F8A3C5 = {
+						CreatedOnToolsVersion = 15.4;
+					};
+					81BA8B462C884F5F00F8A3C5 = {
+						CreatedOnToolsVersion = 15.4;
+						TestTargetID = 81BA8B312C884F5D00F8A3C5;
+					};
+					81BA8B502C884F5F00F8A3C5 = {
+						CreatedOnToolsVersion = 15.4;
+						TestTargetID = 81BA8B312C884F5D00F8A3C5;
 					};
 				};
 			};
@@ -251,6 +425,9 @@
 			projectRoot = "";
 			targets = (
 				8121DD672C6216E8003460A5 /* iOS_CommonCode */,
+				81BA8B312C884F5D00F8A3C5 /* Example */,
+				81BA8B462C884F5F00F8A3C5 /* ExampleTests */,
+				81BA8B502C884F5F00F8A3C5 /* ExampleUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -260,7 +437,32 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				81BA8B062C88364C00F8A3C5 /* Shimmer_Adptiv_Banner.xib in Resources */,
 				8121DD8A2C6222C8003460A5 /* iOS_CommonCode_Helper.podspec in Resources */,
+				81BA8B0D2C883D6600F8A3C5 /* Asset.xcassets in Resources */,
+				81BA8B632C88507600F8A3C5 /* Shimmer_NativeBannerAd.xib in Resources */,
+				81BA8B052C88364C00F8A3C5 /* Shimmer_FullNative.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		81BA8B302C884F5D00F8A3C5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		81BA8B452C884F5F00F8A3C5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		81BA8B4F2C884F5F00F8A3C5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -289,6 +491,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		A56AB0BB871CE5402F699DBF /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-iOS_CommonCode/Pods-iOS_CommonCode-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-iOS_CommonCode/Pods-iOS_CommonCode-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-iOS_CommonCode/Pods-iOS_CommonCode-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -297,21 +516,62 @@
 			buildActionMask = 2147483647;
 			files = (
 				81CAB6022C6E20DB0050F848 /* UIViewController+Extension.swift in Sources */,
+				81BA8AF12C881BE100F8A3C5 /* Constant_Function.swift in Sources */,
 				81CAB5F42C6DF2AB0050F848 /* AppFlyer_Manager.swift in Sources */,
 				81CAB5F62C6DF2BF0050F848 /* AppMetrica_Manager.swift in Sources */,
+				81BA8AFE2C881F4700F8A3C5 /* GoogleAd_Manager.swift in Sources */,
 				8121DD852C621A66003460A5 /* ForceUpdate_Manager.swift in Sources */,
 				81CAB5FD2C6DF4FF0050F848 /* UIDevice+Extension.swift in Sources */,
 				81CAB5E82C6DD2640050F848 /* Alamofire.swift in Sources */,
 				81CAB5FA2C6DF3480050F848 /* TikTok_Manager.swift in Sources */,
 				8113BEC52C6324190081B3F8 /* Const For Subscription.swift in Sources */,
 				81CAB5F82C6DF2C80050F848 /* Facebook_Manager.swift in Sources */,
+				81BA8B072C88364C00F8A3C5 /* Shimmer_FullNative.swift in Sources */,
+				81BA8B092C88376E00F8A3C5 /* UIView+Extension.swift in Sources */,
 				8121DD842C621A66003460A5 /* Reachability.swift in Sources */,
+				81BA8B0B2C8837AE00F8A3C5 /* GoogleAd_Constant.swift in Sources */,
+				817DCDF72C6F0A4C004BA1C2 /* GoogleMobileAdsConsentManager.swift in Sources */,
 				81CAB6002C6E193E0050F848 /* OneSignal_Handler.swift in Sources */,
+				81BA8B042C88364C00F8A3C5 /* CustomShimmer.swift in Sources */,
 				8113BEC42C6324190081B3F8 /* RevenueCat_Manager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		81BA8B2E2C884F5D00F8A3C5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		81BA8B432C884F5F00F8A3C5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		81BA8B4D2C884F5F00F8A3C5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		81BA8B492C884F5F00F8A3C5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 81BA8B312C884F5D00F8A3C5 /* Example */;
+			targetProxy = 81BA8B482C884F5F00F8A3C5 /* PBXContainerItemProxy */;
+		};
+		81BA8B532C884F5F00F8A3C5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 81BA8B312C884F5D00F8A3C5 /* Example */;
+			targetProxy = 81BA8B522C884F5F00F8A3C5 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		8121DD7A2C6216E8003460A5 /* Debug */ = {
@@ -372,6 +632,7 @@
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = "";
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -431,6 +692,7 @@
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
+				OTHER_LDFLAGS = "";
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				VALIDATE_PRODUCT = YES;
@@ -501,6 +763,144 @@
 			};
 			name = Release;
 		};
+		81BA8B5A2C884F5F00F8A3C5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 855A978HBW;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Example/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Example;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		81BA8B5B2C884F5F00F8A3C5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 855A978HBW;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Example/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Example;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		81BA8B5D2C884F5F00F8A3C5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 855A978HBW;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ExampleTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Example.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Example";
+			};
+			name = Debug;
+		};
+		81BA8B5E2C884F5F00F8A3C5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 855A978HBW;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ExampleTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Example.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Example";
+			};
+			name = Release;
+		};
+		81BA8B602C884F5F00F8A3C5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 855A978HBW;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ExampleUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Example;
+			};
+			name = Debug;
+		};
+		81BA8B612C884F5F00F8A3C5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 855A978HBW;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ExampleUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Example;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -518,6 +918,33 @@
 			buildConfigurations = (
 				8121DD7D2C6216E8003460A5 /* Debug */,
 				8121DD7E2C6216E8003460A5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		81BA8B592C884F5F00F8A3C5 /* Build configuration list for PBXNativeTarget "Example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				81BA8B5A2C884F5F00F8A3C5 /* Debug */,
+				81BA8B5B2C884F5F00F8A3C5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		81BA8B5C2C884F5F00F8A3C5 /* Build configuration list for PBXNativeTarget "ExampleTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				81BA8B5D2C884F5F00F8A3C5 /* Debug */,
+				81BA8B5E2C884F5F00F8A3C5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		81BA8B5F2C884F5F00F8A3C5 /* Build configuration list for PBXNativeTarget "ExampleUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				81BA8B602C884F5F00F8A3C5 /* Debug */,
+				81BA8B612C884F5F00F8A3C5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
