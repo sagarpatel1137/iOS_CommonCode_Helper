@@ -36,5 +36,6 @@ spec.dependency 'Firebase/Performance'
 spec.dependency 'Firebase/Crashlytics'
 spec.dependency 'FirebaseMessaging'
 #spec.dependency 'Google-Mobile-Ads-SDK'
+spec.dependency 'UIView_Shimmer'
 
 end
