@@ -3,7 +3,7 @@
 
 target 'iOS_CommonCode' do
   # Comment the next line if you don't want to use dynamic frameworks
-  use_frameworks! :linkage => :static
+  use_frameworks!
 
   # Pods for iOS_CommonCode
   
@@ -40,7 +40,6 @@ target 'iOS_CommonCode' do
   
   # Ads
   pod 'Google-Mobile-Ads-SDK'
-  pod 'GoogleUserMessagingPlatform'
   
   # Other
   pod 'UIView-Shimmer'

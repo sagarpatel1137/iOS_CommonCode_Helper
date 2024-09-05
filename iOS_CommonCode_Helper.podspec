@@ -17,6 +17,7 @@ spec.swift_version     = "5.0"
 spec.source            = { :git => "https://github.com/sagarpatel1137/iOS_CommonCode_Helper.git", :tag => "#{spec.version}" }
 spec.source_files      = "iOS_CommonCode/**/*.swift"
 
+spec.static_framework  = true
 spec.frameworks        = 'UIKit', 'Foundation', 'SystemConfiguration', 'StoreKit'
 
 spec.dependency 'RevenueCat'
@@ -36,7 +37,6 @@ spec.dependency 'Firebase/Performance'
 spec.dependency 'Firebase/Crashlytics'
 spec.dependency 'FirebaseMessaging'
 spec.dependency 'Google-Mobile-Ads-SDK'
-spec.dependency 'GoogleUserMessagingPlatform'
 spec.dependency 'UIView-Shimmer'
 
 end
