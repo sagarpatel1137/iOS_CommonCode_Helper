@@ -315,6 +315,7 @@ DEPENDENCIES:
   - Firebase/Performance
   - FirebaseMessaging
   - Google-Mobile-Ads-SDK
+  - GoogleUserMessagingPlatform
   - OneSignal
   - PurchaseConnector
   - RevenueCat
@@ -438,6 +439,6 @@ SPEC CHECKSUMS:
   TikTokBusinessSDK: 36d609fa83d6135ce29ed1541913adb97208ba6e
   UIView-Shimmer: ff0a32c73d67c7dbdea3d9e530538b10d18aea56
 
-PODFILE CHECKSUM: c6639bfcc56f5e865b9d6adb91159a1dacf5c63e
+PODFILE CHECKSUM: 1d2543522d29519ffe5100271b48d3f0f2bee3c8
 
 COCOAPODS: 1.15.2

@@ -40,6 +40,7 @@ target 'iOS_CommonCode' do
   
   # Ads
   pod 'Google-Mobile-Ads-SDK'
+  pod 'GoogleUserMessagingPlatform'
   
   # Other
   pod 'UIView-Shimmer'
