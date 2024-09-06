@@ -539,16 +539,6 @@ THE SOFTWARE.
 		</dict>
 		<dict>
 			<key>FooterText</key>
-			<string>Copyright 2018 AppsFlyer Ltd. All rights reserved.</string>
-			<key>License</key>
-			<string>Proprietary</string>
-			<key>Title</key>
-			<string>AppsFlyerFramework</string>
-			<key>Type</key>
-			<string>PSGroupSpecifier</string>
-		</dict>
-		<dict>
-			<key>FooterText</key>
 			<string>Copyright (c) Meta Platforms, Inc. and affiliates. All rights reserved.
 
 You are hereby granted a non-exclusive, worldwide, royalty-free license to use,
@@ -5568,16 +5558,6 @@ Includes portions from BSMobileProvision:
 			<string>Apache-2.0</string>
 			<key>Title</key>
 			<string>PromisesSwift</string>
-			<key>Type</key>
-			<string>PSGroupSpecifier</string>
-		</dict>
-		<dict>
-			<key>FooterText</key>
-			<string>Copyright 2018 AppsFlyer Ltd. All rights reserved.</string>
-			<key>License</key>
-			<string>Proprietary</string>
-			<key>Title</key>
-			<string>PurchaseConnector</string>
 			<key>Type</key>
 			<string>PSGroupSpecifier</string>
 		</dict>

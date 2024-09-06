@@ -14,8 +14,8 @@ target 'iOS_CommonCode' do
   pod 'Alamofire'
   
   # AppFlyer
-  pod 'AppsFlyerFramework'
-  pod 'PurchaseConnector'
+#  pod 'AppsFlyerFramework'
+#  pod 'PurchaseConnector'
   
   # AppMetrica
   pod 'AppMetricaAnalytics'
