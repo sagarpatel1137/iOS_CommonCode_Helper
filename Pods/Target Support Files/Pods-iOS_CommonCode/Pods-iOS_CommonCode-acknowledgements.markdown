@@ -424,6 +424,10 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 
 
+## AppsFlyerFramework
+
+Copyright 2018 AppsFlyer Ltd. All rights reserved.
+
 ## FBAEMKit
 
 Copyright (c) Meta Platforms, Inc. and affiliates. All rights reserved.
@@ -5243,6 +5247,10 @@ Includes portions from BSMobileProvision:
    See the License for the specific language governing permissions and
    limitations under the License.
 
+
+## PurchaseConnector
+
+Copyright 2018 AppsFlyer Ltd. All rights reserved.
 
 ## RecaptchaInterop
 
