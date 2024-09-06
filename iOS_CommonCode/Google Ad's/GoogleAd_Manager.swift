@@ -463,11 +463,11 @@ extension GoogleAd_Manager
 //MARK: - GADBannerView Delegate
 extension GoogleAd_Manager : GADBannerViewDelegate
 {
-    public func bannerViewDidRecordClick(_ bannerView: GADBannerView) {
+    func bannerViewDidRecordClick(_ bannerView: GADBannerView) {
         isAdClickedAndRedirected = true
     }
     
-    public func bannerViewDidReceiveAd(_ bannerView: GADBannerView) {
+    func bannerViewDidReceiveAd(_ bannerView: GADBannerView) {
         if !Purchase_flag {
             bannerViewAd = bannerView
             isBannerAdLoaded = true
@@ -477,7 +477,7 @@ extension GoogleAd_Manager : GADBannerViewDelegate
         }
     }
     
-    public func bannerView(_ bannerView: GADBannerView, didFailToReceiveAdWithError error: Error) {
+    func bannerView(_ bannerView: GADBannerView, didFailToReceiveAdWithError error: Error) {
         load_BannerAd()
     }
 }
@@ -485,11 +485,11 @@ extension GoogleAd_Manager : GADBannerViewDelegate
 //MARK: - GADFullScreenContent Delegate
 extension GoogleAd_Manager : GADFullScreenContentDelegate
 {
-    public func adDidRecordClick(_ ad: GADFullScreenPresentingAd) {
+    func adDidRecordClick(_ ad: GADFullScreenPresentingAd) {
         isAdClickedAndRedirected = true
     }
     
-    public func adWillPresentFullScreenContent(_ ad: GADFullScreenPresentingAd) {
+    func adWillPresentFullScreenContent(_ ad: GADFullScreenPresentingAd) {
         
         if ad.isKind(of: GADInterstitialAd.self) {
             isInterstitialAdOpen = true
@@ -505,7 +505,7 @@ extension GoogleAd_Manager : GADFullScreenContentDelegate
         }
     }
     
-    public func adDidDismissFullScreenContent(_ ad: GADFullScreenPresentingAd) {
+    func adDidDismissFullScreenContent(_ ad: GADFullScreenPresentingAd) {
         
         if ad.isKind(of: GADInterstitialAd.self) {
             isInterstitialAdOpen = false
@@ -529,7 +529,7 @@ extension GoogleAd_Manager : GADFullScreenContentDelegate
         }
     }
     
-    public func ad(_ ad: GADFullScreenPresentingAd, didFailToPresentFullScreenContentWithError error: Error) {
+    func ad(_ ad: GADFullScreenPresentingAd, didFailToPresentFullScreenContentWithError error: Error) {
         
         if ad.isKind(of: GADInterstitialAd.self) {
             load_InterstitialAd()

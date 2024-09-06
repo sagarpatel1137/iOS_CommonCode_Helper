@@ -5,6 +5,7 @@
 //  Created by IOS on 14/06/24.
 //
 
+/*
 import StoreKit
 import AppsFlyerLib
 import PurchaseConnector
@@ -60,4 +61,4 @@ extension AppFlyer_Manager: PurchaseRevenueDataSource, PurchaseRevenueDelegate {
         return ["additionalParameters":["param1":"value1", "param2":"value2"]];
     }
 }
-
+*/

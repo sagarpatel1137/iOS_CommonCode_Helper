@@ -22,8 +22,8 @@ spec.frameworks        = 'UIKit', 'Foundation', 'SystemConfiguration', 'StoreKit
 
 spec.dependency 'RevenueCat'
 spec.dependency 'Alamofire'
-spec.dependency 'AppsFlyerFramework'
-spec.dependency 'PurchaseConnector'
+#spec.dependency 'AppsFlyerFramework'
+#spec.dependency 'PurchaseConnector'
 spec.dependency 'AppMetricaAnalytics'
 spec.dependency 'FBSDKCoreKit'
 spec.dependency 'FBSDKLoginKit'
