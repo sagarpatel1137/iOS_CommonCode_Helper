@@ -9,7 +9,7 @@ import FBSDKCoreKit
 
 public class Facebook_Manager: NSObject {
 
-    public static func initialize(_ application: UIApplication, _ launchOptions: [UIApplication.LaunchOptionsKey: Any]?){
+    public class func initialize(_ application: UIApplication, _ launchOptions: [UIApplication.LaunchOptionsKey: Any]?){
         
         ApplicationDelegate.shared.application(
             application,

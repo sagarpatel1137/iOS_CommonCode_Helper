@@ -5,12 +5,11 @@
 //  Created by IOS on 14/06/24.
 //
 
-/*
 import StoreKit
 import AppsFlyerLib
 import PurchaseConnector
 
-class AppFlyer_Manager: NSObject {
+class AppFlyer_Manager : NSObject {
 
     public static let shared = AppFlyer_Manager()
 
@@ -38,24 +37,27 @@ class AppFlyer_Manager: NSObject {
 //MARK: - AppsFlyerLib Delegate
 extension AppFlyer_Manager : AppsFlyerLibDelegate
 {
-    func onConversionDataSuccess(_ conversionInfo: [AnyHashable : Any]) {
+    public func onConversionDataSuccess(_ conversionInfo: [AnyHashable : Any]) {
         //..
     }
-    func onConversionDataFail(_ error: Error) {
+    
+    public func onConversionDataFail(_ error: Error) {
         //..
     }
 }
 
 //MARK: - PurchaseRevenue Delegate & DataSource
 extension AppFlyer_Manager: PurchaseRevenueDataSource, PurchaseRevenueDelegate {
+    
     // PurchaseRevenueDelegate method implementation
-    func didReceivePurchaseRevenueValidationInfo(_ validationInfo: [AnyHashable : Any]?, error: Error?) {
+    public func didReceivePurchaseRevenueValidationInfo(_ validationInfo: [AnyHashable : Any]?, error: Error?) {
         print("PurchaseRevenueDelegate: \(validationInfo)")
         print("PurchaseRevenueDelegate: \(error)")
     }
+    
     // PurchaseRevenueDataSource method implementation
-    func purchaseRevenueAdditionalParameters(for products: Set<SKProduct>, transactions: Set<SKPaymentTransaction>?) -> [AnyHashable : Any]? {
+    public func purchaseRevenueAdditionalParameters(for products: Set<SKProduct>, transactions: Set<SKPaymentTransaction>?) -> [AnyHashable : Any]? {
         return ["additionalParameters":["param1":"value1", "param2":"value2"]];
     }
 }
-*/
+

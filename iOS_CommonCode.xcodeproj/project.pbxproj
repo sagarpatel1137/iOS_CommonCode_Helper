@@ -12,7 +12,20 @@
 		8121DD842C621A66003460A5 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8121DD832C621A66003460A5 /* Reachability.swift */; };
 		8121DD852C621A66003460A5 /* ForceUpdate_Manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8121DD822C621A66003460A5 /* ForceUpdate_Manager.swift */; };
 		8121DD8A2C6222C8003460A5 /* iOS_CommonCode_Helper.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 8121DD882C6222C8003460A5 /* iOS_CommonCode_Helper.podspec */; };
-		817DCDF72C6F0A4C004BA1C2 /* GoogleMobileAdsConsentManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 817DCDF62C6F0A4C004BA1C2 /* GoogleMobileAdsConsentManager.swift */; };
+		817D301B2C8AC31800AB455C /* ATTracking_Manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 817D301A2C8AC31800AB455C /* ATTracking_Manager.swift */; };
+		817D301D2C8AC5E300AB455C /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 817D301C2C8AC5E300AB455C /* String+Extension.swift */; };
+		817D301F2C8AC60500AB455C /* UILabel+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 817D301E2C8AC60500AB455C /* UILabel+Extension.swift */; };
+		817D30212C8AC61400AB455C /* UIButton+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 817D30202C8AC61400AB455C /* UIButton+Extension.swift */; };
+		817D30232C8AC62000AB455C /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 817D30222C8AC62000AB455C /* UIImageView+Extension.swift */; };
+		817D30252C8AC63500AB455C /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 817D30242C8AC63500AB455C /* UIImage+Extension.swift */; };
+		817D30272C8AC64600AB455C /* Int+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 817D30262C8AC64600AB455C /* Int+Extension.swift */; };
+		817D30292C8AC64F00AB455C /* Double+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 817D30282C8AC64F00AB455C /* Double+Extension.swift */; };
+		817D302B2C8AC65D00AB455C /* Float+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 817D302A2C8AC65D00AB455C /* Float+Extension.swift */; };
+		817D302D2C8AC67300AB455C /* UITextField+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 817D302C2C8AC67300AB455C /* UITextField+Extension.swift */; };
+		817D302F2C8AC68300AB455C /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 817D302E2C8AC68300AB455C /* UIColor+Extension.swift */; };
+		817D30312C8AC68F00AB455C /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 817D30302C8AC68F00AB455C /* Date+Extension.swift */; };
+		817D30332C8AC6C600AB455C /* UIWindow+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 817D30322C8AC6C600AB455C /* UIWindow+Extension.swift */; };
+		817DCDF72C6F0A4C004BA1C2 /* GoogleMobileAdsConsent_Manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 817DCDF62C6F0A4C004BA1C2 /* GoogleMobileAdsConsent_Manager.swift */; };
 		81BA8AF12C881BE100F8A3C5 /* Constant_Function.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81BA8AF02C881BE100F8A3C5 /* Constant_Function.swift */; };
 		81BA8AFE2C881F4700F8A3C5 /* GoogleAd_Manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81BA8AFD2C881F4700F8A3C5 /* GoogleAd_Manager.swift */; };
 		81BA8B042C88364C00F8A3C5 /* CustomShimmer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81BA8B002C88364500F8A3C5 /* CustomShimmer.swift */; };
@@ -20,7 +33,6 @@
 		81BA8B062C88364C00F8A3C5 /* Shimmer_Adptiv_Banner.xib in Resources */ = {isa = PBXBuildFile; fileRef = 81BA8B022C88364A00F8A3C5 /* Shimmer_Adptiv_Banner.xib */; };
 		81BA8B072C88364C00F8A3C5 /* Shimmer_FullNative.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81BA8B032C88364C00F8A3C5 /* Shimmer_FullNative.swift */; };
 		81BA8B092C88376E00F8A3C5 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81BA8B082C88376E00F8A3C5 /* UIView+Extension.swift */; };
-		81BA8B0B2C8837AE00F8A3C5 /* GoogleAd_Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81BA8B0A2C8837AE00F8A3C5 /* GoogleAd_Constant.swift */; };
 		81BA8B0D2C883D6600F8A3C5 /* Asset.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 81BA8B0C2C883D6600F8A3C5 /* Asset.xcassets */; };
 		81BA8B632C88507600F8A3C5 /* Shimmer_NativeBannerAd.xib in Resources */ = {isa = PBXBuildFile; fileRef = 81BA8B622C88507600F8A3C5 /* Shimmer_NativeBannerAd.xib */; };
 		81CAB5E82C6DD2640050F848 /* Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81CAB5E72C6DD2640050F848 /* Alamofire.swift */; };
@@ -29,7 +41,7 @@
 		81CAB5F82C6DF2C80050F848 /* Facebook_Manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81CAB5F72C6DF2C80050F848 /* Facebook_Manager.swift */; };
 		81CAB5FA2C6DF3480050F848 /* TikTok_Manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81CAB5F92C6DF3480050F848 /* TikTok_Manager.swift */; };
 		81CAB5FD2C6DF4FF0050F848 /* UIDevice+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81CAB5FC2C6DF4FF0050F848 /* UIDevice+Extension.swift */; };
-		81CAB6002C6E193E0050F848 /* OneSignal_Handler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81CAB5FF2C6E193E0050F848 /* OneSignal_Handler.swift */; };
+		81CAB6002C6E193E0050F848 /* OneSignal_Manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81CAB5FF2C6E193E0050F848 /* OneSignal_Manager.swift */; };
 		81CAB6022C6E20DB0050F848 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81CAB6012C6E20DB0050F848 /* UIViewController+Extension.swift */; };
 		D391513D4F19B006A2E9AF44 /* Pods_iOS_CommonCode.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06E918F9F432D213EFDB89A3 /* Pods_iOS_CommonCode.framework */; };
 /* End PBXBuildFile section */
@@ -44,7 +56,20 @@
 		8121DD822C621A66003460A5 /* ForceUpdate_Manager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForceUpdate_Manager.swift; sourceTree = "<group>"; };
 		8121DD832C621A66003460A5 /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		8121DD882C6222C8003460A5 /* iOS_CommonCode_Helper.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = iOS_CommonCode_Helper.podspec; sourceTree = "<group>"; };
-		817DCDF62C6F0A4C004BA1C2 /* GoogleMobileAdsConsentManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleMobileAdsConsentManager.swift; sourceTree = "<group>"; };
+		817D301A2C8AC31800AB455C /* ATTracking_Manager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ATTracking_Manager.swift; sourceTree = "<group>"; };
+		817D301C2C8AC5E300AB455C /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
+		817D301E2C8AC60500AB455C /* UILabel+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Extension.swift"; sourceTree = "<group>"; };
+		817D30202C8AC61400AB455C /* UIButton+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Extension.swift"; sourceTree = "<group>"; };
+		817D30222C8AC62000AB455C /* UIImageView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
+		817D30242C8AC63500AB455C /* UIImage+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
+		817D30262C8AC64600AB455C /* Int+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+Extension.swift"; sourceTree = "<group>"; };
+		817D30282C8AC64F00AB455C /* Double+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Extension.swift"; sourceTree = "<group>"; };
+		817D302A2C8AC65D00AB455C /* Float+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Float+Extension.swift"; sourceTree = "<group>"; };
+		817D302C2C8AC67300AB455C /* UITextField+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Extension.swift"; sourceTree = "<group>"; };
+		817D302E2C8AC68300AB455C /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
+		817D30302C8AC68F00AB455C /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
+		817D30322C8AC6C600AB455C /* UIWindow+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIWindow+Extension.swift"; sourceTree = "<group>"; };
+		817DCDF62C6F0A4C004BA1C2 /* GoogleMobileAdsConsent_Manager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleMobileAdsConsent_Manager.swift; sourceTree = "<group>"; };
 		81BA8AF02C881BE100F8A3C5 /* Constant_Function.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant_Function.swift; sourceTree = "<group>"; };
 		81BA8AFD2C881F4700F8A3C5 /* GoogleAd_Manager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleAd_Manager.swift; sourceTree = "<group>"; };
 		81BA8B002C88364500F8A3C5 /* CustomShimmer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomShimmer.swift; sourceTree = "<group>"; };
@@ -52,7 +77,6 @@
 		81BA8B022C88364A00F8A3C5 /* Shimmer_Adptiv_Banner.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Shimmer_Adptiv_Banner.xib; sourceTree = "<group>"; };
 		81BA8B032C88364C00F8A3C5 /* Shimmer_FullNative.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Shimmer_FullNative.swift; sourceTree = "<group>"; };
 		81BA8B082C88376E00F8A3C5 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
-		81BA8B0A2C8837AE00F8A3C5 /* GoogleAd_Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleAd_Constant.swift; sourceTree = "<group>"; };
 		81BA8B0C2C883D6600F8A3C5 /* Asset.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Asset.xcassets; sourceTree = "<group>"; };
 		81BA8B622C88507600F8A3C5 /* Shimmer_NativeBannerAd.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Shimmer_NativeBannerAd.xib; sourceTree = "<group>"; };
 		81CAB5E72C6DD2640050F848 /* Alamofire.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alamofire.swift; sourceTree = "<group>"; };
@@ -61,7 +85,7 @@
 		81CAB5F72C6DF2C80050F848 /* Facebook_Manager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Facebook_Manager.swift; sourceTree = "<group>"; };
 		81CAB5F92C6DF3480050F848 /* TikTok_Manager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TikTok_Manager.swift; sourceTree = "<group>"; };
 		81CAB5FC2C6DF4FF0050F848 /* UIDevice+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIDevice+Extension.swift"; sourceTree = "<group>"; };
-		81CAB5FF2C6E193E0050F848 /* OneSignal_Handler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneSignal_Handler.swift; sourceTree = "<group>"; };
+		81CAB5FF2C6E193E0050F848 /* OneSignal_Manager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneSignal_Manager.swift; sourceTree = "<group>"; };
 		81CAB6012C6E20DB0050F848 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -99,9 +123,8 @@
 		8121DD6A2C6216E8003460A5 /* iOS_CommonCode */ = {
 			isa = PBXGroup;
 			children = (
-				81BA8AEF2C881BC000F8A3C5 /* Constant  */,
-				817DCDF52C6F09CE004BA1C2 /* GDPR */,
 				81CAB5FB2C6DF4E00050F848 /* Extension */,
+				817DCDF52C6F09CE004BA1C2 /* GDPR */,
 				81CAB5FE2C6E17870050F848 /* OneSignal */,
 				81CAB5F22C6DF1250050F848 /* Tiktok */,
 				81CAB5F12C6DF11B0050F848 /* Facebook */,
@@ -111,6 +134,7 @@
 				819E6FB22C6CB9FD00D4914E /* RevenueCat */,
 				819E6FB52C6CBA7500D4914E /* ForceUpdate */,
 				81BA8AF22C881CDD00F8A3C5 /* Google Ad's */,
+				81BA8AFF2C88362E00F8A3C5 /* Shimmer */,
 				819E6FB62C6CBA7D00D4914E /* Other */,
 				81BA8B0C2C883D6600F8A3C5 /* Asset.xcassets */,
 			);
@@ -120,7 +144,8 @@
 		817DCDF52C6F09CE004BA1C2 /* GDPR */ = {
 			isa = PBXGroup;
 			children = (
-				817DCDF62C6F0A4C004BA1C2 /* GoogleMobileAdsConsentManager.swift */,
+				817DCDF62C6F0A4C004BA1C2 /* GoogleMobileAdsConsent_Manager.swift */,
+				817D301A2C8AC31800AB455C /* ATTracking_Manager.swift */,
 			);
 			path = GDPR;
 			sourceTree = "<group>";
@@ -146,24 +171,15 @@
 			isa = PBXGroup;
 			children = (
 				8121DD832C621A66003460A5 /* Reachability.swift */,
-				81BA8AFF2C88362E00F8A3C5 /* Shimmer */,
-			);
-			path = Other;
-			sourceTree = "<group>";
-		};
-		81BA8AEF2C881BC000F8A3C5 /* Constant  */ = {
-			isa = PBXGroup;
-			children = (
 				81BA8AF02C881BE100F8A3C5 /* Constant_Function.swift */,
 			);
-			path = "Constant ";
+			path = Other;
 			sourceTree = "<group>";
 		};
 		81BA8AF22C881CDD00F8A3C5 /* Google Ad's */ = {
 			isa = PBXGroup;
 			children = (
 				81BA8AFD2C881F4700F8A3C5 /* GoogleAd_Manager.swift */,
-				81BA8B0A2C8837AE00F8A3C5 /* GoogleAd_Constant.swift */,
 			);
 			path = "Google Ad's";
 			sourceTree = "<group>";
@@ -223,9 +239,21 @@
 		81CAB5FB2C6DF4E00050F848 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				817D30322C8AC6C600AB455C /* UIWindow+Extension.swift */,
 				81CAB5FC2C6DF4FF0050F848 /* UIDevice+Extension.swift */,
 				81CAB6012C6E20DB0050F848 /* UIViewController+Extension.swift */,
 				81BA8B082C88376E00F8A3C5 /* UIView+Extension.swift */,
+				817D301E2C8AC60500AB455C /* UILabel+Extension.swift */,
+				817D30202C8AC61400AB455C /* UIButton+Extension.swift */,
+				817D30222C8AC62000AB455C /* UIImageView+Extension.swift */,
+				817D30242C8AC63500AB455C /* UIImage+Extension.swift */,
+				817D302C2C8AC67300AB455C /* UITextField+Extension.swift */,
+				817D302E2C8AC68300AB455C /* UIColor+Extension.swift */,
+				817D30302C8AC68F00AB455C /* Date+Extension.swift */,
+				817D301C2C8AC5E300AB455C /* String+Extension.swift */,
+				817D30262C8AC64600AB455C /* Int+Extension.swift */,
+				817D30282C8AC64F00AB455C /* Double+Extension.swift */,
+				817D302A2C8AC65D00AB455C /* Float+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -233,7 +261,7 @@
 		81CAB5FE2C6E17870050F848 /* OneSignal */ = {
 			isa = PBXGroup;
 			children = (
-				81CAB5FF2C6E193E0050F848 /* OneSignal_Handler.swift */,
+				81CAB5FF2C6E193E0050F848 /* OneSignal_Manager.swift */,
 			);
 			path = OneSignal;
 			sourceTree = "<group>";
@@ -386,20 +414,32 @@
 				81CAB6022C6E20DB0050F848 /* UIViewController+Extension.swift in Sources */,
 				81BA8AF12C881BE100F8A3C5 /* Constant_Function.swift in Sources */,
 				81CAB5F42C6DF2AB0050F848 /* AppFlyer_Manager.swift in Sources */,
+				817D30252C8AC63500AB455C /* UIImage+Extension.swift in Sources */,
+				817D30292C8AC64F00AB455C /* Double+Extension.swift in Sources */,
+				817D30312C8AC68F00AB455C /* Date+Extension.swift in Sources */,
+				817D30212C8AC61400AB455C /* UIButton+Extension.swift in Sources */,
+				817D30232C8AC62000AB455C /* UIImageView+Extension.swift in Sources */,
 				81CAB5F62C6DF2BF0050F848 /* AppMetrica_Manager.swift in Sources */,
 				81BA8AFE2C881F4700F8A3C5 /* GoogleAd_Manager.swift in Sources */,
+				817D302D2C8AC67300AB455C /* UITextField+Extension.swift in Sources */,
 				8121DD852C621A66003460A5 /* ForceUpdate_Manager.swift in Sources */,
 				81CAB5FD2C6DF4FF0050F848 /* UIDevice+Extension.swift in Sources */,
+				817D30272C8AC64600AB455C /* Int+Extension.swift in Sources */,
 				81CAB5E82C6DD2640050F848 /* Alamofire.swift in Sources */,
+				817D301D2C8AC5E300AB455C /* String+Extension.swift in Sources */,
 				81CAB5FA2C6DF3480050F848 /* TikTok_Manager.swift in Sources */,
 				8113BEC52C6324190081B3F8 /* Const For Subscription.swift in Sources */,
+				817D302B2C8AC65D00AB455C /* Float+Extension.swift in Sources */,
 				81CAB5F82C6DF2C80050F848 /* Facebook_Manager.swift in Sources */,
+				817D302F2C8AC68300AB455C /* UIColor+Extension.swift in Sources */,
+				817D301B2C8AC31800AB455C /* ATTracking_Manager.swift in Sources */,
 				81BA8B072C88364C00F8A3C5 /* Shimmer_FullNative.swift in Sources */,
 				81BA8B092C88376E00F8A3C5 /* UIView+Extension.swift in Sources */,
+				817D30332C8AC6C600AB455C /* UIWindow+Extension.swift in Sources */,
 				8121DD842C621A66003460A5 /* Reachability.swift in Sources */,
-				81BA8B0B2C8837AE00F8A3C5 /* GoogleAd_Constant.swift in Sources */,
-				817DCDF72C6F0A4C004BA1C2 /* GoogleMobileAdsConsentManager.swift in Sources */,
-				81CAB6002C6E193E0050F848 /* OneSignal_Handler.swift in Sources */,
+				817DCDF72C6F0A4C004BA1C2 /* GoogleMobileAdsConsent_Manager.swift in Sources */,
+				817D301F2C8AC60500AB455C /* UILabel+Extension.swift in Sources */,
+				81CAB6002C6E193E0050F848 /* OneSignal_Manager.swift in Sources */,
 				81BA8B042C88364C00F8A3C5 /* CustomShimmer.swift in Sources */,
 				8113BEC42C6324190081B3F8 /* RevenueCat_Manager.swift in Sources */,
 			);
@@ -465,7 +505,7 @@
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
-				ONLY_ACTIVE_ARCH = YES;
+				ONLY_ACTIVE_ARCH = NO;
 				OTHER_LDFLAGS = "";
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
@@ -557,6 +597,7 @@
 				MARKETING_VERSION = 1.0;
 				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
 				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu17 gnu++20";
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.iOS-CommonCode";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;

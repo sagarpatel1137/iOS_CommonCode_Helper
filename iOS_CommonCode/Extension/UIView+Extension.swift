@@ -9,6 +9,14 @@ import UIKit
 
 extension UIView
 {
+    //MARK: -
+    
+    
+    //MARK: -
+    
+    
+    
+    //MARK: - Shimmer
     func addShimmerViewForADType(adType : GADAdTYPE){
         
         var tempNIBName = ""

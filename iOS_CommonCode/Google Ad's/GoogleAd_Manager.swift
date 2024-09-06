@@ -6,8 +6,16 @@
 //
 
 import GoogleMobileAds
+import Alamofire
 
-class GoogleAd_Manager: NSObject {
+enum GADAdTYPE
+{
+    case banner_Nativ
+    case full_Nativ
+    case adptive_Banner
+}
+
+class GoogleAd_Manager : NSObject {
 
     //MARK: - Public
     public static let shared = GoogleAd_Manager()
@@ -95,23 +103,60 @@ extension GoogleAd_Manager
             AppOpen_ID = id
             load_OpenAd()
         }
+        
+        checkForNetworkReachability()
     }
-    
+}
+
+//MARK: - Other
+extension GoogleAd_Manager
+{
     public func isAnyFullAdOpen() -> Bool {
         let isOpen = isInterstitialAdOpen || isRewardedAdOpen || isRewardedIntAdOpen || isAppOpenAdOpen
         return isOpen
+    }
+    
+    public func funGetAdaptiveBannerHeight() -> CGFloat {
+        return GADCurrentOrientationAnchoredAdaptiveBannerAdSizeWithWidth(UIScreen.main.bounds.width).size.height
     }
 }
 
 //MARK: - Ad Show
 extension GoogleAd_Manager
 {
+    public func funShowBannerAd(parentView: UIView)
+    {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.0) { [self] in
+            
+            if !Purchase_flag
+            {
+                parentView.addShimmerViewForADType(adType: .adptive_Banner)
+                
+                if isBannerAdLoaded {
+                    if bannerAd_present != nil {
+                        parentView.removeShimmerViewForADType()
+                        bannerAd_present!()
+                    }
+                    parentView.addSubview(bannerViewAd)
+                }
+                else {
+                    load_BannerAd()
+                    bannerAd_present = {
+                        parentView.removeShimmerViewForADType()
+                    }
+                    parentView.addSubview(bannerViewAd)
+                }
+            }
+        }
+    }
+    
     public func funShowInterstitialAd(rootVC: UIViewController, isWaitUntillShow: Bool = false, isPresentAd : @escaping ((Bool) -> Void),adDidDismiss : @escaping (() -> Void),didFailToPresent : @escaping ((String) -> Void))
     {
         checkIntAdIsReadyForShow(rootVC) { (isADPresented) in
             if isWaitUntillShow && !isADPresented {
                 interstitialAd_LoadDone = {
                     self.interstitialAd.present(fromRootViewController: rootVC)
+                    self.interstitialAd_LoadDone = nil
                     isPresentAd(true)
                 }
             }
@@ -135,6 +180,7 @@ extension GoogleAd_Manager
                     self.rewardedAd.present(fromRootViewController: rootVC) {
                         self.rewardedAd_Rewarded?()
                     }
+                    self.rewardedAd_LoadDone = nil
                     isPresentAd(true)
                 }
             }
@@ -161,6 +207,7 @@ extension GoogleAd_Manager
                     self.rewardedIntAd.present(fromRootViewController: rootVC) {
                         self.rewardedIntAd_Rewarded?()
                     }
+                    self.rewardedIntAd_LoadDone = nil
                     isPresentAd(true)
                 }
             }
@@ -185,6 +232,7 @@ extension GoogleAd_Manager
             if isWaitUntillShow && !isADPresented {
                 appOpenAd_LoadDone = {
                     self.appOpenAd.present(fromRootViewController: rootVC)
+                    self.appOpenAd_LoadDone = nil
                     isPresentAd(true)
                 }
             }
@@ -201,6 +249,54 @@ extension GoogleAd_Manager
     }
 }
 
+// MARK: - Network Reachability
+extension GoogleAd_Manager
+{
+    private func checkForNetworkReachability()
+    {
+        let reachabilityManager = NetworkReachabilityManager()
+        reachabilityManager?.startListening( onUpdatePerforming: { [self] _ in
+            if let isNetworkReachable = reachabilityManager?.isReachable,
+               isNetworkReachable == true
+            {
+                if (bannerViewAd != nil && Banner_ID != "") {
+                    load_BannerAd()
+                }
+                if (interstitialAd != nil && Int_ID != "") {
+                    load_InterstitialAd()
+                }
+                if (Native_ID != "") {
+                    
+                }
+                if (rewardedAd != nil && Rewarded_ID != ""){
+                    load_RewardedAd()
+                }
+                if (rewardedIntAd != nil && RewardedInt_ID != "") {
+                    load_RewardedIntAd()
+                }
+                if (appOpenAd != nil && AppOpen_ID != "") {
+                    load_OpenAd()
+                }
+            }
+        })
+    }
+}
+
+// MARK: - GADBannerAd
+extension GoogleAd_Manager
+{
+    private func load_BannerAd()
+    {
+        if !Purchase_flag && !isBannerAdLoaded {
+            bannerViewAd = GADBannerView()
+            bannerViewAd.delegate = self
+            bannerViewAd.adUnitID = Banner_ID
+            bannerViewAd.rootViewController = funGetTopViewController()
+            bannerViewAd.adSize = GADCurrentOrientationAnchoredAdaptiveBannerAdSizeWithWidth(UIScreen.main.bounds.width)
+            bannerViewAd.load(GADRequest())
+        }
+    }
+}
 
 //MARK: - Interstitial Ad
 extension GoogleAd_Manager
@@ -357,18 +453,43 @@ extension GoogleAd_Manager
         }
         else {
             isPresentAd(false)
+            load_OpenAd()
         }
+    }
+}
+
+
+
+//MARK: - GADBannerView Delegate
+extension GoogleAd_Manager : GADBannerViewDelegate
+{
+    public func bannerViewDidRecordClick(_ bannerView: GADBannerView) {
+        isAdClickedAndRedirected = true
+    }
+    
+    public func bannerViewDidReceiveAd(_ bannerView: GADBannerView) {
+        if !Purchase_flag {
+            bannerViewAd = bannerView
+            isBannerAdLoaded = true
+            if bannerAd_present != nil {
+                bannerAd_present!()
+            }
+        }
+    }
+    
+    public func bannerView(_ bannerView: GADBannerView, didFailToReceiveAdWithError error: Error) {
+        load_BannerAd()
     }
 }
 
 //MARK: - GADFullScreenContent Delegate
 extension GoogleAd_Manager : GADFullScreenContentDelegate
 {
-    func adDidRecordClick(_ ad: GADFullScreenPresentingAd) {
+    public func adDidRecordClick(_ ad: GADFullScreenPresentingAd) {
         isAdClickedAndRedirected = true
     }
     
-    func adWillPresentFullScreenContent(_ ad: GADFullScreenPresentingAd) {
+    public func adWillPresentFullScreenContent(_ ad: GADFullScreenPresentingAd) {
         
         if ad.isKind(of: GADInterstitialAd.self) {
             isInterstitialAdOpen = true
@@ -384,7 +505,7 @@ extension GoogleAd_Manager : GADFullScreenContentDelegate
         }
     }
     
-    func adDidDismissFullScreenContent(_ ad: GADFullScreenPresentingAd) {
+    public func adDidDismissFullScreenContent(_ ad: GADFullScreenPresentingAd) {
         
         if ad.isKind(of: GADInterstitialAd.self) {
             isInterstitialAdOpen = false
@@ -408,7 +529,7 @@ extension GoogleAd_Manager : GADFullScreenContentDelegate
         }
     }
     
-    func ad(_ ad: GADFullScreenPresentingAd, didFailToPresentFullScreenContentWithError error: Error) {
+    public func ad(_ ad: GADFullScreenPresentingAd, didFailToPresentFullScreenContentWithError error: Error) {
         
         if ad.isKind(of: GADInterstitialAd.self) {
             load_InterstitialAd()
@@ -426,75 +547,5 @@ extension GoogleAd_Manager : GADFullScreenContentDelegate
             load_OpenAd()
             appOpenAd_DidFailToPresent?(error.localizedDescription)
         }
-    }
-}
-
-
-// -------------------------------------------------
-// MARK:- GADBannerAd
-// -------------------------------------------------
-extension GoogleAd_Manager
-{
-    func load_BannerAd()
-    {
-        if !Purchase_flag && !isBannerAdLoaded {
-            bannerViewAd = GADBannerView()
-            bannerViewAd.delegate = self
-            bannerViewAd.adUnitID = Banner_ID
-            bannerViewAd.rootViewController = UIApplication.shared.windows.first!.rootViewController
-            bannerViewAd.adSize = GADCurrentOrientationAnchoredAdaptiveBannerAdSizeWithWidth(UIScreen.main.bounds.width)
-            bannerViewAd.load(GADRequest())
-        }
-    }
-    
-    func funGetAdaptiveBannerHeight() -> CGFloat {
-        return GADCurrentOrientationAnchoredAdaptiveBannerAdSizeWithWidth(UIScreen.main.bounds.width).size.height
-    }
-    
-    func funShowBannerAd(parentView: UIView)
-    {
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.0) { [self] in
-            
-            if !Purchase_flag
-            {
-                parentView.addShimmerViewForADType(adType: .adptive_Banner)
-                
-                if isBannerAdLoaded {
-                    if bannerAd_present != nil {
-                        parentView.removeShimmerViewForADType()
-                        bannerAd_present!()
-                    }
-                    parentView.addSubview(bannerViewAd)
-                }
-                else {
-                    load_BannerAd()
-                    bannerAd_present = {
-                        parentView.removeShimmerViewForADType()
-                    }
-                    parentView.addSubview(bannerViewAd)
-                }
-            }
-        }
-    }
-}
-
-extension GoogleAd_Manager : GADBannerViewDelegate
-{
-    func bannerViewDidRecordClick(_ bannerView: GADBannerView) {
-        isAdClickedAndRedirected = true
-    }
-    
-    func bannerViewDidReceiveAd(_ bannerView: GADBannerView) {
-        if !Purchase_flag {
-            bannerViewAd = bannerView
-            isBannerAdLoaded = true
-            if bannerAd_present != nil {
-                bannerAd_present!()
-            }
-        }
-    }
-    
-    func bannerView(_ bannerView: GADBannerView, didFailToReceiveAdWithError error: Error) {
-        load_BannerAd()
     }
 }

@@ -30,18 +30,18 @@ public class RevenueCat_Manager : NSObject {
     private var YearDiscountSubscriptionID = String()
     private var LifetimeSubscriptionID = String()
     
-    private var isWeekIntroductoryAvailable = false
-    private var isOneMonthIntroductoryAvailable = false
-    private var isTwoMonthIntroductoryAvailable = false
-    private var isThreeMonthIntroductoryAvailable = false
-    private var isSixMonthIntroductoryAvailable = false
-    private var isYearIntroductoryAvailable = false
-    private var isWeekDiscountIntroductoryAvailable = false
-    private var isOneMonthDiscountIntroductoryAvailable = false
-    private var isTwoMonthDiscountIntroductoryAvailable = false
-    private var isThreeMonthDiscountIntroductoryAvailable = false
-    private var isSixMonthDiscountIntroductoryAvailable = false
-    private var isYearDiscountIntroductoryAvailable = false
+    public var isWeekIntroductoryAvailable = false
+    public var isOneMonthIntroductoryAvailable = false
+    public var isTwoMonthIntroductoryAvailable = false
+    public var isThreeMonthIntroductoryAvailable = false
+    public var isSixMonthIntroductoryAvailable = false
+    public var isYearIntroductoryAvailable = false
+    public var isWeekDiscountIntroductoryAvailable = false
+    public var isOneMonthDiscountIntroductoryAvailable = false
+    public var isTwoMonthDiscountIntroductoryAvailable = false
+    public var isThreeMonthDiscountIntroductoryAvailable = false
+    public var isSixMonthDiscountIntroductoryAvailable = false
+    public var isYearDiscountIntroductoryAvailable = false
 
     private var subProductIds = SubscriptionProductIds()
     
@@ -105,77 +105,8 @@ public class RevenueCat_Manager : NSObject {
         }
     }
     
-    // MARK: - Purchase with Promo
-    public func purchaseProductWithPromo(ProductID : String, promoOffers: PromotionalOffer,completion : @escaping(Bool,CustomerInfo?,Error?,Bool)->Void)
-    {
-        let p1 = RevenueCat_Manager.AvailableProducts.first { (p) -> Bool in
-            return p.storeProduct.productIdentifier ==  ProductID
-        }
-        if let p1 = p1 {
-            Purchases.shared.purchase(package: p1, promotionalOffer: promoOffers) { (trans, info, error, cancelled) in
-                if let error = error {
-                    if !cancelled {
-                        RevenueCat_Manager.purchaseInfo = info
-                        Purchase_flag = info?.entitlements.active.count ?? 0 > 0 ? true :  false
-                        completion(true,info,error,false)
-                    }
-                    else{
-                        completion(true,info,error,true)
-                    }
-                } else {
-                    completion(true,info,nil,false)
-                }
-            }
-        }
-        else{
-            completion(false,nil,nil,true)
-        }
-    }
-    
-    // MARK: - Purchase
-    public func purchaseProduct(ProductID : String,completion : @escaping(Bool,CustomerInfo?,Error?,Bool)->Void)
-    {
-        let p1 = RevenueCat_Manager.AvailableProducts.first { (p) -> Bool in
-            return p.storeProduct.productIdentifier ==  ProductID
-        }
-        if let p1 = p1 {
-            Purchases.shared.purchase(package: p1) { (trans, info, error, cancelled) in
-                if let error = error {
-                    if !cancelled {
-                        RevenueCat_Manager.purchaseInfo = info
-                        Purchase_flag = info?.entitlements.active.count ?? 0 > 0 ? true :  false
-                        completion(true,info,error,false)
-                    } else{
-                        completion(true,info,error,true)
-                    }
-                } else {
-                    completion(true,info,nil,false)
-                }
-            }
-        } else {
-            completion(false,nil,nil,false)
-        }
-    }
-    
-    // MARK: - Restore
-    public func restoreProduct(completion : @escaping(Bool,CustomerInfo?,Error?)->Void)
-    {
-        Purchases.shared.restorePurchases { (purchaseInfo, error) in
-            if let error = error {
-                completion(false,purchaseInfo,error)
-            } else {
-                RevenueCat_Manager.purchaseInfo = purchaseInfo
-                Purchase_flag = purchaseInfo?.entitlements.active.count ?? 0 > 0 ? true :  false
-                completion(true,purchaseInfo,nil)
-            }
-        }
-    }
-}
-
-// MARK: - Get Packages
-extension RevenueCat_Manager
-{
-    private func GetAllAvailablePackages(complition : @escaping(Bool,Error?)-> Void)
+    //MARK: - Get Offerings
+    public func GetAllAvailablePackages(complition : @escaping(Bool,Error?)-> Void)
     {
         if RevenueCat_Manager.AvailableProducts.count == 0
         {
@@ -210,8 +141,6 @@ extension RevenueCat_Manager
                         case .lifetime:
                             self.LifetimeSubscriptionID = package.storeProduct.productIdentifier
                         case .custom:
-                            print("Custom Package : \(package.storeProduct.productIdentifier)")
-                            
                             if (package.storeProduct.productIdentifier == subProductIds.offer1_oneWeek_Discount || package.storeProduct.productIdentifier == subProductIds.offer2_oneWeek_Discount || package.storeProduct.productIdentifier == subProductIds.offer3_oneWeek_Discount) {
                                 
                                 self.WeekDiscountSubscriptionID = package.storeProduct.productIdentifier
@@ -297,6 +226,76 @@ extension RevenueCat_Manager
         }
     }
     
+    // MARK: - Purchase with Promo
+    public func purchaseProductWithPromo(ProductID : String, promoOffers: PromotionalOffer,completion : @escaping(Bool,CustomerInfo?,Error?,Bool)->Void)
+    {
+        let p1 = RevenueCat_Manager.AvailableProducts.first { (p) -> Bool in
+            return p.storeProduct.productIdentifier ==  ProductID
+        }
+        if let p1 = p1 {
+            Purchases.shared.purchase(package: p1, promotionalOffer: promoOffers) { (trans, info, error, cancelled) in
+                if let error = error {
+                    if !cancelled {
+                        RevenueCat_Manager.purchaseInfo = info
+                        Purchase_flag = info?.entitlements.active.count ?? 0 > 0 ? true :  false
+                        completion(true,info,error,false)
+                    }
+                    else{
+                        completion(true,info,error,true)
+                    }
+                } else {
+                    completion(true,info,nil,false)
+                }
+            }
+        }
+        else{
+            completion(false,nil,nil,true)
+        }
+    }
+    
+    // MARK: - Purchase
+    public func purchaseProduct(ProductID : String,completion : @escaping(Bool,CustomerInfo?,Error?,Bool)->Void)
+    {
+        let p1 = RevenueCat_Manager.AvailableProducts.first { (p) -> Bool in
+            return p.storeProduct.productIdentifier ==  ProductID
+        }
+        if let p1 = p1 {
+            Purchases.shared.purchase(package: p1) { (trans, info, error, cancelled) in
+                if let error = error {
+                    if !cancelled {
+                        RevenueCat_Manager.purchaseInfo = info
+                        Purchase_flag = info?.entitlements.active.count ?? 0 > 0 ? true :  false
+                        completion(true,info,error,false)
+                    } else{
+                        completion(true,info,error,true)
+                    }
+                } else {
+                    completion(true,info,nil,false)
+                }
+            }
+        } else {
+            completion(false,nil,nil,false)
+        }
+    }
+    
+    // MARK: - Restore
+    public func restoreProduct(completion : @escaping(Bool,CustomerInfo?,Error?)->Void)
+    {
+        Purchases.shared.restorePurchases { (purchaseInfo, error) in
+            if let error = error {
+                completion(false,purchaseInfo,error)
+            } else {
+                RevenueCat_Manager.purchaseInfo = purchaseInfo
+                Purchase_flag = purchaseInfo?.entitlements.active.count ?? 0 > 0 ? true :  false
+                completion(true,purchaseInfo,nil)
+            }
+        }
+    }
+}
+
+// MARK: - Package Details
+extension RevenueCat_Manager
+{
     private func GetPackageDetail(complition : @escaping()-> Void) {
         
         //One Week
@@ -306,6 +305,7 @@ extension RevenueCat_Manager
                                                                             plan_Price: GetPriceOfProduct_Int(productId: WeekSubscriptionID),
                                                                             plan_Currancy_Code: GetCurrncyCode(productId: WeekSubscriptionID),
                                                                             plan_Free_Trail: GetIntroductioyOfProduct(productId: WeekSubscriptionID))
+        
         GetPromotionalOfferOfProduct(WeekSubscriptionID, completion: { promOffer in
             SubscriptionConst.ActivePlans.one_Week.plan_Promotional_Offer = promOffer
         })
@@ -545,7 +545,7 @@ extension RevenueCat_Manager
         return product?.priceFormatter?.currencySymbol ?? "$"
     }
     
-    private func GetDecimalPart(of value: Double) -> Double {
+    public func GetDecimalPart(of value: Double) -> Double {
         let integerPart = floor(value)
         let decimalPart = value - integerPart
         return decimalPart
@@ -697,7 +697,7 @@ extension RevenueCat_Manager
                 return
             }
         
-            if (UserDefaults.standard.value(forKey:"purchase_flag") != nil) && purchaserInfo!.entitlements.active.isEmpty && (UserDefaults.standard.value(forKey: "appOpenFirstTime") == nil)
+            if (UserDefaults.standard.value(forKey:"Purchase_flag") != nil) && purchaserInfo!.entitlements.active.isEmpty && (UserDefaults.standard.value(forKey: "appOpenFirstTime") == nil)
             {
                 Purchases.shared.syncPurchases { (purchaserInfo, error) in
                     if error != nil {
