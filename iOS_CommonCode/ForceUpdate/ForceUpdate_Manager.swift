@@ -25,13 +25,13 @@ public final class ForceUpdate_Manager: NSObject {
     
     public var isAppNeedForceUpdate = false
     
-    public class func configure(withAppID appId: Int) {
+    public static func configure(withAppID appId: Int) {
         shared.applicationId = "id\(appId)"
         shared.checkForForceUpdate()
         shared.addNotification()
     }
     
-    public class func configureForceUpdateAlert(title: String, message: String, actionBtn: String, cancelBtn: String) {
+    public static func configureForceUpdateAlert(title: String, message: String, actionBtn: String, cancelBtn: String) {
         shared.alert.alertTitle = title
         shared.alert.alertMessage = message
         shared.alert.alertActionUpdate = actionBtn

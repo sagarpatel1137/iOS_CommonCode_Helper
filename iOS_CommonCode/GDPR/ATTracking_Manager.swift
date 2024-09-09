@@ -11,7 +11,7 @@ import AppTrackingTransparency
 import RevenueCat
 import FBSDKCoreKit
 import AppsFlyerLib
-import Firebase
+import FirebaseAnalytics
 import FirebaseAuth
 
 public class ATTracking_Manager: NSObject {

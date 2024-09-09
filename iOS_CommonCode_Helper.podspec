@@ -22,8 +22,8 @@ spec.frameworks        = 'UIKit', 'Foundation', 'SystemConfiguration', 'StoreKit
 
 spec.dependency 'RevenueCat'
 spec.dependency 'Alamofire'
-#spec.dependency 'AppsFlyerFramework'
-#spec.dependency 'PurchaseConnector'
+spec.dependency 'AppsFlyerFramework'
+spec.dependency 'PurchaseConnector'
 spec.dependency 'AppMetricaAnalytics'
 spec.dependency 'FBSDKCoreKit'
 spec.dependency 'FBSDKLoginKit'
@@ -39,9 +39,9 @@ spec.dependency 'FirebaseMessaging'
 spec.dependency 'Google-Mobile-Ads-SDK'
 
 spec.dependency 'UIView-Shimmer'
-spec.dependency 'lottie-ios'
-spec.dependency 'MBProgressHUD'
-spec.dependency 'MarqueeLabel'
-spec.dependency 'Toast-Swift'
+#spec.dependency 'lottie-ios'
+#spec.dependency 'MBProgressHUD'
+#spec.dependency 'MarqueeLabel'
+#spec.dependency 'Toast-Swift'
 
 end

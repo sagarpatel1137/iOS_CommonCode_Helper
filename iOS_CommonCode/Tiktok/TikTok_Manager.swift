@@ -9,7 +9,7 @@ import TikTokBusinessSDK
 
 public class TikTok_Manager
 {
-    public class func initialize(withAppId appId: String, TikTokId apiId: String, isDebug: Bool = false)
+    public static func initialize(withAppId appId: String, TikTokId apiId: String, isDebug: Bool = false)
     {
         if !UIDevice.current.isSimulator {
             let config = TikTokConfig(appId: appId, tiktokAppId: apiId)
@@ -24,13 +24,13 @@ public class TikTok_Manager
 
 public class TikTok_Events
 {
-    public class func tikTokFreeTrialEvent(plan: SubscriptionConst.PlanInfo)
+    public static func tikTokFreeTrialEvent(plan: SubscriptionConst.PlanInfo)
     {
         let trailEvent = TikTokBaseEvent(name: TTEventName.startTrial.rawValue)
         TikTokBusiness.trackTTEvent(trailEvent)
     }
 
-    public class func tikTokPurchaseSuccessEvent(plan: SubscriptionConst.PlanInfo)
+    public static func tikTokPurchaseSuccessEvent(plan: SubscriptionConst.PlanInfo)
     {
         let customEvent = TikTokPurchaseEvent(name: "Purchase")
         customEvent.addProperty(withKey: "currency", value: plan.plan_Currancy_Code)
