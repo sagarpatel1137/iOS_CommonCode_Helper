@@ -10,8 +10,8 @@ import Alamofire
 
 enum GADAdTYPE
 {
-    case banner_Nativ
-    case full_Nativ
+    case banner_Native
+    case full_Native
     case adptive_Banner
 }
 
@@ -30,7 +30,7 @@ class GoogleAd_Manager : NSObject {
     private var RewardedInt_ID = ""
     private var AppOpen_ID = ""
     
-    //InterstitialAd
+    //Interstitial Ad
     private var interstitialAd : GADInterstitialAd!
     private var isRequeSendForLoad_IntAd = false
     private var isInterstitialAdOpen = false
@@ -38,7 +38,7 @@ class GoogleAd_Manager : NSObject {
     private var interstitialAd_DidDismiss : (() -> Void)?
     private var interstitialAd_DidFailToPresent : ((String) -> Void)?
     
-    //RewardedAd
+    //Rewarded Ad
     private var rewardedAd : GADRewardedAd!
     private var isRequeSendForLoad_RewardedAd = false
     private var isRewardedAdOpen = false
@@ -47,7 +47,7 @@ class GoogleAd_Manager : NSObject {
     private var rewardedAd_Rewarded : (() -> Void)?
     private var rewardedAd_DidFailToPresent : ((String) -> Void)?
     
-    //RewardedInterstitialAd
+    //RewardedInterstitial Ad
     private var rewardedIntAd : GADRewardedInterstitialAd!
     private var isRequeSendForLoad_RewardedIntAd = false
     private var isRewardedIntAdOpen = false
@@ -56,8 +56,9 @@ class GoogleAd_Manager : NSObject {
     private var rewardedIntAd_Rewarded : (() -> Void)?
     private var rewardedIntAd_DidFailToPresent : ((String) -> Void)?
     
+    //AppOpen Ad
     private var appOpenAd : GADAppOpenAd!
-    private var isRequeSendForLoad_AppOpenAd = true
+    private var isRequeSendForLoad_AppOpenAd = false
     private var isAppOpenAdOpen = false
     private var appOpenAd_LoadDone : (() -> Void)?
     private var appOpenAd_DidDismiss : (() -> Void)?
@@ -67,6 +68,14 @@ class GoogleAd_Manager : NSObject {
     private var bannerViewAd : GADBannerView!
     private var bannerAd_present : (() -> Void)?
     private var isBannerAdLoaded = false
+    
+    //Native Ad
+    public var native_Ad : GADNativeAd!
+    private var nativeAd_Loader: GADAdLoader!
+    private var isLoadedNativeAd = false
+    private var isRequeSendForLoad_NativeAd = false
+    private var nativeAd_LoadDone : (() -> Void)?
+    private var nativeAd_Reload : (() -> Void)!
     
     private override init() {
     }
@@ -90,6 +99,7 @@ extension GoogleAd_Manager
         }
         if let id = nativeAd {
             Native_ID = id
+            load_NativeAd()
         }
         if let id = rewardAd {
             Rewarded_ID = id
@@ -130,11 +140,11 @@ extension GoogleAd_Manager
             
             if !Purchase_flag
             {
-                parentView.addShimmerViewForADType(adType: .adptive_Banner)
+                parentView.addShimmerViewForAdType(adType: .adptive_Banner)
                 
                 if isBannerAdLoaded {
                     if bannerAd_present != nil {
-                        parentView.removeShimmerViewForADType()
+                        parentView.removeShimmerViewForAdType()
                         bannerAd_present!()
                     }
                     parentView.addSubview(bannerViewAd)
@@ -142,7 +152,7 @@ extension GoogleAd_Manager
                 else {
                     load_BannerAd()
                     bannerAd_present = {
-                        parentView.removeShimmerViewForADType()
+                        parentView.removeShimmerViewForAdType()
                     }
                     parentView.addSubview(bannerViewAd)
                 }
@@ -247,6 +257,45 @@ extension GoogleAd_Manager
             didFailToPresent(error)
         }
     }
+    
+    public func funShowNativeAd(adType : GADAdTYPE, parentView: UIView, isAdShown : @escaping ((Bool) -> Void), isClick : @escaping (() -> Void), isNewLoad : @escaping (() -> Void))
+    {
+        parentView.backgroundColor = .clear
+        parentView.layer.shadowColor = UIColor.darkGray.cgColor
+        parentView.layer.shadowRadius = 3
+        parentView.layer.shadowOpacity = 0.3
+        parentView.layer.shadowOffset = CGSize(width: 0, height: 1)
+        parentView.layer.masksToBounds = false
+        parentView.layer.cornerRadius = UIDevice.current.isiPhone ? 10:15
+        parentView.addShimmerViewForAdType(adType: adType)
+        
+        if Reachability.isConnectedToNetwork()
+        {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1){[self] in
+                if self.isLoadedNativeAd {
+                    parentView.setup_NativeAdView(adType: adType, adParntsView: parentView) {
+                        isAdShown(true)
+                    }
+                }
+                else {
+                    self.nativeAd_LoadDone = {
+                        parentView.setup_NativeAdView(adType: adType, adParntsView: parentView){
+                            isAdShown(true)
+                        }
+                    }
+                }
+                self.nativeAd_Reload = {
+                    isClick()
+                }
+                self.nativeAd_LoadDone = {
+                    isNewLoad()
+                }
+            }
+        }
+        else{
+            isAdShown(false)
+        }
+    }
 }
 
 // MARK: - Network Reachability
@@ -265,8 +314,8 @@ extension GoogleAd_Manager
                 if (interstitialAd != nil && Int_ID != "") {
                     load_InterstitialAd()
                 }
-                if (Native_ID != "") {
-                    
+                if (native_Ad != nil && Native_ID != "") {
+                    load_NativeAd()
                 }
                 if (rewardedAd != nil && Rewarded_ID != ""){
                     load_RewardedAd()
@@ -546,6 +595,205 @@ extension GoogleAd_Manager : GADFullScreenContentDelegate
         else if ad.isKind(of: GADAppOpenAd.self) {
             load_OpenAd()
             appOpenAd_DidFailToPresent?(error.localizedDescription)
+        }
+    }
+}
+
+
+//MARK: - Native Ad
+extension GoogleAd_Manager
+{
+    func load_NativeAd()
+    {
+        if !Purchase_flag && Reachability.isConnectedToNetwork() && !isRequeSendForLoad_NativeAd {
+            
+            isRequeSendForLoad_NativeAd = true
+            let multipleAdsOptions = GADMultipleAdsAdLoaderOptions()
+            multipleAdsOptions.numberOfAds = 1
+            
+            nativeAd_Loader = GADAdLoader(adUnitID: Native_ID, rootViewController: UIViewController(),
+                                   adTypes: [GADAdLoaderAdType.native],
+                                   options: [multipleAdsOptions])
+            nativeAd_Loader.delegate = self
+            nativeAd_Loader.load(GADRequest())
+        }
+        else {
+            isRequeSendForLoad_NativeAd = false
+        }
+    }
+}
+
+//MARK: - GADNativeAdLoader Delegate
+extension GoogleAd_Manager : GADNativeAdLoaderDelegate
+{
+    public func adLoader(_ adLoader: GADAdLoader, didFailToReceiveAdWithError error: any Error) {
+        isLoadedNativeAd = false
+        load_NativeAd()
+    }
+    
+    public func adLoader(_ adLoader: GADAdLoader, didReceive nativeAd: GADNativeAd) {
+        
+        isRequeSendForLoad_NativeAd = false
+        native_Ad = nativeAd
+        native_Ad.delegate = self
+        
+        isLoadedNativeAd = true
+        if nativeAd_LoadDone != nil {
+            nativeAd_LoadDone!()
+        }
+    }
+}
+
+//MARK: - GADNativeAd Delegate
+extension GoogleAd_Manager : GADNativeAdDelegate
+{
+    public func nativeAdDidRecordClick(_ nativeAd: GADNativeAd) {
+        
+        isAdClickedAndRedirected = true
+        if let headLine = native_Ad.headline {
+            if let tempVC = funGetTopViewController() {
+                tempVC.openAppStoreForNotClickableAd(headLine)
+            }
+        }
+        if nativeAd_Reload != nil {
+            nativeAd_Reload()
+        }
+        load_NativeAd()
+    }
+}
+
+extension UIView
+{
+    fileprivate func setup_NativeAdView(adType : GADAdTYPE, adParntsView: UIView, isShowOtherAd : Bool = false,_ isAdShown : (() -> Void))
+    {
+        let tempNIBName = adType == .banner_Native ? "NativeBannerAd" : "NativeAd"
+        
+        guard let nibObjects = Bundle.main.loadNibNamed(tempNIBName, owner: nil, options: nil),
+              let adView = nibObjects.first as? GADNativeAdView else { return }
+        
+        adParntsView.subviews.forEach({if $0 is GADNativeAdView{$0.removeFromSuperview()}})
+        adParntsView.addSubview(adView)
+        
+        adView.layer.cornerRadius = adParntsView.layer.cornerRadius
+        adView.layer.masksToBounds = true
+        adView.translatesAutoresizingMaskIntoConstraints = false
+        
+        let viewDictionary = ["_nativeAdView": adView]
+        self.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|[_nativeAdView]|",
+                                                                options: NSLayoutConstraint.FormatOptions(rawValue: 0), metrics: nil, views: viewDictionary))
+        self.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|[_nativeAdView]|",
+                                                                options: NSLayoutConstraint.FormatOptions(rawValue: 0), metrics: nil, views: viewDictionary))
+        if adType == .banner_Native {
+            adView.set_NativeBanner()
+            isAdShown()
+        }
+        else if adType == .full_Native {
+            adView.set_NativeFull()
+            isAdShown()
+        }
+        adParntsView.removeShimmerViewForAdType()
+    }
+}
+
+extension GADNativeAdView{
+    
+    fileprivate func set_NativeFull()
+    {
+        let nativeAd =  GoogleAd_Manager.shared.native_Ad!
+        
+        (self.headlineView as? UILabel)?.text = nativeAd.headline
+        self.mediaView?.mediaContent = nativeAd.mediaContent
+        
+        (self.bodyView as? UILabel)?.text = nativeAd.body
+        self.bodyView?.isHidden = nativeAd.body == nil
+        
+        (self.callToActionView as? UIButton)?.setTitle(nativeAd.callToAction?.uppercased(), for: .normal)
+        self.callToActionView?.isHidden = nativeAd.callToAction == nil
+        
+        setAdIcon_NativBanner((self.iconView as! UIImageView),nativeAd.icon)
+        
+        (self.storeView as? UILabel)?.text = nativeAd.store
+        self.storeView?.isHidden = nativeAd.store == nil
+        
+        (self.priceView as? UILabel)?.text = nativeAd.price
+        self.priceView?.isHidden = nativeAd.price == nil
+        
+        (self.advertiserView as? UILabel)?.text = nativeAd.advertiser
+        self.advertiserView?.isHidden = nativeAd.advertiser == nil
+        
+        self.callToActionView?.isUserInteractionEnabled = false
+        
+        self.nativeAd = nativeAd
+    }
+    
+    fileprivate func set_NativeBanner(isShowOtherAd : Bool = false)
+    {
+        let nativeAd = GoogleAd_Manager.shared.native_Ad!
+                
+        (self.headlineView as? UILabel)?.text = nativeAd.headline
+        self.mediaView?.mediaContent = nativeAd.mediaContent
+       
+        (self.bodyView as? UILabel)?.text = nativeAd.body
+        self.bodyView?.isHidden = nativeAd.body == nil
+        
+        setActionBtn_NativBanner(self.callToActionView as! UIButton,nativeAd.callToAction)
+        
+        setAdIcon_NativBanner((self.iconView as! UIImageView),nativeAd.icon)
+        
+        (self.storeView as? UILabel)?.text = nativeAd.store
+        self.storeView?.isHidden = nativeAd.store == nil
+        
+        (self.priceView as? UILabel)?.text = nativeAd.price
+        self.priceView?.isHidden = nativeAd.price == nil
+        
+        (self.advertiserView as? UILabel)?.text = nativeAd.advertiser
+        self.advertiserView?.isHidden = nativeAd.advertiser == nil
+        
+        self.callToActionView?.isUserInteractionEnabled = false
+        
+        self.nativeAd = nativeAd
+    }
+    
+    
+    fileprivate func setAdIcon_NativBanner(_ view : UIView,_ adImg : GADNativeAdImage? = nil)
+    {
+        if adImg == nil
+        {
+            if let fIndex = view.constraints.firstIndex(where: {$0.identifier == "imgWidth"})
+            {
+                view.constraints[fIndex].constant = 0
+            }
+            
+            if let fIndex = view.superview!.constraints.firstIndex(where: {$0.identifier == "trailingImg"})
+            {
+                view.superview!.constraints[fIndex].constant = 0
+            }
+        }
+        else
+        {
+            (view as? UIImageView)?.image = adImg?.image
+        }
+    }
+    
+    fileprivate func setActionBtn_NativBanner(_ view : UIButton,_ btnTitle:String? = nil)
+    {
+        if let fIndex = view.constraints.firstIndex(where: {$0.identifier == "btnWidth"})
+        {
+            if btnTitle == nil
+            {
+                view.isHidden = true
+                view.constraints[fIndex].constant = 0
+            }
+            else
+            {
+                let tempBtnHeight : CGFloat = UIDevice.current.isiPhone ? 40 : 55
+                let tempTitle = " \(btnTitle!) ".uppercased()
+                let tempFont = view.titleLabel!.font!
+                view.setTitle(tempTitle, for: .normal)
+                let tempWidth = tempTitle.getWidthForString(withConstrainedHeight: tempBtnHeight, font: tempFont)
+                view.constraints[fIndex].constant = tempWidth + CGFloat(UIDevice.current.isiPhone ? 15 : 20)
+                view.titleLabel!.adjustsFontSizeToFitWidth = true
+            }
         }
     }
 }

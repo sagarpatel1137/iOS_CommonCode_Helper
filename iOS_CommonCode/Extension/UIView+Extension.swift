@@ -17,14 +17,14 @@ extension UIView
     
     
     //MARK: - Shimmer
-    func addShimmerViewForADType(adType : GADAdTYPE){
+    func addShimmerViewForAdType(adType : GADAdTYPE){
         
         var tempNIBName = ""
         
         switch adType {
-        case .full_Nativ:
+        case .full_Native:
             tempNIBName = "Shimmer_FullNative"
-        case .banner_Nativ:
+        case .banner_Native:
             tempNIBName = "Shimmer_NativeBannerAd"
         case .adptive_Banner:
             tempNIBName = "Shimmer_Adptiv_Banner"
@@ -37,13 +37,13 @@ extension UIView
         adShimmerView.frame = CGRect(x: 0, y: 0, width: self.frame.width, height: self.frame.height)
         adShimmerView.tag = 5050
         
-        removeShimmerViewForADType()
+        removeShimmerViewForAdType()
         
         addSubview(adShimmerView)
         adShimmerView.startShimmer()
     }
     
-    func removeShimmerViewForADType(){
+    func removeShimmerViewForAdType(){
         RemoveAllSubviewWithTAG(tag: 5050)
     }
     

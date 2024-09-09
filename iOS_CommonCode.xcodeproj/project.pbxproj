@@ -12,6 +12,8 @@
 		8121DD842C621A66003460A5 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8121DD832C621A66003460A5 /* Reachability.swift */; };
 		8121DD852C621A66003460A5 /* ForceUpdate_Manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8121DD822C621A66003460A5 /* ForceUpdate_Manager.swift */; };
 		8121DD8A2C6222C8003460A5 /* iOS_CommonCode_Helper.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 8121DD882C6222C8003460A5 /* iOS_CommonCode_Helper.podspec */; };
+		8136DA422C8EEC02005C305B /* NativeAd.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8136DA402C8EEC02005C305B /* NativeAd.xib */; };
+		8136DA432C8EEC02005C305B /* NativeBannerAd.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8136DA412C8EEC02005C305B /* NativeBannerAd.xib */; };
 		817D301B2C8AC31800AB455C /* ATTracking_Manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 817D301A2C8AC31800AB455C /* ATTracking_Manager.swift */; };
 		817D301D2C8AC5E300AB455C /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 817D301C2C8AC5E300AB455C /* String+Extension.swift */; };
 		817D301F2C8AC60500AB455C /* UILabel+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 817D301E2C8AC60500AB455C /* UILabel+Extension.swift */; };
@@ -56,6 +58,8 @@
 		8121DD822C621A66003460A5 /* ForceUpdate_Manager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForceUpdate_Manager.swift; sourceTree = "<group>"; };
 		8121DD832C621A66003460A5 /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		8121DD882C6222C8003460A5 /* iOS_CommonCode_Helper.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = iOS_CommonCode_Helper.podspec; sourceTree = "<group>"; };
+		8136DA402C8EEC02005C305B /* NativeAd.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NativeAd.xib; sourceTree = "<group>"; };
+		8136DA412C8EEC02005C305B /* NativeBannerAd.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NativeBannerAd.xib; sourceTree = "<group>"; };
 		817D301A2C8AC31800AB455C /* ATTracking_Manager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ATTracking_Manager.swift; sourceTree = "<group>"; };
 		817D301C2C8AC5E300AB455C /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		817D301E2C8AC60500AB455C /* UILabel+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Extension.swift"; sourceTree = "<group>"; };
@@ -123,14 +127,11 @@
 		8121DD6A2C6216E8003460A5 /* iOS_CommonCode */ = {
 			isa = PBXGroup;
 			children = (
+				8136DA342C8ECCAE005C305B /* Analytics */,
 				81CAB5FB2C6DF4E00050F848 /* Extension */,
-				817DCDF52C6F09CE004BA1C2 /* GDPR */,
-				81CAB5FE2C6E17870050F848 /* OneSignal */,
-				81CAB5F22C6DF1250050F848 /* Tiktok */,
-				81CAB5F12C6DF11B0050F848 /* Facebook */,
-				81CAB5F02C6DF1070050F848 /* AppFlyer */,
-				81CAB5EF2C6DF0FE0050F848 /* AppMetrica */,
-				81CAB5E62C6DD1D80050F848 /* Alamofire */,
+				8136DA362C8ECCF6005C305B /* Notification */,
+				8136DA352C8ECCEB005C305B /* API */,
+				8136DA332C8ECC9E005C305B /* SignIn */,
 				819E6FB22C6CB9FD00D4914E /* RevenueCat */,
 				819E6FB52C6CBA7500D4914E /* ForceUpdate */,
 				81BA8AF22C881CDD00F8A3C5 /* Google Ad's */,
@@ -139,6 +140,50 @@
 				81BA8B0C2C883D6600F8A3C5 /* Asset.xcassets */,
 			);
 			path = iOS_CommonCode;
+			sourceTree = "<group>";
+		};
+		8136DA332C8ECC9E005C305B /* SignIn */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = SignIn;
+			sourceTree = "<group>";
+		};
+		8136DA342C8ECCAE005C305B /* Analytics */ = {
+			isa = PBXGroup;
+			children = (
+				817DCDF52C6F09CE004BA1C2 /* GDPR */,
+				81CAB5F12C6DF11B0050F848 /* Facebook */,
+				81CAB5EF2C6DF0FE0050F848 /* AppMetrica */,
+				81CAB5F02C6DF1070050F848 /* AppFlyer */,
+				81CAB5F22C6DF1250050F848 /* Tiktok */,
+			);
+			path = Analytics;
+			sourceTree = "<group>";
+		};
+		8136DA352C8ECCEB005C305B /* API */ = {
+			isa = PBXGroup;
+			children = (
+				81CAB5E62C6DD1D80050F848 /* Alamofire */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		8136DA362C8ECCF6005C305B /* Notification */ = {
+			isa = PBXGroup;
+			children = (
+				81CAB5FE2C6E17870050F848 /* OneSignal */,
+			);
+			path = Notification;
+			sourceTree = "<group>";
+		};
+		8136DA3F2C8EEBFB005C305B /* Xib */ = {
+			isa = PBXGroup;
+			children = (
+				8136DA402C8EEC02005C305B /* NativeAd.xib */,
+				8136DA412C8EEC02005C305B /* NativeBannerAd.xib */,
+			);
+			path = Xib;
 			sourceTree = "<group>";
 		};
 		817DCDF52C6F09CE004BA1C2 /* GDPR */ = {
@@ -170,8 +215,8 @@
 		819E6FB62C6CBA7D00D4914E /* Other */ = {
 			isa = PBXGroup;
 			children = (
-				8121DD832C621A66003460A5 /* Reachability.swift */,
 				81BA8AF02C881BE100F8A3C5 /* Constant_Function.swift */,
+				8121DD832C621A66003460A5 /* Reachability.swift */,
 			);
 			path = Other;
 			sourceTree = "<group>";
@@ -180,6 +225,7 @@
 			isa = PBXGroup;
 			children = (
 				81BA8AFD2C881F4700F8A3C5 /* GoogleAd_Manager.swift */,
+				8136DA3F2C8EEBFB005C305B /* Xib */,
 			);
 			path = "Google Ad's";
 			sourceTree = "<group>";
@@ -357,8 +403,10 @@
 				81BA8B062C88364C00F8A3C5 /* Shimmer_Adptiv_Banner.xib in Resources */,
 				8121DD8A2C6222C8003460A5 /* iOS_CommonCode_Helper.podspec in Resources */,
 				81BA8B0D2C883D6600F8A3C5 /* Asset.xcassets in Resources */,
+				8136DA432C8EEC02005C305B /* NativeBannerAd.xib in Resources */,
 				81BA8B632C88507600F8A3C5 /* Shimmer_NativeBannerAd.xib in Resources */,
 				81BA8B052C88364C00F8A3C5 /* Shimmer_FullNative.xib in Resources */,
+				8136DA422C8EEC02005C305B /* NativeAd.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
