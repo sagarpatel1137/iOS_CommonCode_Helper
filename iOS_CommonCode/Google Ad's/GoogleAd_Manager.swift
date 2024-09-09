@@ -664,7 +664,7 @@ extension GoogleAd_Manager : GADNativeAdDelegate
 
 extension UIView
 {
-    fileprivate func setup_NativeAdView(adType : GADAdTYPE, adParntsView: UIView, isShowOtherAd : Bool = false,_ isAdShown : (() -> Void))
+    fileprivate func setup_NativeAdView(adType : GADAdTYPE, adParntsView: UIView,_ isAdShown : (() -> Void))
     {
         let tempNIBName = adType == .banner_Native ? "NativeBannerAd" : "NativeAd"
         
@@ -695,6 +695,7 @@ extension UIView
     }
 }
 
+//MARK: -
 extension GADNativeAdView{
     
     fileprivate func set_NativeFull()
@@ -726,7 +727,7 @@ extension GADNativeAdView{
         self.nativeAd = nativeAd
     }
     
-    fileprivate func set_NativeBanner(isShowOtherAd : Bool = false)
+    fileprivate func set_NativeBanner()
     {
         let nativeAd = GoogleAd_Manager.shared.native_Ad!
                 
@@ -757,35 +758,27 @@ extension GADNativeAdView{
     
     fileprivate func setAdIcon_NativBanner(_ view : UIView,_ adImg : GADNativeAdImage? = nil)
     {
-        if adImg == nil
-        {
-            if let fIndex = view.constraints.firstIndex(where: {$0.identifier == "imgWidth"})
-            {
+        if adImg == nil {
+            if let fIndex = view.constraints.firstIndex(where: {$0.identifier == "imgWidth"}) {
                 view.constraints[fIndex].constant = 0
             }
-            
-            if let fIndex = view.superview!.constraints.firstIndex(where: {$0.identifier == "trailingImg"})
-            {
+            if let fIndex = view.superview!.constraints.firstIndex(where: {$0.identifier == "trailingImg"}) {
                 view.superview!.constraints[fIndex].constant = 0
             }
         }
-        else
-        {
+        else {
             (view as? UIImageView)?.image = adImg?.image
         }
     }
     
     fileprivate func setActionBtn_NativBanner(_ view : UIButton,_ btnTitle:String? = nil)
     {
-        if let fIndex = view.constraints.firstIndex(where: {$0.identifier == "btnWidth"})
-        {
-            if btnTitle == nil
-            {
+        if let fIndex = view.constraints.firstIndex(where: {$0.identifier == "btnWidth"}) {
+            if btnTitle == nil {
                 view.isHidden = true
                 view.constraints[fIndex].constant = 0
             }
-            else
-            {
+            else {
                 let tempBtnHeight : CGFloat = UIDevice.current.isiPhone ? 40 : 55
                 let tempTitle = " \(btnTitle!) ".uppercased()
                 let tempFont = view.titleLabel!.font!
