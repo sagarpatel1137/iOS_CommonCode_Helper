@@ -86,7 +86,7 @@ public class RevenueCat_Manager : NSObject {
                             completion()
                             
                             if SubscriptionConst.isGet {
-                                print("Vasundhara 🏢 - Revenue Package Fetched Succesfully 🟢🟢🟢")
+                                print("Vasundhara 🏢 - Revenue Package Fetched Successfully 🟢🟢🟢")
                             } else {
                                 print("Vasundhara 🏢 - Revenue Package Fetched Failed 🔴🔴🔴")
                                 self.checkForNetworkReachability()
@@ -472,7 +472,7 @@ extension RevenueCat_Manager
                     self.GetAllAvailablePackages { (state,err) in
                         
                         if SubscriptionConst.isGet {
-                            print("Vasundhara 🏢 - Revenue Package Fetched Succesfully 🟢🟢🟢")
+                            print("Vasundhara 🏢 - Revenue Package Fetched Successfully 🟢🟢🟢")
                             reachabilityManager?.stopListening()
                         } else {
                             print("Vasundhara 🏢 - Revenue Package Fetched Failed 🔴🔴🔴")

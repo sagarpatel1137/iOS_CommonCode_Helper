@@ -7,6 +7,8 @@
 
 import UIKit
 
-class Int_Extension: NSObject {
-
+extension Int
+{
+    
 }
+

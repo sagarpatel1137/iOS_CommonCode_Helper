@@ -7,6 +7,8 @@
 
 import UIKit
 
-class UIColor_Extension: NSObject {
-
+extension UIColor
+{
+    
 }
+

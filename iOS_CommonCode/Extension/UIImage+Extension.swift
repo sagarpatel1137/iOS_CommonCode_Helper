@@ -7,6 +7,8 @@
 
 import UIKit
 
-class UIImage_Extension: NSObject {
-
+extension UIImage
+{
+    
 }
+

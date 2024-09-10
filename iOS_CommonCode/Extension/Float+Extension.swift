@@ -7,6 +7,7 @@
 
 import UIKit
 
-class Float_Extension: NSObject {
-
+extension Float
+{
+    
 }

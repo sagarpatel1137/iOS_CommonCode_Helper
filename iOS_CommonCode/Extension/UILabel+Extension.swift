@@ -7,4 +7,7 @@
 
 import UIKit
 
-
+extension UILabel
+{
+    
+}

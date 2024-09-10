@@ -7,6 +7,8 @@
 
 import UIKit
 
-class Date_Extension: NSObject {
-
+extension Date
+{
+    
 }
+

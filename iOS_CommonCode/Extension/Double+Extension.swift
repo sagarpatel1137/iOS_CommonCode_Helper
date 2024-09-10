@@ -7,6 +7,7 @@
 
 import UIKit
 
-class Double_Extension: NSObject {
-
+extension Double
+{
+    
 }

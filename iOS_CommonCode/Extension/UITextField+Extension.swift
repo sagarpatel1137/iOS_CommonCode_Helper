@@ -7,6 +7,8 @@
 
 import UIKit
 
-class UITextField_Extension: NSObject {
-
+extension UITextField
+{
+    
 }
+
