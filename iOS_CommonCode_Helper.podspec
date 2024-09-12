@@ -18,6 +18,7 @@ spec.source            = { :git => "https://github.com/sagarpatel1137/iOS_Common
 spec.source_files      = "iOS_CommonCode/**/*.swift"
 
 spec.static_framework  = true
+spec.pod_target_xcconfig = { 'DEFINES_MODULE' => 'YES' }
 spec.frameworks        = 'UIKit', 'Foundation', 'SystemConfiguration', 'StoreKit'
 
 spec.dependency 'RevenueCat'
