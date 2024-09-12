@@ -9,7 +9,7 @@ import StoreKit
 import AppsFlyerLib
 import PurchaseConnector
 
-class AppFlyer_Manager: NSObject {
+public class AppFlyer_Manager: NSObject {
 
     public static let shared = AppFlyer_Manager()
 

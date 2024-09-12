@@ -239,8 +239,6 @@ PODS:
   - KSCrash/Recording (1.17.4):
     - KSCrash/Recording/Tools (= 1.17.4)
   - KSCrash/Recording/Tools (1.17.4)
-  - lottie-ios (4.5.0)
-  - MarqueeLabel (4.5.0)
   - MBProgressHUD (1.2.0)
   - nanopb (3.30910.0):
     - nanopb/decode (= 3.30910.0)
@@ -303,7 +301,6 @@ PODS:
   - RecaptchaInterop (100.0.0)
   - RevenueCat (5.2.2)
   - TikTokBusinessSDK (1.3.5)
-  - Toast-Swift (5.1.1)
   - UIView-Shimmer (1.0.4)
 
 DEPENDENCIES:
@@ -319,14 +316,11 @@ DEPENDENCIES:
   - Firebase/Performance
   - FirebaseMessaging
   - Google-Mobile-Ads-SDK
-  - lottie-ios
-  - MarqueeLabel
   - MBProgressHUD
   - OneSignal
   - PurchaseConnector
   - RevenueCat
   - TikTokBusinessSDK
-  - Toast-Swift
   - UIView-Shimmer
 
 SPEC REPOS:
@@ -378,8 +372,6 @@ SPEC REPOS:
     - GoogleUtilities
     - GTMSessionFetcher
     - KSCrash
-    - lottie-ios
-    - MarqueeLabel
     - MBProgressHUD
     - nanopb
     - OneSignal
@@ -389,7 +381,6 @@ SPEC REPOS:
     - RecaptchaInterop
     - RevenueCat
     - TikTokBusinessSDK
-    - Toast-Swift
     - UIView-Shimmer
 
 SPEC CHECKSUMS:
@@ -440,8 +431,6 @@ SPEC CHECKSUMS:
   GoogleUtilities: 26a3abef001b6533cf678d3eb38fd3f614b7872d
   GTMSessionFetcher: 5aea5ba6bd522a239e236100971f10cb71b96ab6
   KSCrash: 158a0998f08ae7d4e54ef8a2da62d6e08b46d03a
-  lottie-ios: a881093fab623c467d3bce374367755c272bdd59
-  MarqueeLabel: 4b46d196abd253448e830cbd976f9eacc3af0849
   MBProgressHUD: 3ee5efcc380f6a79a7cc9b363dd669c5e1ae7406
   nanopb: fad817b59e0457d11a5dfbde799381cd727c1275
   OneSignal: 916eee4ffe4762f387ae0e28b6541bce8a824d10
@@ -451,9 +440,8 @@ SPEC CHECKSUMS:
   RecaptchaInterop: 7d1a4a01a6b2cb1610a47ef3f85f0c411434cb21
   RevenueCat: ba985d80069c1c4b9c9e0763f1852f2a0bdcc2d6
   TikTokBusinessSDK: 36d609fa83d6135ce29ed1541913adb97208ba6e
-  Toast-Swift: 7a03a532afe3a560d4044bc7c237e2864d295173
   UIView-Shimmer: ff0a32c73d67c7dbdea3d9e530538b10d18aea56
 
-PODFILE CHECKSUM: 9c0f0d29323a12132c80a351f806bbf667a00560
+PODFILE CHECKSUM: 1cf90a270c7cd940c7a8ad1d141103f347c87048
 
 COCOAPODS: 1.15.2

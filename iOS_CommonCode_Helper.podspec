@@ -2,7 +2,7 @@
 Pod::Spec.new do |spec|
 
 spec.name              = "iOS_CommonCode_Helper"
-spec.version           = "1.0.0"
+spec.version           = "1.0.1"
 spec.summary           = "CommonCode Code iOS"
 spec.description       = <<-DESC
 Common Code for Vasundhara iOS App Developing.
@@ -39,9 +39,6 @@ spec.dependency 'FirebaseMessaging'
 spec.dependency 'Google-Mobile-Ads-SDK'
 
 spec.dependency 'UIView-Shimmer'
-#spec.dependency 'lottie-ios'
 #spec.dependency 'MBProgressHUD'
-#spec.dependency 'MarqueeLabel'
-#spec.dependency 'Toast-Swift'
 
 end

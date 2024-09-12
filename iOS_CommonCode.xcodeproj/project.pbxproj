@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 60;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -16,18 +16,13 @@
 		8136DA432C8EEC02005C305B /* NativeBannerAd.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8136DA412C8EEC02005C305B /* NativeBannerAd.xib */; };
 		817D301B2C8AC31800AB455C /* ATTracking_Manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 817D301A2C8AC31800AB455C /* ATTracking_Manager.swift */; };
 		817D301D2C8AC5E300AB455C /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 817D301C2C8AC5E300AB455C /* String+Extension.swift */; };
-		817D301F2C8AC60500AB455C /* UILabel+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 817D301E2C8AC60500AB455C /* UILabel+Extension.swift */; };
-		817D30212C8AC61400AB455C /* UIButton+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 817D30202C8AC61400AB455C /* UIButton+Extension.swift */; };
-		817D30232C8AC62000AB455C /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 817D30222C8AC62000AB455C /* UIImageView+Extension.swift */; };
-		817D30252C8AC63500AB455C /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 817D30242C8AC63500AB455C /* UIImage+Extension.swift */; };
-		817D30272C8AC64600AB455C /* Int+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 817D30262C8AC64600AB455C /* Int+Extension.swift */; };
-		817D30292C8AC64F00AB455C /* Double+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 817D30282C8AC64F00AB455C /* Double+Extension.swift */; };
-		817D302B2C8AC65D00AB455C /* Float+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 817D302A2C8AC65D00AB455C /* Float+Extension.swift */; };
-		817D302D2C8AC67300AB455C /* UITextField+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 817D302C2C8AC67300AB455C /* UITextField+Extension.swift */; };
-		817D302F2C8AC68300AB455C /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 817D302E2C8AC68300AB455C /* UIColor+Extension.swift */; };
-		817D30312C8AC68F00AB455C /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 817D30302C8AC68F00AB455C /* Date+Extension.swift */; };
 		817D30332C8AC6C600AB455C /* UIWindow+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 817D30322C8AC6C600AB455C /* UIWindow+Extension.swift */; };
 		817DCDF72C6F0A4C004BA1C2 /* GoogleMobileAdsConsent_Manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 817DCDF62C6F0A4C004BA1C2 /* GoogleMobileAdsConsent_Manager.swift */; };
+		81958DD42C9292E6004E90E2 /* NSString+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81958DD32C9292E6004E90E2 /* NSString+Extension.swift */; };
+		81958E0A2C92E7A3004E90E2 /* Bridging-Header.h in Headers */ = {isa = PBXBuildFile; fileRef = 81958E092C92E7A3004E90E2 /* Bridging-Header.h */; };
+		81958E0E2C92F0AF004E90E2 /* AppsFlyerLib.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81958E0D2C92F0AF004E90E2 /* AppsFlyerLib.xcframework */; };
+		81958E0F2C92F0D9004E90E2 /* GoogleMobileAds.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81958E0B2C92F096004E90E2 /* GoogleMobileAds.xcframework */; };
+		81958E112C92F0F5004E90E2 /* PurchaseConnector.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81958E102C92F0F5004E90E2 /* PurchaseConnector.xcframework */; };
 		81BA8AF12C881BE100F8A3C5 /* Constant_Function.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81BA8AF02C881BE100F8A3C5 /* Constant_Function.swift */; };
 		81BA8AFE2C881F4700F8A3C5 /* GoogleAd_Manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81BA8AFD2C881F4700F8A3C5 /* GoogleAd_Manager.swift */; };
 		81BA8B042C88364C00F8A3C5 /* CustomShimmer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81BA8B002C88364500F8A3C5 /* CustomShimmer.swift */; };
@@ -62,18 +57,13 @@
 		8136DA412C8EEC02005C305B /* NativeBannerAd.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NativeBannerAd.xib; sourceTree = "<group>"; };
 		817D301A2C8AC31800AB455C /* ATTracking_Manager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ATTracking_Manager.swift; sourceTree = "<group>"; };
 		817D301C2C8AC5E300AB455C /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
-		817D301E2C8AC60500AB455C /* UILabel+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Extension.swift"; sourceTree = "<group>"; };
-		817D30202C8AC61400AB455C /* UIButton+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Extension.swift"; sourceTree = "<group>"; };
-		817D30222C8AC62000AB455C /* UIImageView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
-		817D30242C8AC63500AB455C /* UIImage+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
-		817D30262C8AC64600AB455C /* Int+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+Extension.swift"; sourceTree = "<group>"; };
-		817D30282C8AC64F00AB455C /* Double+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Extension.swift"; sourceTree = "<group>"; };
-		817D302A2C8AC65D00AB455C /* Float+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Float+Extension.swift"; sourceTree = "<group>"; };
-		817D302C2C8AC67300AB455C /* UITextField+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Extension.swift"; sourceTree = "<group>"; };
-		817D302E2C8AC68300AB455C /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
-		817D30302C8AC68F00AB455C /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
 		817D30322C8AC6C600AB455C /* UIWindow+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIWindow+Extension.swift"; sourceTree = "<group>"; };
 		817DCDF62C6F0A4C004BA1C2 /* GoogleMobileAdsConsent_Manager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleMobileAdsConsent_Manager.swift; sourceTree = "<group>"; };
+		81958DD32C9292E6004E90E2 /* NSString+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSString+Extension.swift"; sourceTree = "<group>"; };
+		81958E092C92E7A3004E90E2 /* Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
+		81958E0B2C92F096004E90E2 /* GoogleMobileAds.xcframework */ = {isa = PBXFileReference; expectedSignature = "AppleDeveloperProgram:EQHXZ8M8AV:Google LLC"; lastKnownFileType = wrapper.xcframework; name = GoogleMobileAds.xcframework; path = "Pods/Google-Mobile-Ads-SDK/Frameworks/GoogleMobileAdsFramework/GoogleMobileAds.xcframework"; sourceTree = "<group>"; };
+		81958E0D2C92F0AF004E90E2 /* AppsFlyerLib.xcframework */ = {isa = PBXFileReference; expectedSignature = "AppleDeveloperProgram:6UQAD4B3U2:APPSFLYER LTD"; lastKnownFileType = wrapper.xcframework; name = AppsFlyerLib.xcframework; path = Pods/AppsFlyerFramework/binaries/xcframework/full/AppsFlyerLib.xcframework; sourceTree = "<group>"; };
+		81958E102C92F0F5004E90E2 /* PurchaseConnector.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = PurchaseConnector.xcframework; path = Pods/PurchaseConnector/PurchaseConnector.xcframework; sourceTree = "<group>"; };
 		81BA8AF02C881BE100F8A3C5 /* Constant_Function.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant_Function.swift; sourceTree = "<group>"; };
 		81BA8AFD2C881F4700F8A3C5 /* GoogleAd_Manager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleAd_Manager.swift; sourceTree = "<group>"; };
 		81BA8B002C88364500F8A3C5 /* CustomShimmer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomShimmer.swift; sourceTree = "<group>"; };
@@ -98,6 +88,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				81958E112C92F0F5004E90E2 /* PurchaseConnector.xcframework in Frameworks */,
+				81958E0F2C92F0D9004E90E2 /* GoogleMobileAds.xcframework in Frameworks */,
+				81958E0E2C92F0AF004E90E2 /* AppsFlyerLib.xcframework in Frameworks */,
 				D391513D4F19B006A2E9AF44 /* Pods_iOS_CommonCode.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -138,6 +131,7 @@
 				81BA8AFF2C88362E00F8A3C5 /* Shimmer */,
 				819E6FB62C6CBA7D00D4914E /* Other */,
 				81BA8B0C2C883D6600F8A3C5 /* Asset.xcassets */,
+				81958E092C92E7A3004E90E2 /* Bridging-Header.h */,
 			);
 			path = iOS_CommonCode;
 			sourceTree = "<group>";
@@ -289,17 +283,8 @@
 				81CAB5FC2C6DF4FF0050F848 /* UIDevice+Extension.swift */,
 				81CAB6012C6E20DB0050F848 /* UIViewController+Extension.swift */,
 				81BA8B082C88376E00F8A3C5 /* UIView+Extension.swift */,
-				817D301E2C8AC60500AB455C /* UILabel+Extension.swift */,
-				817D30202C8AC61400AB455C /* UIButton+Extension.swift */,
-				817D30222C8AC62000AB455C /* UIImageView+Extension.swift */,
-				817D30242C8AC63500AB455C /* UIImage+Extension.swift */,
-				817D302C2C8AC67300AB455C /* UITextField+Extension.swift */,
-				817D302E2C8AC68300AB455C /* UIColor+Extension.swift */,
-				817D30302C8AC68F00AB455C /* Date+Extension.swift */,
 				817D301C2C8AC5E300AB455C /* String+Extension.swift */,
-				817D30262C8AC64600AB455C /* Int+Extension.swift */,
-				817D30282C8AC64F00AB455C /* Double+Extension.swift */,
-				817D302A2C8AC65D00AB455C /* Float+Extension.swift */,
+				81958DD32C9292E6004E90E2 /* NSString+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -324,6 +309,9 @@
 		FC852AD153A2E9A3A437EEC6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				81958E102C92F0F5004E90E2 /* PurchaseConnector.xcframework */,
+				81958E0D2C92F0AF004E90E2 /* AppsFlyerLib.xcframework */,
+				81958E0B2C92F096004E90E2 /* GoogleMobileAds.xcframework */,
 				06E918F9F432D213EFDB89A3 /* Pods_iOS_CommonCode.framework */,
 			);
 			name = Frameworks;
@@ -336,6 +324,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				81958E0A2C92E7A3004E90E2 /* Bridging-Header.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -462,31 +451,22 @@
 				81CAB6022C6E20DB0050F848 /* UIViewController+Extension.swift in Sources */,
 				81BA8AF12C881BE100F8A3C5 /* Constant_Function.swift in Sources */,
 				81CAB5F42C6DF2AB0050F848 /* AppFlyer_Manager.swift in Sources */,
-				817D30252C8AC63500AB455C /* UIImage+Extension.swift in Sources */,
-				817D30292C8AC64F00AB455C /* Double+Extension.swift in Sources */,
-				817D30312C8AC68F00AB455C /* Date+Extension.swift in Sources */,
-				817D30212C8AC61400AB455C /* UIButton+Extension.swift in Sources */,
-				817D30232C8AC62000AB455C /* UIImageView+Extension.swift in Sources */,
 				81CAB5F62C6DF2BF0050F848 /* AppMetrica_Manager.swift in Sources */,
 				81BA8AFE2C881F4700F8A3C5 /* GoogleAd_Manager.swift in Sources */,
-				817D302D2C8AC67300AB455C /* UITextField+Extension.swift in Sources */,
 				8121DD852C621A66003460A5 /* ForceUpdate_Manager.swift in Sources */,
 				81CAB5FD2C6DF4FF0050F848 /* UIDevice+Extension.swift in Sources */,
-				817D30272C8AC64600AB455C /* Int+Extension.swift in Sources */,
 				81CAB5E82C6DD2640050F848 /* Alamofire.swift in Sources */,
 				817D301D2C8AC5E300AB455C /* String+Extension.swift in Sources */,
 				81CAB5FA2C6DF3480050F848 /* TikTok_Manager.swift in Sources */,
 				8113BEC52C6324190081B3F8 /* Const For Subscription.swift in Sources */,
-				817D302B2C8AC65D00AB455C /* Float+Extension.swift in Sources */,
 				81CAB5F82C6DF2C80050F848 /* Facebook_Manager.swift in Sources */,
-				817D302F2C8AC68300AB455C /* UIColor+Extension.swift in Sources */,
 				817D301B2C8AC31800AB455C /* ATTracking_Manager.swift in Sources */,
 				81BA8B072C88364C00F8A3C5 /* Shimmer_FullNative.swift in Sources */,
 				81BA8B092C88376E00F8A3C5 /* UIView+Extension.swift in Sources */,
 				817D30332C8AC6C600AB455C /* UIWindow+Extension.swift in Sources */,
 				8121DD842C621A66003460A5 /* Reachability.swift in Sources */,
 				817DCDF72C6F0A4C004BA1C2 /* GoogleMobileAdsConsent_Manager.swift in Sources */,
-				817D301F2C8AC60500AB455C /* UILabel+Extension.swift in Sources */,
+				81958DD42C9292E6004E90E2 /* NSString+Extension.swift in Sources */,
 				81CAB6002C6E193E0050F848 /* OneSignal_Manager.swift in Sources */,
 				81BA8B042C88364C00F8A3C5 /* CustomShimmer.swift in Sources */,
 				8113BEC42C6324190081B3F8 /* RevenueCat_Manager.swift in Sources */,
@@ -535,6 +515,7 @@
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				FRAMEWORK_SEARCH_PATHS = "";
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -602,6 +583,7 @@
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				FRAMEWORK_SEARCH_PATHS = "";
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -650,6 +632,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "./iOS_CommonCode/Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -681,6 +664,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "./iOS_CommonCode/Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

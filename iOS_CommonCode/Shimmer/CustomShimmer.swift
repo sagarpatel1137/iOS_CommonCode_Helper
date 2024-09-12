@@ -9,19 +9,19 @@
 import Foundation
 import UIView_Shimmer
 
-class CustomShimmer:UIView,ShimmeringViewProtocol{
+public class CustomShimmer:UIView,ShimmeringViewProtocol{
     
-    var shimmeringAnimatedItems: [UIView] {
+    public var shimmeringAnimatedItems: [UIView] {
         [self]
     }
 
-    func startShimmer(bgColor:UIColor = .systemBackground){
+    public func startShimmer(bgColor:UIColor = .systemBackground){
         DispatchQueue.main.async {
             self.setTemplateWithSubviews(true, animate: true,viewBackgroundColor:bgColor)
         }
     }
     
-    func stopShimmer(){
+    public func stopShimmer(){
         DispatchQueue.main.async {
             self.setTemplateWithSubviews(false)
         }

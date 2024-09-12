@@ -9,11 +9,11 @@
 import UIKit
 import Foundation
 
-class Shimmer_FullNative:UIView{
+public class Shimmer_FullNative:UIView{
     
-    @IBOutlet var vwForShimmer: [CustomShimmer]!
+    @IBOutlet public var vwForShimmer: [CustomShimmer]!
     
-    func startShimmer(color:UIColor = .systemBackground){
+    public func startShimmer(color:UIColor = .systemBackground){
         DispatchQueue.main.asyncAfter(deadline: .now()+0.1) {
             self.vwForShimmer.forEach({
                 $0.startShimmer(bgColor: color)
@@ -21,7 +21,7 @@ class Shimmer_FullNative:UIView{
         }
     }
     
-    func stopShimmer(){
+    public func stopShimmer(){
         vwForShimmer.forEach({
             $0.stopShimmer()
         })

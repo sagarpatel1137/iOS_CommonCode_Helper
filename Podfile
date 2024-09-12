@@ -43,10 +43,7 @@ target 'iOS_CommonCode' do
   
   # Other
   pod 'UIView-Shimmer'
-  pod 'lottie-ios'
   pod 'MBProgressHUD'
-  pod 'MarqueeLabel'
-  pod 'Toast-Swift'
 
 end
 

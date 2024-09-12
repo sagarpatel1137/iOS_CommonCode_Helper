@@ -24,20 +24,22 @@ public class TikTok_Manager
 
 public class TikTok_Events
 {
-    public static func tikTokFreeTrialEvent(plan: SubscriptionConst.PlanInfo)
-    {
-        let trailEvent = TikTokBaseEvent(name: TTEventName.startTrial.rawValue)
-        TikTokBusiness.trackTTEvent(trailEvent)
-    }
-
     public static func tikTokPurchaseSuccessEvent(plan: SubscriptionConst.PlanInfo)
     {
-        let customEvent = TikTokPurchaseEvent(name: "Purchase")
-        customEvent.addProperty(withKey: "currency", value: plan.plan_Currancy_Code)
-        customEvent.addProperty(withKey: "value", value: plan.plan_Price_String)
-        customEvent.addProperty(withKey: "price", value: plan.plan_Price)
-        customEvent.addProperty(withKey: "content_id", value: plan.plan_Id)
-        customEvent.addProperty(withKey: "content_type", value: plan.plan_Type)
-        TikTokBusiness.trackTTEvent(customEvent)
+        if plan.plan_Free_Trail.isFreeTrail
+        {
+            let trailEvent = TikTokBaseEvent(name: TTEventName.startTrial.rawValue)
+            TikTokBusiness.trackTTEvent(trailEvent)
+        }
+        else
+        {
+            let customEvent = TikTokPurchaseEvent(name: "Purchase")
+            customEvent.addProperty(withKey: "currency", value: plan.plan_Currancy_Code)
+            customEvent.addProperty(withKey: "value", value: plan.plan_Price_String)
+            customEvent.addProperty(withKey: "price", value: plan.plan_Price)
+            customEvent.addProperty(withKey: "content_id", value: plan.plan_Id)
+            customEvent.addProperty(withKey: "content_type", value: plan.plan_Type)
+            TikTokBusiness.trackTTEvent(customEvent)
+        }
     }
 }

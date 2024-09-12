@@ -9,16 +9,13 @@ import UIKit
 
 extension String
 {
-    // total width of text for const height
     public func getWidthForString(withConstrainedHeight height: CGFloat, font: UIFont) -> CGFloat
     {
         let constraintRect = CGSize(width: .greatestFiniteMagnitude, height: height)
         let boundingBox = self.boundingRect(with: constraintRect, options: .usesLineFragmentOrigin, attributes: [NSAttributedString.Key.font: font], context: nil)
-        
         return ceil(boundingBox.width)
     }
-    
-    // total height of text for const width
+
     public func getHeightForString(withConstrainedWidth width: CGFloat, font: UIFont, maxLines: CGFloat = 0) -> CGFloat
     {
         let constraintRect = CGSize(width: width, height: .greatestFiniteMagnitude)
@@ -32,11 +29,9 @@ extension String
                 return (boundingBox.height / lines) * maxLines
             }
         }
-        
         return height
     }
     
-    // count total numner of line of text for const width
     public func countNumberOfLine(font:UIFont,width:CGFloat) -> Int
     {
         let maxSize = CGSize(width: width, height: CGFloat(Float.infinity))

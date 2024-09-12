@@ -8,14 +8,14 @@
 import GoogleMobileAds
 import Alamofire
 
-enum GADAdTYPE
+public enum GADAdTYPE
 {
     case banner_Native
     case full_Native
     case adptive_Banner
 }
 
-class GoogleAd_Manager : NSObject {
+public class GoogleAd_Manager : NSObject {
 
     //MARK: - Public
     public static let shared = GoogleAd_Manager()
@@ -84,33 +84,33 @@ class GoogleAd_Manager : NSObject {
 //MARK: - Initialise
 extension GoogleAd_Manager
 {
-    public func initialiseGoogleAds(bannerAd: String?, intAd: String?, nativeAd: String?, rewardAd: String?, rewardIntAd: String?, appOpenAd: String?, testDevices: [String] = []) {
+    public func initialiseGoogleAds(bannerAd: String = "", intAd: String = "", nativeAd: String = "", rewardAd: String = "", rewardIntAd: String = "", appOpenAd: String = "", testDevices: [String] = []) {
         
         GADMobileAds.sharedInstance().start(completionHandler: nil)
         GADMobileAds.sharedInstance().requestConfiguration.testDeviceIdentifiers = testDevices
         
-        if let id = bannerAd {
-            Banner_ID = id
+        if bannerAd != "" {
+            Banner_ID = bannerAd
             load_BannerAd()
         }
-        if let id = intAd {
-            Int_ID = id
+        if intAd != "" {
+            Int_ID = intAd
             load_InterstitialAd()
         }
-        if let id = nativeAd {
-            Native_ID = id
+        if nativeAd != "" {
+            Native_ID = nativeAd
             load_NativeAd()
         }
-        if let id = rewardAd {
-            Rewarded_ID = id
+        if rewardAd != "" {
+            Rewarded_ID = rewardAd
             load_RewardedAd()
         }
-        if let id = rewardIntAd {
-            RewardedInt_ID = id
+        if rewardIntAd != "" {
+            RewardedInt_ID = rewardIntAd
             load_RewardedIntAd()
         }
-        if let id = appOpenAd {
-            AppOpen_ID = id
+        if appOpenAd != "" {
+            AppOpen_ID = appOpenAd
             load_OpenAd()
         }
         
@@ -603,7 +603,7 @@ extension GoogleAd_Manager : GADFullScreenContentDelegate
 //MARK: - Native Ad
 extension GoogleAd_Manager
 {
-    func load_NativeAd()
+    private func load_NativeAd()
     {
         if !Purchase_flag && Reachability.isConnectedToNetwork() && !isRequeSendForLoad_NativeAd {
             
