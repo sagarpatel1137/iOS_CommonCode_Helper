@@ -39,6 +39,6 @@ spec.dependency 'FirebaseMessaging'
 spec.dependency 'Google-Mobile-Ads-SDK'
 
 spec.dependency 'UIView-Shimmer'
-#spec.dependency 'MBProgressHUD'
+spec.dependency 'MBProgressHUD'
 
 end
