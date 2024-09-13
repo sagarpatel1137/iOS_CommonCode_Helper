@@ -7,10 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		6E62E402B493AC40F1C9E16A /* Pods_iOS_CommonCode.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86CBF4FDAF59211485CB3883 /* Pods_iOS_CommonCode.framework */; };
-		8109AE9D2C93082A008AF3C0 /* AppsFlyerLib.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8109AE9C2C93082A008AF3C0 /* AppsFlyerLib.xcframework */; };
-		8109AE9F2C930836008AF3C0 /* GoogleMobileAds.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8109AE9E2C930836008AF3C0 /* GoogleMobileAds.xcframework */; };
-		8109AEA12C93084B008AF3C0 /* PurchaseConnector.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8109AEA02C93084B008AF3C0 /* PurchaseConnector.xcframework */; };
 		8113BEC42C6324190081B3F8 /* RevenueCat_Manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8113BEC22C6324190081B3F8 /* RevenueCat_Manager.swift */; };
 		8113BEC52C6324190081B3F8 /* Const For Subscription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8113BEC32C6324190081B3F8 /* Const For Subscription.swift */; };
 		8121DD842C621A66003460A5 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8121DD832C621A66003460A5 /* Reachability.swift */; };
@@ -32,6 +28,9 @@
 		81BA8B092C88376E00F8A3C5 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81BA8B082C88376E00F8A3C5 /* UIView+Extension.swift */; };
 		81BA8B0D2C883D6600F8A3C5 /* Asset.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 81BA8B0C2C883D6600F8A3C5 /* Asset.xcassets */; };
 		81BA8B632C88507600F8A3C5 /* Shimmer_NativeBannerAd.xib in Resources */ = {isa = PBXBuildFile; fileRef = 81BA8B622C88507600F8A3C5 /* Shimmer_NativeBannerAd.xib */; };
+		81BE73AB2C93F4E600EA6468 /* GoogleMobileAds.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81BE73AA2C93F4E600EA6468 /* GoogleMobileAds.xcframework */; };
+		81BE73AD2C93F4ED00EA6468 /* PurchaseConnector.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81BE73AC2C93F4ED00EA6468 /* PurchaseConnector.xcframework */; };
+		81BE73AF2C93F4F600EA6468 /* AppsFlyerLib.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81BE73AE2C93F4F600EA6468 /* AppsFlyerLib.xcframework */; };
 		81CAB5E82C6DD2640050F848 /* Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81CAB5E72C6DD2640050F848 /* Alamofire.swift */; };
 		81CAB5F42C6DF2AB0050F848 /* AppFlyer_Manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81CAB5F32C6DF2AB0050F848 /* AppFlyer_Manager.swift */; };
 		81CAB5F62C6DF2BF0050F848 /* AppMetrica_Manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81CAB5F52C6DF2BF0050F848 /* AppMetrica_Manager.swift */; };
@@ -40,14 +39,10 @@
 		81CAB5FD2C6DF4FF0050F848 /* UIDevice+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81CAB5FC2C6DF4FF0050F848 /* UIDevice+Extension.swift */; };
 		81CAB6002C6E193E0050F848 /* OneSignal_Manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81CAB5FF2C6E193E0050F848 /* OneSignal_Manager.swift */; };
 		81CAB6022C6E20DB0050F848 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81CAB6012C6E20DB0050F848 /* UIViewController+Extension.swift */; };
+		BE570039369F4D3AF92037AD /* Pods_iOS_CommonCode.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F25D0B89EAC3334E1075E290 /* Pods_iOS_CommonCode.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		10F416DC1994693D1D457C3D /* Pods-iOS_CommonCode.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS_CommonCode.release.xcconfig"; path = "Target Support Files/Pods-iOS_CommonCode/Pods-iOS_CommonCode.release.xcconfig"; sourceTree = "<group>"; };
-		3A7DC98286CB70A336970044 /* Pods-iOS_CommonCode.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS_CommonCode.debug.xcconfig"; path = "Target Support Files/Pods-iOS_CommonCode/Pods-iOS_CommonCode.debug.xcconfig"; sourceTree = "<group>"; };
-		8109AE9C2C93082A008AF3C0 /* AppsFlyerLib.xcframework */ = {isa = PBXFileReference; expectedSignature = "AppleDeveloperProgram:6UQAD4B3U2:APPSFLYER LTD"; lastKnownFileType = wrapper.xcframework; name = AppsFlyerLib.xcframework; path = Pods/AppsFlyerFramework/binaries/xcframework/full/AppsFlyerLib.xcframework; sourceTree = "<group>"; };
-		8109AE9E2C930836008AF3C0 /* GoogleMobileAds.xcframework */ = {isa = PBXFileReference; expectedSignature = "AppleDeveloperProgram:EQHXZ8M8AV:Google LLC"; lastKnownFileType = wrapper.xcframework; name = GoogleMobileAds.xcframework; path = "Pods/Google-Mobile-Ads-SDK/Frameworks/GoogleMobileAdsFramework/GoogleMobileAds.xcframework"; sourceTree = "<group>"; };
-		8109AEA02C93084B008AF3C0 /* PurchaseConnector.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = PurchaseConnector.xcframework; path = Pods/PurchaseConnector/PurchaseConnector.xcframework; sourceTree = "<group>"; };
 		8113BEC22C6324190081B3F8 /* RevenueCat_Manager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RevenueCat_Manager.swift; sourceTree = "<group>"; };
 		8113BEC32C6324190081B3F8 /* Const For Subscription.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Const For Subscription.swift"; sourceTree = "<group>"; };
 		8121DD682C6216E8003460A5 /* iOS_CommonCode.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = iOS_CommonCode.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -70,6 +65,9 @@
 		81BA8B082C88376E00F8A3C5 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		81BA8B0C2C883D6600F8A3C5 /* Asset.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Asset.xcassets; sourceTree = "<group>"; };
 		81BA8B622C88507600F8A3C5 /* Shimmer_NativeBannerAd.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Shimmer_NativeBannerAd.xib; sourceTree = "<group>"; };
+		81BE73AA2C93F4E600EA6468 /* GoogleMobileAds.xcframework */ = {isa = PBXFileReference; expectedSignature = "AppleDeveloperProgram:EQHXZ8M8AV:Google LLC"; lastKnownFileType = wrapper.xcframework; name = GoogleMobileAds.xcframework; path = "Pods/Google-Mobile-Ads-SDK/Frameworks/GoogleMobileAdsFramework/GoogleMobileAds.xcframework"; sourceTree = "<group>"; };
+		81BE73AC2C93F4ED00EA6468 /* PurchaseConnector.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = PurchaseConnector.xcframework; path = Pods/PurchaseConnector/PurchaseConnector.xcframework; sourceTree = "<group>"; };
+		81BE73AE2C93F4F600EA6468 /* AppsFlyerLib.xcframework */ = {isa = PBXFileReference; expectedSignature = "AppleDeveloperProgram:6UQAD4B3U2:APPSFLYER LTD"; lastKnownFileType = wrapper.xcframework; name = AppsFlyerLib.xcframework; path = Pods/AppsFlyerFramework/binaries/xcframework/full/AppsFlyerLib.xcframework; sourceTree = "<group>"; };
 		81CAB5E72C6DD2640050F848 /* Alamofire.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alamofire.swift; sourceTree = "<group>"; };
 		81CAB5F32C6DF2AB0050F848 /* AppFlyer_Manager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppFlyer_Manager.swift; sourceTree = "<group>"; };
 		81CAB5F52C6DF2BF0050F848 /* AppMetrica_Manager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppMetrica_Manager.swift; sourceTree = "<group>"; };
@@ -78,7 +76,9 @@
 		81CAB5FC2C6DF4FF0050F848 /* UIDevice+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIDevice+Extension.swift"; sourceTree = "<group>"; };
 		81CAB5FF2C6E193E0050F848 /* OneSignal_Manager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneSignal_Manager.swift; sourceTree = "<group>"; };
 		81CAB6012C6E20DB0050F848 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
-		86CBF4FDAF59211485CB3883 /* Pods_iOS_CommonCode.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iOS_CommonCode.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CBBB31DFB4062896A7DCFD96 /* Pods-iOS_CommonCode.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS_CommonCode.debug.xcconfig"; path = "Target Support Files/Pods-iOS_CommonCode/Pods-iOS_CommonCode.debug.xcconfig"; sourceTree = "<group>"; };
+		E0C0DD426278FB3EEAC621D9 /* Pods-iOS_CommonCode.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS_CommonCode.release.xcconfig"; path = "Target Support Files/Pods-iOS_CommonCode/Pods-iOS_CommonCode.release.xcconfig"; sourceTree = "<group>"; };
+		F25D0B89EAC3334E1075E290 /* Pods_iOS_CommonCode.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iOS_CommonCode.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,10 +86,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8109AE9F2C930836008AF3C0 /* GoogleMobileAds.xcframework in Frameworks */,
-				8109AE9D2C93082A008AF3C0 /* AppsFlyerLib.xcframework in Frameworks */,
-				8109AEA12C93084B008AF3C0 /* PurchaseConnector.xcframework in Frameworks */,
-				6E62E402B493AC40F1C9E16A /* Pods_iOS_CommonCode.framework in Frameworks */,
+				BE570039369F4D3AF92037AD /* Pods_iOS_CommonCode.framework in Frameworks */,
+				81BE73AB2C93F4E600EA6468 /* GoogleMobileAds.xcframework in Frameworks */,
+				81BE73AF2C93F4F600EA6468 /* AppsFlyerLib.xcframework in Frameworks */,
+				81BE73AD2C93F4ED00EA6468 /* PurchaseConnector.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,8 +297,8 @@
 		FB405D856584EFA8ACBC95F6 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				3A7DC98286CB70A336970044 /* Pods-iOS_CommonCode.debug.xcconfig */,
-				10F416DC1994693D1D457C3D /* Pods-iOS_CommonCode.release.xcconfig */,
+				CBBB31DFB4062896A7DCFD96 /* Pods-iOS_CommonCode.debug.xcconfig */,
+				E0C0DD426278FB3EEAC621D9 /* Pods-iOS_CommonCode.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -306,10 +306,10 @@
 		FC852AD153A2E9A3A437EEC6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				8109AE9E2C930836008AF3C0 /* GoogleMobileAds.xcframework */,
-				8109AE9C2C93082A008AF3C0 /* AppsFlyerLib.xcframework */,
-				8109AEA02C93084B008AF3C0 /* PurchaseConnector.xcframework */,
-				86CBF4FDAF59211485CB3883 /* Pods_iOS_CommonCode.framework */,
+				F25D0B89EAC3334E1075E290 /* Pods_iOS_CommonCode.framework */,
+				81BE73AE2C93F4F600EA6468 /* AppsFlyerLib.xcframework */,
+				81BE73AC2C93F4ED00EA6468 /* PurchaseConnector.xcframework */,
+				81BE73AA2C93F4E600EA6468 /* GoogleMobileAds.xcframework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -331,12 +331,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8121DD7C2C6216E8003460A5 /* Build configuration list for PBXNativeTarget "iOS_CommonCode" */;
 			buildPhases = (
-				1C4BDDFAF3BACD3EC9D02B8A /* [CP] Check Pods Manifest.lock */,
+				6AEF02329BE8450F574E9FF1 /* [CP] Check Pods Manifest.lock */,
 				8121DD632C6216E8003460A5 /* Headers */,
 				8121DD642C6216E8003460A5 /* Sources */,
 				8121DD652C6216E8003460A5 /* Frameworks */,
 				8121DD662C6216E8003460A5 /* Resources */,
-				2453020C550184F1E3B71632 /* [CP] Copy Pods Resources */,
+				E2597C89B8EC57A4EBA40E84 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -398,7 +398,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		1C4BDDFAF3BACD3EC9D02B8A /* [CP] Check Pods Manifest.lock */ = {
+		6AEF02329BE8450F574E9FF1 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -420,7 +420,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		2453020C550184F1E3B71632 /* [CP] Copy Pods Resources */ = {
+		E2597C89B8EC57A4EBA40E84 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -603,7 +603,7 @@
 		};
 		8121DD7D2C6216E8003460A5 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3A7DC98286CB70A336970044 /* Pods-iOS_CommonCode.debug.xcconfig */;
+			baseConfigurationReference = CBBB31DFB4062896A7DCFD96 /* Pods-iOS_CommonCode.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -636,7 +636,7 @@
 		};
 		8121DD7E2C6216E8003460A5 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 10F416DC1994693D1D457C3D /* Pods-iOS_CommonCode.release.xcconfig */;
+			baseConfigurationReference = E0C0DD426278FB3EEAC621D9 /* Pods-iOS_CommonCode.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;

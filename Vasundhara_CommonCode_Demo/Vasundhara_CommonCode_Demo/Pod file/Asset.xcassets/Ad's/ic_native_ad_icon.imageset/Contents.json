@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "ic_native_ad_icon1.png",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

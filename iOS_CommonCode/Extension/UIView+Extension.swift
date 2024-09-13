@@ -57,10 +57,24 @@ extension UIView
             tempNIBName = "Shimmer_NativeBannerAd"
         case .adptive_Banner:
             tempNIBName = "Shimmer_Adptiv_Banner"
+        case .custom_Native:
+            break
         }
         
         guard let nibObjects = Bundle.main.loadNibNamed(tempNIBName, owner: nil, options: nil),
-              let adShimmerView = nibObjects.first as? Shimmer_FullNative else { return }
+              let adShimmerView = nibObjects.first as? Shimmer_View else { return }
+        
+        adShimmerView.layer.cornerRadius = self.layer.cornerRadius
+        adShimmerView.frame = CGRect(x: 0, y: 0, width: self.frame.width, height: self.frame.height)
+        adShimmerView.tag = 5050
+        
+        removeShimmerViewForAdType()
+        
+        addSubview(adShimmerView)
+        adShimmerView.startShimmer()
+    }
+    
+    public func addCustomShimmerViewForAd(adShimmerView : Shimmer_View){
         
         adShimmerView.layer.cornerRadius = self.layer.cornerRadius
         adShimmerView.frame = CGRect(x: 0, y: 0, width: self.frame.width, height: self.frame.height)

@@ -1,0 +1,114 @@
+
+//Force Update
+"Update Required" = "업데이트 필요";
+"We've noticed that you've been using the deprecated application version for a long time. Please update to the latest version and enjoy the app." = "오랫동안 사용되지 않는 애플리케이션 버전을 사용하고 계신 것으로 확인되었습니다. 최신 버전으로 업데이트하고 앱을 즐기시기 바랍니다.";
+"Update" = "업데이트";
+"Cancel" = "취소";
+
+//Rating
+"Enjoying the app?" = "앱이 마음에 드시나요?";
+"Let us know by leaving a 5 star rating" = "5점 만점에 5점을 남겨 알려주세요.";
+"Ask me latter!" = "나중에 물어보세요!";
+
+//Feedback - Alert
+"Not interested?" = "관심 없으신가요?";
+"Please share why" = "이유를 알려주세요.";
+"Don't know what it is" = "무엇인지 모르겠어요.";
+"Too expensive" = "너무 비싸요.";
+"I don't pay for apps" = "앱에 돈을 내지 않아요.";
+"I need to try it first" = "먼저 시도해봐야겠어요.";
+
+//Feedback - Screen
+"Feedback" = "피드백";
+"Share your experience with us" = "경험을 공유해주세요.";
+"What is your Profession?" = "직업은 무엇인가요?";
+"Write your Suggestions" = "제안을 적어주세요.";
+"Submit" = "제출";
+"Write Here..." = "여기에 적어주세요...";
+"Write Here your suggestion/Feedback..." = "여기에 제안/피드백을 적어주세요...";
+"Please enter text" = "텍스트를 입력하세요.";
+"Please enter your suggestions" = "제안을 입력하세요.";
+"Feedback sent successfully" = "피드백이 성공적으로 전송되었습니다.";
+"Check your internet connection" = "인터넷 연결을 확인하세요.";
+"Retry" = "다시 시도하세요.";
+"OK" = "확인";
+
+//Language
+"Change Language" = "언어 변경";
+
+//Timeline
+"HAVE DOUBTS?" = "의심이 드시나요?";
+"Start with a free trial" = "무료 체험판으로 시작하세요";
+"View All Plans" = "모든 플랜 보기";
+"NOW" = "지금";
+"Today: Get Instant Access" = "오늘: 즉시 액세스하세요";
+"Day 2: Trial Reminder" = "2일차: 체험판 알림";
+"Day 3: Premium Begins" = "3일차: 프리미엄 시작";
+"Day 5: Trial Reminder" = "5일차: 체험판 알림";
+"Day 7: Premium Begins" = "7일차: 프리미엄 시작";
+"Unlock all the features." = "모든 기능을 잠금 해제하세요.";
+"Get a reminder about when your free trial will end. Cancel anytime in 15 seconds." = "무료 체험판이 언제 종료되는지 알림을 받으세요. 15초 이내에 언제든지 취소할 수 있습니다.";
+"Your trial will convert to full price unless cancelled." = "취소하지 않는 한 체험판은 정가로 전환됩니다.";
+
+//All Plan
+"Unlock All Features" = "모든 기능 잠금 해제";
+"Best Value" = "최고의 가치";
+"Most Popular" = "가장 인기 있는";
+"Recommend" = "추천";
+"Lifetime" = "평생";
+"Yearly" = "연간";
+"Monthly" = "월간";
+"Weekly" = "주간";
+"Pay once, enjoy forever" = "한 번 지불하고 영원히 즐기세요";
+"Enjoy forever" = "영원히 즐기세요";
+"OFF" = "OFF";
+"Weekly" = "주간";
+"Monthly" = "월간";
+"Yearly" = "연간";
+"by" = "by";
+
+//Sub Discount
+"Exclusive Deal" = "독점 거래";
+"Limited Time Offer Specially For You!" = "당신을 위한 기간 한정 특가!";
+"Don't Miss Out!" = "놓치지 마세요!";
+"TRY NOW" = "지금 시도하세요";
+
+//Subscription
+"day" = "day";
+"days" = "days";
+"week" = "week";
+"month" = "month";
+"year" = "year";
+"Day" = "Day";
+"Days" = "Days";
+"Week" = "Week";
+"Month" = "Month";
+"Year" = "Year";
+"Continue" = "Continue";
+"Pay Nothing Now" = "지금은 아무것도 지불하지 마세요";
+"Cancel anytime. Secure with App Store" = "언제든지 취소할 수 있습니다. App Store로 보안";
+"Restore" = "복원";
+"Terms of Use" = "이용 약관";
+"Privacy Policy" = "개인정보 보호정책";
+"per" = "당";
+"Subscription will auto-renew, Cancel anytime." = "구독은 자동 갱신되며 언제든지 취소할 수 있습니다.";
+"Start My Free Trial" = "무료 평가판 시작";
+"Try" = "시도";
+"for" = "~을 위한";
+"Payment is charged after" = "결제는";
+"cancel anytime." = "언제든지 취소한 후에 청구됩니다.";
+"free" = "무료";
+"then" = "그런 다음";
+"use" = "사용";
+"upto" = "최대";
+"Lifetime Purchase" = "평생 구매";
+"Cancel Anytime" = "언제든지 취소할 수 있습니다.";
+
+//Alert
+"Sorry can't connect iTunes Store" = "죄송합니다. iTunes Store에 연결할 수 없습니다.";
+"OK" = "OK";
+"Alert" = "알림";
+"Purchase failed or something went wrong." = "구매에 실패했거나 문제가 발생했습니다.";
+"Check your internet connection" = "인터넷 연결을 확인하세요.";
+"Error" = "오류";
+"Restore failed Or Nothing to Restore First Purchase." = "복원에 실패했거나 첫 번째 구매를 복원할 항목이 없습니다.";

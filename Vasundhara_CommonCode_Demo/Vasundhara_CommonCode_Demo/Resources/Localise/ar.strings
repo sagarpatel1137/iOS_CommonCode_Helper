@@ -1,0 +1,115 @@
+
+//Force Update
+"Update Required" = "التحديث مطلوب";
+"We've noticed that you've been using the deprecated application version for a long time. Please update to the latest version and enjoy the app." = "لقد لاحظنا أنك تستخدم إصدار التطبيق القديم لفترة طويلة. يرجى التحديث إلى أحدث إصدار والاستمتاع بالتطبيق.";
+"Update" = "التحديث";
+"Cancel" = "إلغاء";
+
+//Rating
+"Enjoying the app?" = "هل تستمتع بالتطبيق؟";
+"Let us know by leaving a 5 star rating" = "أخبرنا بترك تقييم 5 نجوم";
+"Ask me latter!" = "اسألني لاحقًا!";
+
+//Feedback - Alert
+"Not interested?" = "غير مهتم؟";
+"Please share why" = "يرجى مشاركة السبب";
+"Don't know what it is" = "لا أعرف ما هو";
+"Too expensive" = "مكلف للغاية";
+"I don't pay for apps" = "لا أدفع مقابل التطبيقات";
+"I need to try it first" = "أحتاج إلى تجربته أولاً";
+
+//Feedback - Screen
+"Feedback" = "التعليقات";
+"Share your experience with us" = "شارك تجربتك معنا";
+"What is your Profession?" = "ما هي مهنتك؟";
+"Write your Suggestions" = "اكتب اقتراحاتك";
+"Submit" = "إرسال";
+"Write Here..." = "اكتب هنا...";
+"Write Here your suggestion/Feedback..." = "اكتب هنا اقتراحك/تعليقك...";
+"Please enter text" = "يرجى إدخال النص";
+"Please enter your suggestions" = "يرجى إدخال اقتراحاتك";
+"Feedback sent successfully" = "تم إرسال التعليق بنجاح";
+"Check your internet connection" = "تحقق من اتصالك بالإنترنت";
+"Retry" = "أعد المحاولة";
+"OK" = "حسنًا";
+
+//Language
+"Change Language" = "تغيير اللغة";
+
+//Timeline
+"HAVE DOUBTS?" = "هل لديك شكوك؟";
+"Start with a free trial" = "ابدأ بفترة تجريبية مجانية";
+"View All Plans" = "عرض جميع الخطط";
+"NOW" = "الآن";
+"Today: Get Instant Access" = "اليوم: احصل على وصول فوري";
+"Day 2: Trial Reminder" = "اليوم الثاني: تذكير بالفترة التجريبية";
+"Day 3: Premium Begins" = "اليوم الثالث: بدء الإصدار المميز";
+"Day 5: Trial Reminder" = "اليوم الخامس: تذكير بالفترة التجريبية";
+"Day 7: Premium Begins" = "اليوم السابع: بدء الإصدار المميز";
+"Unlock all the features." = "افتح جميع الميزات.";
+"Get a reminder about when your free trial will end. Cancel anytime in 15 seconds." = "احصل على تذكير بموعد انتهاء فترة تجربتك المجانية. يمكنك إلغاء الاشتراك في أي وقت خلال 15 ثانية.";
+"Your trial will convert to full price unless cancelled." = "ستتحول فترة تجربتك إلى السعر الكامل ما لم يتم إلغاؤها.";
+
+//All Plan
+"Unlock All Features" = "إلغاء قفل جميع الميزات";
+"Best Value" = "أفضل قيمة";
+"Most Popular" = "الأكثر شعبية";
+"Recommend" = "موصى به";
+"Lifetime" = "مدى الحياة";
+"Yearly" = "سنويًا";
+"Monthly" = "شهريًا";
+"Weekly" = "أسبوعيًا";
+"Pay once, enjoy forever" = "ادفع مرة واحدة واستمتع إلى الأبد";
+"Enjoy forever" = "استمتع إلى الأبد";
+"OFF" = "خصم";
+"Weekly" = "أسبوعيًا";
+"Monthly" = "شهريًا";
+"Yearly" = "سنويًا";
+"by" = "بواسطة";
+
+//Sub Discount
+"Exclusive Deal" = "صفقة حصرية";
+"Limited Time Offer Specially For You!" = "عرض خاص لفترة محدودة من أجلك!";
+"Don't Miss Out!" = "لا تفوت الفرصة!";
+"TRY NOW" = "جرب الآن";
+
+//Subscription
+"day" = "يوم";
+"days" = "أيام";
+"week" = "أسبوع";
+"month" = "شهر";
+"year" = "سنة";
+"Day" = "يوم";
+"Days" = "أيام";
+"Week" = "أسبوع";
+"Month" = "شهر";
+"Year" = "سنة";
+"Continue" = "متابعة";
+"Pay Nothing Now" = "لا تدفع أي شيء الآن";
+"Cancel anytime. Secure with App Store" = "إلغاء الاشتراك في أي وقت. آمن مع متجر التطبيقات";
+"Restore" = "استعادة";
+"Terms of Use" = "شروط الاستخدام";
+"Privacy Policy" = "سياسة الخصوصية";
+"per" = "لكل";
+"Subscription will auto-renew, Cancel anytime." = "اشتراك سيتم تجديده تلقائيًا، يمكنك الإلغاء في أي وقت.";
+"Start My Free Trial" = "ابدأ الإصدار التجريبي المجاني";
+"Try" = "جرب";
+"for" = "لـ";
+"Payment is charged after" = "يتم تحصيل الدفع بعد";
+"cancel anytime." = "إلغاء الاشتراك في أي وقت.";
+"free" = "مجانًا";
+"then" = "ثم";
+"use" = "استخدم";
+"upto" = "ما يصل إلى";
+"Lifetime Purchase" = "شراء مدى الحياة";
+"Cancel Anytime" = "إلغاء الاشتراك في أي وقت";
+
+//Alert
+"Sorry can't connect iTunes Store" = "عذرًا، لا يمكن الاتصال بمتجر iTunes";
+"OK" = "حسنًا";
+"Alert" = "تنبيه";
+"Purchase failed or something went wrong." = "فشلت عملية الشراء أو حدث خطأ ما.";
+"Check your internet connection" = "تحقق من اتصالك بالإنترنت";
+"Error" = "خطأ";
+"Restore failed Or Nothing to Restore First Purchase." = "فشلت عملية الاستعادة أو لا يوجد شيء لاستعادته عند الشراء الأول.";
+

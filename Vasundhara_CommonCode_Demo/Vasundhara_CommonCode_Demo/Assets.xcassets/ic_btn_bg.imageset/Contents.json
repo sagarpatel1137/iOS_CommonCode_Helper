@@ -1,0 +1,16 @@
+{
+  "images" : [
+    {
+      "filename" : "ic_subscribe_bg~iphone.png",
+      "idiom" : "iphone"
+    },
+    {
+      "filename" : "ic_subscribe_bg~ipad.png",
+      "idiom" : "ipad"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

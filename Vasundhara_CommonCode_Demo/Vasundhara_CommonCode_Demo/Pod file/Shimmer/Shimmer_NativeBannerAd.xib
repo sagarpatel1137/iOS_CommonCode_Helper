@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment version="2048" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clipsSubviews="YES" contentMode="scaleToFill" id="iN0-l3-epB" customClass="Shimmer_View" customModule="Vasundhara_CommonCode_Demo" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="826" height="89"/>
+            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_native_ad_icon" translatesAutoresizingMaskIntoConstraints="NO" id="rct-sP-nXO">
+                    <rect key="frame" x="0.0" y="0.0" width="35" height="35"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="rct-sP-nXO" secondAttribute="height" id="Sd7-NE-82e"/>
+                        <constraint firstAttribute="width" constant="35" id="wU7-kR-o7M">
+                            <variation key="heightClass=regular-widthClass=regular" constant="40"/>
+                        </constraint>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="CRadiusLeftUpNew">
+                            <real key="value" value="6"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </imageView>
+                <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tiN-zt-pLY" userLabel="View image" customClass="CustomShimmer" customModule="Vasundhara_CommonCode_Demo" customModuleProvider="target">
+                    <rect key="frame" x="15" y="24" width="50" height="50"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="Rjt-03-FwF">
+                            <variation key="heightClass=regular-widthClass=regular" constant="65"/>
+                        </constraint>
+                        <constraint firstAttribute="width" secondItem="tiN-zt-pLY" secondAttribute="height" multiplier="1:1" id="l6k-da-hKJ"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="7.5"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xGw-Po-lrQ">
+                    <rect key="frame" x="80" y="24" width="731" height="50"/>
+                    <subviews>
+                        <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="l14-Ov-Gbx" customClass="CustomShimmer" customModule="Vasundhara_CommonCode_Demo" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="0.0" width="731" height="21.5"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="5"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </view>
+                        <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rd3-sf-NQ6" customClass="CustomShimmer" customModule="Vasundhara_CommonCode_Demo" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="29" width="731" height="21"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="5"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="l14-Ov-Gbx" firstAttribute="leading" secondItem="xGw-Po-lrQ" secondAttribute="leading" id="1M2-Wm-EgV"/>
+                        <constraint firstAttribute="bottom" secondItem="rd3-sf-NQ6" secondAttribute="bottom" id="55S-BU-Zhr"/>
+                        <constraint firstAttribute="trailing" secondItem="rd3-sf-NQ6" secondAttribute="trailing" id="OCe-wd-MKl"/>
+                        <constraint firstItem="rd3-sf-NQ6" firstAttribute="leading" secondItem="xGw-Po-lrQ" secondAttribute="leading" id="TMt-3V-kvc"/>
+                        <constraint firstAttribute="trailing" secondItem="l14-Ov-Gbx" secondAttribute="trailing" id="Zhv-lj-rhb"/>
+                        <constraint firstItem="l14-Ov-Gbx" firstAttribute="top" secondItem="xGw-Po-lrQ" secondAttribute="top" id="iQq-Uh-UVL"/>
+                        <constraint firstItem="rd3-sf-NQ6" firstAttribute="height" secondItem="l14-Ov-Gbx" secondAttribute="height" id="rPn-sa-WcG"/>
+                        <constraint firstItem="rd3-sf-NQ6" firstAttribute="top" secondItem="l14-Ov-Gbx" secondAttribute="bottom" constant="7.5" id="sN9-4d-34S">
+                            <variation key="heightClass=regular-widthClass=regular" constant="10"/>
+                        </constraint>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="xGw-Po-lrQ" secondAttribute="trailing" constant="15" id="A0A-hu-KdU">
+                    <variation key="heightClass=regular-widthClass=regular" constant="20"/>
+                </constraint>
+                <constraint firstItem="xGw-Po-lrQ" firstAttribute="leading" secondItem="tiN-zt-pLY" secondAttribute="trailing" constant="15" id="FdZ-6H-1h1">
+                    <variation key="heightClass=regular-widthClass=regular" constant="20"/>
+                </constraint>
+                <constraint firstItem="xGw-Po-lrQ" firstAttribute="top" secondItem="tiN-zt-pLY" secondAttribute="top" id="QIF-NZ-8n3"/>
+                <constraint firstAttribute="bottom" secondItem="xGw-Po-lrQ" secondAttribute="bottom" constant="15" id="TdI-Ij-5yi"/>
+                <constraint firstItem="tiN-zt-pLY" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="15" id="UKz-9x-db1">
+                    <variation key="heightClass=regular-widthClass=regular" constant="20"/>
+                </constraint>
+                <constraint firstItem="tiN-zt-pLY" firstAttribute="top" secondItem="rct-sP-nXO" secondAttribute="bottom" constant="-11" id="f90-9a-6jp"/>
+                <constraint firstItem="rct-sP-nXO" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="fGi-FV-gYm"/>
+                <constraint firstItem="rct-sP-nXO" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="n0c-VF-oas"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <userDefinedRuntimeAttributes>
+                <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                    <real key="value" value="3"/>
+                </userDefinedRuntimeAttribute>
+                <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                    <real key="value" value="0.29999999999999999"/>
+                </userDefinedRuntimeAttribute>
+                <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                    <size key="value" width="0.0" height="0.0"/>
+                </userDefinedRuntimeAttribute>
+                <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                    <color key="value" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </userDefinedRuntimeAttribute>
+            </userDefinedRuntimeAttributes>
+            <connections>
+                <outletCollection property="vwForShimmer" destination="tiN-zt-pLY" collectionClass="NSMutableArray" id="97K-64-abb"/>
+                <outletCollection property="vwForShimmer" destination="l14-Ov-Gbx" collectionClass="NSMutableArray" id="vaW-BK-QDq"/>
+                <outletCollection property="vwForShimmer" destination="rd3-sf-NQ6" collectionClass="NSMutableArray" id="GKh-qt-ZDk"/>
+            </connections>
+            <point key="canvasLocation" x="295.6521739130435" y="79.352678571428569"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="ic_native_ad_icon" width="178" height="187"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

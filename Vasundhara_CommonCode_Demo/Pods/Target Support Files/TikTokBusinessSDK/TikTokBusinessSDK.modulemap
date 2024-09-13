@@ -1,0 +1,6 @@
+framework module TikTokBusinessSDK {
+  umbrella header "TikTokBusinessSDK-umbrella.h"
+
+  export *
+  module * { export * }
+}

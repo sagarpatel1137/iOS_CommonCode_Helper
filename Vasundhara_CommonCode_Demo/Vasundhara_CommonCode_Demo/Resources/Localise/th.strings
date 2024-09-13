@@ -1,0 +1,115 @@
+
+//Force Update
+"Update Required" = "จำเป็นต้องอัปเดต";
+"We've noticed that you've been using the deprecated application version for a long time. Please update to the latest version and enjoy the app." = "เราพบว่าคุณใช้เวอร์ชันแอปพลิเคชันที่ล้าสมัยมาเป็นเวลานานแล้ว โปรดอัปเดตเป็นเวอร์ชันล่าสุดและเพลิดเพลินไปกับแอป";
+"Update" = "อัปเดต";
+"Cancel" = "ยกเลิก";
+
+//Rating
+"Enjoying the app?" = "เพลิดเพลินกับแอปหรือไม่";
+"Let us know by leaving a 5 star rating" = "แจ้งให้เราทราบโดยให้คะแนน 5 ดาว";
+"Ask me latter!" = "ถามฉันทีหลัง!";
+
+//Feedback - Alert
+"Not interested?" = "ไม่สนใจใช่ไหม";
+"Please share why" = "โปรดแบ่งปันเหตุผล";
+"Don't know what it is" = "ไม่ทราบว่าคืออะไร";
+"Too expensive" = "แพงเกินไป";
+"I don't pay for apps" = "ฉันไม่จ่ายเงินสำหรับแอป";
+"I need to try it first" = "ฉันต้องลองใช้ก่อน";
+
+//Feedback - Screen
+"Feedback" = "คำติชม";
+"Share your experience with us" = "แบ่งปันประสบการณ์ของคุณกับเรา";
+"What is your Profession?" = "อาชีพของคุณคืออะไร";
+"Write your Suggestions" = "เขียนข้อเสนอแนะของคุณ";
+"Submit" = "ส่ง";
+"Write Here..." = "เขียนที่นี่...";
+"Write Here your suggestion/Feedback..." = "เขียนข้อเสนอแนะ/คำติชมของคุณที่นี่...";
+"Please enter text" = "โปรดป้อนข้อความ";
+"Please enter your suggestions" = "โปรดป้อนข้อเสนอแนะของคุณ";
+"Feedback sent successfully" = "ส่งคำติชมเรียบร้อยแล้ว";
+"Check your internet connection" = "ตรวจสอบการเชื่อมต่ออินเทอร์เน็ตของคุณ";
+"Retry" = "ลองอีกครั้ง";
+"OK" = "ตกลง";
+
+//Language
+"Change Language" = "เปลี่ยนภาษา";
+
+//Timeline
+"HAVE DOUBTS?" = "มีข้อสงสัยหรือไม่?";
+"Start with a free trial" = "เริ่มต้นด้วยการทดลองใช้ฟรี";
+"View All Plans" = "ดูแผนทั้งหมด";
+"NOW" = "ตอนนี้";
+"Today: Get Instant Access" = "วันนี้: เข้าใช้งานทันที";
+"Day 2: Trial Reminder" = "วันที่ 2: คำเตือนการทดลองใช้";
+"Day 3: Premium Begins" = "วันที่ 3: เริ่มใช้แบบพรีเมียม";
+"Day 5: Trial Reminder" = "วันที่ 5: คำเตือนการทดลองใช้";
+"Day 7: Premium Begins" = "วันที่ 7: เริ่มใช้แบบพรีเมียม";
+"Unlock all the features." = "ปลดล็อกคุณสมบัติทั้งหมด";
+"Get a reminder about when your free trial will end. Cancel anytime in 15 seconds." = "รับคำเตือนเมื่อการทดลองใช้ฟรีของคุณจะสิ้นสุดเมื่อใด ยกเลิกได้ทุกเมื่อใน 15 วินาที";
+"Your trial will convert to full price unless cancelled." = "การทดลองใช้ของคุณจะแปลงเป็นราคาเต็ม เว้นแต่จะยกเลิก";
+
+//All Plan
+"Unlock All Features" = "ปลดล็อคคุณสมบัติทั้งหมด";
+"Best Value" = "คุ้มค่าที่สุด";
+"Most Popular" = "ได้รับความนิยมมากที่สุด";
+"Recommend" = "แนะนำ";
+"Lifetime" = "ตลอดชีพ";
+"Yearly" = "รายปี";
+"Monthly" = "รายเดือน";
+"Weekly" = "รายสัปดาห์";
+"Pay once, enjoy forever" = "จ่ายครั้งเดียว เพลิดเพลินตลอดไป";
+"Enjoy forever" = "เพลิดเพลินตลอดไป";
+"OFF" = "ลดราคา";
+"Weekly" = "รายสัปดาห์";
+"Monthly" = "รายเดือน";
+"Yearly" = "รายปี";
+"by" = "โดย";
+
+//Sub Discount
+"Exclusive Deal" = "ข้อเสนอพิเศษเฉพาะ";
+"Limited Time Offer Specially For You!" = "ข้อเสนอจำกัดเวลาสำหรับคุณโดยเฉพาะ!";
+"Don't Miss Out!" = "อย่าพลาด!";
+"TRY NOW" = "ลองเลยตอนนี้";
+
+//Subscription
+"day" = "วัน";
+"days" = "วัน";
+"week" = "สัปดาห์";
+"month" = "เดือน";
+"year" = "ปี";
+"Day" = "วัน";
+"Days" = "วัน";
+"Week" = "สัปดาห์";
+"Month" = "เดือน";
+"Year" = "ปี";
+"Continue" = "ดำเนินการต่อ";
+"Pay Nothing Now" = "ไม่ต้องจ่ายอะไรเลยตอนนี้";
+"Cancel anytime. Secure with App Store" = "ยกเลิกได้ตลอดเวลา ปลอดภัยด้วย App Store";
+"Restore" = "กู้คืน";
+"Terms of Use" = "เงื่อนไขการใช้งาน";
+"Privacy Policy" = "นโยบายความเป็นส่วนตัว";
+"per" = "ต่อ";
+"Subscription will auto-renew, Cancel anytime." = "การสมัครรับข้อมูลจะต่ออายุอัตโนมัติ ยกเลิกได้ตลอดเวลา";
+"Start My Free Trial" = "เริ่มทดลองใช้งานฟรี";
+"Try" = "ทดลองใช้";
+"for" = "สำหรับ";
+"Payment is charged after" = "การชำระเงินจะถูกหักหลังจาก";
+"cancel anytime." = "ยกเลิกได้ตลอดเวลา";
+"free" = "ฟรี";
+"then" = "จากนั้น";
+"use" = "ใช้";
+"upto" = "ได้จนถึง";
+"Lifetime Purchase" = "การซื้อตลอดชีพ";
+"Cancel Anytime" = "ยกเลิกได้ตลอดเวลา";
+
+//Alert
+"Sorry can't connect iTunes Store" = "ขออภัย ไม่สามารถเชื่อมต่อ iTunes Store ได้";
+"OK" = "ตกลง";
+"Alert" = "แจ้งเตือน";
+"Purchase failed or something went wrong." = "การซื้อล้มเหลวหรือมีบางอย่างผิดพลาด";
+"Check your internet connection" = "ตรวจสอบการเชื่อมต่ออินเทอร์เน็ตของคุณ";
+"Error" = "ข้อผิดพลาด";
+"Restore failed Or Nothing to Restore First Purchase." = "กู้คืนล้มเหลวหรือไม่สามารถกู้คืนการซื้อครั้งแรกได้";
+
