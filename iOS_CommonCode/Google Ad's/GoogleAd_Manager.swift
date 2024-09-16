@@ -12,8 +12,9 @@ public enum GADAdTYPE
 {
     case banner_Native
     case full_Native
-    case adptive_Banner
     case custom_Native
+    
+    case adptive_Banner
 }
 
 public class GoogleAd_Manager : NSObject {
@@ -396,6 +397,10 @@ extension GoogleAd_Manager
 {
     private func load_CollapsibleBannerAd()
     {
+        if Collapsible_Banner_ID == "" {
+            fatalError("Vasundhara 🏢 - Google Ad : CollapsibleBannerAd Id Not Initialise Properly.")
+        }
+        
         if !Purchase_flag && !isCollapsibleBannerAdLoaded && !isRequeSendForLoad_CollapsibleBannerAd {
             
             isRequeSendForLoad_CollapsibleBannerAd = true
@@ -416,6 +421,10 @@ extension GoogleAd_Manager
     
     private func load_BannerAd()
     {
+        if Banner_ID == "" {
+            fatalError("Vasundhara 🏢 - Google Ad : BannerAd Id Not Initialise Properly.")
+        }
+        
         if !Purchase_flag && !isBannerAdLoaded {
             bannerViewAd = GADBannerView()
             bannerViewAd.delegate = self
@@ -432,6 +441,10 @@ extension GoogleAd_Manager
 {
     private func load_InterstitialAd()
     {
+        if Int_ID == "" {
+            fatalError("Vasundhara 🏢 - Google Ad : InterstitialAd Id Not Initialise Properly.")
+        }
+        
         interstitialAd = nil
         if !Purchase_flag && Reachability.isConnectedToNetwork() && !isRequeSendForLoad_IntAd
         {
@@ -471,6 +484,10 @@ extension GoogleAd_Manager
 {
     private func load_RewardedAd()
     {
+        if Rewarded_ID == "" {
+            fatalError("Vasundhara 🏢 - Google Ad : RewardedAd Id Not Initialise Properly.")
+        }
+        
         rewardedAd = nil
         if !Purchase_flag && Reachability.isConnectedToNetwork() && !isRequeSendForLoad_RewardedAd
         {
@@ -512,6 +529,10 @@ extension GoogleAd_Manager
 {
     private func load_RewardedIntAd()
     {
+        if RewardedInt_ID == "" {
+            fatalError("Vasundhara 🏢 - Google Ad : RewardedIntAd Id Not Initialise Properly.")
+        }
+        
         rewardedIntAd = nil
         if !Purchase_flag && Reachability.isConnectedToNetwork() && !isRequeSendForLoad_RewardedAd
         {
@@ -553,6 +574,10 @@ extension GoogleAd_Manager
 {
     private func load_OpenAd()
     {
+        if AppOpen_ID == "" {
+            fatalError("Vasundhara 🏢 - Google Ad : AppOpenAd Id Not Initialise Properly.")
+        }
+        
         appOpenAd = nil
         if !Purchase_flag && Reachability.isConnectedToNetwork() && !isRequeSendForLoad_AppOpenAd
         {
@@ -700,6 +725,10 @@ extension GoogleAd_Manager
 {
     private func load_NativeAd()
     {
+        if Native_ID == "" {
+            fatalError("Vasundhara 🏢 - Google Ad : NativeAd Id Not Initialise Properly.")
+        }
+        
         if !Purchase_flag && Reachability.isConnectedToNetwork() && !isRequeSendForLoad_NativeAd {
             
             isRequeSendForLoad_NativeAd = true

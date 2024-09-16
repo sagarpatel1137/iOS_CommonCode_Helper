@@ -1,6 +1,0 @@
-framework module AppMetricaEncodingUtils {
-  umbrella header "AppMetricaEncodingUtils-umbrella.h"
-
-  export *
-  module * { export * }
-}

@@ -19,18 +19,18 @@
 		817D30332C8AC6C600AB455C /* UIWindow+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 817D30322C8AC6C600AB455C /* UIWindow+Extension.swift */; };
 		817DCDF72C6F0A4C004BA1C2 /* GoogleMobileAdsConsent_Manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 817DCDF62C6F0A4C004BA1C2 /* GoogleMobileAdsConsent_Manager.swift */; };
 		81958DD42C9292E6004E90E2 /* NSString+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81958DD32C9292E6004E90E2 /* NSString+Extension.swift */; };
+		8197A62F2C9557F800152C1A /* AppsFlyerLib.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8197A62E2C9557F800152C1A /* AppsFlyerLib.xcframework */; };
+		8197A6312C9557FF00152C1A /* GoogleMobileAds.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8197A6302C9557FF00152C1A /* GoogleMobileAds.xcframework */; };
+		8197A6332C95580900152C1A /* PurchaseConnector.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8197A6322C95580900152C1A /* PurchaseConnector.xcframework */; };
 		81BA8AF12C881BE100F8A3C5 /* Constant_Function.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81BA8AF02C881BE100F8A3C5 /* Constant_Function.swift */; };
 		81BA8AFE2C881F4700F8A3C5 /* GoogleAd_Manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81BA8AFD2C881F4700F8A3C5 /* GoogleAd_Manager.swift */; };
 		81BA8B042C88364C00F8A3C5 /* CustomShimmer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81BA8B002C88364500F8A3C5 /* CustomShimmer.swift */; };
 		81BA8B052C88364C00F8A3C5 /* Shimmer_FullNative.xib in Resources */ = {isa = PBXBuildFile; fileRef = 81BA8B012C88364700F8A3C5 /* Shimmer_FullNative.xib */; };
 		81BA8B062C88364C00F8A3C5 /* Shimmer_Adptiv_Banner.xib in Resources */ = {isa = PBXBuildFile; fileRef = 81BA8B022C88364A00F8A3C5 /* Shimmer_Adptiv_Banner.xib */; };
-		81BA8B072C88364C00F8A3C5 /* Shimmer_FullNative.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81BA8B032C88364C00F8A3C5 /* Shimmer_FullNative.swift */; };
+		81BA8B072C88364C00F8A3C5 /* Shimmer_View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81BA8B032C88364C00F8A3C5 /* Shimmer_View.swift */; };
 		81BA8B092C88376E00F8A3C5 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81BA8B082C88376E00F8A3C5 /* UIView+Extension.swift */; };
 		81BA8B0D2C883D6600F8A3C5 /* Asset.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 81BA8B0C2C883D6600F8A3C5 /* Asset.xcassets */; };
 		81BA8B632C88507600F8A3C5 /* Shimmer_NativeBannerAd.xib in Resources */ = {isa = PBXBuildFile; fileRef = 81BA8B622C88507600F8A3C5 /* Shimmer_NativeBannerAd.xib */; };
-		81BE73AB2C93F4E600EA6468 /* GoogleMobileAds.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81BE73AA2C93F4E600EA6468 /* GoogleMobileAds.xcframework */; };
-		81BE73AD2C93F4ED00EA6468 /* PurchaseConnector.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81BE73AC2C93F4ED00EA6468 /* PurchaseConnector.xcframework */; };
-		81BE73AF2C93F4F600EA6468 /* AppsFlyerLib.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81BE73AE2C93F4F600EA6468 /* AppsFlyerLib.xcframework */; };
 		81CAB5E82C6DD2640050F848 /* Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81CAB5E72C6DD2640050F848 /* Alamofire.swift */; };
 		81CAB5F42C6DF2AB0050F848 /* AppFlyer_Manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81CAB5F32C6DF2AB0050F848 /* AppFlyer_Manager.swift */; };
 		81CAB5F62C6DF2BF0050F848 /* AppMetrica_Manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81CAB5F52C6DF2BF0050F848 /* AppMetrica_Manager.swift */; };
@@ -56,18 +56,18 @@
 		817D30322C8AC6C600AB455C /* UIWindow+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIWindow+Extension.swift"; sourceTree = "<group>"; };
 		817DCDF62C6F0A4C004BA1C2 /* GoogleMobileAdsConsent_Manager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleMobileAdsConsent_Manager.swift; sourceTree = "<group>"; };
 		81958DD32C9292E6004E90E2 /* NSString+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSString+Extension.swift"; sourceTree = "<group>"; };
+		8197A62E2C9557F800152C1A /* AppsFlyerLib.xcframework */ = {isa = PBXFileReference; expectedSignature = "AppleDeveloperProgram:6UQAD4B3U2:APPSFLYER LTD"; lastKnownFileType = wrapper.xcframework; name = AppsFlyerLib.xcframework; path = Pods/AppsFlyerFramework/binaries/xcframework/full/AppsFlyerLib.xcframework; sourceTree = "<group>"; };
+		8197A6302C9557FF00152C1A /* GoogleMobileAds.xcframework */ = {isa = PBXFileReference; expectedSignature = "AppleDeveloperProgram:EQHXZ8M8AV:Google LLC"; lastKnownFileType = wrapper.xcframework; name = GoogleMobileAds.xcframework; path = "Pods/Google-Mobile-Ads-SDK/Frameworks/GoogleMobileAdsFramework/GoogleMobileAds.xcframework"; sourceTree = "<group>"; };
+		8197A6322C95580900152C1A /* PurchaseConnector.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = PurchaseConnector.xcframework; path = Pods/PurchaseConnector/PurchaseConnector.xcframework; sourceTree = "<group>"; };
 		81BA8AF02C881BE100F8A3C5 /* Constant_Function.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant_Function.swift; sourceTree = "<group>"; };
 		81BA8AFD2C881F4700F8A3C5 /* GoogleAd_Manager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleAd_Manager.swift; sourceTree = "<group>"; };
 		81BA8B002C88364500F8A3C5 /* CustomShimmer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomShimmer.swift; sourceTree = "<group>"; };
 		81BA8B012C88364700F8A3C5 /* Shimmer_FullNative.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Shimmer_FullNative.xib; sourceTree = "<group>"; };
 		81BA8B022C88364A00F8A3C5 /* Shimmer_Adptiv_Banner.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Shimmer_Adptiv_Banner.xib; sourceTree = "<group>"; };
-		81BA8B032C88364C00F8A3C5 /* Shimmer_FullNative.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Shimmer_FullNative.swift; sourceTree = "<group>"; };
+		81BA8B032C88364C00F8A3C5 /* Shimmer_View.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Shimmer_View.swift; sourceTree = "<group>"; };
 		81BA8B082C88376E00F8A3C5 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		81BA8B0C2C883D6600F8A3C5 /* Asset.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Asset.xcassets; sourceTree = "<group>"; };
 		81BA8B622C88507600F8A3C5 /* Shimmer_NativeBannerAd.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Shimmer_NativeBannerAd.xib; sourceTree = "<group>"; };
-		81BE73AA2C93F4E600EA6468 /* GoogleMobileAds.xcframework */ = {isa = PBXFileReference; expectedSignature = "AppleDeveloperProgram:EQHXZ8M8AV:Google LLC"; lastKnownFileType = wrapper.xcframework; name = GoogleMobileAds.xcframework; path = "Pods/Google-Mobile-Ads-SDK/Frameworks/GoogleMobileAdsFramework/GoogleMobileAds.xcframework"; sourceTree = "<group>"; };
-		81BE73AC2C93F4ED00EA6468 /* PurchaseConnector.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = PurchaseConnector.xcframework; path = Pods/PurchaseConnector/PurchaseConnector.xcframework; sourceTree = "<group>"; };
-		81BE73AE2C93F4F600EA6468 /* AppsFlyerLib.xcframework */ = {isa = PBXFileReference; expectedSignature = "AppleDeveloperProgram:6UQAD4B3U2:APPSFLYER LTD"; lastKnownFileType = wrapper.xcframework; name = AppsFlyerLib.xcframework; path = Pods/AppsFlyerFramework/binaries/xcframework/full/AppsFlyerLib.xcframework; sourceTree = "<group>"; };
 		81CAB5E72C6DD2640050F848 /* Alamofire.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alamofire.swift; sourceTree = "<group>"; };
 		81CAB5F32C6DF2AB0050F848 /* AppFlyer_Manager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppFlyer_Manager.swift; sourceTree = "<group>"; };
 		81CAB5F52C6DF2BF0050F848 /* AppMetrica_Manager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppMetrica_Manager.swift; sourceTree = "<group>"; };
@@ -87,9 +87,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				BE570039369F4D3AF92037AD /* Pods_iOS_CommonCode.framework in Frameworks */,
-				81BE73AB2C93F4E600EA6468 /* GoogleMobileAds.xcframework in Frameworks */,
-				81BE73AF2C93F4F600EA6468 /* AppsFlyerLib.xcframework in Frameworks */,
-				81BE73AD2C93F4ED00EA6468 /* PurchaseConnector.xcframework in Frameworks */,
+				8197A6332C95580900152C1A /* PurchaseConnector.xcframework in Frameworks */,
+				8197A6312C9557FF00152C1A /* GoogleMobileAds.xcframework in Frameworks */,
+				8197A62F2C9557F800152C1A /* AppsFlyerLib.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -225,7 +225,7 @@
 			isa = PBXGroup;
 			children = (
 				81BA8B002C88364500F8A3C5 /* CustomShimmer.swift */,
-				81BA8B032C88364C00F8A3C5 /* Shimmer_FullNative.swift */,
+				81BA8B032C88364C00F8A3C5 /* Shimmer_View.swift */,
 				81BA8B012C88364700F8A3C5 /* Shimmer_FullNative.xib */,
 				81BA8B622C88507600F8A3C5 /* Shimmer_NativeBannerAd.xib */,
 				81BA8B022C88364A00F8A3C5 /* Shimmer_Adptiv_Banner.xib */,
@@ -307,9 +307,9 @@
 			isa = PBXGroup;
 			children = (
 				F25D0B89EAC3334E1075E290 /* Pods_iOS_CommonCode.framework */,
-				81BE73AE2C93F4F600EA6468 /* AppsFlyerLib.xcframework */,
-				81BE73AC2C93F4ED00EA6468 /* PurchaseConnector.xcframework */,
-				81BE73AA2C93F4E600EA6468 /* GoogleMobileAds.xcframework */,
+				8197A6322C95580900152C1A /* PurchaseConnector.xcframework */,
+				8197A6302C9557FF00152C1A /* GoogleMobileAds.xcframework */,
+				8197A62E2C9557F800152C1A /* AppsFlyerLib.xcframework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -457,7 +457,7 @@
 				8113BEC52C6324190081B3F8 /* Const For Subscription.swift in Sources */,
 				81CAB5F82C6DF2C80050F848 /* Facebook_Manager.swift in Sources */,
 				817D301B2C8AC31800AB455C /* ATTracking_Manager.swift in Sources */,
-				81BA8B072C88364C00F8A3C5 /* Shimmer_FullNative.swift in Sources */,
+				81BA8B072C88364C00F8A3C5 /* Shimmer_View.swift in Sources */,
 				81BA8B092C88376E00F8A3C5 /* UIView+Extension.swift in Sources */,
 				817D30332C8AC6C600AB455C /* UIWindow+Extension.swift in Sources */,
 				8121DD842C621A66003460A5 /* Reachability.swift in Sources */,
