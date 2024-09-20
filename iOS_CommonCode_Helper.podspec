@@ -2,7 +2,7 @@
 Pod::Spec.new do |spec|
 
 spec.name              = "iOS_CommonCode_Helper"
-spec.version           = "1.0.4"
+spec.version           = "1.0.5"
 spec.summary           = "CommonCode Code iOS"
 spec.description       = <<-DESC
 Common Code for Vasundhara iOS App Developing.
@@ -15,7 +15,8 @@ spec.platform          = :ios, "13.0"
 spec.swift_version     = "5.0"
 
 spec.source            = { :git => "https://github.com/sagarpatel1137/iOS_CommonCode_Helper.git", :tag => "#{spec.version}" }
-spec.source_files      = "iOS_CommonCode/**/*{.swift, .xib}"
+spec.source_files      = "iOS_CommonCode/**/*.swift"
+spec.resource          = ["iOS_CommonCode/**/*.xib"]
 
 spec.static_framework  = true
 spec.frameworks        = 'UIKit', 'Foundation', 'SystemConfiguration', 'StoreKit'
