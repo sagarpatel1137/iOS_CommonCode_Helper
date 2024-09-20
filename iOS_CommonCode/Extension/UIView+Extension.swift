@@ -6,23 +6,6 @@
 //
 
 import UIKit
-import MBProgressHUD
-
-//MARK: - Loader
-extension UIView
-{
-    func startLoader() {
-        DispatchQueue.main.async {
-            MBProgressHUD.showAdded(to: self, animated: true)
-        }
-    }
-    
-    func stopLoader() {
-        DispatchQueue.main.async {
-            MBProgressHUD.hide(for: self, animated: true)
-        }
-    }
-}
 
 //MARK: - Gradient
 extension UIView
@@ -55,7 +38,7 @@ extension UIView
             tempNIBName = "Shimmer_FullNative"
         case .banner_Native:
             tempNIBName = "Shimmer_NativeBannerAd"
-        case .adptive_Banner:
+        case .banner_Adaptive:
             tempNIBName = "Shimmer_Adptiv_Banner"
         case .custom_Native:
             break
@@ -108,5 +91,32 @@ extension UIView
                 vw.removeFromSuperview()
             }
         }
+    }
+}
+
+extension UIView
+{
+    public func addAdByDeveloperViewForAd(isForBannerAd : Bool, textColor : UIColor){
+        
+        let view = UIView(frame: self.bounds)
+        view.tag = 4040
+        view.layer.masksToBounds = true
+        if !isForBannerAd {
+            view.layer.cornerRadius = UIDevice.current.isiPhone ? 10:15
+        }
+        let lbl = UILabel(frame: view.bounds)
+        lbl.textAlignment = .center
+        lbl.text = "Ads by developer"
+        lbl.backgroundColor = hexStringToUIColor(hex: "DDDDDD", alpha: isForBannerAd ? 0.3 : 0.1)
+        lbl.textColor = textColor
+        
+        removeAdByDeveloperViewForAd()
+        
+        view.addSubview(lbl)
+        addSubview(view)
+    }
+    
+    public func removeAdByDeveloperViewForAd(){
+        RemoveAllSubviewWithTAG(tag: 4040)
     }
 }

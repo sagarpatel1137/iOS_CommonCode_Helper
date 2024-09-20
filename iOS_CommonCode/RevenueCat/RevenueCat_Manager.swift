@@ -452,7 +452,6 @@ extension RevenueCat_Manager
                                                                              plan_Currancy_Code: GetCurrncyCode(productId: LifetimeSubscriptionID),
                                                                              plan_Free_Trail: GetIntroductioyOfProduct(productId: LifetimeSubscriptionID))
     }
-    
 }
 
 // MARK: - Network Reachability

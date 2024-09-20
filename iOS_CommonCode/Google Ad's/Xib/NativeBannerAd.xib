@@ -13,14 +13,26 @@
             <rect key="frame" x="0.0" y="0.0" width="696" height="200"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UCU-RJ-T8K" userLabel="ViewBg">
-                    <rect key="frame" x="0.0" y="0.0" width="696" height="200"/>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    <userDefinedRuntimeAttributes>
-                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                            <real key="value" value="8"/>
-                        </userDefinedRuntimeAttribute>
-                    </userDefinedRuntimeAttributes>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="R4K-e6-omF" userLabel="ViewAd">
+                    <rect key="frame" x="0.0" y="0.0" width="35" height="24"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ad" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JEs-Hq-Q25">
+                            <rect key="frame" x="8" y="3" width="19" height="16"/>
+                            <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="14"/>
+                            <color key="textColor" red="0.47058823529411764" green="0.47058823529411764" blue="0.47058823529411764" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                            <variation key="heightClass=regular-widthClass=regular">
+                                <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="16"/>
+                            </variation>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" red="0.80392156859999997" green="0.80392156859999997" blue="0.80392156859999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstItem="JEs-Hq-Q25" firstAttribute="top" secondItem="R4K-e6-omF" secondAttribute="top" constant="3" id="4a1-X2-JEX"/>
+                        <constraint firstAttribute="bottom" secondItem="JEs-Hq-Q25" secondAttribute="bottom" constant="5" id="6QH-6q-CvJ"/>
+                        <constraint firstAttribute="trailing" secondItem="JEs-Hq-Q25" secondAttribute="trailing" constant="8" id="JOi-sO-jE7"/>
+                        <constraint firstItem="JEs-Hq-Q25" firstAttribute="leading" secondItem="R4K-e6-omF" secondAttribute="leading" constant="8" id="ZZB-MX-30K"/>
+                    </constraints>
                 </view>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="Headline" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="beR-eV-DX1">
                     <rect key="frame" x="85" y="75" width="536" height="20.5"/>
@@ -111,27 +123,11 @@
                         <constraint firstAttribute="trailing" secondItem="E5w-YA-UY8" secondAttribute="trailing" id="AW3-a3-2gJ"/>
                     </constraints>
                 </view>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_native_ad_icon" translatesAutoresizingMaskIntoConstraints="NO" id="E7y-wZ-Eun">
-                    <rect key="frame" x="0.0" y="0.0" width="32" height="32"/>
-                    <constraints>
-                        <constraint firstAttribute="width" secondItem="E7y-wZ-Eun" secondAttribute="height" id="5KB-oU-lPP"/>
-                        <constraint firstAttribute="width" constant="32" id="q5P-2u-Dj8">
-                            <variation key="heightClass=regular-widthClass=regular" constant="40"/>
-                        </constraint>
-                    </constraints>
-                    <userDefinedRuntimeAttributes>
-                        <userDefinedRuntimeAttribute type="number" keyPath="CRadiusLeftUpNew">
-                            <real key="value" value="6"/>
-                        </userDefinedRuntimeAttribute>
-                    </userDefinedRuntimeAttributes>
-                </imageView>
             </subviews>
-            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstItem="E1q-LC-UPP" firstAttribute="leading" secondItem="beR-eV-DX1" secondAttribute="trailing" constant="10" id="0Km-ou-xRe"/>
-                <constraint firstItem="UCU-RJ-T8K" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="0Wk-xw-paF"/>
                 <constraint firstItem="E1q-LC-UPP" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="1q5-gI-ULb"/>
-                <constraint firstItem="E7y-wZ-Eun" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="6ZI-lX-v4Y"/>
                 <constraint firstAttribute="bottom" secondItem="E1q-LC-UPP" secondAttribute="bottom" id="Fez-vz-lBf"/>
                 <constraint firstItem="bdq-yj-o9D" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="15" id="It4-NO-xG6">
                     <variation key="heightClass=regular-widthClass=regular" constant="25"/>
@@ -140,15 +136,13 @@
                 <constraint firstItem="PEQ-D9-2Vv" firstAttribute="top" secondItem="beR-eV-DX1" secondAttribute="bottom" constant="5" id="TMX-ZU-jA4">
                     <variation key="heightClass=regular-widthClass=regular" constant="5"/>
                 </constraint>
-                <constraint firstAttribute="bottom" secondItem="UCU-RJ-T8K" secondAttribute="bottom" id="Yce-Tw-NV0"/>
+                <constraint firstItem="R4K-e6-omF" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="Wb2-q1-Bci"/>
                 <constraint firstAttribute="trailing" secondItem="E1q-LC-UPP" secondAttribute="trailing" constant="15" id="ak4-ob-2PK">
                     <variation key="heightClass=regular-widthClass=regular" constant="20"/>
                 </constraint>
                 <constraint firstItem="bdq-yj-o9D" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="ctc-Rn-QMW"/>
                 <constraint firstItem="PEQ-D9-2Vv" firstAttribute="leading" secondItem="beR-eV-DX1" secondAttribute="leading" id="ewU-gs-g3p"/>
-                <constraint firstAttribute="trailing" secondItem="UCU-RJ-T8K" secondAttribute="trailing" id="iWb-gs-5nY"/>
-                <constraint firstItem="UCU-RJ-T8K" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="nql-1L-MCz"/>
-                <constraint firstItem="E7y-wZ-Eun" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="rQa-Ou-GAJ"/>
+                <constraint firstItem="R4K-e6-omF" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="ggu-0K-O7v"/>
                 <constraint firstItem="beR-eV-DX1" firstAttribute="top" secondItem="bdq-yj-o9D" secondAttribute="top" id="t5K-bC-w0w"/>
                 <constraint firstItem="beR-eV-DX1" firstAttribute="top" relation="greaterThanOrEqual" secondItem="iN0-l3-epB" secondAttribute="top" id="wPf-4z-WzH"/>
                 <constraint firstItem="beR-eV-DX1" firstAttribute="leading" secondItem="bdq-yj-o9D" secondAttribute="trailing" id="y8E-hR-fBx"/>
@@ -163,7 +157,4 @@
             <point key="canvasLocation" x="237.68115942028987" y="75"/>
         </view>
     </objects>
-    <resources>
-        <image name="ic_native_ad_icon" width="178" height="187"/>
-    </resources>
 </document>

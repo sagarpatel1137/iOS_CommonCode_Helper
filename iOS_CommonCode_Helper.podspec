@@ -2,7 +2,7 @@
 Pod::Spec.new do |spec|
 
 spec.name              = "iOS_CommonCode_Helper"
-spec.version           = "1.0.2"
+spec.version           = "1.0.3"
 spec.summary           = "CommonCode Code iOS"
 spec.description       = <<-DESC
 Common Code for Vasundhara iOS App Developing.
@@ -18,7 +18,6 @@ spec.source            = { :git => "https://github.com/sagarpatel1137/iOS_Common
 spec.source_files      = "iOS_CommonCode/**/*.swift"
 
 spec.static_framework  = true
-spec.pod_target_xcconfig = { 'DEFINES_MODULE' => 'YES' }
 spec.frameworks        = 'UIKit', 'Foundation', 'SystemConfiguration', 'StoreKit'
 
 spec.dependency 'RevenueCat'
@@ -40,6 +39,5 @@ spec.dependency 'FirebaseMessaging'
 spec.dependency 'Google-Mobile-Ads-SDK'
 
 spec.dependency 'UIView-Shimmer'
-spec.dependency 'MBProgressHUD'
 
 end

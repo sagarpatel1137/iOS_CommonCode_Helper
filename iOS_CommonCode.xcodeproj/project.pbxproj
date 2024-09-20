@@ -12,25 +12,28 @@
 		8121DD842C621A66003460A5 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8121DD832C621A66003460A5 /* Reachability.swift */; };
 		8121DD852C621A66003460A5 /* ForceUpdate_Manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8121DD822C621A66003460A5 /* ForceUpdate_Manager.swift */; };
 		8121DD8A2C6222C8003460A5 /* iOS_CommonCode_Helper.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 8121DD882C6222C8003460A5 /* iOS_CommonCode_Helper.podspec */; };
-		8136DA422C8EEC02005C305B /* NativeAd.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8136DA402C8EEC02005C305B /* NativeAd.xib */; };
-		8136DA432C8EEC02005C305B /* NativeBannerAd.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8136DA412C8EEC02005C305B /* NativeBannerAd.xib */; };
 		817D301B2C8AC31800AB455C /* ATTracking_Manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 817D301A2C8AC31800AB455C /* ATTracking_Manager.swift */; };
 		817D301D2C8AC5E300AB455C /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 817D301C2C8AC5E300AB455C /* String+Extension.swift */; };
 		817D30332C8AC6C600AB455C /* UIWindow+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 817D30322C8AC6C600AB455C /* UIWindow+Extension.swift */; };
 		817DCDF72C6F0A4C004BA1C2 /* GoogleMobileAdsConsent_Manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 817DCDF62C6F0A4C004BA1C2 /* GoogleMobileAdsConsent_Manager.swift */; };
-		81958DD42C9292E6004E90E2 /* NSString+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81958DD32C9292E6004E90E2 /* NSString+Extension.swift */; };
-		8197A62F2C9557F800152C1A /* AppsFlyerLib.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8197A62E2C9557F800152C1A /* AppsFlyerLib.xcframework */; };
-		8197A6312C9557FF00152C1A /* GoogleMobileAds.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8197A6302C9557FF00152C1A /* GoogleMobileAds.xcframework */; };
-		8197A6332C95580900152C1A /* PurchaseConnector.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8197A6322C95580900152C1A /* PurchaseConnector.xcframework */; };
+		81A089BE2C9D397A0091CFB3 /* NSString+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A089BD2C9D397A0091CFB3 /* NSString+Extension.swift */; };
+		81A089C42C9D39A60091CFB3 /* Shimmer_NativeBannerAd.xib in Resources */ = {isa = PBXBuildFile; fileRef = 81A089C22C9D39A60091CFB3 /* Shimmer_NativeBannerAd.xib */; };
+		81A089C52C9D39A60091CFB3 /* Shimmer_FullNative.xib in Resources */ = {isa = PBXBuildFile; fileRef = 81A089C12C9D39A60091CFB3 /* Shimmer_FullNative.xib */; };
+		81A089C62C9D39A60091CFB3 /* Shimmer_Adptiv_Banner.xib in Resources */ = {isa = PBXBuildFile; fileRef = 81A089C32C9D39A60091CFB3 /* Shimmer_Adptiv_Banner.xib */; };
+		81A089C72C9D39A60091CFB3 /* Shimmer_View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A089C02C9D39A60091CFB3 /* Shimmer_View.swift */; };
+		81A089C82C9D39A60091CFB3 /* CustomShimmer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A089BF2C9D39A60091CFB3 /* CustomShimmer.swift */; };
+		81A089CB2C9D3BAD0091CFB3 /* NativeAd.xib in Resources */ = {isa = PBXBuildFile; fileRef = 81A089C92C9D3BAD0091CFB3 /* NativeAd.xib */; };
+		81A089CC2C9D3BAD0091CFB3 /* NativeBannerAd.xib in Resources */ = {isa = PBXBuildFile; fileRef = 81A089CA2C9D3BAD0091CFB3 /* NativeBannerAd.xib */; };
+		81A089CF2C9D3BB50091CFB3 /* Const_GoogleAds.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A089CD2C9D3BB50091CFB3 /* Const_GoogleAds.swift */; };
+		81A089D02C9D3BB50091CFB3 /* GoogleAd_Manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A089CE2C9D3BB50091CFB3 /* GoogleAd_Manager.swift */; };
+		81A089D42C9D47B50091CFB3 /* AppsFlyerLib.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81A089D32C9D47B50091CFB3 /* AppsFlyerLib.xcframework */; };
+		81A089D52C9D47B50091CFB3 /* AppsFlyerLib.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 81A089D32C9D47B50091CFB3 /* AppsFlyerLib.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		81A089D82C9D47BF0091CFB3 /* GoogleMobileAds.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81A089D72C9D47BF0091CFB3 /* GoogleMobileAds.xcframework */; };
+		81A089D92C9D47BF0091CFB3 /* GoogleMobileAds.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 81A089D72C9D47BF0091CFB3 /* GoogleMobileAds.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		81A089DB2C9D47C60091CFB3 /* PurchaseConnector.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81A089DA2C9D47C60091CFB3 /* PurchaseConnector.xcframework */; };
+		81A089DC2C9D47C60091CFB3 /* PurchaseConnector.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 81A089DA2C9D47C60091CFB3 /* PurchaseConnector.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		81BA8AF12C881BE100F8A3C5 /* Constant_Function.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81BA8AF02C881BE100F8A3C5 /* Constant_Function.swift */; };
-		81BA8AFE2C881F4700F8A3C5 /* GoogleAd_Manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81BA8AFD2C881F4700F8A3C5 /* GoogleAd_Manager.swift */; };
-		81BA8B042C88364C00F8A3C5 /* CustomShimmer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81BA8B002C88364500F8A3C5 /* CustomShimmer.swift */; };
-		81BA8B052C88364C00F8A3C5 /* Shimmer_FullNative.xib in Resources */ = {isa = PBXBuildFile; fileRef = 81BA8B012C88364700F8A3C5 /* Shimmer_FullNative.xib */; };
-		81BA8B062C88364C00F8A3C5 /* Shimmer_Adptiv_Banner.xib in Resources */ = {isa = PBXBuildFile; fileRef = 81BA8B022C88364A00F8A3C5 /* Shimmer_Adptiv_Banner.xib */; };
-		81BA8B072C88364C00F8A3C5 /* Shimmer_View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81BA8B032C88364C00F8A3C5 /* Shimmer_View.swift */; };
 		81BA8B092C88376E00F8A3C5 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81BA8B082C88376E00F8A3C5 /* UIView+Extension.swift */; };
-		81BA8B0D2C883D6600F8A3C5 /* Asset.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 81BA8B0C2C883D6600F8A3C5 /* Asset.xcassets */; };
-		81BA8B632C88507600F8A3C5 /* Shimmer_NativeBannerAd.xib in Resources */ = {isa = PBXBuildFile; fileRef = 81BA8B622C88507600F8A3C5 /* Shimmer_NativeBannerAd.xib */; };
 		81CAB5E82C6DD2640050F848 /* Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81CAB5E72C6DD2640050F848 /* Alamofire.swift */; };
 		81CAB5F42C6DF2AB0050F848 /* AppFlyer_Manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81CAB5F32C6DF2AB0050F848 /* AppFlyer_Manager.swift */; };
 		81CAB5F62C6DF2BF0050F848 /* AppMetrica_Manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81CAB5F52C6DF2BF0050F848 /* AppMetrica_Manager.swift */; };
@@ -39,35 +42,54 @@
 		81CAB5FD2C6DF4FF0050F848 /* UIDevice+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81CAB5FC2C6DF4FF0050F848 /* UIDevice+Extension.swift */; };
 		81CAB6002C6E193E0050F848 /* OneSignal_Manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81CAB5FF2C6E193E0050F848 /* OneSignal_Manager.swift */; };
 		81CAB6022C6E20DB0050F848 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81CAB6012C6E20DB0050F848 /* UIViewController+Extension.swift */; };
-		BE570039369F4D3AF92037AD /* Pods_iOS_CommonCode.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F25D0B89EAC3334E1075E290 /* Pods_iOS_CommonCode.framework */; };
+		D391513D4F19B006A2E9AF44 /* Pods_iOS_CommonCode.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06E918F9F432D213EFDB89A3 /* Pods_iOS_CommonCode.framework */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		81A089D62C9D47B50091CFB3 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				81A089D52C9D47B50091CFB3 /* AppsFlyerLib.xcframework in Embed Frameworks */,
+				81A089DC2C9D47C60091CFB3 /* PurchaseConnector.xcframework in Embed Frameworks */,
+				81A089D92C9D47BF0091CFB3 /* GoogleMobileAds.xcframework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		06E918F9F432D213EFDB89A3 /* Pods_iOS_CommonCode.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iOS_CommonCode.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		43604957A605E4D8F2482007 /* Pods-iOS_CommonCode.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS_CommonCode.debug.xcconfig"; path = "Target Support Files/Pods-iOS_CommonCode/Pods-iOS_CommonCode.debug.xcconfig"; sourceTree = "<group>"; };
+		4CF2BCBD339BA13B3597B4D2 /* Pods-iOS_CommonCode.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS_CommonCode.release.xcconfig"; path = "Target Support Files/Pods-iOS_CommonCode/Pods-iOS_CommonCode.release.xcconfig"; sourceTree = "<group>"; };
 		8113BEC22C6324190081B3F8 /* RevenueCat_Manager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RevenueCat_Manager.swift; sourceTree = "<group>"; };
 		8113BEC32C6324190081B3F8 /* Const For Subscription.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Const For Subscription.swift"; sourceTree = "<group>"; };
 		8121DD682C6216E8003460A5 /* iOS_CommonCode.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = iOS_CommonCode.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8121DD822C621A66003460A5 /* ForceUpdate_Manager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForceUpdate_Manager.swift; sourceTree = "<group>"; };
 		8121DD832C621A66003460A5 /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		8121DD882C6222C8003460A5 /* iOS_CommonCode_Helper.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = iOS_CommonCode_Helper.podspec; sourceTree = "<group>"; };
-		8136DA402C8EEC02005C305B /* NativeAd.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NativeAd.xib; sourceTree = "<group>"; };
-		8136DA412C8EEC02005C305B /* NativeBannerAd.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NativeBannerAd.xib; sourceTree = "<group>"; };
 		817D301A2C8AC31800AB455C /* ATTracking_Manager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ATTracking_Manager.swift; sourceTree = "<group>"; };
 		817D301C2C8AC5E300AB455C /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		817D30322C8AC6C600AB455C /* UIWindow+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIWindow+Extension.swift"; sourceTree = "<group>"; };
 		817DCDF62C6F0A4C004BA1C2 /* GoogleMobileAdsConsent_Manager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleMobileAdsConsent_Manager.swift; sourceTree = "<group>"; };
-		81958DD32C9292E6004E90E2 /* NSString+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSString+Extension.swift"; sourceTree = "<group>"; };
-		8197A62E2C9557F800152C1A /* AppsFlyerLib.xcframework */ = {isa = PBXFileReference; expectedSignature = "AppleDeveloperProgram:6UQAD4B3U2:APPSFLYER LTD"; lastKnownFileType = wrapper.xcframework; name = AppsFlyerLib.xcframework; path = Pods/AppsFlyerFramework/binaries/xcframework/full/AppsFlyerLib.xcframework; sourceTree = "<group>"; };
-		8197A6302C9557FF00152C1A /* GoogleMobileAds.xcframework */ = {isa = PBXFileReference; expectedSignature = "AppleDeveloperProgram:EQHXZ8M8AV:Google LLC"; lastKnownFileType = wrapper.xcframework; name = GoogleMobileAds.xcframework; path = "Pods/Google-Mobile-Ads-SDK/Frameworks/GoogleMobileAdsFramework/GoogleMobileAds.xcframework"; sourceTree = "<group>"; };
-		8197A6322C95580900152C1A /* PurchaseConnector.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = PurchaseConnector.xcframework; path = Pods/PurchaseConnector/PurchaseConnector.xcframework; sourceTree = "<group>"; };
+		81A089BD2C9D397A0091CFB3 /* NSString+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSString+Extension.swift"; sourceTree = "<group>"; };
+		81A089BF2C9D39A60091CFB3 /* CustomShimmer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomShimmer.swift; sourceTree = "<group>"; };
+		81A089C02C9D39A60091CFB3 /* Shimmer_View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shimmer_View.swift; sourceTree = "<group>"; };
+		81A089C12C9D39A60091CFB3 /* Shimmer_FullNative.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Shimmer_FullNative.xib; sourceTree = "<group>"; };
+		81A089C22C9D39A60091CFB3 /* Shimmer_NativeBannerAd.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Shimmer_NativeBannerAd.xib; sourceTree = "<group>"; };
+		81A089C32C9D39A60091CFB3 /* Shimmer_Adptiv_Banner.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Shimmer_Adptiv_Banner.xib; sourceTree = "<group>"; };
+		81A089C92C9D3BAD0091CFB3 /* NativeAd.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NativeAd.xib; sourceTree = "<group>"; };
+		81A089CA2C9D3BAD0091CFB3 /* NativeBannerAd.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NativeBannerAd.xib; sourceTree = "<group>"; };
+		81A089CD2C9D3BB50091CFB3 /* Const_GoogleAds.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Const_GoogleAds.swift; sourceTree = "<group>"; };
+		81A089CE2C9D3BB50091CFB3 /* GoogleAd_Manager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleAd_Manager.swift; sourceTree = "<group>"; };
+		81A089D32C9D47B50091CFB3 /* AppsFlyerLib.xcframework */ = {isa = PBXFileReference; expectedSignature = "AppleDeveloperProgram:6UQAD4B3U2:APPSFLYER LTD"; lastKnownFileType = wrapper.xcframework; name = AppsFlyerLib.xcframework; path = Pods/AppsFlyerFramework/binaries/xcframework/full/AppsFlyerLib.xcframework; sourceTree = "<group>"; };
+		81A089D72C9D47BF0091CFB3 /* GoogleMobileAds.xcframework */ = {isa = PBXFileReference; expectedSignature = "AppleDeveloperProgram:EQHXZ8M8AV:Google LLC"; lastKnownFileType = wrapper.xcframework; name = GoogleMobileAds.xcframework; path = "Pods/Google-Mobile-Ads-SDK/Frameworks/GoogleMobileAdsFramework/GoogleMobileAds.xcframework"; sourceTree = "<group>"; };
+		81A089DA2C9D47C60091CFB3 /* PurchaseConnector.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = PurchaseConnector.xcframework; path = Pods/PurchaseConnector/PurchaseConnector.xcframework; sourceTree = "<group>"; };
 		81BA8AF02C881BE100F8A3C5 /* Constant_Function.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant_Function.swift; sourceTree = "<group>"; };
-		81BA8AFD2C881F4700F8A3C5 /* GoogleAd_Manager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleAd_Manager.swift; sourceTree = "<group>"; };
-		81BA8B002C88364500F8A3C5 /* CustomShimmer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomShimmer.swift; sourceTree = "<group>"; };
-		81BA8B012C88364700F8A3C5 /* Shimmer_FullNative.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Shimmer_FullNative.xib; sourceTree = "<group>"; };
-		81BA8B022C88364A00F8A3C5 /* Shimmer_Adptiv_Banner.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Shimmer_Adptiv_Banner.xib; sourceTree = "<group>"; };
-		81BA8B032C88364C00F8A3C5 /* Shimmer_View.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Shimmer_View.swift; sourceTree = "<group>"; };
 		81BA8B082C88376E00F8A3C5 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
-		81BA8B0C2C883D6600F8A3C5 /* Asset.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Asset.xcassets; sourceTree = "<group>"; };
-		81BA8B622C88507600F8A3C5 /* Shimmer_NativeBannerAd.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Shimmer_NativeBannerAd.xib; sourceTree = "<group>"; };
 		81CAB5E72C6DD2640050F848 /* Alamofire.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alamofire.swift; sourceTree = "<group>"; };
 		81CAB5F32C6DF2AB0050F848 /* AppFlyer_Manager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppFlyer_Manager.swift; sourceTree = "<group>"; };
 		81CAB5F52C6DF2BF0050F848 /* AppMetrica_Manager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppMetrica_Manager.swift; sourceTree = "<group>"; };
@@ -76,9 +98,6 @@
 		81CAB5FC2C6DF4FF0050F848 /* UIDevice+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIDevice+Extension.swift"; sourceTree = "<group>"; };
 		81CAB5FF2C6E193E0050F848 /* OneSignal_Manager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneSignal_Manager.swift; sourceTree = "<group>"; };
 		81CAB6012C6E20DB0050F848 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
-		CBBB31DFB4062896A7DCFD96 /* Pods-iOS_CommonCode.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS_CommonCode.debug.xcconfig"; path = "Target Support Files/Pods-iOS_CommonCode/Pods-iOS_CommonCode.debug.xcconfig"; sourceTree = "<group>"; };
-		E0C0DD426278FB3EEAC621D9 /* Pods-iOS_CommonCode.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS_CommonCode.release.xcconfig"; path = "Target Support Files/Pods-iOS_CommonCode/Pods-iOS_CommonCode.release.xcconfig"; sourceTree = "<group>"; };
-		F25D0B89EAC3334E1075E290 /* Pods_iOS_CommonCode.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iOS_CommonCode.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,10 +105,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BE570039369F4D3AF92037AD /* Pods_iOS_CommonCode.framework in Frameworks */,
-				8197A6332C95580900152C1A /* PurchaseConnector.xcframework in Frameworks */,
-				8197A6312C9557FF00152C1A /* GoogleMobileAds.xcframework in Frameworks */,
-				8197A62F2C9557F800152C1A /* AppsFlyerLib.xcframework in Frameworks */,
+				81A089D42C9D47B50091CFB3 /* AppsFlyerLib.xcframework in Frameworks */,
+				81A089D82C9D47BF0091CFB3 /* GoogleMobileAds.xcframework in Frameworks */,
+				81A089DB2C9D47C60091CFB3 /* PurchaseConnector.xcframework in Frameworks */,
+				D391513D4F19B006A2E9AF44 /* Pods_iOS_CommonCode.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -128,7 +147,6 @@
 				81BA8AF22C881CDD00F8A3C5 /* Google Ad's */,
 				81BA8AFF2C88362E00F8A3C5 /* Shimmer */,
 				819E6FB62C6CBA7D00D4914E /* Other */,
-				81BA8B0C2C883D6600F8A3C5 /* Asset.xcassets */,
 			);
 			path = iOS_CommonCode;
 			sourceTree = "<group>";
@@ -171,8 +189,8 @@
 		8136DA3F2C8EEBFB005C305B /* Xib */ = {
 			isa = PBXGroup;
 			children = (
-				8136DA402C8EEC02005C305B /* NativeAd.xib */,
-				8136DA412C8EEC02005C305B /* NativeBannerAd.xib */,
+				81A089C92C9D3BAD0091CFB3 /* NativeAd.xib */,
+				81A089CA2C9D3BAD0091CFB3 /* NativeBannerAd.xib */,
 			);
 			path = Xib;
 			sourceTree = "<group>";
@@ -215,7 +233,8 @@
 		81BA8AF22C881CDD00F8A3C5 /* Google Ad's */ = {
 			isa = PBXGroup;
 			children = (
-				81BA8AFD2C881F4700F8A3C5 /* GoogleAd_Manager.swift */,
+				81A089CD2C9D3BB50091CFB3 /* Const_GoogleAds.swift */,
+				81A089CE2C9D3BB50091CFB3 /* GoogleAd_Manager.swift */,
 				8136DA3F2C8EEBFB005C305B /* Xib */,
 			);
 			path = "Google Ad's";
@@ -224,11 +243,11 @@
 		81BA8AFF2C88362E00F8A3C5 /* Shimmer */ = {
 			isa = PBXGroup;
 			children = (
-				81BA8B002C88364500F8A3C5 /* CustomShimmer.swift */,
-				81BA8B032C88364C00F8A3C5 /* Shimmer_View.swift */,
-				81BA8B012C88364700F8A3C5 /* Shimmer_FullNative.xib */,
-				81BA8B622C88507600F8A3C5 /* Shimmer_NativeBannerAd.xib */,
-				81BA8B022C88364A00F8A3C5 /* Shimmer_Adptiv_Banner.xib */,
+				81A089BF2C9D39A60091CFB3 /* CustomShimmer.swift */,
+				81A089C02C9D39A60091CFB3 /* Shimmer_View.swift */,
+				81A089C12C9D39A60091CFB3 /* Shimmer_FullNative.xib */,
+				81A089C22C9D39A60091CFB3 /* Shimmer_NativeBannerAd.xib */,
+				81A089C32C9D39A60091CFB3 /* Shimmer_Adptiv_Banner.xib */,
 			);
 			path = Shimmer;
 			sourceTree = "<group>";
@@ -281,7 +300,7 @@
 				81CAB6012C6E20DB0050F848 /* UIViewController+Extension.swift */,
 				81BA8B082C88376E00F8A3C5 /* UIView+Extension.swift */,
 				817D301C2C8AC5E300AB455C /* String+Extension.swift */,
-				81958DD32C9292E6004E90E2 /* NSString+Extension.swift */,
+				81A089BD2C9D397A0091CFB3 /* NSString+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -297,8 +316,8 @@
 		FB405D856584EFA8ACBC95F6 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				CBBB31DFB4062896A7DCFD96 /* Pods-iOS_CommonCode.debug.xcconfig */,
-				E0C0DD426278FB3EEAC621D9 /* Pods-iOS_CommonCode.release.xcconfig */,
+				43604957A605E4D8F2482007 /* Pods-iOS_CommonCode.debug.xcconfig */,
+				4CF2BCBD339BA13B3597B4D2 /* Pods-iOS_CommonCode.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -306,10 +325,10 @@
 		FC852AD153A2E9A3A437EEC6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				F25D0B89EAC3334E1075E290 /* Pods_iOS_CommonCode.framework */,
-				8197A6322C95580900152C1A /* PurchaseConnector.xcframework */,
-				8197A6302C9557FF00152C1A /* GoogleMobileAds.xcframework */,
-				8197A62E2C9557F800152C1A /* AppsFlyerLib.xcframework */,
+				81A089DA2C9D47C60091CFB3 /* PurchaseConnector.xcframework */,
+				81A089D72C9D47BF0091CFB3 /* GoogleMobileAds.xcframework */,
+				81A089D32C9D47B50091CFB3 /* AppsFlyerLib.xcframework */,
+				06E918F9F432D213EFDB89A3 /* Pods_iOS_CommonCode.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -331,12 +350,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8121DD7C2C6216E8003460A5 /* Build configuration list for PBXNativeTarget "iOS_CommonCode" */;
 			buildPhases = (
-				6AEF02329BE8450F574E9FF1 /* [CP] Check Pods Manifest.lock */,
+				93FF01592E682FD684A3437C /* [CP] Check Pods Manifest.lock */,
 				8121DD632C6216E8003460A5 /* Headers */,
 				8121DD642C6216E8003460A5 /* Sources */,
 				8121DD652C6216E8003460A5 /* Frameworks */,
 				8121DD662C6216E8003460A5 /* Resources */,
-				E2597C89B8EC57A4EBA40E84 /* [CP] Copy Pods Resources */,
+				0DE3CC7968F9BE72DB297FC6 /* [CP] Copy Pods Resources */,
+				81A089D62C9D47B50091CFB3 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -385,20 +405,36 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				81BA8B062C88364C00F8A3C5 /* Shimmer_Adptiv_Banner.xib in Resources */,
+				81A089C42C9D39A60091CFB3 /* Shimmer_NativeBannerAd.xib in Resources */,
+				81A089C52C9D39A60091CFB3 /* Shimmer_FullNative.xib in Resources */,
+				81A089CB2C9D3BAD0091CFB3 /* NativeAd.xib in Resources */,
+				81A089CC2C9D3BAD0091CFB3 /* NativeBannerAd.xib in Resources */,
+				81A089C62C9D39A60091CFB3 /* Shimmer_Adptiv_Banner.xib in Resources */,
 				8121DD8A2C6222C8003460A5 /* iOS_CommonCode_Helper.podspec in Resources */,
-				81BA8B0D2C883D6600F8A3C5 /* Asset.xcassets in Resources */,
-				8136DA432C8EEC02005C305B /* NativeBannerAd.xib in Resources */,
-				81BA8B632C88507600F8A3C5 /* Shimmer_NativeBannerAd.xib in Resources */,
-				81BA8B052C88364C00F8A3C5 /* Shimmer_FullNative.xib in Resources */,
-				8136DA422C8EEC02005C305B /* NativeAd.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		6AEF02329BE8450F574E9FF1 /* [CP] Check Pods Manifest.lock */ = {
+		0DE3CC7968F9BE72DB297FC6 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-iOS_CommonCode/Pods-iOS_CommonCode-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-iOS_CommonCode/Pods-iOS_CommonCode-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-iOS_CommonCode/Pods-iOS_CommonCode-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		93FF01592E682FD684A3437C /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -420,23 +456,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		E2597C89B8EC57A4EBA40E84 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-iOS_CommonCode/Pods-iOS_CommonCode-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-iOS_CommonCode/Pods-iOS_CommonCode-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-iOS_CommonCode/Pods-iOS_CommonCode-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -445,26 +464,27 @@
 			buildActionMask = 2147483647;
 			files = (
 				81CAB6022C6E20DB0050F848 /* UIViewController+Extension.swift in Sources */,
+				81A089CF2C9D3BB50091CFB3 /* Const_GoogleAds.swift in Sources */,
+				81A089D02C9D3BB50091CFB3 /* GoogleAd_Manager.swift in Sources */,
 				81BA8AF12C881BE100F8A3C5 /* Constant_Function.swift in Sources */,
 				81CAB5F42C6DF2AB0050F848 /* AppFlyer_Manager.swift in Sources */,
+				81A089BE2C9D397A0091CFB3 /* NSString+Extension.swift in Sources */,
 				81CAB5F62C6DF2BF0050F848 /* AppMetrica_Manager.swift in Sources */,
-				81BA8AFE2C881F4700F8A3C5 /* GoogleAd_Manager.swift in Sources */,
 				8121DD852C621A66003460A5 /* ForceUpdate_Manager.swift in Sources */,
 				81CAB5FD2C6DF4FF0050F848 /* UIDevice+Extension.swift in Sources */,
 				81CAB5E82C6DD2640050F848 /* Alamofire.swift in Sources */,
+				81A089C72C9D39A60091CFB3 /* Shimmer_View.swift in Sources */,
+				81A089C82C9D39A60091CFB3 /* CustomShimmer.swift in Sources */,
 				817D301D2C8AC5E300AB455C /* String+Extension.swift in Sources */,
 				81CAB5FA2C6DF3480050F848 /* TikTok_Manager.swift in Sources */,
 				8113BEC52C6324190081B3F8 /* Const For Subscription.swift in Sources */,
 				81CAB5F82C6DF2C80050F848 /* Facebook_Manager.swift in Sources */,
 				817D301B2C8AC31800AB455C /* ATTracking_Manager.swift in Sources */,
-				81BA8B072C88364C00F8A3C5 /* Shimmer_View.swift in Sources */,
 				81BA8B092C88376E00F8A3C5 /* UIView+Extension.swift in Sources */,
 				817D30332C8AC6C600AB455C /* UIWindow+Extension.swift in Sources */,
 				8121DD842C621A66003460A5 /* Reachability.swift in Sources */,
 				817DCDF72C6F0A4C004BA1C2 /* GoogleMobileAdsConsent_Manager.swift in Sources */,
-				81958DD42C9292E6004E90E2 /* NSString+Extension.swift in Sources */,
 				81CAB6002C6E193E0050F848 /* OneSignal_Manager.swift in Sources */,
-				81BA8B042C88364C00F8A3C5 /* CustomShimmer.swift in Sources */,
 				8113BEC42C6324190081B3F8 /* RevenueCat_Manager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -511,7 +531,6 @@
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
-				FRAMEWORK_SEARCH_PATHS = "";
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -579,7 +598,6 @@
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
-				FRAMEWORK_SEARCH_PATHS = "";
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -603,7 +621,7 @@
 		};
 		8121DD7D2C6216E8003460A5 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = CBBB31DFB4062896A7DCFD96 /* Pods-iOS_CommonCode.debug.xcconfig */;
+			baseConfigurationReference = 43604957A605E4D8F2482007 /* Pods-iOS_CommonCode.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -628,7 +646,6 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -636,7 +653,7 @@
 		};
 		8121DD7E2C6216E8003460A5 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E0C0DD426278FB3EEAC621D9 /* Pods-iOS_CommonCode.release.xcconfig */;
+			baseConfigurationReference = 4CF2BCBD339BA13B3597B4D2 /* Pods-iOS_CommonCode.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -660,7 +677,6 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

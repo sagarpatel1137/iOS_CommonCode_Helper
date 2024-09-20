@@ -239,7 +239,6 @@ PODS:
   - KSCrash/Recording (1.17.4):
     - KSCrash/Recording/Tools (= 1.17.4)
   - KSCrash/Recording/Tools (1.17.4)
-  - MBProgressHUD (1.2.0)
   - nanopb (3.30910.0):
     - nanopb/decode (= 3.30910.0)
     - nanopb/encode (= 3.30910.0)
@@ -316,7 +315,6 @@ DEPENDENCIES:
   - Firebase/Performance
   - FirebaseMessaging
   - Google-Mobile-Ads-SDK
-  - MBProgressHUD
   - OneSignal
   - PurchaseConnector
   - RevenueCat
@@ -372,7 +370,6 @@ SPEC REPOS:
     - GoogleUtilities
     - GTMSessionFetcher
     - KSCrash
-    - MBProgressHUD
     - nanopb
     - OneSignal
     - PromisesObjC
@@ -431,7 +428,6 @@ SPEC CHECKSUMS:
   GoogleUtilities: 26a3abef001b6533cf678d3eb38fd3f614b7872d
   GTMSessionFetcher: 5aea5ba6bd522a239e236100971f10cb71b96ab6
   KSCrash: 158a0998f08ae7d4e54ef8a2da62d6e08b46d03a
-  MBProgressHUD: 3ee5efcc380f6a79a7cc9b363dd669c5e1ae7406
   nanopb: fad817b59e0457d11a5dfbde799381cd727c1275
   OneSignal: 916eee4ffe4762f387ae0e28b6541bce8a824d10
   PromisesObjC: f5707f49cb48b9636751c5b2e7d227e43fba9f47
@@ -442,6 +438,6 @@ SPEC CHECKSUMS:
   TikTokBusinessSDK: 36d609fa83d6135ce29ed1541913adb97208ba6e
   UIView-Shimmer: ff0a32c73d67c7dbdea3d9e530538b10d18aea56
 
-PODFILE CHECKSUM: 814ea41efe0d244a2ee5b311fe4cba030100f154
+PODFILE CHECKSUM: c6639bfcc56f5e865b9d6adb91159a1dacf5c63e
 
 COCOAPODS: 1.15.2

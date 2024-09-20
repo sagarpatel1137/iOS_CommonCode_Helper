@@ -29,10 +29,9 @@ extension UIViewController
     }
     
     //Subscription
-    public func isSubDiscountAvailable() -> Bool {
+    public func isSubDiscountAvailable(planInfo: SubscriptionConst.PlanInfo) -> Bool {
         
-        let monthPlan = SubscriptionConst.ActivePlans.one_Month
-        if (!Purchase_flag && SubscriptionConst.isGet && !monthPlan.plan_Free_Trail.isFreeTrail && !monthPlan.plan_Promotional_Offer.isPromotionalOffer) {
+        if (!Purchase_flag && SubscriptionConst.isGet && !planInfo.plan_Free_Trail.isFreeTrail && !planInfo.plan_Promotional_Offer.isPromotionalOffer) {
             return true
         } else {
             return false
@@ -62,4 +61,3 @@ extension UIViewController
         self.present(alertVC, animated: true, completion: nil)
     }
 }
-

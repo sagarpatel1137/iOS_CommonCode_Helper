@@ -8,15 +8,6 @@
 import GoogleMobileAds
 import Alamofire
 
-public enum GADAdTYPE
-{
-    case banner_Native
-    case full_Native
-    case custom_Native
-    
-    case adptive_Banner
-}
-
 public class GoogleAd_Manager : NSObject {
 
     //MARK: - Public
@@ -25,24 +16,13 @@ public class GoogleAd_Manager : NSObject {
     public var isAdClickedAndRedirected = false
     
     //MARK: - Private
-    private var Collapsible_Banner_ID = ""
+    private var Splash_Banner_ID = ""
     private var Banner_ID = ""
     private var Int_ID = ""
     private var Native_ID = ""
     private var Rewarded_ID = ""
     private var RewardedInt_ID = ""
     private var AppOpen_ID = ""
-    
-    //Collapsible BannerAd
-    private var collapsibleBannerViewAd : GADBannerView!
-    private var isRequeSendForLoad_CollapsibleBannerAd = false
-    private var collapsibleBannerAd_present : (() -> Void)?
-    private var isCollapsibleBannerAdLoaded = false
-    
-    //Adaptive BannerAd
-    private var bannerViewAd : GADBannerView!
-    private var bannerAd_present : (() -> Void)?
-    private var isBannerAdLoaded = false
     
     //Interstitial Ad
     private var interstitialAd : GADInterstitialAd!
@@ -78,8 +58,14 @@ public class GoogleAd_Manager : NSObject {
     private var appOpenAd_DidDismiss : (() -> Void)?
     private var appOpenAd_DidFailToPresent : ((String) -> Void)?
     
+    //Adaptive BannerAd
+    private var bannerViewAd : GADBannerView!
+    private var bannerAd_present : (() -> Void)?
+    private var isBannerAdLoaded = false
+    
     //Native Ad
     public var native_Ad : GADNativeAd!
+    public var nativeAdColors : NativeAdColors = NativeAdColors(bgColor: "FFFFFF", themeColor: "CDCDCD", bodyColor: "787878", btnTitleColor: "000000")
     private var nativeAd_Loader: GADAdLoader!
     private var isLoadedNativeAd = false
     private var isRequeSendForLoad_NativeAd = false
@@ -93,15 +79,19 @@ public class GoogleAd_Manager : NSObject {
 //MARK: - Initialise
 extension GoogleAd_Manager
 {
-    public func initialiseGoogleAds(collapsibleBannerAd : String = "", bannerAd: String = "", intAd: String = "", nativeAd: String = "", rewardAd: String = "", rewardIntAd: String = "", appOpenAd: String = "", testDevices: [String] = []) {
+    public func initialiseGoogleAds(splashBannerAd : String = "",
+                                    bannerAd: String = "",
+                                    intAd: String = "",
+                                    nativeAd: String = "",
+                                    rewardAd: String = "",
+                                    rewardIntAd: String = "",
+                                    appOpenAd: String = "",
+                                    testDevices: [String] = [])
+    {
         
         GADMobileAds.sharedInstance().start(completionHandler: nil)
         GADMobileAds.sharedInstance().requestConfiguration.testDeviceIdentifiers = testDevices
         
-        if collapsibleBannerAd != "" {
-            Collapsible_Banner_ID = collapsibleBannerAd
-            load_CollapsibleBannerAd()
-        }
         if bannerAd != "" {
             Banner_ID = bannerAd
             load_BannerAd()
@@ -147,36 +137,40 @@ extension GoogleAd_Manager
 //MARK: - Ad Show
 extension GoogleAd_Manager
 {
-    public func funShowCollapsibleBannerAd(parentView: UIView)
+    public func funShowBannerAd(parentView: UIView, loaderType: LoaderType = .AdsByDeveloper, adByDeveloperTextColor: UIColor? = nil, customLoader: UIView? = nil)
     {
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.0) { [self] in
             
+            
             if !Purchase_flag {
-                
-                if isCollapsibleBannerAdLoaded {
-                    if collapsibleBannerAd_present != nil {
-                        collapsibleBannerAd_present!()
+            
+                switch loaderType {
+                case .Shimmer:
+                    parentView.addShimmerViewForAdType(adType: .banner_Adaptive)
+                case .AdsByDeveloper:
+                    parentView.addAdByDeveloperViewForAd(isForBannerAd: true, textColor: adByDeveloperTextColor ?? hexStringToUIColor(hex: "DDDDDD"))
+                case .Custom:
+                    if let loader = customLoader {
+                        parentView.addSubview(loader)
+                    } else {
+                        fatalError("Vasundhara 🏢 - Google Banner Ad : customLoader View Missing.")
                     }
-                    parentView.addSubview(collapsibleBannerViewAd)
                 }
-                else {
-                    load_CollapsibleBannerAd()
-                    parentView.addSubview(collapsibleBannerViewAd)
-                }
-            }
-        }
-    }
-
-    public func funShowBannerAd(parentView: UIView)
-    {
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.0) { [self] in
-            
-            if !Purchase_flag {
                 
-                parentView.addShimmerViewForAdType(adType: .adptive_Banner)
                 if isBannerAdLoaded {
                     if bannerAd_present != nil {
-                        parentView.removeShimmerViewForAdType()
+                        DispatchQueue.main.async {
+                            switch loaderType {
+                            case .Shimmer:
+                                parentView.removeShimmerViewForAdType()
+                            case .AdsByDeveloper:
+                                parentView.removeAdByDeveloperViewForAd()
+                            case .Custom:
+                                if let loader = customLoader {
+                                    loader.removeFromSuperview()
+                                }
+                            }
+                        }
                         bannerAd_present!()
                     }
                     parentView.addSubview(bannerViewAd)
@@ -184,13 +178,25 @@ extension GoogleAd_Manager
                 else {
                     load_BannerAd()
                     bannerAd_present = {
-                        parentView.removeShimmerViewForAdType()
+                        DispatchQueue.main.async {
+                            switch loaderType {
+                            case .Shimmer:
+                                parentView.removeShimmerViewForAdType()
+                            case .AdsByDeveloper:
+                                parentView.removeAdByDeveloperViewForAd()
+                            case .Custom:
+                                if let loader = customLoader {
+                                    loader.removeFromSuperview()
+                                }
+                            }
+                        }
                     }
                     parentView.addSubview(bannerViewAd)
                 }
             }
         }
     }
+    
     
     public func funShowInterstitialAd(rootVC: UIViewController, isWaitUntillShow: Bool = false, isPresentAd : @escaping ((Bool) -> Void),adDidDismiss : @escaping (() -> Void),didFailToPresent : @escaping ((String) -> Void))
     {
@@ -290,15 +296,23 @@ extension GoogleAd_Manager
         }
     }
     
-    public func funShowNativeAd(adType : GADAdTYPE, parentView: UIView, shimerView : Shimmer_View? = nil, nativeAdView: GADNativeAdView? = nil, isAdShown : @escaping ((Bool) -> Void), isClick : @escaping (() -> Void), isNewLoad : @escaping (() -> Void))
+    public func funShowNativeAd(adType : GADAdTYPE, parentView: UIView, isLoadNewAd : Bool = false, nativeAdColors: NativeAdColors = NativeAdColors(), nativeAdView: GADNativeAdView? = nil, loaderType: LoaderType = .AdsByDeveloper, shimerView : Shimmer_View? = nil, adByDeveloperTextColor: UIColor? = nil, customLoader: UIView? = nil, isAdShown : @escaping ((Bool) -> Void), isClick : @escaping (() -> Void), isNewLoad : @escaping (() -> Void))
     {
-        var adtype = adType
-        
-        if adtype == .custom_Native && (shimerView == nil && nativeAdView == nil) {
-            adtype = .full_Native
+        if isLoadNewAd {
+            isLoadedNativeAd = false
+            load_NativeAd()
         }
         
-        if adtype != .custom_Native {
+        if adType == .custom_Native {
+            if nativeAdView == nil {
+                fatalError("Vasundhara 🏢 - Google Native Ad : Custom nativeAdView Missing.")
+            }
+            if shimerView == nil && loaderType == .Shimmer {
+                fatalError("Vasundhara 🏢 - Google Native Ad : Custom shimerView Missing.")
+            }
+        }
+        
+        if adType != .custom_Native {
             parentView.backgroundColor = .clear
             parentView.layer.shadowColor = UIColor.darkGray.cgColor
             parentView.layer.shadowRadius = 3
@@ -306,23 +320,51 @@ extension GoogleAd_Manager
             parentView.layer.shadowOffset = CGSize(width: 0, height: 1)
             parentView.layer.masksToBounds = false
             parentView.layer.cornerRadius = UIDevice.current.isiPhone ? 10:15
-            parentView.addShimmerViewForAdType(adType: adtype)
         }
-        else {
-            parentView.addCustomShimmerViewForAd(adShimmerView: shimerView!)
+        
+        DispatchQueue.main.async {
+            switch loaderType {
+            case .Shimmer:
+                if adType == .custom_Native {
+                    parentView.addCustomShimmerViewForAd(adShimmerView: shimerView!)
+                } else {
+                    parentView.addShimmerViewForAdType(adType: adType)
+                }
+            case .AdsByDeveloper:
+                parentView.addAdByDeveloperViewForAd(isForBannerAd: false, textColor: adByDeveloperTextColor ?? hexStringToUIColor(hex: "DDDDDD"))
+            case .Custom:
+                if let loader = customLoader {
+                    parentView.addSubview(loader)
+                } else {
+                    fatalError("Vasundhara 🏢 - Google Native Ad : customLoader View Missing.")
+                }
+            }
         }
         
         if Reachability.isConnectedToNetwork()
         {
             DispatchQueue.main.asyncAfter(deadline: .now() + 1){[self] in
+                
+                //Remove Loader View
+                switch loaderType {
+                case .Shimmer:
+                    parentView.removeShimmerViewForAdType()
+                case .AdsByDeveloper:
+                    parentView.removeAdByDeveloperViewForAd()
+                case .Custom:
+                    if let loader = customLoader {
+                        loader.removeFromSuperview()
+                    }
+                }
+                
                 if self.isLoadedNativeAd {
-                    if adtype == .custom_Native {
+                    if adType == .custom_Native {
                         parentView.setup_NativeCustomAdView(adView: nativeAdView!) {
                             isAdShown(true)
                         }
                     }
                     else {
-                        parentView.setup_NativeAdView(adType: adtype) {
+                        parentView.setup_NativeAdView(adType: adType, adColor: nativeAdColors) {
                             isAdShown(true)
                         }
                     }
@@ -330,13 +372,13 @@ extension GoogleAd_Manager
                 }
                 else {
                     self.nativeAd_LoadDone = {
-                        if adtype == .custom_Native {
+                        if adType == .custom_Native {
                             parentView.setup_NativeCustomAdView(adView: nativeAdView!) {
                                 isAdShown(true)
                             }
                         }
                         else {
-                            parentView.setup_NativeAdView(adType: adtype) {
+                            parentView.setup_NativeAdView(adType: adType, adColor: nativeAdColors) {
                                 isAdShown(true)
                             }
                         }
@@ -366,9 +408,6 @@ extension GoogleAd_Manager
             if let isNetworkReachable = reachabilityManager?.isReachable,
                isNetworkReachable == true
             {
-                if (collapsibleBannerViewAd != nil && Collapsible_Banner_ID != "") {
-                    load_CollapsibleBannerAd()
-                }
                 if (bannerViewAd != nil && Banner_ID != "") {
                     load_BannerAd()
                 }
@@ -395,30 +434,6 @@ extension GoogleAd_Manager
 // MARK: - GADBannerAd
 extension GoogleAd_Manager
 {
-    private func load_CollapsibleBannerAd()
-    {
-        if Collapsible_Banner_ID == "" {
-            fatalError("Vasundhara 🏢 - Google Ad : CollapsibleBannerAd Id Not Initialise Properly.")
-        }
-        
-        if !Purchase_flag && !isCollapsibleBannerAdLoaded && !isRequeSendForLoad_CollapsibleBannerAd {
-            
-            isRequeSendForLoad_CollapsibleBannerAd = true
-            collapsibleBannerViewAd = GADBannerView()
-            collapsibleBannerViewAd.delegate = self
-            collapsibleBannerViewAd.adUnitID = Collapsible_Banner_ID
-            collapsibleBannerViewAd.rootViewController = funGetTopViewController()
-            collapsibleBannerViewAd.adSize = GADCurrentOrientationAnchoredAdaptiveBannerAdSizeWithWidth(UIScreen.main.bounds.width)
-            
-            let request = GADRequest()
-            let extras = GADExtras()
-            extras.additionalParameters = ["collapsible" : "bottom"]
-            request.register(extras)
-            
-            collapsibleBannerViewAd.load(request)
-        }
-    }
-    
     private func load_BannerAd()
     {
         if Banner_ID == "" {
@@ -622,32 +637,18 @@ extension GoogleAd_Manager : GADBannerViewDelegate
     }
     
     public func bannerViewDidReceiveAd(_ bannerView: GADBannerView) {
+        
         if !Purchase_flag {
-            if bannerView.isCollapsible {
-                isRequeSendForLoad_CollapsibleBannerAd = false
-                collapsibleBannerViewAd = bannerView
-                isCollapsibleBannerAdLoaded = true
-                if collapsibleBannerAd_present != nil {
-                    collapsibleBannerAd_present!()
-                }
-            }
-            else {
-                bannerViewAd = bannerView
-                isBannerAdLoaded = true
-                if bannerAd_present != nil {
-                    bannerAd_present!()
-                }
+            bannerViewAd = bannerView
+            isBannerAdLoaded = true
+            if bannerAd_present != nil {
+                bannerAd_present!()
             }
         }
     }
     
     public func bannerView(_ bannerView: GADBannerView, didFailToReceiveAdWithError error: Error) {
-        if bannerView.isCollapsible {
-            isRequeSendForLoad_CollapsibleBannerAd = false
-            load_CollapsibleBannerAd()
-        } else {
-            load_BannerAd()
-        }
+        load_BannerAd()
     }
 }
 
@@ -789,7 +790,7 @@ extension GoogleAd_Manager : GADNativeAdDelegate
 //MARK: -
 extension UIView
 {
-    fileprivate func setup_NativeAdView(adType : GADAdTYPE,_ isAdShown : (() -> Void))
+    fileprivate func setup_NativeAdView(adType : GADAdTYPE, adColor: NativeAdColors,_ isAdShown : (() -> Void))
     {
         let tempNIBName = adType == .banner_Native ? "NativeBannerAd" : "NativeAd"
         
@@ -805,18 +806,17 @@ extension UIView
         
         let viewDictionary = ["_nativeAdView": adView]
         self.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|[_nativeAdView]|",
-                                                           options: NSLayoutConstraint.FormatOptions(rawValue: 0), metrics: nil, views: viewDictionary))
+                                                                options: NSLayoutConstraint.FormatOptions(rawValue: 0), metrics: nil, views: viewDictionary))
         self.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|[_nativeAdView]|",
-                                                           options: NSLayoutConstraint.FormatOptions(rawValue: 0), metrics: nil, views: viewDictionary))
+                                                                options: NSLayoutConstraint.FormatOptions(rawValue: 0), metrics: nil, views: viewDictionary))
         if adType == .banner_Native {
-            adView.set_NativeBanner()
+            adView.set_NativeBanner(adColor: adColor)
             isAdShown()
         }
         else if adType == .full_Native {
-            adView.set_NativeFull()
+            adView.set_NativeFull(adColor: adColor)
             isAdShown()
         }
-        self.removeShimmerViewForAdType()
     }
     
     fileprivate func setup_NativeCustomAdView(adView : GADNativeAdView,_ isAdShown : (() -> Void))
@@ -832,19 +832,18 @@ extension UIView
         
         let viewDictionary = ["_nativeAdView": adView]
         self.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|[_nativeAdView]|",
-                                                           options: NSLayoutConstraint.FormatOptions(rawValue: 0), metrics: nil, views: viewDictionary))
+                                                                options: NSLayoutConstraint.FormatOptions(rawValue: 0), metrics: nil, views: viewDictionary))
         self.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|[_nativeAdView]|",
-                                                           options: NSLayoutConstraint.FormatOptions(rawValue: 0), metrics: nil, views: viewDictionary))
-        adView.set_NativeFull()
+                                                                options: NSLayoutConstraint.FormatOptions(rawValue: 0), metrics: nil, views: viewDictionary))
+        adView.set_NativeFull(adColor: nil)
         isAdShown()
-        self.removeShimmerViewForAdType()
     }
 }
 
 //MARK: -
 extension GADNativeAdView{
     
-    fileprivate func set_NativeFull()
+    fileprivate func set_NativeFull(adColor: NativeAdColors?)
     {
         let nativeAd =  GoogleAd_Manager.shared.native_Ad!
         
@@ -870,10 +869,31 @@ extension GADNativeAdView{
         
         self.callToActionView?.isUserInteractionEnabled = false
         
+        if let colors = adColor {
+            DispatchQueue.main.async {
+                self.backgroundColor = hexStringToUIColor(hex: colors.background)
+                (self.headlineView as? UILabel)?.textColor = hexStringToUIColor(hex: colors.theme)
+                (self.bodyView as? UILabel)?.textColor = hexStringToUIColor(hex: colors.body)
+                (self.storeView as? UILabel)?.textColor = hexStringToUIColor(hex: colors.body)
+                (self.priceView as? UILabel)?.textColor = hexStringToUIColor(hex: colors.body)
+                (self.advertiserView as? UILabel)?.textColor = hexStringToUIColor(hex: colors.body)
+                
+                (self.callToActionView as? UIButton)?.backgroundColor = hexStringToUIColor(hex: colors.theme)
+                (self.callToActionView as? UIButton)?.titleLabel?.textColor = hexStringToUIColor(hex: colors.btnTitle)
+                
+                if let adView = self.viewWithTag(2000) {
+                    adView.backgroundColor = hexStringToUIColor(hex: colors.theme)
+                    if let lblAd = self.viewWithTag(2001) as? UILabel {
+                        lblAd.textColor = hexStringToUIColor(hex: colors.btnTitle)
+                    }
+                }
+            }
+        }
+        
         self.nativeAd = nativeAd
     }
     
-    fileprivate func set_NativeBanner()
+    fileprivate func set_NativeBanner(adColor: NativeAdColors)
     {
         let nativeAd = GoogleAd_Manager.shared.native_Ad!
                 
@@ -897,6 +917,25 @@ extension GADNativeAdView{
         self.advertiserView?.isHidden = nativeAd.advertiser == nil
         
         self.callToActionView?.isUserInteractionEnabled = false
+        
+        DispatchQueue.main.async {
+            self.backgroundColor = hexStringToUIColor(hex: adColor.background)
+            (self.headlineView as? UILabel)?.textColor = hexStringToUIColor(hex: adColor.theme)
+            (self.bodyView as? UILabel)?.textColor = hexStringToUIColor(hex: adColor.body)
+            (self.storeView as? UILabel)?.textColor = hexStringToUIColor(hex: adColor.body)
+            (self.priceView as? UILabel)?.textColor = hexStringToUIColor(hex: adColor.body)
+            (self.advertiserView as? UILabel)?.textColor = hexStringToUIColor(hex: adColor.body)
+            
+            (self.callToActionView as? UIButton)?.backgroundColor = hexStringToUIColor(hex: adColor.theme)
+            (self.callToActionView as? UIButton)?.titleLabel?.textColor = hexStringToUIColor(hex: adColor.btnTitle)
+            
+            if let adView = self.viewWithTag(2000) {
+                adView.backgroundColor = hexStringToUIColor(hex: adColor.theme)
+                if let lblAd = self.viewWithTag(2001) as? UILabel {
+                    lblAd.textColor = hexStringToUIColor(hex: adColor.btnTitle)
+                }
+            }
+        }
         
         self.nativeAd = nativeAd
     }
@@ -936,3 +975,4 @@ extension GADNativeAdView{
         }
     }
 }
+
