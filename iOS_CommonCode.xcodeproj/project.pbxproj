@@ -16,7 +16,6 @@
 		817D301D2C8AC5E300AB455C /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 817D301C2C8AC5E300AB455C /* String+Extension.swift */; };
 		817D30332C8AC6C600AB455C /* UIWindow+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 817D30322C8AC6C600AB455C /* UIWindow+Extension.swift */; };
 		817DCDF72C6F0A4C004BA1C2 /* GoogleMobileAdsConsent_Manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 817DCDF62C6F0A4C004BA1C2 /* GoogleMobileAdsConsent_Manager.swift */; };
-		81A089BE2C9D397A0091CFB3 /* NSString+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A089BD2C9D397A0091CFB3 /* NSString+Extension.swift */; };
 		81A089C42C9D39A60091CFB3 /* Shimmer_NativeBannerAd.xib in Resources */ = {isa = PBXBuildFile; fileRef = 81A089C22C9D39A60091CFB3 /* Shimmer_NativeBannerAd.xib */; };
 		81A089C52C9D39A60091CFB3 /* Shimmer_FullNative.xib in Resources */ = {isa = PBXBuildFile; fileRef = 81A089C12C9D39A60091CFB3 /* Shimmer_FullNative.xib */; };
 		81A089C62C9D39A60091CFB3 /* Shimmer_Adptiv_Banner.xib in Resources */ = {isa = PBXBuildFile; fileRef = 81A089C32C9D39A60091CFB3 /* Shimmer_Adptiv_Banner.xib */; };
@@ -75,7 +74,6 @@
 		817D301C2C8AC5E300AB455C /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		817D30322C8AC6C600AB455C /* UIWindow+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIWindow+Extension.swift"; sourceTree = "<group>"; };
 		817DCDF62C6F0A4C004BA1C2 /* GoogleMobileAdsConsent_Manager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleMobileAdsConsent_Manager.swift; sourceTree = "<group>"; };
-		81A089BD2C9D397A0091CFB3 /* NSString+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSString+Extension.swift"; sourceTree = "<group>"; };
 		81A089BF2C9D39A60091CFB3 /* CustomShimmer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomShimmer.swift; sourceTree = "<group>"; };
 		81A089C02C9D39A60091CFB3 /* Shimmer_View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shimmer_View.swift; sourceTree = "<group>"; };
 		81A089C12C9D39A60091CFB3 /* Shimmer_FullNative.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Shimmer_FullNative.xib; sourceTree = "<group>"; };
@@ -300,7 +298,6 @@
 				81CAB6012C6E20DB0050F848 /* UIViewController+Extension.swift */,
 				81BA8B082C88376E00F8A3C5 /* UIView+Extension.swift */,
 				817D301C2C8AC5E300AB455C /* String+Extension.swift */,
-				81A089BD2C9D397A0091CFB3 /* NSString+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -468,7 +465,6 @@
 				81A089D02C9D3BB50091CFB3 /* GoogleAd_Manager.swift in Sources */,
 				81BA8AF12C881BE100F8A3C5 /* Constant_Function.swift in Sources */,
 				81CAB5F42C6DF2AB0050F848 /* AppFlyer_Manager.swift in Sources */,
-				81A089BE2C9D397A0091CFB3 /* NSString+Extension.swift in Sources */,
 				81CAB5F62C6DF2BF0050F848 /* AppMetrica_Manager.swift in Sources */,
 				8121DD852C621A66003460A5 /* ForceUpdate_Manager.swift in Sources */,
 				81CAB5FD2C6DF4FF0050F848 /* UIDevice+Extension.swift in Sources */,
