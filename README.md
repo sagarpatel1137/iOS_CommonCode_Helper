@@ -382,7 +382,10 @@ GoogleAd_Manager.shared.funShowBannerAd(parentView: viewBanner, loaderType: .Shi
 ```groovy
 GoogleAd_Manager.shared.funShowBannerAd(parentView: viewBanner, loaderType: .Custom, customLoader: `CUSTOM_VIEW`)
 ```
-
+- Height of Adaptive Banner Ad
+```groovy
+let AdHeight = GoogleAd_Manager.shared.funGetAdaptiveBannerHeight()
+```
 
 4. Native Ad
 ```groovy
