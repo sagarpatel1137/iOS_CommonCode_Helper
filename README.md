@@ -119,7 +119,7 @@ AppFlyer_Manager.shared.initialize(withAppID: YOUR_APP_ID, appsFlyerKey: APPFLYE
 ```groovy
 RevenueCat_Manager.shared.initialiseRevenueCat(APIKey: REVENUECAT_ID, productIds: nil)
 ```
-2. If you want which offer you get from revenucat need to pass product Ids while initilise
+2. If you want which offer you get from revenucat need to pass product Ids while initialise
 ```groovy
 let ids = SubscriptionProductIds(offer1_oneWeek: "com.subscription.week",
                                  offer1_oneMonth: "com.subscription.month",
@@ -163,7 +163,7 @@ RevenueCat_Manager.shared.restoreProduct { (state, info, error) in
     <#code#>
 }
 ```
-6. Variables
+6. Variables that you might need...😊
 - IsPurchase or Not - `Purchase_Flag`
 - IsPriceGet or Not - `SubscriptionConst.isGet`
 - Active Plans - `SubscriptionConst.ActivePlans`
@@ -175,183 +175,183 @@ RevenueCat_Manager.shared.restoreProduct { (state, info, error) in
 ## Google Ads
 1. Add Into `Info.plist`
 ```groovy
-        <key>GADApplicationIdentifier</key>
-	<string>ca-app-pub-3940256099942544~1458002511</string>
-	<key>GADNativeAdValidatorEnabled</key>
-	<false/>
-	<key>ITSAppUsesNonExemptEncryption</key>
-	<false/>
-	<key>SKAdNetworkItems</key>
-	<array>
-		<dict>
-			<key>SKAdNetworkIdentifier</key>
-			<string>cstr6suwn9.skadnetwork</string>
-		</dict>
-		<dict>
-			<key>SKAdNetworkIdentifier</key>
-			<string>4fzdc2evr5.skadnetwork</string>
-		</dict>
-		<dict>
-			<key>SKAdNetworkIdentifier</key>
-			<string>2fnua5tdw4.skadnetwork</string>
-		</dict>
-		<dict>
-			<key>SKAdNetworkIdentifier</key>
-			<string>ydx93a7ass.skadnetwork</string>
-		</dict>
-		<dict>
-			<key>SKAdNetworkIdentifier</key>
-			<string>p78axxw29g.skadnetwork</string>
-		</dict>
-		<dict>
-			<key>SKAdNetworkIdentifier</key>
-			<string>v72qych5uu.skadnetwork</string>
-		</dict>
-		<dict>
-			<key>SKAdNetworkIdentifier</key>
-			<string>ludvb6z3bs.skadnetwork</string>
-		</dict>
-		<dict>
-			<key>SKAdNetworkIdentifier</key>
-			<string>cp8zw746q7.skadnetwork</string>
-		</dict>
-		<dict>
-			<key>SKAdNetworkIdentifier</key>
-			<string>3sh42y64q3.skadnetwork</string>
-		</dict>
-		<dict>
-			<key>SKAdNetworkIdentifier</key>
-			<string>c6k4g5qg8m.skadnetwork</string>
-		</dict>
-		<dict>
-			<key>SKAdNetworkIdentifier</key>
-			<string>s39g8k73mm.skadnetwork</string>
-		</dict>
-		<dict>
-			<key>SKAdNetworkIdentifier</key>
-			<string>3qy4746246.skadnetwork</string>
-		</dict>
-		<dict>
-			<key>SKAdNetworkIdentifier</key>
-			<string>hs6bdukanm.skadnetwork</string>
-		</dict>
-		<dict>
-			<key>SKAdNetworkIdentifier</key>
-			<string>mlmmfzh3r3.skadnetwork</string>
-		</dict>
-		<dict>
-			<key>SKAdNetworkIdentifier</key>
-			<string>v4nxqhlyqp.skadnetwork</string>
-		</dict>
-		<dict>
-			<key>SKAdNetworkIdentifier</key>
-			<string>wzmmz9fp6w.skadnetwork</string>
-		</dict>
-		<dict>
-			<key>SKAdNetworkIdentifier</key>
-			<string>su67r6k2v3.skadnetwork</string>
-		</dict>
-		<dict>
-			<key>SKAdNetworkIdentifier</key>
-			<string>yclnxrl5pm.skadnetwork</string>
-		</dict>
-		<dict>
-			<key>SKAdNetworkIdentifier</key>
-			<string>7ug5zh24hu.skadnetwork</string>
-		</dict>
-		<dict>
-			<key>SKAdNetworkIdentifier</key>
-			<string>gta9lk7p23.skadnetwork</string>
-		</dict>
-		<dict>
-			<key>SKAdNetworkIdentifier</key>
-			<string>vutu7akeur.skadnetwork</string>
-		</dict>
-		<dict>
-			<key>SKAdNetworkIdentifier</key>
-			<string>y5ghdn5j9k.skadnetwork</string>
-		</dict>
-		<dict>
-			<key>SKAdNetworkIdentifier</key>
-			<string>v9wttpbfk9.skadnetwork</string>
-		</dict>
-		<dict>
-			<key>SKAdNetworkIdentifier</key>
-			<string>n38lu8286q.skadnetwork</string>
-		</dict>
-		<dict>
-			<key>SKAdNetworkIdentifier</key>
-			<string>47vhws6wlr.skadnetwork</string>
-		</dict>
-		<dict>
-			<key>SKAdNetworkIdentifier</key>
-			<string>kbd757ywx3.skadnetwork</string>
-		</dict>
-		<dict>
-			<key>SKAdNetworkIdentifier</key>
-			<string>9t245vhmpl.skadnetwork</string>
-		</dict>
-		<dict>
-			<key>SKAdNetworkIdentifier</key>
-			<string>a2p9lx4jpn.skadnetwork</string>
-		</dict>
-		<dict>
-			<key>SKAdNetworkIdentifier</key>
-			<string>22mmun2rn5.skadnetwork</string>
-		</dict>
-		<dict>
-			<key>SKAdNetworkIdentifier</key>
-			<string>4468km3ulz.skadnetwork</string>
-		</dict>
-		<dict>
-			<key>SKAdNetworkIdentifier</key>
-			<string>2u9pt9hc89.skadnetwork</string>
-		</dict>
-		<dict>
-			<key>SKAdNetworkIdentifier</key>
-			<string>8s468mfl3y.skadnetwork</string>
-		</dict>
-		<dict>
-			<key>SKAdNetworkIdentifier</key>
-			<string>ppxm28t8ap.skadnetwork</string>
-		</dict>
-		<dict>
-			<key>SKAdNetworkIdentifier</key>
-			<string>uw77j35x4d.skadnetwork</string>
-		</dict>
-		<dict>
-			<key>SKAdNetworkIdentifier</key>
-			<string>pwa73g5rt2.skadnetwork</string>
-		</dict>
-		<dict>
-			<key>SKAdNetworkIdentifier</key>
-			<string>578prtvx9j.skadnetwork</string>
-		</dict>
-		<dict>
-			<key>SKAdNetworkIdentifier</key>
-			<string>4dzt52r2t5.skadnetwork</string>
-		</dict>
-		<dict>
-			<key>SKAdNetworkIdentifier</key>
-			<string>Tl55sbb4fm.skadnetwork</string>
-		</dict>
-		<dict>
-			<key>SKAdNetworkIdentifier</key>
-			<string>e5fvkxwrpn.skadnetwork</string>
-		</dict>
-		<dict>
-			<key>SKAdNetworkIdentifier</key>
-			<string>8c4e2ghe7u.skadnetwork</string>
-		</dict>
-		<dict>
-			<key>SKAdNetworkIdentifier</key>
-			<string>3rd42ekr43.skadnetwork</string>
-		</dict>
-		<dict>
-			<key>SKAdNetworkIdentifier</key>
-			<string>3qcr597p9d.skadnetwork</string>
-		</dict>
-	</array>
+<key>GADApplicationIdentifier</key>
+<string>ca-app-pub-3940256099942544~1458002511</string>
+<key>GADNativeAdValidatorEnabled</key>
+<false/>
+<key>ITSAppUsesNonExemptEncryption</key>
+<false/>
+<key>SKAdNetworkItems</key>
+<array>
+	<dict>
+		<key>SKAdNetworkIdentifier</key>
+           	<string>cstr6suwn9.skadnetwork</string>
+	</dict>
+	<dict>
+	   	<key>SKAdNetworkIdentifier</key>
+	   	<string>4fzdc2evr5.skadnetwork</string>
+	</dict>
+	<dict>
+	   	<key>SKAdNetworkIdentifier</key>
+	   	<string>2fnua5tdw4.skadnetwork</string>
+	</dict>
+	<dict>
+	   	<key>SKAdNetworkIdentifier</key>
+	   	<string>ydx93a7ass.skadnetwork</string>
+	</dict>
+	<dict>
+	   	<key>SKAdNetworkIdentifier</key>
+	   	<string>p78axxw29g.skadnetwork</string>
+	</dict>
+	<dict>
+	   	<key>SKAdNetworkIdentifier</key>
+   	   	<string>v72qych5uu.skadnetwork</string>
+	</dict>
+	<dict>
+		<key>SKAdNetworkIdentifier</key>
+		<string>ludvb6z3bs.skadnetwork</string>
+	</dict>
+	<dict>
+		<key>SKAdNetworkIdentifier</key>
+		<string>cp8zw746q7.skadnetwork</string>
+	</dict>
+	<dict>
+		<key>SKAdNetworkIdentifier</key>
+		<string>3sh42y64q3.skadnetwork</string>
+	</dict>
+	<dict>
+		<key>SKAdNetworkIdentifier</key>
+		<string>c6k4g5qg8m.skadnetwork</string>
+	</dict>
+	<dict>
+		<key>SKAdNetworkIdentifier</key>
+		<string>s39g8k73mm.skadnetwork</string>
+	</dict>
+	<dict>
+		<key>SKAdNetworkIdentifier</key>
+		<string>3qy4746246.skadnetwork</string>
+	</dict>
+	<dict>
+		<key>SKAdNetworkIdentifier</key>
+		<string>hs6bdukanm.skadnetwork</string>
+	</dict>
+	<dict>
+		<key>SKAdNetworkIdentifier</key>
+		<string>mlmmfzh3r3.skadnetwork</string>
+	</dict>
+	<dict>
+		<key>SKAdNetworkIdentifier</key>
+		<string>v4nxqhlyqp.skadnetwork</string>
+	</dict>
+	<dict>
+		<key>SKAdNetworkIdentifier</key>
+		<string>wzmmz9fp6w.skadnetwork</string>
+	</dict>
+	<dict>
+		<key>SKAdNetworkIdentifier</key>
+		<string>su67r6k2v3.skadnetwork</string>
+	</dict>
+	<dict>
+		<key>SKAdNetworkIdentifier</key>
+		<string>yclnxrl5pm.skadnetwork</string>
+	</dict>
+	<dict>
+		<key>SKAdNetworkIdentifier</key>
+		<string>7ug5zh24hu.skadnetwork</string>
+	</dict>
+	<dict>
+		<key>SKAdNetworkIdentifier</key>
+		<string>gta9lk7p23.skadnetwork</string>
+	</dict>
+	<dict>
+		<key>SKAdNetworkIdentifier</key>
+		<string>vutu7akeur.skadnetwork</string>
+	</dict>
+	<dict>
+		<key>SKAdNetworkIdentifier</key>
+		<string>y5ghdn5j9k.skadnetwork</string>
+	</dict>
+	<dict>
+		<key>SKAdNetworkIdentifier</key>
+		<string>v9wttpbfk9.skadnetwork</string>
+	</dict>
+	<dict>
+		<key>SKAdNetworkIdentifier</key>
+		<string>n38lu8286q.skadnetwork</string>
+	</dict>
+	<dict>
+		<key>SKAdNetworkIdentifier</key>
+		<string>47vhws6wlr.skadnetwork</string>
+	</dict>
+	<dict>
+		<key>SKAdNetworkIdentifier</key>
+		<string>kbd757ywx3.skadnetwork</string>
+	</dict>
+	<dict>
+		<key>SKAdNetworkIdentifier</key>
+		<string>9t245vhmpl.skadnetwork</string>
+	</dict>
+	<dict>
+		<key>SKAdNetworkIdentifier</key>
+		<string>a2p9lx4jpn.skadnetwork</string>
+	</dict>
+	<dict>
+		<key>SKAdNetworkIdentifier</key>
+		<string>22mmun2rn5.skadnetwork</string>
+	</dict>
+	<dict>
+		<key>SKAdNetworkIdentifier</key>
+		<string>4468km3ulz.skadnetwork</string>
+	</dict>
+	<dict>
+		<key>SKAdNetworkIdentifier</key>
+		<string>2u9pt9hc89.skadnetwork</string>
+	</dict>
+	<dict>
+		<key>SKAdNetworkIdentifier</key>
+		<string>8s468mfl3y.skadnetwork</string>
+	</dict>
+	<dict>
+		<key>SKAdNetworkIdentifier</key>
+		<string>ppxm28t8ap.skadnetwork</string>
+	</dict>
+	<dict>
+		<key>SKAdNetworkIdentifier</key>
+		<string>uw77j35x4d.skadnetwork</string>
+	</dict>
+	<dict>
+		<key>SKAdNetworkIdentifier</key>
+		<string>pwa73g5rt2.skadnetwork</string>
+	</dict>
+	<dict>
+		<key>SKAdNetworkIdentifier</key>
+		<string>578prtvx9j.skadnetwork</string>
+	</dict>
+	<dict>
+		<key>SKAdNetworkIdentifier</key>
+		<string>4dzt52r2t5.skadnetwork</string>
+	</dict>
+	<dict>
+		<key>SKAdNetworkIdentifier</key>
+		<string>Tl55sbb4fm.skadnetwork</string>
+	</dict>
+	<dict>
+		<key>SKAdNetworkIdentifier</key>
+		<string>e5fvkxwrpn.skadnetwork</string>
+	</dict>
+	<dict>
+		<key>SKAdNetworkIdentifier</key>
+		<string>8c4e2ghe7u.skadnetwork</string>
+	</dict>
+	<dict>
+		<key>SKAdNetworkIdentifier</key>
+		<string>3rd42ekr43.skadnetwork</string>
+	</dict>
+	<dict>
+		<key>SKAdNetworkIdentifier</key>
+		<string>3qcr597p9d.skadnetwork</string>
+	</dict>
+</array>
 ```
 
 2. Initialise : Add Into `AppDelegate.swift` after `GDPRConsent` and `ATTtracking Completion` called
@@ -394,8 +394,26 @@ GoogleAd_Manager.shared.funShowNativeAd(adType: .full_Native, parentView: viewNa
     print("Google NativeAd Reload")
 }
 ```
-
-
+- Custom Native Ad
+```groovy
+guard let nibObjects = Bundle.main.loadNibNamed("CustomShimmerView", owner: nil, options: nil),
+	let adShimmerView = nibObjects.first as? Shimmer_View else { return }
+        
+guard let nibObjects = Bundle.main.loadNibNamed("CustomNativeAd", owner: nil, options: nil),
+	let adView = nibObjects.first as? GADNativeAdView else { return }
+        
+GoogleAd_Manager.shared.funShowNativeAd(adType: .custom_Native, parentView: viewNative, nativeAdView: adView, loaderType: .Shimmer, shimerView: adShimmerView) { isAdPresent in
+    print("Google Custom NativeAd Present : \(isAdPresent)")
+} isClick: {
+    print("Google Custom NativeAd Click")
+} isNewLoad: {
+    print("Google Custom NativeAd Reload")
+}
+```
+NOTE :
+- You can use same option as banner ad for loading in native ad also
+- If You Choose Shimmer in Custom Native you need to pass shimmer view also.
+  
 5. Interstitial Ad
 ```groovy
 GoogleAd_Manager.shared.funShowInterstitialAd(rootVC: self) { isAdPresent in
