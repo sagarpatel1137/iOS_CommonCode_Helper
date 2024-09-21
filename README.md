@@ -31,7 +31,7 @@ GoogleMobileAdsConsent_Manager.funGDPRConsent { consentError in
 <key>NSUserTrackingUsageDescription</key>
 <string>This identifier will be used to deliver personalized ads to you.</string>
 ```
-2. Add Below Code in `AppDelegate.swift` file
+2. Add Below Code in `AppDelegate.swift` file, after `GDPRConsent Completion` Called
 ```groovy
 ATTracking_Manager.funRequestTracking {
   //Code
@@ -79,7 +79,48 @@ TikTok_Manager.initialize(withAppId: YOUR_APP_ID, TikTokId: TIKTOK_ID)
 ```groovy
 TikTok_Manager.initialize(withAppId: YOUR_APP_ID, TikTokId: TIKTOK_ID, isDebug: true)
 ```
+3. For TikTok Event
+```groovy
+TikTok_Events.tikTokPurchaseSuccessEvent(plan: PlanInfo)
+```   
+
+## AppFlyer
+1. Add Below Code in `AppDelegate.swift` file
+```groovy
+AppFlyer_Manager.shared.initialize(withAppID: YOUR_APP_ID, appsFlyerKey: APPFLYER_ID)
+```
+2. Add Endpoint into `AppStoreConnect -> Application -> App Information -> App Store Server Notifications`
+
 
 ## RevenueCat
+1. Initialise in `AppDelegate.swift` file
+```groovy
+RevenueCat_Manager.shared.initialiseRevenueCat(APIKey: REVENUECAT_ID, productIds: nil)
+```
+2. If you want which offer you get from revenucat need to pass product Ids while initilise
+```groovy
+let ids = SubscriptionProductIds(offer1_oneWeek: "com.subscription.week",
+                                 offer1_oneMonth: "com.subscription.month",
+                                 offer1_oneYear: "com.subscription.year",
+                                 offer1_oneMonth_Discount: "com.subscription.discount.month",
+                                 offer1_lifeTime: "com.subscription.lifetime",
+                                 offer2_oneWeek: "com.subscription.week.exp",
+                                 offer2_oneMonth: "com.subscription.month.experiment",
+                                 offer2_oneYear: "com.subscription.year.experiment",
+                                 offer2_oneMonth_Discount: "com.subscription.discount.month.exp",
+                                 offer2_lifeTime: "com.subscription.lifetime.exp",
+                                 offer3_oneWeek: "com.subscription.offering3.week",
+                                 offer3_oneMonth: "com.subscription.offering3.month",
+                                 offer3_oneYear: "com.subscription.offering3.year",
+                                 offer3_oneMonth_Discount: "com.subscription.offering3.discount.month",
+                                 offer3_lifeTime: "com.subscription.offering3.lifetime")
+
+RevenueCat_Manager.shared.initialiseRevenueCat(APIKey: REVENUECAT_ID, productIds: ids)
+```
+- varibale for which offer isget `RevenueCat_Manager.shared.isOfferType`
+
+3. 
+4. 
+5. 
 
 ## Google Ads
