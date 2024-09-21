@@ -21,7 +21,7 @@ CocoaPods is the recommended way to add iOS_CommonCode_Helper to your project.
 1. Add Below Code in `AppDelegate.swift` file
 ```groovy
 GoogleMobileAdsConsent_Manager.funGDPRConsent { consentError in
-  //Code
+    <#code#>
 }
 ```
 
@@ -34,7 +34,7 @@ GoogleMobileAdsConsent_Manager.funGDPRConsent { consentError in
 2. Add Below Code in `AppDelegate.swift` file, after `GDPRConsent Completion` Called
 ```groovy
 ATTracking_Manager.funRequestTracking {
-  //Code
+    <#code#>
 }
 ```
 
@@ -117,10 +117,37 @@ let ids = SubscriptionProductIds(offer1_oneWeek: "com.subscription.week",
 
 RevenueCat_Manager.shared.initialiseRevenueCat(APIKey: REVENUECAT_ID, productIds: ids)
 ```
-- varibale for which offer isget `RevenueCat_Manager.shared.isOfferType`
-
-3. 
-4. 
-5. 
+3. Add Below code in `Splash Screen`, to get purchase details and offerings
+```groovy
+RevenueCat_Manager.shared.funCheckForPurchase {
+    <#code#>
+}
+```   
+4. Purchase
+```groovy
+RevenueCat_Manager.shared.purchaseProduct(ProductID: plan_Id) { (state, info, error, isCancel) in
+    <#code#>
+}
+```   
+- With PromotionalOffer
+```groovy
+RevenueCat_Manager.shared.purchaseProductWithPromo(ProductID: plan_Id, promoOffers: promoOffer) { (state, info, error, isCancel) in
+    <#code#>
+}
+```
+5. Restore
+```groovy
+RevenueCat_Manager.shared.restoreProduct { (state, info, error) in
+    <#code#>
+}
+```
+6. Variables
+- IsPurchase or Not - `Purchase_Flag`
+- IsPriceGet or Not - `SubscriptionConst.isGet`
+- Active Plans - `SubscriptionConst.ActivePlans`
+- Payment Type - `SubscriptionConst.PaymentType`
+- Discount Type - `SubscriptionConst.DiscountType`
+- Subscription Type - `SubscriptionConst.SubscriptionType`
+- Offering from RevenueCat `RevenueCat_Manager.shared.isOfferType`
 
 ## Google Ads
