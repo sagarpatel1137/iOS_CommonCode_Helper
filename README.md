@@ -185,7 +185,7 @@ RevenueCat_Manager.shared.restoreProduct { (state, info, error) in
 <array>
 	<dict>
 		<key>SKAdNetworkIdentifier</key>
-           	<string>cstr6suwn9.skadnetwork</string>
+        <string>cstr6suwn9.skadnetwork</string>
 	</dict>
 	<dict>
 	   	<key>SKAdNetworkIdentifier</key>

@@ -16,7 +16,6 @@ public class GoogleAd_Manager : NSObject {
     public var isAdClickedAndRedirected = false
     
     //MARK: - Private
-    private var Splash_Banner_ID = ""
     private var Banner_ID = ""
     private var Int_ID = ""
     private var Native_ID = ""
@@ -79,8 +78,7 @@ public class GoogleAd_Manager : NSObject {
 //MARK: - Initialise
 extension GoogleAd_Manager
 {
-    public func initialiseGoogleAds(splashBannerAd : String = "",
-                                    bannerAd: String = "",
+    public func initialiseGoogleAds(bannerAd: String = "",
                                     intAd: String = "",
                                     nativeAd: String = "",
                                     rewardAd: String = "",
