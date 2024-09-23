@@ -41,7 +41,6 @@
 		81CAB5FD2C6DF4FF0050F848 /* UIDevice+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81CAB5FC2C6DF4FF0050F848 /* UIDevice+Extension.swift */; };
 		81CAB6002C6E193E0050F848 /* OneSignal_Manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81CAB5FF2C6E193E0050F848 /* OneSignal_Manager.swift */; };
 		81CAB6022C6E20DB0050F848 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81CAB6012C6E20DB0050F848 /* UIViewController+Extension.swift */; };
-		81EED3A42C9EC1D300691676 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 81EED3A32C9EC1D300691676 /* README.md */; };
 		D391513D4F19B006A2E9AF44 /* Pods_iOS_CommonCode.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06E918F9F432D213EFDB89A3 /* Pods_iOS_CommonCode.framework */; };
 /* End PBXBuildFile section */
 
@@ -97,7 +96,6 @@
 		81CAB5FC2C6DF4FF0050F848 /* UIDevice+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIDevice+Extension.swift"; sourceTree = "<group>"; };
 		81CAB5FF2C6E193E0050F848 /* OneSignal_Manager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneSignal_Manager.swift; sourceTree = "<group>"; };
 		81CAB6012C6E20DB0050F848 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
-		81EED3A32C9EC1D300691676 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,7 +117,6 @@
 			isa = PBXGroup;
 			children = (
 				8121DD882C6222C8003460A5 /* iOS_CommonCode_Helper.podspec */,
-				81EED3A32C9EC1D300691676 /* README.md */,
 				8121DD6A2C6216E8003460A5 /* iOS_CommonCode */,
 				8121DD692C6216E8003460A5 /* Products */,
 				FB405D856584EFA8ACBC95F6 /* Pods */,
@@ -408,7 +405,6 @@
 				81A089C42C9D39A60091CFB3 /* Shimmer_NativeBannerAd.xib in Resources */,
 				81A089C52C9D39A60091CFB3 /* Shimmer_FullNative.xib in Resources */,
 				81A089CB2C9D3BAD0091CFB3 /* NativeAd.xib in Resources */,
-				81EED3A42C9EC1D300691676 /* README.md in Resources */,
 				81A089CC2C9D3BAD0091CFB3 /* NativeBannerAd.xib in Resources */,
 				81A089C62C9D39A60091CFB3 /* Shimmer_Adptiv_Banner.xib in Resources */,
 				8121DD8A2C6222C8003460A5 /* iOS_CommonCode_Helper.podspec in Resources */,
