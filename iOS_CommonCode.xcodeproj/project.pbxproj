@@ -139,7 +139,6 @@
 				81CAB5FB2C6DF4E00050F848 /* Extension */,
 				8136DA362C8ECCF6005C305B /* Notification */,
 				8136DA352C8ECCEB005C305B /* API */,
-				8136DA332C8ECC9E005C305B /* SignIn */,
 				819E6FB22C6CB9FD00D4914E /* RevenueCat */,
 				819E6FB52C6CBA7500D4914E /* ForceUpdate */,
 				81BA8AF22C881CDD00F8A3C5 /* Google Ad's */,
@@ -147,13 +146,6 @@
 				819E6FB62C6CBA7D00D4914E /* Other */,
 			);
 			path = iOS_CommonCode;
-			sourceTree = "<group>";
-		};
-		8136DA332C8ECC9E005C305B /* SignIn */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = SignIn;
 			sourceTree = "<group>";
 		};
 		8136DA342C8ECCAE005C305B /* Analytics */ = {

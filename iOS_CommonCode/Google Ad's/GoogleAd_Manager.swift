@@ -877,13 +877,13 @@ extension GADNativeAdView{
                 (self.advertiserView as? UILabel)?.textColor = hexStringToUIColor(hex: colors.body)
                 
                 (self.callToActionView as? UIButton)?.backgroundColor = hexStringToUIColor(hex: colors.theme)
-                (self.callToActionView as? UIButton)?.titleLabel?.textColor = hexStringToUIColor(hex: colors.btnTitle)
+                (self.callToActionView as? UIButton)?.setTitleColor(hexStringToUIColor(hex: colors.btnTitle), for: .normal)
                 
                 if let adView = self.viewWithTag(2000) {
                     adView.backgroundColor = hexStringToUIColor(hex: colors.theme)
-                    if let lblAd = self.viewWithTag(2001) as? UILabel {
-                        lblAd.textColor = hexStringToUIColor(hex: colors.btnTitle)
-                    }
+                }
+                if let lblAd = self.viewWithTag(2001) as? UILabel {
+                    lblAd.textColor = hexStringToUIColor(hex: colors.btnTitle)
                 }
             }
         }
@@ -925,13 +925,13 @@ extension GADNativeAdView{
             (self.advertiserView as? UILabel)?.textColor = hexStringToUIColor(hex: adColor.body)
             
             (self.callToActionView as? UIButton)?.backgroundColor = hexStringToUIColor(hex: adColor.theme)
-            (self.callToActionView as? UIButton)?.titleLabel?.textColor = hexStringToUIColor(hex: adColor.btnTitle)
+            (self.callToActionView as? UIButton)?.setTitleColor(hexStringToUIColor(hex: adColor.btnTitle), for: .normal)
             
             if let adView = self.viewWithTag(2000) {
                 adView.backgroundColor = hexStringToUIColor(hex: adColor.theme)
-                if let lblAd = self.viewWithTag(2001) as? UILabel {
-                    lblAd.textColor = hexStringToUIColor(hex: adColor.btnTitle)
-                }
+            }
+            if let lblAd = self.viewWithTag(2001) as? UILabel {
+                lblAd.textColor = hexStringToUIColor(hex: adColor.btnTitle)
             }
         }
         
