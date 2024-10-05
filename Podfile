@@ -43,6 +43,7 @@ target 'iOS_CommonCode' do
   
   # Other
   pod 'UIView-Shimmer'
+  pod 'MarqueeLabel'
 
 end
 

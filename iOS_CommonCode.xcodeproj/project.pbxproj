@@ -46,6 +46,27 @@
 		81B0F3182CB0FFD50014E08A /* af.strings in Resources */ = {isa = PBXBuildFile; fileRef = 81B0F3092CB0FFD50014E08A /* af.strings */; };
 		81B0F3192CB0FFD50014E08A /* ja.strings in Resources */ = {isa = PBXBuildFile; fileRef = 81B0F30A2CB0FFD50014E08A /* ja.strings */; };
 		81B0F31A2CB0FFD50014E08A /* zh-Hans.strings in Resources */ = {isa = PBXBuildFile; fileRef = 81B0F30B2CB0FFD50014E08A /* zh-Hans.strings */; };
+		81B0F31E2CB105D70014E08A /* RatingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81B0F31B2CB105D70014E08A /* RatingVC.swift */; };
+		81B0F31F2CB105D70014E08A /* RatingVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 81B0F31C2CB105D70014E08A /* RatingVC.xib */; };
+		81B0F3212CB106620014E08A /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81B0F3202CB106620014E08A /* UserDefaults.swift */; };
+		81B0F32F2CB10DA00014E08A /* Avenir Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 81B0F3222CB10D9F0014E08A /* Avenir Black.ttf */; };
+		81B0F3302CB10DA00014E08A /* Avenir Heavy.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 81B0F3232CB10D9F0014E08A /* Avenir Heavy.ttf */; };
+		81B0F3312CB10DA00014E08A /* Avenir-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 81B0F3242CB10D9F0014E08A /* Avenir-Medium.ttf */; };
+		81B0F3322CB10DA00014E08A /* PlusJakartaSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 81B0F3252CB10D9F0014E08A /* PlusJakartaSans-Bold.ttf */; };
+		81B0F3332CB10DA00014E08A /* PlusJakartaSans-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 81B0F3262CB10D9F0014E08A /* PlusJakartaSans-ExtraBold.ttf */; };
+		81B0F3342CB10DA00014E08A /* PlusJakartaSans-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 81B0F3272CB10D9F0014E08A /* PlusJakartaSans-Medium.ttf */; };
+		81B0F3352CB10DA00014E08A /* PlusJakartaSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 81B0F3282CB10D9F0014E08A /* PlusJakartaSans-Regular.ttf */; };
+		81B0F3362CB10DA00014E08A /* PlusJakartaSans-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 81B0F3292CB10D9F0014E08A /* PlusJakartaSans-SemiBold.ttf */; };
+		81B0F3372CB10DA00014E08A /* WorkSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 81B0F32A2CB10D9F0014E08A /* WorkSans-Bold.ttf */; };
+		81B0F3382CB10DA00014E08A /* WorkSans-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 81B0F32B2CB10D9F0014E08A /* WorkSans-Medium.ttf */; };
+		81B0F3392CB10DA00014E08A /* WorkSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 81B0F32C2CB10D9F0014E08A /* WorkSans-Regular.ttf */; };
+		81B0F33A2CB10DA00014E08A /* WorkSans-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 81B0F32D2CB10D9F0014E08A /* WorkSans-SemiBold.ttf */; };
+		81B0F3412CB10DA80014E08A /* sub_all_ipad.json in Resources */ = {isa = PBXBuildFile; fileRef = 81B0F33B2CB10DA80014E08A /* sub_all_ipad.json */; };
+		81B0F3422CB10DA80014E08A /* sub_all_iphone.json in Resources */ = {isa = PBXBuildFile; fileRef = 81B0F33C2CB10DA80014E08A /* sub_all_iphone.json */; };
+		81B0F3432CB10DA80014E08A /* sub_discount_btn.json in Resources */ = {isa = PBXBuildFile; fileRef = 81B0F33D2CB10DA80014E08A /* sub_discount_btn.json */; };
+		81B0F3442CB10DA80014E08A /* sub_timeline_ipad.json in Resources */ = {isa = PBXBuildFile; fileRef = 81B0F33E2CB10DA80014E08A /* sub_timeline_ipad.json */; };
+		81B0F3452CB10DA80014E08A /* sub_timeline_iphone.json in Resources */ = {isa = PBXBuildFile; fileRef = 81B0F33F2CB10DA80014E08A /* sub_timeline_iphone.json */; };
+		81B0F3472CB10DB60014E08A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 81B0F3462CB10DB60014E08A /* Assets.xcassets */; };
 		81BA8AF12C881BE100F8A3C5 /* Constant_Function.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81BA8AF02C881BE100F8A3C5 /* Constant_Function.swift */; };
 		81BA8B092C88376E00F8A3C5 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81BA8B082C88376E00F8A3C5 /* UIView+Extension.swift */; };
 		81CAB5E82C6DD2640050F848 /* Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81CAB5E72C6DD2640050F848 /* Alamofire.swift */; };
@@ -116,6 +137,27 @@
 		81B0F3092CB0FFD50014E08A /* af.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = af.strings; sourceTree = "<group>"; };
 		81B0F30A2CB0FFD50014E08A /* ja.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = ja.strings; sourceTree = "<group>"; };
 		81B0F30B2CB0FFD50014E08A /* zh-Hans.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = "zh-Hans.strings"; sourceTree = "<group>"; };
+		81B0F31B2CB105D70014E08A /* RatingVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RatingVC.swift; sourceTree = "<group>"; };
+		81B0F31C2CB105D70014E08A /* RatingVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RatingVC.xib; sourceTree = "<group>"; };
+		81B0F3202CB106620014E08A /* UserDefaults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaults.swift; sourceTree = "<group>"; };
+		81B0F3222CB10D9F0014E08A /* Avenir Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Avenir Black.ttf"; sourceTree = "<group>"; };
+		81B0F3232CB10D9F0014E08A /* Avenir Heavy.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Avenir Heavy.ttf"; sourceTree = "<group>"; };
+		81B0F3242CB10D9F0014E08A /* Avenir-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Avenir-Medium.ttf"; sourceTree = "<group>"; };
+		81B0F3252CB10D9F0014E08A /* PlusJakartaSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PlusJakartaSans-Bold.ttf"; sourceTree = "<group>"; };
+		81B0F3262CB10D9F0014E08A /* PlusJakartaSans-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PlusJakartaSans-ExtraBold.ttf"; sourceTree = "<group>"; };
+		81B0F3272CB10D9F0014E08A /* PlusJakartaSans-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PlusJakartaSans-Medium.ttf"; sourceTree = "<group>"; };
+		81B0F3282CB10D9F0014E08A /* PlusJakartaSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PlusJakartaSans-Regular.ttf"; sourceTree = "<group>"; };
+		81B0F3292CB10D9F0014E08A /* PlusJakartaSans-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PlusJakartaSans-SemiBold.ttf"; sourceTree = "<group>"; };
+		81B0F32A2CB10D9F0014E08A /* WorkSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "WorkSans-Bold.ttf"; sourceTree = "<group>"; };
+		81B0F32B2CB10D9F0014E08A /* WorkSans-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "WorkSans-Medium.ttf"; sourceTree = "<group>"; };
+		81B0F32C2CB10D9F0014E08A /* WorkSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "WorkSans-Regular.ttf"; sourceTree = "<group>"; };
+		81B0F32D2CB10D9F0014E08A /* WorkSans-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "WorkSans-SemiBold.ttf"; sourceTree = "<group>"; };
+		81B0F33B2CB10DA80014E08A /* sub_all_ipad.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = sub_all_ipad.json; sourceTree = "<group>"; };
+		81B0F33C2CB10DA80014E08A /* sub_all_iphone.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = sub_all_iphone.json; sourceTree = "<group>"; };
+		81B0F33D2CB10DA80014E08A /* sub_discount_btn.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = sub_discount_btn.json; sourceTree = "<group>"; };
+		81B0F33E2CB10DA80014E08A /* sub_timeline_ipad.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = sub_timeline_ipad.json; sourceTree = "<group>"; };
+		81B0F33F2CB10DA80014E08A /* sub_timeline_iphone.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = sub_timeline_iphone.json; sourceTree = "<group>"; };
+		81B0F3462CB10DB60014E08A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		81BA8AF02C881BE100F8A3C5 /* Constant_Function.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant_Function.swift; sourceTree = "<group>"; };
 		81BA8B082C88376E00F8A3C5 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		81CAB5E72C6DD2640050F848 /* Alamofire.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alamofire.swift; sourceTree = "<group>"; };
@@ -175,6 +217,7 @@
 				81BA8AFF2C88362E00F8A3C5 /* Shimmer */,
 				819E6FB62C6CBA7D00D4914E /* Other */,
 				81B0F2F82CB0FF700014E08A /* Resources */,
+				81B0F31D2CB105D70014E08A /* Rating */,
 			);
 			path = iOS_CommonCode;
 			sourceTree = "<group>";
@@ -247,6 +290,7 @@
 			children = (
 				81BA8AF02C881BE100F8A3C5 /* Constant_Function.swift */,
 				8121DD832C621A66003460A5 /* Reachability.swift */,
+				81B0F3202CB106620014E08A /* UserDefaults.swift */,
 			);
 			path = Other;
 			sourceTree = "<group>";
@@ -254,7 +298,10 @@
 		81B0F2F82CB0FF700014E08A /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				81B0F3402CB10DA80014E08A /* Json */,
+				81B0F32E2CB10D9F0014E08A /* Font */,
 				81B0F2F92CB0FF7F0014E08A /* Localise */,
+				81B0F3462CB10DB60014E08A /* Assets.xcassets */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -279,6 +326,46 @@
 				81B0F3052CB0FFD40014E08A /* ru.strings */,
 			);
 			path = Localise;
+			sourceTree = "<group>";
+		};
+		81B0F31D2CB105D70014E08A /* Rating */ = {
+			isa = PBXGroup;
+			children = (
+				81B0F31B2CB105D70014E08A /* RatingVC.swift */,
+				81B0F31C2CB105D70014E08A /* RatingVC.xib */,
+			);
+			path = Rating;
+			sourceTree = "<group>";
+		};
+		81B0F32E2CB10D9F0014E08A /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				81B0F3222CB10D9F0014E08A /* Avenir Black.ttf */,
+				81B0F3232CB10D9F0014E08A /* Avenir Heavy.ttf */,
+				81B0F3242CB10D9F0014E08A /* Avenir-Medium.ttf */,
+				81B0F3252CB10D9F0014E08A /* PlusJakartaSans-Bold.ttf */,
+				81B0F3262CB10D9F0014E08A /* PlusJakartaSans-ExtraBold.ttf */,
+				81B0F3272CB10D9F0014E08A /* PlusJakartaSans-Medium.ttf */,
+				81B0F3282CB10D9F0014E08A /* PlusJakartaSans-Regular.ttf */,
+				81B0F3292CB10D9F0014E08A /* PlusJakartaSans-SemiBold.ttf */,
+				81B0F32A2CB10D9F0014E08A /* WorkSans-Bold.ttf */,
+				81B0F32B2CB10D9F0014E08A /* WorkSans-Medium.ttf */,
+				81B0F32C2CB10D9F0014E08A /* WorkSans-Regular.ttf */,
+				81B0F32D2CB10D9F0014E08A /* WorkSans-SemiBold.ttf */,
+			);
+			path = Font;
+			sourceTree = "<group>";
+		};
+		81B0F3402CB10DA80014E08A /* Json */ = {
+			isa = PBXGroup;
+			children = (
+				81B0F33B2CB10DA80014E08A /* sub_all_ipad.json */,
+				81B0F33C2CB10DA80014E08A /* sub_all_iphone.json */,
+				81B0F33D2CB10DA80014E08A /* sub_discount_btn.json */,
+				81B0F33E2CB10DA80014E08A /* sub_timeline_ipad.json */,
+				81B0F33F2CB10DA80014E08A /* sub_timeline_iphone.json */,
+			);
+			path = Json;
 			sourceTree = "<group>";
 		};
 		81BA8AF22C881CDD00F8A3C5 /* Google Ad's */ = {
@@ -457,25 +544,44 @@
 			files = (
 				81A089C42C9D39A60091CFB3 /* Shimmer_NativeBannerAd.xib in Resources */,
 				81B0F3192CB0FFD50014E08A /* ja.strings in Resources */,
+				81B0F3452CB10DA80014E08A /* sub_timeline_iphone.json in Resources */,
+				81B0F32F2CB10DA00014E08A /* Avenir Black.ttf in Resources */,
+				81B0F33A2CB10DA00014E08A /* WorkSans-SemiBold.ttf in Resources */,
+				81B0F3342CB10DA00014E08A /* PlusJakartaSans-Medium.ttf in Resources */,
 				81B0F30E2CB0FFD50014E08A /* ar.strings in Resources */,
+				81B0F31F2CB105D70014E08A /* RatingVC.xib in Resources */,
+				81B0F3322CB10DA00014E08A /* PlusJakartaSans-Bold.ttf in Resources */,
+				81B0F3362CB10DA00014E08A /* PlusJakartaSans-SemiBold.ttf in Resources */,
 				81A089C52C9D39A60091CFB3 /* Shimmer_FullNative.xib in Resources */,
 				81A089CB2C9D3BAD0091CFB3 /* NativeAd.xib in Resources */,
 				81B0F3132CB0FFD50014E08A /* th.strings in Resources */,
+				81B0F3372CB10DA00014E08A /* WorkSans-Bold.ttf in Resources */,
+				81B0F3472CB10DB60014E08A /* Assets.xcassets in Resources */,
 				81B0F30F2CB0FFD50014E08A /* fr.strings in Resources */,
 				81B0F3142CB0FFD50014E08A /* ru.strings in Resources */,
 				81B0F30C2CB0FFD50014E08A /* es.strings in Resources */,
+				81B0F3332CB10DA00014E08A /* PlusJakartaSans-ExtraBold.ttf in Resources */,
 				81B0F3182CB0FFD50014E08A /* af.strings in Resources */,
 				81A089CC2C9D3BAD0091CFB3 /* NativeBannerAd.xib in Resources */,
 				81B0F3112CB0FFD50014E08A /* it.strings in Resources */,
+				81B0F3412CB10DA80014E08A /* sub_all_ipad.json in Resources */,
+				81B0F3432CB10DA80014E08A /* sub_discount_btn.json in Resources */,
 				81B0F31A2CB0FFD50014E08A /* zh-Hans.strings in Resources */,
 				81B0F3172CB0FFD50014E08A /* pt-PT.strings in Resources */,
+				81B0F3382CB10DA00014E08A /* WorkSans-Medium.ttf in Resources */,
 				81A089C62C9D39A60091CFB3 /* Shimmer_Adptiv_Banner.xib in Resources */,
 				8121DD8A2C6222C8003460A5 /* iOS_CommonCode_Helper.podspec in Resources */,
 				81B0F3162CB0FFD50014E08A /* ko.strings in Resources */,
+				81B0F3422CB10DA80014E08A /* sub_all_iphone.json in Resources */,
+				81B0F3352CB10DA00014E08A /* PlusJakartaSans-Regular.ttf in Resources */,
 				81B0F3122CB0FFD50014E08A /* en.strings in Resources */,
 				81B0F30D2CB0FFD50014E08A /* da.strings in Resources */,
 				81B0F3152CB0FFD50014E08A /* fil.strings in Resources */,
+				81B0F3302CB10DA00014E08A /* Avenir Heavy.ttf in Resources */,
+				81B0F3392CB10DA00014E08A /* WorkSans-Regular.ttf in Resources */,
 				81B0F3102CB0FFD50014E08A /* ur.strings in Resources */,
+				81B0F3312CB10DA00014E08A /* Avenir-Medium.ttf in Resources */,
+				81B0F3442CB10DA80014E08A /* sub_timeline_ipad.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -544,9 +650,11 @@
 				8113BEC52C6324190081B3F8 /* Const For Subscription.swift in Sources */,
 				81CAB5F82C6DF2C80050F848 /* Facebook_Manager.swift in Sources */,
 				817D301B2C8AC31800AB455C /* ATTracking_Manager.swift in Sources */,
+				81B0F31E2CB105D70014E08A /* RatingVC.swift in Sources */,
 				81BA8B092C88376E00F8A3C5 /* UIView+Extension.swift in Sources */,
 				817D30332C8AC6C600AB455C /* UIWindow+Extension.swift in Sources */,
 				8121DD842C621A66003460A5 /* Reachability.swift in Sources */,
+				81B0F3212CB106620014E08A /* UserDefaults.swift in Sources */,
 				817DCDF72C6F0A4C004BA1C2 /* GoogleMobileAdsConsent_Manager.swift in Sources */,
 				81CAB6002C6E193E0050F848 /* OneSignal_Manager.swift in Sources */,
 				8113BEC42C6324190081B3F8 /* RevenueCat_Manager.swift in Sources */,

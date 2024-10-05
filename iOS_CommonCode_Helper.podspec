@@ -42,5 +42,6 @@ spec.dependency 'FirebaseMessaging'
 spec.dependency 'Google-Mobile-Ads-SDK'
 
 spec.dependency 'UIView-Shimmer'
+spec.dependency 'MarqueeLabel'
 
 end

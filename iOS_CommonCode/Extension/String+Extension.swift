@@ -46,3 +46,21 @@ extension String
         return self.components(separatedBy:string).count - 1
     }
 }
+
+extension String {
+    
+    func localized() -> String
+    {
+        var defaultLanguage = Pod_AppLaungauge_Code
+        if defaultLanguage.count == 0{
+            defaultLanguage = "en"
+        }
+        if let path = Bundle.main.path(forResource: defaultLanguage, ofType: "strings") {
+            if FileManager.default.fileExists(atPath: path) {
+                let dicoLocalisation = NSDictionary(contentsOfFile: path)
+                return dicoLocalisation?.value(forKey: self) as? String ?? self
+            }
+        }
+        return self
+    }
+}

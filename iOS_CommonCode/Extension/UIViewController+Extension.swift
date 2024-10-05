@@ -61,3 +61,22 @@ extension UIViewController
         self.present(alertVC, animated: true, completion: nil)
     }
 }
+
+
+extension UIViewController
+{
+    public func openRatingAlert(rateURL: String, mailRecipientEmail: String, mailSubject: String, mailBody: String, complition: ((RatingResponse)-> Void)? = nil)
+    {
+        let vc = RatingVC()
+        vc.modalPresentationStyle = .overFullScreen
+        vc.modalTransitionStyle = .crossDissolve
+        vc.rateURL = rateURL
+        vc.mailRecipientEmail = mailRecipientEmail
+        vc.mailSubject = mailSubject
+        vc.mailBody = mailBody
+        vc.completion = { ratingResponse in
+            complition?(ratingResponse)
+        }
+        self.present(vc, animated: true, completion: nil)
+    }
+}

@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Karla-Regular.ttf">
+            <string>Karla-Regular</string>
+        </array>
+        <array key="PlusJakartaSans-Medium.ttf">
+            <string>PlusJakartaSans-Medium</string>
+        </array>
+        <array key="PlusJakartaSans-Regular.ttf">
+            <string>PlusJakartaSans-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RatingVC" customModule="iOS_CommonCode" customModuleProvider="target">
+            <connections>
+                <outlet property="lblLater" destination="7cW-jj-5J8" id="c9U-gh-Tv9"/>
+                <outlet property="lblSubTitle" destination="tqP-w0-jPf" id="vgv-69-H0C"/>
+                <outlet property="lblTitle" destination="B8S-4u-MyX" id="P4y-BH-ItM"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="viewRate" destination="qkc-F2-CLY" id="BN1-hc-Edt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qkc-F2-CLY" userLabel="ViewRate">
+                    <rect key="frame" x="10" y="118.5" width="300" height="351"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_Rating_Background" translatesAutoresizingMaskIntoConstraints="NO" id="KhF-5q-SrY">
+                            <rect key="frame" x="0.0" y="0.0" width="300" height="144"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="KhF-5q-SrY" secondAttribute="height" multiplier="954:459" id="sdM-gg-v3S"/>
+                            </constraints>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="0.0"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="color" keyPath="borderColorNew">
+                                    <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Enjoying the app ?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="B8S-4u-MyX">
+                            <rect key="frame" x="5" y="144" width="290" height="26.5"/>
+                            <fontDescription key="fontDescription" name="PlusJakartaSans-Medium" family="Plus Jakarta Sans" pointSize="21"/>
+                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                            <variation key="heightClass=regular-widthClass=regular">
+                                <fontDescription key="fontDescription" name="PlusJakartaSans-Medium" family="Plus Jakarta Sans" pointSize="31"/>
+                            </variation>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tqP-w0-jPf" userLabel="Let us  know by leaving a 5 star rating">
+                            <rect key="frame" x="5" y="175.5" width="290" height="35.5"/>
+                            <string key="text">Let us  know by leaving a
+5 star rating</string>
+                            <fontDescription key="fontDescription" name="PlusJakartaSans-Regular" family="Plus Jakarta Sans" pointSize="14"/>
+                            <color key="textColor" red="0.32156862749999998" green="0.32156862749999998" blue="0.32156862749999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                            <variation key="heightClass=regular-widthClass=regular">
+                                <fontDescription key="fontDescription" name="PlusJakartaSans-Regular" family="Plus Jakarta Sans" pointSize="21"/>
+                            </variation>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Mi-qu-veh">
+                            <rect key="frame" x="70" y="231" width="60" height="60"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="60" id="N0b-YQ-7mb">
+                                    <variation key="heightClass=regular-widthClass=regular" constant="75"/>
+                                </constraint>
+                                <constraint firstAttribute="width" secondItem="6Mi-qu-veh" secondAttribute="height" multiplier="1:1" id="OQ0-vZ-R7P"/>
+                            </constraints>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal" image="ic_Rating_Hide"/>
+                            <connections>
+                                <action selector="btnImprovementClick:" destination="-1" eventType="touchUpInside" id="aWm-RP-u4E"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Bk-ac-XWH">
+                            <rect key="frame" x="170" y="231" width="60" height="60"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="7Bk-ac-XWH" secondAttribute="height" multiplier="1:1" id="xk3-iM-C2R"/>
+                            </constraints>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal" image="ic_Rating_Click"/>
+                            <connections>
+                                <action selector="btnAwesomeClick:" destination="-1" eventType="touchUpInside" id="cAq-fq-iqQ"/>
+                            </connections>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ask me latter!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7cW-jj-5J8">
+                            <rect key="frame" x="10" y="308" width="280" height="33"/>
+                            <fontDescription key="fontDescription" name="PlusJakartaSans-Regular" family="Plus Jakarta Sans" pointSize="13"/>
+                            <color key="textColor" red="0.70588235290000001" green="0.69803921570000005" blue="0.69803921570000005" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                            <variation key="heightClass=regular-widthClass=regular">
+                                <fontDescription key="fontDescription" name="PlusJakartaSans-Regular" family="Plus Jakarta Sans" pointSize="16"/>
+                            </variation>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vgl-f5-FK3">
+                            <rect key="frame" x="100" y="308" width="100" height="33"/>
+                            <fontDescription key="fontDescription" name="Karla-Regular" family="Karla" pointSize="18"/>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <connections>
+                                <action selector="btnLaterClick:" destination="-1" eventType="touchUpInside" id="gFt-Hf-oEH"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" red="0.98431372549999996" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstItem="7cW-jj-5J8" firstAttribute="top" secondItem="6Mi-qu-veh" secondAttribute="bottom" constant="17" id="1QI-1k-eOq">
+                            <variation key="heightClass=regular-widthClass=regular" constant="20"/>
+                        </constraint>
+                        <constraint firstItem="KhF-5q-SrY" firstAttribute="centerX" secondItem="qkc-F2-CLY" secondAttribute="centerX" id="3rS-SX-cRZ"/>
+                        <constraint firstItem="Vgl-f5-FK3" firstAttribute="trailing" secondItem="7cW-jj-5J8" secondAttribute="trailing" constant="-90" id="8g3-6K-QDn"/>
+                        <constraint firstItem="7cW-jj-5J8" firstAttribute="centerX" secondItem="qkc-F2-CLY" secondAttribute="centerX" id="AXy-nQ-SQA"/>
+                        <constraint firstAttribute="trailing" secondItem="7Bk-ac-XWH" secondAttribute="trailing" constant="70" id="H94-Wb-uLT">
+                            <variation key="heightClass=regular-widthClass=regular" constant="140"/>
+                        </constraint>
+                        <constraint firstItem="6Mi-qu-veh" firstAttribute="top" secondItem="tqP-w0-jPf" secondAttribute="bottom" constant="20" id="Kcd-TJ-bNh"/>
+                        <constraint firstItem="Vgl-f5-FK3" firstAttribute="bottom" secondItem="7cW-jj-5J8" secondAttribute="bottom" id="LW2-VN-Pdf"/>
+                        <constraint firstItem="7Bk-ac-XWH" firstAttribute="top" secondItem="6Mi-qu-veh" secondAttribute="top" id="P1s-n4-Egp"/>
+                        <constraint firstItem="tqP-w0-jPf" firstAttribute="trailing" secondItem="B8S-4u-MyX" secondAttribute="trailing" id="QTP-6Y-fgo"/>
+                        <constraint firstItem="tqP-w0-jPf" firstAttribute="leading" secondItem="B8S-4u-MyX" secondAttribute="leading" id="Rfm-oe-A6N"/>
+                        <constraint firstItem="KhF-5q-SrY" firstAttribute="top" secondItem="qkc-F2-CLY" secondAttribute="top" id="TxG-Qm-j25"/>
+                        <constraint firstItem="Vgl-f5-FK3" firstAttribute="top" secondItem="7cW-jj-5J8" secondAttribute="top" id="Wco-gk-WOh"/>
+                        <constraint firstAttribute="trailing" secondItem="7cW-jj-5J8" secondAttribute="trailing" constant="10" id="XEn-2k-vTe"/>
+                        <constraint firstItem="Vgl-f5-FK3" firstAttribute="leading" secondItem="7cW-jj-5J8" secondAttribute="leading" constant="90" id="ZCe-Y1-Ban"/>
+                        <constraint firstItem="6Mi-qu-veh" firstAttribute="leading" secondItem="qkc-F2-CLY" secondAttribute="leading" constant="70" id="bWB-fl-9Dw">
+                            <variation key="heightClass=regular-widthClass=regular" constant="140"/>
+                        </constraint>
+                        <constraint firstItem="KhF-5q-SrY" firstAttribute="width" secondItem="qkc-F2-CLY" secondAttribute="width" id="dOO-Hv-5Zy"/>
+                        <constraint firstItem="7cW-jj-5J8" firstAttribute="leading" secondItem="qkc-F2-CLY" secondAttribute="leading" constant="10" id="jgV-Zd-fZk"/>
+                        <constraint firstAttribute="bottom" secondItem="7cW-jj-5J8" secondAttribute="bottom" constant="10" id="lMj-1B-yop">
+                            <variation key="heightClass=regular-widthClass=regular" constant="15"/>
+                        </constraint>
+                        <constraint firstItem="B8S-4u-MyX" firstAttribute="top" secondItem="KhF-5q-SrY" secondAttribute="bottom" id="n6h-Yk-xbJ"/>
+                        <constraint firstItem="7Bk-ac-XWH" firstAttribute="height" secondItem="6Mi-qu-veh" secondAttribute="height" id="r4k-4n-zUM"/>
+                        <constraint firstItem="tqP-w0-jPf" firstAttribute="top" secondItem="B8S-4u-MyX" secondAttribute="bottom" constant="5" id="sVm-mS-Rw7"/>
+                        <constraint firstAttribute="trailing" secondItem="B8S-4u-MyX" secondAttribute="trailing" constant="5" id="vZR-Oo-v2P"/>
+                        <constraint firstItem="B8S-4u-MyX" firstAttribute="leading" secondItem="qkc-F2-CLY" secondAttribute="leading" constant="5" id="zHv-hV-9UR"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="25"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="borderColorNew">
+                            <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" white="0.0" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="qkc-F2-CLY" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="4Fc-z7-ZcE"/>
+                <constraint firstItem="qkc-F2-CLY" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="500:768" id="Gja-H5-a4v"/>
+                <constraint firstItem="qkc-F2-CLY" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="300:320" id="V4u-zE-TMs"/>
+                <constraint firstItem="qkc-F2-CLY" firstAttribute="centerY" secondItem="fnl-2z-Ty3" secondAttribute="centerY" id="mFg-Gy-K3a"/>
+            </constraints>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="Gja-H5-a4v"/>
+                </mask>
+            </variation>
+            <variation key="heightClass=regular-widthClass=regular">
+                <mask key="constraints">
+                    <include reference="Gja-H5-a4v"/>
+                    <exclude reference="V4u-zE-TMs"/>
+                </mask>
+            </variation>
+            <point key="canvasLocation" x="139" y="113"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="ic_Rating_Background" width="954" height="473"/>
+        <image name="ic_Rating_Click" width="165" height="165"/>
+        <image name="ic_Rating_Hide" width="165" height="165"/>
+    </resources>
+</document>
