@@ -1,0 +1,115 @@
+
+//Force Update
+"Update Required" = "更新が必要です";
+"We've noticed that you've been using the deprecated application version for a long time. Please update to the latest version and enjoy the app." = "廃止されたアプリケーション バージョンを長期間使用していることがわかりました。最新バージョンに更新してアプリをお楽しみください。";
+"Update" = "更新";
+"Cancel" = "キャンセル";
+
+//Rating
+"Enjoying the app?" = "アプリをお楽しみいただけましたか?";
+"Let us know by leaving a 5 star rating" = "5 つ星の評価を残してお知らせください";
+"Ask me latter!" = "後で聞いてください!";
+
+//Feedback - Alert
+"Not interested?" = "興味がありませんか?";
+"Please share why" = "理由を教えてください";
+"Don't know what it is" = "何なのかわからない";
+"Too expensive" = "高すぎる";
+"I don't pay for apps" = "アプリにはお金を払わない";
+"I need to try it first" = "まず試してみる必要がある";
+
+//Feedback - Screen
+"Feedback" = "フィードバック";
+"Share your experience with us" = "ご経験を共有してください";
+"What is your Profession?" = "職業は何ですか?";
+"Write your Suggestions" = "ご提案をお書きください";
+"Submit" = "送信";
+"Write Here..." = "ここに記入してください...";
+"Write Here your suggestion/Feedback..." = "ご提案/フィードバックをここに記入してください...";
+"Please enter text" = "テキストを入力してください";
+"Please enter your suggestions" = "ご提案を入力してください";
+"Feedback sent successfully" = "フィードバックが正常に送信されました";
+"Check your internet connection" = "インターネット接続を確認してください";
+"Retry" = "再試行";
+"OK" = "OK";
+
+//Language
+"Change Language" = "言語を変更";
+
+//Timeline
+"HAVE DOUBTS?" = "疑問がありますか?";
+"Start with a free trial" = "無料トライアルから始めましょう";
+"View All Plans" = "すべてのプランを見る";
+"NOW" = "今すぐ";
+"Today: Get Instant Access" = "今日: すぐにアクセス";
+"Day 2: Trial Reminder" = "2 日目: トライアルのリマインダー";
+"Day 3: Premium Begins" = "3 日目: プレミアムの開始";
+"Day 5: Trial Reminder" = "5 日目: トライアルのリマインダー";
+"Day 7: Premium Begins" = "7 日目: プレミアムの開始";
+"Unlock all the features." = "すべての機能をアンロックします。";
+"Get a reminder about when your free trial will end. Cancel anytime in 15 seconds." = "無料トライアルの終了日をお知らせします。15 秒以内にいつでもキャンセルできます。";
+"Your trial will convert to full price unless cancelled." = "キャンセルしない限り、トライアルは正規価格に切り替わります。";
+
+//All Plan
+"Unlock All Features" = "すべての機能のロックを解除";
+"Best Value" = "ベストバリュー";
+"Most Popular" = "最も人気";
+"Recommend" = "おすすめ";
+"Lifetime" = "生涯";
+"Yearly" = "年間";
+"Monthly" = "月間";
+"Weekly" = "週間";
+"Pay once, enjoy forever" = "一度支払えば、永遠に楽しめる";
+"Enjoy forever" = "永遠に楽しめる";
+"OFF" = "OFF";
+"Weekly" = "週間";
+"Monthly" = "月間";
+"Yearly" = "年間";
+"by" = "by";
+
+//Sub Discount
+"Exclusive Deal" = "限定セール";
+"Limited Time Offer Specially For You!" = "あなただけの期間限定オファー！";
+"Don't Miss Out!" = "お見逃しなく！";
+"TRY NOW" = "今すぐお試しください";
+
+//Subscription
+"day" = "日";
+"days" = "日";
+"week" = "週";
+"month" = "月";
+"year" = "年";
+"Day" = "日";
+"Days" = "日";
+"Week" = "週";
+"Month" = "月";
+"Year" = "年";
+"Continue" = "続行";
+"Pay Nothing Now" = "今すぐ支払う必要はありません";
+"Cancel anytime. Secure with App Store" = "いつでもキャンセルできます。App Store で保護されています";
+"Restore" = "復元";
+"Terms of Use" = "利用規約";
+"Privacy Policy" = "プライバシー ポリシー";
+"per" = "当たり";
+"Subscription will auto-renew, Cancel anytime." = "無料トライアルを開始";
+"Start My Free Trial" = "試用";
+"Try" = "いつでもキャンセルできます";
+"for" = "その後、料金が請求されます。";
+"Payment is charged after" = "無料";
+"cancel anytime." = "その後";
+"free" = "最大";
+"then" = "生涯購入";
+"use" = "いつでもキャンセルできます";
+"upto" = "日";
+"Lifetime Purchase" = "日";
+"Cancel Anytime" = "週";
+
+//Alert
+"Sorry can't connect iTunes Store" = "申し訳ありませんが、iTunes Store に接続できません";
+"OK" = "OK";
+"Alert" = "警告";
+"Purchase failed or something went wrong." = "購入に失敗したか、問題が発生しました。";
+"Check your internet connection" = "インターネット接続を確認してください";
+"Error" = "エラー";
+"Restore failed Or Nothing to Restore First Purchase." = "復元に失敗しました、または復元するものがありません 最初の購入。";
+

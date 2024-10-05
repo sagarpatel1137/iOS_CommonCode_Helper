@@ -1,0 +1,114 @@
+
+//Force Update
+"Update Required" = "Update Required";
+"We've noticed that you've been using the deprecated application version for a long time. Please update to the latest version and enjoy the app." = "We've noticed that you've been using the deprecated application version for a long time. Please update to the latest version and enjoy the app.";
+"Update" = "Update";
+"Cancel" = "Cancel";
+
+//Rating
+"Enjoying the app?" = "Enjoying the app?";
+"Let us know by leaving a 5 star rating" = "Let us know by leaving a 5 star rating";
+"Ask me latter!" = "Ask me latter!";
+
+//Feedback - Alert
+"Not interested?" = "Not interested?";
+"Please share why" = "Please share why";
+"Don't know what it is" = "Don't know what it is";
+"Too expensive" = "Too expensive";
+"I don't pay for apps" = "I don't pay for apps";
+"I need to try it first" = "I need to try it first";
+
+//Feedback - Screen
+"Feedback" = "Feedback";
+"Share your experience with us" = "Share your experience with us";
+"What is your Profession?" = "What is your Profession?";
+"Write your Suggestions" = "Write your Suggestions";
+"Submit" = "Submit";
+"Write Here..." = "Write Here...";
+"Write Here your suggestion/Feedback..." = "Write Here your suggestion/Feedback...";
+"Please enter text" = "Please enter text";
+"Please enter your suggestions" = "Please enter your suggestions";
+"Feedback sent successfully" = "Feedback sent successfully";
+"Check your internet connection" = "Check your internet connection";
+"Retry" = "Retry";
+"OK" = "OK";
+
+//Language
+"Change Language" = "Change Language";
+
+//Timeline
+"HAVE DOUBTS?" = "HAVE DOUBTS?";
+"Start with a free trial" = "Start with a free trial";
+"View All Plans" = "View All Plans";
+"NOW" = "NOW";
+"Today: Get Instant Access" = "Today: Get Instant Access";
+"Day 2: Trial Reminder" = "Day 2: Trial Reminder";
+"Day 3: Premium Begins" = "Day 3: Premium Begins";
+"Day 5: Trial Reminder" = "Day 5: Trial Reminder";
+"Day 7: Premium Begins" = "Day 7: Premium Begins";
+"Unlock all the features." = "Unlock all the features.";
+"Get a reminder about when your free trial will end. Cancel anytime in 15 seconds." = "Get a reminder about when your free trial will end. Cancel anytime in 15 seconds.";
+"Your trial will convert to full price unless cancelled." = "Your trial will convert to full price unless cancelled.";
+
+//All Plan
+"Unlock All Features" = "Unlock All Features";
+"Best Value" = "Best Value";
+"Most Popular" = "Most Popular";
+"Recommend" = "Recommend";
+"Lifetime" = "Lifetime";
+"Yearly" = "Yearly";
+"Monthly" = "Monthly";
+"Weekly" = "Weekly";
+"Pay once, enjoy forever" = "Pay once, enjoy forever";
+"Enjoy forever" = "Enjoy forever";
+"OFF" = "OFF";
+"Weekly" = "Weekly";
+"Monthly" = "Monthly";
+"Yearly" = "Yearly";
+"by" = "by";
+
+//Sub Discount
+"Exclusive Deal" = "Exclusive Deal";
+"Limited Time Offer Specially For You!" = "Limited Time Offer Specially For You!";
+"Don't Miss Out!" = "Don't Miss Out!";
+"TRY NOW" = "TRY NOW";
+
+//Subscription
+"day" = "day";
+"days" = "days";
+"week" = "week";
+"month" = "month";
+"year" = "year";
+"Day" = "Day";
+"Days" = "Days";
+"Week" = "Week";
+"Month" = "Month";
+"Year" = "Year";
+"Continue" = "Continue";
+"Pay Nothing Now" = "Pay Nothing Now";
+"Cancel anytime. Secure with App Store" = "Cancel anytime. Secure with App Store";
+"Restore" = "Restore";
+"Terms of Use" = "Terms of Use";
+"Privacy Policy" = "Privacy Policy";
+"per" = "per";
+"Subscription will auto-renew, Cancel anytime." = "Subscription will auto-renew, Cancel anytime.";
+"Start My Free Trial" = "Start My Free Trial";
+"Try" = "Try";
+"for" = "for";
+"Payment is charged after" = "Payment is charged after";
+"cancel anytime." = "cancel anytime.";
+"free" = "free";
+"then" = "then";
+"use" = "use";
+"upto" = "upto";
+"Lifetime Purchase" = "Lifetime Purchase";
+"Cancel Anytime" = "Cancel Anytime";
+
+//Alert
+"Sorry can't connect iTunes Store" = "Sorry can't connect iTunes Store";
+"OK" = "OK";
+"Alert" = "Alert";
+"Purchase failed or something went wrong." = "Purchase failed or something went wrong.";
+"Check your internet connection" = "Check your internet connection";
+"Error" = "Error";
+"Restore failed Or Nothing to Restore First Purchase." = "Restore failed Or Nothing to Restore First Purchase.";
