@@ -6,6 +6,66 @@
 //
 import UIKit
 
+var Pod_AppVersionCode : String {
+    set{
+        UserDefaults.standard.set(newValue, forKey: "Pod_AppVersionCode")
+    }
+    get {
+        if let value = UserDefaults.standard.value(forKey: "Pod_AppVersionCode") as? String{
+            return value
+        }
+        return ""
+    }
+}
+
+var Pod_AppPackageName : String {
+    set{
+        UserDefaults.standard.set(newValue, forKey: "Pod_AppPackageName")
+    }
+    get {
+        if let value = UserDefaults.standard.value(forKey: "Pod_AppPackageName") as? String{
+            return value
+        }
+        return ""
+    }
+}
+
+var Pod_AppPrivacyPolicyURL : String {
+    set{
+        UserDefaults.standard.set(newValue, forKey: "Pod_AppPrivacyPolicyURL")
+    }
+    get {
+        if let value = UserDefaults.standard.value(forKey: "Pod_AppPrivacyPolicyURL") as? String{
+            return value
+        }
+        return ""
+    }
+}
+
+var Pod_AppTermsAnsConditionURL : String {
+    set{
+        UserDefaults.standard.set(newValue, forKey: "Pod_AppTermsAnsConditionURL")
+    }
+    get {
+        if let value = UserDefaults.standard.value(forKey: "Pod_AppTermsAnsConditionURL") as? String{
+            return value
+        }
+        return ""
+    }
+}
+
+var Pod_FirebaseAppName : String {
+    set{
+        UserDefaults.standard.set(newValue, forKey: "Pod_FirebaseAppName")
+    }
+    get {
+        if let value = UserDefaults.standard.value(forKey: "Pod_FirebaseAppName") as? String{
+            return value
+        }
+        return ""
+    }
+}
+
 var Pod_AppLaungauge_Code : String {
     set{
         UserDefaults.standard.set(newValue, forKey: "Pod_AppLaungauge_Code")

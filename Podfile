@@ -44,7 +44,10 @@ target 'iOS_CommonCode' do
   # Other
   pod 'UIView-Shimmer'
   pod 'MarqueeLabel'
-
+  pod 'MBProgressHUD'
+  pod 'lottie-ios'
+  pod 'SwiftConfettiView'
+  
 end
 
 post_install do |installer|

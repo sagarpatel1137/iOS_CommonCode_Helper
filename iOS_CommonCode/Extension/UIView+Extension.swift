@@ -73,6 +73,14 @@ extension UIView
             }
         }
     }
+    
+    func addBottomViewShadow() {
+        self.layer.shadowOffset = CGSize(width: 0, height: 3)
+        self.layer.shadowOpacity = 0.35
+        self.layer.shadowRadius = 3.0
+        self.layer.shadowColor = hexStringToUIColor(hex: "474747").withAlphaComponent(0.15).cgColor
+    }
+    
 }
 
 extension UIView
@@ -99,5 +107,20 @@ extension UIView
     
     public func removeAdByDeveloperViewForAd(){
         RemoveAllSubviewWithTAG(tag: 4040)
+    }
+    
+    public func addGradient(colors: [UIColor], locations: [NSNumber] = [0.0, 1.0], startPt: CGPoint = CGPoint(x: 0.0, y: 1.0), endPt: CGPoint = CGPoint(x: 1.0, y: 1.0)) {
+        
+        let gradientLayer = CAGradientLayer()
+        gradientLayer.colors = colors.map{ $0.cgColor }
+        gradientLayer.locations = locations
+        gradientLayer.startPoint = CGPoint(x: 0.0, y: 1.0)
+        gradientLayer.endPoint = CGPoint(x: 1.0, y: 1.0)
+        gradientLayer.frame = self.bounds
+        if let _ = self.layer.sublayers?.first as? CAGradientLayer {
+            layer.sublayers?[0] = gradientLayer
+        } else {
+            layer.insertSublayer(gradientLayer, at: 0)
+        }
     }
 }

@@ -45,6 +45,10 @@ extension String
     public func numberOfOccurrencesOf(string: String) -> Int {
         return self.components(separatedBy:string).count - 1
     }
+    
+    func trimmed() -> String {
+        return self.trimmingCharacters(in: .whitespacesAndNewlines)
+    }
 }
 
 extension String {
@@ -64,3 +68,21 @@ extension String {
         return self
     }
 }
+
+extension NSString {
+    
+    func setAttributeToString(font1: UIFont, font2: UIFont, color1: UIColor, color2: UIColor, text: String) -> NSAttributedString {
+        
+        let substring1 = self as String
+
+        let attributes1 = [NSMutableAttributedString.Key.font: font1, NSMutableAttributedString.Key.foregroundColor : color1]
+        let attrString1 = NSMutableAttributedString(string: substring1, attributes: attributes1)
+
+        let attributes2 = [NSMutableAttributedString.Key.font: font2, NSMutableAttributedString.Key.foregroundColor : color2]
+
+        let range = self.range(of: text)
+        attrString1.addAttributes(attributes2, range: range)
+        return attrString1
+    }
+}
+

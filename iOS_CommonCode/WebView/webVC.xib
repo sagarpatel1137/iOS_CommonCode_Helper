@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23094" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23084"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="WorkSans-SemiBold.ttf">
+            <string>WorkSans-SemiBold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="webVC" customModule="iOS_CommonCode" customModuleProvider="target">
+            <connections>
+                <outlet property="btnBack" destination="OsK-wn-874" id="gaZ-54-UMA"/>
+                <outlet property="lblTitle" destination="Izc-ab-0dQ" id="Jpj-Bd-ZbZ"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="viewNavBar" destination="3cM-n4-J2x" id="G4d-ex-G9V"/>
+                <outlet property="webView" destination="jkm-bE-3Qa" id="eHd-7n-UOq"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3cM-n4-J2x">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="74"/>
+                    <color key="backgroundColor" red="0.95294117647058818" green="0.96470588235294119" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fFs-qD-uP4">
+                    <rect key="frame" x="0.0" y="30" width="320" height="44"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OsK-wn-874">
+                            <rect key="frame" x="12" y="5" width="34" height="34"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="34" id="d5S-nY-3MV"/>
+                                <constraint firstAttribute="height" constant="34" id="evC-7V-FU4"/>
+                            </constraints>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal" image="ic_back"/>
+                            <connections>
+                                <action selector="btnBackClick:" destination="-1" eventType="touchUpInside" id="TXU-nW-zBM"/>
+                            </connections>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Izc-ab-0dQ">
+                            <rect key="frame" x="160" y="22" width="0.0" height="0.0"/>
+                            <color key="tintColor" red="0.95294117647058818" green="0.96470588235294119" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <fontDescription key="fontDescription" name="WorkSans-SemiBold" family="Work Sans" pointSize="20"/>
+                            <color key="textColor" name="AppThemeColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="OsK-wn-874" firstAttribute="centerY" secondItem="fFs-qD-uP4" secondAttribute="centerY" id="4bW-0v-O1A"/>
+                        <constraint firstItem="Izc-ab-0dQ" firstAttribute="centerY" secondItem="fFs-qD-uP4" secondAttribute="centerY" id="6fw-RW-izN"/>
+                        <constraint firstItem="Izc-ab-0dQ" firstAttribute="centerX" secondItem="fFs-qD-uP4" secondAttribute="centerX" id="8wS-CC-uDy"/>
+                        <constraint firstItem="OsK-wn-874" firstAttribute="leading" secondItem="fFs-qD-uP4" secondAttribute="leading" constant="12" id="duC-xe-Rpu"/>
+                        <constraint firstAttribute="height" constant="44" id="sVC-tP-PVq"/>
+                    </constraints>
+                </view>
+                <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jkm-bE-3Qa">
+                    <rect key="frame" x="0.0" y="74" width="320" height="494"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <wkWebViewConfiguration key="configuration">
+                        <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                        <wkPreferences key="preferences"/>
+                    </wkWebViewConfiguration>
+                </wkWebView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="fFs-qD-uP4" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="0U6-VP-fy3"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="jkm-bE-3Qa" secondAttribute="trailing" id="5JU-7r-hbV"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="jkm-bE-3Qa" secondAttribute="bottom" id="B1j-5z-laj"/>
+                <constraint firstItem="3cM-n4-J2x" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="DcK-Nd-M86"/>
+                <constraint firstItem="jkm-bE-3Qa" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="HA5-67-tyh"/>
+                <constraint firstItem="fFs-qD-uP4" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Mfd-j2-QFZ"/>
+                <constraint firstItem="3cM-n4-J2x" firstAttribute="bottom" secondItem="fFs-qD-uP4" secondAttribute="bottom" id="QwV-2Q-zjX"/>
+                <constraint firstItem="3cM-n4-J2x" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="XVo-Wd-m3N"/>
+                <constraint firstItem="fFs-qD-uP4" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="10" id="scu-aW-fdc"/>
+                <constraint firstItem="jkm-bE-3Qa" firstAttribute="top" secondItem="fFs-qD-uP4" secondAttribute="bottom" id="vUA-DR-kGh"/>
+                <constraint firstAttribute="trailing" secondItem="3cM-n4-J2x" secondAttribute="trailing" id="yrH-JU-DeS"/>
+            </constraints>
+            <point key="canvasLocation" x="-236" y="-95"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="ic_back" width="65" height="65"/>
+        <namedColor name="AppThemeColor">
+            <color red="0.10588235294117647" green="0.47450980392156861" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

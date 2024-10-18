@@ -2,7 +2,7 @@
 Pod::Spec.new do |spec|
 
 spec.name              = "iOS_CommonCode_Helper"
-spec.version           = "1.0.8"
+spec.version           = "1.0.9"
 spec.summary           = "CommonCode Code iOS"
 spec.description       = <<-DESC
 Common Code for Vasundhara iOS App Developing.
@@ -12,6 +12,7 @@ spec.license           = { :type => "MIT", :file => "LICENSE" }
 spec.author            = { "Gautam iOS" => "" }
 
 spec.platform          = :ios, "13.0"
+spec.ios.deployment_target = '13.0'
 spec.swift_version     = "5.0"
 
 spec.readme            = 'README.md'
@@ -19,6 +20,9 @@ spec.readme            = 'README.md'
 spec.source            = { :git => "https://github.com/sagarpatel1137/iOS_CommonCode_Helper.git", :tag => "#{spec.version}" }
 spec.source_files      = "iOS_CommonCode/**/*.swift"
 spec.resource          = ["iOS_CommonCode/**/*.xib"]
+
+spec.pod_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64'}
+spec.user_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64'}
 
 spec.static_framework  = true
 spec.frameworks        = 'UIKit', 'Foundation', 'SystemConfiguration', 'StoreKit'
@@ -43,5 +47,8 @@ spec.dependency 'Google-Mobile-Ads-SDK'
 
 spec.dependency 'UIView-Shimmer'
 spec.dependency 'MarqueeLabel'
+spec.dependency 'MBProgressHUD'
+spec.dependency 'lottie-ios'
+spec.dependency 'SwiftConfettiView'
 
 end

@@ -9,6 +9,8 @@
 import Foundation
 import RevenueCat
 
+public let notificationPurchaseSuccessfully = Notification.Name("InAppPurchaseSuccessfully")
+
 //MARK: - Purchase flag
 public var Purchase_flag: Bool {
     set{
