@@ -78,52 +78,8 @@ extension UIViewController
         }
     }
     
-    // Push
-    func pushVC(vc: UIViewController, animated: Bool) {
-        self.navigationController?.pushViewController(vc, animated: animated)
-    }
-    
-    func pushVCId(withIdentifier: String, animated:Bool) {
-        if let newVC = self.storyboard?.instantiateViewController(withIdentifier: withIdentifier) {
-            self.navigationController?.pushViewController(newVC, animated: animated)
-        }
-    }
-    
-    // Pop
-    func popVC(animated: Bool) {
-        self.navigationController?.popViewController(animated: animated)
-    }
-    
-    func popSpecificVC(vc: UIViewController.Type, animated: Bool) {
-        guard let navigationController = self.navigationController else { return }
-        
-        for controller in navigationController.viewControllers as Array {
-            if controller.isKind(of: vc.self) {
-                navigationController.popToViewController(controller, animated: animated)
-                break
-            }
-        }
-    }
-    
-    // Present
-    func presentView(withIdentifier: String) {
-        if let newVC = self.storyboard?.instantiateViewController(withIdentifier: withIdentifier) {
-            newVC.modalPresentationStyle = .overFullScreen
-            self.present(newVC, animated: true, completion: nil)
-        }
-    }
-    
-    func presentVC(vc: UIViewController,_ isAnimation : Bool = true) {
-        DispatchQueue.main.async{
-            vc.modalPresentationStyle = .overFullScreen
-            self.present(vc, animated: isAnimation, completion: nil)
-        }
-    }
-    
     public func openRatingAlert(rateURL: String, mailRecipientEmail: String, mailSubject: String, mailBody: String, complition: ((RatingResponse)-> Void)? = nil) {
         let vc = RatingVC()
-        vc.modalPresentationStyle = .overFullScreen
-        vc.modalTransitionStyle = .crossDissolve
         vc.rateURL = rateURL
         vc.mailRecipientEmail = mailRecipientEmail
         vc.mailSubject = mailSubject
@@ -131,21 +87,27 @@ extension UIViewController
         vc.completion = { ratingResponse in
             complition?(ratingResponse)
         }
+        vc.modalPresentationStyle = .overFullScreen
+        vc.modalTransitionStyle = .crossDissolve
         self.present(vc, animated: true, completion: nil)
     }
     
     public func openFeedbackVC(customization: UICustomizationFeedback? = nil) {
         let feedbackVC = FeedbackVC()
         feedbackVC.customization = customization ?? UICustomizationFeedback()
-        pushVC(vc: feedbackVC, animated: true)
+        feedbackVC.modalPresentationStyle = .overFullScreen
+        feedbackVC.modalTransitionStyle = .crossDissolve
+        self.present(feedbackVC, animated: true, completion: nil)
     }
     
     public func openWebVC(titleStr: String, urlStr: String, customization: UICustomizationWebView? = nil) {
-        let feedbackVC = webVC()
-        feedbackVC.titleStr = titleStr
-        feedbackVC.urlStr = urlStr
-        feedbackVC.customization = customization ?? UICustomizationWebView()
-        pushVC(vc: feedbackVC, animated: true)
+        let webVC = webVC()
+        webVC.titleStr = titleStr
+        webVC.urlStr = urlStr
+        webVC.customization = customization ?? UICustomizationWebView()
+        webVC.modalPresentationStyle = .overFullScreen
+        webVC.modalTransitionStyle = .crossDissolve
+        self.present(webVC, animated: true, completion: nil)
     }
     
     public func openSubTimelineVC(
@@ -165,7 +127,7 @@ extension UIViewController
         subTimelineVC.completionTimeline = { result in
             completionTimeline(result)
         }
-        subTimelineVC.modalPresentationStyle = .fullScreen
+        subTimelineVC.modalPresentationStyle = .overFullScreen
         subTimelineVC.modalTransitionStyle = .crossDissolve
         self.present(subTimelineVC, animated: true, completion: nil)
     }
@@ -187,7 +149,8 @@ extension UIViewController
         subAllPlanVC.completionMorePlan = { result in
             completionMorePlan(result)
         }
-        subAllPlanVC.modalPresentationStyle = .fullScreen
+        subAllPlanVC.modalPresentationStyle = .overFullScreen
+        subAllPlanVC.modalTransitionStyle = .crossDissolve
         self.present(subAllPlanVC, animated: true, completion: nil)
     }
     
@@ -196,12 +159,12 @@ extension UIViewController
         completionDiscount: @escaping (SubCloseCompletionBlock) -> Void
     ) {
         let vc = SubDiscountVC()
-        vc.modalPresentationStyle = .overFullScreen
-        vc.modalTransitionStyle = .crossDissolve
         vc.customizationSubDiscountTheme = customizationSubDiscountTheme
         vc.completionDiscount = { result in
             completionDiscount(result)
         }
+        vc.modalPresentationStyle = .overFullScreen
+        vc.modalTransitionStyle = .crossDissolve
         self.present(vc, animated: true, completion: nil)
     }
     
@@ -212,6 +175,8 @@ extension UIViewController
         let thankYouVC = ThankYouVC()
         thankYouVC.customizationSubThankYouTheme = customizationSubThankYouTheme ?? UICustomizationSubThankYouTheme()
         thankYouVC.customizationSubThankYouData = customizationSubThankYouData ?? UICustomizationSubThankYouData()
-        presentVC(vc: thankYouVC)
+        thankYouVC.modalPresentationStyle = .overFullScreen
+        thankYouVC.modalTransitionStyle = .crossDissolve
+        self.present(thankYouVC, animated: true, completion: nil)
     }
 }

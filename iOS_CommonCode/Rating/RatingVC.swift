@@ -33,7 +33,7 @@ class RatingVC: UIViewController {
     //MARK: -
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        AddFirebaseEvent(eventName: .RatingShow)
         self.initalViewDidLoad()
     }
     
@@ -49,6 +49,7 @@ class RatingVC: UIViewController {
         self.dismiss(animated: true) {
             if let rateUs = URL(string: self.rateURL) {
                 self.completion?(RatingResponse.Awesome)
+                AddFirebaseEvent(eventName: .RatingAwesome)
                 isUserGivenRating = true
                 UIApplication.shared.open(rateUs, options: [:], completionHandler: nil)
             }
@@ -56,6 +57,7 @@ class RatingVC: UIViewController {
     }
     
     @IBAction func btnImprovementClick(_ sender: Any) {
+        AddFirebaseEvent(eventName: .RatingImprovement)
         self.completion?(RatingResponse.NeedImprovement)
         isUserGivenRating = true
         funSendMail()
@@ -63,6 +65,7 @@ class RatingVC: UIViewController {
     
     @IBAction func btnLaterClick(_ sender: Any) {
         self.dismiss(animated: true, completion: {
+            AddFirebaseEvent(eventName: .RatingLater)
             self.completion?(RatingResponse.AskMeLater)
         })
     }
