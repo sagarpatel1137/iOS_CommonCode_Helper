@@ -2,7 +2,7 @@
 Pod::Spec.new do |spec|
 
 spec.name              = "iOS_CommonCode_Helper"
-spec.version           = "1.0.12"
+spec.version           = "1.0.13"
 spec.summary           = "CommonCode Code iOS"
 spec.description       = <<-DESC
 Common Code for Vasundhara iOS App Developing.
@@ -19,8 +19,8 @@ spec.readme            = 'README.md'
 
 spec.source            = { :git => "https://github.com/sagarpatel1137/iOS_CommonCode_Helper.git", :tag => "#{spec.version}" }
 spec.source_files      = "iOS_CommonCode/**/*.swift"
-spec.resource          = ["iOS_CommonCode/**/*.xib"]
 spec.resources = [
+    "iOS_CommonCode/**/*.xib",
     "iOS_CommonCode/Resources/Json/*.json",
     "iOS_CommonCode/Resources/Font/*.ttf",
     "iOS_CommonCode/Resources/*.xcassets"
