@@ -252,6 +252,14 @@
 			path = SubMorePlanVC;
 			sourceTree = "<group>";
 		};
+		811ED1362CC7CB8600225C84 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				81B0F3462CB10DB60014E08A /* Pod_Assets.xcassets */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
 		8121DD5E2C6216E8003460A5 = {
 			isa = PBXGroup;
 			children = (
@@ -452,10 +460,10 @@
 		81B0F2F82CB0FF700014E08A /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				811ED1362CC7CB8600225C84 /* Assets */,
 				81B0F3402CB10DA80014E08A /* Json */,
 				81B0F32E2CB10D9F0014E08A /* Font */,
 				81B0F2F92CB0FF7F0014E08A /* Localise */,
-				81B0F3462CB10DB60014E08A /* Pod_Assets.xcassets */,
 			);
 			path = Resources;
 			sourceTree = "<group>";

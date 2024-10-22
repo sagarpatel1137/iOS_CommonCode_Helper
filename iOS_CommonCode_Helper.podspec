@@ -2,7 +2,7 @@
 Pod::Spec.new do |spec|
 
 spec.name              = "iOS_CommonCode_Helper"
-spec.version           = "1.0.16"
+spec.version           = "1.0.17"
 spec.summary           = "CommonCode Code iOS"
 spec.description       = <<-DESC
 Common Code for Vasundhara iOS App Developing.
@@ -23,12 +23,9 @@ spec.resources = [
     "iOS_CommonCode/**/*.xib",
     "iOS_CommonCode/Resources/Json/*.json",
     "iOS_CommonCode/Resources/Font/*.ttf",
-    "iOS_CommonCode/Resources/Pod_Assets.xcassets",
-    '!iOS_CommonCode/Resources/Assets.xcassets'
-  ]
-  
-spec.pod_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64'}
-spec.user_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64'}
+]
+
+spec.resource_bundle = {'iOS_CommonCode' => ['iOS_CommonCode/Resources/Assets/*.xcassets']}
 
 spec.static_framework  = true
 spec.frameworks        = 'UIKit', 'Foundation', 'SystemConfiguration', 'StoreKit'
