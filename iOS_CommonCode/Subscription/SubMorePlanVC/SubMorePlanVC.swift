@@ -222,12 +222,13 @@ class SubMorePlanVC: UIViewController {
         
         lblTitle.text = "Unlock All Features".localized()
         
-        lblListFeatures[0].text = "Distance Measure".localized()
-        lblListFeatures[1].text = "Area Measure".localized()
-        lblListFeatures[2].text = "GPS Map Camera".localized()
-        lblListFeatures[3].text = "Route Planing".localized()
-        lblListFeatures[4].text = "Data Cloud Sync".localized()
-        lblListFeatures[5].text = "Remove Ads".localized()
+        for (i, lbl) in lblListFeatures.enumerated() {
+            lbl.text = self.customizationSubMorePlan?.arrStrListFeatures[i]
+        }
+        
+        for (i, img) in imgListFeatures.enumerated() {
+            img.image = self.customizationSubMorePlan?.arrImgListFeatures[i]
+        }
         
         lblSubscribe.text = RevenueCat_Manager.shared.updateContinueButtonTitle(self.customizationSubMorePlan?.subsciptionContinueBtnText ?? 0)
         lblRestore.text = "Restore".localized() + " "
