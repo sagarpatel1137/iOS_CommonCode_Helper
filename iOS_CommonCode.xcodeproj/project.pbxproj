@@ -11,6 +11,8 @@
 		8113BEC52C6324190081B3F8 /* Const For Subscription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8113BEC32C6324190081B3F8 /* Const For Subscription.swift */; };
 		811B2F092CC20C9A0080DF64 /* SubDiscountVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 811B2F062CC20C9A0080DF64 /* SubDiscountVC.swift */; };
 		811B2F0A2CC20C9A0080DF64 /* SubDiscountVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 811B2F072CC20C9A0080DF64 /* SubDiscountVC.xib */; };
+		811B9BE92CC619530031DE5A /* SubMorePlanVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 811B9BE72CC619530031DE5A /* SubMorePlanVC.xib */; };
+		811B9BEA2CC619530031DE5A /* SubMorePlanVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 811B9BE62CC619530031DE5A /* SubMorePlanVC.swift */; };
 		8121DD842C621A66003460A5 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8121DD832C621A66003460A5 /* Reachability.swift */; };
 		8121DD852C621A66003460A5 /* ForceUpdate_Manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8121DD822C621A66003460A5 /* ForceUpdate_Manager.swift */; };
 		8121DD8A2C6222C8003460A5 /* iOS_CommonCode_Helper.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 8121DD882C6222C8003460A5 /* iOS_CommonCode_Helper.podspec */; };
@@ -126,6 +128,8 @@
 		8113BEC32C6324190081B3F8 /* Const For Subscription.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Const For Subscription.swift"; sourceTree = "<group>"; };
 		811B2F062CC20C9A0080DF64 /* SubDiscountVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubDiscountVC.swift; sourceTree = "<group>"; };
 		811B2F072CC20C9A0080DF64 /* SubDiscountVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SubDiscountVC.xib; sourceTree = "<group>"; };
+		811B9BE62CC619530031DE5A /* SubMorePlanVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubMorePlanVC.swift; sourceTree = "<group>"; };
+		811B9BE72CC619530031DE5A /* SubMorePlanVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SubMorePlanVC.xib; sourceTree = "<group>"; };
 		8121DD682C6216E8003460A5 /* iOS_CommonCode.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = iOS_CommonCode.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8121DD822C621A66003460A5 /* ForceUpdate_Manager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForceUpdate_Manager.swift; sourceTree = "<group>"; };
 		8121DD832C621A66003460A5 /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
@@ -236,6 +240,15 @@
 				811B2F072CC20C9A0080DF64 /* SubDiscountVC.xib */,
 			);
 			path = Discount;
+			sourceTree = "<group>";
+		};
+		811B9BE82CC619530031DE5A /* SubMorePlanVC */ = {
+			isa = PBXGroup;
+			children = (
+				811B9BE62CC619530031DE5A /* SubMorePlanVC.swift */,
+				811B9BE72CC619530031DE5A /* SubMorePlanVC.xib */,
+			);
+			path = SubMorePlanVC;
 			sourceTree = "<group>";
 		};
 		8121DD5E2C6216E8003460A5 = {
@@ -351,6 +364,7 @@
 				811B2F082CC20C9A0080DF64 /* Discount */,
 				815800712CBE21EB00074F08 /* TimeLine */,
 				813A0A272CBF7D0900B5892A /* All Plan */,
+				811B9BE82CC619530031DE5A /* SubMorePlanVC */,
 				813A0A222CBF69E400B5892A /* Thank You */,
 				8158007E2CBE67FF00074F08 /* Subscription+Constant.swift */,
 				815800802CBE6BAB00074F08 /* CustomActionSheetView.swift */,
@@ -700,6 +714,7 @@
 				81B0F3472CB10DB60014E08A /* Assets.xcassets in Resources */,
 				81B0F30F2CB0FFD50014E08A /* fr.strings in Resources */,
 				81B0F3142CB0FFD50014E08A /* ru.strings in Resources */,
+				811B9BE92CC619530031DE5A /* SubMorePlanVC.xib in Resources */,
 				81B0F30C2CB0FFD50014E08A /* es.strings in Resources */,
 				81B0F3332CB10DA00014E08A /* PlusJakartaSans-ExtraBold.ttf in Resources */,
 				81B0F3182CB0FFD50014E08A /* af.strings in Resources */,
@@ -783,6 +798,7 @@
 				81CAB6022C6E20DB0050F848 /* UIViewController+Extension.swift in Sources */,
 				81A089CF2C9D3BB50091CFB3 /* Const_GoogleAds.swift in Sources */,
 				81A089D02C9D3BB50091CFB3 /* GoogleAd_Manager.swift in Sources */,
+				811B9BEA2CC619530031DE5A /* SubMorePlanVC.swift in Sources */,
 				815800812CBE6BAB00074F08 /* CustomActionSheetView.swift in Sources */,
 				8158007F2CBE67FF00074F08 /* Subscription+Constant.swift in Sources */,
 				81BA8AF12C881BE100F8A3C5 /* Constant_Function.swift in Sources */,

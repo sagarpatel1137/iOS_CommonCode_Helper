@@ -20,15 +20,27 @@ public enum SubCloseCompletionBlock {
 }
 
 public struct ReviewModel {
-    var title: String
-    var starCount: Int
-    var description: String
-    var name: String
+    public var title: String
+    public var starCount: Int
+    public var description: String
+    public var name: String
+    
+    public init(title: String, starCount: Int, description: String, name: String) {
+        self.title = title
+        self.starCount = starCount
+        self.description = description
+        self.name = name
+    }
 }
 
 public struct FeatureModel {
-    var feature: String
-    var imgage: UIImage
+    public var feature: String
+    public var imgage: UIImage
+    
+    public init(feature: String, imgage: UIImage) {
+        self.feature = feature
+        self.imgage = imgage
+    }
 }
 
 class SubAllPlanVC: UIViewController {
@@ -98,7 +110,7 @@ class SubAllPlanVC: UIViewController {
     public var subsciptionContinueBtnTextIndex = 0
     public var arrFeature: [FeatureModel] = []
     public var arrReview: [ReviewModel] = []
-    public var customizationSubRatingData = UICustomizationSubRatingData()
+    public var customizationSubRatingData: UICustomizationSubRatingData?
     
     //MARK: -
     override var prefersStatusBarHidden: Bool {
@@ -335,7 +347,7 @@ extension SubAllPlanVC
             let lifeTimePlan = SubscriptionConst.ActivePlans.life_Time
             arrLblPlanPrice[0].text = lifeTimePlan.plan_Price_String
         }
-        if SubscriptionConst.ActivePlans.one_Year.plan_Id != "" 
+        if SubscriptionConst.ActivePlans.one_Year.plan_Id != ""
         {
             let yearPlan = SubscriptionConst.ActivePlans.one_Year
             if !yearPlan.plan_Free_Trail.isFreeTrail && yearPlan.plan_Promotional_Offer.isPromotionalOffer {
@@ -354,7 +366,7 @@ extension SubAllPlanVC
             }
             arrLblPlanDetail[1].text = "\(priceStr) \("per".localized()) \("month".localized())"
         }
-        if SubscriptionConst.ActivePlans.one_Month.plan_Id != "" 
+        if SubscriptionConst.ActivePlans.one_Month.plan_Id != ""
         {
             let monthPlan = SubscriptionConst.ActivePlans.one_Month
             if !monthPlan.plan_Free_Trail.isFreeTrail && monthPlan.plan_Promotional_Offer.isPromotionalOffer {

@@ -9,18 +9,21 @@ import UIKit
 
 //MARK: Cusmization
 public struct UICustomizationSubRatingData {
-    // View1
-    var view1ImageRating: UIImage? = UIImage(named: "")
-    var view1TitleLabel: String? = ""
-    var view1SubTitleLabel: String? = ""
-    // View2
-    var view2ImagePlaceholder: UIImage? = UIImage(named: "")
-    var ratingCountLabel: String? = ""
-    var satisfiedCustLabel: String? = ""
-    // View3
-    var lblTitle: String? = ""
-    var lblDetail: String? = ""
-    var lblName: String? = ""
+    public var view1ImageRating: UIImage
+    public var view1TitleLabel: String
+    public var view1SubTitleLabel: String
+    public var view2ImagePlaceholder: UIImage
+    public var ratingCountLabel: String
+    public var satisfiedCustLabel: String
+    
+    public init(view1ImageRating: UIImage, view1TitleLabel: String, view1SubTitleLabel: String, view2ImagePlaceholder: UIImage, ratingCountLabel: String, satisfiedCustLabel: String) {
+        self.view1ImageRating = view1ImageRating
+        self.view1TitleLabel = view1TitleLabel
+        self.view1SubTitleLabel = view1SubTitleLabel
+        self.view2ImagePlaceholder = view2ImagePlaceholder
+        self.ratingCountLabel = ratingCountLabel
+        self.satisfiedCustLabel = satisfiedCustLabel
+    }
 }
 
 class SubRatingCell: UICollectionViewCell {
@@ -50,7 +53,7 @@ class SubRatingCell: UICollectionViewCell {
     
     static let identifier = "SubRatingCell"
     
-    public var customizationSubRatingData = UICustomizationSubRatingData()
+    public var customizationSubRatingData: UICustomizationSubRatingData?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -105,34 +108,23 @@ class SubRatingCell: UICollectionViewCell {
 //MARK: -
 extension SubRatingCell {
     private func updateUI() {
-        if let view1ImageRating = customizationSubRatingData.view1ImageRating {
+        if let view1ImageRating = customizationSubRatingData?.view1ImageRating {
             self.view1ImageRating.image = view1ImageRating
         }
-        if let view1TitleLabel = customizationSubRatingData.view1TitleLabel {
+        if let view1TitleLabel = customizationSubRatingData?.view1TitleLabel {
             self.view1TitleLabel.text = view1TitleLabel
         }
-        if let view1SubTitleLabel = customizationSubRatingData.view1SubTitleLabel {
+        if let view1SubTitleLabel = customizationSubRatingData?.view1SubTitleLabel {
             self.view1SubTitleLabel.text = view1SubTitleLabel
         }
-        
-        if let view2ImagePlaceholder = customizationSubRatingData.view2ImagePlaceholder {
+        if let view2ImagePlaceholder = customizationSubRatingData?.view2ImagePlaceholder {
             self.view2ImagePlaceholder.image = view2ImagePlaceholder
         }
-        if let ratingCountLabel = customizationSubRatingData.ratingCountLabel {
+        if let ratingCountLabel = customizationSubRatingData?.ratingCountLabel {
             self.ratingCountLabel.text = ratingCountLabel
         }
-        if let satisfiedCustLabel = customizationSubRatingData.satisfiedCustLabel {
+        if let satisfiedCustLabel = customizationSubRatingData?.satisfiedCustLabel {
             self.satisfiedCustLabel.text = satisfiedCustLabel
-        }
-        
-        if let lblTitle = customizationSubRatingData.lblTitle {
-            self.lblTitle.text = lblTitle
-        }
-        if let lblDetail = customizationSubRatingData.lblDetail {
-            self.lblDetail.text = lblDetail
-        }
-        if let lblName = customizationSubRatingData.lblName {
-            self.lblName.text = lblName
         }
     }
 }

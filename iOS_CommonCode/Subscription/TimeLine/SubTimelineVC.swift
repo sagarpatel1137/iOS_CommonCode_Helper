@@ -13,15 +13,27 @@ import MarqueeLabel
 
 //MARK: Cusmization
 public struct UICustomizationSubTimelineTheme {
-    public var themeColor: UIColor? = hexStringToUIColor(hex: "1B79FF")
-    public var imgTimelineRight: UIImage? = UIImage(named: "ic_timeline_right")
-    public var imgTimelineLock: UIImage? = UIImage(named: "ic_timeline_lock")
-    public var imgTimelineBell: UIImage? = UIImage(named: "ic_timeline_bell")
-    public var imgTimelineStar: UIImage? = UIImage(named: "ic_timeline_star")
-    public var btnJsonFilenameiPhone: String? = "sub_timeline_iphone"
-    public var btnJsonFilenameiPad: String? = "sub_timeline_ipad"
-    public var featureListTextColor: UIColor? = hexStringToUIColor(hex: "1E2128")
-    public var featureInfoTextColor: UIColor? = hexStringToUIColor(hex: "6C7379")
+    public var themeColor: UIColor?
+    public var imgTimelineRight: UIImage?
+    public var imgTimelineLock: UIImage?
+    public var imgTimelineBell: UIImage?
+    public var imgTimelineStar: UIImage?
+    public var btnJsonFilenameiPhone: String?
+    public var btnJsonFilenameiPad: String?
+    public var featureListTextColor: UIColor?
+    public var featureInfoTextColor: UIColor?
+    
+    public init(themeColor: UIColor? = nil, imgTimelineRight: UIImage? = nil, imgTimelineLock: UIImage? = nil, imgTimelineBell: UIImage? = nil, imgTimelineStar: UIImage? = nil, btnJsonFilenameiPhone: String? = nil, btnJsonFilenameiPad: String? = nil, featureListTextColor: UIColor? = nil, featureInfoTextColor: UIColor? = nil) {
+        self.themeColor = themeColor ?? hexStringToUIColor(hex: "1B79FF")
+        self.imgTimelineRight = imgTimelineRight ?? UIImage(named: "ic_timeline_right")
+        self.imgTimelineLock = imgTimelineLock ?? UIImage(named: "ic_timeline_lock")
+        self.imgTimelineBell = imgTimelineBell ?? UIImage(named: "ic_timeline_bell")
+        self.imgTimelineStar = imgTimelineStar ?? UIImage(named: "ic_timeline_star")
+        self.btnJsonFilenameiPhone = btnJsonFilenameiPhone ?? "sub_timeline_iphone"
+        self.btnJsonFilenameiPad = btnJsonFilenameiPad ?? "sub_timeline_ipad"
+        self.featureListTextColor = featureListTextColor ?? hexStringToUIColor(hex: "1E2128")
+        self.featureInfoTextColor = featureInfoTextColor ?? hexStringToUIColor(hex: "6C7379")
+    }
 }
 
 class SubTimelineVC: UIViewController {
@@ -83,12 +95,14 @@ class SubTimelineVC: UIViewController {
     public var arrReview: [ReviewModel] = []
     public var subsciptionContinueBtnTextIndex = 0
     public var customizationSubTimelineTheme = UICustomizationSubTimelineTheme()
-    public var customizationSubRatingData = UICustomizationSubRatingData()
+    public var customizationSubRatingData: UICustomizationSubRatingData?
 
     //MARK: -
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        selected_Plan = SubscriptionConst.ActivePlans.one_Month
+
         AddFirebaseEvent(eventName: .SubMonthltyShowTimeLime)
         
         AddNotification()
@@ -252,11 +266,13 @@ class SubTimelineVC: UIViewController {
     }
     
     @IBAction func btnTermasofUse(_ sender: UIButton) {
-        self.openWebVC(titleStr:"Terms of Use".localized(), urlStr: Pod_AppTermsAnsConditionURL)
+        let customizationWebView = UICustomizationWebView(titleTextColor: .black)
+        self.openWebVC(titleStr:"Terms of Use".localized(), urlStr: Pod_AppTermsAnsConditionURL, customization: customizationWebView)
     }
     
     @IBAction func btnPrivacyPolicy(_ sender: UIButton) {
-        self.openWebVC(titleStr: "Privacy Policy".localized(), urlStr: Pod_AppPrivacyPolicyURL)
+        let customizationWebView = UICustomizationWebView(titleTextColor: .black)
+        self.openWebVC(titleStr: "Privacy Policy".localized(), urlStr: Pod_AppPrivacyPolicyURL, customization: customizationWebView)
     }
 }
 
@@ -265,8 +281,6 @@ extension SubTimelineVC
 {
     func setPlanDetail()
     {
-        selected_Plan = SubscriptionConst.ActivePlans.one_Month
-        
         self.startPriceLoader()
         
         if SubscriptionConst.ActivePlans.one_Month.plan_Id != ""
@@ -482,7 +496,7 @@ extension SubTimelineVC {
                 label?.textColor = featureListTextColor
             }
             
-            if ((self.featureList.count != 0) && ((self.featureList.count-1) <= i)) {
+            if ((self.featureList.count != 0) && i <= ((self.featureList.count-1))) {
                 label?.isHidden = false
                 label?.text =  "•  " + featureList[i]
             } else {

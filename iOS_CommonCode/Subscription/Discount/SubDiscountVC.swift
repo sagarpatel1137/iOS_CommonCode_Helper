@@ -13,10 +13,17 @@ import SwiftConfettiView
 import RevenueCat
 
 public struct UICustomizationSubDiscountTheme {
-    var popupImageBG: UIImage? = UIImage(named: "ic_sub_popup_bg")
-    var popupImageTopBG: UIImage? = UIImage(named: "ic_sub_popup_top")
-    var subPopupImageBG: UIImage? = UIImage(named: "ic_sub_popup_offer_bg")
-    var imgButtonTryNow: UIImage? = UIImage(named: "ic_sub_popup_btn")
+    public var popupImageBG: UIImage?
+    public var popupImageTopBG: UIImage?
+    public var subPopupImageBG: UIImage?
+    public var imgButtonTryNow: UIImage?
+    
+    public init(popupImageBG: UIImage? = nil, popupImageTopBG: UIImage? = nil, subPopupImageBG: UIImage? = nil, imgButtonTryNow: UIImage? = nil) {
+        self.popupImageBG = popupImageBG ?? UIImage(named: "ic_sub_popup_bg")
+        self.popupImageTopBG = popupImageTopBG ?? UIImage(named: "ic_sub_popup_top")
+        self.subPopupImageBG = subPopupImageBG ?? UIImage(named: "ic_sub_popup_offer_bg")
+        self.imgButtonTryNow = imgButtonTryNow ?? UIImage(named: "ic_sub_popup_btn")
+    }
 }
 
 class SubDiscountVC: UIViewController {

@@ -9,17 +9,31 @@ import UIKit
 
 //MARK: Cusmization
 public struct UICustomizationSubThankYouTheme {
-    public var textColor: UIColor? = .black
-    public var btnGetStartedTextColor: UIColor? = .white
-    public var btnGetStartedFromColor: UIColor? = hexStringToUIColor(hex: "00C6FB")
-    public var btnGetStartedToColor: UIColor? = hexStringToUIColor(hex: "005BEA")
-    public var imgPlaceholder: UIImage? = UIImage(named: "ic_timeline_lock")
+    public var textColor: UIColor?
+    public var btnGetStartedTextColor: UIColor?
+    public var btnGetStartedFromColor: UIColor?
+    public var btnGetStartedToColor: UIColor?
+    public var imgPlaceholder: UIImage?
+    
+    public init(textColor: UIColor? = nil, btnGetStartedTextColor: UIColor? = nil, btnGetStartedFromColor: UIColor? = nil, btnGetStartedToColor: UIColor? = nil, imgPlaceholder: UIImage? = nil) {
+        self.textColor = textColor ?? .black
+        self.btnGetStartedTextColor = btnGetStartedTextColor ?? .white
+        self.btnGetStartedFromColor = btnGetStartedFromColor ?? hexStringToUIColor(hex: "00C6FB")
+        self.btnGetStartedToColor = btnGetStartedToColor ?? hexStringToUIColor(hex: "005BEA")
+        self.imgPlaceholder = imgPlaceholder ?? UIImage(named: "ic_timeline_lock")
+    }
 }
 
 public struct UICustomizationSubThankYouData {
-    public var titleTextColor: String? = "Thank You For Subscription"
-    public var descriptionTextColor: String? = "Now you can enjoy the service!"
-    public var getStartedTextColor: String? = "Get Started"
+    public var titleTextColor: String?
+    public var descriptionTextColor: String?
+    public var getStartedTextColor: String?
+    
+    public init(titleTextColor: String? = nil, descriptionTextColor: String? = nil, getStartedTextColor: String? = nil) {
+        self.titleTextColor = titleTextColor ?? "Thank You For Subscription"
+        self.descriptionTextColor = descriptionTextColor ?? "Now you can enjoy the service!"
+        self.getStartedTextColor = getStartedTextColor ?? "Get Started"
+    }
 }
 
 class ThankYouVC: UIViewController {

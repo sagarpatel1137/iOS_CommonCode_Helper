@@ -14,22 +14,25 @@ public class OneSignal_Manager {
     
     public func initialize(oneSignalId: String, launchOptions: [UIApplication.LaunchOptionsKey: Any]?)
     {
-        basicSetupForOneSignalPlayerId()
-        
-        OneSignal.Debug.setLogLevel(.LL_VERBOSE)
-        OneSignal.initialize(oneSignalId, withLaunchOptions: launchOptions)
-        
-        if let extId = OneSignalId_ExternalId {
-            OneSignal.login(extId)
-        } else {
-            OneSignalId_ExternalId = UUID().uuidString
-            OneSignal.login(OneSignalId_ExternalId!)
-        }
-        
-        if let onesignalId = OneSignal.User.onesignalId {
-            if OneSignal.User.externalId == OneSignalId_ExternalId {
-                Purchases.shared.attribution.setOnesignalUserID(onesignalId)
-                Purchases.shared.syncAttributesAndOfferingsIfNeeded { offeting, error in
+        DispatchQueue.main.async {
+            
+            self.basicSetupForOneSignalPlayerId()
+            
+            OneSignal.Debug.setLogLevel(.LL_VERBOSE)
+            OneSignal.initialize(oneSignalId, withLaunchOptions: launchOptions)
+            
+            if let extId = OneSignalId_ExternalId {
+                OneSignal.login(extId)
+            } else {
+                OneSignalId_ExternalId = UUID().uuidString
+                OneSignal.login(OneSignalId_ExternalId!)
+            }
+            
+            if let onesignalId = OneSignal.User.onesignalId {
+                if OneSignal.User.externalId == OneSignalId_ExternalId {
+                    Purchases.shared.attribution.setOnesignalUserID(onesignalId)
+                    Purchases.shared.syncAttributesAndOfferingsIfNeeded { offeting, error in
+                    }
                 }
             }
         }

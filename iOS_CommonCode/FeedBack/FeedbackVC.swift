@@ -8,30 +8,57 @@
 import UIKit
 
 public struct UICustomizationFeedback {
-    var navigationBarBackground: UIColor? = hexStringToUIColor(hex: "F3F6FF")
-    var isShowNavigationBarShadow: Bool = true
-    var titleText: String? = "Feedback"
-    var titleTextFont: UIFont? = setCustomFont(name: .PlusJakartaSans_ExtraBold, iPhoneSize: 17, iPadSize: 22)
-    var titleTextColor: UIColor? = hexStringToUIColor(hex: "1B79FF")
-    var backButtonImage: UIImage? = UIImage(named: "ic_back")
-    var placeholderButtonImage: UIImage? = UIImage(named: "ic_feedback_poster")
-    var shareExperienceText: String? = "Share your experience with us"
-    var shareExperienceFont: UIFont? = setCustomFont(name: .PlusJakartaSans_Medium, iPhoneSize: 13, iPadSize: 19)
-    var shareExperienceTextColor: UIColor? = hexStringToUIColor(hex: "898989")
-    var whyUseText: String? = "What is your Profession?"
-    var whyUsePlaceholderText: String? = "Write Here..."
-    var whyUseTextFont: UIFont? = setCustomFont(name: .PlusJakartaSans_Bold, iPhoneSize: 13, iPadSize: 19)
-    var whyUseTextColor: UIColor? = .black
-    var suggestionText: String? = "Write your Suggestions"
-    var suggestionPlaceholderText: String? = "Write Here your suggestion/Feedback..."
-    var suggestionTextFont: UIFont? = setCustomFont(name: .PlusJakartaSans_Bold, iPhoneSize: 13, iPadSize: 19)
-    var suggestionTextColor: UIColor? = .black
-    var limitTextFont: UIFont? = setCustomFont(name: .PlusJakartaSans_Medium, iPhoneSize: 13, iPadSize: 19)
-    var limitTextColor: UIColor? = hexStringToUIColor(hex: "898989")
-    var submitText: String? = "Submit"
-    var submitTextFont: UIFont? = setCustomFont(name: .PlusJakartaSans_Bold, iPhoneSize: 15, iPadSize: 20)
-    var submitTextColor: UIColor? = .white
-    var submitButtonImage: UIImage? = UIImage(named: "ic_btn_bg")
+    public var navigationBarBackground: UIColor?
+    public var isShowNavigationBarShadow: Bool?
+    public var titleText: String?
+    public var titleTextFont: UIFont?
+    public var titleTextColor: UIColor?
+    public var backButtonImage: UIImage?
+    public var placeholderButtonImage: UIImage?
+    public var shareExperienceText: String?
+    public var shareExperienceFont: UIFont?
+    public var shareExperienceTextColor: UIColor?
+    public var whyUseText: String?
+    public var whyUsePlaceholderText: String?
+    public var whyUseTextFont: UIFont?
+    public var whyUseTextColor: UIColor?
+    public var suggestionText: String?
+    public var suggestionPlaceholderText: String?
+    public var suggestionTextFont: UIFont?
+    public var suggestionTextColor: UIColor?
+    public var limitTextFont: UIFont?
+    public var limitTextColor: UIColor?
+    public var submitText: String?
+    public var submitTextFont: UIFont?
+    public var submitTextColor: UIColor?
+    public var submitButtonImage: UIImage?
+    
+    public init(navigationBarBackground: UIColor? = nil, isShowNavigationBarShadow: Bool? = nil, titleText: String? = nil, titleTextFont: UIFont? = nil, titleTextColor: UIColor? = nil, backButtonImage: UIImage? = nil, placeholderButtonImage: UIImage? = nil, shareExperienceText: String? = nil, shareExperienceFont: UIFont? = nil, shareExperienceTextColor: UIColor? = nil, whyUseText: String? = nil, whyUsePlaceholderText: String? = nil, whyUseTextFont: UIFont? = nil, whyUseTextColor: UIColor? = nil, suggestionText: String? = nil, suggestionPlaceholderText: String? = nil, suggestionTextFont: UIFont? = nil, suggestionTextColor: UIColor? = nil, limitTextFont: UIFont? = nil, limitTextColor: UIColor? = nil, submitText: String? = nil, submitTextFont: UIFont? = nil, submitTextColor: UIColor? = nil, submitButtonImage: UIImage? = nil) {
+        self.navigationBarBackground = navigationBarBackground ?? hexStringToUIColor(hex: "F3F6FF")
+        self.isShowNavigationBarShadow = isShowNavigationBarShadow ?? true
+        self.titleText = titleText ?? "Feedback"
+        self.titleTextFont = titleTextFont ?? setCustomFont(name: .PlusJakartaSans_ExtraBold, iPhoneSize: 17, iPadSize: 22)
+        self.titleTextColor = titleTextColor ?? hexStringToUIColor(hex: "1B79FF")
+        self.backButtonImage = backButtonImage ?? UIImage(named: "ic_back")
+        self.placeholderButtonImage = placeholderButtonImage ?? UIImage(named: "ic_feedback_poster")
+        self.shareExperienceText = shareExperienceText ?? "Share your experience with us"
+        self.shareExperienceFont = shareExperienceFont ?? setCustomFont(name: .PlusJakartaSans_Medium, iPhoneSize: 13, iPadSize: 19)
+        self.shareExperienceTextColor = shareExperienceTextColor ?? hexStringToUIColor(hex: "898989")
+        self.whyUseText = whyUseText ?? "What is your Profession?"
+        self.whyUsePlaceholderText = whyUsePlaceholderText ?? "Write Here..."
+        self.whyUseTextFont = whyUseTextFont ?? setCustomFont(name: .PlusJakartaSans_Bold, iPhoneSize: 13, iPadSize: 19)
+        self.whyUseTextColor = whyUseTextColor ?? .black
+        self.suggestionText = suggestionText ?? "Write your Suggestions"
+        self.suggestionPlaceholderText = suggestionPlaceholderText ?? "Write Here your suggestion/Feedback..."
+        self.suggestionTextFont = suggestionTextFont ?? setCustomFont(name: .PlusJakartaSans_Bold, iPhoneSize: 13, iPadSize: 19)
+        self.suggestionTextColor = suggestionTextColor ?? .black
+        self.limitTextFont = limitTextFont ?? setCustomFont(name: .PlusJakartaSans_Medium, iPhoneSize: 13, iPadSize: 19)
+        self.limitTextColor = limitTextColor ?? hexStringToUIColor(hex: "898989")
+        self.submitText = submitText ?? "Submit"
+        self.submitTextFont = submitTextFont ?? setCustomFont(name: .PlusJakartaSans_Bold, iPhoneSize: 15, iPadSize: 20)
+        self.submitTextColor = submitTextColor ?? .white
+        self.submitButtonImage = submitButtonImage ?? UIImage(named: "ic_btn_bg")
+    }
 }
 
 class FeedbackVC: UIViewController {
@@ -59,6 +86,7 @@ class FeedbackVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        updateUI()
     }
     
     private func setUpUI() {
@@ -73,7 +101,7 @@ class FeedbackVC: UIViewController {
         
         charCountLbl.text = "0/\(maxCharacterCount)"
         
-        if customization.isShowNavigationBarShadow {
+        if customization.isShowNavigationBarShadow ?? true {
             DispatchQueue.main.async {
                 self.viewNavBar.addBottomViewShadow()
             }
@@ -131,7 +159,7 @@ class FeedbackVC: UIViewController {
 //MARK: - Button Actions.
 extension FeedbackVC {
     @IBAction func backButtonClicked(_ sender: UIButton) {
-        self.navigationController?.popViewController(animated: true)
+        self.dismiss(animated: true)
     }
     
     @IBAction func submitButtonClicked(_ sender: UIButton) {
@@ -152,7 +180,7 @@ extension FeedbackVC {
                         DispatchQueue.main.async {
                             self.view.makeToast("Feedback sent successfully".localized(), position: .center)
                             DispatchQueue.main.asyncAfter(deadline: .now()+1) {
-                                self.navigationController?.popViewController(animated: true)
+                                self.dismiss(animated: true)
                             }
                         }
                     } else {

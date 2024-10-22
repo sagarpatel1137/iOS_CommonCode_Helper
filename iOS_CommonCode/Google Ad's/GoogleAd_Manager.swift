@@ -438,13 +438,16 @@ extension GoogleAd_Manager
             fatalError("Vasundhara 🏢 - Google Ad : BannerAd Id Not Initialise Properly.")
         }
         
-        if !Purchase_flag && !isBannerAdLoaded {
-            bannerViewAd = GADBannerView()
-            bannerViewAd.delegate = self
-            bannerViewAd.adUnitID = Banner_ID
-            bannerViewAd.rootViewController = funGetTopViewController()
-            bannerViewAd.adSize = GADCurrentOrientationAnchoredAdaptiveBannerAdSizeWithWidth(UIScreen.main.bounds.width)
-            bannerViewAd.load(GADRequest())
+        DispatchQueue.main.async { [weak self] in
+            guard let self = self else { return }
+            if !Purchase_flag && !isBannerAdLoaded {
+                bannerViewAd = GADBannerView()
+                bannerViewAd.delegate = self
+                bannerViewAd.adUnitID = Banner_ID
+                bannerViewAd.rootViewController = funGetTopViewController()
+                bannerViewAd.adSize = GADCurrentOrientationAnchoredAdaptiveBannerAdSizeWithWidth(UIScreen.main.bounds.width)
+                bannerViewAd.load(GADRequest())
+            }
         }
     }
 }

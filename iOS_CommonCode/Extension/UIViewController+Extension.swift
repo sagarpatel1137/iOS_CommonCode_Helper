@@ -78,7 +78,13 @@ extension UIViewController
         }
     }
     
-    public func openRatingAlert(rateURL: String, mailRecipientEmail: String, mailSubject: String, mailBody: String, complition: ((RatingResponse)-> Void)? = nil) {
+    public func openRatingAlert(
+        rateURL: String,
+        mailRecipientEmail: String,
+        mailSubject: String,
+        mailBody: String,
+        complition: ((RatingResponse)-> Void)? = nil
+    ) {
         let vc = RatingVC()
         vc.rateURL = rateURL
         vc.mailRecipientEmail = mailRecipientEmail
@@ -100,7 +106,11 @@ extension UIViewController
         self.present(feedbackVC, animated: true, completion: nil)
     }
     
-    public func openWebVC(titleStr: String, urlStr: String, customization: UICustomizationWebView? = nil) {
+    public func openWebVC(
+        titleStr: String,
+        urlStr: String,
+        customization: UICustomizationWebView? = nil
+    ) {
         let webVC = webVC()
         webVC.titleStr = titleStr
         webVC.urlStr = urlStr
@@ -115,7 +125,8 @@ extension UIViewController
         arrFeature: [FeatureModel],
         arrReview: [ReviewModel],
         subsciptionContinueBtnTextIndex: Int,
-        customizationSubTimelineTheme: UICustomizationSubTimelineTheme,
+        customizationSubTimelineTheme: UICustomizationSubTimelineTheme? = nil,
+        customizationSubRatingData: UICustomizationSubRatingData?,
         completionTimeline: @escaping (SubCloseCompletionBlock) -> Void
     ) {
         let subTimelineVC = SubTimelineVC()
@@ -123,7 +134,8 @@ extension UIViewController
         subTimelineVC.arrFeature = arrFeature
         subTimelineVC.arrReview = arrReview
         subTimelineVC.subsciptionContinueBtnTextIndex = subsciptionContinueBtnTextIndex
-        subTimelineVC.customizationSubTimelineTheme = customizationSubTimelineTheme
+        subTimelineVC.customizationSubTimelineTheme = customizationSubTimelineTheme ?? UICustomizationSubTimelineTheme()
+        subTimelineVC.customizationSubRatingData = customizationSubRatingData
         subTimelineVC.completionTimeline = { result in
             completionTimeline(result)
         }
@@ -132,12 +144,30 @@ extension UIViewController
         self.present(subTimelineVC, animated: true, completion: nil)
     }
     
+    public func openSubMorePlanVC(
+        isFromTimeline: Bool,
+        customizationSubMorePlan: UICustomizationSubMorePlan?,
+        customizationSubRatingData: UICustomizationSubRatingData?,
+        completionMorePlan: @escaping (SubCloseCompletionBlock) -> Void
+    ) {
+        let subAllPlanVC = SubMorePlanVC()
+        subAllPlanVC.isFromTimeline = isFromTimeline
+        subAllPlanVC.customizationSubMorePlan = customizationSubMorePlan
+        subAllPlanVC.customizationSubRatingData = customizationSubRatingData
+        subAllPlanVC.completionMorePlan = { result in
+            completionMorePlan(result)
+        }
+        subAllPlanVC.modalPresentationStyle = .overFullScreen
+        subAllPlanVC.modalTransitionStyle = .crossDissolve
+        self.present(subAllPlanVC, animated: true, completion: nil)
+    }
+    
     public func openSubAllPlanVC(
         isFromTimeline: Bool,
         arrFeature: [FeatureModel],
         arrReview: [ReviewModel],
         subsciptionContinueBtnTextIndex: Int,
-        customizationSubRatingData: UICustomizationSubRatingData,
+        customizationSubRatingData: UICustomizationSubRatingData?,
         completionMorePlan: @escaping (SubCloseCompletionBlock) -> Void
     ) {
         let subAllPlanVC = SubAllPlanVC()
@@ -155,11 +185,11 @@ extension UIViewController
     }
     
     public func openSubDiscountVC(
-        customizationSubDiscountTheme: UICustomizationSubDiscountTheme,
+        customizationSubDiscountTheme: UICustomizationSubDiscountTheme? = nil,
         completionDiscount: @escaping (SubCloseCompletionBlock) -> Void
     ) {
         let vc = SubDiscountVC()
-        vc.customizationSubDiscountTheme = customizationSubDiscountTheme
+        vc.customizationSubDiscountTheme = customizationSubDiscountTheme ?? UICustomizationSubDiscountTheme()
         vc.completionDiscount = { result in
             completionDiscount(result)
         }

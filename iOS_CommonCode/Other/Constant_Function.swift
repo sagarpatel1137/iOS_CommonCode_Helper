@@ -71,8 +71,8 @@ var fontRatio: CGFloat {
     }
 }
 
-func setCustomFont(name: FontApp, iPhoneSize: Int, iPadSize: Int) -> UIFont {
-    let font = UIFont(name: name.rawValue, size: UIDevice.current.isiPhone ? Double(iPhoneSize)*fontRatio : Double(iPadSize)*fontRatio)
+func setCustomFont(name: FontApp, iPhoneSize: Double, iPadSize: Double) -> UIFont {
+    let font = UIFont(name: name.rawValue, size: UIDevice.current.isiPhone ? iPhoneSize*fontRatio : iPadSize*fontRatio)
     return font!
 }
 

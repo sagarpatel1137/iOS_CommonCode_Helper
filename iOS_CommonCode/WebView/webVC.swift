@@ -10,10 +10,17 @@ import WebKit
 import Alamofire
 
 public struct UICustomizationWebView {
-    public var navBarBackgroundColor: UIColor? = hexStringToUIColor(hex: "F3F6FF")
-    public var backButtonImage: UIImage? = UIImage(named: "ic_back")
-    public var titleFont: UIFont? = setCustomFont(name: .WorkSans_SemiBold, iPhoneSize: 20, iPadSize: 20)
-    public var titleTextColor: UIColor? = hexStringToUIColor(hex: "F3F6FF")
+    public var navBarBackgroundColor: UIColor?
+    public var backButtonImage: UIImage?
+    public var titleFont: UIFont?
+    public var titleTextColor: UIColor?
+    
+    public init(navBarBackgroundColor: UIColor? = nil, backButtonImage: UIImage? = nil, titleFont: UIFont? = nil, titleTextColor: UIColor? = nil) {
+        self.navBarBackgroundColor = navBarBackgroundColor ?? hexStringToUIColor(hex: "F3F6FF")
+        self.backButtonImage = backButtonImage ?? UIImage(named: "ic_back")
+        self.titleFont = titleFont ?? setCustomFont(name: .WorkSans_SemiBold, iPhoneSize: 20, iPadSize: 20)
+        self.titleTextColor = titleTextColor ?? hexStringToUIColor(hex: "F3F6FF")
+    }
 }
 
 open class webVC: UIViewController {

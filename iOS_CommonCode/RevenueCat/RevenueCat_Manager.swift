@@ -42,7 +42,7 @@ public class RevenueCat_Manager : NSObject {
     private var isThreeMonthDiscountIntroductoryAvailable = false
     private var isSixMonthDiscountIntroductoryAvailable = false
     private var isYearDiscountIntroductoryAvailable = false
-
+    
     private var subProductIds = SubscriptionProductIds()
     private var dispatchGroup = DispatchGroup()
     
@@ -56,7 +56,7 @@ public class RevenueCat_Manager : NSObject {
     ///   - sharedSecret: sharedSecret of the application
     ///   - productIds: Product ids for offer code to find out for which offers fetched from revenuecat
     public func initialiseRevenueCat(APIKey: String, AppId: String = "", sharedSecret: String = "", productIds: SubscriptionProductIds?) {
-    
+        
         Purchases.configure(with: Configuration.Builder(withAPIKey: APIKey)
             .with(storeKitVersion: .storeKit2)
             .build()
@@ -235,18 +235,9 @@ public class RevenueCat_Manager : NSObject {
         }
         if let p1 = p1 {
             Purchases.shared.purchase(package: p1, promotionalOffer: promoOffers) { (trans, info, error, cancelled) in
-                if let error = error {
-                    if !cancelled {
-                        RevenueCat_Manager.purchaseInfo = info
-                        Purchase_flag = info?.entitlements.active.count ?? 0 > 0 ? true :  false
-                        completion(true,info,error,false)
-                    }
-                    else{
-                        completion(true,info,error,true)
-                    }
-                } else {
-                    completion(true,info,nil,false)
-                }
+                RevenueCat_Manager.purchaseInfo = info
+                Purchase_flag = info?.entitlements.active.count ?? 0 > 0 ? true : false
+                completion(true,info,error,cancelled)
             }
         }
         else{
@@ -262,23 +253,15 @@ public class RevenueCat_Manager : NSObject {
         }
         if let p1 = p1 {
             Purchases.shared.purchase(package: p1) { (trans, info, error, cancelled) in
-                if let error = error {
-                    if !cancelled {
-                        RevenueCat_Manager.purchaseInfo = info
-                        Purchase_flag = info?.entitlements.active.count ?? 0 > 0 ? true :  false
-                        completion(true,info,error,false)
-                    } else{
-                        completion(true,info,error,true)
-                    }
-                } else {
-                    completion(true,info,nil,false)
-                }
+                RevenueCat_Manager.purchaseInfo = info
+                Purchase_flag = info?.entitlements.active.count ?? 0 > 0 ? true : false
+                completion(true,info,error,cancelled)
             }
         } else {
             completion(false,nil,nil,false)
         }
     }
-    
+
     // MARK: - Restore
     public func restoreProduct(completion : @escaping(Bool,CustomerInfo?,Error?)->Void)
     {
@@ -313,59 +296,59 @@ extension RevenueCat_Manager
         
         //One Month
         SubscriptionConst.ActivePlans.one_Month = SubscriptionConst.PlanInfo(plan_Id: OneMonthSubscriptionID,
-                                                                            plan_Type: SubscriptionConst.SubscriptionType.onemonth,
-                                                                            plan_Price_String: GetPriceOfProduct_String(productId: OneMonthSubscriptionID),
-                                                                            plan_Price: GetPriceOfProduct_Int(productId: OneMonthSubscriptionID),
-                                                                            plan_Currancy_Code: GetCurrncyCode(productId: OneMonthSubscriptionID),
-                                                                            plan_Free_Trail: GetIntroductioyOfProduct(productId: OneMonthSubscriptionID))
-
+                                                                             plan_Type: SubscriptionConst.SubscriptionType.onemonth,
+                                                                             plan_Price_String: GetPriceOfProduct_String(productId: OneMonthSubscriptionID),
+                                                                             plan_Price: GetPriceOfProduct_Int(productId: OneMonthSubscriptionID),
+                                                                             plan_Currancy_Code: GetCurrncyCode(productId: OneMonthSubscriptionID),
+                                                                             plan_Free_Trail: GetIntroductioyOfProduct(productId: OneMonthSubscriptionID))
+        
         GetPromotionalOfferOfProduct(OneMonthSubscriptionID, completion: { promOffer in
             SubscriptionConst.ActivePlans.one_Month.plan_Promotional_Offer = promOffer
         })
         
         //Two Month
         SubscriptionConst.ActivePlans.two_Month = SubscriptionConst.PlanInfo(plan_Id: TwoMonthSubscriptionID,
-                                                                            plan_Type: SubscriptionConst.SubscriptionType.twomonth,
-                                                                            plan_Price_String: GetPriceOfProduct_String(productId: TwoMonthSubscriptionID),
-                                                                            plan_Price: GetPriceOfProduct_Int(productId: TwoMonthSubscriptionID),
-                                                                            plan_Currancy_Code: GetCurrncyCode(productId: TwoMonthSubscriptionID),
-                                                                            plan_Free_Trail: GetIntroductioyOfProduct(productId: TwoMonthSubscriptionID))
-
+                                                                             plan_Type: SubscriptionConst.SubscriptionType.twomonth,
+                                                                             plan_Price_String: GetPriceOfProduct_String(productId: TwoMonthSubscriptionID),
+                                                                             plan_Price: GetPriceOfProduct_Int(productId: TwoMonthSubscriptionID),
+                                                                             plan_Currancy_Code: GetCurrncyCode(productId: TwoMonthSubscriptionID),
+                                                                             plan_Free_Trail: GetIntroductioyOfProduct(productId: TwoMonthSubscriptionID))
+        
         GetPromotionalOfferOfProduct(TwoMonthSubscriptionID, completion: { promOffer in
             SubscriptionConst.ActivePlans.two_Month.plan_Promotional_Offer = promOffer
         })
         
         //Three Month
         SubscriptionConst.ActivePlans.three_Month = SubscriptionConst.PlanInfo(plan_Id: ThreeMonthSubscriptionID,
-                                                                            plan_Type: SubscriptionConst.SubscriptionType.threemonth,
-                                                                            plan_Price_String: GetPriceOfProduct_String(productId: ThreeMonthSubscriptionID),
-                                                                            plan_Price: GetPriceOfProduct_Int(productId: ThreeMonthSubscriptionID),
-                                                                            plan_Currancy_Code: GetCurrncyCode(productId: ThreeMonthSubscriptionID),
-                                                                            plan_Free_Trail: GetIntroductioyOfProduct(productId: ThreeMonthSubscriptionID))
-
+                                                                               plan_Type: SubscriptionConst.SubscriptionType.threemonth,
+                                                                               plan_Price_String: GetPriceOfProduct_String(productId: ThreeMonthSubscriptionID),
+                                                                               plan_Price: GetPriceOfProduct_Int(productId: ThreeMonthSubscriptionID),
+                                                                               plan_Currancy_Code: GetCurrncyCode(productId: ThreeMonthSubscriptionID),
+                                                                               plan_Free_Trail: GetIntroductioyOfProduct(productId: ThreeMonthSubscriptionID))
+        
         GetPromotionalOfferOfProduct(ThreeMonthSubscriptionID, completion: { promOffer in
             SubscriptionConst.ActivePlans.three_Month.plan_Promotional_Offer = promOffer
         })
         
         //Six Month
         SubscriptionConst.ActivePlans.six_Month = SubscriptionConst.PlanInfo(plan_Id: SixMonthSubscriptionID,
-                                                                            plan_Type: SubscriptionConst.SubscriptionType.sixmonth,
-                                                                            plan_Price_String: GetPriceOfProduct_String(productId: SixMonthSubscriptionID),
-                                                                            plan_Price: GetPriceOfProduct_Int(productId: SixMonthSubscriptionID),
-                                                                            plan_Currancy_Code: GetCurrncyCode(productId: SixMonthSubscriptionID),
-                                                                            plan_Free_Trail: GetIntroductioyOfProduct(productId: SixMonthSubscriptionID))
-
+                                                                             plan_Type: SubscriptionConst.SubscriptionType.sixmonth,
+                                                                             plan_Price_String: GetPriceOfProduct_String(productId: SixMonthSubscriptionID),
+                                                                             plan_Price: GetPriceOfProduct_Int(productId: SixMonthSubscriptionID),
+                                                                             plan_Currancy_Code: GetCurrncyCode(productId: SixMonthSubscriptionID),
+                                                                             plan_Free_Trail: GetIntroductioyOfProduct(productId: SixMonthSubscriptionID))
+        
         GetPromotionalOfferOfProduct(SixMonthSubscriptionID, completion: { promOffer in
             SubscriptionConst.ActivePlans.six_Month.plan_Promotional_Offer = promOffer
         })
         
         //One Year
         SubscriptionConst.ActivePlans.one_Year = SubscriptionConst.PlanInfo(plan_Id: YearSubscriptionID,
-                                                                           plan_Type: SubscriptionConst.SubscriptionType.year,
-                                                                           plan_Price_String: GetPriceOfProduct_String(productId: YearSubscriptionID),
-                                                                           plan_Price: GetPriceOfProduct_Int(productId: YearSubscriptionID),
-                                                                           plan_Currancy_Code: GetCurrncyCode(productId: YearSubscriptionID),
-                                                                           plan_Free_Trail: GetIntroductioyOfProduct(productId: YearSubscriptionID))
+                                                                            plan_Type: SubscriptionConst.SubscriptionType.year,
+                                                                            plan_Price_String: GetPriceOfProduct_String(productId: YearSubscriptionID),
+                                                                            plan_Price: GetPriceOfProduct_Int(productId: YearSubscriptionID),
+                                                                            plan_Currancy_Code: GetCurrncyCode(productId: YearSubscriptionID),
+                                                                            plan_Free_Trail: GetIntroductioyOfProduct(productId: YearSubscriptionID))
         
         GetPromotionalOfferOfProduct(YearSubscriptionID, completion: { promOffer in
             SubscriptionConst.ActivePlans.one_Year.plan_Promotional_Offer = promOffer
@@ -378,66 +361,66 @@ extension RevenueCat_Manager
                                                                                      plan_Price: GetPriceOfProduct_Int(productId: WeekDiscountSubscriptionID),
                                                                                      plan_Currancy_Code: GetCurrncyCode(productId: WeekDiscountSubscriptionID),
                                                                                      plan_Free_Trail: GetIntroductioyOfProduct(productId: WeekDiscountSubscriptionID))
-
+        
         GetPromotionalOfferOfProduct(WeekDiscountSubscriptionID, completion: { promOffer in
             SubscriptionConst.ActivePlans.one_Week_Discount.plan_Promotional_Offer = promOffer
         })
         
         //One Month Discount
         SubscriptionConst.ActivePlans.one_Month_Discount = SubscriptionConst.PlanInfo(plan_Id: OneMonthDiscountSubscriptionID,
-                                                                            plan_Type: SubscriptionConst.SubscriptionType.onemonth,
-                                                                            plan_Price_String: GetPriceOfProduct_String(productId: OneMonthDiscountSubscriptionID),
-                                                                            plan_Price: GetPriceOfProduct_Int(productId: OneMonthDiscountSubscriptionID),
-                                                                            plan_Currancy_Code: GetCurrncyCode(productId: OneMonthDiscountSubscriptionID),
-                                                                            plan_Free_Trail: GetIntroductioyOfProduct(productId: OneMonthDiscountSubscriptionID))
-
+                                                                                      plan_Type: SubscriptionConst.SubscriptionType.onemonth,
+                                                                                      plan_Price_String: GetPriceOfProduct_String(productId: OneMonthDiscountSubscriptionID),
+                                                                                      plan_Price: GetPriceOfProduct_Int(productId: OneMonthDiscountSubscriptionID),
+                                                                                      plan_Currancy_Code: GetCurrncyCode(productId: OneMonthDiscountSubscriptionID),
+                                                                                      plan_Free_Trail: GetIntroductioyOfProduct(productId: OneMonthDiscountSubscriptionID))
+        
         GetPromotionalOfferOfProduct(OneMonthDiscountSubscriptionID, completion: { promOffer in
             SubscriptionConst.ActivePlans.one_Month_Discount.plan_Promotional_Offer = promOffer
         })
         
         //Two Month Discount
         SubscriptionConst.ActivePlans.two_Month_Discount = SubscriptionConst.PlanInfo(plan_Id: TwoMonthDiscountSubscriptionID,
-                                                                            plan_Type: SubscriptionConst.SubscriptionType.twomonth,
-                                                                            plan_Price_String: GetPriceOfProduct_String(productId: TwoMonthDiscountSubscriptionID),
-                                                                            plan_Price: GetPriceOfProduct_Int(productId: TwoMonthDiscountSubscriptionID),
-                                                                            plan_Currancy_Code: GetCurrncyCode(productId: TwoMonthDiscountSubscriptionID),
-                                                                            plan_Free_Trail: GetIntroductioyOfProduct(productId: TwoMonthDiscountSubscriptionID))
-
+                                                                                      plan_Type: SubscriptionConst.SubscriptionType.twomonth,
+                                                                                      plan_Price_String: GetPriceOfProduct_String(productId: TwoMonthDiscountSubscriptionID),
+                                                                                      plan_Price: GetPriceOfProduct_Int(productId: TwoMonthDiscountSubscriptionID),
+                                                                                      plan_Currancy_Code: GetCurrncyCode(productId: TwoMonthDiscountSubscriptionID),
+                                                                                      plan_Free_Trail: GetIntroductioyOfProduct(productId: TwoMonthDiscountSubscriptionID))
+        
         GetPromotionalOfferOfProduct(TwoMonthDiscountSubscriptionID, completion: { promOffer in
             SubscriptionConst.ActivePlans.two_Month_Discount.plan_Promotional_Offer = promOffer
         })
         
         //Three Month Discount
         SubscriptionConst.ActivePlans.three_Month_Discount = SubscriptionConst.PlanInfo(plan_Id: ThreeMonthDiscountSubscriptionID,
-                                                                            plan_Type: SubscriptionConst.SubscriptionType.threemonth,
-                                                                            plan_Price_String: GetPriceOfProduct_String(productId: ThreeMonthDiscountSubscriptionID),
-                                                                            plan_Price: GetPriceOfProduct_Int(productId: ThreeMonthDiscountSubscriptionID),
-                                                                            plan_Currancy_Code: GetCurrncyCode(productId: ThreeMonthDiscountSubscriptionID),
-                                                                            plan_Free_Trail: GetIntroductioyOfProduct(productId: ThreeMonthDiscountSubscriptionID))
-
+                                                                                        plan_Type: SubscriptionConst.SubscriptionType.threemonth,
+                                                                                        plan_Price_String: GetPriceOfProduct_String(productId: ThreeMonthDiscountSubscriptionID),
+                                                                                        plan_Price: GetPriceOfProduct_Int(productId: ThreeMonthDiscountSubscriptionID),
+                                                                                        plan_Currancy_Code: GetCurrncyCode(productId: ThreeMonthDiscountSubscriptionID),
+                                                                                        plan_Free_Trail: GetIntroductioyOfProduct(productId: ThreeMonthDiscountSubscriptionID))
+        
         GetPromotionalOfferOfProduct(ThreeMonthDiscountSubscriptionID, completion: { promOffer in
             SubscriptionConst.ActivePlans.three_Month_Discount.plan_Promotional_Offer = promOffer
         })
         
         //Six Month Discount
         SubscriptionConst.ActivePlans.six_Month_Discount = SubscriptionConst.PlanInfo(plan_Id: SixMonthDiscountSubscriptionID,
-                                                                            plan_Type: SubscriptionConst.SubscriptionType.sixmonth,
-                                                                            plan_Price_String: GetPriceOfProduct_String(productId: SixMonthDiscountSubscriptionID),
-                                                                            plan_Price: GetPriceOfProduct_Int(productId: SixMonthDiscountSubscriptionID),
-                                                                            plan_Currancy_Code: GetCurrncyCode(productId: SixMonthDiscountSubscriptionID),
-                                                                            plan_Free_Trail: GetIntroductioyOfProduct(productId: SixMonthDiscountSubscriptionID))
-
+                                                                                      plan_Type: SubscriptionConst.SubscriptionType.sixmonth,
+                                                                                      plan_Price_String: GetPriceOfProduct_String(productId: SixMonthDiscountSubscriptionID),
+                                                                                      plan_Price: GetPriceOfProduct_Int(productId: SixMonthDiscountSubscriptionID),
+                                                                                      plan_Currancy_Code: GetCurrncyCode(productId: SixMonthDiscountSubscriptionID),
+                                                                                      plan_Free_Trail: GetIntroductioyOfProduct(productId: SixMonthDiscountSubscriptionID))
+        
         GetPromotionalOfferOfProduct(SixMonthDiscountSubscriptionID, completion: { promOffer in
             SubscriptionConst.ActivePlans.six_Month_Discount.plan_Promotional_Offer = promOffer
         })
         
         //One Year Discount
         SubscriptionConst.ActivePlans.one_Year_Discount = SubscriptionConst.PlanInfo(plan_Id: YearDiscountSubscriptionID,
-                                                                           plan_Type: SubscriptionConst.SubscriptionType.year,
-                                                                           plan_Price_String: GetPriceOfProduct_String(productId: YearDiscountSubscriptionID),
-                                                                           plan_Price: GetPriceOfProduct_Int(productId: YearDiscountSubscriptionID),
-                                                                           plan_Currancy_Code: GetCurrncyCode(productId: YearDiscountSubscriptionID),
-                                                                           plan_Free_Trail: GetIntroductioyOfProduct(productId: YearDiscountSubscriptionID))
+                                                                                     plan_Type: SubscriptionConst.SubscriptionType.year,
+                                                                                     plan_Price_String: GetPriceOfProduct_String(productId: YearDiscountSubscriptionID),
+                                                                                     plan_Price: GetPriceOfProduct_Int(productId: YearDiscountSubscriptionID),
+                                                                                     plan_Currancy_Code: GetCurrncyCode(productId: YearDiscountSubscriptionID),
+                                                                                     plan_Free_Trail: GetIntroductioyOfProduct(productId: YearDiscountSubscriptionID))
         
         GetPromotionalOfferOfProduct(YearDiscountSubscriptionID, completion: { promOffer in
             SubscriptionConst.ActivePlans.one_Year_Discount.plan_Promotional_Offer = promOffer
@@ -490,15 +473,33 @@ extension RevenueCat_Manager
 {
     private func checkOfferType() {
         
-        if self.WeekSubscriptionID == subProductIds.offer1_oneWeek || self.OneMonthSubscriptionID == subProductIds.offer1_oneMonth || self.TwoMonthSubscriptionID == subProductIds.offer1_twoMonth || self.ThreeMonthSubscriptionID == subProductIds.offer1_threeMonth || self.SixMonthSubscriptionID == subProductIds.offer1_sixMonth || self.YearSubscriptionID == subProductIds.offer1_oneYear || self.LifetimeSubscriptionID == subProductIds.offer1_lifeTime
+        if (self.WeekSubscriptionID == subProductIds.offer1_oneWeek && WeekSubscriptionID != "") ||
+            (self.OneMonthSubscriptionID == subProductIds.offer1_oneMonth && OneMonthSubscriptionID != "") ||
+            (self.TwoMonthSubscriptionID == subProductIds.offer1_twoMonth && TwoMonthSubscriptionID != "") ||
+            (self.ThreeMonthSubscriptionID == subProductIds.offer1_threeMonth && ThreeMonthSubscriptionID != "") ||
+            (self.SixMonthSubscriptionID == subProductIds.offer1_sixMonth && SixMonthSubscriptionID != "") ||
+            (self.YearSubscriptionID == subProductIds.offer1_oneYear && YearSubscriptionID != "") ||
+            (self.LifetimeSubscriptionID == subProductIds.offer1_lifeTime && LifetimeSubscriptionID != "")
         {
             self.isOfferType = .offer1
         }
-        else if self.WeekSubscriptionID == subProductIds.offer2_oneWeek || self.OneMonthSubscriptionID == subProductIds.offer2_oneMonth || self.TwoMonthSubscriptionID == subProductIds.offer2_twoMonth || self.ThreeMonthSubscriptionID == subProductIds.offer2_threeMonth || self.SixMonthSubscriptionID == subProductIds.offer2_sixMonth || self.YearSubscriptionID == subProductIds.offer2_oneYear || self.LifetimeSubscriptionID == subProductIds.offer2_lifeTime
+        else if (self.WeekSubscriptionID == subProductIds.offer2_oneWeek && WeekSubscriptionID != "") ||
+                    (self.OneMonthSubscriptionID == subProductIds.offer2_oneMonth && OneMonthSubscriptionID != "") ||
+                    (self.TwoMonthSubscriptionID == subProductIds.offer2_twoMonth && TwoMonthSubscriptionID != "") ||
+                    (self.ThreeMonthSubscriptionID == subProductIds.offer2_threeMonth && ThreeMonthSubscriptionID != "") ||
+                    (self.SixMonthSubscriptionID == subProductIds.offer2_sixMonth && SixMonthSubscriptionID != "") ||
+                    (self.YearSubscriptionID == subProductIds.offer2_oneYear && YearSubscriptionID != "") ||
+                    (self.LifetimeSubscriptionID == subProductIds.offer2_lifeTime && LifetimeSubscriptionID != "")
         {
             self.isOfferType = .offer2
         }
-        else if self.WeekSubscriptionID == subProductIds.offer3_oneWeek || self.OneMonthSubscriptionID == subProductIds.offer3_oneMonth || self.TwoMonthSubscriptionID == subProductIds.offer3_twoMonth || self.ThreeMonthSubscriptionID == subProductIds.offer3_threeMonth || self.SixMonthSubscriptionID == subProductIds.offer3_sixMonth || self.YearSubscriptionID == subProductIds.offer3_oneYear || self.LifetimeSubscriptionID == subProductIds.offer3_lifeTime
+        else if (self.WeekSubscriptionID == subProductIds.offer3_oneWeek && WeekSubscriptionID != "") ||
+                    (self.OneMonthSubscriptionID == subProductIds.offer3_oneMonth && OneMonthSubscriptionID != "") ||
+                    (self.TwoMonthSubscriptionID == subProductIds.offer3_twoMonth && TwoMonthSubscriptionID != "") ||
+                    (self.ThreeMonthSubscriptionID == subProductIds.offer3_threeMonth && ThreeMonthSubscriptionID != "") ||
+                    (self.SixMonthSubscriptionID == subProductIds.offer3_sixMonth && SixMonthSubscriptionID != "") ||
+                    (self.YearSubscriptionID == subProductIds.offer3_oneYear && YearSubscriptionID != "") ||
+                    (self.LifetimeSubscriptionID == subProductIds.offer3_lifeTime && LifetimeSubscriptionID != "")
         {
             self.isOfferType = .offer3
         }
@@ -506,7 +507,7 @@ extension RevenueCat_Manager
 }
 
 // MARK: - Get Product
-extension RevenueCat_Manager 
+extension RevenueCat_Manager
 {
     private func GetProduct(productId : String)->StoreProduct? {
         let p1 =  RevenueCat_Manager.AvailableProducts.first { (p) -> Bool in
@@ -521,11 +522,11 @@ extension RevenueCat_Manager
 {
     private func GetPriceOfProduct_String(productId : String) -> String {
         /*let product =  RevenueCat_Manager.AvailableProducts.first { (p) -> Bool in
-            return p.storeProduct.productIdentifier ==  productId
-        }
-        let priceString = "\(product?.localizedPriceString ?? "$0.0")".trimmingCharacters(in: .whitespaces)
-        return priceString
-        */
+         return p.storeProduct.productIdentifier ==  productId
+         }
+         let priceString = "\(product?.localizedPriceString ?? "$0.0")".trimmingCharacters(in: .whitespaces)
+         return priceString
+         */
         
         let currCode = GetCurrncyCode(productId: productId)
         let price = GetPriceOfProduct_Int(productId: productId)
@@ -606,17 +607,17 @@ extension RevenueCat_Manager
     private func checkIsIntroOfferAvailable(product: String) -> Bool {
         
         let isAvailable = (product == self.WeekSubscriptionID && self.isWeekIntroductoryAvailable) ||
-                          (product == self.OneMonthSubscriptionID && self.isOneMonthIntroductoryAvailable) ||
-                          (product == self.TwoMonthSubscriptionID && self.isTwoMonthIntroductoryAvailable) ||
-                          (product == self.ThreeMonthSubscriptionID && self.isThreeMonthIntroductoryAvailable) ||
-                          (product == self.SixMonthSubscriptionID && self.isSixMonthIntroductoryAvailable) ||
-                          (product == self.YearSubscriptionID && self.isYearIntroductoryAvailable) ||
-                          (product == self.WeekDiscountSubscriptionID && self.isWeekDiscountIntroductoryAvailable) ||
-                          (product == self.OneMonthDiscountSubscriptionID && self.isOneMonthDiscountIntroductoryAvailable) ||
-                          (product == self.TwoMonthDiscountSubscriptionID && self.isTwoMonthDiscountIntroductoryAvailable) ||
-                          (product == self.ThreeMonthDiscountSubscriptionID && self.isThreeMonthDiscountIntroductoryAvailable) ||
-                          (product == self.SixMonthDiscountSubscriptionID && self.isSixMonthDiscountIntroductoryAvailable) ||
-                          (product == self.YearDiscountSubscriptionID && self.isYearDiscountIntroductoryAvailable)
+        (product == self.OneMonthSubscriptionID && self.isOneMonthIntroductoryAvailable) ||
+        (product == self.TwoMonthSubscriptionID && self.isTwoMonthIntroductoryAvailable) ||
+        (product == self.ThreeMonthSubscriptionID && self.isThreeMonthIntroductoryAvailable) ||
+        (product == self.SixMonthSubscriptionID && self.isSixMonthIntroductoryAvailable) ||
+        (product == self.YearSubscriptionID && self.isYearIntroductoryAvailable) ||
+        (product == self.WeekDiscountSubscriptionID && self.isWeekDiscountIntroductoryAvailable) ||
+        (product == self.OneMonthDiscountSubscriptionID && self.isOneMonthDiscountIntroductoryAvailable) ||
+        (product == self.TwoMonthDiscountSubscriptionID && self.isTwoMonthDiscountIntroductoryAvailable) ||
+        (product == self.ThreeMonthDiscountSubscriptionID && self.isThreeMonthDiscountIntroductoryAvailable) ||
+        (product == self.SixMonthDiscountSubscriptionID && self.isSixMonthDiscountIntroductoryAvailable) ||
+        (product == self.YearDiscountSubscriptionID && self.isYearDiscountIntroductoryAvailable)
         
         return isAvailable
     }
@@ -639,23 +640,23 @@ extension RevenueCat_Manager
                         
                         var paymentMode : SubscriptionConst.PaymentType = .none
                         switch promoOffer.paymentMode.rawValue {
-                            case 0: paymentMode = .payAsYouGo
-                            case 1: paymentMode = .payAsYouGo
-                            case 2: paymentMode = .freeTrial
-                            default: break
+                        case 0: paymentMode = .payAsYouGo
+                        case 1: paymentMode = .payAsYouGo
+                        case 2: paymentMode = .freeTrial
+                        default: break
                         }
                         
                         var discountType : SubscriptionConst.DiscountType = .none
                         switch promoOffer.type.rawValue {
-                            case 0: discountType = .introductory
-                            case 1: discountType = .promotional
-                            default: break
+                        case 0: discountType = .introductory
+                        case 1: discountType = .promotional
+                        default: break
                         }
                         
                         let currCode = self.GetCurrncyCode(productId: productId)
                         let price = NSDecimalNumber(decimal: promoOffer.price).doubleValue
                         var priceStr = ""
-                        if self.GetDecimalPart(of: price) > 0 { 
+                        if self.GetDecimalPart(of: price) > 0 {
                             priceStr = "\(currCode)" + String(format:"%.2f", price)
                         } else {
                             priceStr = "\(currCode)" + String(format:"%.f", price)
@@ -703,7 +704,7 @@ extension RevenueCat_Manager
                 completion(false,error)
                 return
             }
-        
+            
             if (UserDefaults.standard.value(forKey:"Purchase_flag") != nil) && purchaserInfo!.entitlements.active.isEmpty && (UserDefaults.standard.value(forKey: "appOpenFirstTime") == nil)
             {
                 Purchases.shared.syncPurchases { (purchaserInfo, error) in
@@ -724,5 +725,52 @@ extension RevenueCat_Manager
             }
         }
         
+    }
+}
+
+extension RevenueCat_Manager {
+    func updateContinueButtonTitle(_ subsciptionContinueBtnText: Int) -> String {
+        
+        var buttoText = "Continue".localized().uppercased()
+        
+        switch subsciptionContinueBtnText {
+        case 0:
+            buttoText = "Continue".localized().uppercased()
+        case 1:
+            let monthPlan = SubscriptionConst.ActivePlans.one_Month
+            let yearPlan = SubscriptionConst.ActivePlans.one_Year
+            let weekPlan = SubscriptionConst.ActivePlans.one_Week
+            if monthPlan.plan_Free_Trail.isFreeTrail {
+                buttoText = "Start My Free Trial".localized().uppercased() + " "
+            }
+            if yearPlan.plan_Free_Trail.isFreeTrail {
+                buttoText = "Start My Free Trial".localized().uppercased() + " "
+            }
+            if weekPlan.plan_Free_Trail.isFreeTrail {
+                buttoText = "Start My Free Trial".localized().uppercased() + " "
+            }
+        case 2:
+            
+            let monthPlan = SubscriptionConst.ActivePlans.one_Month
+            let yearPlan = SubscriptionConst.ActivePlans.one_Year
+            let weekPlan = SubscriptionConst.ActivePlans.one_Week
+            
+            if monthPlan.plan_Free_Trail.isFreeTrail {
+                let strMonth = "\("Try".localized()) \(monthPlan.plan_Free_Trail.duration) \(monthPlan.plan_Free_Trail.unittype.localized().capitalized) \("for".localized()) \(monthPlan.plan_Currancy_Code)0 "
+                buttoText = strMonth
+            }
+            if yearPlan.plan_Free_Trail.isFreeTrail {
+                let strYear = "\("Try".localized()) \(yearPlan.plan_Free_Trail.duration) \(yearPlan.plan_Free_Trail.unittype.localized().capitalized) \("for".localized()) \(yearPlan.plan_Currancy_Code)0 "
+                buttoText = strYear
+            }
+            if weekPlan.plan_Free_Trail.isFreeTrail {
+                let strYear = "\("Try".localized()) \(weekPlan.plan_Free_Trail.duration) \(weekPlan.plan_Free_Trail.unittype.localized().capitalized) \("for".localized()) \(weekPlan.plan_Currancy_Code)0 "
+                buttoText = strYear
+            }
+        default:
+            buttoText = "Continue".localized().uppercased()
+        }
+        
+        return buttoText
     }
 }
