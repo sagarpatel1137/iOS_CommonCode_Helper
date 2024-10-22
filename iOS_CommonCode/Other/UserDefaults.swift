@@ -6,7 +6,7 @@
 //
 import UIKit
 
-var Pod_AppVersionCode : String {
+public var Pod_AppVersionCode : String {
     set{
         UserDefaults.standard.set(newValue, forKey: "Pod_AppVersionCode")
     }
@@ -18,7 +18,7 @@ var Pod_AppVersionCode : String {
     }
 }
 
-var Pod_AppPackageName : String {
+public var Pod_AppPackageName : String {
     set{
         UserDefaults.standard.set(newValue, forKey: "Pod_AppPackageName")
     }
@@ -30,7 +30,7 @@ var Pod_AppPackageName : String {
     }
 }
 
-var Pod_AppPrivacyPolicyURL : String {
+public var Pod_AppPrivacyPolicyURL : String {
     set{
         UserDefaults.standard.set(newValue, forKey: "Pod_AppPrivacyPolicyURL")
     }
@@ -42,7 +42,7 @@ var Pod_AppPrivacyPolicyURL : String {
     }
 }
 
-var Pod_AppTermsAnsConditionURL : String {
+public var Pod_AppTermsAnsConditionURL : String {
     set{
         UserDefaults.standard.set(newValue, forKey: "Pod_AppTermsAnsConditionURL")
     }
