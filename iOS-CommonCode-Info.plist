@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+    <dict>
+        <key>UIAppFonts</key>
+        <array>
+            <string>Pod_Avenir Black.ttf</string>
+            <string>Pod_Avenir Heavy.ttf</string>
+            <string>Pod_Avenir-Medium.ttf</string>
+            <string>Pod_PlusJakartaSans-Bold.ttf</string>
+            <string>Pod_PlusJakartaSans-ExtraBold.ttf</string>
+            <string>Pod_PlusJakartaSans-Medium.ttf</string>
+            <string>Pod_PlusJakartaSans-Regular.ttf</string>
+            <string>Pod_PlusJakartaSans-SemiBold.ttf</string>
+            <string>Pod_WorkSans-Bold.ttf</string>
+            <string>Pod_WorkSans-Medium.ttf</string>
+            <string>Pod_WorkSans-Regular.ttf</string>
+            <string>Pod_WorkSans-SemiBold.ttf</string>
+        </array>
+    </dict>
+</plist>

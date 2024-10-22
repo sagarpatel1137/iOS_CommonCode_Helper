@@ -29,8 +29,8 @@ public struct UICustomizationSubTimelineTheme {
         self.imgTimelineLock = imgTimelineLock ?? UIImage(named: "ic_timeline_lock")
         self.imgTimelineBell = imgTimelineBell ?? UIImage(named: "ic_timeline_bell")
         self.imgTimelineStar = imgTimelineStar ?? UIImage(named: "ic_timeline_star")
-        self.btnJsonFilenameiPhone = btnJsonFilenameiPhone ?? "sub_timeline_iphone"
-        self.btnJsonFilenameiPad = btnJsonFilenameiPad ?? "sub_timeline_ipad"
+        self.btnJsonFilenameiPhone = btnJsonFilenameiPhone ?? "Pod_sub_timeline_iphone"
+        self.btnJsonFilenameiPad = btnJsonFilenameiPad ?? "Pod_sub_timeline_ipad"
         self.featureListTextColor = featureListTextColor ?? hexStringToUIColor(hex: "1E2128")
         self.featureInfoTextColor = featureInfoTextColor ?? hexStringToUIColor(hex: "6C7379")
     }
@@ -229,9 +229,9 @@ class SubTimelineVC: UIViewController {
     
     private func setUpAnimation() {
         if UIDevice.current.isiPad {
-            self.viewJson.animation = LottieAnimation.named("sub_timeline_ipad")
+            self.viewJson.animation = LottieAnimation.named("Pod_sub_timeline_ipad")
         } else {
-            self.viewJson.animation = LottieAnimation.named("sub_timeline_iphone")
+            self.viewJson.animation = LottieAnimation.named("Pod_sub_timeline_iphone")
         }
         self.viewJson.loopMode = .loop
         self.viewJson.play()

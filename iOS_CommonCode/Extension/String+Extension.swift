@@ -59,7 +59,7 @@ extension String {
         if defaultLanguage.count == 0{
             defaultLanguage = "en"
         }
-        if let path = Bundle.main.path(forResource: defaultLanguage, ofType: "strings") {
+        if let path = Bundle.main.path(forResource: "Pod_\(defaultLanguage)", ofType: "strings") {
             if FileManager.default.fileExists(atPath: path) {
                 let dicoLocalisation = NSDictionary(contentsOfFile: path)
                 return dicoLocalisation?.value(forKey: self) as? String ?? self

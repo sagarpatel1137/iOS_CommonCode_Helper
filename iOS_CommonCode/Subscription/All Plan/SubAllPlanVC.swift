@@ -234,7 +234,7 @@ class SubAllPlanVC: UIViewController {
     
     func setUpAnimation()
     {
-        viewJson.animation = UIDevice.current.isiPhone ? LottieAnimation.named("sub_all_iphone") : LottieAnimation.named("sub_all_ipad")
+        viewJson.animation = UIDevice.current.isiPhone ? LottieAnimation.named("Pod_sub_all_iphone") : LottieAnimation.named("Pod_sub_all_ipad")
         viewJson.loopMode = .loop
         viewJson.play()
         
