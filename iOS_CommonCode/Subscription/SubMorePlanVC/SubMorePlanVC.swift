@@ -236,6 +236,9 @@ class SubMorePlanVC: UIViewController {
         lblPrivacy.text = "Privacy Policy".localized() + " "
         lblCancelAnytime.text = "Cancel anytime. Secure with App Store".localized()
         
+        let fontRatio = UIDevice.current.isiPad ? UIScreen.main.bounds.width/768 : UIScreen.main.bounds.width/320
+
+        
         lblTitle.font = setCustomFont(name: .PlusJakartaSans_Bold, iPhoneSize: 25, iPadSize: 45)
         lblFreeTrial.font = setCustomFont(name: .PlusJakartaSans_Medium, iPhoneSize: 14, iPadSize: 18)
         lblListFeatures[0].font = setCustomFont(name: .PlusJakartaSans_Medium, iPhoneSize: 11.5, iPadSize: 18)
@@ -244,25 +247,30 @@ class SubMorePlanVC: UIViewController {
         lblListFeatures[3].font = setCustomFont(name: .PlusJakartaSans_Medium, iPhoneSize: 11.5, iPadSize: 18)
         lblListFeatures[4].font = setCustomFont(name: .PlusJakartaSans_Medium, iPhoneSize: 11.5, iPadSize: 18)
         lblListFeatures[5].font = setCustomFont(name: .PlusJakartaSans_Medium, iPhoneSize: 11.5, iPadSize: 18)
-        lblPayNothingNow.font = setCustomFont(name: .PlusJakartaSans_Bold, iPhoneSize: 15, iPadSize: 22)
+        lblPayNothingNow.font = setCustomFont(name: .PlusJakartaSans_Bold, iPhoneSize: 15*fontRatio, iPadSize: 22*fontRatio)
         lblSubscribe.font = setCustomFont(name: .PlusJakartaSans_Bold, iPhoneSize: 20, iPadSize: 32)
         lblPromotionalPeriod.font = setCustomFont(name: .PlusJakartaSans_Medium, iPhoneSize: 13, iPadSize: 19)
         lblRestore.font = setCustomFont(name: .WorkSans_Regular, iPhoneSize: 13, iPadSize: 17)
         lblTerms.font = setCustomFont(name: .WorkSans_Regular, iPhoneSize: 13, iPadSize: 17)
         lblPrivacy.font = setCustomFont(name: .WorkSans_Regular, iPhoneSize: 13, iPadSize: 17)
-        
+
         if UIDevice.current.userInterfaceIdiom == .pad {
-            self.viewJson.animation = LottieAnimation.named("sub_iPad-Capsule")
+            if let loadJSONURL = PodBundleHelper.loadJSONFile(named: "Pod_sub_iPad-Capsule") {
+                viewJson.animation = LottieAnimation.filepath(loadJSONURL.path)
+                viewJson?.loopMode = .loop
+                viewJson.play()
+            }
         } else {
-            self.viewJson.animation = LottieAnimation.named("sub_iPhone-Capsule")
+            if let loadJSONURL = PodBundleHelper.loadJSONFile(named: "Pod_sub_iPhone-Capsule") {
+                viewJson.animation = LottieAnimation.filepath(loadJSONURL.path)
+                viewJson?.loopMode = .loop
+                viewJson.play()
+            }
         }
         
         collViewFeature.delegate = self
         collViewFeature.dataSource = self
         collViewFeature.register(UINib(nibName: SubRatingCell.identifier, bundle: nil), forCellWithReuseIdentifier: SubRatingCell.identifier)
-        
-        self.viewJson.loopMode = .loop
-        self.viewJson.play()
     }
     
     deinit {
@@ -408,10 +416,10 @@ extension SubMorePlanVC
             }
             
             if sender.tag == i && plan.type != .lifetime {
-                arrPlanMonthInfo[i].font = setCustomFont(name: .PlusJakartaSans_Bold, iPhoneSize: 14, iPadSize: 17)
+                arrPlanLblDetail[i].font = setCustomFont(name: .PlusJakartaSans_Bold, iPhoneSize: 14, iPadSize: 17)
                 
             } else if plan.type != .lifetime {
-                arrPlanMonthInfo[i].font = setCustomFont(name: .PlusJakartaSans_Bold, iPhoneSize: 14, iPadSize: 17)
+                arrPlanLblDetail[i].font = setCustomFont(name: .PlusJakartaSans_Bold, iPhoneSize: 14, iPadSize: 17)
             }
         }
         

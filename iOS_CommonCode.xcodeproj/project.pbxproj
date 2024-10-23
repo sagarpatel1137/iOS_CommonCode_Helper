@@ -7,6 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		81049FA02CC8CFF700602057 /* PodBundleHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81049F9F2CC8CFF700602057 /* PodBundleHelper.swift */; };
+		81049FA32CC8DB3600602057 /* Pod_sub_iPad-Capsule.json in Resources */ = {isa = PBXBuildFile; fileRef = 81049FA12CC8DB3600602057 /* Pod_sub_iPad-Capsule.json */; };
+		81049FA42CC8DB3600602057 /* Pod_sub_iPhone-Capsule.json in Resources */ = {isa = PBXBuildFile; fileRef = 81049FA22CC8DB3600602057 /* Pod_sub_iPhone-Capsule.json */; };
+		81049FB22CC8DC5100602057 /* PlusJakartaSans-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 81049FAA2CC8DC5100602057 /* PlusJakartaSans-Medium.ttf */; };
+		81049FB32CC8DC5100602057 /* PlusJakartaSans-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 81049FA92CC8DC5100602057 /* PlusJakartaSans-ExtraBold.ttf */; };
+		81049FB42CC8DC5100602057 /* Avenir Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 81049FA52CC8DC5100602057 /* Avenir Black.ttf */; };
+		81049FB52CC8DC5100602057 /* WorkSans-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 81049FAE2CC8DC5100602057 /* WorkSans-Medium.ttf */; };
+		81049FB62CC8DC5100602057 /* PlusJakartaSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 81049FAB2CC8DC5100602057 /* PlusJakartaSans-Regular.ttf */; };
+		81049FB72CC8DC5100602057 /* Avenir Heavy.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 81049FA62CC8DC5100602057 /* Avenir Heavy.ttf */; };
+		81049FB82CC8DC5100602057 /* PlusJakartaSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 81049FA82CC8DC5100602057 /* PlusJakartaSans-Bold.ttf */; };
+		81049FB92CC8DC5100602057 /* PlusJakartaSans-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 81049FAC2CC8DC5100602057 /* PlusJakartaSans-SemiBold.ttf */; };
+		81049FBA2CC8DC5100602057 /* Avenir-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 81049FA72CC8DC5100602057 /* Avenir-Medium.ttf */; };
+		81049FBB2CC8DC5100602057 /* WorkSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 81049FAD2CC8DC5100602057 /* WorkSans-Bold.ttf */; };
+		81049FBC2CC8DC5100602057 /* WorkSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 81049FAF2CC8DC5100602057 /* WorkSans-Regular.ttf */; };
+		81049FBD2CC8DC5100602057 /* WorkSans-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 81049FB02CC8DC5100602057 /* WorkSans-SemiBold.ttf */; };
+		81049FBE2CC8DC5100602057 /* WorkSans-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 81049FB12CC8DC5100602057 /* WorkSans-ExtraBold.ttf */; };
 		8113BEC42C6324190081B3F8 /* RevenueCat_Manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8113BEC22C6324190081B3F8 /* RevenueCat_Manager.swift */; };
 		8113BEC52C6324190081B3F8 /* Const For Subscription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8113BEC32C6324190081B3F8 /* Const For Subscription.swift */; };
 		811B2F092CC20C9A0080DF64 /* SubDiscountVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 811B2F062CC20C9A0080DF64 /* SubDiscountVC.swift */; };
@@ -73,18 +89,6 @@
 		81B0F31E2CB105D70014E08A /* RatingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81B0F31B2CB105D70014E08A /* RatingVC.swift */; };
 		81B0F31F2CB105D70014E08A /* RatingVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 81B0F31C2CB105D70014E08A /* RatingVC.xib */; };
 		81B0F3212CB106620014E08A /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81B0F3202CB106620014E08A /* UserDefaults.swift */; };
-		81B0F32F2CB10DA00014E08A /* Pod_Avenir Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 81B0F3222CB10D9F0014E08A /* Pod_Avenir Black.ttf */; };
-		81B0F3302CB10DA00014E08A /* Pod_Avenir Heavy.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 81B0F3232CB10D9F0014E08A /* Pod_Avenir Heavy.ttf */; };
-		81B0F3312CB10DA00014E08A /* Pod_Avenir-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 81B0F3242CB10D9F0014E08A /* Pod_Avenir-Medium.ttf */; };
-		81B0F3322CB10DA00014E08A /* Pod_PlusJakartaSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 81B0F3252CB10D9F0014E08A /* Pod_PlusJakartaSans-Bold.ttf */; };
-		81B0F3332CB10DA00014E08A /* Pod_PlusJakartaSans-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 81B0F3262CB10D9F0014E08A /* Pod_PlusJakartaSans-ExtraBold.ttf */; };
-		81B0F3342CB10DA00014E08A /* Pod_PlusJakartaSans-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 81B0F3272CB10D9F0014E08A /* Pod_PlusJakartaSans-Medium.ttf */; };
-		81B0F3352CB10DA00014E08A /* Pod_PlusJakartaSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 81B0F3282CB10D9F0014E08A /* Pod_PlusJakartaSans-Regular.ttf */; };
-		81B0F3362CB10DA00014E08A /* Pod_PlusJakartaSans-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 81B0F3292CB10D9F0014E08A /* Pod_PlusJakartaSans-SemiBold.ttf */; };
-		81B0F3372CB10DA00014E08A /* Pod_WorkSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 81B0F32A2CB10D9F0014E08A /* Pod_WorkSans-Bold.ttf */; };
-		81B0F3382CB10DA00014E08A /* Pod_WorkSans-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 81B0F32B2CB10D9F0014E08A /* Pod_WorkSans-Medium.ttf */; };
-		81B0F3392CB10DA00014E08A /* Pod_WorkSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 81B0F32C2CB10D9F0014E08A /* Pod_WorkSans-Regular.ttf */; };
-		81B0F33A2CB10DA00014E08A /* Pod_WorkSans-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 81B0F32D2CB10D9F0014E08A /* Pod_WorkSans-SemiBold.ttf */; };
 		81B0F3412CB10DA80014E08A /* Pod_sub_all_ipad.json in Resources */ = {isa = PBXBuildFile; fileRef = 81B0F33B2CB10DA80014E08A /* Pod_sub_all_ipad.json */; };
 		81B0F3422CB10DA80014E08A /* Pod_sub_all_iphone.json in Resources */ = {isa = PBXBuildFile; fileRef = 81B0F33C2CB10DA80014E08A /* Pod_sub_all_iphone.json */; };
 		81B0F3432CB10DA80014E08A /* Pod_sub_discount_btn.json in Resources */ = {isa = PBXBuildFile; fileRef = 81B0F33D2CB10DA80014E08A /* Pod_sub_discount_btn.json */; };
@@ -124,6 +128,22 @@
 		06E918F9F432D213EFDB89A3 /* Pods_iOS_CommonCode.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iOS_CommonCode.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		43604957A605E4D8F2482007 /* Pods-iOS_CommonCode.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS_CommonCode.debug.xcconfig"; path = "Target Support Files/Pods-iOS_CommonCode/Pods-iOS_CommonCode.debug.xcconfig"; sourceTree = "<group>"; };
 		4CF2BCBD339BA13B3597B4D2 /* Pods-iOS_CommonCode.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS_CommonCode.release.xcconfig"; path = "Target Support Files/Pods-iOS_CommonCode/Pods-iOS_CommonCode.release.xcconfig"; sourceTree = "<group>"; };
+		81049F9F2CC8CFF700602057 /* PodBundleHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PodBundleHelper.swift; sourceTree = "<group>"; };
+		81049FA12CC8DB3600602057 /* Pod_sub_iPad-Capsule.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "Pod_sub_iPad-Capsule.json"; sourceTree = "<group>"; };
+		81049FA22CC8DB3600602057 /* Pod_sub_iPhone-Capsule.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "Pod_sub_iPhone-Capsule.json"; sourceTree = "<group>"; };
+		81049FA52CC8DC5100602057 /* Avenir Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Avenir Black.ttf"; sourceTree = "<group>"; };
+		81049FA62CC8DC5100602057 /* Avenir Heavy.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Avenir Heavy.ttf"; sourceTree = "<group>"; };
+		81049FA72CC8DC5100602057 /* Avenir-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Avenir-Medium.ttf"; sourceTree = "<group>"; };
+		81049FA82CC8DC5100602057 /* PlusJakartaSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PlusJakartaSans-Bold.ttf"; sourceTree = "<group>"; };
+		81049FA92CC8DC5100602057 /* PlusJakartaSans-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PlusJakartaSans-ExtraBold.ttf"; sourceTree = "<group>"; };
+		81049FAA2CC8DC5100602057 /* PlusJakartaSans-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PlusJakartaSans-Medium.ttf"; sourceTree = "<group>"; };
+		81049FAB2CC8DC5100602057 /* PlusJakartaSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PlusJakartaSans-Regular.ttf"; sourceTree = "<group>"; };
+		81049FAC2CC8DC5100602057 /* PlusJakartaSans-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PlusJakartaSans-SemiBold.ttf"; sourceTree = "<group>"; };
+		81049FAD2CC8DC5100602057 /* WorkSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "WorkSans-Bold.ttf"; sourceTree = "<group>"; };
+		81049FAE2CC8DC5100602057 /* WorkSans-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "WorkSans-Medium.ttf"; sourceTree = "<group>"; };
+		81049FAF2CC8DC5100602057 /* WorkSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "WorkSans-Regular.ttf"; sourceTree = "<group>"; };
+		81049FB02CC8DC5100602057 /* WorkSans-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "WorkSans-SemiBold.ttf"; sourceTree = "<group>"; };
+		81049FB12CC8DC5100602057 /* WorkSans-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "WorkSans-ExtraBold.ttf"; sourceTree = "<group>"; };
 		8113BEC22C6324190081B3F8 /* RevenueCat_Manager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RevenueCat_Manager.swift; sourceTree = "<group>"; };
 		8113BEC32C6324190081B3F8 /* Const For Subscription.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Const For Subscription.swift"; sourceTree = "<group>"; };
 		811B2F062CC20C9A0080DF64 /* SubDiscountVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubDiscountVC.swift; sourceTree = "<group>"; };
@@ -133,7 +153,7 @@
 		8121DD682C6216E8003460A5 /* iOS_CommonCode.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = iOS_CommonCode.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8121DD822C621A66003460A5 /* ForceUpdate_Manager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForceUpdate_Manager.swift; sourceTree = "<group>"; };
 		8121DD832C621A66003460A5 /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
-		8121DD882C6222C8003460A5 /* iOS_CommonCode_Helper.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = iOS_CommonCode_Helper.podspec; sourceTree = "<group>"; };
+		8121DD882C6222C8003460A5 /* iOS_CommonCode_Helper.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = iOS_CommonCode_Helper.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		813A0A202CBF69E400B5892A /* ThankYouVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThankYouVC.swift; sourceTree = "<group>"; };
 		813A0A212CBF69E400B5892A /* ThankYouVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ThankYouVC.xib; sourceTree = "<group>"; };
 		813A0A252CBF7D0900B5892A /* SubAllPlanVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubAllPlanVC.swift; sourceTree = "<group>"; };
@@ -188,18 +208,6 @@
 		81B0F31B2CB105D70014E08A /* RatingVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RatingVC.swift; sourceTree = "<group>"; };
 		81B0F31C2CB105D70014E08A /* RatingVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RatingVC.xib; sourceTree = "<group>"; };
 		81B0F3202CB106620014E08A /* UserDefaults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaults.swift; sourceTree = "<group>"; };
-		81B0F3222CB10D9F0014E08A /* Pod_Avenir Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pod_Avenir Black.ttf"; sourceTree = "<group>"; };
-		81B0F3232CB10D9F0014E08A /* Pod_Avenir Heavy.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pod_Avenir Heavy.ttf"; sourceTree = "<group>"; };
-		81B0F3242CB10D9F0014E08A /* Pod_Avenir-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pod_Avenir-Medium.ttf"; sourceTree = "<group>"; };
-		81B0F3252CB10D9F0014E08A /* Pod_PlusJakartaSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pod_PlusJakartaSans-Bold.ttf"; sourceTree = "<group>"; };
-		81B0F3262CB10D9F0014E08A /* Pod_PlusJakartaSans-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pod_PlusJakartaSans-ExtraBold.ttf"; sourceTree = "<group>"; };
-		81B0F3272CB10D9F0014E08A /* Pod_PlusJakartaSans-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pod_PlusJakartaSans-Medium.ttf"; sourceTree = "<group>"; };
-		81B0F3282CB10D9F0014E08A /* Pod_PlusJakartaSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pod_PlusJakartaSans-Regular.ttf"; sourceTree = "<group>"; };
-		81B0F3292CB10D9F0014E08A /* Pod_PlusJakartaSans-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pod_PlusJakartaSans-SemiBold.ttf"; sourceTree = "<group>"; };
-		81B0F32A2CB10D9F0014E08A /* Pod_WorkSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pod_WorkSans-Bold.ttf"; sourceTree = "<group>"; };
-		81B0F32B2CB10D9F0014E08A /* Pod_WorkSans-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pod_WorkSans-Medium.ttf"; sourceTree = "<group>"; };
-		81B0F32C2CB10D9F0014E08A /* Pod_WorkSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pod_WorkSans-Regular.ttf"; sourceTree = "<group>"; };
-		81B0F32D2CB10D9F0014E08A /* Pod_WorkSans-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pod_WorkSans-SemiBold.ttf"; sourceTree = "<group>"; };
 		81B0F33B2CB10DA80014E08A /* Pod_sub_all_ipad.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Pod_sub_all_ipad.json; sourceTree = "<group>"; };
 		81B0F33C2CB10DA80014E08A /* Pod_sub_all_iphone.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Pod_sub_all_iphone.json; sourceTree = "<group>"; };
 		81B0F33D2CB10DA80014E08A /* Pod_sub_discount_btn.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Pod_sub_discount_btn.json; sourceTree = "<group>"; };
@@ -426,6 +434,7 @@
 				8121DD832C621A66003460A5 /* Reachability.swift */,
 				81B0F3202CB106620014E08A /* UserDefaults.swift */,
 				8158006C2CBE197E00074F08 /* Toast.swift */,
+				81049F9F2CC8CFF700602057 /* PodBundleHelper.swift */,
 			);
 			path = Other;
 			sourceTree = "<group>";
@@ -502,18 +511,19 @@
 		81B0F32E2CB10D9F0014E08A /* Font */ = {
 			isa = PBXGroup;
 			children = (
-				81B0F3222CB10D9F0014E08A /* Pod_Avenir Black.ttf */,
-				81B0F3232CB10D9F0014E08A /* Pod_Avenir Heavy.ttf */,
-				81B0F3242CB10D9F0014E08A /* Pod_Avenir-Medium.ttf */,
-				81B0F3252CB10D9F0014E08A /* Pod_PlusJakartaSans-Bold.ttf */,
-				81B0F3262CB10D9F0014E08A /* Pod_PlusJakartaSans-ExtraBold.ttf */,
-				81B0F3272CB10D9F0014E08A /* Pod_PlusJakartaSans-Medium.ttf */,
-				81B0F3282CB10D9F0014E08A /* Pod_PlusJakartaSans-Regular.ttf */,
-				81B0F3292CB10D9F0014E08A /* Pod_PlusJakartaSans-SemiBold.ttf */,
-				81B0F32A2CB10D9F0014E08A /* Pod_WorkSans-Bold.ttf */,
-				81B0F32B2CB10D9F0014E08A /* Pod_WorkSans-Medium.ttf */,
-				81B0F32C2CB10D9F0014E08A /* Pod_WorkSans-Regular.ttf */,
-				81B0F32D2CB10D9F0014E08A /* Pod_WorkSans-SemiBold.ttf */,
+				81049FA52CC8DC5100602057 /* Avenir Black.ttf */,
+				81049FA62CC8DC5100602057 /* Avenir Heavy.ttf */,
+				81049FA72CC8DC5100602057 /* Avenir-Medium.ttf */,
+				81049FA82CC8DC5100602057 /* PlusJakartaSans-Bold.ttf */,
+				81049FA92CC8DC5100602057 /* PlusJakartaSans-ExtraBold.ttf */,
+				81049FAA2CC8DC5100602057 /* PlusJakartaSans-Medium.ttf */,
+				81049FAB2CC8DC5100602057 /* PlusJakartaSans-Regular.ttf */,
+				81049FAC2CC8DC5100602057 /* PlusJakartaSans-SemiBold.ttf */,
+				81049FAD2CC8DC5100602057 /* WorkSans-Bold.ttf */,
+				81049FAE2CC8DC5100602057 /* WorkSans-Medium.ttf */,
+				81049FAF2CC8DC5100602057 /* WorkSans-Regular.ttf */,
+				81049FB02CC8DC5100602057 /* WorkSans-SemiBold.ttf */,
+				81049FB12CC8DC5100602057 /* WorkSans-ExtraBold.ttf */,
 			);
 			path = Font;
 			sourceTree = "<group>";
@@ -526,6 +536,8 @@
 				81B0F33D2CB10DA80014E08A /* Pod_sub_discount_btn.json */,
 				81B0F33E2CB10DA80014E08A /* Pod_sub_timeline_ipad.json */,
 				81B0F33F2CB10DA80014E08A /* Pod_sub_timeline_iphone.json */,
+				81049FA12CC8DB3600602057 /* Pod_sub_iPad-Capsule.json */,
+				81049FA22CC8DB3600602057 /* Pod_sub_iPhone-Capsule.json */,
 			);
 			path = Json;
 			sourceTree = "<group>";
@@ -708,25 +720,33 @@
 				815800732CBE21EB00074F08 /* SubTimelineVC.xib in Resources */,
 				81B0F3192CB0FFD50014E08A /* Pod_ja.strings in Resources */,
 				81B0F3452CB10DA80014E08A /* Pod_sub_timeline_iphone.json in Resources */,
-				81B0F32F2CB10DA00014E08A /* Pod_Avenir Black.ttf in Resources */,
-				81B0F33A2CB10DA00014E08A /* Pod_WorkSans-SemiBold.ttf in Resources */,
 				81A66D1D2CBCE07E000F2788 /* FeedbackVC.xib in Resources */,
-				81B0F3342CB10DA00014E08A /* Pod_PlusJakartaSans-Medium.ttf in Resources */,
 				81B0F30E2CB0FFD50014E08A /* Pod_ar.strings in Resources */,
 				81B0F31F2CB105D70014E08A /* RatingVC.xib in Resources */,
-				81B0F3322CB10DA00014E08A /* Pod_PlusJakartaSans-Bold.ttf in Resources */,
-				81B0F3362CB10DA00014E08A /* Pod_PlusJakartaSans-SemiBold.ttf in Resources */,
 				81A089C52C9D39A60091CFB3 /* Shimmer_FullNative.xib in Resources */,
 				81A66D122CBCDFE6000F2788 /* webVC.xib in Resources */,
 				81A089CB2C9D3BAD0091CFB3 /* NativeAd.xib in Resources */,
+				81049FB22CC8DC5100602057 /* PlusJakartaSans-Medium.ttf in Resources */,
+				81049FB32CC8DC5100602057 /* PlusJakartaSans-ExtraBold.ttf in Resources */,
+				81049FB42CC8DC5100602057 /* Avenir Black.ttf in Resources */,
+				81049FB52CC8DC5100602057 /* WorkSans-Medium.ttf in Resources */,
+				81049FB62CC8DC5100602057 /* PlusJakartaSans-Regular.ttf in Resources */,
+				81049FB72CC8DC5100602057 /* Avenir Heavy.ttf in Resources */,
+				81049FB82CC8DC5100602057 /* PlusJakartaSans-Bold.ttf in Resources */,
+				81049FB92CC8DC5100602057 /* PlusJakartaSans-SemiBold.ttf in Resources */,
+				81049FBA2CC8DC5100602057 /* Avenir-Medium.ttf in Resources */,
+				81049FBB2CC8DC5100602057 /* WorkSans-Bold.ttf in Resources */,
+				81049FBC2CC8DC5100602057 /* WorkSans-Regular.ttf in Resources */,
+				81049FBD2CC8DC5100602057 /* WorkSans-SemiBold.ttf in Resources */,
+				81049FBE2CC8DC5100602057 /* WorkSans-ExtraBold.ttf in Resources */,
 				81B0F3132CB0FFD50014E08A /* Pod_th.strings in Resources */,
-				81B0F3372CB10DA00014E08A /* Pod_WorkSans-Bold.ttf in Resources */,
+				81049FA32CC8DB3600602057 /* Pod_sub_iPad-Capsule.json in Resources */,
+				81049FA42CC8DB3600602057 /* Pod_sub_iPhone-Capsule.json in Resources */,
 				81B0F3472CB10DB60014E08A /* Pod_Assets.xcassets in Resources */,
 				81B0F30F2CB0FFD50014E08A /* Pod_fr.strings in Resources */,
 				81B0F3142CB0FFD50014E08A /* Pod_ru.strings in Resources */,
 				811B9BE92CC619530031DE5A /* SubMorePlanVC.xib in Resources */,
 				81B0F30C2CB0FFD50014E08A /* Pod_es.strings in Resources */,
-				81B0F3332CB10DA00014E08A /* Pod_PlusJakartaSans-ExtraBold.ttf in Resources */,
 				81B0F3182CB0FFD50014E08A /* Pod_af.strings in Resources */,
 				81A089CC2C9D3BAD0091CFB3 /* NativeBannerAd.xib in Resources */,
 				81B0F3112CB0FFD50014E08A /* Pod_it.strings in Resources */,
@@ -738,19 +758,14 @@
 				81B0F31A2CB0FFD50014E08A /* Pod_zh-Hans.strings in Resources */,
 				813A0A282CBF7D0900B5892A /* SubAllPlanVC.xib in Resources */,
 				81B0F3172CB0FFD50014E08A /* Pod_pt-PT.strings in Resources */,
-				81B0F3382CB10DA00014E08A /* Pod_WorkSans-Medium.ttf in Resources */,
 				81A089C62C9D39A60091CFB3 /* Shimmer_Adptiv_Banner.xib in Resources */,
 				8121DD8A2C6222C8003460A5 /* iOS_CommonCode_Helper.podspec in Resources */,
 				81B0F3162CB0FFD50014E08A /* Pod_ko.strings in Resources */,
 				81B0F3422CB10DA80014E08A /* Pod_sub_all_iphone.json in Resources */,
-				81B0F3352CB10DA00014E08A /* Pod_PlusJakartaSans-Regular.ttf in Resources */,
 				81B0F3122CB0FFD50014E08A /* Pod_en.strings in Resources */,
 				81B0F30D2CB0FFD50014E08A /* Pod_da.strings in Resources */,
 				81B0F3152CB0FFD50014E08A /* Pod_fil.strings in Resources */,
-				81B0F3302CB10DA00014E08A /* Pod_Avenir Heavy.ttf in Resources */,
-				81B0F3392CB10DA00014E08A /* Pod_WorkSans-Regular.ttf in Resources */,
 				81B0F3102CB0FFD50014E08A /* Pod_ur.strings in Resources */,
-				81B0F3312CB10DA00014E08A /* Pod_Avenir-Medium.ttf in Resources */,
 				811B2F0A2CC20C9A0080DF64 /* SubDiscountVC.xib in Resources */,
 				81B0F3442CB10DA80014E08A /* Pod_sub_timeline_ipad.json in Resources */,
 			);
@@ -842,6 +857,7 @@
 				815800792CBE427100074F08 /* FirebaseEvents.swift in Sources */,
 				81B0F3212CB106620014E08A /* UserDefaults.swift in Sources */,
 				817DCDF72C6F0A4C004BA1C2 /* GoogleMobileAdsConsent_Manager.swift in Sources */,
+				81049FA02CC8CFF700602057 /* PodBundleHelper.swift in Sources */,
 				81CAB6002C6E193E0050F848 /* OneSignal_Manager.swift in Sources */,
 				8113BEC42C6324190081B3F8 /* RevenueCat_Manager.swift in Sources */,
 			);

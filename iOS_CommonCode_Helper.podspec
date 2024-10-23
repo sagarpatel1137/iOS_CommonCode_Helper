@@ -22,10 +22,13 @@ spec.source_files      = "iOS_CommonCode/**/*.swift"
 spec.resources = [
     "iOS_CommonCode/**/*.xib",
     "iOS_CommonCode/Resources/Json/*.json",
-    "iOS_CommonCode/Resources/Font/*.ttf",
+    "iOS_CommonCode/Resources/Font/*.ttf"
 ]
 
 spec.resource_bundle = {'iOS_CommonCode' => ['iOS_CommonCode/Resources/Assets/*.xcassets']}
+
+spec.pod_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64'}
+spec.user_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64'}
 
 spec.static_framework  = true
 spec.frameworks        = 'UIKit', 'Foundation', 'SystemConfiguration', 'StoreKit'

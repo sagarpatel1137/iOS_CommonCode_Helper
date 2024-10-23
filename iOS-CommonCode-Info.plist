@@ -1,21 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
-    <dict>
-        <key>UIAppFonts</key>
-        <array>
-            <string>Pod_Avenir Black.ttf</string>
-            <string>Pod_Avenir Heavy.ttf</string>
-            <string>Pod_Avenir-Medium.ttf</string>
-            <string>Pod_PlusJakartaSans-Bold.ttf</string>
-            <string>Pod_PlusJakartaSans-ExtraBold.ttf</string>
-            <string>Pod_PlusJakartaSans-Medium.ttf</string>
-            <string>Pod_PlusJakartaSans-Regular.ttf</string>
-            <string>Pod_PlusJakartaSans-SemiBold.ttf</string>
-            <string>Pod_WorkSans-Bold.ttf</string>
-            <string>Pod_WorkSans-Medium.ttf</string>
-            <string>Pod_WorkSans-Regular.ttf</string>
-            <string>Pod_WorkSans-SemiBold.ttf</string>
-        </array>
-    </dict>
+<dict>
+	<key>UIAppFonts</key>
+	<array>
+		<string>Avenir Black.ttf</string>
+		<string>Avenir Heavy.ttf</string>
+		<string>Avenir-Medium.ttf</string>
+		<string>PlusJakartaSans-ExtraBold.ttf</string>
+		<string>PlusJakartaSans-Bold.ttf</string>
+		<string>PlusJakartaSans-Medium.ttf</string>
+		<string>PlusJakartaSans-Regular.ttf</string>
+		<string>PlusJakartaSans-SemiBold.ttf</string>
+		<string>WorkSans-Bold.ttf</string>
+		<string>WorkSans-ExtraBold.ttf</string>
+		<string>WorkSans-Medium.ttf</string>
+		<string>WorkSans-Regular.ttf</string>
+		<string>WorkSans-SemiBold.ttf</string>
+	</array>
+</dict>
 </plist>

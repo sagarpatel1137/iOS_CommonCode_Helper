@@ -6,7 +6,39 @@
 //
 
 import UIKit
+
+extension UIView {
+    @IBInspectable var CRadiusBottom: CGFloat {
+        get {
+            return layer.cornerRadius
+        }
+        set {
+            clipsToBounds = newValue > 0
+            if #available(iOS 11.0, *) {
+                layer.maskedCorners = [.layerMinXMaxYCorner,.layerMaxXMaxYCorner]
+            } else {
+                // Fallback on earlier versions
+            }
+            layer.cornerRadius =  UIDevice.current.isiPhone ? newValue : (newValue*1.5)
+        }
+    }
     
+    @IBInspectable var CRadiusTop: CGFloat {
+        get {
+            return layer.cornerRadius
+        }
+        set {
+            clipsToBounds = newValue > 0
+            if #available(iOS 11.0, *) {
+                layer.maskedCorners = [.layerMinXMinYCorner,.layerMaxXMinYCorner]
+            } else {
+                // Fallback on earlier versions
+            }
+            layer.cornerRadius =  UIDevice.current.isiPhone ? newValue : (newValue*1.5)
+        }
+    }
+}
+
 //MARK: - Shimmer
 extension UIView
 {

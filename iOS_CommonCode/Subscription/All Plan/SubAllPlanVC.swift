@@ -234,9 +234,14 @@ class SubAllPlanVC: UIViewController {
     
     func setUpAnimation()
     {
-        viewJson.animation = UIDevice.current.isiPhone ? LottieAnimation.named("Pod_sub_all_iphone") : LottieAnimation.named("Pod_sub_all_ipad")
-        viewJson.loopMode = .loop
-        viewJson.play()
+        
+        if let loadJSONURLiPhone = PodBundleHelper.loadJSONFile(named: "Pod_sub_all_iphone"),
+            let loadJSONURLiPad = PodBundleHelper.loadJSONFile(named: "Pod_sub_all_ipad")
+        {
+            viewJson.animation = UIDevice.current.isiPhone ? LottieAnimation.filepath(loadJSONURLiPhone.path) : LottieAnimation.filepath(loadJSONURLiPad.path)
+            viewJson?.loopMode = .loop
+            viewJson.play()
+        }
         
         DispatchQueue.main.asyncAfter(deadline:.now() + 1.0){
             self.startScrolling()

@@ -48,19 +48,19 @@ public func hexStringToUIColor (hex:String, alpha:CGFloat = 1.0) -> UIColor {
 
 //MARK: - Fonts
 public enum FontApp: String {
-    case Avenir_Black = "Pod_Avenir Black"
-    case Avenir_Heavy = "Pod_Avenir Heavy"
-    case Avenir_Medium = "Pod_Avenir-Medium"
-    case PlusJakartaSans_Regular = "Pod_PlusJakartaSans-Regular"
-    case PlusJakartaSans_Medium = "Pod_PlusJakartaSans-Medium"
-    case PlusJakartaSans_SemiBold = "Pod_PlusJakartaSans-SemiBold"
-    case PlusJakartaSans_Bold = "Pod_PlusJakartaSans-Bold"
-    case PlusJakartaSans_ExtraBold = "Pod_PlusJakartaSans-ExtraBold"
-    case WorkSans_Regular = "Pod_WorkSans-Regular"
-    case WorkSans_Medium = "Pod_WorkSans-Medium"
-    case WorkSans_SemiBold = "Pod_WorkSans-SemiBold"
-    case WorkSans_Bold = "Pod_WorkSans-Bold"
-    case WorkSans_ExtraBold = "Pod_WorkSans-ExtraBold"
+    case Avenir_Black = "Avenir Black"
+    case Avenir_Heavy = "Avenir Heavy"
+    case Avenir_Medium = "Avenir-Medium"
+    case PlusJakartaSans_Regular = "PlusJakartaSans-Regular"
+    case PlusJakartaSans_Medium = "PlusJakartaSans-Medium"
+    case PlusJakartaSans_SemiBold = "PlusJakartaSans-SemiBold"
+    case PlusJakartaSans_Bold = "PlusJakartaSans-Bold"
+    case PlusJakartaSans_ExtraBold = "PlusJakartaSans-ExtraBold"
+    case WorkSans_Regular = "WorkSans-Regular"
+    case WorkSans_Medium = "WorkSans-Medium"
+    case WorkSans_SemiBold = "WorkSans-SemiBold"
+    case WorkSans_Bold = "WorkSans-Bold"
+    case WorkSans_ExtraBold = "WorkSans-ExtraBold"
 }
 
 var fontRatio: CGFloat {
@@ -72,9 +72,32 @@ var fontRatio: CGFloat {
 }
 
 func setCustomFont(name: FontApp, iPhoneSize: Double, iPadSize: Double) -> UIFont {
+    /*
+    for family in UIFont.familyNames {
+        print("Family: \(family)")
+        for name in UIFont.fontNames(forFamilyName: family) {
+            print("    Name: \(name)")
+        }
+    }
+      */
+    let font = UIFont(name: name.rawValue, size: UIDevice.current.isiPhone ? iPhoneSize : iPadSize)
+    return font!
+}
+
+/*
+func setCustomFont(name: FontApp, iPhoneSize: Double, iPadSize: Double) -> UIFont {
+    /*
+    for family in UIFont.familyNames {
+        print("Family: \(family)")
+        for name in UIFont.fontNames(forFamilyName: family) {
+            print("    Name: \(name)")
+        }
+    }
+      */
     let font = UIFont(name: name.rawValue, size: UIDevice.current.isiPhone ? iPhoneSize*fontRatio : iPadSize*fontRatio)
     return font!
 }
+ */
 
 func scheduleFreeTrialNotification(noOfDays: Int , isDebug: Bool = false) {
     UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound, .badge]) { (granted, error) in

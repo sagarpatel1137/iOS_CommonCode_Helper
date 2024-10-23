@@ -28,7 +28,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SubMorePlanVC" customModule="iOS_CommonCode" customModuleProvider="target">
             <connections>
-                <outlet property="btnClose" destination="EGe-hX-sc6" id="aAI-tx-1DH"/>
+                <outlet property="btnClose" destination="2l8-J4-9uC" id="lYH-jT-QGN"/>
                 <outlet property="btnSubscribe" destination="mCS-rL-kWV" id="t7r-ru-l8x"/>
                 <outlet property="collViewFeature" destination="bKX-Ed-Y0a" id="yJd-MW-yKz"/>
                 <outlet property="heightLabel" destination="4uL-aP-aKy" id="NFf-Tg-MkT"/>
@@ -117,33 +117,16 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2W6-W0-TfM">
-                    <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                    <rect key="frame" x="0.0" y="59" width="393" height="793"/>
                     <subviews>
                         <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" contentInsetAdjustmentBehavior="never" bouncesZoom="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hMe-nF-OWc">
-                            <rect key="frame" x="0.0" y="0.0" width="393" height="759"/>
+                            <rect key="frame" x="0.0" y="0.0" width="393" height="793"/>
                             <subviews>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="l4o-DE-EBC">
                                     <rect key="frame" x="0.0" y="0.0" width="393" height="775"/>
                                     <subviews>
-                                        <button opaque="NO" alpha="0.30000001192092896" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EGe-hX-sc6" userLabel="Close">
-                                            <rect key="frame" x="345" y="5" width="40" height="40"/>
-                                            <constraints>
-                                                <constraint firstAttribute="width" secondItem="EGe-hX-sc6" secondAttribute="height" multiplier="1:1" id="aud-Qh-kj1"/>
-                                                <constraint firstAttribute="height" constant="40" id="gMf-L8-EaN">
-                                                    <variation key="heightClass=regular-widthClass=regular" constant="44"/>
-                                                </constraint>
-                                            </constraints>
-                                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            <inset key="imageEdgeInsets" minX="10" minY="10" maxX="10" maxY="10"/>
-                                            <state key="normal" image="ic_close_gray">
-                                                <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            </state>
-                                            <connections>
-                                                <action selector="btnCloseAction:" destination="-1" eventType="touchUpInside" id="t78-AC-DNT"/>
-                                            </connections>
-                                        </button>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Unlock All Features" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a1s-io-ZhZ" customClass="MarqueeLabel" customModule="MarqueeLabel">
-                                            <rect key="frame" x="15" y="4.9999999999999982" width="325" height="29.333333333333329"/>
+                                            <rect key="frame" x="15" y="4.9999999999999982" width="216.33333333333334" height="29.333333333333329"/>
                                             <fontDescription key="fontDescription" name="Karla-Bold" family="Karla" pointSize="25"/>
                                             <color key="textColor" red="0.27058823529999998" green="0.43137254899999999" blue="0.99607843139999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
@@ -151,12 +134,9 @@
                                                 <userDefinedRuntimeAttribute type="boolean" keyPath="fontSizeNew" value="YES"/>
                                                 <userDefinedRuntimeAttribute type="boolean" keyPath="fontSize" value="NO"/>
                                             </userDefinedRuntimeAttributes>
-                                            <variation key="heightClass=regular-widthClass=regular">
-                                                <fontDescription key="fontDescription" name="Karla-Bold" family="Karla" pointSize="45"/>
-                                            </variation>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6iO-YU-Vzo" customClass="MarqueeLabel" customModule="MarqueeLabel">
-                                            <rect key="frame" x="15" y="39.333333333333329" width="325" height="0.0"/>
+                                            <rect key="frame" x="15" y="39.333333333333329" width="216.33333333333334" height="0.0"/>
                                             <fontDescription key="fontDescription" name="Karla-Regular" family="Karla" pointSize="14"/>
                                             <color key="textColor" red="0.15686274510000001" green="0.20784313730000001" blue="0.2470588235" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
@@ -168,6 +148,22 @@
                                                 <fontDescription key="fontDescription" name="Karla-Regular" family="Karla" pointSize="21"/>
                                             </variation>
                                         </label>
+                                        <button opaque="NO" alpha="0.31" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2l8-J4-9uC">
+                                            <rect key="frame" x="345" y="5" width="40" height="40"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="40" id="I34-bZ-es9">
+                                                    <variation key="heightClass=regular-widthClass=regular" constant="44"/>
+                                                </constraint>
+                                                <constraint firstAttribute="width" secondItem="2l8-J4-9uC" secondAttribute="height" id="MjS-wV-soV"/>
+                                            </constraints>
+                                            <inset key="imageEdgeInsets" minX="10" minY="10" maxX="10" maxY="10"/>
+                                            <connections>
+                                                <action selector="btnCloseAction:" destination="-1" eventType="touchUpInside" id="52Y-bh-plA"/>
+                                            </connections>
+                                        </button>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.31" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_sub_close" translatesAutoresizingMaskIntoConstraints="NO" id="U7J-l2-CR4">
+                                            <rect key="frame" x="355" y="15" width="20" height="20"/>
+                                        </imageView>
                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="ak2-RY-biF">
                                             <rect key="frame" x="15" y="54.333333333333329" width="363" height="171.66666666666669"/>
                                             <subviews>
@@ -195,9 +191,6 @@
                                                                         <userDefinedRuntimeAttribute type="boolean" keyPath="fontSizeNew" value="YES"/>
                                                                         <userDefinedRuntimeAttribute type="boolean" keyPath="fontSize" value="NO"/>
                                                                     </userDefinedRuntimeAttributes>
-                                                                    <variation key="heightClass=regular-widthClass=regular">
-                                                                        <fontDescription key="fontDescription" name="Karla-Medium" family="Karla" pointSize="18"/>
-                                                                    </variation>
                                                                 </label>
                                                             </subviews>
                                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -239,9 +232,6 @@
                                                                         <userDefinedRuntimeAttribute type="boolean" keyPath="fontSizeNew" value="YES"/>
                                                                         <userDefinedRuntimeAttribute type="boolean" keyPath="fontSize" value="NO"/>
                                                                     </userDefinedRuntimeAttributes>
-                                                                    <variation key="heightClass=regular-widthClass=regular">
-                                                                        <fontDescription key="fontDescription" name="Karla-Medium" family="Karla" pointSize="18"/>
-                                                                    </variation>
                                                                 </label>
                                                             </subviews>
                                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -283,9 +273,6 @@
                                                                         <userDefinedRuntimeAttribute type="boolean" keyPath="fontSizeNew" value="YES"/>
                                                                         <userDefinedRuntimeAttribute type="boolean" keyPath="fontSize" value="NO"/>
                                                                     </userDefinedRuntimeAttributes>
-                                                                    <variation key="heightClass=regular-widthClass=regular">
-                                                                        <fontDescription key="fontDescription" name="Karla-Medium" family="Karla" pointSize="18"/>
-                                                                    </variation>
                                                                 </label>
                                                             </subviews>
                                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -333,9 +320,6 @@
                                                                         <userDefinedRuntimeAttribute type="boolean" keyPath="fontSizeNew" value="YES"/>
                                                                         <userDefinedRuntimeAttribute type="boolean" keyPath="fontSize" value="NO"/>
                                                                     </userDefinedRuntimeAttributes>
-                                                                    <variation key="heightClass=regular-widthClass=regular">
-                                                                        <fontDescription key="fontDescription" name="Karla-Medium" family="Karla" pointSize="18"/>
-                                                                    </variation>
                                                                 </label>
                                                             </subviews>
                                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -377,9 +361,6 @@
                                                                         <userDefinedRuntimeAttribute type="boolean" keyPath="fontSizeNew" value="YES"/>
                                                                         <userDefinedRuntimeAttribute type="boolean" keyPath="fontSize" value="NO"/>
                                                                     </userDefinedRuntimeAttributes>
-                                                                    <variation key="heightClass=regular-widthClass=regular">
-                                                                        <fontDescription key="fontDescription" name="Karla-Medium" family="Karla" pointSize="18"/>
-                                                                    </variation>
                                                                 </label>
                                                             </subviews>
                                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -421,9 +402,6 @@
                                                                         <userDefinedRuntimeAttribute type="boolean" keyPath="fontSizeNew" value="YES"/>
                                                                         <userDefinedRuntimeAttribute type="boolean" keyPath="fontSize" value="NO"/>
                                                                     </userDefinedRuntimeAttributes>
-                                                                    <variation key="heightClass=regular-widthClass=regular">
-                                                                        <fontDescription key="fontDescription" name="Karla-Medium" family="Karla" pointSize="18"/>
-                                                                    </variation>
                                                                 </label>
                                                             </subviews>
                                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -521,9 +499,6 @@
                                                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                             <color key="textColor" red="0.25882352939999997" green="0.2901960784" blue="0.30588235289999999" alpha="1" colorSpace="calibratedRGB"/>
                                                             <nil key="highlightedColor"/>
-                                                            <variation key="heightClass=regular-widthClass=regular">
-                                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                                            </variation>
                                                         </label>
                                                     </subviews>
                                                 </stackView>
@@ -1138,9 +1113,6 @@
                                                         <userDefinedRuntimeAttribute type="boolean" keyPath="fontSizeNew" value="YES"/>
                                                         <userDefinedRuntimeAttribute type="boolean" keyPath="fontSize" value="NO"/>
                                                     </userDefinedRuntimeAttributes>
-                                                    <variation key="heightClass=regular-widthClass=regular">
-                                                        <fontDescription key="fontDescription" name="Karla-ExtraBold" family="Karla" pointSize="32"/>
-                                                    </variation>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mCS-rL-kWV">
                                                     <rect key="frame" x="0.0" y="0.0" width="356.33333333333331" height="61.333333333333336"/>
@@ -1202,9 +1174,6 @@
                                                 <userDefinedRuntimeAttribute type="boolean" keyPath="fontSizeNew" value="YES"/>
                                                 <userDefinedRuntimeAttribute type="boolean" keyPath="fontSize" value="NO"/>
                                             </userDefinedRuntimeAttributes>
-                                            <variation key="heightClass=regular-widthClass=regular">
-                                                <fontDescription key="fontDescription" name="Karla-Regular" family="Karla" pointSize="19"/>
-                                            </variation>
                                         </label>
                                         <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cAR-as-g7Q" userLabel="Stack View Btns">
                                             <rect key="frame" x="36.666666666666657" y="740.33333333333337" width="320" height="20.666666666666629"/>
@@ -1213,13 +1182,13 @@
                                                     <rect key="frame" x="0.0" y="0.0" width="111" height="20.666666666666668"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Terms of Use" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GJh-EW-VP6" customClass="MarqueeLabel" customModule="MarqueeLabel">
-                                                            <rect key="frame" x="22.666666666666671" y="0.0" width="78.333333333333329" height="20.666666666666668"/>
+                                                            <rect key="frame" x="24.666666666666671" y="0.0" width="76.333333333333329" height="20.666666666666668"/>
                                                             <fontDescription key="fontDescription" name="PlusJakartaSans-Regular" family="Plus Jakarta Sans" pointSize="13"/>
                                                             <color key="textColor" red="0.48627450979999998" green="0.50588235290000005" blue="0.51764705879999995" alpha="1" colorSpace="calibratedRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jX5-fd-dAW">
-                                                            <rect key="frame" x="22.666666666666671" y="0.0" width="78.333333333333329" height="20.666666666666668"/>
+                                                            <rect key="frame" x="24.666666666666671" y="0.0" width="76.333333333333329" height="20.666666666666668"/>
                                                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                             <connections>
                                                                 <action selector="btnTermsAction:" destination="-1" eventType="touchUpInside" id="pFd-eq-Nca"/>
@@ -1295,13 +1264,13 @@
                                                     <rect key="frame" x="209" y="0.0" width="111" height="20.666666666666668"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Privacy Policy" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K4n-Bb-TDf" customClass="MarqueeLabel" customModule="MarqueeLabel">
-                                                            <rect key="frame" x="10" y="0.0" width="84" height="20.666666666666668"/>
+                                                            <rect key="frame" x="10" y="0.0" width="81.666666666666671" height="20.666666666666668"/>
                                                             <fontDescription key="fontDescription" name="PlusJakartaSans-Regular" family="Plus Jakarta Sans" pointSize="13"/>
                                                             <color key="textColor" red="0.48627450979999998" green="0.50588235290000005" blue="0.51764705879999995" alpha="1" colorSpace="calibratedRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YYf-uf-Y4u">
-                                                            <rect key="frame" x="10" y="0.0" width="84" height="20.666666666666668"/>
+                                                            <rect key="frame" x="10" y="0.0" width="81.666666666666671" height="20.666666666666668"/>
                                                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                             <connections>
                                                                 <action selector="btnPrivacyAction:" destination="-1" eventType="touchUpInside" id="pMM-id-DB1"/>
@@ -1338,8 +1307,8 @@
                                         <constraint firstItem="bKX-Ed-Y0a" firstAttribute="top" secondItem="b3c-x4-HDs" secondAttribute="bottom" constant="14" id="0Hc-QN-BF6">
                                             <variation key="heightClass=regular-widthClass=regular" constant="18"/>
                                         </constraint>
+                                        <constraint firstItem="U7J-l2-CR4" firstAttribute="leading" secondItem="2l8-J4-9uC" secondAttribute="leading" constant="10" id="1wr-JW-GOl"/>
                                         <constraint firstItem="cAR-as-g7Q" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="l4o-DE-EBC" secondAttribute="leading" id="2Ca-pB-IHN"/>
-                                        <constraint firstItem="a1s-io-ZhZ" firstAttribute="top" secondItem="EGe-hX-sc6" secondAttribute="top" id="2qI-AV-XCr"/>
                                         <constraint firstAttribute="trailing" secondItem="rWO-7z-Tgb" secondAttribute="trailing" constant="10" id="38V-Fh-i5S"/>
                                         <constraint firstItem="6iO-YU-Vzo" firstAttribute="top" secondItem="a1s-io-ZhZ" secondAttribute="bottom" constant="5" id="4t5-s0-gHP"/>
                                         <constraint firstItem="RFY-Lm-T3t" firstAttribute="leading" secondItem="l4o-DE-EBC" secondAttribute="leading" constant="15" id="7SX-0S-xru"/>
@@ -1348,6 +1317,7 @@
                                             <variation key="heightClass=regular-widthClass=regular" constant="18"/>
                                         </constraint>
                                         <constraint firstItem="70p-lC-7wg" firstAttribute="width" secondItem="l4o-DE-EBC" secondAttribute="width" multiplier="540:768" id="AWO-sc-pK7"/>
+                                        <constraint firstItem="2l8-J4-9uC" firstAttribute="top" secondItem="l4o-DE-EBC" secondAttribute="top" constant="5" id="CT1-K7-Pf5"/>
                                         <constraint firstItem="0fK-nq-f1i" firstAttribute="width" secondItem="l4o-DE-EBC" secondAttribute="width" multiplier="290:320" id="E7j-ms-Y89"/>
                                         <constraint firstItem="cAR-as-g7Q" firstAttribute="height" secondItem="0fK-nq-f1i" secondAttribute="height" multiplier="22:75" id="EZC-8Y-yHT"/>
                                         <constraint firstAttribute="trailing" secondItem="ak2-RY-biF" secondAttribute="trailing" constant="15" id="HYq-nb-yzl">
@@ -1358,17 +1328,16 @@
                                         <constraint firstItem="YkA-g6-l4W" firstAttribute="top" secondItem="bKX-Ed-Y0a" secondAttribute="bottom" constant="14" id="K1i-dh-1as">
                                             <variation key="heightClass=regular-widthClass=regular" constant="18"/>
                                         </constraint>
-                                        <constraint firstItem="EGe-hX-sc6" firstAttribute="leading" secondItem="a1s-io-ZhZ" secondAttribute="trailing" constant="5" id="KXh-Ka-T3l">
-                                            <variation key="heightClass=regular-widthClass=regular" constant="10"/>
-                                        </constraint>
                                         <constraint firstItem="0fK-nq-f1i" firstAttribute="top" secondItem="RFY-Lm-T3t" secondAttribute="bottom" constant="10" id="Kdl-0K-xqg">
                                             <variation key="heightClass=regular-widthClass=regular" constant="15"/>
                                         </constraint>
                                         <constraint firstItem="YkA-g6-l4W" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="l4o-DE-EBC" secondAttribute="leading" constant="30" id="MZB-3k-a53"/>
                                         <constraint firstItem="cAR-as-g7Q" firstAttribute="height" secondItem="0fK-nq-f1i" secondAttribute="height" multiplier="15:45" id="Oke-nJ-WYw"/>
                                         <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="YkA-g6-l4W" secondAttribute="trailing" constant="30" id="Q1o-RC-pLa"/>
+                                        <constraint firstItem="U7J-l2-CR4" firstAttribute="top" secondItem="2l8-J4-9uC" secondAttribute="top" constant="10" id="QaE-Zl-576"/>
+                                        <constraint firstAttribute="trailing" secondItem="2l8-J4-9uC" secondAttribute="trailing" constant="8" id="R6V-FV-MSS"/>
                                         <constraint firstItem="bKX-Ed-Y0a" firstAttribute="trailing" secondItem="ak2-RY-biF" secondAttribute="trailing" constant="5" id="Rxt-7C-m53"/>
-                                        <constraint firstAttribute="trailing" secondItem="EGe-hX-sc6" secondAttribute="trailing" constant="8" id="VXF-bd-i1K"/>
+                                        <constraint firstItem="U7J-l2-CR4" firstAttribute="bottom" secondItem="2l8-J4-9uC" secondAttribute="bottom" constant="-10" id="SmA-14-xeK"/>
                                         <constraint firstItem="YkA-g6-l4W" firstAttribute="centerX" secondItem="l4o-DE-EBC" secondAttribute="centerX" id="Vbw-MF-cRl"/>
                                         <constraint firstItem="RFY-Lm-T3t" firstAttribute="top" secondItem="031-ML-xFO" secondAttribute="bottom" constant="18" id="W7W-2f-XLB">
                                             <variation key="heightClass=regular-widthClass=regular" constant="20"/>
@@ -1380,7 +1349,6 @@
                                         <constraint firstItem="cAR-as-g7Q" firstAttribute="top" secondItem="rWO-7z-Tgb" secondAttribute="bottom" constant="14" id="aUA-gd-UCl">
                                             <variation key="heightClass=regular-widthClass=regular" constant="18"/>
                                         </constraint>
-                                        <constraint firstItem="EGe-hX-sc6" firstAttribute="top" secondItem="l4o-DE-EBC" secondAttribute="top" constant="5" id="bjF-hG-Jm2"/>
                                         <constraint firstItem="b3c-x4-HDs" firstAttribute="top" secondItem="ak2-RY-biF" secondAttribute="bottom" id="cTw-Sd-gIx">
                                             <variation key="heightClass=regular-widthClass=regular" constant="0.0"/>
                                         </constraint>
@@ -1389,6 +1357,7 @@
                                         </constraint>
                                         <constraint firstItem="b3c-x4-HDs" firstAttribute="trailing" secondItem="0fK-nq-f1i" secondAttribute="trailing" id="e8D-ow-wIZ"/>
                                         <constraint firstItem="0fK-nq-f1i" firstAttribute="centerX" secondItem="l4o-DE-EBC" secondAttribute="centerX" id="fDQ-mm-mS2"/>
+                                        <constraint firstItem="a1s-io-ZhZ" firstAttribute="top" secondItem="l4o-DE-EBC" secondAttribute="top" constant="5" id="fjG-ak-3XP"/>
                                         <constraint firstItem="6iO-YU-Vzo" firstAttribute="leading" secondItem="a1s-io-ZhZ" secondAttribute="leading" id="gMh-wa-G0N"/>
                                         <constraint firstAttribute="bottom" secondItem="cAR-as-g7Q" secondAttribute="bottom" constant="14" id="gce-0a-bDQ">
                                             <variation key="heightClass=regular-widthClass=regular" constant="18"/>
@@ -1404,6 +1373,7 @@
                                         <constraint firstItem="031-ML-xFO" firstAttribute="centerX" secondItem="l4o-DE-EBC" secondAttribute="centerX" id="nwk-Bn-Eqq"/>
                                         <constraint firstItem="b3c-x4-HDs" firstAttribute="leading" secondItem="0fK-nq-f1i" secondAttribute="leading" id="o69-0G-QfK"/>
                                         <constraint firstItem="a1s-io-ZhZ" firstAttribute="leading" secondItem="ak2-RY-biF" secondAttribute="leading" id="p2y-Kr-OfG"/>
+                                        <constraint firstItem="U7J-l2-CR4" firstAttribute="trailing" secondItem="2l8-J4-9uC" secondAttribute="trailing" constant="-10" id="qo9-mb-C0z"/>
                                         <constraint firstItem="0fK-nq-f1i" firstAttribute="width" secondItem="l4o-DE-EBC" secondAttribute="width" multiplier="525:768" id="tpi-MM-gHH"/>
                                         <constraint firstItem="cAR-as-g7Q" firstAttribute="centerX" secondItem="l4o-DE-EBC" secondAttribute="centerX" id="vZ2-be-Cqb"/>
                                         <constraint firstItem="031-ML-xFO" firstAttribute="width" secondItem="l4o-DE-EBC" secondAttribute="width" multiplier="520:768" id="y7f-dN-f9F"/>
@@ -1461,7 +1431,7 @@
                 <constraint firstItem="xRs-VV-Xbx" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="45" id="HhF-4q-IpO"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="2W6-W0-TfM" secondAttribute="trailing" id="IKs-4S-Bmo"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="xRs-VV-Xbx" secondAttribute="trailing" id="RjL-oh-eWr"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="2W6-W0-TfM" secondAttribute="bottom" id="Rlp-c7-Ihu"/>
+                <constraint firstAttribute="bottom" secondItem="2W6-W0-TfM" secondAttribute="bottom" id="Rlp-c7-Ihu"/>
                 <constraint firstItem="xRs-VV-Xbx" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="VXo-M5-rzA"/>
                 <constraint firstItem="2W6-W0-TfM" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="dkU-T9-4is"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="xRs-VV-Xbx" secondAttribute="bottom" id="nWJ-ZG-51q"/>
@@ -1470,8 +1440,8 @@
         </view>
     </objects>
     <resources>
-        <image name="ic_close_gray" width="73" height="73"/>
         <image name="ic_shield" width="61" height="61"/>
+        <image name="ic_sub_close" width="100" height="100"/>
         <image name="ic_sub_plan_0_sel" width="109" height="46"/>
         <image name="ic_sub_plan_2_sel" width="62" height="70"/>
         <image name="ic_sub_plan_3_sel" width="87" height="87"/>

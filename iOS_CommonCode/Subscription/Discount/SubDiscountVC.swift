@@ -98,9 +98,12 @@ class SubDiscountVC: UIViewController {
         let padding : CGFloat = UIDevice.current.isiPhone ? 10 : 15
         btnClose.imageEdgeInsets = UIEdgeInsets(top: padding, left: padding, bottom: padding, right: padding)
         
-        viewJson.animation = LottieAnimation.named("Pod_sub_discount_btn")
-        viewJson?.loopMode = .loop
-        viewJson.play()
+        if let loadJSONURL = PodBundleHelper.loadJSONFile(named: "Pod_sub_discount_btn") {
+            viewJson.animation = LottieAnimation.filepath(loadJSONURL.path)
+            viewJson?.loopMode = .loop
+            viewJson.play()
+        }
+        
         
         setupConfettiAnimation()
         funManageCloseBtn()

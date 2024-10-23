@@ -229,12 +229,18 @@ class SubTimelineVC: UIViewController {
     
     private func setUpAnimation() {
         if UIDevice.current.isiPad {
-            self.viewJson.animation = LottieAnimation.named("Pod_sub_timeline_ipad")
+            if let loadJSONURL = PodBundleHelper.loadJSONFile(named: "Pod_sub_timeline_ipad") {
+                viewJson.animation = LottieAnimation.filepath(loadJSONURL.path)
+                viewJson?.loopMode = .loop
+                viewJson.play()
+            }
         } else {
-            self.viewJson.animation = LottieAnimation.named("Pod_sub_timeline_iphone")
+            if let loadJSONURL = PodBundleHelper.loadJSONFile(named: "Pod_sub_timeline_iphone") {
+                viewJson.animation = LottieAnimation.filepath(loadJSONURL.path)
+                viewJson?.loopMode = .loop
+                viewJson.play()
+            }
         }
-        self.viewJson.loopMode = .loop
-        self.viewJson.play()
     }
     
     //MARK: -
@@ -467,12 +473,18 @@ extension SubTimelineVC {
         if let btnJsonFilenameiPad = customizationSubTimelineTheme.btnJsonFilenameiPad,
            let btnJsonFilenameiPhone = customizationSubTimelineTheme.btnJsonFilenameiPhone {
             if UIDevice.current.isiPad {
-                self.viewJson.animation = LottieAnimation.named(btnJsonFilenameiPad)
+                if let loadJSONURL = PodBundleHelper.loadJSONFile(named: btnJsonFilenameiPad) {
+                    viewJson.animation = LottieAnimation.filepath(loadJSONURL.path)
+                    viewJson?.loopMode = .loop
+                    viewJson.play()
+                }
             } else {
-                self.viewJson.animation = LottieAnimation.named(btnJsonFilenameiPhone)
+                if let loadJSONURL = PodBundleHelper.loadJSONFile(named: btnJsonFilenameiPhone) {
+                    viewJson.animation = LottieAnimation.filepath(loadJSONURL.path)
+                    viewJson?.loopMode = .loop
+                    viewJson.play()
+                }
             }
-            self.viewJson.loopMode = .loop
-            self.viewJson.play()
         }
         
         let arrLabel = [
