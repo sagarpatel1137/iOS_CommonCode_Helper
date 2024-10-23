@@ -84,20 +84,28 @@ func setCustomFont(name: FontApp, iPhoneSize: Double, iPadSize: Double) -> UIFon
     return font!
 }
 
-/*
-func setCustomFont(name: FontApp, iPhoneSize: Double, iPadSize: Double) -> UIFont {
-    /*
-    for family in UIFont.familyNames {
-        print("Family: \(family)")
-        for name in UIFont.fontNames(forFamilyName: family) {
-            print("    Name: \(name)")
-        }
-    }
-      */
+func setCustomFont_Ratio(name: FontApp, iPhoneSize: Double, iPadSize: Double) -> UIFont {
     let font = UIFont(name: name.rawValue, size: UIDevice.current.isiPhone ? iPhoneSize*fontRatio : iPadSize*fontRatio)
     return font!
 }
- */
+
+func ResizeText(iphone: CGFloat, iPad: CGFloat) -> CGFloat {
+    
+    let ratio = UIDevice.current.isiPhone ? UIScreen.main.bounds.width/320 : UIScreen.main.bounds.width/768
+    let size = UIDevice.current.isiPhone ? iphone*ratio : iPad*ratio
+    
+    let phone = Locale.current.languageCode == "ur" ? size - 3 : iphone
+    return phone
+}
+
+func ResizeText_Rating(iphone: CGFloat, iPad: CGFloat) -> CGFloat {
+    
+    let ratio = UIDevice.current.isiPhone ? UIScreen.main.bounds.width/320 : UIScreen.main.bounds.width/768
+    let size = UIDevice.current.isiPhone ? iphone*ratio : iPad*ratio
+
+    let phone = Locale.current.languageCode == "ur" ? size - 3 : size
+    return phone
+}
 
 func scheduleFreeTrialNotification(noOfDays: Int , isDebug: Bool = false) {
     UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound, .badge]) { (granted, error) in

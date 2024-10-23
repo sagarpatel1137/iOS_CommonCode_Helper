@@ -828,12 +828,7 @@ extension SubMorePlanVC : UICollectionViewDelegate, UICollectionViewDataSource, 
             cell.viewRating3.isHidden = false
         }
         
-        let data = arrReview[indexPath.row]
-        
-        cell.lblTitle.text = data.title.localized() + "  "
-        cell.lblDetail.text = data.description.localized()
-        cell.lblName.text = "\("by".localized()) \(data.name.localized())"
-        cell.lblDetail.numberOfLines = 3
+        cell.customizationSubRatingData = self.customizationSubRatingData
         
         return cell
     }

@@ -53,7 +53,11 @@ class SubRatingCell: UICollectionViewCell {
     
     static let identifier = "SubRatingCell"
     
-    public var customizationSubRatingData: UICustomizationSubRatingData?
+    public var customizationSubRatingData: UICustomizationSubRatingData? {
+        didSet {
+            updateUI()
+        }
+    }
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -87,22 +91,26 @@ class SubRatingCell: UICollectionViewCell {
     }
     
     private func setupUI() {
-        view1TitleLabel.text = "Best AI Voice Changer App".localized()
-        view1SubTitleLabel.text = "Creative, entertaining, and perfect for fun voice transformations.".localized()
-        ratingCountLabel.text = "1,00,000"
-        satisfiedCustLabel.text = "Satisfied Customer".localized()
+        func configureFont(for label: UILabel, fontName: FontApp, iPhoneSize: CGFloat, iPadSize: CGFloat) {
+            label.font = setCustomFont(name: fontName, iPhoneSize: iPhoneSize, iPadSize: iPadSize)
+        }
         
-        lblTitle.font = setCustomFont(name: .PlusJakartaSans_ExtraBold, iPhoneSize: 12, iPadSize: 19)
-        lblDetail.font = setCustomFont(name: .PlusJakartaSans_Regular, iPhoneSize: 10, iPadSize: 16)
-        lblName.font = setCustomFont(name: .PlusJakartaSans_Medium, iPhoneSize: 11, iPadSize: 16)
+        // Setting fonts for the labels
+        configureFont(for: lblTitle, fontName: .PlusJakartaSans_SemiBold, iPhoneSize: 16, iPadSize: 20)
+        configureFont(for: lblDetail, fontName: .PlusJakartaSans_Medium, iPhoneSize: 14, iPadSize: 15)
+        configureFont(for: lblName, fontName: .PlusJakartaSans_Medium, iPhoneSize: 15, iPadSize: 16)
         
-        view1TitleLabel.font = setCustomFont(name: .PlusJakartaSans_ExtraBold, iPhoneSize: 12, iPadSize: 19)
-        view1SubTitleLabel.font = setCustomFont(name: .PlusJakartaSans_Regular, iPhoneSize: 11, iPadSize: 15)
-        ratingCountLabel.font = setCustomFont(name: .PlusJakartaSans_ExtraBold, iPhoneSize: 18, iPadSize: 25)
-        satisfiedCustLabel.font = setCustomFont(name: .PlusJakartaSans_Bold, iPhoneSize: 14, iPadSize: 19)
+        // Using ResizeText_Rating once and reusing the calculated values
+        let titleSize = ResizeText_Rating(iphone: 13, iPad: 19)
+        let subTitleSize = ResizeText_Rating(iphone: 11, iPad: 17)
+        let ratingSize = ResizeText_Rating(iphone: 18, iPad: 25)
+        let custLabelSize = ResizeText_Rating(iphone: 14, iPad: 19)
         
+        configureFont(for: view1TitleLabel, fontName: .PlusJakartaSans_Bold, iPhoneSize: titleSize, iPadSize: titleSize)
+        configureFont(for: view1SubTitleLabel, fontName: .PlusJakartaSans_Medium, iPhoneSize: subTitleSize, iPadSize: subTitleSize)
+        configureFont(for: ratingCountLabel, fontName: .PlusJakartaSans_ExtraBold, iPhoneSize: ratingSize, iPadSize: ratingSize)
+        configureFont(for: satisfiedCustLabel, fontName: .PlusJakartaSans_Bold, iPhoneSize: custLabelSize, iPadSize: custLabelSize)
     }
-
 }
 
 //MARK: -
