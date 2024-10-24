@@ -19,7 +19,7 @@ public struct UICustomizationWebView {
         self.navBarBackgroundColor = navBarBackgroundColor ?? hexStringToUIColor(hex: "F3F6FF")
         self.backButtonImage = backButtonImage ?? UIImage(named: "ic_back")
         self.titleFont = titleFont ?? setCustomFont(name: .WorkSans_SemiBold, iPhoneSize: 20, iPadSize: 20)
-        self.titleTextColor = titleTextColor ?? hexStringToUIColor(hex: "F3F6FF")
+        self.titleTextColor = titleTextColor ?? .black
     }
 }
 

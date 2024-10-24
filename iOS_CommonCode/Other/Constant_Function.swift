@@ -71,7 +71,7 @@ var fontRatio: CGFloat {
     }
 }
 
-func setCustomFont(name: FontApp, iPhoneSize: Double, iPadSize: Double) -> UIFont {
+public func setCustomFont_WithoutRatio(name: FontApp, iPhoneSize: Double, iPadSize: Double) -> UIFont {
     /*
     for family in UIFont.familyNames {
         print("Family: \(family)")
@@ -84,12 +84,12 @@ func setCustomFont(name: FontApp, iPhoneSize: Double, iPadSize: Double) -> UIFon
     return font!
 }
 
-func setCustomFont_Ratio(name: FontApp, iPhoneSize: Double, iPadSize: Double) -> UIFont {
+public func setCustomFont(name: FontApp, iPhoneSize: Double, iPadSize: Double) -> UIFont {
     let font = UIFont(name: name.rawValue, size: UIDevice.current.isiPhone ? iPhoneSize*fontRatio : iPadSize*fontRatio)
     return font!
 }
 
-func ResizeText(iphone: CGFloat, iPad: CGFloat) -> CGFloat {
+public func ResizeText(iphone: CGFloat, iPad: CGFloat) -> CGFloat {
     
     let ratio = UIDevice.current.isiPhone ? UIScreen.main.bounds.width/320 : UIScreen.main.bounds.width/768
     let size = UIDevice.current.isiPhone ? iphone*ratio : iPad*ratio
@@ -98,7 +98,7 @@ func ResizeText(iphone: CGFloat, iPad: CGFloat) -> CGFloat {
     return phone
 }
 
-func ResizeText_Rating(iphone: CGFloat, iPad: CGFloat) -> CGFloat {
+public func ResizeText_Rating(iphone: CGFloat, iPad: CGFloat) -> CGFloat {
     
     let ratio = UIDevice.current.isiPhone ? UIScreen.main.bounds.width/320 : UIScreen.main.bounds.width/768
     let size = UIDevice.current.isiPhone ? iphone*ratio : iPad*ratio

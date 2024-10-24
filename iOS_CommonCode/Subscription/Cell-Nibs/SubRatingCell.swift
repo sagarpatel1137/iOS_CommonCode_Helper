@@ -9,14 +9,14 @@ import UIKit
 
 //MARK: Cusmization
 public struct UICustomizationSubRatingData {
-    public var view1ImageRating: UIImage
-    public var view1TitleLabel: String
-    public var view1SubTitleLabel: String
-    public var view2ImagePlaceholder: UIImage
-    public var ratingCountLabel: String
-    public var satisfiedCustLabel: String
+    public var view1ImageRating: UIImage?
+    public var view1TitleLabel: String?
+    public var view1SubTitleLabel: String?
+    public var view2ImagePlaceholder: UIImage?
+    public var ratingCountLabel: String?
+    public var satisfiedCustLabel: String?
     
-    public init(view1ImageRating: UIImage, view1TitleLabel: String, view1SubTitleLabel: String, view2ImagePlaceholder: UIImage, ratingCountLabel: String, satisfiedCustLabel: String) {
+    public init(view1ImageRating: UIImage? = nil, view1TitleLabel: String? = nil, view1SubTitleLabel: String? = nil, view2ImagePlaceholder: UIImage? = nil, ratingCountLabel: String? = nil, satisfiedCustLabel: String? = nil) {
         self.view1ImageRating = view1ImageRating
         self.view1TitleLabel = view1TitleLabel
         self.view1SubTitleLabel = view1SubTitleLabel
@@ -92,7 +92,7 @@ class SubRatingCell: UICollectionViewCell {
     
     private func setupUI() {
         func configureFont(for label: UILabel, fontName: FontApp, iPhoneSize: CGFloat, iPadSize: CGFloat) {
-            label.font = setCustomFont(name: fontName, iPhoneSize: iPhoneSize, iPadSize: iPadSize)
+            label.font = setCustomFont_WithoutRatio(name: fontName, iPhoneSize: iPhoneSize, iPadSize: iPadSize)
         }
         
         // Setting fonts for the labels
@@ -118,21 +118,33 @@ extension SubRatingCell {
     private func updateUI() {
         if let view1ImageRating = customizationSubRatingData?.view1ImageRating {
             self.view1ImageRating.image = view1ImageRating
+        } else {
+            self.view1ImageRating.image = nil
         }
         if let view1TitleLabel = customizationSubRatingData?.view1TitleLabel {
             self.view1TitleLabel.text = view1TitleLabel
+        } else {
+            self.view1TitleLabel.text = ""
         }
         if let view1SubTitleLabel = customizationSubRatingData?.view1SubTitleLabel {
             self.view1SubTitleLabel.text = view1SubTitleLabel
+        } else {
+            self.view1SubTitleLabel.text = ""
         }
         if let view2ImagePlaceholder = customizationSubRatingData?.view2ImagePlaceholder {
             self.view2ImagePlaceholder.image = view2ImagePlaceholder
+        } else {
+            self.view2ImagePlaceholder.image = nil
         }
         if let ratingCountLabel = customizationSubRatingData?.ratingCountLabel {
             self.ratingCountLabel.text = ratingCountLabel
+        } else {
+            self.ratingCountLabel.text = ""
         }
         if let satisfiedCustLabel = customizationSubRatingData?.satisfiedCustLabel {
             self.satisfiedCustLabel.text = satisfiedCustLabel
+        } else {
+            self.satisfiedCustLabel.text = ""
         }
     }
 }

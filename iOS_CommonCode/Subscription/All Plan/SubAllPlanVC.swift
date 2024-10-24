@@ -656,7 +656,8 @@ extension SubAllPlanVC : UICollectionViewDelegate, UICollectionViewDataSource, U
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: SubRatingCell.identifier, for: indexPath) as? SubRatingCell else { return UICollectionViewCell() }
             
             cell.semanticContentAttribute = .forceLeftToRight
-            
+            cell.mainContentView.backgroundColor = .systemBackground
+
             switch indexPath.row {
             case 0:
                 cell.viewRating1.isHidden = false

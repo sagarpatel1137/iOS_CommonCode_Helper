@@ -101,7 +101,11 @@ class SubMorePlanVC: UIViewController {
     
     //MARK: -
     var arrReview: [ReviewModel] = [
-        ReviewModel(title: "", starCount: 5, description: "", name: "")
+        ReviewModel(title: "", starCount: 5, description: "", name: ""),
+        ReviewModel(title: "", starCount: 5, description: "", name: ""),
+        ReviewModel(title: "Amazing AI Voices", starCount: 5, description: "The AI voices are incredibly realistic! It’s fun to play around and impress friends with how lifelike they sound. A must-have app for voice enthusiasts.", name: "Lily Harper"),
+        ReviewModel(title: "Endless Fun with Prank Sounds", starCount: 5, description: "The prank sounds are hilarious! I’ve been using them to surprise my friends, and it never gets old. The app is packed with endless fun.", name: "Daniel Clarke"),
+        ReviewModel(title: "Funny Reels Made Easy", starCount: 5, description: "Creating funny reels has never been this easy! The app has a variety of options that make every reel unique and entertaining.", name: "Zoe Patel")
     ]
     
     enum errorMsg : String
@@ -123,8 +127,9 @@ class SubMorePlanVC: UIViewController {
         AddFirebaseEvent(eventName: EventsValues.SubMoreShow)
         funAddNotification()
         setUpUI()
-        
-        setupScreenPlans()
+        DispatchQueue.main.async {
+            self.setupScreenPlans()
+        }
     }
     
     private func setupScreenPlans() {
@@ -239,20 +244,20 @@ class SubMorePlanVC: UIViewController {
         let fontRatio = UIDevice.current.isiPad ? UIScreen.main.bounds.width/768 : UIScreen.main.bounds.width/320
 
         
-        lblTitle.font = setCustomFont(name: .PlusJakartaSans_Bold, iPhoneSize: 25, iPadSize: 45)
-        lblFreeTrial.font = setCustomFont(name: .PlusJakartaSans_Medium, iPhoneSize: 14, iPadSize: 18)
-        lblListFeatures[0].font = setCustomFont(name: .PlusJakartaSans_Medium, iPhoneSize: 11.5, iPadSize: 18)
-        lblListFeatures[1].font = setCustomFont(name: .PlusJakartaSans_Medium, iPhoneSize: 11.5, iPadSize: 18)
-        lblListFeatures[2].font = setCustomFont(name: .PlusJakartaSans_Medium, iPhoneSize: 11.5, iPadSize: 18)
-        lblListFeatures[3].font = setCustomFont(name: .PlusJakartaSans_Medium, iPhoneSize: 11.5, iPadSize: 18)
-        lblListFeatures[4].font = setCustomFont(name: .PlusJakartaSans_Medium, iPhoneSize: 11.5, iPadSize: 18)
-        lblListFeatures[5].font = setCustomFont(name: .PlusJakartaSans_Medium, iPhoneSize: 11.5, iPadSize: 18)
-        lblPayNothingNow.font = setCustomFont(name: .PlusJakartaSans_Bold, iPhoneSize: 15*fontRatio, iPadSize: 22*fontRatio)
-        lblSubscribe.font = setCustomFont(name: .PlusJakartaSans_Bold, iPhoneSize: 20, iPadSize: 32)
-        lblPromotionalPeriod.font = setCustomFont(name: .PlusJakartaSans_Medium, iPhoneSize: 13, iPadSize: 19)
-        lblRestore.font = setCustomFont(name: .WorkSans_Regular, iPhoneSize: 13, iPadSize: 17)
-        lblTerms.font = setCustomFont(name: .WorkSans_Regular, iPhoneSize: 13, iPadSize: 17)
-        lblPrivacy.font = setCustomFont(name: .WorkSans_Regular, iPhoneSize: 13, iPadSize: 17)
+        lblTitle.font = setCustomFont_WithoutRatio(name: .PlusJakartaSans_Bold, iPhoneSize: 25, iPadSize: 45)
+        lblFreeTrial.font = setCustomFont_WithoutRatio(name: .PlusJakartaSans_Medium, iPhoneSize: 14, iPadSize: 18)
+        lblListFeatures[0].font = setCustomFont_WithoutRatio(name: .PlusJakartaSans_Medium, iPhoneSize: 11.5, iPadSize: 18)
+        lblListFeatures[1].font = setCustomFont_WithoutRatio(name: .PlusJakartaSans_Medium, iPhoneSize: 11.5, iPadSize: 18)
+        lblListFeatures[2].font = setCustomFont_WithoutRatio(name: .PlusJakartaSans_Medium, iPhoneSize: 11.5, iPadSize: 18)
+        lblListFeatures[3].font = setCustomFont_WithoutRatio(name: .PlusJakartaSans_Medium, iPhoneSize: 11.5, iPadSize: 18)
+        lblListFeatures[4].font = setCustomFont_WithoutRatio(name: .PlusJakartaSans_Medium, iPhoneSize: 11.5, iPadSize: 18)
+        lblListFeatures[5].font = setCustomFont_WithoutRatio(name: .PlusJakartaSans_Medium, iPhoneSize: 11.5, iPadSize: 18)
+        lblPayNothingNow.font = setCustomFont_WithoutRatio(name: .PlusJakartaSans_Bold, iPhoneSize: 15*fontRatio, iPadSize: 22*fontRatio)
+        lblSubscribe.font = setCustomFont_WithoutRatio(name: .PlusJakartaSans_Bold, iPhoneSize: 20, iPadSize: 32)
+        lblPromotionalPeriod.font = setCustomFont_WithoutRatio(name: .PlusJakartaSans_Medium, iPhoneSize: 13, iPadSize: 19)
+        lblRestore.font = setCustomFont_WithoutRatio(name: .WorkSans_Regular, iPhoneSize: 13, iPadSize: 17)
+        lblTerms.font = setCustomFont_WithoutRatio(name: .WorkSans_Regular, iPhoneSize: 13, iPadSize: 17)
+        lblPrivacy.font = setCustomFont_WithoutRatio(name: .WorkSans_Regular, iPhoneSize: 13, iPadSize: 17)
 
         if UIDevice.current.userInterfaceIdiom == .pad {
             if let loadJSONURL = PodBundleHelper.loadJSONFile(named: "Pod_sub_iPad-Capsule") {
@@ -335,9 +340,9 @@ extension SubMorePlanVC
                 arrPlanLblTitle[i].textColor = hexStringToUIColor(hex: "28353F")
                 arrPlanLblDetail[i].textColor = hexStringToUIColor(hex: "28353F")
                 
-                arrLblPlanTemplate[i].font = setCustomFont(name: .PlusJakartaSans_Bold, iPhoneSize: 12, iPadSize: 17)
-                arrPlanLblTitle[i].font = setCustomFont(name: .PlusJakartaSans_Bold, iPhoneSize: 17, iPadSize: 21)
-                arrPlanPrice[i].font = setCustomFont(name: .PlusJakartaSans_Bold, iPhoneSize: 18, iPadSize: 22)
+                arrLblPlanTemplate[i].font = setCustomFont_WithoutRatio(name: .PlusJakartaSans_Bold, iPhoneSize: 12, iPadSize: 17)
+                arrPlanLblTitle[i].font = setCustomFont_WithoutRatio(name: .PlusJakartaSans_Bold, iPhoneSize: 17, iPadSize: 21)
+                arrPlanPrice[i].font = setCustomFont_WithoutRatio(name: .PlusJakartaSans_Bold, iPhoneSize: 18, iPadSize: 22)
             }
             else {
                 arrPlanBgView[i].isHidden = true
@@ -349,9 +354,9 @@ extension SubMorePlanVC
                 arrPlanLblTitle[i].textColor = hexStringToUIColor(hex: "838485")
                 arrPlanLblDetail[i].textColor = hexStringToUIColor(hex: "838485")
                 
-                arrLblPlanTemplate[i].font = setCustomFont(name: .PlusJakartaSans_Bold, iPhoneSize: 11, iPadSize: 16)
-                arrPlanLblTitle[i].font = setCustomFont(name: .PlusJakartaSans_Bold, iPhoneSize: 16, iPadSize: 20)
-                arrPlanPrice[i].font = setCustomFont(name: .PlusJakartaSans_Bold, iPhoneSize: 18, iPadSize: 21)
+                arrLblPlanTemplate[i].font = setCustomFont_WithoutRatio(name: .PlusJakartaSans_Bold, iPhoneSize: 11, iPadSize: 16)
+                arrPlanLblTitle[i].font = setCustomFont_WithoutRatio(name: .PlusJakartaSans_Bold, iPhoneSize: 16, iPadSize: 20)
+                arrPlanPrice[i].font = setCustomFont_WithoutRatio(name: .PlusJakartaSans_Bold, iPhoneSize: 18, iPadSize: 21)
             }
         }
         
@@ -409,17 +414,17 @@ extension SubMorePlanVC
             
             if plan.type == .year && sender.tag == i {
                 arrPlanMonthInfo[i].textColor = hexStringToUIColor(hex: "343537")
-                arrPlanMonthInfo[i].font = setCustomFont(name: .PlusJakartaSans_Bold, iPhoneSize: 10, iPadSize: 12)
+                arrPlanMonthInfo[i].font = setCustomFont_WithoutRatio(name: .PlusJakartaSans_Bold, iPhoneSize: 10, iPadSize: 12)
             } else {
                 arrPlanMonthInfo[i].textColor = hexStringToUIColor(hex: "838485")
-                arrPlanMonthInfo[i].font = setCustomFont(name: .PlusJakartaSans_Bold, iPhoneSize: 9, iPadSize: 12)
+                arrPlanMonthInfo[i].font = setCustomFont_WithoutRatio(name: .PlusJakartaSans_Bold, iPhoneSize: 9, iPadSize: 12)
             }
             
             if sender.tag == i && plan.type != .lifetime {
-                arrPlanLblDetail[i].font = setCustomFont(name: .PlusJakartaSans_Bold, iPhoneSize: 14, iPadSize: 17)
+                arrPlanLblDetail[i].font = setCustomFont_WithoutRatio(name: .PlusJakartaSans_Bold, iPhoneSize: 14, iPadSize: 17)
                 
             } else if plan.type != .lifetime {
-                arrPlanLblDetail[i].font = setCustomFont(name: .PlusJakartaSans_Bold, iPhoneSize: 14, iPadSize: 17)
+                arrPlanLblDetail[i].font = setCustomFont_WithoutRatio(name: .PlusJakartaSans_Bold, iPhoneSize: 14, iPadSize: 17)
             }
         }
         
@@ -462,8 +467,8 @@ extension SubMorePlanVC {
         arrPlanPrice[index].text = lifeTimePlan.plan_Price_String + " "
         
         //Free Trial
-        let font1: UIFont = setCustomFont(name: .PlusJakartaSans_Medium, iPhoneSize: 14, iPadSize: 17)
-        let font2: UIFont = setCustomFont(name: .PlusJakartaSans_Bold, iPhoneSize: 14, iPadSize: 17)
+        let font1: UIFont = setCustomFont_WithoutRatio(name: .PlusJakartaSans_Medium, iPhoneSize: 14, iPadSize: 17)
+        let font2: UIFont = setCustomFont_WithoutRatio(name: .PlusJakartaSans_Bold, iPhoneSize: 14, iPadSize: 17)
         
         let color1: UIColor = hexStringToUIColor(hex: "28353F")
         
@@ -483,8 +488,8 @@ extension SubMorePlanVC {
         else {
             arrPlanMonthInfo[index].isHidden = true
             
-            let font1: UIFont = setCustomFont(name: .PlusJakartaSans_Medium, iPhoneSize: 14, iPadSize: 17)
-            let font2: UIFont = setCustomFont(name: .PlusJakartaSans_Bold, iPhoneSize: 14, iPadSize: 17)
+            let font1: UIFont = setCustomFont_WithoutRatio(name: .PlusJakartaSans_Medium, iPhoneSize: 14, iPadSize: 17)
+            let font2: UIFont = setCustomFont_WithoutRatio(name: .PlusJakartaSans_Bold, iPhoneSize: 14, iPadSize: 17)
             let color1: UIColor = hexStringToUIColor(hex: "28353F")
             
             let str = "\(SubscriptionConst.ActivePlans.one_Year.plan_Currancy_Code)\(perMonth)/\("Month".localized())" + " "
@@ -497,8 +502,8 @@ extension SubMorePlanVC {
         arrPlanPrice[index].text = yearPlan.plan_Price_String + " "
         
         //Free Trial
-        let font1: UIFont = setCustomFont(name: .PlusJakartaSans_Medium, iPhoneSize: 14, iPadSize: 17)
-        let font2: UIFont = setCustomFont(name: .PlusJakartaSans_Bold, iPhoneSize: 14, iPadSize: 17)
+        let font1: UIFont = setCustomFont_WithoutRatio(name: .PlusJakartaSans_Medium, iPhoneSize: 14, iPadSize: 17)
+        let font2: UIFont = setCustomFont_WithoutRatio(name: .PlusJakartaSans_Bold, iPhoneSize: 14, iPadSize: 17)
         let color1: UIColor = hexStringToUIColor(hex: "28353F")
         
         if yearPlan.plan_Free_Trail.isFreeTrail {
@@ -535,8 +540,8 @@ extension SubMorePlanVC {
         arrPlanPrice[index].text = monthPlan.plan_Price_String + " "
         
         //Free Trial
-        let font1: UIFont = setCustomFont(name: .PlusJakartaSans_Medium, iPhoneSize: 14, iPadSize: 17)
-        let font2: UIFont = setCustomFont(name: .PlusJakartaSans_Bold, iPhoneSize: 14, iPadSize: 17)
+        let font1: UIFont = setCustomFont_WithoutRatio(name: .PlusJakartaSans_Medium, iPhoneSize: 14, iPadSize: 17)
+        let font2: UIFont = setCustomFont_WithoutRatio(name: .PlusJakartaSans_Bold, iPhoneSize: 14, iPadSize: 17)
         
         let color1: UIColor = hexStringToUIColor(hex: "28353F")
         
@@ -576,8 +581,8 @@ extension SubMorePlanVC {
         arrPlanPrice[index].text = weekPlan.plan_Price_String + " "
         
         //Free Trial
-        let font1: UIFont = setCustomFont(name: .PlusJakartaSans_Medium, iPhoneSize: 14, iPadSize: 17)
-        let font2: UIFont = setCustomFont(name: .PlusJakartaSans_Bold, iPhoneSize: 14, iPadSize: 17)
+        let font1: UIFont = setCustomFont_WithoutRatio(name: .PlusJakartaSans_Medium, iPhoneSize: 14, iPadSize: 17)
+        let font2: UIFont = setCustomFont_WithoutRatio(name: .PlusJakartaSans_Bold, iPhoneSize: 14, iPadSize: 17)
         let color1: UIColor = hexStringToUIColor(hex: "28353F")
         
         if weekPlan.plan_Free_Trail.isFreeTrail {
@@ -647,17 +652,17 @@ extension SubMorePlanVC {
                 var txtMonthly = "Monthly".localized().lowercased()
                 var txtMonth = "month".localized()
                 if selected_Plan.plan_Id == SubscriptionConst.ActivePlans.one_Month.plan_Id {
-                    arrPlanLblDetail[selectedIndex].font = setCustomFont(name: .WorkSans_ExtraBold, iPhoneSize: 14, iPadSize: 17)
+                    arrPlanLblDetail[selectedIndex].font = setCustomFont_WithoutRatio(name: .WorkSans_ExtraBold, iPhoneSize: 14, iPadSize: 17)
                     txtMonthly = "Monthly".localized().lowercased()
                     txtMonth = "month".localized()
                 }
                 else if selected_Plan.plan_Id == SubscriptionConst.ActivePlans.one_Year.plan_Id {
-                    arrPlanLblDetail[selectedIndex].font = setCustomFont(name: .WorkSans_ExtraBold, iPhoneSize: 14, iPadSize: 17)
+                    arrPlanLblDetail[selectedIndex].font = setCustomFont_WithoutRatio(name: .WorkSans_ExtraBold, iPhoneSize: 14, iPadSize: 17)
                     txtMonthly = "Yearly".localized().lowercased()
                     txtMonth = "year".localized()
                 }
                 else if selected_Plan.plan_Id == SubscriptionConst.ActivePlans.one_Week.plan_Id {
-                    arrPlanLblDetail[selectedIndex].font = setCustomFont(name: .WorkSans_ExtraBold, iPhoneSize: 14, iPadSize: 17)
+                    arrPlanLblDetail[selectedIndex].font = setCustomFont_WithoutRatio(name: .WorkSans_ExtraBold, iPhoneSize: 14, iPadSize: 17)
                     txtMonthly = "Weekly".localized().lowercased()
                     txtMonth = "week".localized()
                 }
@@ -827,9 +832,12 @@ extension SubMorePlanVC : UICollectionViewDelegate, UICollectionViewDataSource, 
             cell.viewRating2.isHidden = true
             cell.viewRating3.isHidden = false
         }
-        
+        let data = arrReview[indexPath.row]
         cell.customizationSubRatingData = self.customizationSubRatingData
-        
+        cell.lblTitle.text = data.title.localized() + "  "
+        cell.lblDetail.text = data.description.localized()
+        cell.lblName.text = "\("by".localized()) \(data.name.localized())"
+        cell.lblDetail.numberOfLines = 3
         return cell
     }
     

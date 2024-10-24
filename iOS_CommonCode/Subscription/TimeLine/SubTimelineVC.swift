@@ -115,6 +115,7 @@ class SubTimelineVC: UIViewController {
         
         setPlanDetail()
         updateUI()
+        updateUI()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -181,7 +182,7 @@ class SubTimelineVC: UIViewController {
     }
     
     private func setUpFont() {
-        
+
         lblTitle.font = setCustomFont(name: .Avenir_Black, iPhoneSize: 21, iPadSize: 31)
         lblSubTitle.font = setCustomFont(name: .Avenir_Heavy, iPhoneSize: 21, iPadSize: 31)
         lblStack_Now.font = setCustomFont(name: .Avenir_Heavy, iPhoneSize: 15, iPadSize: 23)
