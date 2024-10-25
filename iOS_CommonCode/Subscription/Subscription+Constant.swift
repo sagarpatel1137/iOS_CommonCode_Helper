@@ -10,7 +10,7 @@ import UIKit
 /// sendAppReview
 /// - Parameters:
 ///   - reviewModel: appVersion = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as! String
-func sendAppReview(review: String, subscriptionReview: String, useOfApp: String, completion: @escaping (Bool) -> Void) {
+public func sendAppReview(review: String, subscriptionReview: String, useOfApp: String, completion: @escaping (Bool) -> Void) {
     
     if let url = URL(string: "https://appreview.vasundharaapps.com/api/app_review_ios") {
         
@@ -66,7 +66,7 @@ func sendAppReview(review: String, subscriptionReview: String, useOfApp: String,
     }
 }
 
-func presentSubAlertSheet(on viewController: UIViewController, completion: @escaping (String) -> Void) {
+public func presentSubAlertSheet(on viewController: UIViewController, completion: @escaping (String) -> Void) {
     if !isFeedbackSheetShown {
         if !Purchase_flag {
             if UIDevice.current.isiPhone {

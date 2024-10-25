@@ -111,6 +111,9 @@ class SubAllPlanVC: UIViewController {
     public var arrFeature: [FeatureModel] = []
     public var arrReview: [ReviewModel] = []
     public var customizationSubRatingData: UICustomizationSubRatingData?
+    public var enableRatingAutoScroll = false
+    public var isRatingScrollEnable = true
+    public var isPresentSubAlertSheet = true
     
     //MARK: -
     override var prefersStatusBarHidden: Bool {
@@ -276,7 +279,13 @@ class SubAllPlanVC: UIViewController {
                 self.completionMorePlan!(.close)
             })
         } else {
-            presentSubAlertSheet(on: self) { [self] _ in
+            if isPresentSubAlertSheet {
+                presentSubAlertSheet(on: self) { [self] _ in
+                    self.dismiss(animated: true, completion: {
+                        self.completionMorePlan!(.close)
+                    })
+                }
+            } else {
                 self.dismiss(animated: true, completion: {
                     self.completionMorePlan!(.close)
                 })
@@ -735,7 +744,12 @@ extension SubAllPlanVC : UICollectionViewDelegate, UICollectionViewDataSource, U
     }
     
     func startTimer() {
-        _ =  Timer.scheduledTimer(timeInterval: 5.0, target: self, selector: #selector(scrollToNextCell), userInfo: nil, repeats: true)
+        if enableRatingAutoScroll && isRatingScrollEnable {
+            _ =  Timer.scheduledTimer(timeInterval: 5.0, target: self, selector: #selector(scrollToNextCell), userInfo: nil, repeats: true)
+        } else {
+            self.collViewReview.isUserInteractionEnabled = isRatingScrollEnable
+            self.pageControl.isHidden = !isRatingScrollEnable
+        }
     }
     
     func updatePageControl() {

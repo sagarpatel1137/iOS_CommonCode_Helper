@@ -96,7 +96,8 @@ class SubTimelineVC: UIViewController {
     public var subsciptionContinueBtnTextIndex = 0
     public var customizationSubTimelineTheme = UICustomizationSubTimelineTheme()
     public var customizationSubRatingData: UICustomizationSubRatingData?
-
+    public var isPresentSubAlertSheet = true
+    
     //MARK: -
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -246,7 +247,13 @@ class SubTimelineVC: UIViewController {
     
     //MARK: -
     @IBAction func btnCloseAction(_ sender: UIButton) {
-        presentSubAlertSheet(on: self) { _ in
+        if isPresentSubAlertSheet {
+            presentSubAlertSheet(on: self) { _ in
+                self.dismiss(animated: true, completion: {
+                    self.completionTimeline?(.close)
+                })
+            }
+        } else {
             self.dismiss(animated: true, completion: {
                 self.completionTimeline?(.close)
             })

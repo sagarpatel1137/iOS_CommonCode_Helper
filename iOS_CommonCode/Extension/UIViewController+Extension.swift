@@ -125,6 +125,7 @@ extension UIViewController
         arrFeature: [FeatureModel],
         arrReview: [ReviewModel],
         subsciptionContinueBtnTextIndex: Int,
+        isPresentSubAlertSheet: Bool = true,
         customizationSubTimelineTheme: UICustomizationSubTimelineTheme? = nil,
         customizationSubRatingData: UICustomizationSubRatingData?,
         completionTimeline: @escaping (SubCloseCompletionBlock) -> Void
@@ -134,6 +135,7 @@ extension UIViewController
         subTimelineVC.arrFeature = arrFeature
         subTimelineVC.arrReview = arrReview
         subTimelineVC.subsciptionContinueBtnTextIndex = subsciptionContinueBtnTextIndex
+        subTimelineVC.isPresentSubAlertSheet = isPresentSubAlertSheet
         subTimelineVC.customizationSubTimelineTheme = customizationSubTimelineTheme ?? UICustomizationSubTimelineTheme()
         subTimelineVC.customizationSubRatingData = customizationSubRatingData
         subTimelineVC.completionTimeline = { result in
@@ -146,12 +148,14 @@ extension UIViewController
     
     public func openSubMorePlanVC(
         isFromTimeline: Bool,
+        isPresentSubAlertSheet: Bool = true,
         customizationSubMorePlan: UICustomizationSubMorePlan?,
         customizationSubRatingData: UICustomizationSubRatingData?,
         completionMorePlan: @escaping (SubCloseCompletionBlock) -> Void
     ) {
         let subAllPlanVC = SubMorePlanVC()
         subAllPlanVC.isFromTimeline = isFromTimeline
+        subAllPlanVC.isPresentSubAlertSheet = isPresentSubAlertSheet
         subAllPlanVC.customizationSubMorePlan = customizationSubMorePlan
         subAllPlanVC.customizationSubRatingData = customizationSubRatingData
         subAllPlanVC.completionMorePlan = { result in
@@ -168,6 +172,9 @@ extension UIViewController
         arrReview: [ReviewModel],
         subsciptionContinueBtnTextIndex: Int,
         customizationSubRatingData: UICustomizationSubRatingData?,
+        enableRatingAutoScroll: Bool = true,
+        isRatingScrollEnable: Bool = true,
+        isPresentSubAlertSheet: Bool = true,
         completionMorePlan: @escaping (SubCloseCompletionBlock) -> Void
     ) {
         let subAllPlanVC = SubAllPlanVC()
@@ -176,6 +183,9 @@ extension UIViewController
         subAllPlanVC.arrReview = arrReview
         subAllPlanVC.subsciptionContinueBtnTextIndex = subsciptionContinueBtnTextIndex
         subAllPlanVC.customizationSubRatingData = customizationSubRatingData
+        subAllPlanVC.enableRatingAutoScroll = enableRatingAutoScroll
+        subAllPlanVC.isRatingScrollEnable = isRatingScrollEnable
+        subAllPlanVC.isPresentSubAlertSheet = isPresentSubAlertSheet
         subAllPlanVC.completionMorePlan = { result in
             completionMorePlan(result)
         }
