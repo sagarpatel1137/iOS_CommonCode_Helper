@@ -64,7 +64,7 @@ public class GoogleAd_Manager : NSObject {
     
     //Native Ad
     public var native_Ad : GADNativeAd!
-    public var nativeAdColors : NativeAdColors = NativeAdColors(bgColor: "FFFFFF", themeColor: "CDCDCD", bodyColor: "787878", btnTitleColor: "000000")
+    public var nativeAdColors : NativeAdColors = NativeAdColors(bgColor: "FFFFFF", themeColor: "CDCDCD", headlineColor: "000000", bodyColor: "787878", btnTitleColor: "000000")
     private var nativeAd_Loader: GADAdLoader!
     private var isLoadedNativeAd = false
     private var isRequeSendForLoad_NativeAd = false
@@ -873,7 +873,7 @@ extension GADNativeAdView{
         if let colors = adColor {
             DispatchQueue.main.async {
                 self.backgroundColor = hexStringToUIColor(hex: colors.background)
-                (self.headlineView as? UILabel)?.textColor = hexStringToUIColor(hex: colors.theme)
+                (self.headlineView as? UILabel)?.textColor = hexStringToUIColor(hex: colors.headline)
                 (self.bodyView as? UILabel)?.textColor = hexStringToUIColor(hex: colors.body)
                 (self.storeView as? UILabel)?.textColor = hexStringToUIColor(hex: colors.body)
                 (self.priceView as? UILabel)?.textColor = hexStringToUIColor(hex: colors.body)
@@ -921,7 +921,7 @@ extension GADNativeAdView{
         
         DispatchQueue.main.async {
             self.backgroundColor = hexStringToUIColor(hex: adColor.background)
-            (self.headlineView as? UILabel)?.textColor = hexStringToUIColor(hex: adColor.theme)
+            (self.headlineView as? UILabel)?.textColor = hexStringToUIColor(hex: adColor.headline)
             (self.bodyView as? UILabel)?.textColor = hexStringToUIColor(hex: adColor.body)
             (self.storeView as? UILabel)?.textColor = hexStringToUIColor(hex: adColor.body)
             (self.priceView as? UILabel)?.textColor = hexStringToUIColor(hex: adColor.body)

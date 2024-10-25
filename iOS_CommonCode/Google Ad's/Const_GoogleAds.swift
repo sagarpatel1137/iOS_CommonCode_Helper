@@ -27,13 +27,19 @@ public struct NativeAdColors {
     
     public var background : String
     public var theme : String
+    public var headline : String
     public var body : String
     public var btnTitle : String
     
-    public init(bgColor: String = GoogleAd_Manager.shared.nativeAdColors.background, themeColor: String = GoogleAd_Manager.shared.nativeAdColors.theme, bodyColor: String = GoogleAd_Manager.shared.nativeAdColors.body, btnTitleColor: String = GoogleAd_Manager.shared.nativeAdColors.btnTitle) {
+    public init(bgColor: String = GoogleAd_Manager.shared.nativeAdColors.background,
+                themeColor: String = GoogleAd_Manager.shared.nativeAdColors.theme,
+                headlineColor: String = GoogleAd_Manager.shared.nativeAdColors.headline,
+                bodyColor: String = GoogleAd_Manager.shared.nativeAdColors.body,
+                btnTitleColor: String = GoogleAd_Manager.shared.nativeAdColors.btnTitle) {
         
         self.background = bgColor
         self.theme = themeColor
+        self.headline = headlineColor
         self.body = bodyColor
         self.btnTitle = btnTitleColor
     }
