@@ -45,7 +45,7 @@ struct PlanDetails {
 }
 
 //MARK: -
-class SubMorePlanVC: UIViewController {
+public class SubMorePlanVC: UIViewController {
     
     static let identifier = "SubMorePlanVC"
     
@@ -55,6 +55,7 @@ class SubMorePlanVC: UIViewController {
     @IBOutlet weak var lblFreeTrial: MarqueeLabel!
     @IBOutlet var imgListFeatures: [UIImageView]!
     @IBOutlet var lblListFeatures: [MarqueeLabel]!
+    @IBOutlet var imgListFeatures_BG: [UIImageView]!
     @IBOutlet weak var collViewFeature: UICollectionView!
     @IBOutlet weak var viewAnimationContainer: UIView!
     @IBOutlet weak var viewSubscribe: UIView!
@@ -122,7 +123,7 @@ class SubMorePlanVC: UIViewController {
     }
     
     //MARK: -
-    override func viewDidLoad() {
+    public override func viewDidLoad() {
         super.viewDidLoad()
         
         AddFirebaseEvent(eventName: EventsValues.SubMoreShow)
@@ -227,6 +228,13 @@ class SubMorePlanVC: UIViewController {
         lblPayNothingNow.addGestureRecognizer(tapGesture)
         
         lblTitle.text = "Unlock All Features".localized()
+        
+        self.imgListFeatures_BG[0].image = UIImage(named: "ic_ads_Bg")
+        self.imgListFeatures_BG[1].image = UIImage(named: "ic_subblack_cloud_bg")
+        self.imgListFeatures_BG[2].image = UIImage(named: "ic_subblack_distance_bg")
+        self.imgListFeatures_BG[3].image = UIImage(named: "ic_subblack_gps_camera_bg")
+        self.imgListFeatures_BG[4].image = UIImage(named: "ic_subblack_noads_bg")
+        self.imgListFeatures_BG[5].image = UIImage(named: "ic_subblack_route_bg")
         
         for (i, lbl) in lblListFeatures.enumerated() {
             lbl.text = self.customizationSubMorePlan?.arrStrListFeatures[i]
@@ -816,11 +824,11 @@ extension SubMorePlanVC {
 
 //MARK: - UICollectionView
 extension SubMorePlanVC : UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    public func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         self.arrReview.count
     }
     
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+    public func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: SubRatingCell.identifier, for: indexPath) as? SubRatingCell else { return UICollectionViewCell() }
         
         cell.semanticContentAttribute = .forceLeftToRight
@@ -848,7 +856,7 @@ extension SubMorePlanVC : UICollectionViewDelegate, UICollectionViewDataSource, 
         return cell
     }
     
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+    public func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: collectionView.bounds.width, height: collectionView.bounds.height)
     }
 }

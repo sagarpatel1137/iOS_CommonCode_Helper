@@ -130,6 +130,17 @@ extension GoogleAd_Manager
     public func funGetAdaptiveBannerHeight() -> CGFloat {
         return GADCurrentOrientationAnchoredAdaptiveBannerAdSizeWithWidth(UIScreen.main.bounds.width).size.height
     }
+    
+    public func funIsRewardedAdAvailable(completion: @escaping (()->())) {
+        if rewardedAd != nil {
+            completion()
+        } else {
+            load_RewardedAd()
+            rewardedAd_LoadDone = {
+                completion()
+            }
+        }
+    }
 }
 
 //MARK: - Ad Show

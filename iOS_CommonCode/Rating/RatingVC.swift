@@ -17,7 +17,7 @@ public enum RatingResponse {
     case MailFailed
 }
 
-class RatingVC: UIViewController {
+public class RatingVC: UIViewController {
 
     @IBOutlet weak var viewRate: UIView!
     @IBOutlet weak var lblTitle: UILabel!
@@ -31,7 +31,7 @@ class RatingVC: UIViewController {
     public var completion: ((RatingResponse)->())?
     
     //MARK: -
-    override func viewDidLoad() {
+    public override func viewDidLoad() {
         super.viewDidLoad()
         AddFirebaseEvent(eventName: .RatingShow)
         self.initalViewDidLoad()
@@ -100,7 +100,7 @@ extension RatingVC: MFMailComposeViewControllerDelegate
         return defaultUrl
     }
     
-    internal func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
+    public func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
         controller.dismiss(animated: true)
         self.dismiss(animated: true, completion: {
             self.completion?(RatingResponse.MailFailed)

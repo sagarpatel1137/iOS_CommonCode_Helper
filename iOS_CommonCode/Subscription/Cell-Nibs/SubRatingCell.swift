@@ -26,7 +26,7 @@ public struct UICustomizationSubRatingData {
     }
 }
 
-class SubRatingCell: UICollectionViewCell {
+public class SubRatingCell: UICollectionViewCell {
     
     //MARK: - IBOutlet(s).
     @IBOutlet weak var mainContentView: UIView!
@@ -59,13 +59,13 @@ class SubRatingCell: UICollectionViewCell {
         }
     }
     
-    override func awakeFromNib() {
+    public override func awakeFromNib() {
         super.awakeFromNib()
         setupUI()
         updateUI()
     }
     
-    override func layoutSubviews() {
+    public override func layoutSubviews() {
         super.layoutSubviews()
         layoutIfNeeded()
         setupCorners()

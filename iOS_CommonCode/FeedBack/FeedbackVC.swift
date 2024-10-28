@@ -61,7 +61,7 @@ public struct UICustomizationFeedback {
     }
 }
 
-class FeedbackVC: UIViewController {
+public class FeedbackVC: UIViewController {
     
     // MARK: - Outlet
     @IBOutlet weak var viewNavBar: UIView!
@@ -84,7 +84,7 @@ class FeedbackVC: UIViewController {
     
     public var customization = UICustomizationFeedback()
     
-    override func viewDidLoad() {
+    public override func viewDidLoad() {
         super.viewDidLoad()
         updateUI()
     }

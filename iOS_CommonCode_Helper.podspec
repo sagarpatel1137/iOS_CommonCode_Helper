@@ -22,7 +22,8 @@ spec.source_files      = "iOS_CommonCode/**/*.swift"
 spec.resources = [
     "iOS_CommonCode/**/*.xib",
     "iOS_CommonCode/Resources/Json/*.json",
-    "iOS_CommonCode/Resources/Font/*.ttf"
+    "iOS_CommonCode/Resources/Font/*.ttf",
+    "iOS_CommonCode/Resources/Localise/*.strings"
 ]
 
 spec.resource_bundle = {'iOS_CommonCode' => ['iOS_CommonCode/Resources/Assets/*.xcassets']}

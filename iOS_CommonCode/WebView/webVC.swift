@@ -23,7 +23,7 @@ public struct UICustomizationWebView {
     }
 }
 
-open class webVC: UIViewController {
+public class webVC: UIViewController {
     
     // MARK: - Outlet
     @IBOutlet weak var viewNavBar: UIView!
@@ -40,16 +40,16 @@ open class webVC: UIViewController {
     private let reachabilityManager = NetworkReachabilityManager()
 
     // MARK: - Status Bar Settings
-    open override var prefersStatusBarHidden: Bool {
+    public override var prefersStatusBarHidden: Bool {
         return true
     }
     
-    open override var preferredStatusBarStyle: UIStatusBarStyle {
+    public override var preferredStatusBarStyle: UIStatusBarStyle {
         return .darkContent
     }
     
     // MARK: - View Lifecycle
-    open override func viewDidLoad() {
+    public override func viewDidLoad() {
         super.viewDidLoad()
         
         updateUI()

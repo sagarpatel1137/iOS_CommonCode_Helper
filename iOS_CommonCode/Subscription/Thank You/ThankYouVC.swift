@@ -36,7 +36,7 @@ public struct UICustomizationSubThankYouData {
     }
 }
 
-class ThankYouVC: UIViewController {
+public class ThankYouVC: UIViewController {
     
     @IBOutlet var lblTitle: UILabel!
     @IBOutlet var lblSubTitle: UILabel!
@@ -46,7 +46,7 @@ class ThankYouVC: UIViewController {
     public var customizationSubThankYouTheme = UICustomizationSubThankYouTheme()
     public var customizationSubThankYouData = UICustomizationSubThankYouData()
     
-    override func viewDidLoad() {
+    public override func viewDidLoad() {
         super.viewDidLoad()
         
         AddFirebaseEvent(eventName: .SubThankYou)

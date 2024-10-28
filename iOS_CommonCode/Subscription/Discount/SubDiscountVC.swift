@@ -17,16 +17,18 @@ public struct UICustomizationSubDiscountTheme {
     public var popupImageTopBG: UIImage?
     public var subPopupImageBG: UIImage?
     public var imgButtonTryNow: UIImage?
+    public var imgBtnClose: UIImage?
     
-    public init(popupImageBG: UIImage? = nil, popupImageTopBG: UIImage? = nil, subPopupImageBG: UIImage? = nil, imgButtonTryNow: UIImage? = nil) {
+    public init(popupImageBG: UIImage? = nil, popupImageTopBG: UIImage? = nil, subPopupImageBG: UIImage? = nil, imgButtonTryNow: UIImage? = nil, imgBtnClose: UIImage? = nil) {
         self.popupImageBG = popupImageBG ?? UIImage(named: "ic_sub_popup_bg")
         self.popupImageTopBG = popupImageTopBG ?? UIImage(named: "ic_sub_popup_top")
         self.subPopupImageBG = subPopupImageBG ?? UIImage(named: "ic_sub_popup_offer_bg")
         self.imgButtonTryNow = imgButtonTryNow ?? UIImage(named: "ic_sub_popup_btn")
+        self.imgBtnClose = imgBtnClose ?? UIImage(named: "ic_sub_popup_close")
     }
 }
 
-class SubDiscountVC: UIViewController {
+public class SubDiscountVC: UIViewController {
 
     @IBOutlet weak var imgPopupImage: UIImageView!
     @IBOutlet weak var imgPopupImageTop: UIImageView!
@@ -51,7 +53,7 @@ class SubDiscountVC: UIViewController {
     var completionDiscount: ((SubCloseCompletionBlock)->())?
    
     //MARK: -
-    override func viewDidLoad() {
+    public override func viewDidLoad() {
         super.viewDidLoad()
         
         AddFirebaseEvent(eventName: EventsValues.SubDiscountShow)

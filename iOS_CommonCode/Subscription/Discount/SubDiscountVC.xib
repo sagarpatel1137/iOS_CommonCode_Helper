@@ -56,7 +56,7 @@
                             </connections>
                         </button>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4ih-Jx-Vn7" userLabel="ViewMiddle">
-                            <rect key="frame" x="22" y="59.5" width="221" height="248.5"/>
+                            <rect key="frame" x="22" y="58.5" width="221" height="248.5"/>
                             <subviews>
                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_sub_popup_offer_bg" translatesAutoresizingMaskIntoConstraints="NO" id="Dd5-IP-6Iy" userLabel="Image ViewBg">
                                     <rect key="frame" x="0.0" y="0.0" width="221" height="248.5"/>
@@ -129,23 +129,23 @@ Specially For You!</string>
                             </constraints>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ezO-A0-IpK" userLabel="ViewTry">
-                            <rect key="frame" x="22" y="323" width="221" height="42"/>
+                            <rect key="frame" x="22" y="322" width="221" height="43"/>
                             <subviews>
                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_sub_popup_btn" translatesAutoresizingMaskIntoConstraints="NO" id="ceK-kB-O15">
-                                    <rect key="frame" x="0.0" y="0.0" width="221" height="42"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="221" height="43"/>
                                 </imageView>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hkq-d3-5ia" customClass="LottieAnimationView" customModule="Lottie">
-                                    <rect key="frame" x="0.0" y="0.0" width="221" height="42"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="221" height="43"/>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </view>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TRY NOW" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bIZ-U9-WPz" customClass="MarqueeLabel" customModule="MarqueeLabel">
-                                    <rect key="frame" x="5" y="5" width="211" height="32"/>
+                                    <rect key="frame" x="5" y="5" width="211" height="33"/>
                                     <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="16"/>
                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nI8-4c-dg2">
-                                    <rect key="frame" x="0.0" y="0.0" width="221" height="42"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="221" height="43"/>
                                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                     <connections>
                                         <action selector="btnTryClick:" destination="-1" eventType="touchUpInside" id="HJy-oD-ykg"/>
@@ -169,7 +169,7 @@ Specially For You!</string>
                                 <constraint firstItem="ceK-kB-O15" firstAttribute="top" secondItem="ezO-A0-IpK" secondAttribute="top" id="Ycf-BS-1gF"/>
                                 <constraint firstAttribute="bottom" secondItem="bIZ-U9-WPz" secondAttribute="bottom" constant="5" id="bz0-Vt-fOe"/>
                                 <constraint firstItem="nI8-4c-dg2" firstAttribute="leading" secondItem="ezO-A0-IpK" secondAttribute="leading" id="v9h-9e-IV0"/>
-                                <constraint firstAttribute="width" secondItem="ezO-A0-IpK" secondAttribute="height" multiplier="222:42" id="wYx-IQ-dhI"/>
+                                <constraint firstAttribute="width" secondItem="ezO-A0-IpK" secondAttribute="height" multiplier="222:43" id="wYx-IQ-dhI"/>
                                 <constraint firstItem="nI8-4c-dg2" firstAttribute="top" secondItem="ezO-A0-IpK" secondAttribute="top" id="xJH-F6-zUu"/>
                             </constraints>
                             <userDefinedRuntimeAttributes>

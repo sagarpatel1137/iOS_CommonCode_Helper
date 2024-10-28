@@ -8,7 +8,7 @@
 import UIKit
 import MarqueeLabel
 
-class SubFeatureCell: UICollectionViewCell {
+public class SubFeatureCell: UICollectionViewCell {
 
     static let identifier = "SubFeatureCell"
     
@@ -17,7 +17,7 @@ class SubFeatureCell: UICollectionViewCell {
     @IBOutlet weak var lblName: MarqueeLabel!
     
     
-    override func awakeFromNib() {
+    public override func awakeFromNib() {
         super.awakeFromNib()
         
     }

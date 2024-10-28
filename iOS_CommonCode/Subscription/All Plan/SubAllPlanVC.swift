@@ -43,7 +43,7 @@ public struct FeatureModel {
     }
 }
 
-class SubAllPlanVC: UIViewController {
+public class SubAllPlanVC: UIViewController {
 
     //MARK: -
     @IBOutlet weak var lblTitle: MarqueeLabel!
@@ -116,16 +116,16 @@ class SubAllPlanVC: UIViewController {
     public var isPresentSubAlertSheet = true
     
     //MARK: -
-    override var prefersStatusBarHidden: Bool {
+    public override var prefersStatusBarHidden: Bool {
         return true
     }
     
-    override var preferredStatusBarStyle: UIStatusBarStyle {
+    public override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
     }
     
     //MARK: -
-    override func viewDidLoad() {
+    public override func viewDidLoad() {
         super.viewDidLoad()
         
         AddFirebaseEvent(eventName: EventsValues.SubMoreShow)
@@ -639,7 +639,7 @@ extension SubAllPlanVC
 //MARK: -
 extension SubAllPlanVC : UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout
 {
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    public func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
         if collectionView.tag == 100 {
             arrFeatureLoop.count
@@ -648,7 +648,7 @@ extension SubAllPlanVC : UICollectionViewDelegate, UICollectionViewDataSource, U
         }
     }
     
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+    public func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         if collectionView.tag == 100
         {
@@ -693,7 +693,7 @@ extension SubAllPlanVC : UICollectionViewDelegate, UICollectionViewDataSource, U
         }
     }
     
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+    public func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
         if collectionView.tag == 100 {
             return CGSize(width: collectionView.bounds.height, height: collectionView.bounds.height)
@@ -703,7 +703,7 @@ extension SubAllPlanVC : UICollectionViewDelegate, UICollectionViewDataSource, U
         }
     }
     
-    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+    public func scrollViewDidScroll(_ scrollView: UIScrollView) {
         
         if !isFromTimer {
             if let collectionView = scrollView as? UICollectionView {

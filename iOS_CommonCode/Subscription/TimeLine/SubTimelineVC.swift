@@ -36,7 +36,7 @@ public struct UICustomizationSubTimelineTheme {
     }
 }
 
-class SubTimelineVC: UIViewController {
+public class SubTimelineVC: UIViewController {
     
     //MARK: -
     @IBOutlet weak var imgTimelineRight: UIImageView!
@@ -82,7 +82,7 @@ class SubTimelineVC: UIViewController {
     @IBOutlet weak var viewLoader: UIActivityIndicatorView!
     @IBOutlet weak var viewMain_Bottom: NSLayoutConstraint!
     
-    override var prefersStatusBarHidden: Bool {
+    public override var prefersStatusBarHidden: Bool {
         return true
     }
     
@@ -99,7 +99,7 @@ class SubTimelineVC: UIViewController {
     public var isPresentSubAlertSheet = true
     
     //MARK: -
-    override func viewDidLoad() {
+    public override func viewDidLoad() {
         super.viewDidLoad()
         
         selected_Plan = SubscriptionConst.ActivePlans.one_Month
@@ -119,7 +119,7 @@ class SubTimelineVC: UIViewController {
         updateUI()
     }
     
-    override func viewWillAppear(_ animated: Bool) {
+    public override func viewWillAppear(_ animated: Bool) {
         self.viewJson.play()
     }
     
