@@ -112,3 +112,12 @@
 "Check your internet connection" = "检查您的互联网连接";
 "Error" = "错误";
 "Restore failed Or Nothing to Restore First Purchase." = "恢复失败或无法恢复首次购买。";
+
+// New Added
+"Something went wrong!" = "出了问题！";
+"Purchase" = "购买";
+"Trending" = "流行趋势";
+"Save" = "节省";
+"Thank You For Subscription" = "感谢您的订阅";
+"Now you can enjoy the service!" = "现在您就可以享受服务了！";
+"Get Started" = "开始使用";

@@ -23,11 +23,12 @@ spec.resources = [
     "iOS_CommonCode/**/*.xib",
     "iOS_CommonCode/Resources/Json/*.json",
     "iOS_CommonCode/Resources/Font/*.ttf",
-    "iOS_CommonCode/Resources/Localise/*.strings"
+    "iOS_CommonCode/Resources/Localise/*.strings",
+    "iOS_CommonCode/Resources/Assets/Media.xcassets"
 ]
-
-spec.resource_bundle = {'iOS_CommonCode' => ['iOS_CommonCode/Resources/Assets/*.xcassets']}
-
+#spec.resource_bundles = {
+#    'MediaAssets' => ['iOS_CommonCode/Resources/Assets/Media.xcassets']
+#}
 spec.pod_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64'}
 spec.user_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64'}
 

@@ -1,6 +1,7 @@
 {
-  "colors" : [
+  "images" : [
     {
+      "filename" : "Weekly.svg",
       "idiom" : "universal"
     }
   ],

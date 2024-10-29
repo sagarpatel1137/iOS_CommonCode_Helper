@@ -11,6 +11,11 @@ import StoreKit
 import RevenueCat
 import MarqueeLabel
 
+public enum ViewAllPlanType {
+    case allPlan
+    case morePlan
+}
+
 //MARK: Cusmization
 public struct UICustomizationSubTimelineTheme {
     public var themeColor: UIColor?
@@ -82,10 +87,6 @@ public class SubTimelineVC: UIViewController {
     @IBOutlet weak var viewLoader: UIActivityIndicatorView!
     @IBOutlet weak var viewMain_Bottom: NSLayoutConstraint!
     
-    public override var prefersStatusBarHidden: Bool {
-        return true
-    }
-    
     private var selected_Plan : SubscriptionConst.PlanInfo!
     var completionTimeline: ((SubCloseCompletionBlock)->())?
     
@@ -94,9 +95,18 @@ public class SubTimelineVC: UIViewController {
     public var arrFeature: [FeatureModel] = []
     public var arrReview: [ReviewModel] = []
     public var subsciptionContinueBtnTextIndex = 0
+    public var viewAllPlanType: ViewAllPlanType? = .morePlan
     public var customizationSubTimelineTheme = UICustomizationSubTimelineTheme()
     public var customizationSubRatingData: UICustomizationSubRatingData?
+    public var customizationSubMorePlan: UICustomizationSubMorePlan?
+    public var enableRatingAutoScroll = false
+    public var isRatingScrollEnable = true
     public var isPresentSubAlertSheet = true
+    public var lifetimeDiscountVal = 80
+    
+    public override var prefersStatusBarHidden: Bool {
+        return true
+    }
     
     //MARK: -
     public override func viewDidLoad() {
@@ -120,6 +130,8 @@ public class SubTimelineVC: UIViewController {
     }
     
     public override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.setNeedsStatusBarAppearanceUpdate()
         self.viewJson.play()
     }
     
@@ -245,6 +257,38 @@ public class SubTimelineVC: UIViewController {
         }
     }
     
+    private func openSubAllPlanVC() {
+        
+        self.openSubAllPlanVC(isFromTimeline: true,
+                              arrFeature: self.arrFeature,
+                              arrReview: self.arrReview,
+                              subsciptionContinueBtnTextIndex: subsciptionContinueBtnTextIndex,
+                              customizationSubRatingData: customizationSubRatingData,
+                              enableRatingAutoScroll: enableRatingAutoScroll,
+                              isRatingScrollEnable: isRatingScrollEnable,
+                              isPresentSubAlertSheet: isPresentSubAlertSheet,
+                              lifetimeDiscountVal: lifetimeDiscountVal) { result in
+            if result == .purchaseSuccess || result == .restoreSuccess {
+                self.dismiss(animated: true, completion: {
+                    self.completionTimeline!(result)
+                })
+            }
+        }
+    }
+    
+    private func openSubMorePlanVC() {
+        self.openSubMorePlanVC(isFromTimeline: true,
+                               isPresentSubAlertSheet: isPresentSubAlertSheet,
+                               customizationSubMorePlan: customizationSubMorePlan,
+                               customizationSubRatingData: customizationSubRatingData) { result in
+            if result == .purchaseSuccess || result == .restoreSuccess {
+                self.dismiss(animated: true, completion: {
+                    self.completionTimeline!(result)
+                })
+            }
+        }
+    }
+    
     //MARK: -
     @IBAction func btnCloseAction(_ sender: UIButton) {
         if isPresentSubAlertSheet {
@@ -261,16 +305,14 @@ public class SubTimelineVC: UIViewController {
     }
     
     @IBAction func btnMorePlansAction(_ sender: Any) {
-        self.openSubAllPlanVC(isFromTimeline: true,
-                              arrFeature: self.arrFeature,
-                              arrReview: self.arrReview,
-                              subsciptionContinueBtnTextIndex: subsciptionContinueBtnTextIndex,
-                              customizationSubRatingData: customizationSubRatingData) { result in
-            if result == .purchaseSuccess || result == .restoreSuccess {
-                self.dismiss(animated: true, completion: {
-                    self.completionTimeline!(result)
-                })
+        if let viewAllPlanType = self.viewAllPlanType {
+            if viewAllPlanType == .allPlan {
+                self.openSubAllPlanVC()
+            } else if viewAllPlanType == .morePlan {
+                self.openSubMorePlanVC()
             }
+        } else {
+            self.openSubAllPlanVC()
         }
     }
     

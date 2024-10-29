@@ -113,3 +113,11 @@
 "Error" = "Ошибка";
 "Restore failed Or Nothing to Restore First Purchase." = "Восстановление не удалось или ничего не нужно для восстановления первой покупки.";
 
+// New Added
+"Something went wrong!" = "Что-то пошло не так!";
+"Purchase" = "Покупка";
+"Trending" = "Тенденции";
+"Save" = "Сохранять";
+"Thank You For Subscription" = "Спасибо за подписку";
+"Now you can enjoy the service!" = "Теперь вы можете наслаждаться сервисом!";
+"Get Started" = "Начать";

@@ -114,14 +114,11 @@ public class SubAllPlanVC: UIViewController {
     public var enableRatingAutoScroll = false
     public var isRatingScrollEnable = true
     public var isPresentSubAlertSheet = true
+    public var lifetimeDiscountVal = 80
     
     //MARK: -
     public override var prefersStatusBarHidden: Bool {
         return true
-    }
-    
-    public override var preferredStatusBarStyle: UIStatusBarStyle {
-        return .lightContent
     }
     
     //MARK: -
@@ -140,6 +137,11 @@ public class SubAllPlanVC: UIViewController {
         funCheckAndGetSubscriptionPrice()
     }
 
+    public override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.setNeedsStatusBarAppearanceUpdate()
+    }
+    
     deinit {
         NotificationCenter.default.removeObserver(self)
     }
@@ -413,7 +415,7 @@ extension SubAllPlanVC
     
     func countDisCount()
     {
-        arrLblPlanOff[0].text =  "80% \("OFF".localized())"
+        arrLblPlanOff[0].text =  "\(self.lifetimeDiscountVal)% \("OFF".localized())"
         
         let totalYearPrice = 12 * (SubscriptionConst.ActivePlans.one_Month.plan_Price)
         let yearActualPrice = SubscriptionConst.ActivePlans.one_Year.plan_Price

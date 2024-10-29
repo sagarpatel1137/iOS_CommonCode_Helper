@@ -113,3 +113,11 @@
 "Error" = "Erreur";
 "Restore failed Or Nothing to Restore First Purchase." = "La restauration a échoué ou rien à restaurer Premier achat.";
 
+// New Added
+"Something went wrong!" = "Quelque chose s'est mal passé !";
+"Purchase" = "Achat";
+"Trending" = "Tendance";
+"Save" = "Sauvegarder";
+"Thank You For Subscription" = "Merci pour votre abonnement";
+"Now you can enjoy the service!" = "Vous pouvez désormais profiter du service !";
+"Get Started" = "Commencer";

@@ -112,3 +112,12 @@
 "Check your internet connection" = "인터넷 연결을 확인하세요.";
 "Error" = "오류";
 "Restore failed Or Nothing to Restore First Purchase." = "복원에 실패했거나 첫 번째 구매를 복원할 항목이 없습니다.";
+
+// New Added
+"Something went wrong!" = "문제가 발생했습니다.";
+"Purchase" = "구입";
+"Trending" = "인기 급상승";
+"Save" = "구하다";
+"Thank You For Subscription" = "구독해주셔서 감사합니다";
+"Now you can enjoy the service!" = "이제 서비스를 즐겨보세요!";
+"Get Started" = "시작하기";

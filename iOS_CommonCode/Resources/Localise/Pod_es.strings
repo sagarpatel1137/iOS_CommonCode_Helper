@@ -112,3 +112,12 @@
 "Check your internet connection" = "Verifique su conexión a Internet";
 "Error" = "Error";
 "Restore failed Or Nothing to Restore First Purchase." = "La restauración falló o no se pudo restaurar la primera compra.";
+
+// New Added
+"Something went wrong!" = "¡Algo salió mal!";
+"Purchase" = "Compra";
+"Trending" = "Tendencia";
+"Save" = "Ahorrar";
+"Thank You For Subscription" = "Gracias por la suscripción";
+"Now you can enjoy the service!" = "¡Ahora puedes disfrutar del servicio!";
+"Get Started" = "Empezar";

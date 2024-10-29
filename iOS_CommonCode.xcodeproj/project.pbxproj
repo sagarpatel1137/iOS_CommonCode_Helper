@@ -41,6 +41,8 @@
 		813A0A322CBF800200B5892A /* SubRatingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 813A0A2F2CBF800200B5892A /* SubRatingCell.xib */; };
 		813A0A332CBF800200B5892A /* SubFeatureCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 813A0A2C2CBF800200B5892A /* SubFeatureCell.swift */; };
 		813A0A342CBF800200B5892A /* SubRatingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 813A0A2E2CBF800200B5892A /* SubRatingCell.swift */; };
+		814088392CCF9F4100F4BA1A /* BundleHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 814088382CCF9F4100F4BA1A /* BundleHelper.swift */; };
+		8140883C2CCFB71400F4BA1A /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8140883B2CCFB71400F4BA1A /* Media.xcassets */; };
 		8158006D2CBE197E00074F08 /* Toast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8158006C2CBE197E00074F08 /* Toast.swift */; };
 		815800722CBE21EB00074F08 /* SubTimelineVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8158006F2CBE21EB00074F08 /* SubTimelineVC.swift */; };
 		815800732CBE21EB00074F08 /* SubTimelineVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 815800702CBE21EB00074F08 /* SubTimelineVC.xib */; };
@@ -94,7 +96,6 @@
 		81B0F3432CB10DA80014E08A /* Pod_sub_discount_btn.json in Resources */ = {isa = PBXBuildFile; fileRef = 81B0F33D2CB10DA80014E08A /* Pod_sub_discount_btn.json */; };
 		81B0F3442CB10DA80014E08A /* Pod_sub_timeline_ipad.json in Resources */ = {isa = PBXBuildFile; fileRef = 81B0F33E2CB10DA80014E08A /* Pod_sub_timeline_ipad.json */; };
 		81B0F3452CB10DA80014E08A /* Pod_sub_timeline_iphone.json in Resources */ = {isa = PBXBuildFile; fileRef = 81B0F33F2CB10DA80014E08A /* Pod_sub_timeline_iphone.json */; };
-		81B0F3472CB10DB60014E08A /* Pod_Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 81B0F3462CB10DB60014E08A /* Pod_Assets.xcassets */; };
 		81BA8AF12C881BE100F8A3C5 /* Constant_Function.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81BA8AF02C881BE100F8A3C5 /* Constant_Function.swift */; };
 		81BA8B092C88376E00F8A3C5 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81BA8B082C88376E00F8A3C5 /* UIView+Extension.swift */; };
 		81CAB5E82C6DD2640050F848 /* Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81CAB5E72C6DD2640050F848 /* Alamofire.swift */; };
@@ -163,6 +164,8 @@
 		813A0A2D2CBF800200B5892A /* SubFeatureCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SubFeatureCell.xib; sourceTree = "<group>"; };
 		813A0A2E2CBF800200B5892A /* SubRatingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubRatingCell.swift; sourceTree = "<group>"; };
 		813A0A2F2CBF800200B5892A /* SubRatingCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SubRatingCell.xib; sourceTree = "<group>"; };
+		814088382CCF9F4100F4BA1A /* BundleHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BundleHelper.swift; sourceTree = "<group>"; };
+		8140883B2CCFB71400F4BA1A /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
 		8158006C2CBE197E00074F08 /* Toast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Toast.swift; sourceTree = "<group>"; };
 		8158006F2CBE21EB00074F08 /* SubTimelineVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubTimelineVC.swift; sourceTree = "<group>"; };
 		815800702CBE21EB00074F08 /* SubTimelineVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SubTimelineVC.xib; sourceTree = "<group>"; };
@@ -213,7 +216,6 @@
 		81B0F33D2CB10DA80014E08A /* Pod_sub_discount_btn.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Pod_sub_discount_btn.json; sourceTree = "<group>"; };
 		81B0F33E2CB10DA80014E08A /* Pod_sub_timeline_ipad.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Pod_sub_timeline_ipad.json; sourceTree = "<group>"; };
 		81B0F33F2CB10DA80014E08A /* Pod_sub_timeline_iphone.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Pod_sub_timeline_iphone.json; sourceTree = "<group>"; };
-		81B0F3462CB10DB60014E08A /* Pod_Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Pod_Assets.xcassets; sourceTree = "<group>"; };
 		81BA8AF02C881BE100F8A3C5 /* Constant_Function.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant_Function.swift; sourceTree = "<group>"; };
 		81BA8B082C88376E00F8A3C5 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		81BD39F82CC7AB0000CB598A /* iOS-CommonCode-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "iOS-CommonCode-Info.plist"; sourceTree = SOURCE_ROOT; };
@@ -256,6 +258,7 @@
 			children = (
 				811B9BE62CC619530031DE5A /* SubMorePlanVC.swift */,
 				811B9BE72CC619530031DE5A /* SubMorePlanVC.xib */,
+				814088382CCF9F4100F4BA1A /* BundleHelper.swift */,
 			);
 			path = SubMorePlanVC;
 			sourceTree = "<group>";
@@ -263,7 +266,7 @@
 		811ED1362CC7CB8600225C84 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
-				81B0F3462CB10DB60014E08A /* Pod_Assets.xcassets */,
+				8140883B2CCFB71400F4BA1A /* Media.xcassets */,
 			);
 			path = Assets;
 			sourceTree = "<group>";
@@ -731,6 +734,7 @@
 				81049FB42CC8DC5100602057 /* Avenir Black.ttf in Resources */,
 				81049FB52CC8DC5100602057 /* WorkSans-Medium.ttf in Resources */,
 				81049FB62CC8DC5100602057 /* PlusJakartaSans-Regular.ttf in Resources */,
+				8140883C2CCFB71400F4BA1A /* Media.xcassets in Resources */,
 				81049FB72CC8DC5100602057 /* Avenir Heavy.ttf in Resources */,
 				81049FB82CC8DC5100602057 /* PlusJakartaSans-Bold.ttf in Resources */,
 				81049FB92CC8DC5100602057 /* PlusJakartaSans-SemiBold.ttf in Resources */,
@@ -742,7 +746,6 @@
 				81B0F3132CB0FFD50014E08A /* Pod_th.strings in Resources */,
 				81049FA32CC8DB3600602057 /* Pod_sub_iPad-Capsule.json in Resources */,
 				81049FA42CC8DB3600602057 /* Pod_sub_iPhone-Capsule.json in Resources */,
-				81B0F3472CB10DB60014E08A /* Pod_Assets.xcassets in Resources */,
 				81B0F30F2CB0FFD50014E08A /* Pod_fr.strings in Resources */,
 				81B0F3142CB0FFD50014E08A /* Pod_ru.strings in Resources */,
 				811B9BE92CC619530031DE5A /* SubMorePlanVC.xib in Resources */,
@@ -850,6 +853,7 @@
 				817D301B2C8AC31800AB455C /* ATTracking_Manager.swift in Sources */,
 				813A0A242CBF69E400B5892A /* ThankYouVC.swift in Sources */,
 				81B0F31E2CB105D70014E08A /* RatingVC.swift in Sources */,
+				814088392CCF9F4100F4BA1A /* BundleHelper.swift in Sources */,
 				81BA8B092C88376E00F8A3C5 /* UIView+Extension.swift in Sources */,
 				815800722CBE21EB00074F08 /* SubTimelineVC.swift in Sources */,
 				817D30332C8AC6C600AB455C /* UIWindow+Extension.swift in Sources */,
@@ -1008,6 +1012,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "iOS-CommonCode-Info.plist";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1042,6 +1047,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "iOS-CommonCode-Info.plist";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1051,6 +1057,7 @@
 				MARKETING_VERSION = 1.0;
 				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
 				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu17 gnu++20";
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.iOS-CommonCode";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;

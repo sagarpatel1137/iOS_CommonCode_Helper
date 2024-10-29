@@ -16,13 +16,15 @@ import StoreKit
 //MARK: Cusmization
 public struct UICustomizationSubMorePlan {
     public var arrImgListFeatures: [UIImage]
+    public var arrImgListFeatures_BG: [UIImage]
     public var arrStrListFeatures: [String]
     public var sixBoxDynamicPlan: [Int]
     public var sixBoxDynamicPlanSelectedIndex: Int
     public var subsciptionContinueBtnText: Int
     
-    public init(arrImgListFeatures: [UIImage], arrStrListFeatures: [String], sixBoxDynamicPlan: [Int], sixBoxDynamicPlanSelectedIndex: Int, subsciptionContinueBtnText: Int) {
+    public init(arrImgListFeatures: [UIImage], arrImgListFeatures_BG: [UIImage], arrStrListFeatures: [String], sixBoxDynamicPlan: [Int], sixBoxDynamicPlanSelectedIndex: Int, subsciptionContinueBtnText: Int) {
         self.arrImgListFeatures = arrImgListFeatures
+        self.arrImgListFeatures_BG = arrImgListFeatures_BG
         self.arrStrListFeatures = arrStrListFeatures
         self.sixBoxDynamicPlan = sixBoxDynamicPlan
         self.sixBoxDynamicPlanSelectedIndex = sixBoxDynamicPlanSelectedIndex
@@ -122,6 +124,10 @@ public class SubMorePlanVC: UIViewController {
         case nothingToRestore = "Restore failed Or Nothing to Restore."
     }
     
+    public override var prefersStatusBarHidden: Bool {
+        return true
+    }
+    
     //MARK: -
     public override func viewDidLoad() {
         super.viewDidLoad()
@@ -132,6 +138,11 @@ public class SubMorePlanVC: UIViewController {
         DispatchQueue.main.async {
             self.setupScreenPlans()
         }
+    }
+    
+    public override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.setNeedsStatusBarAppearanceUpdate()
     }
     
     private func setupScreenPlans() {
@@ -229,12 +240,9 @@ public class SubMorePlanVC: UIViewController {
         
         lblTitle.text = "Unlock All Features".localized()
         
-        self.imgListFeatures_BG[0].image = UIImage(named: "ic_ads_Bg")
-        self.imgListFeatures_BG[1].image = UIImage(named: "ic_subblack_cloud_bg")
-        self.imgListFeatures_BG[2].image = UIImage(named: "ic_subblack_distance_bg")
-        self.imgListFeatures_BG[3].image = UIImage(named: "ic_subblack_gps_camera_bg")
-        self.imgListFeatures_BG[4].image = UIImage(named: "ic_subblack_noads_bg")
-        self.imgListFeatures_BG[5].image = UIImage(named: "ic_subblack_route_bg")
+        for (i, lbl) in lblListFeatures.enumerated() {
+            lbl.text = self.customizationSubMorePlan?.arrStrListFeatures[i]
+        }
         
         for (i, lbl) in lblListFeatures.enumerated() {
             lbl.text = self.customizationSubMorePlan?.arrStrListFeatures[i]
@@ -242,6 +250,10 @@ public class SubMorePlanVC: UIViewController {
         
         for (i, img) in imgListFeatures.enumerated() {
             img.image = self.customizationSubMorePlan?.arrImgListFeatures[i]
+        }
+        
+        for (i, img) in imgListFeatures_BG.enumerated() {
+            img.image = self.customizationSubMorePlan?.arrImgListFeatures_BG[i]
         }
         
         lblSubscribe.text = RevenueCat_Manager.shared.updateContinueButtonTitle(self.customizationSubMorePlan?.subsciptionContinueBtnText ?? 0)

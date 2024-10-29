@@ -20,7 +20,7 @@ public struct UICustomizationSubThankYouTheme {
         self.btnGetStartedTextColor = btnGetStartedTextColor ?? .white
         self.btnGetStartedFromColor = btnGetStartedFromColor ?? hexStringToUIColor(hex: "00C6FB")
         self.btnGetStartedToColor = btnGetStartedToColor ?? hexStringToUIColor(hex: "005BEA")
-        self.imgPlaceholder = imgPlaceholder ?? UIImage(named: "ic_timeline_lock")
+        self.imgPlaceholder = imgPlaceholder ?? UIImage(named: "sub_thankyou_Bg")
     }
 }
 
@@ -46,6 +46,10 @@ public class ThankYouVC: UIViewController {
     public var customizationSubThankYouTheme = UICustomizationSubThankYouTheme()
     public var customizationSubThankYouData = UICustomizationSubThankYouData()
     
+    public override var prefersStatusBarHidden: Bool {
+        return true
+    }
+    
     public override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -55,6 +59,11 @@ public class ThankYouVC: UIViewController {
         setText()
         setFont()
         updateUI()
+    }
+    
+    public override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.setNeedsStatusBarAppearanceUpdate()
     }
     
     //MARK: -

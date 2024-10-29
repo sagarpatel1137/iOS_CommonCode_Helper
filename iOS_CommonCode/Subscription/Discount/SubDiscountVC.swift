@@ -90,6 +90,10 @@ public class SubDiscountVC: UIViewController {
         if let imgButtonTryNow = customizationSubDiscountTheme.imgButtonTryNow {
             self.imgButtonTryNow.image = imgButtonTryNow
         }
+        
+        if let imgBtnClose = customizationSubDiscountTheme.imgBtnClose {
+            self.btnClose.setImage(imgBtnClose, for: .normal)
+        }
     }
     
     private func setUpUI() {

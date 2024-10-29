@@ -121,27 +121,37 @@ extension UIViewController
     }
     
     public func openSubTimelineVC(
+        viewAllPlanType: ViewAllPlanType,
         featureList: [String],
         arrFeature: [FeatureModel],
         arrReview: [ReviewModel],
         subsciptionContinueBtnTextIndex: Int,
+        enableRatingAutoScroll: Bool = true,
+        isRatingScrollEnable: Bool = true,
         isPresentSubAlertSheet: Bool = true,
         customizationSubTimelineTheme: UICustomizationSubTimelineTheme? = nil,
+        customizationSubMorePlan: UICustomizationSubMorePlan? = nil,
         customizationSubRatingData: UICustomizationSubRatingData?,
+        lifetimeDiscountVal: Int = 80,
         completionTimeline: @escaping (SubCloseCompletionBlock) -> Void
     ) {
         let subTimelineVC = SubTimelineVC()
+        subTimelineVC.viewAllPlanType = viewAllPlanType
         subTimelineVC.featureList = featureList
         subTimelineVC.arrFeature = arrFeature
         subTimelineVC.arrReview = arrReview
         subTimelineVC.subsciptionContinueBtnTextIndex = subsciptionContinueBtnTextIndex
+        subTimelineVC.enableRatingAutoScroll = enableRatingAutoScroll
+        subTimelineVC.isRatingScrollEnable = isRatingScrollEnable
         subTimelineVC.isPresentSubAlertSheet = isPresentSubAlertSheet
         subTimelineVC.customizationSubTimelineTheme = customizationSubTimelineTheme ?? UICustomizationSubTimelineTheme()
         subTimelineVC.customizationSubRatingData = customizationSubRatingData
+        subTimelineVC.customizationSubMorePlan = customizationSubMorePlan
+        subTimelineVC.lifetimeDiscountVal = lifetimeDiscountVal
         subTimelineVC.completionTimeline = { result in
             completionTimeline(result)
         }
-        subTimelineVC.modalPresentationStyle = .overFullScreen
+        subTimelineVC.modalPresentationStyle = .fullScreen
         subTimelineVC.modalTransitionStyle = .crossDissolve
         self.present(subTimelineVC, animated: true, completion: nil)
     }
@@ -161,7 +171,7 @@ extension UIViewController
         subAllPlanVC.completionMorePlan = { result in
             completionMorePlan(result)
         }
-        subAllPlanVC.modalPresentationStyle = .overFullScreen
+        subAllPlanVC.modalPresentationStyle = .fullScreen
         subAllPlanVC.modalTransitionStyle = .crossDissolve
         self.present(subAllPlanVC, animated: true, completion: nil)
     }
@@ -175,6 +185,7 @@ extension UIViewController
         enableRatingAutoScroll: Bool = true,
         isRatingScrollEnable: Bool = true,
         isPresentSubAlertSheet: Bool = true,
+        lifetimeDiscountVal: Int = 80,
         completionMorePlan: @escaping (SubCloseCompletionBlock) -> Void
     ) {
         let subAllPlanVC = SubAllPlanVC()
@@ -186,10 +197,11 @@ extension UIViewController
         subAllPlanVC.enableRatingAutoScroll = enableRatingAutoScroll
         subAllPlanVC.isRatingScrollEnable = isRatingScrollEnable
         subAllPlanVC.isPresentSubAlertSheet = isPresentSubAlertSheet
+        subAllPlanVC.lifetimeDiscountVal = lifetimeDiscountVal
         subAllPlanVC.completionMorePlan = { result in
             completionMorePlan(result)
         }
-        subAllPlanVC.modalPresentationStyle = .overFullScreen
+        subAllPlanVC.modalPresentationStyle = .fullScreen
         subAllPlanVC.modalTransitionStyle = .crossDissolve
         self.present(subAllPlanVC, animated: true, completion: nil)
     }
@@ -215,7 +227,7 @@ extension UIViewController
         let thankYouVC = ThankYouVC()
         thankYouVC.customizationSubThankYouTheme = customizationSubThankYouTheme ?? UICustomizationSubThankYouTheme()
         thankYouVC.customizationSubThankYouData = customizationSubThankYouData ?? UICustomizationSubThankYouData()
-        thankYouVC.modalPresentationStyle = .overFullScreen
+        thankYouVC.modalPresentationStyle = .fullScreen
         thankYouVC.modalTransitionStyle = .crossDissolve
         self.present(thankYouVC, animated: true, completion: nil)
     }

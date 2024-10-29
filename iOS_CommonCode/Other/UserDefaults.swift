@@ -54,7 +54,7 @@ public var Pod_AppTermsAnsConditionURL : String {
     }
 }
 
-var Pod_FirebaseAppName : String {
+public var Pod_FirebaseAppName : String {
     set{
         UserDefaults.standard.set(newValue, forKey: "Pod_FirebaseAppName")
     }
@@ -66,7 +66,7 @@ var Pod_FirebaseAppName : String {
     }
 }
 
-var Pod_AppLaungauge_Code : String {
+public var Pod_AppLaungauge_Code : String {
     set{
         UserDefaults.standard.set(newValue, forKey: "Pod_AppLaungauge_Code")
     }
@@ -78,7 +78,7 @@ var Pod_AppLaungauge_Code : String {
     }
 }
 
-var isUserGivenRating : Bool {
+public var isUserGivenRating : Bool {
     set {
         UserDefaults.standard.setValue(newValue, forKey: "isUserGivenRating")
     }
@@ -90,7 +90,7 @@ var isUserGivenRating : Bool {
     }
 }
 
-var isFeedbackSheetShown: Bool {
+public var isFeedbackSheetShown: Bool {
     set{
         UserDefaults.standard.set(newValue, forKey: "isFeedbackSheetShown")
     }

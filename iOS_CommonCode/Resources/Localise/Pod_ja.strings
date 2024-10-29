@@ -113,3 +113,11 @@
 "Error" = "エラー";
 "Restore failed Or Nothing to Restore First Purchase." = "復元に失敗しました、または復元するものがありません 最初の購入。";
 
+// New Added
+"Something went wrong!" = "何か問題が発生しました!";
+"Purchase" = "購入";
+"Trending" = "トレンド";
+"Save" = "保存";
+"Thank You For Subscription" = "ご購読ありがとうございます";
+"Now you can enjoy the service!" = "これでサービスをお楽しみいただけます！";
+"Get Started" = "始めましょう";

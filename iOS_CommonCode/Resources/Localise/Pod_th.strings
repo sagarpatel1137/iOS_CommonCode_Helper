@@ -113,3 +113,11 @@
 "Error" = "ข้อผิดพลาด";
 "Restore failed Or Nothing to Restore First Purchase." = "กู้คืนล้มเหลวหรือไม่สามารถกู้คืนการซื้อครั้งแรกได้";
 
+// New Added
+"Something went wrong!" = "มีบางอย่างผิดพลาด!";
+"Purchase" = "ซื้อ";
+"Trending" = "กำลังมาแรง";
+"Save" = "บันทึก";
+"Thank You For Subscription" = "ขอบคุณสำหรับการสมัครสมาชิก";
+"Now you can enjoy the service!" = "ตอนนี้คุณสามารถเพลิดเพลินกับบริการได้แล้ว!";
+"Get Started" = "เริ่มต้นเลย";

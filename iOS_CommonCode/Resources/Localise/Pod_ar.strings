@@ -113,3 +113,11 @@
 "Error" = "خطأ";
 "Restore failed Or Nothing to Restore First Purchase." = "فشلت عملية الاستعادة أو لا يوجد شيء لاستعادته عند الشراء الأول.";
 
+// New Added
+"Something went wrong!" = "حدث خطأ ما!";
+"Purchase" = "شراء";
+"Trending" = "تتجه";
+"Save" = "يحفظ";
+"Thank You For Subscription" = "شكرا لك على الاشتراك";
+"Now you can enjoy the service!" = "الآن يمكنك الاستمتاع بالخدمة!";
+"Get Started" = "ابدأ";
