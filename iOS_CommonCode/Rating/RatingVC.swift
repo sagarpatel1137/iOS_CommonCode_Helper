@@ -29,11 +29,12 @@ public class RatingVC: UIViewController {
     public var mailSubject = ""
     public var mailBody = ""
     public var completion: ((RatingResponse)->())?
-    
+    public var isOpenFrom = ""
+
     //MARK: -
     public override func viewDidLoad() {
         super.viewDidLoad()
-        AddFirebaseEvent(eventName: .RatingShow)
+        AddFirebaseEvent(eventName: .RatingShow, parameters: ["from": self.isOpenFrom])
         self.initalViewDidLoad()
     }
     
@@ -49,7 +50,7 @@ public class RatingVC: UIViewController {
         self.dismiss(animated: true) {
             if let rateUs = URL(string: self.rateURL) {
                 self.completion?(RatingResponse.Awesome)
-                AddFirebaseEvent(eventName: .RatingAwesome)
+                AddFirebaseEvent(eventName: .RatingPositive, parameters: ["from": self.isOpenFrom])
                 isUserGivenRating = true
                 UIApplication.shared.open(rateUs, options: [:], completionHandler: nil)
             }
@@ -57,7 +58,7 @@ public class RatingVC: UIViewController {
     }
     
     @IBAction func btnImprovementClick(_ sender: Any) {
-        AddFirebaseEvent(eventName: .RatingImprovement)
+        AddFirebaseEvent(eventName: .RatingNegative, parameters: ["from": self.isOpenFrom])
         self.completion?(RatingResponse.NeedImprovement)
         isUserGivenRating = true
         funSendMail()
@@ -65,7 +66,7 @@ public class RatingVC: UIViewController {
     
     @IBAction func btnLaterClick(_ sender: Any) {
         self.dismiss(animated: true, completion: {
-            AddFirebaseEvent(eventName: .RatingLater)
+            AddFirebaseEvent(eventName: .RatingLater, parameters: ["from": self.isOpenFrom])
             self.completion?(RatingResponse.AskMeLater)
         })
     }

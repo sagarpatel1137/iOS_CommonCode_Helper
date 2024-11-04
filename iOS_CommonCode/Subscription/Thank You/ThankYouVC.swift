@@ -45,15 +45,29 @@ public class ThankYouVC: UIViewController {
     
     public var customizationSubThankYouTheme = UICustomizationSubThankYouTheme()
     public var customizationSubThankYouData = UICustomizationSubThankYouData()
-    
+    public var subCloseCompletionBlock:SubCloseCompletionBlock = .unknown
+    public var param: [String: String]?
+    public var isOpenFrom = ""
     public override var prefersStatusBarHidden: Bool {
         return true
     }
     
     public override func viewDidLoad() {
         super.viewDidLoad()
-        
-        AddFirebaseEvent(eventName: .SubThankYou)
+                
+        if self.subCloseCompletionBlock == .restoreSuccess {
+            AddFirebaseEvent(eventName: .SubThankYouShow, parameters: [
+                "from": self.isOpenFrom,
+                "sku" : "RESTORE",
+                "type" : "RESTORE"
+            ])
+        } else if self.subCloseCompletionBlock == .purchaseSuccess, let param = self.param {
+            AddFirebaseEvent(eventName: .SubThankYouShow, parameters: [
+                "from": self.isOpenFrom,
+                "sku" : param["sku"] ?? "",
+                "type" : param["type"] ?? ""
+            ])
+        }
         
         setUI()
         setText()

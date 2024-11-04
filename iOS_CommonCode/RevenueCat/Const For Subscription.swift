@@ -158,15 +158,15 @@ public struct SubscriptionConst
         public var plan_Free_Trail : PlanIntroductoryInfo = PlanIntroductoryInfo()
         public var plan_Promotional_Offer : PlanPromotionalOffer = PlanPromotionalOffer()
     }
-    public enum SubscriptionType {
-        case unknown
-        case week
-        case onemonth
-        case twomonth
-        case threemonth
-        case sixmonth
-        case year
-        case lifetime
+    public enum SubscriptionType : String {
+        case unknown = "Unknown"
+        case week = "Week"
+        case onemonth = "One Month"
+        case twomonth = "Two Month"
+        case threemonth = "Three Month"
+        case sixmonth = "Six Month"
+        case year = "Year"
+        case lifetime = "Lifetime"
     }
     
     //MARK: - Introductory

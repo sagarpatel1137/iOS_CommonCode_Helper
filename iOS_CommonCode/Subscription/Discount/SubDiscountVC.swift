@@ -50,13 +50,14 @@ public class SubDiscountVC: UIViewController {
     //MARK: -
     public var customizationSubDiscountTheme = UICustomizationSubDiscountTheme()
     private var selected_Plan : SubscriptionConst.PlanInfo!
-    var completionDiscount: ((SubCloseCompletionBlock)->())?
-   
+    var completionDiscount: ((SubCloseCompletionBlock, [String: String]?)->())?
+    public var isOpenFrom = ""
+
     //MARK: -
     public override func viewDidLoad() {
         super.viewDidLoad()
         
-        AddFirebaseEvent(eventName: EventsValues.SubDiscountShow)
+        AddFirebaseEvent(eventName: EventsValues.SubDiscountShow, parameters: ["from": self.isOpenFrom])
         
         AddNotification()
         
@@ -154,13 +155,17 @@ public class SubDiscountVC: UIViewController {
     //MARK: - Actions
     @IBAction func btnCloseAction(_ sender: Any) {
         self.dismiss(animated: true) {
-            self.completionDiscount!(.close)
+            self.completionDiscount!(.close, [:])
         }
     }
     
     @IBAction func btnTryClick(_ sender: Any) {
         if SubscriptionConst.ActivePlans.one_Month_Discount.plan_Id != ""  {
-            AddFirebaseEvent(eventName: EventsValues.SubDiscountClick)
+            AddFirebaseEvent(eventName: EventsValues.SubDiscountClick, parameters: [
+                "from": self.isOpenFrom,
+                "sku" : self.selected_Plan.plan_Id,
+                "type" : self.selected_Plan.plan_Type.rawValue
+            ])
             purchaseByRevenueKit()
         }
     }
@@ -238,12 +243,17 @@ extension SubDiscountVC
     
     private func purchaseSuccess()
     {
-        TikTok_Events.tikTokPurchaseSuccessEvent(plan: selected_Plan)
-        AddFirebaseEvent(eventName: EventsValues.SubMonthDiscountPurchase)
+        let param = [
+            "from": self.isOpenFrom,
+            "sku" : selected_Plan.plan_Id,
+            "type" : selected_Plan.plan_Type.rawValue
+        ]
         
+        TikTok_Events.tikTokPurchaseSuccessEvent(plan: selected_Plan)
+        AddFirebaseEvent(eventName: EventsValues.SubMonthDiscountPurchaseSuccess, parameters: param)
         NotificationCenter.default.post(name: notificationPurchaseSuccessfully, object: nil)
         self.dismiss(animated: true) {
-            self.completionDiscount!(.purchaseSuccess)
+            self.completionDiscount!(.purchaseSuccess, param)
         }
     }
 }

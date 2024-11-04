@@ -104,7 +104,7 @@ public class SubAllPlanVC: UIViewController {
     
     private var selected_Plan : SubscriptionConst.PlanInfo!
     private var arrFeatureLoop: [FeatureModel] = []
-    var completionMorePlan: ((SubCloseCompletionBlock)->())?
+    var completionMorePlan: ((SubCloseCompletionBlock, [String: String]?)->())?
 
     // MARK: - customize
     public var subsciptionContinueBtnTextIndex = 0
@@ -115,7 +115,8 @@ public class SubAllPlanVC: UIViewController {
     public var isRatingScrollEnable = true
     public var isPresentSubAlertSheet = true
     public var lifetimeDiscountVal = 80
-    
+    public var isOpenFrom = ""
+
     //MARK: -
     public override var prefersStatusBarHidden: Bool {
         return true
@@ -125,7 +126,7 @@ public class SubAllPlanVC: UIViewController {
     public override func viewDidLoad() {
         super.viewDidLoad()
         
-        AddFirebaseEvent(eventName: EventsValues.SubMoreShow)
+        AddFirebaseEvent(eventName: EventsValues.SubAllPlanShow, parameters: ["from": self.isOpenFrom])
         AddNotification()
         
         setUpUI()
@@ -278,18 +279,18 @@ public class SubAllPlanVC: UIViewController {
         
         if isFromTimeline {
             self.dismiss(animated: true, completion: {
-                self.completionMorePlan!(.close)
+                self.completionMorePlan!(.close, [:])
             })
         } else {
             if isPresentSubAlertSheet {
                 presentSubAlertSheet(on: self) { [self] _ in
                     self.dismiss(animated: true, completion: {
-                        self.completionMorePlan!(.close)
+                        self.completionMorePlan!(.close, [:])
                     })
                 }
             } else {
                 self.dismiss(animated: true, completion: {
-                    self.completionMorePlan!(.close)
+                    self.completionMorePlan!(.close, [:])
                 })
             }
         }
@@ -324,15 +325,11 @@ public class SubAllPlanVC: UIViewController {
     
     @IBAction func btnStartAction(_ sender: Any) {
         
-        if selected_Plan.plan_Type == .week {
-            AddFirebaseEvent(eventName: EventsValues.SubMoreWeekClick)
-        } else if selected_Plan.plan_Type == .onemonth {
-            AddFirebaseEvent(eventName: EventsValues.SubMoreMonthClick)
-        } else if selected_Plan.plan_Type == .year {
-            AddFirebaseEvent(eventName: EventsValues.SubMoreYearClick)
-        } else if selected_Plan.plan_Type == .lifetime {
-            AddFirebaseEvent(eventName: EventsValues.SubMoreLifeTimeClick)
-        }
+        AddFirebaseEvent(eventName: EventsValues.SubAllPlanClick, parameters: [
+            "from": self.isOpenFrom,
+            "sku" : self.selected_Plan.plan_Id,
+            "type" : self.selected_Plan.plan_Type.rawValue
+        ])
         
         purchaseByRevenueKit()
     }
@@ -578,37 +575,24 @@ extension SubAllPlanVC
     {
         TikTok_Events.tikTokPurchaseSuccessEvent(plan: selected_Plan)
         
-        if selected_Plan.plan_Type == SubscriptionConst.SubscriptionType.week {
-            if selected_Plan.plan_Free_Trail.isFreeTrail {
-                AddFirebaseEvent(eventName: EventsValues.SubMoreWeekTrial)
-                scheduleFreeTrialNotification(noOfDays: selected_Plan.plan_Free_Trail.duration)
-            } else {
-                AddFirebaseEvent(eventName: EventsValues.SubMoreWeekPurchase)
-            }
-        }
-        else if selected_Plan.plan_Type == SubscriptionConst.SubscriptionType.onemonth {
-            if selected_Plan.plan_Free_Trail.isFreeTrail {
-                AddFirebaseEvent(eventName: EventsValues.SubMoreMonthTrial)
-                scheduleFreeTrialNotification(noOfDays: selected_Plan.plan_Free_Trail.duration)
-            } else {
-                AddFirebaseEvent(eventName: EventsValues.SubMoreMonthPurchase)
-            }
-        }
-        else if selected_Plan.plan_Type == SubscriptionConst.SubscriptionType.year {
-            if selected_Plan.plan_Free_Trail.isFreeTrail {
-                AddFirebaseEvent(eventName: EventsValues.SubMoreYearTrial)
-                scheduleFreeTrialNotification(noOfDays: selected_Plan.plan_Free_Trail.duration)
-            } else {
-                AddFirebaseEvent(eventName: EventsValues.SubMoreYearPurchase)
-            }
-        }
-        else if selected_Plan.plan_Type == SubscriptionConst.SubscriptionType.lifetime {
-            AddFirebaseEvent(eventName: EventsValues.SubMoreLifeTimePurchase)
+        if selected_Plan.plan_Free_Trail.isFreeTrail {
+            AddFirebaseEvent(eventName: EventsValues.SubAllPlanTrial, parameters: [
+                "from": self.isOpenFrom,
+                "sku" : self.selected_Plan.plan_Id,
+                "type" : self.selected_Plan.plan_Type.rawValue
+            ])
+            scheduleFreeTrialNotification(noOfDays: selected_Plan.plan_Free_Trail.duration)
+        } else {
+            AddFirebaseEvent(eventName: EventsValues.SubAllPlanSuccess, parameters: [
+                "from": self.isOpenFrom,
+                "sku" : self.selected_Plan.plan_Id,
+                "type" : self.selected_Plan.plan_Type.rawValue
+            ])
         }
         
         NotificationCenter.default.post(name: notificationPurchaseSuccessfully, object: nil)
         self.dismiss(animated: true, completion: {
-            self.completionMorePlan!(.purchaseSuccess)
+            self.completionMorePlan!(.purchaseSuccess, [:])
         })
     }
     
@@ -616,7 +600,7 @@ extension SubAllPlanVC
     {
         NotificationCenter.default.post(name: notificationPurchaseSuccessfully, object: nil)
         self.dismiss(animated: true, completion: {
-            self.completionMorePlan!(.restoreSuccess)
+            self.completionMorePlan!(.restoreSuccess, [:])
         })
     }
 }

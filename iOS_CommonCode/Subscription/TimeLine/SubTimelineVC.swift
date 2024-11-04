@@ -88,7 +88,7 @@ public class SubTimelineVC: UIViewController {
     @IBOutlet weak var viewMain_Bottom: NSLayoutConstraint!
     
     private var selected_Plan : SubscriptionConst.PlanInfo!
-    var completionTimeline: ((SubCloseCompletionBlock)->())?
+    var completionTimeline: ((SubCloseCompletionBlock, [String: String]?)->())?
     
     //MARK: Cusmization properties
     public var featureList: [String] = []
@@ -103,6 +103,7 @@ public class SubTimelineVC: UIViewController {
     public var isRatingScrollEnable = true
     public var isPresentSubAlertSheet = true
     public var lifetimeDiscountVal = 80
+    public var isOpenFrom = ""
     
     public override var prefersStatusBarHidden: Bool {
         return true
@@ -114,7 +115,7 @@ public class SubTimelineVC: UIViewController {
         
         selected_Plan = SubscriptionConst.ActivePlans.one_Month
 
-        AddFirebaseEvent(eventName: .SubMonthltyShowTimeLime)
+        AddFirebaseEvent(eventName: .SubMonthltyTimeLimeShow, parameters: ["from": self.isOpenFrom])
         
         AddNotification()
         
@@ -267,10 +268,11 @@ public class SubTimelineVC: UIViewController {
                               enableRatingAutoScroll: enableRatingAutoScroll,
                               isRatingScrollEnable: isRatingScrollEnable,
                               isPresentSubAlertSheet: isPresentSubAlertSheet,
-                              lifetimeDiscountVal: lifetimeDiscountVal) { result in
+                              lifetimeDiscountVal: lifetimeDiscountVal,
+                              isOpenFrom: isOpenFrom) { (result, param) in
             if result == .purchaseSuccess || result == .restoreSuccess {
                 self.dismiss(animated: true, completion: {
-                    self.completionTimeline!(result)
+                    self.completionTimeline!(result, param)
                 })
             }
         }
@@ -280,10 +282,11 @@ public class SubTimelineVC: UIViewController {
         self.openSubMorePlanVC(isFromTimeline: true,
                                isPresentSubAlertSheet: isPresentSubAlertSheet,
                                customizationSubMorePlan: customizationSubMorePlan,
-                               customizationSubRatingData: customizationSubRatingData) { result in
+                               customizationSubRatingData: customizationSubRatingData,
+                               isOpenFrom: isOpenFrom) { (result, param) in
             if result == .purchaseSuccess || result == .restoreSuccess {
                 self.dismiss(animated: true, completion: {
-                    self.completionTimeline!(result)
+                    self.completionTimeline!(result, param)
                 })
             }
         }
@@ -294,12 +297,12 @@ public class SubTimelineVC: UIViewController {
         if isPresentSubAlertSheet {
             presentSubAlertSheet(on: self) { _ in
                 self.dismiss(animated: true, completion: {
-                    self.completionTimeline?(.close)
+                    self.completionTimeline?(.close, [:])
                 })
             }
         } else {
             self.dismiss(animated: true, completion: {
-                self.completionTimeline?(.close)
+                self.completionTimeline?(.close, [:])
             })
         }
     }
@@ -317,7 +320,11 @@ public class SubTimelineVC: UIViewController {
     }
     
     @IBAction func btnStartAction(_ sender: UIButton) {
-        AddFirebaseEvent(eventName: .SubMonthltyClickTimeLime)
+        AddFirebaseEvent(eventName: .SubMonthltyTimeLimeClick, parameters: [
+            "from": self.isOpenFrom,
+            "sku" : self.selected_Plan.plan_Id,
+            "type" : self.selected_Plan.plan_Type.rawValue
+        ])
         purchaseByRevenueKit()
     }
     
@@ -428,13 +435,17 @@ extension SubTimelineVC
     {
         TikTok_Events.tikTokPurchaseSuccessEvent(plan: selected_Plan)
         
-        AddFirebaseEvent(eventName: .SubMonthltyMonthTrialTimeLime)
+        AddFirebaseEvent(eventName: .SubMonthltyMonthTimeLimeTrial, parameters: [
+            "from": self.isOpenFrom,
+            "sku" : self.selected_Plan.plan_Id,
+            "type" : self.selected_Plan.plan_Type.rawValue
+        ])
         
         scheduleFreeTrialNotification(noOfDays: selected_Plan.plan_Free_Trail.duration)
         
         NotificationCenter.default.post(name: notificationPurchaseSuccessfully, object: nil)
         self.dismiss(animated: true, completion: {
-            self.completionTimeline!(.purchaseSuccess)
+            self.completionTimeline!(.purchaseSuccess, [:])
         })
     }
     
@@ -442,7 +453,7 @@ extension SubTimelineVC
     {
         NotificationCenter.default.post(name: notificationPurchaseSuccessfully, object: nil)
         self.dismiss(animated: true, completion: {
-            self.completionTimeline!(.restoreSuccess)
+            self.completionTimeline!(.restoreSuccess, [:])
         })
     }
 }
@@ -567,3 +578,21 @@ extension SubTimelineVC {
         }
     }
 }
+
+/*
+setEvent(eventName: FirebaseEvents.subVideoOpen, parameters: ["from": isOpenFrom.rawValue])
+
+setEvent(eventName: FirebaseEvents.subVideoClick, parameters: ["from": isOpenFrom.rawValue,
+                                                               "sku" : selected_Plan.plan_Id,
+                                                               "type" : selected_Plan.plan_Type.rawValue])
+if selected_Plan.plan_Free_Trail.isFreeTrail {
+    scheduleFreeTrialNotification()
+    setEvent(eventName: FirebaseEvents.subVideoTrial, parameters: ["from": isOpenFrom.rawValue,
+                                                                   "sku" : selected_Plan.plan_Id,
+                                                                   "type" : selected_Plan.plan_Type.rawValue])
+} else {
+    setEvent(eventName: FirebaseEvents.subVideoPurchase, parameters: ["from": isOpenFrom.rawValue,
+                                                                      "sku" : selected_Plan.plan_Id,
+                                                                      "type" : selected_Plan.plan_Type.rawValue])
+}
+*/

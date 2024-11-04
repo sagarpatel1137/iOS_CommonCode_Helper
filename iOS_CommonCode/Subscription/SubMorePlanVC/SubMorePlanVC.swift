@@ -97,12 +97,13 @@ public class SubMorePlanVC: UIViewController {
     private var arrPlansList = [PlanDetails]()
     
     var isFromTimeline = false
-    var completionMorePlan: ((SubCloseCompletionBlock)->())?
+    var completionMorePlan: ((SubCloseCompletionBlock, [String: String]?)->())?
     
     public var customizationSubMorePlan: UICustomizationSubMorePlan?
     public var customizationSubRatingData: UICustomizationSubRatingData?
     public var isPresentSubAlertSheet = true
-    
+    public var isOpenFrom = ""
+
     //MARK: -
     var arrReview: [ReviewModel] = [
         ReviewModel(title: "", starCount: 5, description: "", name: ""),
@@ -132,7 +133,7 @@ public class SubMorePlanVC: UIViewController {
     public override func viewDidLoad() {
         super.viewDidLoad()
         
-        AddFirebaseEvent(eventName: EventsValues.SubMoreShow)
+        AddFirebaseEvent(eventName: EventsValues.SubSixBoxShow, parameters: ["from": isOpenFrom])
         funAddNotification()
         setUpUI()
         DispatchQueue.main.async {
@@ -322,18 +323,18 @@ extension SubMorePlanVC
     @IBAction func btnCloseAction(_ sender: UIButton) {
         if isFromTimeline {
             self.dismiss(animated: true, completion: {
-                self.completionMorePlan!(.close)
+                self.completionMorePlan!(.close, [:])
             })
         } else {
             if isPresentSubAlertSheet {
                 presentSubAlertSheet(on: self) { [self] _ in
                     self.dismiss(animated: true, completion: {
-                        self.completionMorePlan!(.close)
+                        self.completionMorePlan!(.close, [:])
                     })
                 }
             } else {
                 self.dismiss(animated: true, completion: {
-                    self.completionMorePlan!(.close)
+                    self.completionMorePlan!(.close, [:])
                 })
             }
         }
@@ -460,15 +461,11 @@ extension SubMorePlanVC
     @IBAction func btnSubscribeClicked(_ sender: UIButton) {
         
         purchaseByRevenueKit()
-        if selected_Plan.plan_Type == .week {
-            AddFirebaseEvent(eventName: EventsValues.SubMoreWeekClick)
-        } else if selected_Plan.plan_Type == .onemonth {
-            AddFirebaseEvent(eventName: EventsValues.SubMoreMonthClick)
-        } else if selected_Plan.plan_Type == .year {
-            AddFirebaseEvent(eventName: EventsValues.SubMoreYearClick)
-        } else if selected_Plan.plan_Type == .lifetime {
-            AddFirebaseEvent(eventName: EventsValues.SubMoreLifeTimeClick)
-        }
+        AddFirebaseEvent(eventName: EventsValues.SubSixBoxClick, parameters: [
+            "from": self.isOpenFrom,
+            "sku" : self.selected_Plan.plan_Id,
+            "type" : self.selected_Plan.plan_Type.rawValue
+        ])
     }
     
     @IBAction func btnRestoreAction(_ sender: Any) {
@@ -792,44 +789,44 @@ extension SubMorePlanVC {
         TikTok_Events.tikTokPurchaseSuccessEvent(plan: selected_Plan)
         Facebook_Events.addEventforSubscription(plan: selected_Plan)
         
-        if selected_Plan.plan_Type == SubscriptionConst.SubscriptionType.week {
-            if selected_Plan.plan_Free_Trail.isFreeTrail {
-                AddFirebaseEvent(eventName: EventsValues.SubMoreWeekTrial)
-                scheduleFreeTrialNotification(noOfDays: selected_Plan.plan_Free_Trail.duration)
-            } else {
-                AddFirebaseEvent(eventName: EventsValues.SubMoreWeekPurchase)
-            }
-        }
-        else if selected_Plan.plan_Type == SubscriptionConst.SubscriptionType.onemonth {
-            if selected_Plan.plan_Free_Trail.isFreeTrail {
-                AddFirebaseEvent(eventName: EventsValues.SubMoreMonthTrial)
-                scheduleFreeTrialNotification(noOfDays: selected_Plan.plan_Free_Trail.duration)
-            } else {
-                AddFirebaseEvent(eventName: EventsValues.SubMoreMonthPurchase)
-            }
-        }
-        else if selected_Plan.plan_Type == SubscriptionConst.SubscriptionType.year {
-            if selected_Plan.plan_Free_Trail.isFreeTrail {
-                AddFirebaseEvent(eventName: EventsValues.SubMoreYearTrial)
-                scheduleFreeTrialNotification(noOfDays: selected_Plan.plan_Free_Trail.duration)
-            } else {
-                AddFirebaseEvent(eventName: EventsValues.SubMoreYearPurchase)
-            }
-        }
-        else if selected_Plan.plan_Type == SubscriptionConst.SubscriptionType.lifetime {
-            AddFirebaseEvent(eventName: EventsValues.SubMoreLifeTimePurchase)
+        if selected_Plan.plan_Free_Trail.isFreeTrail {
+            AddFirebaseEvent(eventName: EventsValues.SubSixBoxTrial, parameters: [
+                "from": self.isOpenFrom,
+                "sku" : self.selected_Plan.plan_Id,
+                "type" : self.selected_Plan.plan_Type.rawValue
+            ])
+            scheduleFreeTrialNotification(noOfDays: selected_Plan.plan_Free_Trail.duration)
+        } else {
+            AddFirebaseEvent(eventName: EventsValues.SubSixBoxSuccess, parameters: [
+                "from": self.isOpenFrom,
+                "sku" : self.selected_Plan.plan_Id,
+                "type" : self.selected_Plan.plan_Type.rawValue
+            ])
         }
         
         NotificationCenter.default.post(name: notificationPurchaseSuccessfully, object: nil)
         self.dismiss(animated: true, completion: {
-            self.completionMorePlan!(.purchaseSuccess)
+            
+            if self.selected_Plan.plan_Free_Trail.isFreeTrail {
+                self.completionMorePlan!(.purchaseSuccess, [
+                    "from": self.isOpenFrom,
+                    "sku" : self.selected_Plan.plan_Id,
+                    "type" : self.selected_Plan.plan_Type.rawValue
+                ])
+            } else {
+                self.completionMorePlan!(.purchaseSuccess, [
+                    "from": self.isOpenFrom,
+                    "sku" : self.selected_Plan.plan_Id,
+                    "type" : self.selected_Plan.plan_Type.rawValue
+                ])
+            }
         })
     }
     
     private func restoreSucess() {
         NotificationCenter.default.post(name: notificationPurchaseSuccessfully, object: nil)
         self.dismiss(animated: true, completion: {
-            self.completionMorePlan!(.restoreSuccess)
+            self.completionMorePlan!(.restoreSuccess, [:])
         })
     }
 }

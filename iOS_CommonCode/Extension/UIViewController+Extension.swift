@@ -83,6 +83,7 @@ extension UIViewController
         mailRecipientEmail: String,
         mailSubject: String,
         mailBody: String,
+        isOpenFrom: String,
         complition: ((RatingResponse)-> Void)? = nil
     ) {
         let vc = RatingVC()
@@ -90,6 +91,7 @@ extension UIViewController
         vc.mailRecipientEmail = mailRecipientEmail
         vc.mailSubject = mailSubject
         vc.mailBody = mailBody
+        vc.isOpenFrom = isOpenFrom
         vc.completion = { ratingResponse in
             complition?(ratingResponse)
         }
@@ -133,7 +135,8 @@ extension UIViewController
         customizationSubMorePlan: UICustomizationSubMorePlan? = nil,
         customizationSubRatingData: UICustomizationSubRatingData?,
         lifetimeDiscountVal: Int = 80,
-        completionTimeline: @escaping (SubCloseCompletionBlock) -> Void
+        isOpenFrom: String,
+        completionTimeline: @escaping (SubCloseCompletionBlock, [String: String]?) -> Void
     ) {
         let subTimelineVC = SubTimelineVC()
         subTimelineVC.viewAllPlanType = viewAllPlanType
@@ -148,8 +151,9 @@ extension UIViewController
         subTimelineVC.customizationSubRatingData = customizationSubRatingData
         subTimelineVC.customizationSubMorePlan = customizationSubMorePlan
         subTimelineVC.lifetimeDiscountVal = lifetimeDiscountVal
-        subTimelineVC.completionTimeline = { result in
-            completionTimeline(result)
+        subTimelineVC.isOpenFrom = isOpenFrom
+        subTimelineVC.completionTimeline = { (result, param) in
+            completionTimeline(result, param)
         }
         subTimelineVC.modalPresentationStyle = .fullScreen
         subTimelineVC.modalTransitionStyle = .crossDissolve
@@ -161,15 +165,17 @@ extension UIViewController
         isPresentSubAlertSheet: Bool = true,
         customizationSubMorePlan: UICustomizationSubMorePlan?,
         customizationSubRatingData: UICustomizationSubRatingData?,
-        completionMorePlan: @escaping (SubCloseCompletionBlock) -> Void
+        isOpenFrom: String,
+        completionMorePlan: @escaping (SubCloseCompletionBlock, [String: String]?) -> Void
     ) {
         let subAllPlanVC = SubMorePlanVC()
         subAllPlanVC.isFromTimeline = isFromTimeline
         subAllPlanVC.isPresentSubAlertSheet = isPresentSubAlertSheet
         subAllPlanVC.customizationSubMorePlan = customizationSubMorePlan
         subAllPlanVC.customizationSubRatingData = customizationSubRatingData
-        subAllPlanVC.completionMorePlan = { result in
-            completionMorePlan(result)
+        subAllPlanVC.isOpenFrom = isOpenFrom
+        subAllPlanVC.completionMorePlan = { (result, param) in
+            completionMorePlan(result, param)
         }
         subAllPlanVC.modalPresentationStyle = .fullScreen
         subAllPlanVC.modalTransitionStyle = .crossDissolve
@@ -186,7 +192,8 @@ extension UIViewController
         isRatingScrollEnable: Bool = true,
         isPresentSubAlertSheet: Bool = true,
         lifetimeDiscountVal: Int = 80,
-        completionMorePlan: @escaping (SubCloseCompletionBlock) -> Void
+        isOpenFrom: String,
+        completionMorePlan: @escaping (SubCloseCompletionBlock, [String: String]?) -> Void
     ) {
         let subAllPlanVC = SubAllPlanVC()
         subAllPlanVC.isFromTimeline = isFromTimeline
@@ -198,8 +205,9 @@ extension UIViewController
         subAllPlanVC.isRatingScrollEnable = isRatingScrollEnable
         subAllPlanVC.isPresentSubAlertSheet = isPresentSubAlertSheet
         subAllPlanVC.lifetimeDiscountVal = lifetimeDiscountVal
-        subAllPlanVC.completionMorePlan = { result in
-            completionMorePlan(result)
+        subAllPlanVC.isOpenFrom = isOpenFrom
+        subAllPlanVC.completionMorePlan = { (result, param) in
+            completionMorePlan(result, param)
         }
         subAllPlanVC.modalPresentationStyle = .fullScreen
         subAllPlanVC.modalTransitionStyle = .crossDissolve
@@ -208,12 +216,14 @@ extension UIViewController
     
     public func openSubDiscountVC(
         customizationSubDiscountTheme: UICustomizationSubDiscountTheme? = nil,
-        completionDiscount: @escaping (SubCloseCompletionBlock) -> Void
+        isOpenFrom: String,
+        completionDiscount: @escaping (SubCloseCompletionBlock, [String: String]?) -> Void
     ) {
         let vc = SubDiscountVC()
         vc.customizationSubDiscountTheme = customizationSubDiscountTheme ?? UICustomizationSubDiscountTheme()
-        vc.completionDiscount = { result in
-            completionDiscount(result)
+        vc.isOpenFrom = isOpenFrom
+        vc.completionDiscount = { (result, param) in
+            completionDiscount(result, param)
         }
         vc.modalPresentationStyle = .overFullScreen
         vc.modalTransitionStyle = .crossDissolve
@@ -222,11 +232,17 @@ extension UIViewController
     
     public func openThankYouVC(
         customizationSubThankYouTheme: UICustomizationSubThankYouTheme? = nil,
-        customizationSubThankYouData: UICustomizationSubThankYouData? = nil
+        customizationSubThankYouData: UICustomizationSubThankYouData? = nil,
+        isOpenFrom: String,
+        subCloseCompletionBlock: SubCloseCompletionBlock,
+        param: [String: String]?
     ) {
         let thankYouVC = ThankYouVC()
         thankYouVC.customizationSubThankYouTheme = customizationSubThankYouTheme ?? UICustomizationSubThankYouTheme()
         thankYouVC.customizationSubThankYouData = customizationSubThankYouData ?? UICustomizationSubThankYouData()
+        thankYouVC.isOpenFrom = isOpenFrom
+        thankYouVC.subCloseCompletionBlock = subCloseCompletionBlock
+        thankYouVC.param = param
         thankYouVC.modalPresentationStyle = .fullScreen
         thankYouVC.modalTransitionStyle = .crossDissolve
         self.present(thankYouVC, animated: true, completion: nil)
