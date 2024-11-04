@@ -47,7 +47,7 @@ target 'iOS_CommonCode' do
   pod 'MBProgressHUD'
   pod 'lottie-ios'
   pod 'SwiftConfettiView'
-  
+  pod 'SVGKit'
 end
 
 post_install do |installer|

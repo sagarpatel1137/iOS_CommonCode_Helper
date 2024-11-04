@@ -19,6 +19,9 @@ public enum RatingResponse {
 
 public class RatingVC: UIViewController {
 
+    @IBOutlet weak var icRatingBG: UIImageView!
+    @IBOutlet weak var btnImprovment: UIButton!
+    @IBOutlet weak var btnAwasome: UIButton!
     @IBOutlet weak var viewRate: UIView!
     @IBOutlet weak var lblTitle: UILabel!
     @IBOutlet weak var lblSubTitle: UILabel!
@@ -44,6 +47,10 @@ public class RatingVC: UIViewController {
         lblTitle.text = "Enjoying the app?".localized()
         lblSubTitle.text = "Let us know by leaving a 5 star rating".localized()
         lblLater.text = "Ask me latter!".localized()
+        
+        self.icRatingBG.image = ImageHelper.image(named: "ic_Rating_Background_Rating")!
+        self.btnImprovment.setImage(ImageHelper.image(named: "ic_Rating_Hide")!, for: .normal)
+        self.btnAwasome.setImage(ImageHelper.image(named: "ic_Rating_Click")!, for: .normal)
     }
     
     @IBAction func btnAwesomeClick(_ sender: Any) {

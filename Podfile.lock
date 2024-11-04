@@ -65,6 +65,9 @@ PODS:
   - AppsFlyerFramework (6.15.2):
     - AppsFlyerFramework/Main (= 6.15.2)
   - AppsFlyerFramework/Main (6.15.2)
+  - CocoaLumberjack (3.8.5):
+    - CocoaLumberjack/Core (= 3.8.5)
+  - CocoaLumberjack/Core (3.8.5)
   - FBAEMKit (17.0.3):
     - FBSDKCoreKit_Basics (= 17.0.3)
   - FBSDKCoreKit (17.0.3):
@@ -302,6 +305,8 @@ PODS:
     - AppsFlyerFramework (= 6.15.2)
   - RecaptchaInterop (100.0.0)
   - RevenueCat (5.2.2)
+  - SVGKit (3.0.0):
+    - CocoaLumberjack (~> 3.0)
   - SwiftConfettiView (0.1.0)
   - TikTokBusinessSDK (1.3.5)
   - UIView-Shimmer (1.0.4)
@@ -325,6 +330,7 @@ DEPENDENCIES:
   - OneSignal
   - PurchaseConnector
   - RevenueCat
+  - SVGKit
   - SwiftConfettiView
   - TikTokBusinessSDK
   - UIView-Shimmer
@@ -349,6 +355,7 @@ SPEC REPOS:
     - AppMetricaStorageUtils
     - AppMetricaWebKit
     - AppsFlyerFramework
+    - CocoaLumberjack
     - FBAEMKit
     - FBSDKCoreKit
     - FBSDKCoreKit_Basics
@@ -388,6 +395,7 @@ SPEC REPOS:
     - PurchaseConnector
     - RecaptchaInterop
     - RevenueCat
+    - SVGKit
     - SwiftConfettiView
     - TikTokBusinessSDK
     - UIView-Shimmer
@@ -411,6 +419,7 @@ SPEC CHECKSUMS:
   AppMetricaStorageUtils: d72c866868dce22626441349bcd45eeec43b9e86
   AppMetricaWebKit: bf5a05e7ed13857807522639c8984a1c192e88ef
   AppsFlyerFramework: 3c6c50b7b3f0f37f648a5b23114940e0766e65e8
+  CocoaLumberjack: 6a459bc897d6d80bd1b8c78482ec7ad05dffc3f0
   FBAEMKit: 9900b2edd99a2d21629a6277e6166f14c6215799
   FBSDKCoreKit: 0791f8f68a8630931a4c12aa23a56cc021551596
   FBSDKCoreKit_Basics: 46d6b472c0dd0a5a7e972c025033d1c567f54eb4
@@ -450,10 +459,11 @@ SPEC CHECKSUMS:
   PurchaseConnector: 353a4eef8d87cca06898d6826e4afab13aa646ef
   RecaptchaInterop: 7d1a4a01a6b2cb1610a47ef3f85f0c411434cb21
   RevenueCat: ba985d80069c1c4b9c9e0763f1852f2a0bdcc2d6
+  SVGKit: 1ad7513f8c74d9652f94ed64ddecda1a23864dea
   SwiftConfettiView: 1bdbc2e6913b6b1c76d8070802b212508ad5c352
   TikTokBusinessSDK: 36d609fa83d6135ce29ed1541913adb97208ba6e
   UIView-Shimmer: ff0a32c73d67c7dbdea3d9e530538b10d18aea56
 
-PODFILE CHECKSUM: 6714719382b479f52752ad8203dce43106a8064b
+PODFILE CHECKSUM: 945674252eaf496e644b5d6a9e1b177f8cfef4bd
 
 COCOAPODS: 1.15.2

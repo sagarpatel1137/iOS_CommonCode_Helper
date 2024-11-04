@@ -41,8 +41,8 @@ public struct UICustomizationFeedback {
         self.titleText = titleText ?? "Feedback"
         self.titleTextFont = titleTextFont ?? setCustomFont_WithoutRatio(name: .PlusJakartaSans_ExtraBold, iPhoneSize: 17, iPadSize: 22)
         self.titleTextColor = titleTextColor ?? hexStringToUIColor(hex: "1B79FF")
-        self.backButtonImage = backButtonImage ?? UIImage(named: "ic_back")
-        self.placeholderButtonImage = placeholderButtonImage ?? UIImage(named: "ic_feedback_poster")
+        self.backButtonImage = backButtonImage ?? ImageHelper.image(named: "ic_back")
+        self.placeholderButtonImage = placeholderButtonImage ?? ImageHelper.image(named: "ic_feedback_poster")
         self.shareExperienceText = shareExperienceText ?? "Share your experience with us"
         self.shareExperienceFont = shareExperienceFont ?? setCustomFont_WithoutRatio(name: .PlusJakartaSans_Medium, iPhoneSize: 13, iPadSize: 19)
         self.shareExperienceTextColor = shareExperienceTextColor ?? hexStringToUIColor(hex: "898989")
@@ -61,7 +61,7 @@ public struct UICustomizationFeedback {
         self.submitText = submitText ?? "Submit"
         self.submitTextFont = submitTextFont ?? setCustomFont_WithoutRatio(name: .PlusJakartaSans_Bold, iPhoneSize: 15, iPadSize: 20)
         self.submitTextColor = submitTextColor ?? .white
-        self.submitButtonImage = submitButtonImage ?? UIImage(named: "ic_btn_bg")
+        self.submitButtonImage = submitButtonImage ?? ImageHelper.image(named: "ic_btn_bg")
     }
 }
 

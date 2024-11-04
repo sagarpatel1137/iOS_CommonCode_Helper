@@ -45,6 +45,8 @@ public struct FeatureModel {
 
 public class SubAllPlanVC: UIViewController {
 
+    @IBOutlet weak var imgSubTop: UIImageView!
+    @IBOutlet weak var btnCloseSquare: UIButton!
     //MARK: -
     @IBOutlet weak var lblTitle: MarqueeLabel!
     @IBOutlet weak var lblFreeTrial: MarqueeLabel!
@@ -150,6 +152,8 @@ public class SubAllPlanVC: UIViewController {
     //MARK: -
     func setUpUI()
     {
+        imgSubTop.image = ImageHelper.image(named: "ic_sub_top_bg")!
+        btnCloseSquare.setImage(ImageHelper.image(named: "ic_close_square")!, for: .normal)
         viewLifeTime.layer.borderWidth = 1
         viewYear.layer.borderWidth = 1
         viewMonth.layer.borderWidth = 1
@@ -643,7 +647,7 @@ extension SubAllPlanVC : UICollectionViewDelegate, UICollectionViewDataSource, U
             cell.imgThumb.image = arrFeatureLoop[indexPath.item].imgage
             cell.lblName.text = arrFeatureLoop[indexPath.item].feature.localized()
             cell.lblName.font = setCustomFont(name: .PlusJakartaSans_Medium, iPhoneSize: 10, iPadSize: 12)
-            
+            cell.imgBg.image = ImageHelper.image(named: "ic_sub_feature_bg")!
             return cell
         }
         else

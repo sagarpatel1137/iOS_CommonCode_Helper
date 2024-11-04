@@ -20,7 +20,7 @@ public struct UICustomizationSubThankYouTheme {
         self.btnGetStartedTextColor = btnGetStartedTextColor ?? .white
         self.btnGetStartedFromColor = btnGetStartedFromColor ?? hexStringToUIColor(hex: "00C6FB")
         self.btnGetStartedToColor = btnGetStartedToColor ?? hexStringToUIColor(hex: "005BEA")
-        self.imgPlaceholder = imgPlaceholder ?? UIImage(named: "sub_thankyou_Bg")
+        self.imgPlaceholder = imgPlaceholder ?? ImageHelper.image(named: "sub_thankyou_Bg")
     }
 }
 

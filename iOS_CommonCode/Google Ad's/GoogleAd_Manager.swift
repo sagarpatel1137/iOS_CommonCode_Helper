@@ -748,7 +748,7 @@ extension GoogleAd_Manager
             let multipleAdsOptions = GADMultipleAdsAdLoaderOptions()
             multipleAdsOptions.numberOfAds = 1
             
-            nativeAd_Loader = GADAdLoader(adUnitID: Native_ID, rootViewController: UIViewController(),
+            nativeAd_Loader = GADAdLoader(adUnitID: Native_ID, rootViewController: funGetTopViewController(),
                                    adTypes: [GADAdLoaderAdType.native],
                                    options: [multipleAdsOptions])
             nativeAd_Loader.delegate = self

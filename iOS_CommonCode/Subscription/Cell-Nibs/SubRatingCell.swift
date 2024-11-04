@@ -29,6 +29,9 @@ public struct UICustomizationSubRatingData {
 public class SubRatingCell: UICollectionViewCell {
     
     //MARK: - IBOutlet(s).
+    @IBOutlet weak var imgQuate: UIImageView!
+    @IBOutlet weak var imgQuate3: UIImageView!
+    @IBOutlet weak var imgLikeSub: UIImageView!
     @IBOutlet weak var mainContentView: UIView!
     @IBOutlet weak var mainStackView: UIStackView!
     
@@ -110,6 +113,9 @@ public class SubRatingCell: UICollectionViewCell {
         configureFont(for: view1SubTitleLabel, fontName: .PlusJakartaSans_Medium, iPhoneSize: subTitleSize, iPadSize: subTitleSize)
         configureFont(for: ratingCountLabel, fontName: .PlusJakartaSans_ExtraBold, iPhoneSize: ratingSize, iPadSize: ratingSize)
         configureFont(for: satisfiedCustLabel, fontName: .PlusJakartaSans_Bold, iPhoneSize: custLabelSize, iPadSize: custLabelSize)
+        imgQuate.image = ImageHelper.image(named: "ic_quote")
+        imgQuate3.image = ImageHelper.image(named: "ic_quote")
+        imgLikeSub.image = ImageHelper.image(named: "ic_like_sub")
     }
 }
 
@@ -134,7 +140,7 @@ extension SubRatingCell {
         if let view2ImagePlaceholder = customizationSubRatingData?.view2ImagePlaceholder {
             self.view2ImagePlaceholder.image = view2ImagePlaceholder
         } else {
-            self.view2ImagePlaceholder.image = nil
+            self.view2ImagePlaceholder.image = ImageHelper.image(named: "ic_rating_backgroud")
         }
         if let ratingCountLabel = customizationSubRatingData?.ratingCountLabel {
             self.ratingCountLabel.text = ratingCountLabel

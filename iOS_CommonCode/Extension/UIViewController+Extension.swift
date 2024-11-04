@@ -191,7 +191,7 @@ extension UIViewController
         enableRatingAutoScroll: Bool = true,
         isRatingScrollEnable: Bool = true,
         isPresentSubAlertSheet: Bool = true,
-        lifetimeDiscountVal: Int = 80,
+        lifetimeDiscountVal: Int = 90,
         isOpenFrom: String,
         completionMorePlan: @escaping (SubCloseCompletionBlock, [String: String]?) -> Void
     ) {

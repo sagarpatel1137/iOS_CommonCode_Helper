@@ -32,6 +32,8 @@
                 <outlet property="btnSubscribe" destination="mCS-rL-kWV" id="t7r-ru-l8x"/>
                 <outlet property="collViewFeature" destination="bKX-Ed-Y0a" id="yJd-MW-yKz"/>
                 <outlet property="heightLabel" destination="4uL-aP-aKy" id="NFf-Tg-MkT"/>
+                <outlet property="imgClose" destination="U7J-l2-CR4" id="LKG-CK-rcG"/>
+                <outlet property="imgShield" destination="OjH-ig-be8" id="PPl-5H-o3I"/>
                 <outlet property="lblCancelAnytime" destination="9bm-v4-pAh" id="hUA-vQ-ggv"/>
                 <outlet property="lblFreeTrial" destination="6iO-YU-Vzo" id="oQe-BM-A1X"/>
                 <outlet property="lblPayNothingNow" destination="rWO-7z-Tgb" id="tQ2-UB-Wwc"/>

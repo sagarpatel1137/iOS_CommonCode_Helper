@@ -20,11 +20,11 @@ public struct UICustomizationSubDiscountTheme {
     public var imgBtnClose: UIImage?
     
     public init(popupImageBG: UIImage? = nil, popupImageTopBG: UIImage? = nil, subPopupImageBG: UIImage? = nil, imgButtonTryNow: UIImage? = nil, imgBtnClose: UIImage? = nil) {
-        self.popupImageBG = popupImageBG ?? UIImage(named: "ic_sub_popup_bg")
-        self.popupImageTopBG = popupImageTopBG ?? UIImage(named: "ic_sub_popup_top")
-        self.subPopupImageBG = subPopupImageBG ?? UIImage(named: "ic_sub_popup_offer_bg")
-        self.imgButtonTryNow = imgButtonTryNow ?? UIImage(named: "ic_sub_popup_btn")
-        self.imgBtnClose = imgBtnClose ?? UIImage(named: "ic_sub_popup_close")
+        self.popupImageBG = popupImageBG ?? ImageHelper.image(named: "ic_sub_popup_bg")
+        self.popupImageTopBG = popupImageTopBG ?? ImageHelper.image(named: "ic_sub_popup_top")
+        self.subPopupImageBG = subPopupImageBG ?? ImageHelper.image(named: "ic_sub_popup_offer_bg")
+        self.imgButtonTryNow = imgButtonTryNow ?? ImageHelper.image(named: "ic_sub_popup_btn")
+        self.imgBtnClose = imgBtnClose ?? ImageHelper.image(named: "ic_sub_popup_close")
     }
 }
 

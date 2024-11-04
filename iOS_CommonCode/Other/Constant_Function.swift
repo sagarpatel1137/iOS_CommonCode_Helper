@@ -9,6 +9,8 @@ import UIKit
 import Foundation
 import FirebaseAnalytics
 
+let AppThemeColor = UIColor(red: 27/255, green: 121/255, blue: 255/255, alpha: 1.0)
+
 public func funGetTopViewController(base: UIViewController? = UIApplication.shared.windows.first?.rootViewController) -> UIViewController? {
     
     if let nav = base as? UINavigationController {
@@ -107,7 +109,10 @@ public func ResizeText_Rating(iphone: CGFloat, iPad: CGFloat) -> CGFloat {
     return phone
 }
 
-func scheduleFreeTrialNotification(noOfDays: Int , isDebug: Bool = false) {
+func scheduleFreeTrialNotification(noOfDays: Int, isDebug: Bool = false) {
+    
+    let nodofdays = noOfDays-1
+    
     UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound, .badge]) { (granted, error) in
         if granted {
             print("Notification permission granted")
@@ -118,7 +123,7 @@ func scheduleFreeTrialNotification(noOfDays: Int , isDebug: Bool = false) {
     
     let content = UNMutableNotificationContent()
     content.title = "Free Trial Ending Soon"
-    if noOfDays == 2 {
+    if nodofdays == 2 {
         content.body = "You will be charged from tomorrow, Cancel anytime before."
     } else {
         content.body = "You will be charged after 2 days, Cancel anytime before."
@@ -130,10 +135,10 @@ func scheduleFreeTrialNotification(noOfDays: Int , isDebug: Bool = false) {
     let trigger: UNNotificationTrigger
     if isDebug {
         // Schedule notification for numbers of days in minutes
-        trigger = UNTimeIntervalNotificationTrigger(timeInterval: TimeInterval(noOfDays*60), repeats: false)
+        trigger = UNTimeIntervalNotificationTrigger(timeInterval: TimeInterval(nodofdays*60), repeats: false)
     } else {
         // Schedule notification for the Nth day
-        let triggerDate = Calendar.current.date(byAdding: .day, value: noOfDays, to: Date())!
+        let triggerDate = Calendar.current.date(byAdding: .day, value: nodofdays, to: Date())!
         let components = Calendar.current.dateComponents([.year, .month, .day, .hour, .minute], from: triggerDate)
         trigger = UNCalendarNotificationTrigger(dateMatching: components, repeats: false)
     }
@@ -148,3 +153,4 @@ func scheduleFreeTrialNotification(noOfDays: Int , isDebug: Bool = false) {
         }
     }
 }
+

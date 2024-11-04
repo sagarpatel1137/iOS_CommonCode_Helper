@@ -24,11 +24,8 @@ spec.resources = [
     "iOS_CommonCode/Resources/Json/*.json",
     "iOS_CommonCode/Resources/Font/*.ttf",
     "iOS_CommonCode/Resources/Localise/*.strings",
-    "iOS_CommonCode/Resources/Assets/Media.xcassets"
+    "iOS_CommonCode/Resources/Assets/**/*.{svg,png,jpg,jpeg,gif,pdf}"
 ]
-#spec.resource_bundles = {
-#    'MediaAssets' => ['iOS_CommonCode/Resources/Assets/Media.xcassets']
-#}
 spec.pod_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64'}
 spec.user_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64'}
 
@@ -58,5 +55,6 @@ spec.dependency 'MarqueeLabel'
 spec.dependency 'MBProgressHUD'
 spec.dependency 'lottie-ios'
 spec.dependency 'SwiftConfettiView'
+spec.dependency 'SVGKit'
 
 end

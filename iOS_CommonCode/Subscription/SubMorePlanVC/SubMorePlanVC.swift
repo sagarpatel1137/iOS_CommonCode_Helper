@@ -92,6 +92,8 @@ public class SubMorePlanVC: UIViewController {
     @IBOutlet var imgHeight : [NSLayoutConstraint]!
     @IBOutlet var imgWidth : [NSLayoutConstraint]!
     @IBOutlet var lblTitleTopConst : [NSLayoutConstraint]!
+    @IBOutlet weak var imgClose: UIImageView!
+    @IBOutlet weak var imgShield: UIImageView!
     
     private var selected_Plan : SubscriptionConst.PlanInfo!
     private var arrPlansList = [PlanDetails]()
@@ -230,6 +232,8 @@ public class SubMorePlanVC: UIViewController {
     }
     
     func setUpUI() {
+        imgShield.image = ImageHelper.image(named: "ic_shield")!
+        imgClose.image = ImageHelper.image(named: "ic_sub_close")!
         lblPromotionalPeriod.text = ""
         lblPromotionalPeriod.isHidden = true
         lblFreeTrial.text = ""
@@ -360,7 +364,7 @@ extension SubMorePlanVC
             
             if i == sender.tag {
                 arrPlanBgView[i].isHidden = false
-                arrPlanBadge[i].image = UIImage(named: "ic_sub_plan_\(arrPlansList[i].type.rawValue)_sel")
+                arrPlanBadge[i].image = ImageHelper.image(named: "ic_sub_plan_\(arrPlansList[i].type.rawValue)_sel")
                 arrPlanTemplateView[i].backgroundColor = .clear
                 arrDetailView[i].backgroundColor = hexStringToUIColor(hex: "F6F6FF")
                 arrPriceView[i].backgroundColor = hexStringToUIColor(hex: "F6F6FF")
@@ -374,7 +378,7 @@ extension SubMorePlanVC
             }
             else {
                 arrPlanBgView[i].isHidden = true
-                arrPlanBadge[i].image = UIImage(named: "ic_sub_plan_\(arrPlansList[i].type.rawValue)")
+                arrPlanBadge[i].image = ImageHelper.image(named: "ic_sub_plan_\(arrPlansList[i].type.rawValue)")
                 arrPlanTemplateView[i].backgroundColor = hexStringToUIColor(hex: "F8F8F8")
                 arrDetailView[i].backgroundColor = hexStringToUIColor(hex: "F8F8F8")
                 arrPriceView[i].backgroundColor = hexStringToUIColor(hex: "F8F8F8")

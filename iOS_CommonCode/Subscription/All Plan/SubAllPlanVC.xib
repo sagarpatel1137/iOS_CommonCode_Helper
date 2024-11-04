@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23094" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23084"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -20,10 +20,12 @@
         </array>
     </customFonts>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SubAllPlanVC" customModule="Vasundhara_CommonCode_Demo" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SubAllPlanVC" customModule="iOS_CommonCode" customModuleProvider="target">
             <connections>
+                <outlet property="btnCloseSquare" destination="TwC-hP-bG7" id="Po0-X4-g0K"/>
                 <outlet property="collViewFeature" destination="nqX-Z9-vd0" id="xP3-NG-S1K"/>
                 <outlet property="collViewReview" destination="4ym-hb-P3Z" id="kQL-Zt-hx9"/>
+                <outlet property="imgSubTop" destination="EJ2-Ut-5yh" id="1pd-Md-FKO"/>
                 <outlet property="lblBadgeLifetime" destination="jsM-R7-lwp" id="DhM-3l-zka"/>
                 <outlet property="lblBadgeMonth" destination="PhA-4p-6aG" id="pog-se-bza"/>
                 <outlet property="lblBadgeWeek" destination="wgA-bA-HFH" id="Dal-xr-RaZ"/>
@@ -1028,53 +1030,6 @@
             <point key="canvasLocation" x="-82" y="0.0"/>
         </view>
     </objects>
-    <designables>
-        <designable name="05u-bi-Auv"/>
-        <designable name="AGR-lb-iJt">
-            <size key="intrinsicContentSize" width="193" height="29"/>
-        </designable>
-        <designable name="Aue-4f-UbF">
-            <size key="intrinsicContentSize" width="78.5" height="16.5"/>
-        </designable>
-        <designable name="GFn-Ts-JZs">
-            <size key="intrinsicContentSize" width="48.5" height="16.5"/>
-        </designable>
-        <designable name="KEL-QV-ftl">
-            <size key="intrinsicContentSize" width="43" height="17"/>
-        </designable>
-        <designable name="L1Q-2t-8Ah"/>
-        <designable name="Pmz-Ca-gG2">
-            <size key="intrinsicContentSize" width="50.5" height="17"/>
-        </designable>
-        <designable name="S9k-o3-eV9">
-            <size key="intrinsicContentSize" width="122.5" height="13.5"/>
-        </designable>
-        <designable name="U8g-ma-NT5">
-            <size key="intrinsicContentSize" width="56.5" height="17"/>
-        </designable>
-        <designable name="VRz-yj-Ib9">
-            <size key="intrinsicContentSize" width="267" height="18"/>
-        </designable>
-        <designable name="amE-X7-Gxr">
-            <size key="intrinsicContentSize" width="106" height="25.5"/>
-        </designable>
-        <designable name="dDD-vK-qf3">
-            <size key="intrinsicContentSize" width="123.5" height="19"/>
-        </designable>
-        <designable name="g9q-o1-qHW">
-            <size key="intrinsicContentSize" width="219.5" height="15.5"/>
-        </designable>
-        <designable name="nqX-8d-Urr">
-            <size key="intrinsicContentSize" width="69" height="13.5"/>
-        </designable>
-        <designable name="sgu-hf-cCE">
-            <size key="intrinsicContentSize" width="84" height="16.5"/>
-        </designable>
-        <designable name="x6E-Mn-15J"/>
-        <designable name="z1K-Hb-wxi">
-            <size key="intrinsicContentSize" width="56.5" height="17"/>
-        </designable>
-    </designables>
     <resources>
         <image name="ic_close_square" width="61" height="61"/>
         <image name="ic_shield_new" width="60" height="60"/>

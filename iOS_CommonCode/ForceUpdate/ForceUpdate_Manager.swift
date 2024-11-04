@@ -17,7 +17,7 @@ public struct AlertForceUpdate {
 
 public final class ForceUpdate_Manager: NSObject {
  
-    private static let shared = ForceUpdate_Manager()
+    public static let shared = ForceUpdate_Manager()
     private var applicationId = ""
     private var alert = AlertForceUpdate()
     private let timeoutInterval :TimeInterval = 120

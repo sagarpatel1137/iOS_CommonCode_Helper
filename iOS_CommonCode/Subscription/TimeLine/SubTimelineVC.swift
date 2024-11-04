@@ -30,10 +30,10 @@ public struct UICustomizationSubTimelineTheme {
     
     public init(themeColor: UIColor? = nil, imgTimelineRight: UIImage? = nil, imgTimelineLock: UIImage? = nil, imgTimelineBell: UIImage? = nil, imgTimelineStar: UIImage? = nil, btnJsonFilenameiPhone: String? = nil, btnJsonFilenameiPad: String? = nil, featureListTextColor: UIColor? = nil, featureInfoTextColor: UIColor? = nil) {
         self.themeColor = themeColor ?? hexStringToUIColor(hex: "1B79FF")
-        self.imgTimelineRight = imgTimelineRight ?? UIImage(named: "ic_timeline_right")
-        self.imgTimelineLock = imgTimelineLock ?? UIImage(named: "ic_timeline_lock")
-        self.imgTimelineBell = imgTimelineBell ?? UIImage(named: "ic_timeline_bell")
-        self.imgTimelineStar = imgTimelineStar ?? UIImage(named: "ic_timeline_star")
+        self.imgTimelineRight = imgTimelineRight ?? ImageHelper.image(named: "ic_timeline_right")
+        self.imgTimelineLock = imgTimelineLock ?? ImageHelper.image(named: "ic_timeline_lock")
+        self.imgTimelineBell = imgTimelineBell ?? ImageHelper.image(named: "ic_timeline_bell")
+        self.imgTimelineStar = imgTimelineStar ?? ImageHelper.image(named: "ic_timeline_star")
         self.btnJsonFilenameiPhone = btnJsonFilenameiPhone ?? "Pod_sub_timeline_iphone"
         self.btnJsonFilenameiPad = btnJsonFilenameiPad ?? "Pod_sub_timeline_ipad"
         self.featureListTextColor = featureListTextColor ?? hexStringToUIColor(hex: "1E2128")
@@ -154,6 +154,7 @@ public class SubTimelineVC: UIViewController {
         
         btnMorePlans.isHidden = false
         lblFreeTrialText.text = nil
+        btnClose.setImage(ImageHelper.image(named: "ic_sub_close")!, for: .normal)
     }
     
     private func setUpText() {
