@@ -233,14 +233,12 @@ extension UIViewController
     public func openThankYouVC(
         customizationSubThankYouTheme: UICustomizationSubThankYouTheme? = nil,
         customizationSubThankYouData: UICustomizationSubThankYouData? = nil,
-        isOpenFrom: String,
         subCloseCompletionBlock: SubCloseCompletionBlock,
         param: [String: String]?
     ) {
         let thankYouVC = ThankYouVC()
         thankYouVC.customizationSubThankYouTheme = customizationSubThankYouTheme ?? UICustomizationSubThankYouTheme()
         thankYouVC.customizationSubThankYouData = customizationSubThankYouData ?? UICustomizationSubThankYouData()
-        thankYouVC.isOpenFrom = isOpenFrom
         thankYouVC.subCloseCompletionBlock = subCloseCompletionBlock
         thankYouVC.param = param
         thankYouVC.modalPresentationStyle = .fullScreen
