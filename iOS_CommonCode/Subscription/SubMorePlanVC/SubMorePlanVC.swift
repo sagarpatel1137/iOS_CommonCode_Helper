@@ -284,6 +284,7 @@ public class SubMorePlanVC: UIViewController {
         lblRestore.font = setCustomFont_WithoutRatio(name: .WorkSans_Regular, iPhoneSize: 13, iPadSize: 17)
         lblTerms.font = setCustomFont_WithoutRatio(name: .WorkSans_Regular, iPhoneSize: 13, iPadSize: 17)
         lblPrivacy.font = setCustomFont_WithoutRatio(name: .WorkSans_Regular, iPhoneSize: 13, iPadSize: 17)
+        lblCancelAnytime.font = setCustomFont_WithoutRatio(name: .PlusJakartaSans_Regular, iPhoneSize: 12, iPadSize: 21)
 
         if UIDevice.current.userInterfaceIdiom == .pad {
             if let loadJSONURL = PodBundleHelper.loadJSONFile(named: "Pod_sub_iPad-Capsule") {

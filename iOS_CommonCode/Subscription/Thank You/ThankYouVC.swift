@@ -25,14 +25,14 @@ public struct UICustomizationSubThankYouTheme {
 }
 
 public struct UICustomizationSubThankYouData {
-    public var titleTextColor: String?
-    public var descriptionTextColor: String?
-    public var getStartedTextColor: String?
+    public var titleText: String?
+    public var descriptionText: String?
+    public var getStartedText: String?
     
     public init(titleTextColor: String? = nil, descriptionTextColor: String? = nil, getStartedTextColor: String? = nil) {
-        self.titleTextColor = titleTextColor ?? "Thank You For Subscription"
-        self.descriptionTextColor = descriptionTextColor ?? "Now you can enjoy the service!"
-        self.getStartedTextColor = getStartedTextColor ?? "Get Started"
+        self.titleText = titleText ?? "Thank You For Subscription"
+        self.descriptionText = descriptionText ?? "Now you can enjoy the service!"
+        self.getStartedText = getStartedText ?? "Get Started"
     }
 }
 
@@ -114,17 +114,18 @@ public class ThankYouVC: UIViewController {
 extension ThankYouVC {
     private func updateUI() {
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.0) {
+            self.lblTitle.textColor = self.customizationSubThankYouTheme.textColor ?? .black
             let from = self.customizationSubThankYouTheme.btnGetStartedFromColor ?? hexStringToUIColor(hex: "00C6FB")
             let to = self.customizationSubThankYouTheme.btnGetStartedToColor ?? hexStringToUIColor(hex: "005BEA")
             self.btnStart.addGradient(colors: [from, to])
             self.imgPlaceholder.image = self.customizationSubThankYouTheme.imgPlaceholder
-            self.btnStart.setTitleColor(self.customizationSubThankYouTheme.btnGetStartedToColor, for: .normal)
+            self.btnStart.setTitleColor(self.customizationSubThankYouTheme.btnGetStartedTextColor, for: .normal)
             self.lblTitle.textColor = self.customizationSubThankYouTheme.textColor
             self.lblSubTitle.textColor = self.customizationSubThankYouTheme.textColor
         }
         
-        self.lblTitle.text = self.customizationSubThankYouData.titleTextColor?.localized()
-        self.lblSubTitle.text = self.customizationSubThankYouData.descriptionTextColor?.localized()
-        self.btnStart.setTitle(self.customizationSubThankYouData.getStartedTextColor?.localized().localized(), for: .normal)
+        self.lblTitle.text = self.customizationSubThankYouData.titleText?.localized()
+        self.lblSubTitle.text = self.customizationSubThankYouData.descriptionText?.localized()
+        self.btnStart.setTitle(self.customizationSubThankYouData.getStartedText?.localized().localized(), for: .normal)
     }
 }

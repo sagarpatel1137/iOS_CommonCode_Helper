@@ -21,7 +21,7 @@
         <array key="Karla-Regular.ttf">
             <string>Karla-Regular</string>
         </array>
-        <array key="PlusJakartaSans-Regular.ttf">
+        <array key="PlusJakartaSans-VariableFont_wght.ttf">
             <string>PlusJakartaSans-Regular</string>
         </array>
     </customFonts>
@@ -489,10 +489,10 @@
                                             </variation>
                                         </collectionView>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YkA-g6-l4W" userLabel="ViewShield">
-                                            <rect key="frame" x="66.666666666666686" y="380" width="260" height="30"/>
+                                            <rect key="frame" x="64" y="380" width="265" height="30"/>
                                             <subviews>
-                                                <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iUB-Rb-1ED">
-                                                    <rect key="frame" x="10" y="5" width="240" height="20"/>
+                                                <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="iUB-Rb-1ED">
+                                                    <rect key="frame" x="10" y="5" width="245" height="20"/>
                                                     <subviews>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_shield" translatesAutoresizingMaskIntoConstraints="NO" id="OjH-ig-be8">
                                                             <rect key="frame" x="0.0" y="0.0" width="20" height="20"/>
@@ -504,7 +504,7 @@
                                                             </constraints>
                                                         </imageView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cancel anytime. Secure with App Store" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9bm-v4-pAh" customClass="MarqueeLabel" customModule="MarqueeLabel">
-                                                            <rect key="frame" x="20" y="0.0" width="220" height="20"/>
+                                                            <rect key="frame" x="25" y="0.0" width="220" height="20"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                             <color key="textColor" red="0.25882352939999997" green="0.2901960784" blue="0.30588235289999999" alpha="1" colorSpace="calibratedRGB"/>
                                                             <nil key="highlightedColor"/>
