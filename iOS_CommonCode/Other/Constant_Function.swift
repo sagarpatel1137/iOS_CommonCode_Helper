@@ -109,7 +109,7 @@ public func ResizeText_Rating(iphone: CGFloat, iPad: CGFloat) -> CGFloat {
     return phone
 }
 
-func scheduleFreeTrialNotification(noOfDays: Int, isDebug: Bool = false) {
+public func scheduleFreeTrialNotification(noOfDays: Int, isDebug: Bool = false) {
     
     let nodofdays = noOfDays-1
     
