@@ -168,18 +168,23 @@ extension UIViewController
         isOpenFrom: String,
         completionMorePlan: @escaping (SubCloseCompletionBlock, [String: String]?) -> Void
     ) {
-        let subAllPlanVC = SubMorePlanVC()
-        subAllPlanVC.isFromTimeline = isFromTimeline
-        subAllPlanVC.isPresentSubAlertSheet = isPresentSubAlertSheet
-        subAllPlanVC.customizationSubMorePlan = customizationSubMorePlan
-        subAllPlanVC.customizationSubRatingData = customizationSubRatingData
-        subAllPlanVC.isOpenFrom = isOpenFrom
-        subAllPlanVC.completionMorePlan = { (result, param) in
-            completionMorePlan(result, param)
+        DispatchQueue.main.async { [weak self] in
+            
+            guard let self = self else { return }
+            
+            let subAllPlanVC = SubMorePlanVC()
+            subAllPlanVC.isFromTimeline = isFromTimeline
+            subAllPlanVC.isPresentSubAlertSheet = isPresentSubAlertSheet
+            subAllPlanVC.customizationSubMorePlan = customizationSubMorePlan
+            subAllPlanVC.customizationSubRatingData = customizationSubRatingData
+            subAllPlanVC.isOpenFrom = isOpenFrom
+            subAllPlanVC.completionMorePlan = { (result, param) in
+                completionMorePlan(result, param)
+            }
+            subAllPlanVC.modalPresentationStyle = .fullScreen
+            subAllPlanVC.modalTransitionStyle = .crossDissolve
+            self.present(subAllPlanVC, animated: true, completion: nil)
         }
-        subAllPlanVC.modalPresentationStyle = .fullScreen
-        subAllPlanVC.modalTransitionStyle = .crossDissolve
-        self.present(subAllPlanVC, animated: true, completion: nil)
     }
     
     public func openSubAllPlanVC(
@@ -195,23 +200,27 @@ extension UIViewController
         isOpenFrom: String,
         completionMorePlan: @escaping (SubCloseCompletionBlock, [String: String]?) -> Void
     ) {
-        let subAllPlanVC = SubAllPlanVC()
-        subAllPlanVC.isFromTimeline = isFromTimeline
-        subAllPlanVC.arrFeature = arrFeature
-        subAllPlanVC.arrReview = arrReview
-        subAllPlanVC.subsciptionContinueBtnTextIndex = subsciptionContinueBtnTextIndex
-        subAllPlanVC.customizationSubRatingData = customizationSubRatingData
-        subAllPlanVC.enableRatingAutoScroll = enableRatingAutoScroll
-        subAllPlanVC.isRatingScrollEnable = isRatingScrollEnable
-        subAllPlanVC.isPresentSubAlertSheet = isPresentSubAlertSheet
-        subAllPlanVC.lifetimeDiscountVal = lifetimeDiscountVal
-        subAllPlanVC.isOpenFrom = isOpenFrom
-        subAllPlanVC.completionMorePlan = { (result, param) in
-            completionMorePlan(result, param)
+        DispatchQueue.main.async { [weak self] in
+            
+            guard let self = self else { return }
+            let subAllPlanVC = SubAllPlanVC()
+            subAllPlanVC.isFromTimeline = isFromTimeline
+            subAllPlanVC.arrFeature = arrFeature
+            subAllPlanVC.arrReview = arrReview
+            subAllPlanVC.subsciptionContinueBtnTextIndex = subsciptionContinueBtnTextIndex
+            subAllPlanVC.customizationSubRatingData = customizationSubRatingData
+            subAllPlanVC.enableRatingAutoScroll = enableRatingAutoScroll
+            subAllPlanVC.isRatingScrollEnable = isRatingScrollEnable
+            subAllPlanVC.isPresentSubAlertSheet = isPresentSubAlertSheet
+            subAllPlanVC.lifetimeDiscountVal = lifetimeDiscountVal
+            subAllPlanVC.isOpenFrom = isOpenFrom
+            subAllPlanVC.completionMorePlan = { (result, param) in
+                completionMorePlan(result, param)
+            }
+            subAllPlanVC.modalPresentationStyle = .fullScreen
+            subAllPlanVC.modalTransitionStyle = .crossDissolve
+            self.present(subAllPlanVC, animated: true, completion: nil)
         }
-        subAllPlanVC.modalPresentationStyle = .fullScreen
-        subAllPlanVC.modalTransitionStyle = .crossDissolve
-        self.present(subAllPlanVC, animated: true, completion: nil)
     }
     
     public func openSubDiscountVC(

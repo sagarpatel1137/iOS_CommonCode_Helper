@@ -795,37 +795,29 @@ extension SubMorePlanVC {
         Facebook_Events.addEventforSubscription(plan: selected_Plan)
         
         if selected_Plan.plan_Free_Trail.isFreeTrail {
-            AddFirebaseEvent(eventName: EventsValues.SubSixBoxTrial, parameters: [
+            let param = [
                 "from": self.isOpenFrom,
                 "sku" : self.selected_Plan.plan_Id,
                 "type" : self.selected_Plan.plan_Type.rawValue
-            ])
+            ]
+            AddFirebaseEvent(eventName: EventsValues.SubSixBoxTrial, parameters: param)
             scheduleFreeTrialNotification(noOfDays: selected_Plan.plan_Free_Trail.duration)
+            NotificationCenter.default.post(name: notificationPurchaseSuccessfully, object: nil)
+            self.dismiss(animated: true, completion: {
+                self.completionMorePlan!(.purchaseSuccess, param)
+            })
         } else {
-            AddFirebaseEvent(eventName: EventsValues.SubSixBoxSuccess, parameters: [
+            let param = [
                 "from": self.isOpenFrom,
                 "sku" : self.selected_Plan.plan_Id,
                 "type" : self.selected_Plan.plan_Type.rawValue
-            ])
+            ]
+            AddFirebaseEvent(eventName: EventsValues.SubSixBoxSuccess, parameters: param)
+            NotificationCenter.default.post(name: notificationPurchaseSuccessfully, object: nil)
+            self.dismiss(animated: true, completion: {
+                self.completionMorePlan!(.purchaseSuccess, param)
+            })
         }
-        
-        NotificationCenter.default.post(name: notificationPurchaseSuccessfully, object: nil)
-        self.dismiss(animated: true, completion: {
-            
-            if self.selected_Plan.plan_Free_Trail.isFreeTrail {
-                self.completionMorePlan!(.purchaseSuccess, [
-                    "from": self.isOpenFrom,
-                    "sku" : self.selected_Plan.plan_Id,
-                    "type" : self.selected_Plan.plan_Type.rawValue
-                ])
-            } else {
-                self.completionMorePlan!(.purchaseSuccess, [
-                    "from": self.isOpenFrom,
-                    "sku" : self.selected_Plan.plan_Id,
-                    "type" : self.selected_Plan.plan_Type.rawValue
-                ])
-            }
-        })
     }
     
     private func restoreSucess() {

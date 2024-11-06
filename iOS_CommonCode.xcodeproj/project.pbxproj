@@ -83,10 +83,10 @@
 		81B0F3142CB0FFD50014E08A /* Pod_ru.strings in Resources */ = {isa = PBXBuildFile; fileRef = 81B0F3052CB0FFD40014E08A /* Pod_ru.strings */; };
 		81B0F3152CB0FFD50014E08A /* Pod_fil.strings in Resources */ = {isa = PBXBuildFile; fileRef = 81B0F3062CB0FFD40014E08A /* Pod_fil.strings */; };
 		81B0F3162CB0FFD50014E08A /* Pod_ko.strings in Resources */ = {isa = PBXBuildFile; fileRef = 81B0F3072CB0FFD40014E08A /* Pod_ko.strings */; };
-		81B0F3172CB0FFD50014E08A /* Pod_pt-PT.strings in Resources */ = {isa = PBXBuildFile; fileRef = 81B0F3082CB0FFD40014E08A /* Pod_pt-PT.strings */; };
+		81B0F3172CB0FFD50014E08A /* Pod_pt.strings in Resources */ = {isa = PBXBuildFile; fileRef = 81B0F3082CB0FFD40014E08A /* Pod_pt.strings */; };
 		81B0F3182CB0FFD50014E08A /* Pod_af.strings in Resources */ = {isa = PBXBuildFile; fileRef = 81B0F3092CB0FFD50014E08A /* Pod_af.strings */; };
 		81B0F3192CB0FFD50014E08A /* Pod_ja.strings in Resources */ = {isa = PBXBuildFile; fileRef = 81B0F30A2CB0FFD50014E08A /* Pod_ja.strings */; };
-		81B0F31A2CB0FFD50014E08A /* Pod_zh-Hans.strings in Resources */ = {isa = PBXBuildFile; fileRef = 81B0F30B2CB0FFD50014E08A /* Pod_zh-Hans.strings */; };
+		81B0F31A2CB0FFD50014E08A /* Pod_zh.strings in Resources */ = {isa = PBXBuildFile; fileRef = 81B0F30B2CB0FFD50014E08A /* Pod_zh.strings */; };
 		81B0F31E2CB105D70014E08A /* RatingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81B0F31B2CB105D70014E08A /* RatingVC.swift */; };
 		81B0F31F2CB105D70014E08A /* RatingVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 81B0F31C2CB105D70014E08A /* RatingVC.xib */; };
 		81B0F3212CB106620014E08A /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81B0F3202CB106620014E08A /* UserDefaults.swift */; };
@@ -269,10 +269,10 @@
 		81B0F3052CB0FFD40014E08A /* Pod_ru.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Pod_ru.strings; sourceTree = "<group>"; };
 		81B0F3062CB0FFD40014E08A /* Pod_fil.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Pod_fil.strings; sourceTree = "<group>"; };
 		81B0F3072CB0FFD40014E08A /* Pod_ko.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Pod_ko.strings; sourceTree = "<group>"; };
-		81B0F3082CB0FFD40014E08A /* Pod_pt-PT.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = "Pod_pt-PT.strings"; sourceTree = "<group>"; };
+		81B0F3082CB0FFD40014E08A /* Pod_pt.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Pod_pt.strings; sourceTree = "<group>"; };
 		81B0F3092CB0FFD50014E08A /* Pod_af.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Pod_af.strings; sourceTree = "<group>"; };
 		81B0F30A2CB0FFD50014E08A /* Pod_ja.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Pod_ja.strings; sourceTree = "<group>"; };
-		81B0F30B2CB0FFD50014E08A /* Pod_zh-Hans.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = "Pod_zh-Hans.strings"; sourceTree = "<group>"; };
+		81B0F30B2CB0FFD50014E08A /* Pod_zh.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Pod_zh.strings; sourceTree = "<group>"; };
 		81B0F31B2CB105D70014E08A /* RatingVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RatingVC.swift; sourceTree = "<group>"; };
 		81B0F31C2CB105D70014E08A /* RatingVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RatingVC.xib; sourceTree = "<group>"; };
 		81B0F3202CB106620014E08A /* UserDefaults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaults.swift; sourceTree = "<group>"; };
@@ -624,9 +624,9 @@
 			isa = PBXGroup;
 			children = (
 				81B0F3032CB0FFD40014E08A /* Pod_en.strings */,
-				81B0F3082CB0FFD40014E08A /* Pod_pt-PT.strings */,
+				81B0F3082CB0FFD40014E08A /* Pod_pt.strings */,
 				81B0F2FE2CB0FFD40014E08A /* Pod_da.strings */,
-				81B0F30B2CB0FFD50014E08A /* Pod_zh-Hans.strings */,
+				81B0F30B2CB0FFD50014E08A /* Pod_zh.strings */,
 				81B0F2FD2CB0FFD40014E08A /* Pod_es.strings */,
 				81B0F3002CB0FFD40014E08A /* Pod_fr.strings */,
 				81B0F3022CB0FFD40014E08A /* Pod_it.strings */,
@@ -1075,10 +1075,10 @@
 				81B0F3432CB10DA80014E08A /* Pod_sub_discount_btn.json in Resources */,
 				81C5800B2CD8A3880027FAE3 /* ic_sub_close.svg in Resources */,
 				813A0A232CBF69E400B5892A /* ThankYouVC.xib in Resources */,
-				81B0F31A2CB0FFD50014E08A /* Pod_zh-Hans.strings in Resources */,
+				81B0F31A2CB0FFD50014E08A /* Pod_zh.strings in Resources */,
 				81C580242CD8A6030027FAE3 /* ic_done.svg in Resources */,
 				813A0A282CBF7D0900B5892A /* SubAllPlanVC.xib in Resources */,
-				81B0F3172CB0FFD50014E08A /* Pod_pt-PT.strings in Resources */,
+				81B0F3172CB0FFD50014E08A /* Pod_pt.strings in Resources */,
 				81A089C62C9D39A60091CFB3 /* Shimmer_Adptiv_Banner.xib in Resources */,
 				81C57FE42CD8A1B60027FAE3 /* vasundhara_infotech_logo.jpeg in Resources */,
 				81C5800D2CD8A3900027FAE3 /* ic_timeline_bell.svg in Resources */,

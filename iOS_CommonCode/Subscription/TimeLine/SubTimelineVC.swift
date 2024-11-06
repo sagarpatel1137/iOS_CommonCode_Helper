@@ -435,18 +435,18 @@ extension SubTimelineVC
     private func purchaseSuccess()
     {
         TikTok_Events.tikTokPurchaseSuccessEvent(plan: selected_Plan)
-        
-        AddFirebaseEvent(eventName: .SubMonthltyMonthTimeLimeTrial, parameters: [
+        let param = [
             "from": self.isOpenFrom,
             "sku" : self.selected_Plan.plan_Id,
             "type" : self.selected_Plan.plan_Type.rawValue
-        ])
+        ]
+        AddFirebaseEvent(eventName: .SubMonthltyMonthTimeLimeTrial, parameters: param)
         
         scheduleFreeTrialNotification(noOfDays: selected_Plan.plan_Free_Trail.duration)
         
         NotificationCenter.default.post(name: notificationPurchaseSuccessfully, object: nil)
         self.dismiss(animated: true, completion: {
-            self.completionTimeline!(.purchaseSuccess, [:])
+            self.completionTimeline!(.purchaseSuccess, param)
         })
     }
     

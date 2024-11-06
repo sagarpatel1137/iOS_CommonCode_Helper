@@ -580,24 +580,31 @@ extension SubAllPlanVC
         TikTok_Events.tikTokPurchaseSuccessEvent(plan: selected_Plan)
         
         if selected_Plan.plan_Free_Trail.isFreeTrail {
-            AddFirebaseEvent(eventName: EventsValues.SubAllPlanTrial, parameters: [
+            let param = [
                 "from": self.isOpenFrom,
                 "sku" : self.selected_Plan.plan_Id,
                 "type" : self.selected_Plan.plan_Type.rawValue
-            ])
+            ]
+            AddFirebaseEvent(eventName: EventsValues.SubAllPlanTrial, parameters: param)
             scheduleFreeTrialNotification(noOfDays: selected_Plan.plan_Free_Trail.duration)
+            
+            NotificationCenter.default.post(name: notificationPurchaseSuccessfully, object: nil)
+            self.dismiss(animated: true, completion: {
+                self.completionMorePlan!(.purchaseSuccess, param)
+            })
         } else {
-            AddFirebaseEvent(eventName: EventsValues.SubAllPlanSuccess, parameters: [
+            let param = [
                 "from": self.isOpenFrom,
                 "sku" : self.selected_Plan.plan_Id,
                 "type" : self.selected_Plan.plan_Type.rawValue
-            ])
+            ]
+            AddFirebaseEvent(eventName: EventsValues.SubAllPlanSuccess, parameters: param)
+            
+            NotificationCenter.default.post(name: notificationPurchaseSuccessfully, object: nil)
+            self.dismiss(animated: true, completion: {
+                self.completionMorePlan!(.purchaseSuccess, param)
+            })
         }
-        
-        NotificationCenter.default.post(name: notificationPurchaseSuccessfully, object: nil)
-        self.dismiss(animated: true, completion: {
-            self.completionMorePlan!(.purchaseSuccess, [:])
-        })
     }
     
     func restoreSucess()
