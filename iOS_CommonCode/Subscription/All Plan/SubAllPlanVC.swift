@@ -115,7 +115,6 @@ public class SubAllPlanVC: UIViewController {
     public var customizationSubRatingData: UICustomizationSubRatingData?
     public var enableRatingAutoScroll = false
     public var isRatingScrollEnable = true
-    public var isPresentSubAlertSheet = true
     public var lifetimeDiscountVal = 80
     public var isOpenFrom = ""
 
@@ -286,13 +285,7 @@ public class SubAllPlanVC: UIViewController {
                 self.completionMorePlan!(.close, [:])
             })
         } else {
-            if isPresentSubAlertSheet {
-                presentSubAlertSheet(on: self) { [self] _ in
-                    self.dismiss(animated: true, completion: {
-                        self.completionMorePlan!(.close, [:])
-                    })
-                }
-            } else {
+            presentSubAlertSheet(on: self) { [self] _ in
                 self.dismiss(animated: true, completion: {
                     self.completionMorePlan!(.close, [:])
                 })
