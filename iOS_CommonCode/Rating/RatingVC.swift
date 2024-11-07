@@ -46,7 +46,7 @@ public class RatingVC: UIViewController {
         viewRate.layer.masksToBounds = false
         lblTitle.text = "Enjoying the app?".localized()
         lblSubTitle.text = "Let us know by leaving a 5 star rating".localized()
-        lblLater.text = "Ask me latter!".localized()
+        lblLater.text = "Ask me later!".localized()
         
         self.icRatingBG.image = ImageHelper.image(named: "ic_Rating_Background_Rating")!
         self.btnImprovment.setImage(ImageHelper.image(named: "ic_Rating_Hide")!, for: .normal)
