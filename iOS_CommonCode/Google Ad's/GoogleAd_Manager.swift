@@ -309,7 +309,6 @@ extension GoogleAd_Manager
     {
         if isLoadNewAd {
             isLoadedNativeAd = false
-            load_NativeAd()
         }
         
         if adType == .custom_Native {
@@ -380,6 +379,7 @@ extension GoogleAd_Manager
                     
                 }
                 else {
+                    self.load_NativeAd()
                     self.nativeAd_LoadDone = {
                         if adType == .custom_Native {
                             parentView.setup_NativeCustomAdView(adView: nativeAdView!) {
