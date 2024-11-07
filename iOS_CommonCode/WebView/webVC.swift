@@ -39,6 +39,8 @@ public class webVC: UIViewController {
     // MARK: - Private Properties
     private let reachabilityManager = NetworkReachabilityManager()
 
+    var completionBack: (()->())?
+
     // MARK: - Status Bar Settings
     public override var prefersStatusBarHidden: Bool {
         return true
@@ -107,6 +109,7 @@ public class webVC: UIViewController {
     //MARK: - Actions
     @IBAction func btnBackClick(_ sender: Any) {
         dismiss(animated: true, completion: nil)
+        completionBack?()
     }
 }
 

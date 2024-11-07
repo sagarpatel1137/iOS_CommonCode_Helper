@@ -29,10 +29,10 @@ public struct UICustomizationSubThankYouData {
     public var descriptionText: String?
     public var getStartedText: String?
     
-    public init(titleTextColor: String? = nil, descriptionTextColor: String? = nil, getStartedTextColor: String? = nil) {
-        self.titleText = titleText ?? "Thank You For Subscription"
-        self.descriptionText = descriptionText ?? "Now you can enjoy the service!"
-        self.getStartedText = getStartedText ?? "Get Started"
+    public init(titleText: String? = nil, descriptionText: String? = nil, getStartedText: String? = nil) {
+        self.titleText = titleText ?? "Thank You For Subscription".localized()
+        self.descriptionText = descriptionText ?? "Now you can enjoy the service!".localized()
+        self.getStartedText = getStartedText ?? "Get Started".localized()
     }
 }
 
@@ -67,7 +67,6 @@ public class ThankYouVC: UIViewController {
         }
         
         setUI()
-        setText()
         setFont()
         updateUI()
     }
@@ -85,12 +84,6 @@ public class ThankYouVC: UIViewController {
             let to = hexStringToUIColor(hex: "#005BEA")
             self.btnStart.addGradient(colors: [from, to])
         }
-    }
-    
-    private func setText() {
-        self.lblTitle.text = "Thank You For Subscription".localized()
-        self.lblSubTitle.text = "Now you can enjoy the service!".localized()
-        btnStart.setTitle("Get Started".localized(), for: .normal)
     }
     
     private func setFont() {
@@ -124,8 +117,8 @@ extension ThankYouVC {
             self.lblSubTitle.textColor = self.customizationSubThankYouTheme.textColor
         }
         
-        self.lblTitle.text = self.customizationSubThankYouData.titleText?.localized()
-        self.lblSubTitle.text = self.customizationSubThankYouData.descriptionText?.localized()
-        self.btnStart.setTitle(self.customizationSubThankYouData.getStartedText?.localized().localized(), for: .normal)
+        self.lblTitle.text = self.customizationSubThankYouData.titleText
+        self.lblSubTitle.text = self.customizationSubThankYouData.descriptionText
+        self.btnStart.setTitle(self.customizationSubThankYouData.getStartedText, for: .normal)
     }
 }

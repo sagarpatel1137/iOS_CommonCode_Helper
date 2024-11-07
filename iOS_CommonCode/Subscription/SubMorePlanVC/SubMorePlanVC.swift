@@ -107,13 +107,8 @@ public class SubMorePlanVC: UIViewController {
     public var isOpenFrom = ""
 
     //MARK: -
-    var arrReview: [ReviewModel] = [
-        ReviewModel(title: "", starCount: 5, description: "", name: ""),
-        ReviewModel(title: "", starCount: 5, description: "", name: ""),
-        ReviewModel(title: "Amazing AI Voices", starCount: 5, description: "The AI voices are incredibly realistic! It’s fun to play around and impress friends with how lifelike they sound. A must-have app for voice enthusiasts.", name: "Lily Harper"),
-        ReviewModel(title: "Endless Fun with Prank Sounds", starCount: 5, description: "The prank sounds are hilarious! I’ve been using them to surprise my friends, and it never gets old. The app is packed with endless fun.", name: "Daniel Clarke"),
-        ReviewModel(title: "Funny Reels Made Easy", starCount: 5, description: "Creating funny reels has never been this easy! The app has a variety of options that make every reel unique and entertaining.", name: "Zoe Patel")
-    ]
+    var arrReview: [ReviewModel] = []
+    private var isFromIntial = false
     
     enum errorMsg : String
     {
@@ -220,8 +215,9 @@ public class SubMorePlanVC: UIViewController {
         let sixBoxDynamicPlanSelectedIndex = self.customizationSubMorePlan?.sixBoxDynamicPlanSelectedIndex ?? 0
         selected_Plan = arrPlansList[sixBoxDynamicPlanSelectedIndex].plan
         setPlanDetails(sixBoxDynamicPlanSelectedIndex)
-        DispatchQueue.main.async { [weak self] in
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.0) { [weak self] in
             guard let self = self else { return }
+            self.isFromIntial = true
             self.btnProductClicked(self.arrPlanBtn[sixBoxDynamicPlanSelectedIndex])
         }
     }
@@ -346,7 +342,11 @@ extension SubMorePlanVC
     }
     
     @IBAction func btnProductClicked(_ sender: UIButton) {
+        if selected_Plan.plan_Id == arrPlansList[sender.tag].plan.plan_Id && !isFromIntial {
+            return
+        }
         
+        isFromIntial = false
         selected_Plan = arrPlansList[sender.tag].plan
         setPlanDetails(sender.tag)
         
@@ -863,6 +863,8 @@ extension SubMorePlanVC : UICollectionViewDelegate, UICollectionViewDataSource, 
     }
     
     public func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: collectionView.bounds.width, height: collectionView.bounds.height)
+        let width = UIScreen.main.bounds.width - ((UIDevice.current.isiPad ? 90 : 15) * 2)
+        let height = width * (UIDevice.current.isiPad ? (140/648) : (100/296))
+        return CGSize(width: width, height: height)
     }
 }

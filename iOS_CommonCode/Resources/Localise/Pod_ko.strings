@@ -74,17 +74,17 @@
 "TRY NOW" = "지금 시도하세요";
 
 //Subscription
-"day" = "day";
-"days" = "days";
-"week" = "week";
-"month" = "month";
-"year" = "year";
-"Day" = "Day";
-"Days" = "Days";
-"Week" = "Week";
-"Month" = "Month";
-"Year" = "Year";
-"Continue" = "Continue";
+"day" = "일";
+"days" = "일";
+"week" = "주";
+"month" = "월";
+"year" = "년";
+"Day" = "일";
+"Days" = "일";
+"Week" = "주";
+"Month" = "월";
+"Year" = "년";
+"Continue" = "계속하다";
 "Pay Nothing Now" = "지금은 아무것도 지불하지 마세요";
 "Cancel anytime. Secure with App Store" = "언제든지 취소할 수 있습니다. App Store로 보안";
 "Restore" = "복원";

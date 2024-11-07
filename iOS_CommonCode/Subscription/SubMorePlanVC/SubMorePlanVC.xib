@@ -131,10 +131,10 @@
                             <rect key="frame" x="0.0" y="0.0" width="393" height="793"/>
                             <subviews>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="l4o-DE-EBC">
-                                    <rect key="frame" x="0.0" y="0.0" width="393" height="775"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="393" height="774.66666666666663"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Unlock All Features" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a1s-io-ZhZ" customClass="MarqueeLabel" customModule="MarqueeLabel">
-                                            <rect key="frame" x="15" y="4.9999999999999982" width="322" height="29.333333333333329"/>
+                                            <rect key="frame" x="15" y="7.9999999999999982" width="322" height="29.333333333333329"/>
                                             <fontDescription key="fontDescription" name="Karla-Bold" family="Karla" pointSize="25"/>
                                             <color key="textColor" red="0.27058823529999998" green="0.43137254899999999" blue="0.99607843139999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
@@ -144,7 +144,7 @@
                                             </userDefinedRuntimeAttributes>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6iO-YU-Vzo" customClass="MarqueeLabel" customModule="MarqueeLabel">
-                                            <rect key="frame" x="15" y="39.333333333333329" width="322" height="0.0"/>
+                                            <rect key="frame" x="15" y="42.333333333333329" width="322" height="0.0"/>
                                             <fontDescription key="fontDescription" name="Karla-Regular" family="Karla" pointSize="14"/>
                                             <color key="textColor" red="0.15686274510000001" green="0.20784313730000001" blue="0.2470588235" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
@@ -173,7 +173,7 @@
                                             <rect key="frame" x="355" y="15" width="20" height="20"/>
                                         </imageView>
                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="ak2-RY-biF">
-                                            <rect key="frame" x="15" y="54.333333333333329" width="363" height="171.66666666666669"/>
+                                            <rect key="frame" x="15" y="57.333333333333329" width="363" height="171.66666666666669"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="KKa-iI-QWy">
                                                     <rect key="frame" x="0.0" y="0.0" width="363" height="82"/>
@@ -452,7 +452,7 @@
                                             </variation>
                                         </stackView>
                                         <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b3c-x4-HDs">
-                                            <rect key="frame" x="18.333333333333343" y="226" width="356.33333333333326" height="0.0"/>
+                                            <rect key="frame" x="18.333333333333343" y="229" width="356.33333333333326" height="0.0"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" id="BQI-wU-ehj">
                                                     <variation key="heightClass=regular-widthClass=regular" constant="0.0"/>
@@ -463,7 +463,7 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" delaysContentTouches="NO" canCancelContentTouches="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="bKX-Ed-Y0a">
-                                            <rect key="frame" x="10" y="240" width="373" height="126"/>
+                                            <rect key="frame" x="15" y="242.99999999999997" width="363" height="122.66666666666666"/>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" secondItem="bKX-Ed-Y0a" secondAttribute="height" multiplier="296:100" id="X4X-0n-AJe"/>
@@ -489,7 +489,7 @@
                                             </variation>
                                         </collectionView>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YkA-g6-l4W" userLabel="ViewShield">
-                                            <rect key="frame" x="64" y="380" width="265" height="30"/>
+                                            <rect key="frame" x="64" y="379.66666666666669" width="265" height="30"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="iUB-Rb-1ED">
                                                     <rect key="frame" x="10" y="5" width="245" height="20"/>
@@ -529,7 +529,7 @@
                                             </userDefinedRuntimeAttributes>
                                         </view>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="031-ML-xFO" userLabel="View Select Plan">
-                                            <rect key="frame" x="13.666666666666657" y="424" width="365.66666666666674" height="183"/>
+                                            <rect key="frame" x="13.666666666666657" y="423.66666666666674" width="365.66666666666674" height="183"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Hh8-uw-nTr">
                                                     <rect key="frame" x="0.0" y="0.0" width="365.66666666666669" height="183"/>
@@ -557,7 +557,7 @@
                                                                             </userDefinedRuntimeAttributes>
                                                                         </view>
                                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lgE-Q3-Brb" userLabel="ViewTemplate">
-                                                                            <rect key="frame" x="1.3333333333333357" y="1.6666666666666856" width="112.33333333333331" height="25.333333333333332"/>
+                                                                            <rect key="frame" x="1.3333333333333357" y="1.3333333333333144" width="112.33333333333331" height="25.333333333333332"/>
                                                                             <subviews>
                                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BEST VALUE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nIp-pc-z4z" customClass="MarqueeLabel" customModule="MarqueeLabel">
                                                                                     <rect key="frame" x="3" y="3" width="106.33333333333333" height="19.333333333333332"/>
@@ -583,7 +583,7 @@
                                                                             </userDefinedRuntimeAttributes>
                                                                         </view>
                                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ckd-BR-Xr6" userLabel="ViewDetail">
-                                                                            <rect key="frame" x="1.3333333333333357" y="27.000000000000007" width="112.33333333333331" height="103.66666666666669"/>
+                                                                            <rect key="frame" x="1.3333333333333357" y="26.666666666666629" width="112.33333333333331" height="104"/>
                                                                             <subviews>
                                                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_sub_plan_0_sel" translatesAutoresizingMaskIntoConstraints="NO" id="eRy-aM-BTP">
                                                                                     <rect key="frame" x="43.666666666666664" y="0.0" width="24.999999999999993" height="25"/>
@@ -593,7 +593,7 @@
                                                                                     </constraints>
                                                                                 </imageView>
                                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lifetime" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jON-8J-0oB" customClass="MarqueeLabel" customModule="MarqueeLabel">
-                                                                                    <rect key="frame" x="2" y="24.999999999999996" width="108.33333333333333" height="14.333333333333332"/>
+                                                                                    <rect key="frame" x="2" y="25.000000000000053" width="108.33333333333333" height="14.333333333333332"/>
                                                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
                                                                                     <color key="textColor" red="0.15686274510000001" green="0.20784313730000001" blue="0.2470588235" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                                     <nil key="highlightedColor"/>
@@ -602,7 +602,7 @@
                                                                                     </userDefinedRuntimeAttributes>
                                                                                 </label>
                                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1 Purchase" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nj7-ya-rdt" customClass="MarqueeLabel" customModule="MarqueeLabel">
-                                                                                    <rect key="frame" x="2" y="43.333333333333371" width="108.33333333333333" height="13.333333333333336"/>
+                                                                                    <rect key="frame" x="2" y="43.333333333333314" width="108.33333333333333" height="13.333333333333336"/>
                                                                                     <fontDescription key="fontDescription" type="system" weight="medium" pointSize="11"/>
                                                                                     <color key="textColor" red="0.15686274510000001" green="0.20784313730000001" blue="0.2470588235" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                                     <nil key="highlightedColor"/>
@@ -611,7 +611,7 @@
                                                                                     </userDefinedRuntimeAttributes>
                                                                                 </label>
                                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$0.00/month" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Aq-Jn-JtG" customClass="MarqueeLabel" customModule="MarqueeLabel">
-                                                                                    <rect key="frame" x="2" y="58.666666666666629" width="108.33333333333333" height="8.6666666666666714"/>
+                                                                                    <rect key="frame" x="2" y="58.666666666666686" width="108.33333333333333" height="8.6666666666666714"/>
                                                                                     <fontDescription key="fontDescription" type="system" weight="medium" pointSize="7"/>
                                                                                     <color key="textColor" red="0.15686274510000001" green="0.20784313730000001" blue="0.2470588235" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                                     <nil key="highlightedColor"/>
@@ -637,10 +637,10 @@
                                                                             </constraints>
                                                                         </view>
                                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="v7T-qK-Ywh" userLabel="ViewPrice">
-                                                                            <rect key="frame" x="1.3333333333333357" y="132.33333333333337" width="112.33333333333331" height="49.333333333333343"/>
+                                                                            <rect key="frame" x="1.3333333333333357" y="132.33333333333331" width="112.33333333333331" height="49"/>
                                                                             <subviews>
                                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$0.00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r05-A1-pZJ" customClass="MarqueeLabel" customModule="MarqueeLabel">
-                                                                                    <rect key="frame" x="3" y="3" width="106.33333333333333" height="43.333333333333336"/>
+                                                                                    <rect key="frame" x="3" y="3" width="106.33333333333333" height="43"/>
                                                                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="13"/>
                                                                                     <color key="textColor" red="0.15686274510000001" green="0.20784313730000001" blue="0.2470588235" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                                     <nil key="highlightedColor"/>
@@ -734,7 +734,7 @@
                                                                             </userDefinedRuntimeAttributes>
                                                                         </view>
                                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WJx-U7-ArK" userLabel="ViewTemplate">
-                                                                            <rect key="frame" x="1.3333333333333428" y="1.6666666666666856" width="112.33333333333333" height="25.333333333333332"/>
+                                                                            <rect key="frame" x="1.3333333333333428" y="1.3333333333333144" width="112.33333333333333" height="25.333333333333332"/>
                                                                             <subviews>
                                                                                 <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BEST VALUE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PGD-zo-tDp" customClass="MarqueeLabel" customModule="MarqueeLabel">
                                                                                     <rect key="frame" x="3" y="3" width="106.33333333333333" height="19.333333333333332"/>
@@ -760,7 +760,7 @@
                                                                             </userDefinedRuntimeAttributes>
                                                                         </view>
                                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XMV-nW-tWB" userLabel="ViewDetail">
-                                                                            <rect key="frame" x="1.3333333333333428" y="27.000000000000007" width="112.33333333333333" height="103.66666666666669"/>
+                                                                            <rect key="frame" x="1.3333333333333428" y="26.666666666666629" width="112.33333333333333" height="104"/>
                                                                             <subviews>
                                                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_sub_plan_2_sel" translatesAutoresizingMaskIntoConstraints="NO" id="4Ng-Hz-xba">
                                                                                     <rect key="frame" x="43.666666666666657" y="0.0" width="25" height="25"/>
@@ -770,7 +770,7 @@
                                                                                     </constraints>
                                                                                 </imageView>
                                                                                 <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Yearly" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D6Y-y9-Jbn" customClass="MarqueeLabel" customModule="MarqueeLabel">
-                                                                                    <rect key="frame" x="2" y="25" width="108.33333333333333" height="13.333333333333336"/>
+                                                                                    <rect key="frame" x="2" y="25.000000000000057" width="108.33333333333333" height="13.333333333333336"/>
                                                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="11"/>
                                                                                     <color key="textColor" red="0.15686274510000001" green="0.20784313730000001" blue="0.2470588235" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                                     <nil key="highlightedColor"/>
@@ -779,7 +779,7 @@
                                                                                     </userDefinedRuntimeAttributes>
                                                                                 </label>
                                                                                 <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="7 Days free" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OGn-vB-UCP" customClass="MarqueeLabel" customModule="MarqueeLabel">
-                                                                                    <rect key="frame" x="2" y="39.333333333333371" width="108.33333333333333" height="13.333333333333336"/>
+                                                                                    <rect key="frame" x="2" y="39.333333333333314" width="108.33333333333333" height="13.333333333333336"/>
                                                                                     <fontDescription key="fontDescription" type="system" weight="medium" pointSize="11"/>
                                                                                     <color key="textColor" red="0.15686274510000001" green="0.20784313730000001" blue="0.2470588235" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                                     <nil key="highlightedColor"/>
@@ -788,7 +788,7 @@
                                                                                     </userDefinedRuntimeAttributes>
                                                                                 </label>
                                                                                 <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$0.00/month" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="axH-m7-TjE" customClass="MarqueeLabel" customModule="MarqueeLabel">
-                                                                                    <rect key="frame" x="2" y="54.666666666666629" width="108.33333333333333" height="8.6666666666666643"/>
+                                                                                    <rect key="frame" x="2" y="54.666666666666686" width="108.33333333333333" height="8.6666666666666643"/>
                                                                                     <fontDescription key="fontDescription" type="system" weight="medium" pointSize="7"/>
                                                                                     <color key="textColor" red="0.15686274510000001" green="0.20784313730000001" blue="0.2470588235" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                                     <nil key="highlightedColor"/>
@@ -814,10 +814,10 @@
                                                                             </constraints>
                                                                         </view>
                                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="suS-Kb-TZr" userLabel="ViewPrice">
-                                                                            <rect key="frame" x="1.3333333333333428" y="132.33333333333337" width="112.33333333333333" height="49.333333333333343"/>
+                                                                            <rect key="frame" x="1.3333333333333428" y="132.33333333333331" width="112.33333333333333" height="49"/>
                                                                             <subviews>
                                                                                 <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$0.00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m5M-hx-d8Z" customClass="MarqueeLabel" customModule="MarqueeLabel">
-                                                                                    <rect key="frame" x="3" y="3" width="106.33333333333333" height="43.333333333333336"/>
+                                                                                    <rect key="frame" x="3" y="3" width="106.33333333333333" height="43"/>
                                                                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="13"/>
                                                                                     <color key="textColor" red="0.15686274510000001" green="0.20784313730000001" blue="0.2470588235" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                                     <nil key="highlightedColor"/>
@@ -911,7 +911,7 @@
                                                                             </userDefinedRuntimeAttributes>
                                                                         </view>
                                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AaI-tC-o6U" userLabel="ViewTemplate">
-                                                                            <rect key="frame" x="1.6666666666666856" y="1.6666666666666856" width="112.33333333333333" height="25.333333333333332"/>
+                                                                            <rect key="frame" x="1.6666666666666856" y="1.3333333333333144" width="112.33333333333333" height="25.333333333333332"/>
                                                                             <subviews>
                                                                                 <label opaque="NO" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BEST VALUE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8JE-YZ-e7M" customClass="MarqueeLabel" customModule="MarqueeLabel">
                                                                                     <rect key="frame" x="3" y="3" width="106.33333333333333" height="19.333333333333332"/>
@@ -937,7 +937,7 @@
                                                                             </userDefinedRuntimeAttributes>
                                                                         </view>
                                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5Ne-a1-6tz" userLabel="ViewDetail">
-                                                                            <rect key="frame" x="1.6666666666666856" y="27.000000000000007" width="112.33333333333333" height="103.66666666666669"/>
+                                                                            <rect key="frame" x="1.6666666666666856" y="26.666666666666629" width="112.33333333333333" height="104"/>
                                                                             <subviews>
                                                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="2" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_sub_plan_3_sel" translatesAutoresizingMaskIntoConstraints="NO" id="LE1-sZ-9hB">
                                                                                     <rect key="frame" x="43.666666666666629" y="0.0" width="25" height="25"/>
@@ -947,7 +947,7 @@
                                                                                     </constraints>
                                                                                 </imageView>
                                                                                 <label opaque="NO" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Monthly" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Uv-rH-pvC" customClass="MarqueeLabel" customModule="MarqueeLabel">
-                                                                                    <rect key="frame" x="2" y="24.999999999999996" width="108.33333333333333" height="14.333333333333332"/>
+                                                                                    <rect key="frame" x="2" y="25.000000000000053" width="108.33333333333333" height="14.333333333333332"/>
                                                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
                                                                                     <color key="textColor" red="0.15686274510000001" green="0.20784313730000001" blue="0.2470588235" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                                     <nil key="highlightedColor"/>
@@ -956,7 +956,7 @@
                                                                                     </userDefinedRuntimeAttributes>
                                                                                 </label>
                                                                                 <label opaque="NO" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="7 Days free" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S1I-DM-kO2" customClass="MarqueeLabel" customModule="MarqueeLabel">
-                                                                                    <rect key="frame" x="2" y="43.333333333333371" width="108.33333333333333" height="13.333333333333336"/>
+                                                                                    <rect key="frame" x="2" y="43.333333333333314" width="108.33333333333333" height="13.333333333333336"/>
                                                                                     <fontDescription key="fontDescription" type="system" weight="medium" pointSize="11"/>
                                                                                     <color key="textColor" red="0.15686274510000001" green="0.20784313730000001" blue="0.2470588235" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                                     <nil key="highlightedColor"/>
@@ -965,7 +965,7 @@
                                                                                     </userDefinedRuntimeAttributes>
                                                                                 </label>
                                                                                 <label opaque="NO" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$0.00/month" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qx6-v7-TcP" customClass="MarqueeLabel" customModule="MarqueeLabel">
-                                                                                    <rect key="frame" x="2" y="58.666666666666629" width="108.33333333333333" height="8.6666666666666714"/>
+                                                                                    <rect key="frame" x="2" y="58.666666666666686" width="108.33333333333333" height="8.6666666666666714"/>
                                                                                     <fontDescription key="fontDescription" type="system" weight="medium" pointSize="7"/>
                                                                                     <color key="textColor" red="0.15686274510000001" green="0.20784313730000001" blue="0.2470588235" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                                     <nil key="highlightedColor"/>
@@ -991,10 +991,10 @@
                                                                             </constraints>
                                                                         </view>
                                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e4m-yd-ffb" userLabel="ViewPrice">
-                                                                            <rect key="frame" x="1.6666666666666856" y="132.33333333333337" width="112.33333333333333" height="49.333333333333343"/>
+                                                                            <rect key="frame" x="1.6666666666666856" y="132.33333333333331" width="112.33333333333333" height="49"/>
                                                                             <subviews>
                                                                                 <label opaque="NO" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$0.00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dWy-kK-5I5" customClass="MarqueeLabel" customModule="MarqueeLabel">
-                                                                                    <rect key="frame" x="3" y="3" width="106.33333333333333" height="43.333333333333336"/>
+                                                                                    <rect key="frame" x="3" y="3" width="106.33333333333333" height="43"/>
                                                                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="13"/>
                                                                                     <color key="textColor" red="0.15686274510000001" green="0.20784313730000001" blue="0.2470588235" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                                     <nil key="highlightedColor"/>
@@ -1091,7 +1091,7 @@
                                             </variation>
                                         </view>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RFY-Lm-T3t" customClass="MarqueeLabel" customModule="MarqueeLabel">
-                                            <rect key="frame" x="15" y="625" width="363" height="0.0"/>
+                                            <rect key="frame" x="15" y="624.66666666666663" width="363" height="0.0"/>
                                             <fontDescription key="fontDescription" name="Karla-Regular" family="Karla" pointSize="12"/>
                                             <color key="textColor" red="0.43921568630000002" green="0.43921568630000002" blue="0.43921568630000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
@@ -1104,7 +1104,7 @@
                                             </variation>
                                         </label>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0fK-nq-f1i" userLabel="View Subscribe">
-                                            <rect key="frame" x="18.333333333333343" y="635" width="356.33333333333326" height="61.333333333333371"/>
+                                            <rect key="frame" x="18.333333333333343" y="634.66666666666663" width="356.33333333333326" height="61.333333333333371"/>
                                             <subviews>
                                                 <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_subscribe_bg" translatesAutoresizingMaskIntoConstraints="NO" id="U7C-6z-gG9">
                                                     <rect key="frame" x="0.0" y="0.0" width="356.33333333333331" height="61.333333333333336"/>
@@ -1165,14 +1165,14 @@
                                             </variation>
                                         </view>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="70p-lC-7wg">
-                                            <rect key="frame" x="9.3333333333333428" y="695.33333333333337" width="374.33333333333326" height="1"/>
+                                            <rect key="frame" x="9.3333333333333428" y="695" width="374.33333333333326" height="1"/>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="1" id="0wN-TG-02B"/>
                                             </constraints>
                                         </view>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pay Nothing Now" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rWO-7z-Tgb" customClass="MarqueeLabel" customModule="MarqueeLabel">
-                                            <rect key="frame" x="10" y="710.33333333333337" width="373" height="16"/>
+                                            <rect key="frame" x="10" y="710" width="373" height="16"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="16" id="4uL-aP-aKy"/>
                                             </constraints>
@@ -1185,7 +1185,7 @@
                                             </userDefinedRuntimeAttributes>
                                         </label>
                                         <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cAR-as-g7Q" userLabel="Stack View Btns">
-                                            <rect key="frame" x="36.666666666666657" y="740.33333333333337" width="320" height="20.666666666666629"/>
+                                            <rect key="frame" x="36.666666666666657" y="740" width="320" height="20.666666666666629"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XPG-d8-Mu6" userLabel="View1">
                                                     <rect key="frame" x="0.0" y="0.0" width="111" height="20.666666666666668"/>
@@ -1334,7 +1334,7 @@
                                             <variation key="heightClass=regular-widthClass=regular" constant="90"/>
                                         </constraint>
                                         <constraint firstItem="70p-lC-7wg" firstAttribute="centerX" secondItem="0fK-nq-f1i" secondAttribute="centerX" id="I2S-G2-c1W"/>
-                                        <constraint firstItem="bKX-Ed-Y0a" firstAttribute="leading" secondItem="ak2-RY-biF" secondAttribute="leading" constant="-5" id="JRL-GP-7RV"/>
+                                        <constraint firstItem="bKX-Ed-Y0a" firstAttribute="leading" secondItem="ak2-RY-biF" secondAttribute="leading" id="JRL-GP-7RV"/>
                                         <constraint firstItem="YkA-g6-l4W" firstAttribute="top" secondItem="bKX-Ed-Y0a" secondAttribute="bottom" constant="14" id="K1i-dh-1as">
                                             <variation key="heightClass=regular-widthClass=regular" constant="18"/>
                                         </constraint>
@@ -1346,7 +1346,7 @@
                                         <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="YkA-g6-l4W" secondAttribute="trailing" constant="30" id="Q1o-RC-pLa"/>
                                         <constraint firstItem="U7J-l2-CR4" firstAttribute="top" secondItem="2l8-J4-9uC" secondAttribute="top" constant="10" id="QaE-Zl-576"/>
                                         <constraint firstAttribute="trailing" secondItem="2l8-J4-9uC" secondAttribute="trailing" constant="8" id="R6V-FV-MSS"/>
-                                        <constraint firstItem="bKX-Ed-Y0a" firstAttribute="trailing" secondItem="ak2-RY-biF" secondAttribute="trailing" constant="5" id="Rxt-7C-m53"/>
+                                        <constraint firstItem="bKX-Ed-Y0a" firstAttribute="trailing" secondItem="ak2-RY-biF" secondAttribute="trailing" id="Rxt-7C-m53"/>
                                         <constraint firstItem="U7J-l2-CR4" firstAttribute="bottom" secondItem="2l8-J4-9uC" secondAttribute="bottom" constant="-10" id="SmA-14-xeK"/>
                                         <constraint firstItem="YkA-g6-l4W" firstAttribute="centerX" secondItem="l4o-DE-EBC" secondAttribute="centerX" id="Vbw-MF-cRl"/>
                                         <constraint firstItem="RFY-Lm-T3t" firstAttribute="top" secondItem="031-ML-xFO" secondAttribute="bottom" constant="18" id="W7W-2f-XLB">
@@ -1367,7 +1367,9 @@
                                         </constraint>
                                         <constraint firstItem="b3c-x4-HDs" firstAttribute="trailing" secondItem="0fK-nq-f1i" secondAttribute="trailing" id="e8D-ow-wIZ"/>
                                         <constraint firstItem="0fK-nq-f1i" firstAttribute="centerX" secondItem="l4o-DE-EBC" secondAttribute="centerX" id="fDQ-mm-mS2"/>
-                                        <constraint firstItem="a1s-io-ZhZ" firstAttribute="top" secondItem="l4o-DE-EBC" secondAttribute="top" constant="5" id="fjG-ak-3XP"/>
+                                        <constraint firstItem="a1s-io-ZhZ" firstAttribute="top" secondItem="l4o-DE-EBC" secondAttribute="top" constant="8" id="fjG-ak-3XP">
+                                            <variation key="heightClass=regular-widthClass=regular" constant="15"/>
+                                        </constraint>
                                         <constraint firstItem="6iO-YU-Vzo" firstAttribute="leading" secondItem="a1s-io-ZhZ" secondAttribute="leading" id="gMh-wa-G0N"/>
                                         <constraint firstAttribute="bottom" secondItem="cAR-as-g7Q" secondAttribute="bottom" constant="14" id="gce-0a-bDQ">
                                             <variation key="heightClass=regular-widthClass=regular" constant="18"/>

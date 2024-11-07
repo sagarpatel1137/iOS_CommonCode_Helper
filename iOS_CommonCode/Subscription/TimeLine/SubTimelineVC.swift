@@ -281,6 +281,7 @@ public class SubTimelineVC: UIViewController {
     
     private func openSubMorePlanVC() {
         self.openSubMorePlanVC(isFromTimeline: true,
+                               arrReview: self.arrReview,
                                isPresentSubAlertSheet: isPresentSubAlertSheet,
                                customizationSubMorePlan: customizationSubMorePlan,
                                customizationSubRatingData: customizationSubRatingData,

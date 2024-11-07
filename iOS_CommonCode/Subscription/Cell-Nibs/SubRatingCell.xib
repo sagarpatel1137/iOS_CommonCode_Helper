@@ -19,26 +19,26 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="SubRatingCell" customModule="iOS_CommonCode" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="351" height="83"/>
+            <rect key="frame" x="0.0" y="0.0" width="449" height="191"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                <rect key="frame" x="0.0" y="0.0" width="351" height="83"/>
+                <rect key="frame" x="0.0" y="0.0" width="449" height="191"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rAU-ZG-Qfd">
-                        <rect key="frame" x="5" y="5" width="341" height="73"/>
+                        <rect key="frame" x="5" y="5" width="439" height="181"/>
                         <subviews>
                             <stackView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="k3o-8a-ZQY">
-                                <rect key="frame" x="0.0" y="0.0" width="341" height="73"/>
+                                <rect key="frame" x="0.0" y="0.0" width="439" height="181"/>
                                 <subviews>
                                     <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VsW-g4-u4A" userLabel="View1">
-                                        <rect key="frame" x="0.0" y="0.0" width="341" height="73"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="439" height="181"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Y4Y-Fv-gaI">
-                                                <rect key="frame" x="15" y="10" width="53" height="53"/>
+                                                <rect key="frame" x="15" y="10" width="161" height="161"/>
                                                 <subviews>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_rating_view" translatesAutoresizingMaskIntoConstraints="NO" id="h7K-5B-58V">
-                                                        <rect key="frame" x="0.0" y="0.0" width="53" height="53"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="161" height="161"/>
                                                     </imageView>
                                                 </subviews>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -51,22 +51,22 @@
                                                 </constraints>
                                             </view>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_quote" translatesAutoresizingMaskIntoConstraints="NO" id="ppO-66-5pe">
-                                                <rect key="frame" x="303.5" y="40.5" width="27.5" height="27.5"/>
+                                                <rect key="frame" x="394" y="141" width="35" height="35"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="ppO-66-5pe" secondAttribute="height" id="FO0-IH-Dp2"/>
                                                 </constraints>
                                             </imageView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="nLm-52-pz0">
-                                                <rect key="frame" x="83" y="6" width="220.5" height="61"/>
+                                                <rect key="frame" x="191" y="50.5" width="203" height="80"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Best GPS Camera App" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.80000000000000004" translatesAutoresizingMaskIntoConstraints="NO" id="eCh-o7-R8r">
-                                                        <rect key="frame" x="0.0" y="0.0" width="220.5" height="23"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="203" height="23"/>
                                                         <fontDescription key="fontDescription" name="PlusJakartaSans-Bold" family="Plus Jakarta Sans" pointSize="18"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Accurate, Intuitive, perfect for capturing travel moments." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O6B-8s-Klp">
-                                                        <rect key="frame" x="0.0" y="23" width="220.5" height="38"/>
+                                                        <rect key="frame" x="0.0" y="23" width="203" height="57"/>
                                                         <fontDescription key="fontDescription" name="PlusJakartaSans-Medium" family="Plus Jakarta Sans" pointSize="15"/>
                                                         <color key="textColor" red="0.53725490200000003" green="0.53725490200000003" blue="0.53725490200000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
@@ -89,37 +89,37 @@
                                         </constraints>
                                     </view>
                                     <view hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KMq-nK-BRD" userLabel="View2">
-                                        <rect key="frame" x="0.0" y="0.0" width="174.5" height="73"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="359.5" height="181"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_like_sub" translatesAutoresizingMaskIntoConstraints="NO" id="EAp-bo-q7v">
-                                                <rect key="frame" x="5" y="5" width="16.5" height="16.5"/>
+                                                <rect key="frame" x="5" y="5" width="34" height="34"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="EAp-bo-q7v" secondAttribute="height" id="mal-fs-NE2"/>
                                                 </constraints>
                                             </imageView>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_rating_backgroud" translatesAutoresizingMaskIntoConstraints="NO" id="J8H-ac-LJU">
-                                                <rect key="frame" x="87" y="0.0" width="87.5" height="73"/>
+                                                <rect key="frame" x="142" y="0.0" width="217.5" height="181"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="J8H-ac-LJU" secondAttribute="height" multiplier="6:5" id="kS0-tb-eLs"/>
                                                 </constraints>
                                             </imageView>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FMy-cD-0hQ" userLabel="CountView">
-                                                <rect key="frame" x="41.5" y="13" width="40.5" height="26"/>
+                                                <rect key="frame" x="59" y="22" width="78" height="63.5"/>
                                                 <subviews>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_rating_downloads" translatesAutoresizingMaskIntoConstraints="NO" id="aBR-rt-KQE">
-                                                        <rect key="frame" x="10" y="5" width="15.5" height="16"/>
+                                                        <rect key="frame" x="10" y="5" width="53" height="53.5"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" secondItem="aBR-rt-KQE" secondAttribute="height" id="1q9-aE-Peb"/>
                                                         </constraints>
                                                     </imageView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="1,00,000" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tho-nj-KDL">
-                                                        <rect key="frame" x="30.5" y="5" width="0.0" height="16"/>
+                                                        <rect key="frame" x="68" y="5" width="0.0" height="53.5"/>
                                                         <fontDescription key="fontDescription" name="PlusJakartaSans-Bold" family="Plus Jakarta Sans" pointSize="22"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eIm-DF-tGy">
-                                                        <rect key="frame" x="35.5" y="5" width="0.0" height="16"/>
+                                                        <rect key="frame" x="73" y="16" width="0.0" height="31.5"/>
                                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
@@ -142,7 +142,7 @@
                                                 </constraints>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Satisfied Customer" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L2M-LD-0hf">
-                                                <rect key="frame" x="41.5" y="44" width="40.5" height="19"/>
+                                                <rect key="frame" x="59" y="90.5" width="78" height="35.5"/>
                                                 <fontDescription key="fontDescription" name="PlusJakartaSans-Bold" family="Plus Jakarta Sans" pointSize="14"/>
                                                 <color key="textColor" red="0.14901960784313725" green="0.19607843137254902" blue="0.2196078431372549" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -185,30 +185,30 @@
                                         </variation>
                                     </view>
                                     <view hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RrK-rN-WL2" userLabel="View3">
-                                        <rect key="frame" x="0.0" y="0.0" width="20" height="73"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="20" height="181"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_quote" translatesAutoresizingMaskIntoConstraints="NO" id="NyZ-l1-7ES">
-                                                <rect key="frame" x="8.5" y="66.5" width="1.5" height="1.5"/>
+                                                <rect key="frame" x="8.5" y="174.5" width="1.5" height="1.5"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="NyZ-l1-7ES" secondAttribute="height" id="JzC-VM-zcp"/>
                                                 </constraints>
                                             </imageView>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="x86-Tn-eVX">
-                                                <rect key="frame" x="10" y="5" width="0.0" height="63"/>
+                                                <rect key="frame" x="10" y="59" width="0.0" height="63.5"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" ambiguous="YES" text="Best GPS Camera App" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OQ1-XF-3D3">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Best GPS Camera App" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OQ1-XF-3D3">
                                                         <rect key="frame" x="0.0" y="0.0" width="0.0" height="20.5"/>
                                                         <fontDescription key="fontDescription" name="PlusJakartaSans-Bold" family="Plus Jakarta Sans" pointSize="16"/>
                                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="The Video Stamper feature is a game-changer! Now, I can add a timestamp to my videos, providing context and chronology." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jJH-0C-A7K">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The Video Stamper feature is a game-changer! Now, I can add a timestamp to my videos, providing context and chronology." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jJH-0C-A7K">
                                                         <rect key="frame" x="0.0" y="25.5" width="0.0" height="16.5"/>
                                                         <fontDescription key="fontDescription" name="PlusJakartaSans-Medium" family="Plus Jakarta Sans" pointSize="13"/>
                                                         <color key="textColor" red="0.48627450980392156" green="0.50588235294117645" blue="0.51764705882352935" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="by jani Dushman" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="edc-vm-b4N">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="by jani Dushman" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="edc-vm-b4N">
                                                         <rect key="frame" x="0.0" y="47" width="0.0" height="16.5"/>
                                                         <fontDescription key="fontDescription" name="PlusJakartaSans-Medium" family="Plus Jakarta Sans" pointSize="13"/>
                                                         <color key="textColor" red="0.14117647058823529" green="0.15294117647058825" blue="0.17254901960784313" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -266,7 +266,7 @@
                 <constraint firstAttribute="bottom" secondItem="rAU-ZG-Qfd" secondAttribute="bottom" constant="5" id="luR-iZ-rqC"/>
                 <constraint firstItem="rAU-ZG-Qfd" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="5" id="xfK-cd-J5s"/>
             </constraints>
-            <size key="customSize" width="112" height="24"/>
+            <size key="customSize" width="210" height="132"/>
             <connections>
                 <outlet property="imgLikeSub" destination="EAp-bo-q7v" id="nFM-fy-cds"/>
                 <outlet property="imgQuate" destination="ppO-66-5pe" id="HEs-gd-kY0"/>
@@ -287,7 +287,7 @@
                 <outlet property="viewRating2" destination="KMq-nK-BRD" id="kYI-Xv-fgT"/>
                 <outlet property="viewRating3" destination="RrK-rN-WL2" id="vGW-Hs-kMi"/>
             </connections>
-            <point key="canvasLocation" x="-63.574218749999993" y="-6.3689604685212293"/>
+            <point key="canvasLocation" x="-33" y="10"/>
         </collectionViewCell>
     </objects>
     <resources>

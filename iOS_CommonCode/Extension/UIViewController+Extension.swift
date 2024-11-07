@@ -111,7 +111,8 @@ extension UIViewController
     public func openWebVC(
         titleStr: String,
         urlStr: String,
-        customization: UICustomizationWebView? = nil
+        customization: UICustomizationWebView? = nil,
+        completion: (()-> Void)? = nil
     ) {
         let webVC = webVC()
         webVC.titleStr = titleStr
@@ -119,6 +120,9 @@ extension UIViewController
         webVC.customization = customization ?? UICustomizationWebView()
         webVC.modalPresentationStyle = .overFullScreen
         webVC.modalTransitionStyle = .crossDissolve
+        webVC.completionBack = {
+            completion?()
+        }
         self.present(webVC, animated: true, completion: nil)
     }
     
@@ -162,6 +166,7 @@ extension UIViewController
     
     public func openSubMorePlanVC(
         isFromTimeline: Bool,
+        arrReview: [ReviewModel],
         isPresentSubAlertSheet: Bool = true,
         customizationSubMorePlan: UICustomizationSubMorePlan?,
         customizationSubRatingData: UICustomizationSubRatingData?,
@@ -174,6 +179,7 @@ extension UIViewController
             
             let subAllPlanVC = SubMorePlanVC()
             subAllPlanVC.isFromTimeline = isFromTimeline
+            subAllPlanVC.arrReview = arrReview
             subAllPlanVC.isPresentSubAlertSheet = isPresentSubAlertSheet
             subAllPlanVC.customizationSubMorePlan = customizationSubMorePlan
             subAllPlanVC.customizationSubRatingData = customizationSubRatingData
