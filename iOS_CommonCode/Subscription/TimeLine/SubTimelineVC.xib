@@ -732,7 +732,9 @@
                                                 <constraint firstAttribute="trailing" secondItem="sNk-Ir-m4u" secondAttribute="trailing" constant="20" id="Qvj-uL-Sdw">
                                                     <variation key="heightClass=regular-widthClass=regular" constant="45"/>
                                                 </constraint>
-                                                <constraint firstItem="Id5-PK-Bqr" firstAttribute="top" secondItem="5Wi-NZ-pZN" secondAttribute="top" constant="5" id="S2y-ma-JZu"/>
+                                                <constraint firstItem="Id5-PK-Bqr" firstAttribute="top" secondItem="5Wi-NZ-pZN" secondAttribute="top" constant="5" id="S2y-ma-JZu">
+                                                    <variation key="heightClass=regular-widthClass=regular" constant="12"/>
+                                                </constraint>
                                                 <constraint firstItem="sNk-Ir-m4u" firstAttribute="top" secondItem="k3u-Cr-eFM" secondAttribute="bottom" constant="30" id="SXx-av-yWu">
                                                     <variation key="heightClass=regular-widthClass=regular" constant="45"/>
                                                 </constraint>

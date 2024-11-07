@@ -143,6 +143,11 @@ public class SubMorePlanVC: UIViewController {
         self.setNeedsStatusBarAppearanceUpdate()
     }
     
+    public override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        self.setImagesforPlans()
+    }
+    
     private func setupScreenPlans() {
         
         let totalYearPrice = 12 * (SubscriptionConst.ActivePlans.one_Month.plan_Price)
@@ -304,6 +309,32 @@ public class SubMorePlanVC: UIViewController {
     deinit {
         NotificationCenter.default.removeObserver(self)
     }
+    
+    func setImagesforPlans() {
+        for (i, plan) in arrPlansList.enumerated() {
+            
+            if plan.type == .week {
+                self.imgHeight[i].constant = arrDetailView[i].bounds.width * 0.22
+                self.imgWidth[i].constant = ((self.imgHeight[i].constant) * (1))
+                self.lblTitleTopConst[i].constant = arrDetailView[i].bounds.height * 0.067
+            }
+            else if plan.type == .month {
+                self.imgHeight[i].constant = arrDetailView[i].bounds.width * 0.22
+                self.imgWidth[i].constant = ((self.imgHeight[i].constant) * (1))
+                self.lblTitleTopConst[i].constant = arrDetailView[i].bounds.height * 0.067
+            }
+            else if plan.type == .year {
+                self.imgHeight[i].constant = arrDetailView[i].bounds.width * 0.22
+                self.imgWidth[i].constant = ((self.imgHeight[i].constant) * (0.90))
+                self.lblTitleTopConst[i].constant = arrDetailView[i].bounds.height * 0.032
+            }
+            else if plan.type == .lifetime {
+                self.imgHeight[i].constant = arrDetailView[i].bounds.width * 0.14
+                self.imgWidth[i].constant = (self.imgHeight[i].constant) * (2.39)
+                self.lblTitleTopConst[i].constant = arrDetailView[i].bounds.height * 0.1125
+            }
+        }
+    }
 }
 
 //MARK: -
@@ -393,6 +424,8 @@ extension SubMorePlanVC
             }
         }
         
+        self.setImagesforPlans()
+        
         for (i, plan) in arrPlansList.enumerated() {
             
             if plan.type == .week {
@@ -405,9 +438,6 @@ extension SubMorePlanVC
                         arrPlanBadgeTop[i].constant = UIDevice.current.isiPhone ? 11 : 15
                     }
                 }
-                self.imgHeight[i].constant = arrDetailView[i].bounds.width * 0.22
-                self.imgWidth[i].constant = ((self.imgHeight[i].constant) * (1))
-                self.lblTitleTopConst[i].constant = arrDetailView[i].bounds.height * 0.067
             } else if plan.type == .month {
                 let monthPlan = SubscriptionConst.ActivePlans.one_Month
                 if monthPlan.plan_Free_Trail.isFreeTrail || monthPlan.plan_Promotional_Offer.isPromotionalOffer {
@@ -418,10 +448,6 @@ extension SubMorePlanVC
                         arrPlanBadgeTop[i].constant = UIDevice.current.isiPhone ? 11 : 15
                     }
                 }
-                
-                self.imgHeight[i].constant = arrDetailView[i].bounds.width * 0.22
-                self.imgWidth[i].constant = ((self.imgHeight[i].constant) * (1))
-                self.lblTitleTopConst[i].constant = arrDetailView[i].bounds.height * 0.067
             } else if plan.type == .year {
                 let yearPlan = SubscriptionConst.ActivePlans.one_Year
                 if yearPlan.plan_Free_Trail.isFreeTrail || yearPlan.plan_Promotional_Offer.isPromotionalOffer {
@@ -432,17 +458,11 @@ extension SubMorePlanVC
                         arrPlanBadgeTop[i].constant = UIDevice.current.isiPhone ? 11 : 15
                     }
                 }
-                self.imgHeight[i].constant = arrDetailView[i].bounds.width * 0.22
-                self.imgWidth[i].constant = ((self.imgHeight[i].constant) * (0.90))
-                self.lblTitleTopConst[i].constant = arrDetailView[i].bounds.height * 0.032
             } else if plan.type == .lifetime {
                 arrPlanBadgeTop[i].constant = UIDevice.current.isiPhone ? 3 : 8
                 if sender.tag == i {
                     arrPlanBadgeTop[i].constant = UIDevice.current.isiPhone ? 11 : 15
                 }
-                self.imgHeight[i].constant = arrDetailView[i].bounds.width * 0.14
-                self.imgWidth[i].constant = (self.imgHeight[i].constant) * (2.39)
-                self.lblTitleTopConst[i].constant = arrDetailView[i].bounds.height * 0.1125
             }
             
             if plan.type == .year && sender.tag == i {
