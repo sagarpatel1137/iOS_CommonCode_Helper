@@ -307,8 +307,9 @@ extension GoogleAd_Manager
     
     public func funShowNativeAd(adType : GADAdTYPE, parentView: UIView, isLoadNewAd : Bool = false, nativeAdColors: NativeAdColors = NativeAdColors(), nativeAdView: GADNativeAdView? = nil, loaderType: LoaderType = .AdsByDeveloper, shimerView : Shimmer_View? = nil, adByDeveloperTextColor: UIColor? = nil, customLoader: UIView? = nil, isAdShown : @escaping ((Bool) -> Void), isClick : @escaping (() -> Void), isNewLoad : @escaping (() -> Void))
     {
-        if isLoadNewAd {
+        if isLoadNewAd || !isLoadedNativeAd {
             isLoadedNativeAd = false
+            load_NativeAd()
         }
         
         if adType == .custom_Native {
