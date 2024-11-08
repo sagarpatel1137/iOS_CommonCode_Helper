@@ -117,6 +117,7 @@ public class SubAllPlanVC: UIViewController {
     public var isRatingScrollEnable = true
     public var lifetimeDiscountVal = 80
     public var isOpenFrom = ""
+    public var isPresentSubAlertSheet = true
 
     //MARK: -
     public override var prefersStatusBarHidden: Bool {
@@ -285,7 +286,13 @@ public class SubAllPlanVC: UIViewController {
                 self.completionMorePlan!(.close, [:])
             })
         } else {
-            presentSubAlertSheet(on: self) { [self] _ in
+            if isPresentSubAlertSheet {
+                presentSubAlertSheet(on: self) { [self] _ in
+                    self.dismiss(animated: true, completion: {
+                        self.completionMorePlan!(.close, [:])
+                    })
+                }
+            } else {
                 self.dismiss(animated: true, completion: {
                     self.completionMorePlan!(.close, [:])
                 })

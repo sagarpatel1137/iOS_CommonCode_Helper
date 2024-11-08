@@ -91,7 +91,9 @@ extension RatingVC: MFMailComposeViewControllerDelegate
             mail.setMessageBody(mailBody, isHTML: false)
             present(mail, animated: true)
         } else if let emailUrl = createEmailUrl(to: mailRecipientEmail, subject: mailSubject, body: mailBody) {
-            UIApplication.shared.open(emailUrl)
+            self.dismiss(animated: true, completion: {
+                UIApplication.shared.open(emailUrl)
+            })
         }
     }
     

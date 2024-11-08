@@ -103,6 +103,7 @@ public class SubMorePlanVC: UIViewController {
     
     public var customizationSubMorePlan: UICustomizationSubMorePlan?
     public var customizationSubRatingData: UICustomizationSubRatingData?
+    public var isPresentSubAlertSheet = true
     public var isOpenFrom = ""
 
     //MARK: -
@@ -357,7 +358,13 @@ extension SubMorePlanVC
                 self.completionMorePlan!(.close, [:])
             })
         } else {
-            presentSubAlertSheet(on: self) { [self] _ in
+            if isPresentSubAlertSheet {
+                presentSubAlertSheet(on: self) { [self] _ in
+                    self.dismiss(animated: true, completion: {
+                        self.completionMorePlan!(.close, [:])
+                    })
+                }
+            } else {
                 self.dismiss(animated: true, completion: {
                     self.completionMorePlan!(.close, [:])
                 })

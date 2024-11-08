@@ -103,7 +103,8 @@ public class SubTimelineVC: UIViewController {
     public var isRatingScrollEnable = true
     public var lifetimeDiscountVal = 80
     public var isOpenFrom = ""
-    
+    public var isPresentSubAlertSheet = true
+
     public override var prefersStatusBarHidden: Bool {
         return true
     }
@@ -267,6 +268,7 @@ public class SubTimelineVC: UIViewController {
                               customizationSubRatingData: customizationSubRatingData,
                               enableRatingAutoScroll: enableRatingAutoScroll,
                               isRatingScrollEnable: isRatingScrollEnable,
+                              isPresentSubAlertSheet: isPresentSubAlertSheet,
                               lifetimeDiscountVal: lifetimeDiscountVal,
                               isOpenFrom: isOpenFrom) { (result, param) in
             if result == .purchaseSuccess || result == .restoreSuccess {
@@ -280,6 +282,7 @@ public class SubTimelineVC: UIViewController {
     private func openSubMorePlanVC() {
         self.openSubMorePlanVC(isFromTimeline: true,
                                arrReview: self.arrReview,
+                               isPresentSubAlertSheet: isPresentSubAlertSheet,
                                customizationSubMorePlan: customizationSubMorePlan,
                                customizationSubRatingData: customizationSubRatingData,
                                isOpenFrom: isOpenFrom) { (result, param) in
@@ -293,7 +296,13 @@ public class SubTimelineVC: UIViewController {
     
     //MARK: -
     @IBAction func btnCloseAction(_ sender: UIButton) {
-        presentSubAlertSheet(on: self) { _ in
+        if isPresentSubAlertSheet {
+            presentSubAlertSheet(on: self) { _ in
+                self.dismiss(animated: true, completion: {
+                    self.completionTimeline?(.close, [:])
+                })
+            }
+        } else {
             self.dismiss(animated: true, completion: {
                 self.completionTimeline?(.close, [:])
             })

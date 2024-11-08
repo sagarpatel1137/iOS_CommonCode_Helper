@@ -133,6 +133,7 @@ extension UIViewController
         arrReview: [ReviewModel],
         subsciptionContinueBtnTextIndex: Int,
         enableRatingAutoScroll: Bool = true,
+        isPresentSubAlertSheet: Bool = true,
         isRatingScrollEnable: Bool = true,
         customizationSubTimelineTheme: UICustomizationSubTimelineTheme? = nil,
         customizationSubMorePlan: UICustomizationSubMorePlan? = nil,
@@ -149,6 +150,7 @@ extension UIViewController
         subTimelineVC.subsciptionContinueBtnTextIndex = subsciptionContinueBtnTextIndex
         subTimelineVC.enableRatingAutoScroll = enableRatingAutoScroll
         subTimelineVC.isRatingScrollEnable = isRatingScrollEnable
+        subTimelineVC.isPresentSubAlertSheet = isPresentSubAlertSheet
         subTimelineVC.customizationSubTimelineTheme = customizationSubTimelineTheme ?? UICustomizationSubTimelineTheme()
         subTimelineVC.customizationSubRatingData = customizationSubRatingData
         subTimelineVC.customizationSubMorePlan = customizationSubMorePlan
@@ -165,6 +167,7 @@ extension UIViewController
     public func openSubMorePlanVC(
         isFromTimeline: Bool,
         arrReview: [ReviewModel],
+        isPresentSubAlertSheet: Bool = true,
         customizationSubMorePlan: UICustomizationSubMorePlan?,
         customizationSubRatingData: UICustomizationSubRatingData?,
         isOpenFrom: String,
@@ -177,6 +180,7 @@ extension UIViewController
             let subAllPlanVC = SubMorePlanVC()
             subAllPlanVC.isFromTimeline = isFromTimeline
             subAllPlanVC.arrReview = arrReview
+            subAllPlanVC.isPresentSubAlertSheet = isPresentSubAlertSheet
             subAllPlanVC.customizationSubMorePlan = customizationSubMorePlan
             subAllPlanVC.customizationSubRatingData = customizationSubRatingData
             subAllPlanVC.isOpenFrom = isOpenFrom
@@ -197,6 +201,7 @@ extension UIViewController
         customizationSubRatingData: UICustomizationSubRatingData?,
         enableRatingAutoScroll: Bool = true,
         isRatingScrollEnable: Bool = true,
+        isPresentSubAlertSheet: Bool = true,
         lifetimeDiscountVal: Int = 90,
         isOpenFrom: String,
         completionMorePlan: @escaping (SubCloseCompletionBlock, [String: String]?) -> Void
@@ -212,6 +217,7 @@ extension UIViewController
             subAllPlanVC.customizationSubRatingData = customizationSubRatingData
             subAllPlanVC.enableRatingAutoScroll = enableRatingAutoScroll
             subAllPlanVC.isRatingScrollEnable = isRatingScrollEnable
+            subAllPlanVC.isPresentSubAlertSheet = isPresentSubAlertSheet
             subAllPlanVC.lifetimeDiscountVal = lifetimeDiscountVal
             subAllPlanVC.isOpenFrom = isOpenFrom
             subAllPlanVC.completionMorePlan = { (result, param) in
