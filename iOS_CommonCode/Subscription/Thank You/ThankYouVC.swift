@@ -66,7 +66,6 @@ public class ThankYouVC: UIViewController {
             ])
         }
         
-        setUI()
         setFont()
         updateUI()
     }
@@ -74,6 +73,11 @@ public class ThankYouVC: UIViewController {
     public override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.setNeedsStatusBarAppearanceUpdate()
+    }
+    
+    public override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        setUI()
     }
     
     //MARK: -
