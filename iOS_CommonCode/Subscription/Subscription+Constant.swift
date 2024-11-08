@@ -113,6 +113,7 @@ public func presentSubAlertSheet(on viewController: UIViewController, completion
                     completion(item)
                 }
                  */
+                completion("")
             }
         } else {
             completion("")
