@@ -79,7 +79,7 @@ public class webVC: UIViewController {
     
     // MARK: - Load URL
     func loadURL() {
-        if Reachability.isConnectedToNetwork() {
+        if Reachability_Manager.isConnectedToNetwork() {
             guard let url = URL(string: self.urlStr) else { return }
             webView.load(URLRequest(url: url))
             webView.allowsBackForwardNavigationGestures = true

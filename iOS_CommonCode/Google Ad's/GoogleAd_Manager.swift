@@ -350,7 +350,7 @@ extension GoogleAd_Manager
             }
         }
         
-        if Reachability.isConnectedToNetwork()
+        if Reachability_Manager.isConnectedToNetwork()
         {
             DispatchQueue.main.asyncAfter(deadline: .now() + 1){[self] in
                 
@@ -473,7 +473,7 @@ extension GoogleAd_Manager
         }
         
         interstitialAd = nil
-        if !Purchase_flag && Reachability.isConnectedToNetwork() && !isRequeSendForLoad_IntAd
+        if !Purchase_flag && Reachability_Manager.isConnectedToNetwork() && !isRequeSendForLoad_IntAd
         {
             isRequeSendForLoad_IntAd = true
             let request = GADRequest()
@@ -516,7 +516,7 @@ extension GoogleAd_Manager
         }
         
         rewardedAd = nil
-        if !Purchase_flag && Reachability.isConnectedToNetwork() && !isRequeSendForLoad_RewardedAd
+        if !Purchase_flag && Reachability_Manager.isConnectedToNetwork() && !isRequeSendForLoad_RewardedAd
         {
             isRequeSendForLoad_RewardedAd = true
             let request = GADRequest()
@@ -561,7 +561,7 @@ extension GoogleAd_Manager
         }
         
         rewardedIntAd = nil
-        if !Purchase_flag && Reachability.isConnectedToNetwork() && !isRequeSendForLoad_RewardedAd
+        if !Purchase_flag && Reachability_Manager.isConnectedToNetwork() && !isRequeSendForLoad_RewardedAd
         {
             isRequeSendForLoad_RewardedAd = true
             let request = GADRequest()
@@ -606,7 +606,7 @@ extension GoogleAd_Manager
         }
         
         appOpenAd = nil
-        if !Purchase_flag && Reachability.isConnectedToNetwork() && !isRequeSendForLoad_AppOpenAd
+        if !Purchase_flag && Reachability_Manager.isConnectedToNetwork() && !isRequeSendForLoad_AppOpenAd
         {
             isRequeSendForLoad_AppOpenAd = true
             let request = GADRequest()
@@ -742,17 +742,19 @@ extension GoogleAd_Manager
             fatalError("Vasundhara 🏢 - Google Ad : NativeAd Id Not Initialise Properly.")
         }
         
-        if !Purchase_flag && Reachability.isConnectedToNetwork() && !isRequeSendForLoad_NativeAd {
-            
-            isRequeSendForLoad_NativeAd = true
-            let multipleAdsOptions = GADMultipleAdsAdLoaderOptions()
-            multipleAdsOptions.numberOfAds = 1
-            
-            nativeAd_Loader = GADAdLoader(adUnitID: Native_ID, rootViewController: funGetTopViewController(),
-                                   adTypes: [GADAdLoaderAdType.native],
-                                   options: [multipleAdsOptions])
-            nativeAd_Loader.delegate = self
-            nativeAd_Loader.load(GADRequest())
+        if !Purchase_flag && Reachability_Manager.isConnectedToNetwork() && !isRequeSendForLoad_NativeAd {
+            DispatchQueue.main.async { [weak self] in
+                guard let self = self else { return }
+                self.isRequeSendForLoad_NativeAd = true
+                let multipleAdsOptions = GADMultipleAdsAdLoaderOptions()
+                multipleAdsOptions.numberOfAds = 1
+                
+                self.nativeAd_Loader = GADAdLoader(adUnitID: Native_ID, rootViewController: funGetTopViewController(),
+                                              adTypes: [GADAdLoaderAdType.native],
+                                              options: [multipleAdsOptions])
+                self.nativeAd_Loader.delegate = self
+                self.nativeAd_Loader.load(GADRequest())
+            }
         }
         else {
             isRequeSendForLoad_NativeAd = false
@@ -785,17 +787,19 @@ extension GoogleAd_Manager : GADNativeAdLoaderDelegate
 extension GoogleAd_Manager : GADNativeAdDelegate
 {
     public func nativeAdDidRecordClick(_ nativeAd: GADNativeAd) {
-        
-        isAdClickedAndRedirected = true
-        if let headLine = native_Ad.headline {
-            if let tempVC = funGetTopViewController() {
-                tempVC.openAppStoreForNotClickableAd(headLine)
+        DispatchQueue.main.async { [weak self] in
+            guard let self = self else { return }
+            isAdClickedAndRedirected = true
+            if let headLine = native_Ad.headline {
+                if let tempVC = funGetTopViewController() {
+                    tempVC.openAppStoreForNotClickableAd(headLine)
+                }
             }
+            if nativeAd_Reload != nil {
+                nativeAd_Reload()
+            }
+            load_NativeAd()
         }
-        if nativeAd_Reload != nil {
-            nativeAd_Reload()
-        }
-        load_NativeAd()
     }
 }
 

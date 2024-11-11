@@ -7,14 +7,6 @@
 
 import FirebaseAnalytics
 
-/*
-func AddFirebaseEvent(eventName: EventsValues) {
-    let eventName = "\(Pod_FirebaseAppName)\(eventName.rawValue)"
-    Analytics.logEvent(Pod_FirebaseAppName, parameters: [Pod_FirebaseAppName : eventName])
-    AppMetrica_Event.AddAppMetricaEvent(eventName: eventName)
-}
-*/
-
 func AddFirebaseEvent(eventName: EventsValues, parameters: [String:Any] = [:]) {
     let strEventName = "\(Pod_FirebaseAppName)\(eventName.rawValue)"
     Analytics.logEvent(strEventName, parameters: parameters)

@@ -29,7 +29,7 @@
 		811B2F0A2CC20C9A0080DF64 /* SubDiscountVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 811B2F072CC20C9A0080DF64 /* SubDiscountVC.xib */; };
 		811B9BE92CC619530031DE5A /* SubMorePlanVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 811B9BE72CC619530031DE5A /* SubMorePlanVC.xib */; };
 		811B9BEA2CC619530031DE5A /* SubMorePlanVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 811B9BE62CC619530031DE5A /* SubMorePlanVC.swift */; };
-		8121DD842C621A66003460A5 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8121DD832C621A66003460A5 /* Reachability.swift */; };
+		8121DD842C621A66003460A5 /* Reachability_Manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8121DD832C621A66003460A5 /* Reachability_Manager.swift */; };
 		8121DD852C621A66003460A5 /* ForceUpdate_Manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8121DD822C621A66003460A5 /* ForceUpdate_Manager.swift */; };
 		8121DD8A2C6222C8003460A5 /* iOS_CommonCode_Helper.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 8121DD882C6222C8003460A5 /* iOS_CommonCode_Helper.podspec */; };
 		813A0A232CBF69E400B5892A /* ThankYouVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 813A0A212CBF69E400B5892A /* ThankYouVC.xib */; };
@@ -164,7 +164,7 @@
 		81C580972CD8AB5A0027FAE3 /* ic_rating_downloads_More.svg in Resources */ = {isa = PBXBuildFile; fileRef = 81C580642CD8AB5A0027FAE3 /* ic_rating_downloads_More.svg */; };
 		81C580982CD8AB5A0027FAE3 /* ic_subblack_noads.svg in Resources */ = {isa = PBXBuildFile; fileRef = 81C580772CD8AB5A0027FAE3 /* ic_subblack_noads.svg */; };
 		81C5809B2CD8AEDB0027FAE3 /* ImageHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81C5809A2CD8AEDB0027FAE3 /* ImageHelper.swift */; };
-		81CAB5E82C6DD2640050F848 /* Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81CAB5E72C6DD2640050F848 /* Alamofire.swift */; };
+		81CAB5E82C6DD2640050F848 /* Alamofire_Manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81CAB5E72C6DD2640050F848 /* Alamofire_Manager.swift */; };
 		81CAB5F42C6DF2AB0050F848 /* AppFlyer_Manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81CAB5F32C6DF2AB0050F848 /* AppFlyer_Manager.swift */; };
 		81CAB5F62C6DF2BF0050F848 /* AppMetrica_Manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81CAB5F52C6DF2BF0050F848 /* AppMetrica_Manager.swift */; };
 		81CAB5F82C6DF2C80050F848 /* Facebook_Manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81CAB5F72C6DF2C80050F848 /* Facebook_Manager.swift */; };
@@ -219,7 +219,7 @@
 		811B9BE72CC619530031DE5A /* SubMorePlanVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SubMorePlanVC.xib; sourceTree = "<group>"; };
 		8121DD682C6216E8003460A5 /* iOS_CommonCode.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = iOS_CommonCode.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8121DD822C621A66003460A5 /* ForceUpdate_Manager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForceUpdate_Manager.swift; sourceTree = "<group>"; };
-		8121DD832C621A66003460A5 /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
+		8121DD832C621A66003460A5 /* Reachability_Manager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability_Manager.swift; sourceTree = "<group>"; };
 		8121DD882C6222C8003460A5 /* iOS_CommonCode_Helper.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = iOS_CommonCode_Helper.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		813A0A202CBF69E400B5892A /* ThankYouVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThankYouVC.swift; sourceTree = "<group>"; };
 		813A0A212CBF69E400B5892A /* ThankYouVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ThankYouVC.xib; sourceTree = "<group>"; };
@@ -351,7 +351,7 @@
 		81C580792CD8AB5A0027FAE3 /* ic_subblack_route_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_subblack_route_bg.png; sourceTree = "<group>"; };
 		81C5807A2CD8AB5A0027FAE3 /* ic_subblack_route_planing.svg */ = {isa = PBXFileReference; lastKnownFileType = text; path = ic_subblack_route_planing.svg; sourceTree = "<group>"; };
 		81C5809A2CD8AEDB0027FAE3 /* ImageHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageHelper.swift; sourceTree = "<group>"; };
-		81CAB5E72C6DD2640050F848 /* Alamofire.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alamofire.swift; sourceTree = "<group>"; };
+		81CAB5E72C6DD2640050F848 /* Alamofire_Manager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alamofire_Manager.swift; sourceTree = "<group>"; };
 		81CAB5F32C6DF2AB0050F848 /* AppFlyer_Manager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppFlyer_Manager.swift; sourceTree = "<group>"; };
 		81CAB5F52C6DF2BF0050F848 /* AppMetrica_Manager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppMetrica_Manager.swift; sourceTree = "<group>"; };
 		81CAB5F72C6DF2C80050F848 /* Facebook_Manager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Facebook_Manager.swift; sourceTree = "<group>"; };
@@ -573,7 +573,7 @@
 				813A0A2A2CBF7D7300B5892A /* Gradient.swift */,
 				81BA8AF02C881BE100F8A3C5 /* Constant_Function.swift */,
 				815800782CBE427100074F08 /* FirebaseEvents.swift */,
-				8121DD832C621A66003460A5 /* Reachability.swift */,
+				8121DD832C621A66003460A5 /* Reachability_Manager.swift */,
 				81B0F3202CB106620014E08A /* UserDefaults.swift */,
 				8158006C2CBE197E00074F08 /* Toast.swift */,
 				81049F9F2CC8CFF700602057 /* PodBundleHelper.swift */,
@@ -832,7 +832,7 @@
 		81CAB5E62C6DD1D80050F848 /* Alamofire */ = {
 			isa = PBXGroup;
 			children = (
-				81CAB5E72C6DD2640050F848 /* Alamofire.swift */,
+				81CAB5E72C6DD2640050F848 /* Alamofire_Manager.swift */,
 			);
 			path = Alamofire;
 			sourceTree = "<group>";
@@ -1164,7 +1164,7 @@
 				811B2F092CC20C9A0080DF64 /* SubDiscountVC.swift in Sources */,
 				813A0A2B2CBF7D7300B5892A /* Gradient.swift in Sources */,
 				81CAB5FD2C6DF4FF0050F848 /* UIDevice+Extension.swift in Sources */,
-				81CAB5E82C6DD2640050F848 /* Alamofire.swift in Sources */,
+				81CAB5E82C6DD2640050F848 /* Alamofire_Manager.swift in Sources */,
 				81A089C72C9D39A60091CFB3 /* Shimmer_View.swift in Sources */,
 				81A089C82C9D39A60091CFB3 /* CustomShimmer.swift in Sources */,
 				817D301D2C8AC5E300AB455C /* String+Extension.swift in Sources */,
@@ -1184,7 +1184,7 @@
 				81BA8B092C88376E00F8A3C5 /* UIView+Extension.swift in Sources */,
 				815800722CBE21EB00074F08 /* SubTimelineVC.swift in Sources */,
 				817D30332C8AC6C600AB455C /* UIWindow+Extension.swift in Sources */,
-				8121DD842C621A66003460A5 /* Reachability.swift in Sources */,
+				8121DD842C621A66003460A5 /* Reachability_Manager.swift in Sources */,
 				815800792CBE427100074F08 /* FirebaseEvents.swift in Sources */,
 				81B0F3212CB106620014E08A /* UserDefaults.swift in Sources */,
 				817DCDF72C6F0A4C004BA1C2 /* GoogleMobileAdsConsent_Manager.swift in Sources */,

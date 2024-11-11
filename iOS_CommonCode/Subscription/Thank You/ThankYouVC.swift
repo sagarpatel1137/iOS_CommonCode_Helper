@@ -50,6 +50,7 @@ public class ThankYouVC: UIViewController {
     public override var prefersStatusBarHidden: Bool {
         return true
     }
+    var completionGetStart: (()->())?
     
     public override func viewDidLoad() {
         super.viewDidLoad()
@@ -84,8 +85,8 @@ public class ThankYouVC: UIViewController {
     private func setUI() {
         btnStart.layer.cornerRadius = 15
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.0) {
-            let from = hexStringToUIColor(hex: "#00C6FB")
-            let to = hexStringToUIColor(hex: "#005BEA")
+            let from = self.customizationSubThankYouTheme.btnGetStartedFromColor ?? hexStringToUIColor(hex: "00C6FB")
+            let to = self.customizationSubThankYouTheme.btnGetStartedToColor ?? hexStringToUIColor(hex: "005BEA")
             self.btnStart.addGradient(colors: [from, to])
         }
     }
@@ -105,6 +106,7 @@ public class ThankYouVC: UIViewController {
     //MARK: - Actions
     @IBAction func btnGetStartedAction(_ sender: UIButton) {
         self.dismiss(animated: true)
+        completionGetStart?()
     }
 }
 

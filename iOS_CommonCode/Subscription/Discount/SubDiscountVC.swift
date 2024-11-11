@@ -18,13 +18,15 @@ public struct UICustomizationSubDiscountTheme {
     public var subPopupImageBG: UIImage?
     public var imgButtonTryNow: UIImage?
     public var imgBtnClose: UIImage?
+    public var lblPriceColor: UIColor?
     
-    public init(popupImageBG: UIImage? = nil, popupImageTopBG: UIImage? = nil, subPopupImageBG: UIImage? = nil, imgButtonTryNow: UIImage? = nil, imgBtnClose: UIImage? = nil) {
+    public init(popupImageBG: UIImage? = nil, popupImageTopBG: UIImage? = nil, subPopupImageBG: UIImage? = nil, imgButtonTryNow: UIImage? = nil, imgBtnClose: UIImage? = nil, lblPriceColor: UIColor? = nil) {
         self.popupImageBG = popupImageBG ?? ImageHelper.image(named: "ic_sub_popup_bg")
         self.popupImageTopBG = popupImageTopBG ?? ImageHelper.image(named: "ic_sub_popup_top")
         self.subPopupImageBG = subPopupImageBG ?? ImageHelper.image(named: "ic_sub_popup_offer_bg")
         self.imgButtonTryNow = imgButtonTryNow ?? ImageHelper.image(named: "ic_sub_popup_btn")
         self.imgBtnClose = imgBtnClose ?? ImageHelper.image(named: "ic_sub_popup_close")
+        self.lblPriceColor = lblPriceColor ?? hexStringToUIColor(hex: "D10366")
     }
 }
 
@@ -183,7 +185,7 @@ extension SubDiscountVC {
             
             let font1: UIFont = setCustomFont(name: .WorkSans_Medium, iPhoneSize: 18, iPadSize: 26)
             let font2: UIFont = setCustomFont(name: .WorkSans_SemiBold, iPhoneSize: 35, iPadSize: 48)
-            let color1: UIColor = hexStringToUIColor(hex: "D10366")
+            let color1: UIColor = customizationSubDiscountTheme.lblPriceColor ?? hexStringToUIColor(hex: "D10366")
             
             let monthPrice = selected_Plan.plan_Price_String
             
@@ -232,7 +234,7 @@ extension SubDiscountVC
             }
         }
         else {
-            if Reachability.isConnectedToNetwork() {
+            if Reachability_Manager.isConnectedToNetwork() {
                 systemAlert(title: "Alert".localized(), message: "Purchase failed or something went wrong.".localized(), actionDestructive: "OK".localized())
             }
             else {

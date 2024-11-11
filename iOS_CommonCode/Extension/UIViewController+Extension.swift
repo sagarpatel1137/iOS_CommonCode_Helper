@@ -138,6 +138,7 @@ extension UIViewController
         customizationSubTimelineTheme: UICustomizationSubTimelineTheme? = nil,
         customizationSubMorePlan: UICustomizationSubMorePlan? = nil,
         customizationSubRatingData: UICustomizationSubRatingData?,
+        customizationWebViewData: UICustomizationWebView?,
         lifetimeDiscountVal: Int = 80,
         isOpenFrom: String,
         completionTimeline: @escaping (SubCloseCompletionBlock, [String: String]?) -> Void
@@ -154,6 +155,7 @@ extension UIViewController
         subTimelineVC.customizationSubTimelineTheme = customizationSubTimelineTheme ?? UICustomizationSubTimelineTheme()
         subTimelineVC.customizationSubRatingData = customizationSubRatingData
         subTimelineVC.customizationSubMorePlan = customizationSubMorePlan
+        subTimelineVC.customizationWebViewData = customizationWebViewData
         subTimelineVC.lifetimeDiscountVal = lifetimeDiscountVal
         subTimelineVC.isOpenFrom = isOpenFrom
         subTimelineVC.completionTimeline = { (result, param) in
@@ -170,6 +172,7 @@ extension UIViewController
         isPresentSubAlertSheet: Bool = true,
         customizationSubMorePlan: UICustomizationSubMorePlan?,
         customizationSubRatingData: UICustomizationSubRatingData?,
+        customizationWebViewData: UICustomizationWebView?,
         isOpenFrom: String,
         completionMorePlan: @escaping (SubCloseCompletionBlock, [String: String]?) -> Void
     ) {
@@ -182,6 +185,7 @@ extension UIViewController
             subAllPlanVC.arrReview = arrReview
             subAllPlanVC.isPresentSubAlertSheet = isPresentSubAlertSheet
             subAllPlanVC.customizationSubMorePlan = customizationSubMorePlan
+            subAllPlanVC.customizationSubRatingData = customizationSubRatingData
             subAllPlanVC.customizationSubRatingData = customizationSubRatingData
             subAllPlanVC.isOpenFrom = isOpenFrom
             subAllPlanVC.completionMorePlan = { (result, param) in
@@ -199,6 +203,7 @@ extension UIViewController
         arrReview: [ReviewModel],
         subsciptionContinueBtnTextIndex: Int,
         customizationSubRatingData: UICustomizationSubRatingData?,
+        customizationWebViewData: UICustomizationWebView?,
         enableRatingAutoScroll: Bool = true,
         isRatingScrollEnable: Bool = true,
         isPresentSubAlertSheet: Bool = true,
@@ -215,6 +220,7 @@ extension UIViewController
             subAllPlanVC.arrReview = arrReview
             subAllPlanVC.subsciptionContinueBtnTextIndex = subsciptionContinueBtnTextIndex
             subAllPlanVC.customizationSubRatingData = customizationSubRatingData
+            subAllPlanVC.customizationWebViewData = customizationWebViewData
             subAllPlanVC.enableRatingAutoScroll = enableRatingAutoScroll
             subAllPlanVC.isRatingScrollEnable = isRatingScrollEnable
             subAllPlanVC.isPresentSubAlertSheet = isPresentSubAlertSheet
@@ -249,7 +255,8 @@ extension UIViewController
         customizationSubThankYouTheme: UICustomizationSubThankYouTheme? = nil,
         customizationSubThankYouData: UICustomizationSubThankYouData? = nil,
         subCloseCompletionBlock: SubCloseCompletionBlock,
-        param: [String: String]?
+        param: [String: String]?,
+        completion: (()-> Void)? = nil
     ) {
         let thankYouVC = ThankYouVC()
         thankYouVC.customizationSubThankYouTheme = customizationSubThankYouTheme ?? UICustomizationSubThankYouTheme()
@@ -258,6 +265,9 @@ extension UIViewController
         thankYouVC.param = param
         thankYouVC.modalPresentationStyle = .fullScreen
         thankYouVC.modalTransitionStyle = .crossDissolve
+        thankYouVC.completionGetStart = {
+            completion?()
+        }
         self.present(thankYouVC, animated: true, completion: nil)
     }
 }

@@ -13,6 +13,7 @@ import MarqueeLabel
 
 public enum SubCloseCompletionBlock {
     case close
+    case trialSuccess
     case purchaseSuccess
     case restoreSuccess
     case failed
@@ -113,6 +114,7 @@ public class SubAllPlanVC: UIViewController {
     public var arrFeature: [FeatureModel] = []
     public var arrReview: [ReviewModel] = []
     public var customizationSubRatingData: UICustomizationSubRatingData?
+    public var customizationWebViewData: UICustomizationWebView?
     public var enableRatingAutoScroll = false
     public var isRatingScrollEnable = true
     public var lifetimeDiscountVal = 80
@@ -343,11 +345,12 @@ public class SubAllPlanVC: UIViewController {
     }
     
     @IBAction func btnPrivacyAction(_ sender: Any) {
-        self.openWebVC(titleStr: "Privacy Policy".localized(), urlStr: Pod_AppPrivacyPolicyURL)
+        
+        self.openWebVC(titleStr: "Privacy Policy".localized(), urlStr: Pod_AppPrivacyPolicyURL, customization: self.customizationWebViewData)
     }
     
     @IBAction func btnTermsAction(_ sender: Any) {
-        self.openWebVC(titleStr:"Terms of Use".localized(), urlStr: Pod_AppTermsAnsConditionURL)
+        self.openWebVC(titleStr:"Terms of Use".localized(), urlStr: Pod_AppTermsAnsConditionURL, customization: self.customizationWebViewData)
     }
 }
 
@@ -543,7 +546,7 @@ extension SubAllPlanVC
             }
         }
         else {
-            if Reachability.isConnectedToNetwork() {
+            if Reachability_Manager.isConnectedToNetwork() {
                 systemAlert(title: "Alert".localized(), message: "Purchase failed or something went wrong.".localized(), actionDestructive: "OK".localized())
             }
             else {
@@ -590,7 +593,7 @@ extension SubAllPlanVC
             
             NotificationCenter.default.post(name: notificationPurchaseSuccessfully, object: nil)
             self.dismiss(animated: true, completion: {
-                self.completionMorePlan!(.purchaseSuccess, param)
+                self.completionMorePlan!(.trialSuccess, param)
             })
         } else {
             let param = [

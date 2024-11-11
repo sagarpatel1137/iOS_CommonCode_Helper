@@ -174,7 +174,7 @@ extension FeedbackVC {
         } else if (suggetionTextView.text.trimmed().isEmpty) {
             self.view.makeToast("Please enter your suggestions".localized(), position: .center)
         } else {
-            if Reachability.isConnectedToNetwork() {
+            if Reachability_Manager.isConnectedToNetwork() {
 
                 self.startLoader()
 

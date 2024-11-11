@@ -7,7 +7,7 @@
 
 import Alamofire
 
-public class Alamofire
+public class Alamofire_Manager
 {
     public class func request(url: String, parameter: Parameters?, complition : @escaping (Data?,Error?) -> Void)
     {

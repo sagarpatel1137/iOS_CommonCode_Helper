@@ -103,6 +103,7 @@ public class SubMorePlanVC: UIViewController {
     
     public var customizationSubMorePlan: UICustomizationSubMorePlan?
     public var customizationSubRatingData: UICustomizationSubRatingData?
+    public var customizationWebViewData: UICustomizationWebView?
     public var isPresentSubAlertSheet = true
     public var isOpenFrom = ""
 
@@ -498,11 +499,11 @@ extension SubMorePlanVC
     }
     
     @IBAction func btnPrivacyAction(_ sender: Any) {
-        self.openWebVC(titleStr: "Privacy Policy".localized(), urlStr: Pod_AppPrivacyPolicyURL)
+        self.openWebVC(titleStr: "Privacy Policy".localized(), urlStr: Pod_AppPrivacyPolicyURL, customization: self.customizationWebViewData)
     }
     
     @IBAction func btnTermsAction(_ sender: Any) {
-        self.openWebVC(titleStr:"Terms of Use".localized(), urlStr: Pod_AppTermsAnsConditionURL)
+        self.openWebVC(titleStr:"Terms of Use".localized(), urlStr: Pod_AppTermsAnsConditionURL, customization: self.customizationWebViewData)
     }
 }
 
@@ -778,7 +779,7 @@ extension SubMorePlanVC {
             }
         }
         else {
-            if Reachability.isConnectedToNetwork() {
+            if Reachability_Manager.isConnectedToNetwork() {
                 systemAlert(title: "Alert".localized(), message: "Purchase failed or something went wrong.".localized(), actionDestructive: "OK".localized())
             }
             else {
@@ -824,7 +825,7 @@ extension SubMorePlanVC {
             scheduleFreeTrialNotification(noOfDays: selected_Plan.plan_Free_Trail.duration)
             NotificationCenter.default.post(name: notificationPurchaseSuccessfully, object: nil)
             self.dismiss(animated: true, completion: {
-                self.completionMorePlan!(.purchaseSuccess, param)
+                self.completionMorePlan!(.trialSuccess, param)
             })
         } else {
             let param = [

@@ -29,6 +29,7 @@
                 <outlet property="btnStrtTrial" destination="HRD-ok-wYF" id="iOe-FD-UIQ"/>
                 <outlet property="btnTermsOfUse" destination="33n-o5-omA" id="zue-bq-Ycw"/>
                 <outlet property="imfTimelineBell" destination="Pvs-NM-TLf" id="Lrd-s3-f4r"/>
+                <outlet property="imgShieldCancel" destination="hNQ-in-gvN" id="yQ5-2U-dIF"/>
                 <outlet property="imgTimelineLock" destination="XVk-mm-Ghq" id="6uZ-mm-WKe"/>
                 <outlet property="imgTimelineRight" destination="Adq-Tz-koH" id="rIE-Ok-Qq7"/>
                 <outlet property="imgTimelineStar" destination="cmB-2K-ugQ" id="gvP-iz-8zX"/>
@@ -55,9 +56,12 @@
                 <outlet property="lblStartTrial" destination="DlJ-gs-mrZ" id="szS-V0-IPM"/>
                 <outlet property="lblSubTitle" destination="k3u-Cr-eFM" id="Nt8-sz-kT5"/>
                 <outlet property="lblTitle" destination="QXT-QH-b0y" id="Sgb-Qp-akW"/>
+                <outlet property="lblUnderlineViewAllPlan" destination="4KB-wo-lOQ" id="T6j-Fo-75h"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="viewBottom" destination="97p-GG-Az5" id="wA2-kC-aux"/>
                 <outlet property="viewContinue" destination="Biw-mB-m6g" id="kXM-1N-lmu"/>
                 <outlet property="viewJson" destination="TSi-bw-a4p" id="Sjl-N6-Fhm"/>
+                <outlet property="viewLine" destination="ien-JD-eRC" id="IEf-hQ-nfR"/>
                 <outlet property="viewLoader" destination="Nna-tn-rYr" id="Wdm-Jk-We5"/>
                 <outlet property="viewLock" destination="7N4-1f-FjP" id="sPl-H4-4op"/>
                 <outlet property="viewMain_Bottom" destination="NCQ-df-ddJ" id="Lvn-cY-1Hu"/>
@@ -123,7 +127,7 @@
                                                                     <subviews>
                                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yix-xS-XeM" userLabel="ViewProgress">
                                                                             <rect key="frame" x="0.0" y="0.0" width="6.333333333333333" height="87.333333333333329"/>
-                                                                            <color key="backgroundColor" red="0.0" green="0.45882352939999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                            <color key="backgroundColor" red="0.0" green="0.45882352941176469" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                         </view>
                                                                     </subviews>
                                                                     <color key="backgroundColor" red="0.92156862750000001" green="0.94509803920000002" blue="0.93725490199999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -583,7 +587,7 @@
                                                                 <action selector="btnMorePlansAction:" destination="-1" eventType="touchUpInside" id="2tN-Sh-kVz"/>
                                                             </connections>
                                                         </button>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4KB-wo-lOQ">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4KB-wo-lOQ">
                                                             <rect key="frame" x="148.66666666666666" y="119.33333333333326" width="96" height="1"/>
                                                             <color key="backgroundColor" red="0.42352941179999998" green="0.45098039220000002" blue="0.47450980390000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <constraints>

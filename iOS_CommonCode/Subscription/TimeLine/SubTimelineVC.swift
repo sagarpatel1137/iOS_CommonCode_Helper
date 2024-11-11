@@ -27,8 +27,17 @@ public struct UICustomizationSubTimelineTheme {
     public var btnJsonFilenameiPad: String?
     public var featureListTextColor: UIColor?
     public var featureInfoTextColor: UIColor?
+    public var viewProgressColor: UIColor?
+    public var viewLockColor: UIColor?
+    public var lblCancelAnytimeColor: UIColor?
+    public var imgShieldCancel: UIImage?
+    public var lblTitleColor: UIColor?
+    public var viewShieldColor: UIColor?
+    public var viewMainColor: UIColor?
+    public var lblUnderlineViewAllPlan: UIColor?
+    public var viewLine: UIColor?
     
-    public init(themeColor: UIColor? = nil, imgTimelineRight: UIImage? = nil, imgTimelineLock: UIImage? = nil, imgTimelineBell: UIImage? = nil, imgTimelineStar: UIImage? = nil, btnJsonFilenameiPhone: String? = nil, btnJsonFilenameiPad: String? = nil, featureListTextColor: UIColor? = nil, featureInfoTextColor: UIColor? = nil) {
+    public init(themeColor: UIColor? = nil, imgTimelineRight: UIImage? = nil, imgTimelineLock: UIImage? = nil, imgTimelineBell: UIImage? = nil, imgTimelineStar: UIImage? = nil, btnJsonFilenameiPhone: String? = nil, btnJsonFilenameiPad: String? = nil, featureListTextColor: UIColor? = nil, featureInfoTextColor: UIColor? = nil, viewProgressColor: UIColor? = nil, viewLockColor: UIColor? = nil, lblCancelAnytimeColor: UIColor? = nil, imgShieldCancel: UIImage? = nil, lblTitleColor: UIColor? = nil, viewShieldColor: UIColor? = nil, viewMainColor: UIColor? = nil, lblUnderlineViewAllPlan: UIColor? = nil, viewLine: UIColor? = nil) {
         self.themeColor = themeColor ?? hexStringToUIColor(hex: "1B79FF")
         self.imgTimelineRight = imgTimelineRight ?? ImageHelper.image(named: "ic_timeline_right")
         self.imgTimelineLock = imgTimelineLock ?? ImageHelper.image(named: "ic_timeline_lock")
@@ -38,6 +47,16 @@ public struct UICustomizationSubTimelineTheme {
         self.btnJsonFilenameiPad = btnJsonFilenameiPad ?? "Pod_sub_timeline_ipad"
         self.featureListTextColor = featureListTextColor ?? hexStringToUIColor(hex: "1E2128")
         self.featureInfoTextColor = featureInfoTextColor ?? hexStringToUIColor(hex: "6C7379")
+        
+        self.viewProgressColor = viewProgressColor ?? hexStringToUIColor(hex: "0075FF")
+        self.viewLockColor = viewLockColor ?? hexStringToUIColor(hex: "0075FF", alpha: 0.13)
+        self.lblCancelAnytimeColor = lblCancelAnytimeColor ?? hexStringToUIColor(hex: "424242")
+        self.imgShieldCancel = imgShieldCancel ?? ImageHelper.image(named: "ic_shield")
+        self.lblTitleColor = lblTitleColor ?? hexStringToUIColor(hex: "1B79FF")
+        self.viewShieldColor = viewShieldColor ?? hexStringToUIColor(hex: "F1F5F4")
+        self.viewMainColor = viewMainColor ?? .systemBackground
+        self.lblUnderlineViewAllPlan = lblUnderlineViewAllPlan ?? hexStringToUIColor(hex: "6C7379")
+        self.viewLine = viewLine ?? hexStringToUIColor(hex: "EBF1EF")
     }
 }
 
@@ -86,6 +105,10 @@ public class SubTimelineVC: UIViewController {
     @IBOutlet weak var lblFreeTrialText: UILabel!
     @IBOutlet weak var viewLoader: UIActivityIndicatorView!
     @IBOutlet weak var viewMain_Bottom: NSLayoutConstraint!
+    @IBOutlet weak var imgShieldCancel: UIImageView!
+    @IBOutlet weak var viewBottom: UIView!
+    @IBOutlet weak var lblUnderlineViewAllPlan: UILabel!
+    @IBOutlet weak var viewLine: UIView!
     
     private var selected_Plan : SubscriptionConst.PlanInfo!
     var completionTimeline: ((SubCloseCompletionBlock, [String: String]?)->())?
@@ -99,6 +122,7 @@ public class SubTimelineVC: UIViewController {
     public var customizationSubTimelineTheme = UICustomizationSubTimelineTheme()
     public var customizationSubRatingData: UICustomizationSubRatingData?
     public var customizationSubMorePlan: UICustomizationSubMorePlan?
+    public var customizationWebViewData: UICustomizationWebView?
     public var enableRatingAutoScroll = false
     public var isRatingScrollEnable = true
     public var lifetimeDiscountVal = 80
@@ -126,7 +150,6 @@ public class SubTimelineVC: UIViewController {
         setUpGestures()
         
         setPlanDetail()
-        updateUI()
         updateUI()
     }
     
@@ -266,12 +289,13 @@ public class SubTimelineVC: UIViewController {
                               arrReview: self.arrReview,
                               subsciptionContinueBtnTextIndex: subsciptionContinueBtnTextIndex,
                               customizationSubRatingData: customizationSubRatingData,
+                              customizationWebViewData: UICustomizationWebView(backButtonImage: UIImage(systemName: "star.fill")),
                               enableRatingAutoScroll: enableRatingAutoScroll,
                               isRatingScrollEnable: isRatingScrollEnable,
                               isPresentSubAlertSheet: isPresentSubAlertSheet,
                               lifetimeDiscountVal: lifetimeDiscountVal,
                               isOpenFrom: isOpenFrom) { (result, param) in
-            if result == .purchaseSuccess || result == .restoreSuccess {
+            if result == .purchaseSuccess || result == .restoreSuccess || result == .trialSuccess {
                 self.dismiss(animated: true, completion: {
                     self.completionTimeline!(result, param)
                 })
@@ -285,8 +309,9 @@ public class SubTimelineVC: UIViewController {
                                isPresentSubAlertSheet: isPresentSubAlertSheet,
                                customizationSubMorePlan: customizationSubMorePlan,
                                customizationSubRatingData: customizationSubRatingData,
+                               customizationWebViewData: UICustomizationWebView(backButtonImage: UIImage(systemName: "star.fill")),
                                isOpenFrom: isOpenFrom) { (result, param) in
-            if result == .purchaseSuccess || result == .restoreSuccess {
+            if result == .purchaseSuccess || result == .restoreSuccess || result == .trialSuccess {
                 self.dismiss(animated: true, completion: {
                     self.completionTimeline!(result, param)
                 })
@@ -331,13 +356,11 @@ public class SubTimelineVC: UIViewController {
     }
     
     @IBAction func btnTermasofUse(_ sender: UIButton) {
-        let customizationWebView = UICustomizationWebView(titleTextColor: .black)
-        self.openWebVC(titleStr:"Terms of Use".localized(), urlStr: Pod_AppTermsAnsConditionURL, customization: customizationWebView)
+        self.openWebVC(titleStr:"Terms of Use".localized(), urlStr: Pod_AppTermsAnsConditionURL, customization: self.customizationWebViewData)
     }
     
     @IBAction func btnPrivacyPolicy(_ sender: UIButton) {
-        let customizationWebView = UICustomizationWebView(titleTextColor: .black)
-        self.openWebVC(titleStr: "Privacy Policy".localized(), urlStr: Pod_AppPrivacyPolicyURL, customization: customizationWebView)
+        self.openWebVC(titleStr: "Privacy Policy".localized(), urlStr: Pod_AppPrivacyPolicyURL, customization: self.customizationWebViewData)
     }
 }
 
@@ -400,7 +423,7 @@ extension SubTimelineVC
             }
         }
         else {
-            if Reachability.isConnectedToNetwork() {
+            if Reachability_Manager.isConnectedToNetwork() {
                 systemAlert(title: "Alert".localized(), message: "Purchase failed or something went wrong.".localized(), actionDestructive: "OK".localized())
             }
             else {
@@ -447,7 +470,7 @@ extension SubTimelineVC
         
         NotificationCenter.default.post(name: notificationPurchaseSuccessfully, object: nil)
         self.dismiss(animated: true, completion: {
-            self.completionTimeline!(.purchaseSuccess, param)
+            self.completionTimeline!(.trialSuccess, param)
         })
     }
     
@@ -517,6 +540,43 @@ extension SubTimelineVC {
             self.lblPayNothing.textColor = themeColor
         }
         
+        if let viewProgressColor = customizationSubTimelineTheme.viewProgressColor {
+            self.viewProgress.backgroundColor = viewProgressColor
+        }
+        
+        if let viewLockColor = customizationSubTimelineTheme.viewLockColor {
+            self.viewLock.backgroundColor = viewLockColor
+        }
+        
+        if let lblCancelAnytimeColor = customizationSubTimelineTheme.lblCancelAnytimeColor {
+            self.lblCancelAnytime.textColor = lblCancelAnytimeColor
+        }
+        
+        if let imgShieldCancel = customizationSubTimelineTheme.imgShieldCancel {
+            self.imgShieldCancel.image = imgShieldCancel
+        }
+        
+        if let lblTitleColor = customizationSubTimelineTheme.lblTitleColor {
+            self.lblTitle.textColor = lblTitleColor
+        }
+        
+        if let viewShieldColor = customizationSubTimelineTheme.viewShieldColor {
+            self.viewShield.backgroundColor = viewShieldColor
+        }
+        
+        if let viewShieldColor = customizationSubTimelineTheme.viewMainColor {
+            self.view.backgroundColor = viewShieldColor
+            self.viewBottom.backgroundColor = viewShieldColor
+        }
+        
+        if let lblUnderlineViewAllPlan = customizationSubTimelineTheme.lblUnderlineViewAllPlan {
+            self.lblUnderlineViewAllPlan.backgroundColor = lblUnderlineViewAllPlan
+        }
+        
+        if let viewLine = customizationSubTimelineTheme.viewLine {
+            self.viewLine.backgroundColor = viewLine
+        }
+        
         if let imgTimelineRight = customizationSubTimelineTheme.imgTimelineRight {
             self.imgTimelineRight.image = imgTimelineRight
         }
@@ -580,21 +640,3 @@ extension SubTimelineVC {
         }
     }
 }
-
-/*
-setEvent(eventName: FirebaseEvents.subVideoOpen, parameters: ["from": isOpenFrom.rawValue])
-
-setEvent(eventName: FirebaseEvents.subVideoClick, parameters: ["from": isOpenFrom.rawValue,
-                                                               "sku" : selected_Plan.plan_Id,
-                                                               "type" : selected_Plan.plan_Type.rawValue])
-if selected_Plan.plan_Free_Trail.isFreeTrail {
-    scheduleFreeTrialNotification()
-    setEvent(eventName: FirebaseEvents.subVideoTrial, parameters: ["from": isOpenFrom.rawValue,
-                                                                   "sku" : selected_Plan.plan_Id,
-                                                                   "type" : selected_Plan.plan_Type.rawValue])
-} else {
-    setEvent(eventName: FirebaseEvents.subVideoPurchase, parameters: ["from": isOpenFrom.rawValue,
-                                                                      "sku" : selected_Plan.plan_Id,
-                                                                      "type" : selected_Plan.plan_Type.rawValue])
-}
-*/

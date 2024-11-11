@@ -72,7 +72,7 @@ public class RevenueCat_Manager : NSObject {
     // MARK: - Check Purchase
     public func funCheckForPurchase(completion:@escaping(()->Void)) {
         
-        if Reachability.isConnectedToNetwork() {
+        if Reachability_Manager.isConnectedToNetwork() {
             
             DispatchQueue.global(qos: .background).async {
                 self.getPurchaseProductInfo { (state,err) in
@@ -712,10 +712,16 @@ extension RevenueCat_Manager
                         print("Vasundhara 🏢 - Revenue PurchaserInfo Sync Error ⚠️⚠️⚠️: \(error!)")
                         completion(false,error)
                         UserDefaults.standard.setValue(true, forKey: "appOpenFirstTime")
+                        if let pod_AppSuiteName = UserDefaults(suiteName: "Pod_AppSuiteName") {
+                            pod_AppSuiteName.object(forKey: "appOpenFirstTime")
+                        }
                         return
                     }
                     RevenueCat_Manager.purchaseInfo = purchaserInfo!
                     UserDefaults.standard.setValue(true, forKey: "appOpenFirstTime")
+                    if let pod_AppSuiteName = UserDefaults(suiteName: "Pod_AppSuiteName") {
+                        pod_AppSuiteName.object(forKey: "appOpenFirstTime")
+                    }
                     completion(true,nil)
                 }
             }

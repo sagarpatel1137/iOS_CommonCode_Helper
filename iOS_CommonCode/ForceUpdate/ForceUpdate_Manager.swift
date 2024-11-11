@@ -44,7 +44,7 @@ extension ForceUpdate_Manager
 {
     private func checkForForceUpdate() {
         
-        if Reachability.isConnectedToNetwork() {
+        if Reachability_Manager.isConnectedToNetwork() {
             
             guard let url = URL(string: "https://fourceupdate.vasundharaapps.com/api/ApkVersionIos") else {
                 return
