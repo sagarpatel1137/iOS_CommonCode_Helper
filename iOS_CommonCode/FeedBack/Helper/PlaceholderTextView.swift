@@ -16,10 +16,18 @@ open class PlaceholderTextView: UITextView {
         }
     }
     
+    var placeholderColor: UIColor? {
+        didSet {
+            if let placeholderColor = placeholderColor {
+                placeholderLabel.textColor = placeholderColor
+            }
+        }
+    }
+    
     // Placeholder label
     private lazy var placeholderLabel: UILabel = {
         let label = UILabel()
-        label.textColor = UIColor.systemGray4
+        label.textColor = placeholderColor ?? UIColor.systemGray4
         label.numberOfLines = 0
         label.font = self.font
         label.backgroundColor = .clear

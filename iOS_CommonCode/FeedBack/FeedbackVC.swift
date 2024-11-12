@@ -8,6 +8,8 @@
 import UIKit
 
 public struct UICustomizationFeedback {
+    
+    public var viewMainColor: UIColor?
     public var navigationBarBackground: UIColor?
     public var isShowNavigationBarShadow: Bool?
     public var titleText: String?
@@ -34,10 +36,25 @@ public struct UICustomizationFeedback {
     public var submitTextFont: UIFont?
     public var submitTextColor: UIColor?
     public var submitButtonImage: UIImage?
-    
-    public init(navigationBarBackground: UIColor? = nil, isShowNavigationBarShadow: Bool? = nil, titleText: String? = nil, titleTextFont: UIFont? = nil, titleTextColor: UIColor? = nil, backButtonImage: UIImage? = nil, placeholderButtonImage: UIImage? = nil, shareExperienceText: String? = nil, shareExperienceFont: UIFont? = nil, shareExperienceTextColor: UIColor? = nil, whyUseText: String? = nil, whyUsePlaceholderText: String? = nil, whyUseTextFont: UIFont? = nil, whyUseTextFontTextfield: UIFont? = nil, whyUseTextColor: UIColor? = nil, suggestionText: String? = nil, suggestionPlaceholderText: String? = nil, suggestionTextFont: UIFont? = nil, suggestionTextFontTextfield: UIFont? = nil, suggestionTextColor: UIColor? = nil, limitTextFont: UIFont? = nil, limitTextColor: UIColor? = nil, submitText: String? = nil, submitTextFont: UIFont? = nil, submitTextColor: UIColor? = nil, submitButtonImage: UIImage? = nil) {
+    public var navigationBarHeight : CGFloat?
+    public var backButtonWidth : CGFloat?
+    public var isNeedToAddBorderInField : Bool?
+    public var whyUseTextFieldColor: UIColor?
+    public var attributedPlaceholder: NSAttributedString?
+    public var placeholderColor: UIColor?
+    public var titleTextAlignment: NSTextAlignment?
+
+    public init(viewMainColor: UIColor? = nil, navigationBarHeight: CGFloat? = nil, backButtonWidth: CGFloat? = nil,  navigationBarBackground: UIColor? = nil, isNeedToAddBorderInField: Bool? = nil, whyUseTextFieldColor: UIColor? = nil ,isShowNavigationBarShadow: Bool? = nil, attributedPlaceholder: NSAttributedString? = nil, placeholderColor: UIColor? = nil,titleTextAlignment: NSTextAlignment? = nil ,titleText: String? = nil, titleTextFont: UIFont? = nil, titleTextColor: UIColor? = nil, backButtonImage: UIImage? = nil, placeholderButtonImage: UIImage? = nil, shareExperienceText: String? = nil, shareExperienceFont: UIFont? = nil, shareExperienceTextColor: UIColor? = nil, whyUseText: String? = nil, whyUsePlaceholderText: String? = nil, whyUseTextFont: UIFont? = nil, whyUseTextFontTextfield: UIFont? = nil, whyUseTextColor: UIColor? = nil, suggestionText: String? = nil, suggestionPlaceholderText: String? = nil, suggestionTextFont: UIFont? = nil, suggestionTextFontTextfield: UIFont? = nil, suggestionTextColor: UIColor? = nil, limitTextFont: UIFont? = nil, limitTextColor: UIColor? = nil, submitText: String? = nil, submitTextFont: UIFont? = nil, submitTextColor: UIColor? = nil, submitButtonImage: UIImage? = nil) {
+        self.viewMainColor = viewMainColor
+        self.navigationBarHeight = navigationBarHeight
+        self.backButtonWidth = backButtonWidth
         self.navigationBarBackground = navigationBarBackground ?? hexStringToUIColor(hex: "F3F6FF")
+        self.isNeedToAddBorderInField = isNeedToAddBorderInField
+        self.whyUseTextFieldColor = whyUseTextFieldColor
         self.isShowNavigationBarShadow = isShowNavigationBarShadow ?? true
+        self.attributedPlaceholder = attributedPlaceholder
+        self.placeholderColor = placeholderColor
+        self.titleTextAlignment = titleTextAlignment
         self.titleText = titleText ?? "Feedback"
         self.titleTextFont = titleTextFont ?? setCustomFont_WithoutRatio(name: .PlusJakartaSans_ExtraBold, iPhoneSize: 17, iPadSize: 22)
         self.titleTextColor = titleTextColor ?? hexStringToUIColor(hex: "1B79FF")
@@ -84,12 +101,24 @@ public class FeedbackVC: UIViewController {
     
     private let maxCharacterCount = 500
     
+    @IBOutlet weak var navigationBarHeightCons: NSLayoutConstraint!
+    
+    @IBOutlet weak var backButtonWidthCons: NSLayoutConstraint!
+    
+    @IBOutlet weak var viewSeparator: UIView!
+    
     // MARK: - Public Properties
     
     public var customization = UICustomizationFeedback()
     
     public override func viewDidLoad() {
         super.viewDidLoad()
+        if let navigationBarHeight = customization.navigationBarHeight {
+            self.navigationBarHeightCons.constant = navigationBarHeight
+        }
+        if let backButtonWidth = customization.backButtonWidth {
+            backButtonWidthCons.constant = backButtonWidth
+        }
         updateUI()
     }
     
@@ -129,6 +158,9 @@ public class FeedbackVC: UIViewController {
         titleLabel.text = customization.titleText?.localized()
         titleLabel.font = customization.titleTextFont
         titleLabel.textColor = customization.titleTextColor
+        if let titleTextAlignment = customization.titleTextAlignment {
+            titleLabel.textAlignment = titleTextAlignment
+        }
         
         // Update Share Experience Label
         shareExperienceLbl.text = customization.shareExperienceText?.localized()
@@ -139,6 +171,10 @@ public class FeedbackVC: UIViewController {
         whyUseAppLbl.text = customization.whyUseText?.localized()
         whyUseAppLbl.font = customization.whyUseTextFont
         whyUseTextField.font = customization.whyUseTextFontTextfield
+        if let whyUseTextFieldColor = customization.whyUseTextFieldColor {
+            whyUseTextField.textColor = whyUseTextFieldColor
+            suggetionTextView.textColor = whyUseTextFieldColor
+        }
         whyUseAppLbl.textColor = customization.whyUseTextColor
         whyUseTextField.placeholder = customization.whyUsePlaceholderText?.localized()
         
@@ -158,6 +194,25 @@ public class FeedbackVC: UIViewController {
         submitButton.setTitleColor(customization.submitTextColor, for: .normal)
         if let buttonImage = customization.submitButtonImage {
             submitButton.setBackgroundImage(buttonImage, for: .normal)
+        }
+        
+        if let color = customization.viewMainColor {
+            self.view.backgroundColor = color
+        }
+        if let isNeedToAddBorderInField = customization.isNeedToAddBorderInField, isNeedToAddBorderInField {
+            self.whyUseView.layer.borderWidth = 1.0
+            self.whyUseView.layer.borderColor = hexStringToUIColor(hex: "595F91").cgColor
+            self.whyUseView.backgroundColor = hexStringToUIColor(hex: "2A2C3E")
+            self.suggestionView.layer.borderWidth = 1.0
+            self.suggestionView.layer.borderColor = hexStringToUIColor(hex: "595F91").cgColor
+            self.suggestionView.backgroundColor = hexStringToUIColor(hex: "2A2C3E")
+        }
+        if let attributedPlaceholder = customization.attributedPlaceholder {
+            whyUseTextField.attributedPlaceholder = attributedPlaceholder
+            viewSeparator.isHidden = false
+        }
+        if let placeholderColor = customization.placeholderColor {
+            self.suggetionTextView.placeholderColor = placeholderColor
         }
     }
 }

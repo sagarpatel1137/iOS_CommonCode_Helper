@@ -23,8 +23,10 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SubAllPlanVC" customModule="iOS_CommonCode" customModuleProvider="target">
             <connections>
                 <outlet property="btnCloseSquare" destination="TwC-hP-bG7" id="Po0-X4-g0K"/>
+                <outlet property="btnSubscribe" destination="izU-T5-b5Z" id="a4S-Ic-U0J"/>
                 <outlet property="collViewFeature" destination="nqX-Z9-vd0" id="xP3-NG-S1K"/>
                 <outlet property="collViewReview" destination="4ym-hb-P3Z" id="kQL-Zt-hx9"/>
+                <outlet property="imgContinue" destination="Yts-yr-rYR" id="prn-U9-eJB"/>
                 <outlet property="imgSubTop" destination="EJ2-Ut-5yh" id="1pd-Md-FKO"/>
                 <outlet property="lblBadgeLifetime" destination="jsM-R7-lwp" id="DhM-3l-zka"/>
                 <outlet property="lblBadgeMonth" destination="PhA-4p-6aG" id="pog-se-bza"/>
@@ -710,6 +712,9 @@
                                                             <rect key="frame" x="0.0" y="0.0" width="290" height="45"/>
                                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </view>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Yts-yr-rYR">
+                                                            <rect key="frame" x="0.0" y="0.0" width="290" height="45"/>
+                                                        </imageView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CONTINUE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="amE-X7-Gxr" customClass="MarqueeLabel" customModule="MarqueeLabel">
                                                             <rect key="frame" x="5" y="5" width="280" height="35"/>
                                                             <fontDescription key="fontDescription" name="PlusJakartaSans-ExtraBold" family="Plus Jakarta Sans" pointSize="20"/>
@@ -731,15 +736,19 @@
                                                         <constraint firstAttribute="trailing" secondItem="amE-X7-Gxr" secondAttribute="trailing" constant="5" id="781-Bd-nVd"/>
                                                         <constraint firstAttribute="width" secondItem="7OP-m1-Yu8" secondAttribute="height" multiplier="684:75" id="7UW-ol-79u"/>
                                                         <constraint firstAttribute="trailing" secondItem="Nfw-M8-R7R" secondAttribute="trailing" id="DQD-BL-hvJ"/>
+                                                        <constraint firstItem="Yts-yr-rYR" firstAttribute="top" secondItem="Nfw-M8-R7R" secondAttribute="top" id="FJH-YU-AK9"/>
                                                         <constraint firstItem="Nfw-M8-R7R" firstAttribute="leading" secondItem="7OP-m1-Yu8" secondAttribute="leading" id="McT-ZZ-BJC"/>
                                                         <constraint firstAttribute="bottom" secondItem="izU-T5-b5Z" secondAttribute="bottom" id="P5W-Xh-rBE"/>
                                                         <constraint firstAttribute="trailing" secondItem="izU-T5-b5Z" secondAttribute="trailing" id="QIe-b6-Yyy"/>
                                                         <constraint firstAttribute="width" secondItem="7OP-m1-Yu8" secondAttribute="height" multiplier="290:45" id="aUI-3n-PUv"/>
+                                                        <constraint firstItem="Yts-yr-rYR" firstAttribute="trailing" secondItem="Nfw-M8-R7R" secondAttribute="trailing" id="aY9-AQ-KuY"/>
                                                         <constraint firstItem="izU-T5-b5Z" firstAttribute="top" secondItem="7OP-m1-Yu8" secondAttribute="top" id="fKt-ya-MZn"/>
+                                                        <constraint firstItem="Yts-yr-rYR" firstAttribute="leading" secondItem="Nfw-M8-R7R" secondAttribute="leading" id="gdh-rs-W2d"/>
                                                         <constraint firstItem="amE-X7-Gxr" firstAttribute="top" secondItem="7OP-m1-Yu8" secondAttribute="top" constant="5" id="jFf-Dh-Wqy"/>
                                                         <constraint firstAttribute="bottom" secondItem="amE-X7-Gxr" secondAttribute="bottom" constant="5" id="p49-mc-Fsl"/>
                                                         <constraint firstItem="izU-T5-b5Z" firstAttribute="leading" secondItem="7OP-m1-Yu8" secondAttribute="leading" id="pSe-Ib-jxf"/>
                                                         <constraint firstAttribute="bottom" secondItem="Nfw-M8-R7R" secondAttribute="bottom" id="xmd-nv-Kgc"/>
+                                                        <constraint firstItem="Yts-yr-rYR" firstAttribute="bottom" secondItem="Nfw-M8-R7R" secondAttribute="bottom" id="zb4-nq-dqT"/>
                                                     </constraints>
                                                     <variation key="default">
                                                         <mask key="constraints">

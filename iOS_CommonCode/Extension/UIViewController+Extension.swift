@@ -202,6 +202,7 @@ extension UIViewController
         arrFeature: [FeatureModel],
         arrReview: [ReviewModel],
         subsciptionContinueBtnTextIndex: Int,
+        customizationAllPlan: UICustomizationAllPlan?,
         customizationSubRatingData: UICustomizationSubRatingData?,
         customizationWebViewData: UICustomizationWebView?,
         enableRatingAutoScroll: Bool = true,
@@ -219,6 +220,7 @@ extension UIViewController
             subAllPlanVC.arrFeature = arrFeature
             subAllPlanVC.arrReview = arrReview
             subAllPlanVC.subsciptionContinueBtnTextIndex = subsciptionContinueBtnTextIndex
+            subAllPlanVC.customizationAllPlan = customizationAllPlan
             subAllPlanVC.customizationSubRatingData = customizationSubRatingData
             subAllPlanVC.customizationWebViewData = customizationWebViewData
             subAllPlanVC.enableRatingAutoScroll = enableRatingAutoScroll

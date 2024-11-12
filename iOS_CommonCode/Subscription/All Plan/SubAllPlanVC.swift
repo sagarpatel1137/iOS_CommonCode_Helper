@@ -44,6 +44,26 @@ public struct FeatureModel {
     }
 }
 
+public struct UICustomizationAllPlan {
+    public var buttonBGType: ButtonBGType = .solidColor
+    public var btnContinueSolidColor: UIColor?
+    public var btnContinueFromColor: UIColor?
+    public var btnContinueToColor: UIColor?
+    public var btnContinueImage: UIImage?
+    public var btnJsonFilenameiPhone: String?
+    public var btnJsonFilenameiPad: String?
+    
+    public init(buttonBGType: ButtonBGType = .solidColor, btnContinueSolidColor: UIColor? = nil, btnContinueFromColor: UIColor? = nil, btnContinueToColor: UIColor? = nil, btnContinueImage: UIImage? = nil, btnJsonFilenameiPhone: String? = nil, btnJsonFilenameiPad: String? = nil) {
+        self.buttonBGType = buttonBGType
+        self.btnContinueSolidColor = btnContinueSolidColor ?? .black
+        self.btnContinueFromColor = btnContinueFromColor ?? .black
+        self.btnContinueToColor = btnContinueToColor ?? .black
+        self.btnContinueImage = btnContinueImage ?? ImageHelper.image(named: "ic_timeline_star")
+        self.btnJsonFilenameiPhone = btnJsonFilenameiPhone ?? "Pod_sub_all_iphone"
+        self.btnJsonFilenameiPad = btnJsonFilenameiPad ?? "Pod_sub_all_ipad"
+    }
+}
+
 public class SubAllPlanVC: UIViewController {
 
     @IBOutlet weak var imgSubTop: UIImageView!
@@ -93,6 +113,8 @@ public class SubAllPlanVC: UIViewController {
     @IBOutlet weak var lblTerms: MarqueeLabel!
     @IBOutlet weak var lblRestore: MarqueeLabel!
     @IBOutlet weak var lblPrivacy: MarqueeLabel!
+    @IBOutlet weak var imgContinue: UIImageView!
+    @IBOutlet weak var btnSubscribe: UIButton!
     
     //MARK: -
     
@@ -113,6 +135,7 @@ public class SubAllPlanVC: UIViewController {
     public var subsciptionContinueBtnTextIndex = 0
     public var arrFeature: [FeatureModel] = []
     public var arrReview: [ReviewModel] = []
+    public var customizationAllPlan: UICustomizationAllPlan?
     public var customizationSubRatingData: UICustomizationSubRatingData?
     public var customizationWebViewData: UICustomizationWebView?
     public var enableRatingAutoScroll = false
@@ -247,12 +270,42 @@ public class SubAllPlanVC: UIViewController {
     func setUpAnimation()
     {
         
-        if let loadJSONURLiPhone = PodBundleHelper.loadJSONFile(named: "Pod_sub_all_iphone"),
-            let loadJSONURLiPad = PodBundleHelper.loadJSONFile(named: "Pod_sub_all_ipad")
-        {
-            viewJson.animation = UIDevice.current.isiPhone ? LottieAnimation.filepath(loadJSONURLiPhone.path) : LottieAnimation.filepath(loadJSONURLiPad.path)
-            viewJson?.loopMode = .loop
-            viewJson.play()
+        imgContinue.isHidden = true
+        switch customizationAllPlan?.buttonBGType {
+        case .solidColor:
+            self.btnSubscribe.backgroundColor = customizationAllPlan?.btnContinueSolidColor ?? .black
+        case .gradientColor:
+            let from = self.customizationAllPlan?.btnContinueFromColor ?? .black
+            let to = self.customizationAllPlan?.btnContinueToColor ?? .black
+            self.btnSubscribe.addGradient(colors: [from, to], isRounded: true)
+        case .image:
+            imgContinue.isHidden = false
+            self.imgContinue.image = self.customizationAllPlan?.btnContinueImage ?? ImageHelper.image(named: "ic_timeline_star")
+        case .animateJson:
+            if let btnJsonFilenameiPad = customizationAllPlan?.btnJsonFilenameiPad,
+               let btnJsonFilenameiPhone = customizationAllPlan?.btnJsonFilenameiPhone {
+                if UIDevice.current.isiPad {
+                    if let loadJSONURL = PodBundleHelper.loadJSONFile(named: btnJsonFilenameiPad) {
+                        viewJson.animation = LottieAnimation.filepath(loadJSONURL.path)
+                        viewJson?.loopMode = .loop
+                        viewJson.play()
+                    }
+                } else {
+                    if let loadJSONURL = PodBundleHelper.loadJSONFile(named: btnJsonFilenameiPhone) {
+                        viewJson.animation = LottieAnimation.filepath(loadJSONURL.path)
+                        viewJson?.loopMode = .loop
+                        viewJson.play()
+                    }
+                }
+            }
+        case .none:
+            if let loadJSONURLiPhone = PodBundleHelper.loadJSONFile(named: "Pod_sub_all_iphone"),
+               let loadJSONURLiPad = PodBundleHelper.loadJSONFile(named: "Pod_sub_all_ipad")
+            {
+                viewJson.animation = UIDevice.current.isiPhone ? LottieAnimation.filepath(loadJSONURLiPhone.path) : LottieAnimation.filepath(loadJSONURLiPad.path)
+                viewJson?.loopMode = .loop
+                viewJson.play()
+            }
         }
         
         DispatchQueue.main.asyncAfter(deadline:.now() + 1.0){

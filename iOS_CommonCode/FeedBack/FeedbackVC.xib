@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23094" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23084"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -20,11 +21,13 @@
         </array>
     </customFonts>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FeedbackVC" customModule="iOS_CommonCode" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FeedbackVC" customModule="iOS_CommonCode_Helper" customModuleProvider="target">
             <connections>
+                <outlet property="backButtonWidthCons" destination="BZb-8M-oOa" id="7Yd-HT-e93"/>
                 <outlet property="btnBack" destination="QSc-yr-Ywz" id="XsN-st-nnN"/>
                 <outlet property="charCountLbl" destination="pt2-Vg-d8v" id="EDa-iF-76t"/>
                 <outlet property="imgPlaceholder" destination="vfw-g6-g0q" id="raD-HB-eIW"/>
+                <outlet property="navigationBarHeightCons" destination="NtD-wB-QrQ" id="cnl-5h-hRx"/>
                 <outlet property="shareExperienceLbl" destination="pJR-Oa-Zea" id="ADl-xI-8VA"/>
                 <outlet property="submitButton" destination="Daj-Pv-Ddh" id="SD1-jT-g25"/>
                 <outlet property="suggestionView" destination="6mf-vV-DFr" id="5yS-Wb-DaE"/>
@@ -33,6 +36,7 @@
                 <outlet property="titleLabel" destination="xyh-YP-7kG" id="htG-NG-PaM"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
                 <outlet property="viewNavBar" destination="vKa-bS-veA" id="kS6-vU-Rbg"/>
+                <outlet property="viewSeparator" destination="tSQ-qc-YMp" id="mAp-F7-mvn"/>
                 <outlet property="whyUseAppLbl" destination="9Ec-LT-ULt" id="Kco-ra-w4R"/>
                 <outlet property="whyUseTextField" destination="kfz-4I-vbD" id="FpD-uG-A5g"/>
                 <outlet property="whyUseView" destination="iAf-IL-dPN" id="bcd-m4-Zch"/>
@@ -58,7 +62,7 @@
                             </userDefinedRuntimeAttributes>
                         </view>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Feedback" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xyh-YP-7kG">
-                            <rect key="frame" x="51" y="0.0" width="273" height="44"/>
+                            <rect key="frame" x="61" y="0.0" width="253" height="44"/>
                             <fontDescription key="fontDescription" name="WorkSans-SemiBold" family="Work Sans" pointSize="20"/>
                             <color key="textColor" red="0.10588235294117647" green="0.47450980392156861" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <nil key="highlightedColor"/>
@@ -93,7 +97,7 @@
                         <constraint firstAttribute="trailing" secondItem="DTP-vG-g5H" secondAttribute="trailing" id="c6n-cI-axc"/>
                         <constraint firstItem="QSc-yr-Ywz" firstAttribute="centerY" secondItem="xyh-YP-7kG" secondAttribute="centerY" id="dOv-Oz-yDD"/>
                         <constraint firstAttribute="bottom" secondItem="DTP-vG-g5H" secondAttribute="bottom" id="mgt-HQ-Ztd"/>
-                        <constraint firstItem="xyh-YP-7kG" firstAttribute="leading" secondItem="QSc-yr-Ywz" secondAttribute="trailing" constant="5" id="p04-pL-BZk"/>
+                        <constraint firstItem="xyh-YP-7kG" firstAttribute="leading" secondItem="QSc-yr-Ywz" secondAttribute="trailing" constant="15" id="p04-pL-BZk"/>
                         <constraint firstItem="DTP-vG-g5H" firstAttribute="leading" secondItem="K3r-Lb-KOE" secondAttribute="leading" id="tgm-zO-LS2"/>
                     </constraints>
                     <userDefinedRuntimeAttributes>
@@ -143,7 +147,7 @@
                             <subviews>
                                 <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kfz-4I-vbD">
                                     <rect key="frame" x="10" y="0.0" width="325" height="50"/>
-                                    <fontDescription key="fontDescription" name="PlusJakartaSans-Medium" family="Plus Jakarta Sans" pointSize="12"/>
+                                    <fontDescription key="fontDescription" name="PlusJakartaSans-Medium" family="Plus Jakarta Sans" pointSize="14"/>
                                     <textInputTraits key="textInputTraits"/>
                                     <variation key="heightClass=regular-widthClass=regular">
                                         <fontDescription key="fontDescription" name="PlusJakartaSans-Medium" family="Plus Jakarta Sans" pointSize="16"/>
@@ -178,11 +182,11 @@
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6mf-vV-DFr">
                             <rect key="frame" x="0.0" y="113" width="335" height="130"/>
                             <subviews>
-                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="8h2-yh-DfL" customClass="PlaceholderTextView" customModule="iOS_CommonCode" customModuleProvider="target">
+                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="8h2-yh-DfL" customClass="PlaceholderTextView" customModule="iOS_CommonCode_Helper" customModuleProvider="target">
                                     <rect key="frame" x="10" y="0.0" width="325" height="105.5"/>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <color key="textColor" systemColor="labelColor"/>
-                                    <fontDescription key="fontDescription" name="PlusJakartaSans-Medium" family="Plus Jakarta Sans" pointSize="12"/>
+                                    <fontDescription key="fontDescription" name="PlusJakartaSans-Medium" family="Plus Jakarta Sans" pointSize="13"/>
                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     <variation key="heightClass=regular-widthClass=regular">
                                         <fontDescription key="fontDescription" name="PlusJakartaSans-Medium" family="Plus Jakarta Sans" pointSize="16"/>
@@ -217,7 +221,7 @@
                             </userDefinedRuntimeAttributes>
                         </view>
                     </subviews>
-                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstAttribute="trailing" secondItem="tTw-kf-D2g" secondAttribute="trailing" id="6Bk-Bf-SAT"/>
                         <constraint firstItem="iAf-IL-dPN" firstAttribute="top" secondItem="9Ec-LT-ULt" secondAttribute="bottom" constant="5" id="7CE-wt-1PM">
@@ -250,6 +254,13 @@
                         <action selector="submitButtonClicked:" destination="-1" eventType="touchUpInside" id="xxF-JW-c5c"/>
                     </connections>
                 </button>
+                <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tSQ-qc-YMp">
+                    <rect key="frame" x="0.0" y="64" width="375" height="1"/>
+                    <color key="backgroundColor" name="navigationSep"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="x2p-GH-UQs"/>
+                    </constraints>
+                </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -267,10 +278,12 @@
                 <constraint firstAttribute="trailing" secondItem="K3r-Lb-KOE" secondAttribute="trailing" id="CeC-2X-3nf"/>
                 <constraint firstItem="Daj-Pv-Ddh" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="0.13" id="Eta-wQ-hCg"/>
                 <constraint firstItem="pJR-Oa-Zea" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="15" id="FIC-co-rEB"/>
+                <constraint firstAttribute="trailing" secondItem="tSQ-qc-YMp" secondAttribute="trailing" id="HF0-er-eKB"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="pJR-Oa-Zea" secondAttribute="trailing" constant="15" id="Ij5-y3-3OD"/>
                 <constraint firstItem="vfw-g6-g0q" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="0.5" id="JOa-VI-AZ8">
                     <variation key="heightClass=regular-widthClass=regular" constant="-50"/>
                 </constraint>
+                <constraint firstItem="tSQ-qc-YMp" firstAttribute="top" secondItem="vKa-bS-veA" secondAttribute="bottom" id="OCi-N0-eM5"/>
                 <constraint firstItem="vKa-bS-veA" firstAttribute="leading" secondItem="K3r-Lb-KOE" secondAttribute="leading" id="QxS-qI-ncr"/>
                 <constraint firstItem="Daj-Pv-Ddh" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="15" id="TIL-jy-Fpi">
                     <variation key="heightClass=regular-widthClass=regular" constant="30"/>
@@ -288,6 +301,7 @@
                     <variation key="heightClass=regular-widthClass=regular" constant="30"/>
                 </constraint>
                 <constraint firstItem="vKa-bS-veA" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="wtK-RE-XmH"/>
+                <constraint firstItem="tSQ-qc-YMp" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="xBo-f3-AL5"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Daj-Pv-Ddh" secondAttribute="trailing" constant="15" id="xMj-FQ-9nM">
                     <variation key="heightClass=regular-widthClass=regular" constant="30"/>
                 </constraint>
@@ -304,13 +318,16 @@
                     <include reference="CV8-3k-Kly"/>
                 </mask>
             </variation>
-            <point key="canvasLocation" x="138.75" y="0.0"/>
+            <point key="canvasLocation" x="83" y="74"/>
         </view>
     </objects>
     <resources>
         <image name="ic_back" width="65" height="65"/>
         <image name="ic_btn_bg" width="984" height="165"/>
-        <image name="ic_feedback_poster" width="879" height="616"/>
+        <image name="ic_feedback_poster" width="811" height="568"/>
+        <namedColor name="navigationSep">
+            <color red="0.31000000238418579" green="0.3059999942779541" blue="0.36899998784065247" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

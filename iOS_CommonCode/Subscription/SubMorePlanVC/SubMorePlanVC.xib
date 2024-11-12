@@ -33,6 +33,7 @@
                 <outlet property="collViewFeature" destination="bKX-Ed-Y0a" id="yJd-MW-yKz"/>
                 <outlet property="heightLabel" destination="4uL-aP-aKy" id="NFf-Tg-MkT"/>
                 <outlet property="imgClose" destination="U7J-l2-CR4" id="LKG-CK-rcG"/>
+                <outlet property="imgContinue" destination="U7C-6z-gG9" id="s7k-Da-XvZ"/>
                 <outlet property="imgShield" destination="OjH-ig-be8" id="PPl-5H-o3I"/>
                 <outlet property="lblCancelAnytime" destination="9bm-v4-pAh" id="hUA-vQ-ggv"/>
                 <outlet property="lblFreeTrial" destination="6iO-YU-Vzo" id="oQe-BM-A1X"/>
@@ -1106,13 +1107,13 @@
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0fK-nq-f1i" userLabel="View Subscribe">
                                             <rect key="frame" x="18.333333333333343" y="634.66666666666663" width="356.33333333333326" height="61.333333333333371"/>
                                             <subviews>
-                                                <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_subscribe_bg" translatesAutoresizingMaskIntoConstraints="NO" id="U7C-6z-gG9">
-                                                    <rect key="frame" x="0.0" y="0.0" width="356.33333333333331" height="61.333333333333336"/>
-                                                </imageView>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jYR-mU-FcI" customClass="LottieAnimationView" customModule="Lottie">
                                                     <rect key="frame" x="0.0" y="0.0" width="356.33333333333331" height="61.333333333333336"/>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </view>
+                                                <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_subscribe_bg" translatesAutoresizingMaskIntoConstraints="NO" id="U7C-6z-gG9">
+                                                    <rect key="frame" x="0.0" y="0.0" width="356.33333333333326" height="61.333333333333336"/>
+                                                </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Start Free Trial" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ydn-m6-0f8" customClass="MarqueeLabel" customModule="MarqueeLabel">
                                                     <rect key="frame" x="10" y="5" width="336.33333333333331" height="51.333333333333336"/>
                                                     <fontDescription key="fontDescription" name="Karla-ExtraBold" family="Karla" pointSize="20"/>

@@ -11,6 +11,13 @@ import StoreKit
 import RevenueCat
 import MarqueeLabel
 
+public enum ButtonBGType {
+    case solidColor
+    case gradientColor
+    case image
+    case animateJson
+}
+
 public enum ViewAllPlanType {
     case allPlan
     case morePlan
@@ -23,8 +30,6 @@ public struct UICustomizationSubTimelineTheme {
     public var imgTimelineLock: UIImage?
     public var imgTimelineBell: UIImage?
     public var imgTimelineStar: UIImage?
-    public var btnJsonFilenameiPhone: String?
-    public var btnJsonFilenameiPad: String?
     public var featureListTextColor: UIColor?
     public var featureInfoTextColor: UIColor?
     public var viewProgressColor: UIColor?
@@ -36,18 +41,23 @@ public struct UICustomizationSubTimelineTheme {
     public var viewMainColor: UIColor?
     public var lblUnderlineViewAllPlan: UIColor?
     public var viewLine: UIColor?
+    public var isShowRestoreButton: Bool = false
+    public var buttonBGType: ButtonBGType = .solidColor
+    public var btnContinueSolidColor: UIColor?
+    public var btnContinueFromColor: UIColor?
+    public var btnContinueToColor: UIColor?
+    public var btnContinueImage: UIImage?
+    public var btnJsonFilenameiPhone: String?
+    public var btnJsonFilenameiPad: String?
     
-    public init(themeColor: UIColor? = nil, imgTimelineRight: UIImage? = nil, imgTimelineLock: UIImage? = nil, imgTimelineBell: UIImage? = nil, imgTimelineStar: UIImage? = nil, btnJsonFilenameiPhone: String? = nil, btnJsonFilenameiPad: String? = nil, featureListTextColor: UIColor? = nil, featureInfoTextColor: UIColor? = nil, viewProgressColor: UIColor? = nil, viewLockColor: UIColor? = nil, lblCancelAnytimeColor: UIColor? = nil, imgShieldCancel: UIImage? = nil, lblTitleColor: UIColor? = nil, viewShieldColor: UIColor? = nil, viewMainColor: UIColor? = nil, lblUnderlineViewAllPlan: UIColor? = nil, viewLine: UIColor? = nil) {
+    public init(themeColor: UIColor? = nil, imgTimelineRight: UIImage? = nil, imgTimelineLock: UIImage? = nil, imgTimelineBell: UIImage? = nil, imgTimelineStar: UIImage? = nil, featureListTextColor: UIColor? = nil, featureInfoTextColor: UIColor? = nil, viewProgressColor: UIColor? = nil, viewLockColor: UIColor? = nil, lblCancelAnytimeColor: UIColor? = nil, imgShieldCancel: UIImage? = nil, lblTitleColor: UIColor? = nil, viewShieldColor: UIColor? = nil, viewMainColor: UIColor? = nil, lblUnderlineViewAllPlan: UIColor? = nil, viewLine: UIColor? = nil, isShowRestoreButton: Bool = false, buttonBGType: ButtonBGType = .solidColor, btnContinueSolidColor: UIColor? = nil, btnContinueFromColor: UIColor? = nil, btnContinueToColor: UIColor? = nil, btnContinueImage: UIImage? = nil, btnJsonFilenameiPhone: String? = nil, btnJsonFilenameiPad: String? = nil) {
         self.themeColor = themeColor ?? hexStringToUIColor(hex: "1B79FF")
         self.imgTimelineRight = imgTimelineRight ?? ImageHelper.image(named: "ic_timeline_right")
         self.imgTimelineLock = imgTimelineLock ?? ImageHelper.image(named: "ic_timeline_lock")
         self.imgTimelineBell = imgTimelineBell ?? ImageHelper.image(named: "ic_timeline_bell")
         self.imgTimelineStar = imgTimelineStar ?? ImageHelper.image(named: "ic_timeline_star")
-        self.btnJsonFilenameiPhone = btnJsonFilenameiPhone ?? "Pod_sub_timeline_iphone"
-        self.btnJsonFilenameiPad = btnJsonFilenameiPad ?? "Pod_sub_timeline_ipad"
         self.featureListTextColor = featureListTextColor ?? hexStringToUIColor(hex: "1E2128")
         self.featureInfoTextColor = featureInfoTextColor ?? hexStringToUIColor(hex: "6C7379")
-        
         self.viewProgressColor = viewProgressColor ?? hexStringToUIColor(hex: "0075FF")
         self.viewLockColor = viewLockColor ?? hexStringToUIColor(hex: "0075FF", alpha: 0.13)
         self.lblCancelAnytimeColor = lblCancelAnytimeColor ?? hexStringToUIColor(hex: "424242")
@@ -57,6 +67,14 @@ public struct UICustomizationSubTimelineTheme {
         self.viewMainColor = viewMainColor ?? .systemBackground
         self.lblUnderlineViewAllPlan = lblUnderlineViewAllPlan ?? hexStringToUIColor(hex: "6C7379")
         self.viewLine = viewLine ?? hexStringToUIColor(hex: "EBF1EF")
+        self.isShowRestoreButton = isShowRestoreButton
+        self.buttonBGType = buttonBGType
+        self.btnContinueSolidColor = btnContinueSolidColor ?? .black
+        self.btnContinueFromColor = btnContinueFromColor ?? .black
+        self.btnContinueToColor = btnContinueToColor ?? .black
+        self.btnContinueImage = btnContinueImage ?? ImageHelper.image(named: "ic_timeline_star")
+        self.btnJsonFilenameiPhone = btnJsonFilenameiPhone ?? "Pod_sub_timeline_iphone"
+        self.btnJsonFilenameiPad = btnJsonFilenameiPad ?? "Pod_sub_timeline_ipad"
     }
 }
 
@@ -109,6 +127,8 @@ public class SubTimelineVC: UIViewController {
     @IBOutlet weak var viewBottom: UIView!
     @IBOutlet weak var lblUnderlineViewAllPlan: UILabel!
     @IBOutlet weak var viewLine: UIView!
+    @IBOutlet weak var btnRestore: UIButton!
+    @IBOutlet weak var imgContinue: UIImageView!
     
     private var selected_Plan : SubscriptionConst.PlanInfo!
     var completionTimeline: ((SubCloseCompletionBlock, [String: String]?)->())?
@@ -227,6 +247,7 @@ public class SubTimelineVC: UIViewController {
         lblStack_Today.font = setCustomFont(name: .Avenir_Heavy, iPhoneSize: 15, iPadSize: 23)
         lblStack_Day5.font = setCustomFont(name: .Avenir_Heavy, iPhoneSize: 15, iPadSize: 23)
         lblStack_Day7.font = setCustomFont(name: .Avenir_Heavy, iPhoneSize: 15, iPadSize: 23)
+        btnRestore.titleLabel?.font = setCustomFont(name: .Avenir_Medium, iPhoneSize: 12, iPadSize: 19)
         lblStack_Now_Detail.font = setCustomFont(name: .Avenir_Medium, iPhoneSize: 12, iPadSize: 19)
         lblStack_Day5_Detail.font = setCustomFont(name: .Avenir_Medium, iPhoneSize: 12, iPadSize: 19)
         lblStack_Day7_Detail.font = setCustomFont(name: .Avenir_Medium, iPhoneSize: 12, iPadSize: 19)
@@ -288,6 +309,7 @@ public class SubTimelineVC: UIViewController {
                               arrFeature: self.arrFeature,
                               arrReview: self.arrReview,
                               subsciptionContinueBtnTextIndex: subsciptionContinueBtnTextIndex,
+                              customizationAllPlan: nil,
                               customizationSubRatingData: customizationSubRatingData,
                               customizationWebViewData: UICustomizationWebView(backButtonImage: UIImage(systemName: "star.fill")),
                               enableRatingAutoScroll: enableRatingAutoScroll,
@@ -320,6 +342,10 @@ public class SubTimelineVC: UIViewController {
     }
     
     //MARK: -
+    @IBAction func btnRestoreAction(_ sender: UIButton) {
+        restoreByRevenueKit()
+    }
+    
     @IBAction func btnCloseAction(_ sender: UIButton) {
         if isPresentSubAlertSheet {
             presentSubAlertSheet(on: self) { _ in
@@ -520,6 +546,35 @@ extension SubTimelineVC
 //MARK: -
 extension SubTimelineVC {
     private func updateUI() {
+        imgContinue.isHidden = true
+        switch customizationSubTimelineTheme.buttonBGType {
+        case .solidColor:
+            self.btnStrtTrial.backgroundColor = customizationSubTimelineTheme.btnContinueSolidColor ?? .black
+        case .gradientColor:
+            let from = self.customizationSubTimelineTheme.btnContinueFromColor ?? .black
+            let to = self.customizationSubTimelineTheme.btnContinueToColor ?? .black
+            self.btnStrtTrial.addGradient(colors: [from, to], cornerRadius: 20.0)
+        case .image:
+            imgContinue.isHidden = false
+            self.imgContinue.image = self.customizationSubTimelineTheme.btnContinueImage ?? ImageHelper.image(named: "ic_timeline_star")
+        case .animateJson:
+            if let btnJsonFilenameiPad = customizationSubTimelineTheme.btnJsonFilenameiPad,
+               let btnJsonFilenameiPhone = customizationSubTimelineTheme.btnJsonFilenameiPhone {
+                if UIDevice.current.isiPad {
+                    if let loadJSONURL = PodBundleHelper.loadJSONFile(named: btnJsonFilenameiPad) {
+                        viewJson.animation = LottieAnimation.filepath(loadJSONURL.path)
+                        viewJson?.loopMode = .loop
+                        viewJson.play()
+                    }
+                } else {
+                    if let loadJSONURL = PodBundleHelper.loadJSONFile(named: btnJsonFilenameiPhone) {
+                        viewJson.animation = LottieAnimation.filepath(loadJSONURL.path)
+                        viewJson?.loopMode = .loop
+                        viewJson.play()
+                    }
+                }
+            }
+        }
         
         if let featureInfoTextColor = customizationSubTimelineTheme.featureInfoTextColor {
             lblStack_Now_Detail.textColor = featureInfoTextColor
@@ -569,6 +624,8 @@ extension SubTimelineVC {
             self.viewBottom.backgroundColor = viewShieldColor
         }
         
+        self.btnRestore.isHidden = !customizationSubTimelineTheme.isShowRestoreButton
+        
         if let lblUnderlineViewAllPlan = customizationSubTimelineTheme.lblUnderlineViewAllPlan {
             self.lblUnderlineViewAllPlan.backgroundColor = lblUnderlineViewAllPlan
         }
@@ -591,23 +648,6 @@ extension SubTimelineVC {
         
         if let imgTimelineStar = customizationSubTimelineTheme.imgTimelineStar {
             self.imgTimelineStar.image = imgTimelineStar
-        }
-        
-        if let btnJsonFilenameiPad = customizationSubTimelineTheme.btnJsonFilenameiPad,
-           let btnJsonFilenameiPhone = customizationSubTimelineTheme.btnJsonFilenameiPhone {
-            if UIDevice.current.isiPad {
-                if let loadJSONURL = PodBundleHelper.loadJSONFile(named: btnJsonFilenameiPad) {
-                    viewJson.animation = LottieAnimation.filepath(loadJSONURL.path)
-                    viewJson?.loopMode = .loop
-                    viewJson.play()
-                }
-            } else {
-                if let loadJSONURL = PodBundleHelper.loadJSONFile(named: btnJsonFilenameiPhone) {
-                    viewJson.animation = LottieAnimation.filepath(loadJSONURL.path)
-                    viewJson?.loopMode = .loop
-                    viewJson.play()
-                }
-            }
         }
         
         let arrLabel = [

@@ -141,7 +141,7 @@ extension UIView
         RemoveAllSubviewWithTAG(tag: 4040)
     }
     
-    public func addGradient(colors: [UIColor], locations: [NSNumber] = [0.0, 1.0], startPt: CGPoint = CGPoint(x: 0.0, y: 1.0), endPt: CGPoint = CGPoint(x: 1.0, y: 1.0)) {
+    public func addGradient(colors: [UIColor], locations: [NSNumber] = [0.0, 1.0], startPt: CGPoint = CGPoint(x: 0.0, y: 1.0), endPt: CGPoint = CGPoint(x: 1.0, y: 1.0), cornerRadius: CGFloat? = nil, isRounded: Bool? = nil) {
         
         let gradientLayer = CAGradientLayer()
         gradientLayer.colors = colors.map{ $0.cgColor }
@@ -149,6 +149,12 @@ extension UIView
         gradientLayer.startPoint = CGPoint(x: 0.0, y: 1.0)
         gradientLayer.endPoint = CGPoint(x: 1.0, y: 1.0)
         gradientLayer.frame = self.bounds
+        if let cornerRadius = cornerRadius {
+            gradientLayer.cornerRadius = cornerRadius
+        }
+        if let isRounded = isRounded, isRounded == true {
+            gradientLayer.cornerRadius = self.bounds.height/2
+        }
         if let _ = self.layer.sublayers?.first as? CAGradientLayer {
             layer.sublayers?[0] = gradientLayer
         } else {

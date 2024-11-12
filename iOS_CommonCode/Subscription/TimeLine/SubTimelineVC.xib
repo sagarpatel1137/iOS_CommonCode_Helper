@@ -16,19 +16,21 @@
         <array key="Inter-Medium.ttf">
             <string>Inter-Medium</string>
         </array>
-        <array key="Inter-SemiBold.ttf">
-            <string>Inter-SemiBold</string>
+        <array key="Karla-Medium.ttf">
+            <string>Karla-Medium</string>
         </array>
     </customFonts>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SubTimelineVC" customModule="iOS_CommonCode" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SubTimelineVC" customModule="iOS_CommonCode_Helper" customModuleProvider="target">
             <connections>
                 <outlet property="btnClose" destination="Id5-PK-Bqr" id="1Fb-jj-Wcc"/>
                 <outlet property="btnMorePlans" destination="BCW-t2-VCc" id="w61-Dc-u1f"/>
                 <outlet property="btnPrivacyPolicy" destination="Csc-41-M7j" id="y9m-45-k41"/>
+                <outlet property="btnRestore" destination="dnJ-8W-sNC" id="A1N-iu-cEa"/>
                 <outlet property="btnStrtTrial" destination="HRD-ok-wYF" id="iOe-FD-UIQ"/>
                 <outlet property="btnTermsOfUse" destination="33n-o5-omA" id="zue-bq-Ycw"/>
                 <outlet property="imfTimelineBell" destination="Pvs-NM-TLf" id="Lrd-s3-f4r"/>
+                <outlet property="imgContinue" destination="h04-mQ-yI6" id="kwp-8M-Bwm"/>
                 <outlet property="imgShieldCancel" destination="hNQ-in-gvN" id="yQ5-2U-dIF"/>
                 <outlet property="imgTimelineLock" destination="XVk-mm-Ghq" id="6uZ-mm-WKe"/>
                 <outlet property="imgTimelineRight" destination="Adq-Tz-koH" id="rIE-Ok-Qq7"/>
@@ -84,7 +86,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="393" height="793"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5Wi-NZ-pZN">
-                                            <rect key="frame" x="0.0" y="0.0" width="393" height="815.66666666666663"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="845.66666666666663"/>
                                             <subviews>
                                                 <button opaque="NO" alpha="0.30000001192092896" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Id5-PK-Bqr" userLabel="Close">
                                                     <rect key="frame" x="345" y="5" width="40" height="40"/>
@@ -104,20 +106,51 @@
                                                         <action selector="btnCloseAction:" destination="-1" eventType="touchUpInside" id="W6J-zF-NRG"/>
                                                     </connections>
                                                 </button>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HQX-dy-6Ar">
+                                                    <rect key="frame" x="30" y="8" width="119" height="30"/>
+                                                    <subviews>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="EsA-O5-hA4">
+                                                            <rect key="frame" x="0.0" y="0.0" width="119" height="30"/>
+                                                            <subviews>
+                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dnJ-8W-sNC">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="119" height="30"/>
+                                                                    <fontDescription key="fontDescription" name="Karla-Medium" family="Karla" pointSize="15"/>
+                                                                    <state key="normal" title="Restore Purchase">
+                                                                        <color key="titleColor" red="0.67797319759999997" green="0.69114235229999998" blue="0.70800555440000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                    </state>
+                                                                    <userDefinedRuntimeAttributes>
+                                                                        <userDefinedRuntimeAttribute type="boolean" keyPath="fontSizeNew" value="YES"/>
+                                                                        <userDefinedRuntimeAttribute type="boolean" keyPath="fontSize" value="NO"/>
+                                                                    </userDefinedRuntimeAttributes>
+                                                                    <connections>
+                                                                        <action selector="btnRestoreAction:" destination="-1" eventType="touchUpInside" id="HEd-aj-TN5"/>
+                                                                    </connections>
+                                                                </button>
+                                                            </subviews>
+                                                        </stackView>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="trailing" secondItem="EsA-O5-hA4" secondAttribute="trailing" id="1U2-fI-ZgR"/>
+                                                        <constraint firstItem="EsA-O5-hA4" firstAttribute="leading" secondItem="HQX-dy-6Ar" secondAttribute="leading" id="EWJ-tu-W3s"/>
+                                                        <constraint firstItem="EsA-O5-hA4" firstAttribute="top" secondItem="HQX-dy-6Ar" secondAttribute="top" id="cF6-2g-63e"/>
+                                                        <constraint firstAttribute="bottom" secondItem="EsA-O5-hA4" secondAttribute="bottom" id="gxN-7v-s0I"/>
+                                                    </constraints>
+                                                </view>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HAVE DOUBTS?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QXT-QH-b0y" customClass="MarqueeLabel" customModule="MarqueeLabel">
-                                                    <rect key="frame" x="30" y="7.9999999999999982" width="315" height="26.333333333333329"/>
+                                                    <rect key="frame" x="30" y="38" width="315" height="26.333333333333329"/>
                                                     <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="22"/>
                                                     <color key="textColor" red="0.1176470588" green="0.12941176469999999" blue="0.15686274510000001" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Start with a free trial" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k3u-Cr-eFM" customClass="MarqueeLabel" customModule="MarqueeLabel">
-                                                    <rect key="frame" x="30" y="34.333333333333329" width="333" height="25.333333333333329"/>
+                                                    <rect key="frame" x="30" y="64.333333333333329" width="333" height="25.333333333333329"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
                                                     <color key="textColor" red="0.10588235294117647" green="0.47450980392156861" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sNk-Ir-m4u" userLabel="ViewStack">
-                                                    <rect key="frame" x="20" y="89.666666666666657" width="353" height="417.66666666666674"/>
+                                                    <rect key="frame" x="20" y="119.66666666666666" width="353" height="417.66666666666674"/>
                                                     <subviews>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4yg-Bd-lqA" userLabel="ViewTimeLine">
                                                             <rect key="frame" x="0.0" y="0.0" width="50.333333333333336" height="417.66666666666669"/>
@@ -231,7 +264,7 @@
                                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="6Gy-1D-a24">
                                                                             <rect key="frame" x="0.0" y="0.0" width="292.66666666666669" height="40.666666666666664"/>
                                                                             <subviews>
-                                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="NOW" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZdA-1R-fGA" customClass="MarqueeLabel" customModule="iOS_CommonCode" customModuleProvider="target">
+                                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="NOW" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZdA-1R-fGA" customClass="MarqueeLabel" customModule="iOS_CommonCode_Helper" customModuleProvider="target">
                                                                                     <rect key="frame" x="0.0" y="0.0" width="292.66666666666669" height="20.333333333333332"/>
                                                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                                                                     <color key="textColor" name="AppThemeColor"/>
@@ -251,7 +284,7 @@
                                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="DoK-jg-zbn">
                                                                             <rect key="frame" x="0.0" y="62.666666666666671" width="292.66666666666669" height="214.66666666666663"/>
                                                                             <subviews>
-                                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Today: Get Instant Access" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="igB-90-pbK" customClass="MarqueeLabel" customModule="iOS_CommonCode" customModuleProvider="target">
+                                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Today: Get Instant Access" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="igB-90-pbK" customClass="MarqueeLabel" customModule="iOS_CommonCode_Helper" customModuleProvider="target">
                                                                                     <rect key="frame" x="0.0" y="0.0" width="292.66666666666669" height="20.333333333333332"/>
                                                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                                                                     <color key="textColor" name="AppThemeColor"/>
@@ -261,64 +294,64 @@
                                                                                     </variation>
                                                                                 </label>
                                                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="uUS-TV-Bo4">
-                                                                                    <rect key="frame" x="0.0" y="25.333333333333314" width="292.66666666666669" height="189.33333333333334"/>
+                                                                                    <rect key="frame" x="0.0" y="25.333333333333343" width="292.66666666666669" height="189.33333333333334"/>
                                                                                     <subviews>
-                                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="• QR Generate" lineBreakMode="clip" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NUJ-wx-6mD" customClass="MarqueeLabel" customModule="iOS_CommonCode" customModuleProvider="target">
+                                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="• QR Generate" lineBreakMode="clip" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NUJ-wx-6mD" customClass="MarqueeLabel" customModule="iOS_CommonCode_Helper" customModuleProvider="target">
                                                                                             <rect key="frame" x="0.0" y="0.0" width="292.66666666666669" height="15.333333333333334"/>
                                                                                             <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="13"/>
                                                                                             <color key="textColor" red="0.1176470588" green="0.12941176469999999" blue="0.15686274510000001" alpha="1" colorSpace="calibratedRGB"/>
                                                                                             <nil key="highlightedColor"/>
                                                                                         </label>
-                                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="• Copy UR" lineBreakMode="clip" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YmE-fY-MK6" customClass="MarqueeLabel" customModule="iOS_CommonCode" customModuleProvider="target">
-                                                                                            <rect key="frame" x="0.0" y="19.333333333333343" width="292.66666666666669" height="15.333333333333336"/>
+                                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="• Copy UR" lineBreakMode="clip" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YmE-fY-MK6" customClass="MarqueeLabel" customModule="iOS_CommonCode_Helper" customModuleProvider="target">
+                                                                                            <rect key="frame" x="0.0" y="19.333333333333314" width="292.66666666666669" height="15.333333333333336"/>
                                                                                             <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="13"/>
                                                                                             <color key="textColor" red="0.1176470588" green="0.12941176469999999" blue="0.15686274510000001" alpha="1" colorSpace="calibratedRGB"/>
                                                                                             <nil key="highlightedColor"/>
                                                                                         </label>
-                                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="• Sync" lineBreakMode="clip" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0fY-yB-5qL" customClass="MarqueeLabel" customModule="iOS_CommonCode" customModuleProvider="target">
-                                                                                            <rect key="frame" x="0.0" y="38.666666666666657" width="292.66666666666669" height="15.333333333333336"/>
+                                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="• Sync" lineBreakMode="clip" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0fY-yB-5qL" customClass="MarqueeLabel" customModule="iOS_CommonCode_Helper" customModuleProvider="target">
+                                                                                            <rect key="frame" x="0.0" y="38.666666666666629" width="292.66666666666669" height="15.333333333333336"/>
                                                                                             <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="13"/>
                                                                                             <color key="textColor" red="0.1176470588" green="0.12941176469999999" blue="0.15686274510000001" alpha="1" colorSpace="calibratedRGB"/>
                                                                                             <nil key="highlightedColor"/>
                                                                                         </label>
-                                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="• History" lineBreakMode="clip" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3qj-7c-MzO" customClass="MarqueeLabel" customModule="iOS_CommonCode" customModuleProvider="target">
-                                                                                            <rect key="frame" x="0.0" y="58.000000000000036" width="292.66666666666669" height="15.333333333333336"/>
+                                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="• History" lineBreakMode="clip" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3qj-7c-MzO" customClass="MarqueeLabel" customModule="iOS_CommonCode_Helper" customModuleProvider="target">
+                                                                                            <rect key="frame" x="0.0" y="58.000000000000007" width="292.66666666666669" height="15.333333333333336"/>
                                                                                             <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="13"/>
                                                                                             <color key="textColor" red="0.1176470588" green="0.12941176469999999" blue="0.15686274510000001" alpha="1" colorSpace="calibratedRGB"/>
                                                                                             <nil key="highlightedColor"/>
                                                                                         </label>
-                                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="• QR Scanner" lineBreakMode="clip" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wf9-pR-S7c" customClass="MarqueeLabel" customModule="iOS_CommonCode" customModuleProvider="target">
-                                                                                            <rect key="frame" x="0.0" y="77.333333333333343" width="292.66666666666669" height="15.333333333333329"/>
+                                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="• QR Scanner" lineBreakMode="clip" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wf9-pR-S7c" customClass="MarqueeLabel" customModule="iOS_CommonCode_Helper" customModuleProvider="target">
+                                                                                            <rect key="frame" x="0.0" y="77.333333333333314" width="292.66666666666669" height="15.333333333333329"/>
                                                                                             <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="13"/>
                                                                                             <color key="textColor" red="0.1176470588" green="0.12941176469999999" blue="0.15686274510000001" alpha="1" colorSpace="calibratedRGB"/>
                                                                                             <nil key="highlightedColor"/>
                                                                                         </label>
-                                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="• QR Scanner" lineBreakMode="clip" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vRl-1W-h7m" customClass="MarqueeLabel" customModule="iOS_CommonCode" customModuleProvider="target">
-                                                                                            <rect key="frame" x="0.0" y="96.666666666666657" width="292.66666666666669" height="15.333333333333329"/>
+                                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="• QR Scanner" lineBreakMode="clip" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vRl-1W-h7m" customClass="MarqueeLabel" customModule="iOS_CommonCode_Helper" customModuleProvider="target">
+                                                                                            <rect key="frame" x="0.0" y="96.666666666666629" width="292.66666666666669" height="15.333333333333329"/>
                                                                                             <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="13"/>
                                                                                             <color key="textColor" red="0.1176470588" green="0.12941176469999999" blue="0.15686274510000001" alpha="1" colorSpace="calibratedRGB"/>
                                                                                             <nil key="highlightedColor"/>
                                                                                         </label>
-                                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="• QR Scanner" lineBreakMode="clip" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WOP-gb-MRO" customClass="MarqueeLabel" customModule="iOS_CommonCode" customModuleProvider="target">
-                                                                                            <rect key="frame" x="0.0" y="116.00000000000003" width="292.66666666666669" height="15.333333333333343"/>
+                                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="• QR Scanner" lineBreakMode="clip" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WOP-gb-MRO" customClass="MarqueeLabel" customModule="iOS_CommonCode_Helper" customModuleProvider="target">
+                                                                                            <rect key="frame" x="0.0" y="116" width="292.66666666666669" height="15.333333333333343"/>
                                                                                             <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="13"/>
                                                                                             <color key="textColor" red="0.1176470588" green="0.12941176469999999" blue="0.15686274510000001" alpha="1" colorSpace="calibratedRGB"/>
                                                                                             <nil key="highlightedColor"/>
                                                                                         </label>
-                                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="• QR Scanner" lineBreakMode="clip" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kF1-DW-ErP" customClass="MarqueeLabel" customModule="iOS_CommonCode" customModuleProvider="target">
-                                                                                            <rect key="frame" x="0.0" y="135.33333333333334" width="292.66666666666669" height="15.333333333333343"/>
+                                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="• QR Scanner" lineBreakMode="clip" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kF1-DW-ErP" customClass="MarqueeLabel" customModule="iOS_CommonCode_Helper" customModuleProvider="target">
+                                                                                            <rect key="frame" x="0.0" y="135.33333333333331" width="292.66666666666669" height="15.333333333333343"/>
                                                                                             <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="13"/>
                                                                                             <color key="textColor" red="0.1176470588" green="0.12941176469999999" blue="0.15686274510000001" alpha="1" colorSpace="calibratedRGB"/>
                                                                                             <nil key="highlightedColor"/>
                                                                                         </label>
-                                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="• QR Scanner" lineBreakMode="clip" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dwe-xP-ZyD" customClass="MarqueeLabel" customModule="iOS_CommonCode" customModuleProvider="target">
-                                                                                            <rect key="frame" x="0.0" y="154.66666666666666" width="292.66666666666669" height="15.333333333333343"/>
+                                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="• QR Scanner" lineBreakMode="clip" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dwe-xP-ZyD" customClass="MarqueeLabel" customModule="iOS_CommonCode_Helper" customModuleProvider="target">
+                                                                                            <rect key="frame" x="0.0" y="154.66666666666663" width="292.66666666666669" height="15.333333333333343"/>
                                                                                             <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="13"/>
                                                                                             <color key="textColor" red="0.1176470588" green="0.12941176469999999" blue="0.15686274510000001" alpha="1" colorSpace="calibratedRGB"/>
                                                                                             <nil key="highlightedColor"/>
                                                                                         </label>
-                                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="• QR Scanner" lineBreakMode="clip" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XFP-sa-RL8" customClass="MarqueeLabel" customModule="iOS_CommonCode" customModuleProvider="target">
-                                                                                            <rect key="frame" x="0.0" y="174.00000000000003" width="292.66666666666669" height="15.333333333333343"/>
+                                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="• QR Scanner" lineBreakMode="clip" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XFP-sa-RL8" customClass="MarqueeLabel" customModule="iOS_CommonCode_Helper" customModuleProvider="target">
+                                                                                            <rect key="frame" x="0.0" y="174" width="292.66666666666669" height="15.333333333333343"/>
                                                                                             <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="13"/>
                                                                                             <color key="textColor" red="0.1176470588" green="0.12941176469999999" blue="0.15686274510000001" alpha="1" colorSpace="calibratedRGB"/>
                                                                                             <nil key="highlightedColor"/>
@@ -331,7 +364,7 @@
                                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="bqp-Op-adA">
                                                                             <rect key="frame" x="0.0" y="299.33333333333337" width="292.66666666666669" height="55.666666666666686"/>
                                                                             <subviews>
-                                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Day 2: Trial Reminder" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lQ6-1H-Go4" customClass="MarqueeLabel" customModule="iOS_CommonCode" customModuleProvider="target">
+                                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Day 2: Trial Reminder" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lQ6-1H-Go4" customClass="MarqueeLabel" customModule="iOS_CommonCode_Helper" customModuleProvider="target">
                                                                                     <rect key="frame" x="0.0" y="0.0" width="292.66666666666669" height="20.333333333333332"/>
                                                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                                                                     <color key="textColor" name="AppThemeColor"/>
@@ -351,7 +384,7 @@
                                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="rgk-zM-ifi">
                                                                             <rect key="frame" x="0.0" y="377" width="292.66666666666669" height="40.666666666666686"/>
                                                                             <subviews>
-                                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Day 3: Premium Begins" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NXo-sv-rRc" customClass="MarqueeLabel" customModule="iOS_CommonCode" customModuleProvider="target">
+                                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Day 3: Premium Begins" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NXo-sv-rRc" customClass="MarqueeLabel" customModule="iOS_CommonCode_Helper" customModuleProvider="target">
                                                                                     <rect key="frame" x="0.0" y="0.0" width="292.66666666666669" height="20.333333333333332"/>
                                                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                                                                     <color key="textColor" name="AppThemeColor"/>
@@ -412,7 +445,7 @@
                                                     </variation>
                                                 </view>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RfM-fA-EfK" userLabel="ViewShield">
-                                                    <rect key="frame" x="64" y="537.33333333333337" width="265" height="30"/>
+                                                    <rect key="frame" x="64" y="567.33333333333337" width="265" height="30"/>
                                                     <subviews>
                                                         <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="t3L-hb-kMS">
                                                             <rect key="frame" x="10" y="5" width="245" height="20"/>
@@ -450,7 +483,7 @@
                                                     </constraints>
                                                 </view>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2P9-Y7-eI8" userLabel="ViewPrice">
-                                                    <rect key="frame" x="0.0" y="577.33333333333337" width="393" height="45"/>
+                                                    <rect key="frame" x="0.0" y="607.33333333333337" width="393" height="45"/>
                                                     <subviews>
                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="OOK-m4-iMY">
                                                             <rect key="frame" x="85.000000000000014" y="0.0" width="223.33333333333337" height="45"/>
@@ -490,7 +523,7 @@
                                                     </constraints>
                                                 </view>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="97p-GG-Az5" userLabel="ViewBottom">
-                                                    <rect key="frame" x="0.0" y="652.33333333333337" width="393" height="163.33333333333337"/>
+                                                    <rect key="frame" x="0.0" y="682.33333333333337" width="393" height="163.33333333333337"/>
                                                     <subviews>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Biw-mB-m6g" userLabel="ViewContinue">
                                                             <rect key="frame" x="20" y="10.000000000000004" width="353" height="50.333333333333343"/>
@@ -499,10 +532,17 @@
                                                                     <rect key="frame" x="0.0" y="0.0" width="353" height="50.333333333333336"/>
                                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 </view>
-                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HRD-ok-wYF">
+                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_subblack_area_bg.png" translatesAutoresizingMaskIntoConstraints="NO" id="h04-mQ-yI6">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="353" height="50.333333333333336"/>
+                                                                    <userDefinedRuntimeAttributes>
+                                                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                            <integer key="value" value="20"/>
+                                                                        </userDefinedRuntimeAttribute>
+                                                                    </userDefinedRuntimeAttributes>
+                                                                </imageView>
+                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HRD-ok-wYF">
                                                                     <rect key="frame" x="0.0" y="0.0" width="353" height="50.333333333333336"/>
                                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                    <fontDescription key="fontDescription" name="Inter-SemiBold" family="Inter" pointSize="15"/>
                                                                     <inset key="titleEdgeInsets" minX="8" minY="0.0" maxX="8" maxY="0.0"/>
                                                                     <state key="normal">
                                                                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -539,8 +579,12 @@
                                                                 <constraint firstAttribute="trailing" secondItem="TSi-bw-a4p" secondAttribute="trailing" id="Mxk-dH-RsP"/>
                                                                 <constraint firstAttribute="bottom" secondItem="TSi-bw-a4p" secondAttribute="bottom" id="OYO-VZ-IJK"/>
                                                                 <constraint firstItem="TSi-bw-a4p" firstAttribute="leading" secondItem="Biw-mB-m6g" secondAttribute="leading" id="SLj-37-zPb"/>
+                                                                <constraint firstItem="h04-mQ-yI6" firstAttribute="trailing" secondItem="TSi-bw-a4p" secondAttribute="trailing" id="Uev-tV-a68"/>
+                                                                <constraint firstItem="h04-mQ-yI6" firstAttribute="leading" secondItem="TSi-bw-a4p" secondAttribute="leading" id="Uob-Md-vFd"/>
                                                                 <constraint firstItem="TSi-bw-a4p" firstAttribute="top" secondItem="Biw-mB-m6g" secondAttribute="top" id="XS4-pb-jlz"/>
                                                                 <constraint firstItem="HRD-ok-wYF" firstAttribute="leading" secondItem="Biw-mB-m6g" secondAttribute="leading" id="e1o-Ml-h7O"/>
+                                                                <constraint firstItem="h04-mQ-yI6" firstAttribute="bottom" secondItem="TSi-bw-a4p" secondAttribute="bottom" id="g6h-74-X3m"/>
+                                                                <constraint firstItem="h04-mQ-yI6" firstAttribute="top" secondItem="TSi-bw-a4p" secondAttribute="top" id="nZ6-CW-zEC"/>
                                                                 <constraint firstItem="DlJ-gs-mrZ" firstAttribute="top" secondItem="Biw-mB-m6g" secondAttribute="top" id="rHq-3J-WHu"/>
                                                                 <constraint firstAttribute="bottom" secondItem="DlJ-gs-mrZ" secondAttribute="bottom" id="t1p-dF-uxY"/>
                                                                 <constraint firstItem="DlJ-gs-mrZ" firstAttribute="leading" secondItem="Biw-mB-m6g" secondAttribute="leading" constant="5" id="uSx-6y-zDY"/>
@@ -728,8 +772,12 @@
                                                     <variation key="heightClass=regular-widthClass=regular" constant="45"/>
                                                 </constraint>
                                                 <constraint firstAttribute="bottom" secondItem="97p-GG-Az5" secondAttribute="bottom" id="AvW-pD-cuJ"/>
+                                                <constraint firstItem="QXT-QH-b0y" firstAttribute="top" secondItem="HQX-dy-6Ar" secondAttribute="bottom" id="Dle-0A-bHJ"/>
                                                 <constraint firstItem="97p-GG-Az5" firstAttribute="leading" secondItem="5Wi-NZ-pZN" secondAttribute="leading" id="E3q-Lw-Gz0"/>
                                                 <constraint firstAttribute="trailing" secondItem="Id5-PK-Bqr" secondAttribute="trailing" constant="8" id="EOu-Vv-yY7"/>
+                                                <constraint firstItem="HQX-dy-6Ar" firstAttribute="top" secondItem="5Wi-NZ-pZN" secondAttribute="top" constant="8" id="GNu-eh-jLv">
+                                                    <variation key="heightClass=regular-widthClass=regular" constant="15"/>
+                                                </constraint>
                                                 <constraint firstItem="RfM-fA-EfK" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="5Wi-NZ-pZN" secondAttribute="leading" constant="10" id="JGb-Kw-MyI"/>
                                                 <constraint firstItem="Id5-PK-Bqr" firstAttribute="leading" secondItem="QXT-QH-b0y" secondAttribute="trailing" id="OxN-av-bBe"/>
                                                 <constraint firstItem="RfM-fA-EfK" firstAttribute="centerX" secondItem="5Wi-NZ-pZN" secondAttribute="centerX" id="Q8s-Nc-P9X"/>
@@ -747,14 +795,12 @@
                                                 <constraint firstItem="2P9-Y7-eI8" firstAttribute="top" secondItem="RfM-fA-EfK" secondAttribute="bottom" constant="10" id="cUP-1A-4Vr">
                                                     <variation key="heightClass=regular-widthClass=regular" constant="15"/>
                                                 </constraint>
+                                                <constraint firstItem="HQX-dy-6Ar" firstAttribute="leading" secondItem="QXT-QH-b0y" secondAttribute="leading" id="fZA-x4-fb6"/>
                                                 <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="RfM-fA-EfK" secondAttribute="trailing" constant="10" id="icx-Rg-faK"/>
                                                 <constraint firstItem="k3u-Cr-eFM" firstAttribute="leading" secondItem="QXT-QH-b0y" secondAttribute="leading" id="iuc-Mf-qOl"/>
                                                 <constraint firstItem="2P9-Y7-eI8" firstAttribute="leading" secondItem="5Wi-NZ-pZN" secondAttribute="leading" id="kJB-Vl-T6I"/>
                                                 <constraint firstAttribute="trailing" secondItem="k3u-Cr-eFM" secondAttribute="trailing" constant="30" id="mjl-1E-9JL">
                                                     <variation key="heightClass=regular-widthClass=regular" constant="45"/>
-                                                </constraint>
-                                                <constraint firstItem="QXT-QH-b0y" firstAttribute="top" secondItem="5Wi-NZ-pZN" secondAttribute="top" constant="8" id="tYM-Yd-dEv">
-                                                    <variation key="heightClass=regular-widthClass=regular" constant="15"/>
                                                 </constraint>
                                             </constraints>
                                         </view>
@@ -801,6 +847,7 @@
     <resources>
         <image name="ic_shield" width="61" height="61"/>
         <image name="ic_sub_close" width="100" height="100"/>
+        <image name="ic_subblack_area_bg.png" width="1584" height="1155"/>
         <image name="ic_timeline_bell" width="90" height="90"/>
         <image name="ic_timeline_lock" width="92" height="92"/>
         <image name="ic_timeline_right" width="92" height="92"/>

@@ -22,13 +22,28 @@ public struct UICustomizationSubMorePlan {
     public var sixBoxDynamicPlanSelectedIndex: Int
     public var subsciptionContinueBtnText: Int
     
-    public init(arrImgListFeatures: [UIImage], arrImgListFeatures_BG: [UIImage], arrStrListFeatures: [String], sixBoxDynamicPlan: [Int], sixBoxDynamicPlanSelectedIndex: Int, subsciptionContinueBtnText: Int) {
+    public var buttonBGType: ButtonBGType = .solidColor
+    public var btnContinueSolidColor: UIColor?
+    public var btnContinueFromColor: UIColor?
+    public var btnContinueToColor: UIColor?
+    public var btnContinueImage: UIImage?
+    public var btnJsonFilenameiPhone: String?
+    public var btnJsonFilenameiPad: String?
+    
+    public init(arrImgListFeatures: [UIImage], arrImgListFeatures_BG: [UIImage], arrStrListFeatures: [String], sixBoxDynamicPlan: [Int], sixBoxDynamicPlanSelectedIndex: Int, subsciptionContinueBtnText: Int, buttonBGType: ButtonBGType = .solidColor, btnContinueSolidColor: UIColor? = nil, btnContinueFromColor: UIColor? = nil, btnContinueToColor: UIColor? = nil, btnContinueImage: UIImage? = nil, btnJsonFilenameiPhone: String? = nil, btnJsonFilenameiPad: String? = nil) {
         self.arrImgListFeatures = arrImgListFeatures
         self.arrImgListFeatures_BG = arrImgListFeatures_BG
         self.arrStrListFeatures = arrStrListFeatures
         self.sixBoxDynamicPlan = sixBoxDynamicPlan
         self.sixBoxDynamicPlanSelectedIndex = sixBoxDynamicPlanSelectedIndex
         self.subsciptionContinueBtnText = subsciptionContinueBtnText
+        self.buttonBGType = buttonBGType
+        self.btnContinueSolidColor = btnContinueSolidColor ?? .black
+        self.btnContinueFromColor = btnContinueFromColor ?? .black
+        self.btnContinueToColor = btnContinueToColor ?? .black
+        self.btnContinueImage = btnContinueImage ?? ImageHelper.image(named: "ic_timeline_star")
+        self.btnJsonFilenameiPhone = btnJsonFilenameiPhone ?? "Pod_sub_iPhone-Capsule"
+        self.btnJsonFilenameiPad = btnJsonFilenameiPad ?? "Pod_sub_iPad-Capsule"
     }
 }
 
@@ -94,6 +109,7 @@ public class SubMorePlanVC: UIViewController {
     @IBOutlet var lblTitleTopConst : [NSLayoutConstraint]!
     @IBOutlet weak var imgClose: UIImageView!
     @IBOutlet weak var imgShield: UIImageView!
+    @IBOutlet weak var imgContinue: UIImageView!
     
     private var selected_Plan : SubscriptionConst.PlanInfo!
     private var arrPlansList = [PlanDetails]()
@@ -287,18 +303,48 @@ public class SubMorePlanVC: UIViewController {
         lblTerms.font = setCustomFont_WithoutRatio(name: .WorkSans_Regular, iPhoneSize: 13, iPadSize: 17)
         lblPrivacy.font = setCustomFont_WithoutRatio(name: .WorkSans_Regular, iPhoneSize: 13, iPadSize: 17)
         lblCancelAnytime.font = setCustomFont_WithoutRatio(name: .PlusJakartaSans_Regular, iPhoneSize: 12, iPadSize: 21)
-
-        if UIDevice.current.userInterfaceIdiom == .pad {
-            if let loadJSONURL = PodBundleHelper.loadJSONFile(named: "Pod_sub_iPad-Capsule") {
-                viewJson.animation = LottieAnimation.filepath(loadJSONURL.path)
-                viewJson?.loopMode = .loop
-                viewJson.play()
+        
+        imgContinue.isHidden = true
+        switch customizationSubMorePlan?.buttonBGType {
+        case .solidColor:
+            self.btnSubscribe.backgroundColor = customizationSubMorePlan?.btnContinueSolidColor ?? .black
+        case .gradientColor:
+            let from = self.customizationSubMorePlan?.btnContinueFromColor ?? .black
+            let to = self.customizationSubMorePlan?.btnContinueToColor ?? .black
+            self.btnSubscribe.addGradient(colors: [from, to], isRounded: true)
+        case .image:
+            imgContinue.isHidden = false
+            self.imgContinue.image = self.customizationSubMorePlan?.btnContinueImage ?? ImageHelper.image(named: "ic_timeline_star")
+        case .animateJson:
+            if let btnJsonFilenameiPad = customizationSubMorePlan?.btnJsonFilenameiPad,
+               let btnJsonFilenameiPhone = customizationSubMorePlan?.btnJsonFilenameiPhone {
+                if UIDevice.current.isiPad {
+                    if let loadJSONURL = PodBundleHelper.loadJSONFile(named: btnJsonFilenameiPad) {
+                        viewJson.animation = LottieAnimation.filepath(loadJSONURL.path)
+                        viewJson?.loopMode = .loop
+                        viewJson.play()
+                    }
+                } else {
+                    if let loadJSONURL = PodBundleHelper.loadJSONFile(named: btnJsonFilenameiPhone) {
+                        viewJson.animation = LottieAnimation.filepath(loadJSONURL.path)
+                        viewJson?.loopMode = .loop
+                        viewJson.play()
+                    }
+                }
             }
-        } else {
-            if let loadJSONURL = PodBundleHelper.loadJSONFile(named: "Pod_sub_iPhone-Capsule") {
-                viewJson.animation = LottieAnimation.filepath(loadJSONURL.path)
-                viewJson?.loopMode = .loop
-                viewJson.play()
+        case .none:
+            if UIDevice.current.userInterfaceIdiom == .pad {
+                if let loadJSONURL = PodBundleHelper.loadJSONFile(named: "Pod_sub_iPad-Capsule") {
+                    viewJson.animation = LottieAnimation.filepath(loadJSONURL.path)
+                    viewJson?.loopMode = .loop
+                    viewJson.play()
+                }
+            } else {
+                if let loadJSONURL = PodBundleHelper.loadJSONFile(named: "Pod_sub_iPhone-Capsule") {
+                    viewJson.animation = LottieAnimation.filepath(loadJSONURL.path)
+                    viewJson?.loopMode = .loop
+                    viewJson.play()
+                }
             }
         }
         
