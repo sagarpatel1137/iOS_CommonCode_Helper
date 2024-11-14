@@ -8,8 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		81049FA02CC8CFF700602057 /* PodBundleHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81049F9F2CC8CFF700602057 /* PodBundleHelper.swift */; };
-		81049FA32CC8DB3600602057 /* Pod_sub_iPad-Capsule.json in Resources */ = {isa = PBXBuildFile; fileRef = 81049FA12CC8DB3600602057 /* Pod_sub_iPad-Capsule.json */; };
-		81049FA42CC8DB3600602057 /* Pod_sub_iPhone-Capsule.json in Resources */ = {isa = PBXBuildFile; fileRef = 81049FA22CC8DB3600602057 /* Pod_sub_iPhone-Capsule.json */; };
 		81049FB22CC8DC5100602057 /* PlusJakartaSans-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 81049FAA2CC8DC5100602057 /* PlusJakartaSans-Medium.ttf */; };
 		81049FB32CC8DC5100602057 /* PlusJakartaSans-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 81049FA92CC8DC5100602057 /* PlusJakartaSans-ExtraBold.ttf */; };
 		81049FB42CC8DC5100602057 /* Avenir Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 81049FA52CC8DC5100602057 /* Avenir Black.ttf */; };
@@ -48,6 +46,14 @@
 		815800792CBE427100074F08 /* FirebaseEvents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 815800782CBE427100074F08 /* FirebaseEvents.swift */; };
 		8158007F2CBE67FF00074F08 /* Subscription+Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8158007E2CBE67FF00074F08 /* Subscription+Constant.swift */; };
 		815800812CBE6BAB00074F08 /* CustomActionSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 815800802CBE6BAB00074F08 /* CustomActionSheetView.swift */; };
+		81683E102CE5AB9D00A57D00 /* lottie_subscription_continue_bg.json in Resources */ = {isa = PBXBuildFile; fileRef = 81683E0F2CE5AB9D00A57D00 /* lottie_subscription_continue_bg.json */; };
+		81683E1A2CE5B32900A57D00 /* Pod_sub_discount_btn.png in Resources */ = {isa = PBXBuildFile; fileRef = 81683E152CE5B32900A57D00 /* Pod_sub_discount_btn.png */; };
+		81683E1B2CE5B32900A57D00 /* Pod_sub_iPad-Capsule.png in Resources */ = {isa = PBXBuildFile; fileRef = 81683E162CE5B32900A57D00 /* Pod_sub_iPad-Capsule.png */; };
+		81683E1C2CE5B32900A57D00 /* Pod_sub_all_iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 81683E142CE5B32900A57D00 /* Pod_sub_all_iphone.png */; };
+		81683E1D2CE5B32900A57D00 /* Pod_sub_iPhone-Capsule.png in Resources */ = {isa = PBXBuildFile; fileRef = 81683E172CE5B32900A57D00 /* Pod_sub_iPhone-Capsule.png */; };
+		81683E1F2CE5B32900A57D00 /* Pod_sub_timeline_ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 81683E182CE5B32900A57D00 /* Pod_sub_timeline_ipad.png */; };
+		81683E202CE5B32900A57D00 /* Pod_sub_timeline_iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 81683E192CE5B32900A57D00 /* Pod_sub_timeline_iphone.png */; };
+		81683E262CE5BDBC00A57D00 /* Pod_sub_all_ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 81683E252CE5BDBC00A57D00 /* Pod_sub_all_ipad.png */; };
 		817D301B2C8AC31800AB455C /* ATTracking_Manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 817D301A2C8AC31800AB455C /* ATTracking_Manager.swift */; };
 		817D301D2C8AC5E300AB455C /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 817D301C2C8AC5E300AB455C /* String+Extension.swift */; };
 		817D30332C8AC6C600AB455C /* UIWindow+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 817D30322C8AC6C600AB455C /* UIWindow+Extension.swift */; };
@@ -90,11 +96,6 @@
 		81B0F31E2CB105D70014E08A /* RatingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81B0F31B2CB105D70014E08A /* RatingVC.swift */; };
 		81B0F31F2CB105D70014E08A /* RatingVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 81B0F31C2CB105D70014E08A /* RatingVC.xib */; };
 		81B0F3212CB106620014E08A /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81B0F3202CB106620014E08A /* UserDefaults.swift */; };
-		81B0F3412CB10DA80014E08A /* Pod_sub_all_ipad.json in Resources */ = {isa = PBXBuildFile; fileRef = 81B0F33B2CB10DA80014E08A /* Pod_sub_all_ipad.json */; };
-		81B0F3422CB10DA80014E08A /* Pod_sub_all_iphone.json in Resources */ = {isa = PBXBuildFile; fileRef = 81B0F33C2CB10DA80014E08A /* Pod_sub_all_iphone.json */; };
-		81B0F3432CB10DA80014E08A /* Pod_sub_discount_btn.json in Resources */ = {isa = PBXBuildFile; fileRef = 81B0F33D2CB10DA80014E08A /* Pod_sub_discount_btn.json */; };
-		81B0F3442CB10DA80014E08A /* Pod_sub_timeline_ipad.json in Resources */ = {isa = PBXBuildFile; fileRef = 81B0F33E2CB10DA80014E08A /* Pod_sub_timeline_ipad.json */; };
-		81B0F3452CB10DA80014E08A /* Pod_sub_timeline_iphone.json in Resources */ = {isa = PBXBuildFile; fileRef = 81B0F33F2CB10DA80014E08A /* Pod_sub_timeline_iphone.json */; };
 		81BA8AF12C881BE100F8A3C5 /* Constant_Function.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81BA8AF02C881BE100F8A3C5 /* Constant_Function.swift */; };
 		81BA8B092C88376E00F8A3C5 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81BA8B082C88376E00F8A3C5 /* UIView+Extension.swift */; };
 		81C57FE42CD8A1B60027FAE3 /* vasundhara_infotech_logo.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 81C57FE32CD8A1B60027FAE3 /* vasundhara_infotech_logo.jpeg */; };
@@ -196,8 +197,6 @@
 		43604957A605E4D8F2482007 /* Pods-iOS_CommonCode.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS_CommonCode.debug.xcconfig"; path = "Target Support Files/Pods-iOS_CommonCode/Pods-iOS_CommonCode.debug.xcconfig"; sourceTree = "<group>"; };
 		4CF2BCBD339BA13B3597B4D2 /* Pods-iOS_CommonCode.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS_CommonCode.release.xcconfig"; path = "Target Support Files/Pods-iOS_CommonCode/Pods-iOS_CommonCode.release.xcconfig"; sourceTree = "<group>"; };
 		81049F9F2CC8CFF700602057 /* PodBundleHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PodBundleHelper.swift; sourceTree = "<group>"; };
-		81049FA12CC8DB3600602057 /* Pod_sub_iPad-Capsule.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "Pod_sub_iPad-Capsule.json"; sourceTree = "<group>"; };
-		81049FA22CC8DB3600602057 /* Pod_sub_iPhone-Capsule.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "Pod_sub_iPhone-Capsule.json"; sourceTree = "<group>"; };
 		81049FA52CC8DC5100602057 /* Avenir Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Avenir Black.ttf"; sourceTree = "<group>"; };
 		81049FA62CC8DC5100602057 /* Avenir Heavy.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Avenir Heavy.ttf"; sourceTree = "<group>"; };
 		81049FA72CC8DC5100602057 /* Avenir-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Avenir-Medium.ttf"; sourceTree = "<group>"; };
@@ -237,6 +236,14 @@
 		815800782CBE427100074F08 /* FirebaseEvents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseEvents.swift; sourceTree = "<group>"; };
 		8158007E2CBE67FF00074F08 /* Subscription+Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Subscription+Constant.swift"; sourceTree = "<group>"; };
 		815800802CBE6BAB00074F08 /* CustomActionSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomActionSheetView.swift; sourceTree = "<group>"; };
+		81683E0F2CE5AB9D00A57D00 /* lottie_subscription_continue_bg.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = lottie_subscription_continue_bg.json; sourceTree = "<group>"; };
+		81683E142CE5B32900A57D00 /* Pod_sub_all_iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Pod_sub_all_iphone.png; sourceTree = "<group>"; };
+		81683E152CE5B32900A57D00 /* Pod_sub_discount_btn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Pod_sub_discount_btn.png; sourceTree = "<group>"; };
+		81683E162CE5B32900A57D00 /* Pod_sub_iPad-Capsule.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Pod_sub_iPad-Capsule.png"; sourceTree = "<group>"; };
+		81683E172CE5B32900A57D00 /* Pod_sub_iPhone-Capsule.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Pod_sub_iPhone-Capsule.png"; sourceTree = "<group>"; };
+		81683E182CE5B32900A57D00 /* Pod_sub_timeline_ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Pod_sub_timeline_ipad.png; sourceTree = "<group>"; };
+		81683E192CE5B32900A57D00 /* Pod_sub_timeline_iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Pod_sub_timeline_iphone.png; sourceTree = "<group>"; };
+		81683E252CE5BDBC00A57D00 /* Pod_sub_all_ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Pod_sub_all_ipad.png; sourceTree = "<group>"; };
 		817D301A2C8AC31800AB455C /* ATTracking_Manager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ATTracking_Manager.swift; sourceTree = "<group>"; };
 		817D301C2C8AC5E300AB455C /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		817D30322C8AC6C600AB455C /* UIWindow+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIWindow+Extension.swift"; sourceTree = "<group>"; };
@@ -276,11 +283,6 @@
 		81B0F31B2CB105D70014E08A /* RatingVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RatingVC.swift; sourceTree = "<group>"; };
 		81B0F31C2CB105D70014E08A /* RatingVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RatingVC.xib; sourceTree = "<group>"; };
 		81B0F3202CB106620014E08A /* UserDefaults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaults.swift; sourceTree = "<group>"; };
-		81B0F33B2CB10DA80014E08A /* Pod_sub_all_ipad.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Pod_sub_all_ipad.json; sourceTree = "<group>"; };
-		81B0F33C2CB10DA80014E08A /* Pod_sub_all_iphone.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Pod_sub_all_iphone.json; sourceTree = "<group>"; };
-		81B0F33D2CB10DA80014E08A /* Pod_sub_discount_btn.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Pod_sub_discount_btn.json; sourceTree = "<group>"; };
-		81B0F33E2CB10DA80014E08A /* Pod_sub_timeline_ipad.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Pod_sub_timeline_ipad.json; sourceTree = "<group>"; };
-		81B0F33F2CB10DA80014E08A /* Pod_sub_timeline_iphone.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Pod_sub_timeline_iphone.json; sourceTree = "<group>"; };
 		81BA8AF02C881BE100F8A3C5 /* Constant_Function.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant_Function.swift; sourceTree = "<group>"; };
 		81BA8B082C88376E00F8A3C5 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		81BD39F82CC7AB0000CB598A /* iOS-CommonCode-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "iOS-CommonCode-Info.plist"; sourceTree = SOURCE_ROOT; };
@@ -398,6 +400,7 @@
 		811ED1362CC7CB8600225C84 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				8161F8FF2CE4D2DD000E1E4B /* Subscription button */,
 				81C5801B2CD8A5450027FAE3 /* FeedBack */,
 				81C5801A2CD8A53E0027FAE3 /* Rating */,
 				81C580192CD8A5340027FAE3 /* Subscription AllPlan */,
@@ -541,6 +544,20 @@
 			path = TimeLine;
 			sourceTree = "<group>";
 		};
+		8161F8FF2CE4D2DD000E1E4B /* Subscription button */ = {
+			isa = PBXGroup;
+			children = (
+				81683E252CE5BDBC00A57D00 /* Pod_sub_all_ipad.png */,
+				81683E142CE5B32900A57D00 /* Pod_sub_all_iphone.png */,
+				81683E152CE5B32900A57D00 /* Pod_sub_discount_btn.png */,
+				81683E162CE5B32900A57D00 /* Pod_sub_iPad-Capsule.png */,
+				81683E172CE5B32900A57D00 /* Pod_sub_iPhone-Capsule.png */,
+				81683E182CE5B32900A57D00 /* Pod_sub_timeline_ipad.png */,
+				81683E192CE5B32900A57D00 /* Pod_sub_timeline_iphone.png */,
+			);
+			path = "Subscription button";
+			sourceTree = "<group>";
+		};
 		817DCDF52C6F09CE004BA1C2 /* GDPR */ = {
 			isa = PBXGroup;
 			children = (
@@ -674,13 +691,7 @@
 		81B0F3402CB10DA80014E08A /* Json */ = {
 			isa = PBXGroup;
 			children = (
-				81B0F33B2CB10DA80014E08A /* Pod_sub_all_ipad.json */,
-				81B0F33C2CB10DA80014E08A /* Pod_sub_all_iphone.json */,
-				81B0F33D2CB10DA80014E08A /* Pod_sub_discount_btn.json */,
-				81B0F33E2CB10DA80014E08A /* Pod_sub_timeline_ipad.json */,
-				81B0F33F2CB10DA80014E08A /* Pod_sub_timeline_iphone.json */,
-				81049FA12CC8DB3600602057 /* Pod_sub_iPad-Capsule.json */,
-				81049FA22CC8DB3600602057 /* Pod_sub_iPhone-Capsule.json */,
+				81683E0F2CE5AB9D00A57D00 /* lottie_subscription_continue_bg.json */,
 			);
 			path = Json;
 			sourceTree = "<group>";
@@ -984,7 +995,6 @@
 				81A089C42C9D39A60091CFB3 /* Shimmer_NativeBannerAd.xib in Resources */,
 				815800732CBE21EB00074F08 /* SubTimelineVC.xib in Resources */,
 				81B0F3192CB0FFD50014E08A /* Pod_ja.strings in Resources */,
-				81B0F3452CB10DA80014E08A /* Pod_sub_timeline_iphone.json in Resources */,
 				81A66D1D2CBCE07E000F2788 /* FeedbackVC.xib in Resources */,
 				81B0F30E2CB0FFD50014E08A /* Pod_ar.strings in Resources */,
 				81B0F31F2CB105D70014E08A /* RatingVC.xib in Resources */,
@@ -1002,6 +1012,12 @@
 				81C580872CD8AB5A0027FAE3 /* ic_sub_plan_0_sel.svg in Resources */,
 				81C580882CD8AB5A0027FAE3 /* ic_subblack_route_bg.png in Resources */,
 				81C580892CD8AB5A0027FAE3 /* ic_subblack_gps_camera_bg.png in Resources */,
+				81683E1A2CE5B32900A57D00 /* Pod_sub_discount_btn.png in Resources */,
+				81683E1B2CE5B32900A57D00 /* Pod_sub_iPad-Capsule.png in Resources */,
+				81683E1C2CE5B32900A57D00 /* Pod_sub_all_iphone.png in Resources */,
+				81683E1D2CE5B32900A57D00 /* Pod_sub_iPhone-Capsule.png in Resources */,
+				81683E1F2CE5B32900A57D00 /* Pod_sub_timeline_ipad.png in Resources */,
+				81683E202CE5B32900A57D00 /* Pod_sub_timeline_iphone.png in Resources */,
 				81C5808A2CD8AB5A0027FAE3 /* ic_5_star.svg in Resources */,
 				81C5808B2CD8AB5A0027FAE3 /* ic_right_green.svg in Resources */,
 				81C5808C2CD8AB5A0027FAE3 /* ic_sub_plan_2.svg in Resources */,
@@ -1010,6 +1026,7 @@
 				81C5808F2CD8AB5A0027FAE3 /* ic_subblack_gps_map_camera.svg in Resources */,
 				81C580902CD8AB5A0027FAE3 /* ic_subblack_route_planing.svg in Resources */,
 				81C580912CD8AB5A0027FAE3 /* ic_sub_plan_2_sel.svg in Resources */,
+				81683E262CE5BDBC00A57D00 /* Pod_sub_all_ipad.png in Resources */,
 				81C580922CD8AB5A0027FAE3 /* ic_subblack_noads_bg.png in Resources */,
 				81C580932CD8AB5A0027FAE3 /* ic_sub_plan_1_sel.svg in Resources */,
 				81C580962CD8AB5A0027FAE3 /* ic_ads_Bg.png in Resources */,
@@ -1053,10 +1070,8 @@
 				81049FBD2CC8DC5100602057 /* WorkSans-SemiBold.ttf in Resources */,
 				81049FBE2CC8DC5100602057 /* WorkSans-ExtraBold.ttf in Resources */,
 				81B0F3132CB0FFD50014E08A /* Pod_th.strings in Resources */,
-				81049FA32CC8DB3600602057 /* Pod_sub_iPad-Capsule.json in Resources */,
 				81C5802E2CD8A7140027FAE3 /* ic_feedback_poster.svg in Resources */,
 				81C580282CD8A6D10027FAE3 /* ic_Rating_Background_Rating.png in Resources */,
-				81049FA42CC8DB3600602057 /* Pod_sub_iPhone-Capsule.json in Resources */,
 				81B0F30F2CB0FFD50014E08A /* Pod_fr.strings in Resources */,
 				81B0F3142CB0FFD50014E08A /* Pod_ru.strings in Resources */,
 				811B9BE92CC619530031DE5A /* SubMorePlanVC.xib in Resources */,
@@ -1065,14 +1080,13 @@
 				81C5801E2CD8A58E0027FAE3 /* ic_back.svg in Resources */,
 				81A089CC2C9D3BAD0091CFB3 /* NativeBannerAd.xib in Resources */,
 				81B0F3112CB0FFD50014E08A /* Pod_it.strings in Resources */,
-				81B0F3412CB10DA80014E08A /* Pod_sub_all_ipad.json in Resources */,
 				813A0A312CBF800200B5892A /* SubFeatureCell.xib in Resources */,
 				813A0A322CBF800200B5892A /* SubRatingCell.xib in Resources */,
 				81C5800F2CD8A3960027FAE3 /* ic_timeline_lock.svg in Resources */,
 				81C580212CD8A5970027FAE3 /* ic_btn_bg~ipad.png in Resources */,
 				81C580222CD8A5970027FAE3 /* ic_btn_bg~iphone.png in Resources */,
 				81C5802C2CD8A6DD0027FAE3 /* ic_Rating_Hide.svg in Resources */,
-				81B0F3432CB10DA80014E08A /* Pod_sub_discount_btn.json in Resources */,
+				81683E102CE5AB9D00A57D00 /* lottie_subscription_continue_bg.json in Resources */,
 				81C5800B2CD8A3880027FAE3 /* ic_sub_close.svg in Resources */,
 				813A0A232CBF69E400B5892A /* ThankYouVC.xib in Resources */,
 				81B0F31A2CB0FFD50014E08A /* Pod_zh.strings in Resources */,
@@ -1089,14 +1103,12 @@
 				81C580112CD8A39B0027FAE3 /* ic_timeline_right.svg in Resources */,
 				81C580342CD8A79C0027FAE3 /* ic_sub_popup_close.svg in Resources */,
 				81B0F3162CB0FFD50014E08A /* Pod_ko.strings in Resources */,
-				81B0F3422CB10DA80014E08A /* Pod_sub_all_iphone.json in Resources */,
 				81B0F3122CB0FFD50014E08A /* Pod_en.strings in Resources */,
 				81C580322CD8A7890027FAE3 /* ic_sub_popup_btn.svg in Resources */,
 				81B0F30D2CB0FFD50014E08A /* Pod_da.strings in Resources */,
 				81B0F3152CB0FFD50014E08A /* Pod_fil.strings in Resources */,
 				81B0F3102CB0FFD50014E08A /* Pod_ur.strings in Resources */,
 				811B2F0A2CC20C9A0080DF64 /* SubDiscountVC.xib in Resources */,
-				81B0F3442CB10DA80014E08A /* Pod_sub_timeline_ipad.json in Resources */,
 				81C580132CD8A3A00027FAE3 /* ic_timeline_star.svg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

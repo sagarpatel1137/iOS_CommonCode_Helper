@@ -13,7 +13,7 @@
         </array>
     </customFonts>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SubDiscountVC" customModule="iOS_CommonCode" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SubDiscountVC" customModule="iOS_CommonCode_Helper" customModuleProvider="target">
             <connections>
                 <outlet property="btnClose" destination="C70-gJ-Du0" id="jec-nN-X7D"/>
                 <outlet property="imgButtonTryNow" destination="ceK-kB-O15" id="dUz-Xg-wgq"/>
@@ -128,10 +128,10 @@ Specially For You!</string>
                                 </constraint>
                             </constraints>
                         </view>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ezO-A0-IpK" userLabel="ViewTry">
+                        <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ezO-A0-IpK" userLabel="ViewTry">
                             <rect key="frame" x="22" y="322" width="221" height="43"/>
                             <subviews>
-                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_sub_popup_btn" translatesAutoresizingMaskIntoConstraints="NO" id="ceK-kB-O15">
+                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_sub_popup_btn" translatesAutoresizingMaskIntoConstraints="NO" id="ceK-kB-O15">
                                     <rect key="frame" x="0.0" y="0.0" width="221" height="43"/>
                                 </imageView>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hkq-d3-5ia" customClass="LottieAnimationView" customModule="Lottie">
@@ -172,9 +172,6 @@ Specially For You!</string>
                                 <constraint firstAttribute="width" secondItem="ezO-A0-IpK" secondAttribute="height" multiplier="222:43" id="wYx-IQ-dhI"/>
                                 <constraint firstItem="nI8-4c-dg2" firstAttribute="top" secondItem="ezO-A0-IpK" secondAttribute="top" id="xJH-F6-zUu"/>
                             </constraints>
-                            <userDefinedRuntimeAttributes>
-                                <userDefinedRuntimeAttribute type="string" keyPath="animationName" value="Red-Button"/>
-                            </userDefinedRuntimeAttributes>
                         </view>
                     </subviews>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

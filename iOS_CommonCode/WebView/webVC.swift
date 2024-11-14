@@ -14,11 +14,15 @@ public struct UICustomizationWebView {
     public var backButtonImage: UIImage?
     public var titleFont: UIFont?
     public var titleTextColor: UIColor?
+    public var navigationBarHeight : CGFloat?
+    public var backButtonWidth : CGFloat?
     
-    public init(navBarBackgroundColor: UIColor? = nil, backButtonImage: UIImage? = nil, titleFont: UIFont? = nil, titleTextColor: UIColor? = nil) {
+    public init(navBarBackgroundColor: UIColor? = nil, backButtonImage: UIImage? = nil, titleFont: UIFont? = nil, titleTextColor: UIColor? = nil, navigationBarHeight: CGFloat? = nil, backButtonWidth: CGFloat? = nil) {
         self.navBarBackgroundColor = navBarBackgroundColor ?? hexStringToUIColor(hex: "F3F6FF")
         self.backButtonImage = backButtonImage ?? ImageHelper.image(named: "ic_back")
         self.titleFont = titleFont ?? setCustomFont_WithoutRatio(name: .WorkSans_SemiBold, iPhoneSize: 20, iPadSize: 20)
+        self.navigationBarHeight = navigationBarHeight
+        self.backButtonWidth = backButtonWidth
         self.titleTextColor = titleTextColor ?? .black
     }
 }
@@ -30,6 +34,9 @@ public class webVC: UIViewController {
     @IBOutlet weak var lblTitle: UILabel!
     @IBOutlet weak var btnBack: UIButton!
     @IBOutlet weak var webView: WKWebView!
+    
+    @IBOutlet weak var backButtonWidth: NSLayoutConstraint!
+    @IBOutlet weak var navigationBarHeightCon: NSLayoutConstraint!
     
     // MARK: - Public Properties
     public var titleStr: String = ""
@@ -75,6 +82,13 @@ public class webVC: UIViewController {
         lblTitle.text = self.titleStr.localized()
         lblTitle.font = customization.titleFont
         lblTitle.textColor = customization.titleTextColor
+        
+        if let navigationBarHeight = customization.navigationBarHeight {
+            navigationBarHeightCon.constant = navigationBarHeight
+        }
+        if let width = customization.backButtonWidth {
+            backButtonWidth.constant = width
+        }
     }
     
     // MARK: - Load URL

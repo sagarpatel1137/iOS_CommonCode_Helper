@@ -24,7 +24,7 @@ public struct UICustomizationSubDiscountTheme {
         self.popupImageBG = popupImageBG ?? ImageHelper.image(named: "ic_sub_popup_bg")
         self.popupImageTopBG = popupImageTopBG ?? ImageHelper.image(named: "ic_sub_popup_top")
         self.subPopupImageBG = subPopupImageBG ?? ImageHelper.image(named: "ic_sub_popup_offer_bg")
-        self.imgButtonTryNow = imgButtonTryNow ?? ImageHelper.image(named: "ic_sub_popup_btn")
+        self.imgButtonTryNow = imgButtonTryNow ?? ImageHelper.image(named: "Pod_sub_discount_btn")
         self.imgBtnClose = imgBtnClose ?? ImageHelper.image(named: "ic_sub_popup_close")
         self.lblPriceColor = lblPriceColor ?? hexStringToUIColor(hex: "D10366")
     }
@@ -71,6 +71,11 @@ public class SubDiscountVC: UIViewController {
         updateUI()
     }
     
+    public override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        viewTry.layer.cornerRadius = viewTry.bounds.height/2
+    }
+    
     deinit {
         NotificationCenter.default.removeObserver(self)
     }
@@ -101,18 +106,17 @@ public class SubDiscountVC: UIViewController {
     
     private func setUpUI() {
         
-        viewTry.layer.cornerRadius = viewTry.bounds.height/2
         viewTop_Top.constant = UIDevice.current.isiPhone ? 5*fontRatio : 7*fontRatio
         
         let padding : CGFloat = UIDevice.current.isiPhone ? 10 : 15
         btnClose.imageEdgeInsets = UIEdgeInsets(top: padding, left: padding, bottom: padding, right: padding)
         
-        if let loadJSONURL = PodBundleHelper.loadJSONFile(named: "Pod_sub_discount_btn") {
+        if let loadJSONURL = PodBundleHelper.loadJSONFile(named: "lottie_subscription_continue_bg") {
             viewJson.animation = LottieAnimation.filepath(loadJSONURL.path)
+            viewJson.contentMode = .scaleAspectFill
             viewJson?.loopMode = .loop
             viewJson.play()
         }
-        
         
         setupConfettiAnimation()
         funManageCloseBtn()
@@ -252,6 +256,7 @@ extension SubDiscountVC
         ]
         
         TikTok_Events.tikTokPurchaseSuccessEvent(plan: selected_Plan)
+        Facebook_Events.addEventforSubscription(plan: selected_Plan)
         AddFirebaseEvent(eventName: EventsValues.SubMonthDiscountPurchaseSuccess, parameters: param)
         NotificationCenter.default.post(name: notificationPurchaseSuccessfully, object: nil)
         self.dismiss(animated: true) {

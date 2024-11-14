@@ -45,22 +45,24 @@ public struct FeatureModel {
 }
 
 public struct UICustomizationAllPlan {
-    public var buttonBGType: ButtonBGType = .solidColor
+    public var buttonBGType: ButtonBGType = .animateJson
     public var btnContinueSolidColor: UIColor?
     public var btnContinueFromColor: UIColor?
     public var btnContinueToColor: UIColor?
-    public var btnContinueImage: UIImage?
+    public var btnContinueImageiPhone: UIImage?
+    public var btnContinueImageiPad: UIImage?
     public var btnJsonFilenameiPhone: String?
     public var btnJsonFilenameiPad: String?
     
-    public init(buttonBGType: ButtonBGType = .solidColor, btnContinueSolidColor: UIColor? = nil, btnContinueFromColor: UIColor? = nil, btnContinueToColor: UIColor? = nil, btnContinueImage: UIImage? = nil, btnJsonFilenameiPhone: String? = nil, btnJsonFilenameiPad: String? = nil) {
+    public init(buttonBGType: ButtonBGType = .animateJson, btnContinueSolidColor: UIColor? = nil, btnContinueFromColor: UIColor? = nil, btnContinueToColor: UIColor? = nil, btnContinueImageiPhone: UIImage? = nil, btnContinueImageiPad: UIImage? = nil, btnJsonFilenameiPhone: String? = nil, btnJsonFilenameiPad: String? = nil) {
         self.buttonBGType = buttonBGType
         self.btnContinueSolidColor = btnContinueSolidColor ?? .black
         self.btnContinueFromColor = btnContinueFromColor ?? .black
         self.btnContinueToColor = btnContinueToColor ?? .black
-        self.btnContinueImage = btnContinueImage ?? ImageHelper.image(named: "ic_timeline_star")
-        self.btnJsonFilenameiPhone = btnJsonFilenameiPhone ?? "Pod_sub_all_iphone"
-        self.btnJsonFilenameiPad = btnJsonFilenameiPad ?? "Pod_sub_all_ipad"
+        self.btnContinueImageiPhone = btnContinueImageiPhone ?? ImageHelper.image(named: "Pod_sub_iPhone-Capsule")
+        self.btnContinueImageiPad = btnContinueImageiPad ?? ImageHelper.image(named: "Pod_sub_iPad-Capsule")
+        self.btnJsonFilenameiPhone = btnJsonFilenameiPhone ?? "lottie_subscription_continue_bg"
+        self.btnJsonFilenameiPad = btnJsonFilenameiPad ?? "lottie_subscription_continue_bg"
     }
 }
 
@@ -170,6 +172,11 @@ public class SubAllPlanVC: UIViewController {
         self.setNeedsStatusBarAppearanceUpdate()
     }
     
+    public override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        viewStart.layer.cornerRadius = viewStart.bounds.height/2
+    }
+    
     deinit {
         NotificationCenter.default.removeObserver(self)
     }
@@ -271,6 +278,7 @@ public class SubAllPlanVC: UIViewController {
     {
         
         imgContinue.isHidden = true
+        viewJson.isHidden = true
         switch customizationAllPlan?.buttonBGType {
         case .solidColor:
             self.btnSubscribe.backgroundColor = customizationAllPlan?.btnContinueSolidColor ?? .black
@@ -280,31 +288,36 @@ public class SubAllPlanVC: UIViewController {
             self.btnSubscribe.addGradient(colors: [from, to], isRounded: true)
         case .image:
             imgContinue.isHidden = false
-            self.imgContinue.image = self.customizationAllPlan?.btnContinueImage ?? ImageHelper.image(named: "ic_timeline_star")
-        case .animateJson:
+            if UIDevice.current.isiPhone {
+                self.imgContinue.image = self.customizationAllPlan?.btnContinueImageiPhone ?? ImageHelper.image(named: "Pod_sub_iPhone-Capsule")
+            } else {
+                self.imgContinue.image = self.customizationAllPlan?.btnContinueImageiPad ?? ImageHelper.image(named: "Pod_sub_iPad-Capsule")
+            }
+        case .animateJson, .none:
+            imgContinue.isHidden = false
+            viewJson.isHidden = false
+            if UIDevice.current.isiPhone {
+                self.imgContinue.image = self.customizationAllPlan?.btnContinueImageiPhone ?? ImageHelper.image(named: "Pod_sub_iPhone-Capsule")
+            } else {
+                self.imgContinue.image = self.customizationAllPlan?.btnContinueImageiPad ?? ImageHelper.image(named: "Pod_sub_iPad-Capsule")
+            }
             if let btnJsonFilenameiPad = customizationAllPlan?.btnJsonFilenameiPad,
                let btnJsonFilenameiPhone = customizationAllPlan?.btnJsonFilenameiPhone {
                 if UIDevice.current.isiPad {
                     if let loadJSONURL = PodBundleHelper.loadJSONFile(named: btnJsonFilenameiPad) {
                         viewJson.animation = LottieAnimation.filepath(loadJSONURL.path)
                         viewJson?.loopMode = .loop
+                        viewJson.contentMode = .scaleAspectFill
                         viewJson.play()
                     }
                 } else {
                     if let loadJSONURL = PodBundleHelper.loadJSONFile(named: btnJsonFilenameiPhone) {
                         viewJson.animation = LottieAnimation.filepath(loadJSONURL.path)
                         viewJson?.loopMode = .loop
+                        viewJson.contentMode = .scaleAspectFill
                         viewJson.play()
                     }
                 }
-            }
-        case .none:
-            if let loadJSONURLiPhone = PodBundleHelper.loadJSONFile(named: "Pod_sub_all_iphone"),
-               let loadJSONURLiPad = PodBundleHelper.loadJSONFile(named: "Pod_sub_all_ipad")
-            {
-                viewJson.animation = UIDevice.current.isiPhone ? LottieAnimation.filepath(loadJSONURLiPhone.path) : LottieAnimation.filepath(loadJSONURLiPad.path)
-                viewJson?.loopMode = .loop
-                viewJson.play()
             }
         }
         
@@ -634,6 +647,7 @@ extension SubAllPlanVC
     private func purchaseSuccess()
     {
         TikTok_Events.tikTokPurchaseSuccessEvent(plan: selected_Plan)
+        Facebook_Events.addEventforSubscription(plan: selected_Plan)
         
         if selected_Plan.plan_Free_Trail.isFreeTrail {
             let param = [

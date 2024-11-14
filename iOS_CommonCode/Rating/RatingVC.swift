@@ -33,6 +33,9 @@ public class RatingVC: UIViewController {
     public var mailBody = ""
     public var completion: ((RatingResponse)->())?
     public var isOpenFrom = ""
+    
+    var textColor: UIColor?
+    var bgColor: UIColor?
 
     //MARK: -
     public override func viewDidLoad() {
@@ -48,6 +51,15 @@ public class RatingVC: UIViewController {
         lblSubTitle.text = "Let us know by leaving a 5 star rating".localized()
         lblLater.text = "Ask me later!".localized()
         
+        if let textColor = textColor {
+            lblTitle.textColor = textColor
+            lblSubTitle.textColor = textColor
+            lblLater.textColor = textColor
+            
+        }
+        if let bgColor = self.bgColor {
+            self.viewRate.backgroundColor = bgColor
+        }
         self.icRatingBG.image = ImageHelper.image(named: "ic_Rating_Background_Rating")!
         self.btnImprovment.setImage(ImageHelper.image(named: "ic_Rating_Hide")!, for: .normal)
         self.btnAwasome.setImage(ImageHelper.image(named: "ic_Rating_Click")!, for: .normal)
