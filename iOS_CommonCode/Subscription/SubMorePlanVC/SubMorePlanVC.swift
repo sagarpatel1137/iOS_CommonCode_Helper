@@ -527,8 +527,16 @@ extension SubMorePlanVC
             if sender.tag == i && plan.type != .lifetime {
                 arrPlanLblDetail[i].font = setCustomFont_WithoutRatio(name: .PlusJakartaSans_Bold, iPhoneSize: 14, iPadSize: 17)
                 
+                if plan.plan.plan_Promotional_Offer.isPromotionalOffer {
+                    arrPlanLblDetail[i].font = setCustomFont_WithoutRatio(name: .WorkSans_Medium, iPhoneSize: 14, iPadSize: 17)
+                }
+                
             } else if plan.type != .lifetime {
                 arrPlanLblDetail[i].font = setCustomFont_WithoutRatio(name: .PlusJakartaSans_Bold, iPhoneSize: 14, iPadSize: 17)
+                
+                if plan.plan.plan_Promotional_Offer.isPromotionalOffer {
+                    arrPlanLblDetail[i].font = setCustomFont_WithoutRatio(name: .WorkSans_Medium, iPhoneSize: 14, iPadSize: 17)
+                }
             }
         }
         
@@ -752,17 +760,17 @@ extension SubMorePlanVC {
                 var txtMonthly = "Monthly".localized().lowercased()
                 var txtMonth = "month".localized()
                 if selected_Plan.plan_Id == SubscriptionConst.ActivePlans.one_Month.plan_Id {
-                    arrPlanLblDetail[selectedIndex].font = setCustomFont_WithoutRatio(name: .WorkSans_ExtraBold, iPhoneSize: 14, iPadSize: 17)
+                    arrPlanLblDetail[selectedIndex].font = setCustomFont_WithoutRatio(name: .WorkSans_Medium, iPhoneSize: 14, iPadSize: 17)
                     txtMonthly = "Monthly".localized().lowercased()
                     txtMonth = "month".localized()
                 }
                 else if selected_Plan.plan_Id == SubscriptionConst.ActivePlans.one_Year.plan_Id {
-                    arrPlanLblDetail[selectedIndex].font = setCustomFont_WithoutRatio(name: .WorkSans_ExtraBold, iPhoneSize: 14, iPadSize: 17)
+                    arrPlanLblDetail[selectedIndex].font = setCustomFont_WithoutRatio(name: .WorkSans_Medium, iPhoneSize: 14, iPadSize: 17)
                     txtMonthly = "Yearly".localized().lowercased()
                     txtMonth = "year".localized()
                 }
                 else if selected_Plan.plan_Id == SubscriptionConst.ActivePlans.one_Week.plan_Id {
-                    arrPlanLblDetail[selectedIndex].font = setCustomFont_WithoutRatio(name: .WorkSans_ExtraBold, iPhoneSize: 14, iPadSize: 17)
+                    arrPlanLblDetail[selectedIndex].font = setCustomFont_WithoutRatio(name: .WorkSans_Medium, iPhoneSize: 14, iPadSize: 17)
                     txtMonthly = "Weekly".localized().lowercased()
                     txtMonth = "week".localized()
                 }

@@ -305,7 +305,7 @@ extension GoogleAd_Manager
         }
     }
     
-    public func funShowNativeAd(adType : GADAdTYPE, parentView: UIView, isLoadNewAd : Bool = false, nativeAdColors: NativeAdColors = NativeAdColors(), nativeAdView: GADNativeAdView? = nil, loaderType: LoaderType = .AdsByDeveloper, shimerView : Shimmer_View? = nil, adByDeveloperTextColor: UIColor? = nil, customLoader: UIView? = nil, isAdShown : @escaping ((Bool) -> Void), isClick : @escaping (() -> Void), isNewLoad : @escaping (() -> Void))
+    public func funShowNativeAd(adType : GADAdTYPE, parentView: UIView, isLoadNewAd : Bool = false, nativeAdColors: NativeAdColors = NativeAdColors(), nativeAdView: GADNativeAdView? = nil, loaderType: LoaderType = .AdsByDeveloper, shimerView : Shimmer_View? = nil, adByDeveloperTextColor: UIColor? = nil, customLoader: UIView? = nil, starRatingHeight: CGFloat = 0.0, starRatingColor: UIColor = .gray, isAdShown : @escaping ((Bool) -> Void), isClick : @escaping (() -> Void), isNewLoad : @escaping (() -> Void))
     {
         if isLoadNewAd || !isLoadedNativeAd {
             isLoadedNativeAd = false
@@ -368,7 +368,7 @@ extension GoogleAd_Manager
                 
                 if self.isLoadedNativeAd {
                     if adType == .custom_Native {
-                        parentView.setup_NativeCustomAdView(adView: nativeAdView!) {
+                        parentView.setup_NativeCustomAdView(adView: nativeAdView!, starRatingHeight: starRatingHeight,starRatingTintColor: starRatingColor) {
                             isAdShown(true)
                         }
                     }
@@ -382,7 +382,7 @@ extension GoogleAd_Manager
                 else {
                     self.nativeAd_LoadDone = {
                         if adType == .custom_Native {
-                            parentView.setup_NativeCustomAdView(adView: nativeAdView!) {
+                            parentView.setup_NativeCustomAdView(adView: nativeAdView!, starRatingHeight: starRatingHeight,starRatingTintColor: starRatingColor) {
                                 isAdShown(true)
                             }
                         }
@@ -835,7 +835,7 @@ extension UIView
         }
     }
     
-    fileprivate func setup_NativeCustomAdView(adView : GADNativeAdView,_ isAdShown : (() -> Void))
+    fileprivate func setup_NativeCustomAdView(adView : GADNativeAdView, starRatingHeight: CGFloat = 0.0, starRatingTintColor: UIColor = .gray, _ isAdShown : (() -> Void))
     {
         let adView = adView
         
@@ -848,10 +848,10 @@ extension UIView
         
         let viewDictionary = ["_nativeAdView": adView]
         self.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|[_nativeAdView]|",
-                                                                options: NSLayoutConstraint.FormatOptions(rawValue: 0), metrics: nil, views: viewDictionary))
+                                                           options: NSLayoutConstraint.FormatOptions(rawValue: 0), metrics: nil, views: viewDictionary))
         self.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|[_nativeAdView]|",
-                                                                options: NSLayoutConstraint.FormatOptions(rawValue: 0), metrics: nil, views: viewDictionary))
-        adView.set_NativeFull(adColor: nil)
+                                                           options: NSLayoutConstraint.FormatOptions(rawValue: 0), metrics: nil, views: viewDictionary))
+        adView.set_NativeFull(adColor: nil, starRatingHeight: starRatingHeight, starRatingTintColor: starRatingTintColor)
         isAdShown()
     }
 }
@@ -859,7 +859,7 @@ extension UIView
 //MARK: -
 extension GADNativeAdView{
     
-    fileprivate func set_NativeFull(adColor: NativeAdColors?)
+    fileprivate func set_NativeFull(adColor: NativeAdColors?, starRatingHeight: CGFloat = 0.0, starRatingTintColor: UIColor = .gray)
     {
         let nativeAd =  GoogleAd_Manager.shared.native_Ad!
         
@@ -872,13 +872,18 @@ extension GADNativeAdView{
         (self.callToActionView as? UIButton)?.setTitle(nativeAd.callToAction?.uppercased(), for: .normal)
         self.callToActionView?.isHidden = nativeAd.callToAction == nil
         
-        setAdIcon_NativBanner((self.iconView as! UIImageView),nativeAd.icon)
+        if let iconView = (self.iconView as? UIImageView) {
+            setAdIcon_NativBanner(iconView, nativeAd.icon)
+        }
         
         (self.storeView as? UILabel)?.text = nativeAd.store
         self.storeView?.isHidden = nativeAd.store == nil
         
         (self.priceView as? UILabel)?.text = nativeAd.price
         self.priceView?.isHidden = nativeAd.price == nil
+        
+        (self.starRatingView as? UIImageView)?.image = imageOfStars(from: nativeAd.starRating,starRatingHeight: starRatingHeight,starRatingTintColor: starRatingTintColor)
+        self.starRatingView?.isHidden = nativeAd.starRating == nil
         
         (self.advertiserView as? UILabel)?.text = nativeAd.advertiser
         self.advertiserView?.isHidden = nativeAd.advertiser == nil
@@ -912,16 +917,20 @@ extension GADNativeAdView{
     fileprivate func set_NativeBanner(adColor: NativeAdColors)
     {
         let nativeAd = GoogleAd_Manager.shared.native_Ad!
-                
+        
         (self.headlineView as? UILabel)?.text = nativeAd.headline
         self.mediaView?.mediaContent = nativeAd.mediaContent
-       
+        
         (self.bodyView as? UILabel)?.text = nativeAd.body
         self.bodyView?.isHidden = nativeAd.body == nil
         
-        setActionBtn_NativBanner(self.callToActionView as! UIButton,nativeAd.callToAction)
+        if let callToActionView = self.callToActionView as? UIButton {
+            setActionBtn_NativBanner(callToActionView,nativeAd.callToAction)
+        }
         
-        setAdIcon_NativBanner((self.iconView as! UIImageView),nativeAd.icon)
+        if let iconView = (self.iconView as? UIImageView) {
+            setAdIcon_NativBanner(iconView,nativeAd.icon)
+        }
         
         (self.storeView as? UILabel)?.text = nativeAd.store
         self.storeView?.isHidden = nativeAd.store == nil
@@ -988,6 +997,60 @@ extension GADNativeAdView{
                 view.constraints[fIndex].constant = tempWidth + CGFloat(UIDevice.current.isiPhone ? 15 : 20)
                 view.titleLabel!.adjustsFontSizeToFitWidth = true
             }
+        }
+    }
+    
+    fileprivate func imageOfStars(from starRating: NSDecimalNumber?, starRatingHeight: CGFloat = 0.0, starRatingTintColor: UIColor = .gray) -> UIImage? {
+        guard let rating = starRating else { return nil }
+        
+        let stackView = UIStackView()
+        stackView.axis = .horizontal
+        stackView.spacing = 4
+        stackView.distribution = .fillEqually
+        
+        // Set a fixed frame for stackView to ensure it has a size
+        let starSize: CGFloat = starRatingHeight // Size of each star
+        let width = starSize * CGFloat(5) + 4 * CGFloat(4) // 5 stars with spacing of 4
+        let height: CGFloat = starRatingHeight // Height of a single row of stars
+        
+        stackView.frame = CGRect(x: 0, y: 0, width: width, height: height)
+        
+        // Determine how many full, half, and empty stars
+        let fullStars = Int(floor(rating.doubleValue))
+        let halfStars = rating.doubleValue - Double(fullStars) >= 0.5 ? 1 : 0
+        let emptyStars = 5 - fullStars - halfStars
+        
+        // Add full stars with tint color
+        for _ in 0..<fullStars {
+            let starImageView = UIImageView(image: UIImage(systemName: "star.fill")?.withRenderingMode(.alwaysTemplate))
+            starImageView.tintColor = starRatingTintColor
+            stackView.addArrangedSubview(starImageView)
+        }
+        
+        // Add half star with tint color
+        if halfStars == 1 {
+            let halfStarImageView = UIImageView(image: UIImage(systemName: "star.leadinghalf.filled")?.withRenderingMode(.alwaysTemplate))
+            halfStarImageView.tintColor = starRatingTintColor
+            stackView.addArrangedSubview(halfStarImageView)
+        }
+        
+        // Add empty stars with tint color
+        for _ in 0..<emptyStars {
+            let emptyStarImageView = UIImageView(image: UIImage(systemName: "star")?.withRenderingMode(.alwaysTemplate))
+            emptyStarImageView.tintColor = starRatingTintColor
+            stackView.addArrangedSubview(emptyStarImageView)
+        }
+        
+        // Convert the UIStackView to an image
+        return renderViewAsImage(view: stackView)
+    }
+    
+    
+    // Helper function to render the UIView as UIImage
+    private func renderViewAsImage(view: UIView) -> UIImage? {
+        let renderer = UIGraphicsImageRenderer(size: view.bounds.size)
+        return renderer.image { ctx in
+            view.layer.render(in: ctx.cgContext)
         }
     }
 }
