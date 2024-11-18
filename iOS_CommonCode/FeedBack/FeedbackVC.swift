@@ -43,8 +43,9 @@ public struct UICustomizationFeedback {
     public var attributedPlaceholder: NSAttributedString?
     public var placeholderColor: UIColor?
     public var titleTextAlignment: NSTextAlignment?
+    public var viewSeparatorColor: UIColor?
 
-    public init(viewMainColor: UIColor? = nil, navigationBarHeight: CGFloat? = nil, backButtonWidth: CGFloat? = nil,  navigationBarBackground: UIColor? = nil, isNeedToAddBorderInField: Bool? = nil, whyUseTextFieldColor: UIColor? = nil ,isShowNavigationBarShadow: Bool? = nil, attributedPlaceholder: NSAttributedString? = nil, placeholderColor: UIColor? = nil,titleTextAlignment: NSTextAlignment? = nil ,titleText: String? = nil, titleTextFont: UIFont? = nil, titleTextColor: UIColor? = nil, backButtonImage: UIImage? = nil, placeholderButtonImage: UIImage? = nil, shareExperienceText: String? = nil, shareExperienceFont: UIFont? = nil, shareExperienceTextColor: UIColor? = nil, whyUseText: String? = nil, whyUsePlaceholderText: String? = nil, whyUseTextFont: UIFont? = nil, whyUseTextFontTextfield: UIFont? = nil, whyUseTextColor: UIColor? = nil, suggestionText: String? = nil, suggestionPlaceholderText: String? = nil, suggestionTextFont: UIFont? = nil, suggestionTextFontTextfield: UIFont? = nil, suggestionTextColor: UIColor? = nil, limitTextFont: UIFont? = nil, limitTextColor: UIColor? = nil, submitText: String? = nil, submitTextFont: UIFont? = nil, submitTextColor: UIColor? = nil, submitButtonImage: UIImage? = nil) {
+    public init(viewMainColor: UIColor? = nil, navigationBarHeight: CGFloat? = nil, backButtonWidth: CGFloat? = nil,  navigationBarBackground: UIColor? = nil, isNeedToAddBorderInField: Bool? = nil, whyUseTextFieldColor: UIColor? = nil ,isShowNavigationBarShadow: Bool? = nil, attributedPlaceholder: NSAttributedString? = nil, placeholderColor: UIColor? = nil,titleTextAlignment: NSTextAlignment? = nil ,titleText: String? = nil, titleTextFont: UIFont? = nil, titleTextColor: UIColor? = nil, backButtonImage: UIImage? = nil, placeholderButtonImage: UIImage? = nil, shareExperienceText: String? = nil, shareExperienceFont: UIFont? = nil, shareExperienceTextColor: UIColor? = nil, whyUseText: String? = nil, whyUsePlaceholderText: String? = nil, whyUseTextFont: UIFont? = nil, whyUseTextFontTextfield: UIFont? = nil, whyUseTextColor: UIColor? = nil, suggestionText: String? = nil, suggestionPlaceholderText: String? = nil, suggestionTextFont: UIFont? = nil, suggestionTextFontTextfield: UIFont? = nil, suggestionTextColor: UIColor? = nil, limitTextFont: UIFont? = nil, limitTextColor: UIColor? = nil, submitText: String? = nil, submitTextFont: UIFont? = nil, submitTextColor: UIColor? = nil, submitButtonImage: UIImage? = nil, viewSeparatorColor: UIColor? = nil) {
         self.viewMainColor = viewMainColor
         self.navigationBarHeight = navigationBarHeight
         self.backButtonWidth = backButtonWidth
@@ -79,12 +80,14 @@ public struct UICustomizationFeedback {
         self.submitTextFont = submitTextFont ?? setCustomFont_WithoutRatio(name: .PlusJakartaSans_Bold, iPhoneSize: 15, iPadSize: 20)
         self.submitTextColor = submitTextColor ?? .white
         self.submitButtonImage = submitButtonImage ?? ImageHelper.image(named: "ic_btn_bg")
+        self.viewSeparatorColor = viewSeparatorColor ?? .red
     }
 }
 
 public class FeedbackVC: UIViewController {
     
     // MARK: - Outlet
+    @IBOutlet weak var scrollFeedback: UIScrollView!
     @IBOutlet weak var viewNavBar: UIView!
     @IBOutlet weak var btnBack: UIButton!
     @IBOutlet weak var imgPlaceholder: UIImageView!
@@ -102,9 +105,7 @@ public class FeedbackVC: UIViewController {
     private let maxCharacterCount = 500
     
     @IBOutlet weak var navigationBarHeightCons: NSLayoutConstraint!
-    
     @IBOutlet weak var backButtonWidthCons: NSLayoutConstraint!
-    
     @IBOutlet weak var viewSeparator: UIView!
     
     // MARK: - Public Properties
@@ -139,6 +140,7 @@ public class FeedbackVC: UIViewController {
                 self.viewNavBar.addBottomViewShadow()
             }
         }
+        addKeyboardObservers()
     }
     
     private func updateUI() {
@@ -214,6 +216,35 @@ public class FeedbackVC: UIViewController {
         if let placeholderColor = customization.placeholderColor {
             self.suggetionTextView.placeholderColor = placeholderColor
         }
+        if let viewSeparatorColor = customization.viewSeparatorColor {
+            self.viewSeparator.backgroundColor = viewSeparatorColor
+        }
+    }
+    
+    // Add observers for keyboard notifications
+    private func addKeyboardObservers() {
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(_:)), name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(_:)), name: UIResponder.keyboardWillHideNotification, object: nil)
+    }
+
+    @objc private func keyboardWillShow(_ notification: Notification) {
+        if let keyboardFrame = notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue {
+            let keyboardHeight = keyboardFrame.cgRectValue.height
+            let contentInset = UIEdgeInsets(top: 0, left: 0, bottom: keyboardHeight, right: 0)
+            scrollFeedback.contentInset = contentInset
+            scrollFeedback.scrollIndicatorInsets = contentInset
+
+            // Scroll to the active field (if any)
+            if suggetionTextView.isFirstResponder {
+                scrollToActiveTextView(suggetionTextView)
+            }
+        }
+    }
+
+    @objc private func keyboardWillHide(_ notification: Notification) {
+        let contentInset = UIEdgeInsets.zero
+        scrollFeedback.contentInset = contentInset
+        scrollFeedback.scrollIndicatorInsets = contentInset
     }
 }
 
@@ -235,6 +266,7 @@ extension FeedbackVC {
 
                 sendAppReview(review: suggetionTextView.text.trimmed(), subscriptionReview: "", useOfApp: self.whyUseTextField.text?.trimmed() ?? "") { success in
                     
+                    AddFirebaseEvent(eventName: .FeedbackSubmit, parameters: ["suceess": success])
                     self.stopLoader()
 
                     if success {
@@ -264,6 +296,16 @@ extension FeedbackVC {
 }
 
 extension FeedbackVC: UITextViewDelegate {
+    
+    // Method to scroll to the active text view when focused
+    private func scrollToActiveTextView(_ textView: UITextView) {
+        let textViewRect = textView.convert(textView.bounds, to: scrollFeedback)
+        scrollFeedback.scrollRectToVisible(textViewRect, animated: true)
+    }
+    
+    public func textViewDidBeginEditing(_ textView: UITextView) {
+        scrollToActiveTextView(textView)
+    }
     
     public func textViewDidChange(_ textView: UITextView) {
         suggetionTextView.textDidChange()

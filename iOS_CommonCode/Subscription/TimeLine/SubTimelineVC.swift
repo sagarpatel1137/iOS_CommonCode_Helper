@@ -209,7 +209,7 @@ public class SubTimelineVC: UIViewController {
     }
     
     private func setUpText() {
-        
+        btnRestore.setTitle("Restore Purchase".localized(), for: .normal)
         lblStartTrial.text = "Continue".localized().uppercased()
         lblTitle.text = "HAVE DOUBTS?".localized()
         lblSubTitle.text = "Start with a free trial".localized()
