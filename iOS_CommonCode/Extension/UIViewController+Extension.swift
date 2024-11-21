@@ -84,6 +84,8 @@ extension UIViewController
         mailSubject: String,
         mailBody: String,
         isOpenFrom: String,
+        bgColor: UIColor? = nil,
+        textColor: UIColor? = nil,
         complition: ((RatingResponse)-> Void)? = nil
     ) {
         let vc = RatingVC()
@@ -92,6 +94,8 @@ extension UIViewController
         vc.mailSubject = mailSubject
         vc.mailBody = mailBody
         vc.isOpenFrom = isOpenFrom
+        vc.bgColor = bgColor
+        vc.textColor = textColor
         vc.completion = { ratingResponse in
             complition?(ratingResponse)
         }
@@ -139,6 +143,7 @@ extension UIViewController
         customizationSubMorePlan: UICustomizationSubMorePlan? = nil,
         customizationSubRatingData: UICustomizationSubRatingData?,
         customizationWebViewData: UICustomizationWebView? = nil,
+        customizationAllPlan: UICustomizationAllPlan?,
         lifetimeDiscountVal: Int = 80,
         isOpenFrom: String,
         completionTimeline: @escaping (SubCloseCompletionBlock, [String: String]?) -> Void
@@ -156,6 +161,7 @@ extension UIViewController
         subTimelineVC.customizationSubRatingData = customizationSubRatingData
         subTimelineVC.customizationSubMorePlan = customizationSubMorePlan
         subTimelineVC.customizationWebViewData = customizationWebViewData
+        subTimelineVC.customizationAllPlan = customizationAllPlan
         subTimelineVC.lifetimeDiscountVal = lifetimeDiscountVal
         subTimelineVC.isOpenFrom = isOpenFrom
         subTimelineVC.completionTimeline = { (result, param) in

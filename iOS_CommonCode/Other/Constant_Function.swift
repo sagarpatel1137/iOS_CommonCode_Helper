@@ -65,7 +65,7 @@ public enum FontApp: String {
     case WorkSans_ExtraBold = "WorkSans-ExtraBold"
 }
 
-var fontRatio: CGFloat {
+public var fontRatio: CGFloat {
     if UIDevice.current.isiPhone {
         UIScreen.main.bounds.width/320
     } else {

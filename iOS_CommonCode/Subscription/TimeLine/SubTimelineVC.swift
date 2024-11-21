@@ -147,6 +147,7 @@ public class SubTimelineVC: UIViewController {
     public var customizationSubRatingData: UICustomizationSubRatingData?
     public var customizationSubMorePlan: UICustomizationSubMorePlan?
     public var customizationWebViewData: UICustomizationWebView?
+    public var customizationAllPlan: UICustomizationAllPlan?
     public var enableRatingAutoScroll = false
     public var isRatingScrollEnable = true
     public var lifetimeDiscountVal = 80
@@ -301,7 +302,7 @@ public class SubTimelineVC: UIViewController {
                               arrFeature: self.arrFeature,
                               arrReview: self.arrReview,
                               subsciptionContinueBtnTextIndex: subsciptionContinueBtnTextIndex,
-                              customizationAllPlan: nil,
+                              customizationAllPlan: customizationAllPlan,
                               customizationSubRatingData: customizationSubRatingData,
                               customizationWebViewData: customizationWebViewData,
                               enableRatingAutoScroll: enableRatingAutoScroll,

@@ -20,9 +20,10 @@
         </array>
     </customFonts>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FeedbackVC" customModule="iOS_CommonCode_Helper" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FeedbackVC" customModule="iOS_CommonCode" customModuleProvider="target">
             <connections>
                 <outlet property="backButtonWidthCons" destination="20C-VX-xTq" id="TVw-xu-Lf0"/>
+                <outlet property="borderSepratorHeight" destination="5sR-6k-Es4" id="U79-b6-jub"/>
                 <outlet property="btnBack" destination="QSc-yr-Ywz" id="SdI-rh-6Wb"/>
                 <outlet property="charCountLbl" destination="pt2-Vg-d8v" id="EDa-iF-76t"/>
                 <outlet property="imgPlaceholder" destination="vfw-g6-g0q" id="4nZ-Cc-ziD"/>
@@ -77,7 +78,6 @@
                                 </constraint>
                                 <constraint firstAttribute="width" secondItem="QSc-yr-Ywz" secondAttribute="height" multiplier="1:1" id="Gv6-rv-NNg"/>
                             </constraints>
-                            <inset key="imageEdgeInsets" minX="10" minY="10" maxX="10" maxY="10"/>
                             <state key="normal" image="ic_back_new"/>
                             <userDefinedRuntimeAttributes>
                                 <userDefinedRuntimeAttribute type="boolean" keyPath="isMoreAppBtn" value="NO"/>
@@ -136,7 +136,7 @@
                                             </constraints>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Share your experience with us" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pJR-Oa-Zea">
-                                            <rect key="frame" x="15" y="217.5" width="345" height="15.5"/>
+                                            <rect key="frame" x="15" y="217.5" width="345" height="16.5"/>
                                             <fontDescription key="fontDescription" name="PlusJakartaSans-Medium" family="Plus Jakarta Sans" pointSize="13"/>
                                             <color key="textColor" red="0.53725490196078429" green="0.53725490196078429" blue="0.53725490196078429" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
@@ -145,10 +145,10 @@
                                             </variation>
                                         </label>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5YA-Rl-HRL">
-                                            <rect key="frame" x="20" y="238" width="335" height="241"/>
+                                            <rect key="frame" x="20" y="239" width="335" height="243"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Ec-LT-ULt">
-                                                    <rect key="frame" x="3" y="5" width="327" height="15.5"/>
+                                                    <rect key="frame" x="3" y="5" width="327" height="16.5"/>
                                                     <fontDescription key="fontDescription" name="PlusJakartaSans-Bold" family="Plus Jakarta Sans" pointSize="13"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -157,7 +157,7 @@
                                                     </variation>
                                                 </label>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iAf-IL-dPN">
-                                                    <rect key="frame" x="0.0" y="25.5" width="335" height="50"/>
+                                                    <rect key="frame" x="0.0" y="26.5" width="335" height="50"/>
                                                     <subviews>
                                                         <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kfz-4I-vbD">
                                                             <rect key="frame" x="10" y="0.0" width="325" height="50"/>
@@ -185,7 +185,7 @@
                                                     </userDefinedRuntimeAttributes>
                                                 </view>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tTw-kf-D2g">
-                                                    <rect key="frame" x="3" y="90.5" width="332" height="15.5"/>
+                                                    <rect key="frame" x="3" y="91.5" width="332" height="16.5"/>
                                                     <fontDescription key="fontDescription" name="PlusJakartaSans-Bold" family="Plus Jakarta Sans" pointSize="13"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -194,10 +194,10 @@
                                                     </variation>
                                                 </label>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6mf-vV-DFr">
-                                                    <rect key="frame" x="0.0" y="111" width="335" height="130"/>
+                                                    <rect key="frame" x="0.0" y="113" width="335" height="130"/>
                                                     <subviews>
-                                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="8h2-yh-DfL" customClass="PlaceholderTextView" customModule="iOS_CommonCode_Helper" customModuleProvider="target">
-                                                            <rect key="frame" x="10" y="0.0" width="325" height="106.5"/>
+                                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="8h2-yh-DfL" customClass="PlaceholderTextView" customModule="iOS_CommonCode" customModuleProvider="target">
+                                                            <rect key="frame" x="10" y="0.0" width="325" height="105.5"/>
                                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <color key="textColor" systemColor="labelColor"/>
                                                             <fontDescription key="fontDescription" name="PlusJakartaSans-Medium" family="Plus Jakarta Sans" pointSize="12"/>
@@ -207,7 +207,7 @@
                                                             </variation>
                                                         </textView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0/500" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pt2-Vg-d8v">
-                                                            <rect key="frame" x="293.5" y="106.5" width="33.5" height="15.5"/>
+                                                            <rect key="frame" x="284.5" y="105.5" width="42.5" height="16.5"/>
                                                             <fontDescription key="fontDescription" name="PlusJakartaSans-Medium" family="Plus Jakarta Sans" pointSize="13"/>
                                                             <color key="textColor" red="0.53725490196078429" green="0.53725490196078429" blue="0.53725490196078429" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <nil key="highlightedColor"/>
@@ -339,8 +339,8 @@
             </variation>
             <variation key="heightClass=regular-widthClass=regular">
                 <mask key="constraints">
-                    <exclude reference="vw4-wb-7e7"/>
                     <include reference="ay2-oG-x0n"/>
+                    <exclude reference="vw4-wb-7e7"/>
                 </mask>
             </variation>
             <point key="canvasLocation" x="138.40000000000001" y="-0.44977511244377816"/>

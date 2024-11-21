@@ -162,17 +162,3 @@ extension UIView
         }
     }
 }
-
-extension UIView {
-    @IBInspectable var cornerRadius: CGFloat
-    {
-        get
-        {
-            return self.layer.cornerRadius
-        }
-        set
-        {
-            self.layer.cornerRadius = UIDevice.current.isiPhone ? newValue:(newValue*1.5)
-        }
-    }
-}
