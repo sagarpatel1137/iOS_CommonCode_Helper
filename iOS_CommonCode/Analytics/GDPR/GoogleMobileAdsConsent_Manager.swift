@@ -20,7 +20,7 @@ public class GoogleMobileAdsConsent_Manager: NSObject {
                 return complition(requestConsentError)
             }
             
-            DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
+            DispatchQueue.main.asyncAfter(deadline: .now()) {
                 if let topVC = funGetTopViewController() {
                     UMPConsentForm.loadAndPresentIfRequired(from: topVC) { loadAndPresentError in
                         complition(loadAndPresentError)

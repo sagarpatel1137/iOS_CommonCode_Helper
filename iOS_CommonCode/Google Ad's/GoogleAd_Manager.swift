@@ -354,19 +354,20 @@ extension GoogleAd_Manager
         {
             DispatchQueue.main.asyncAfter(deadline: .now() + 1){[self] in
                 
-                //Remove Loader View
-                switch loaderType {
-                case .Shimmer:
-                    parentView.removeShimmerViewForAdType()
-                case .AdsByDeveloper:
-                    parentView.removeAdByDeveloperViewForAd()
-                case .Custom:
-                    if let loader = customLoader {
-                        loader.removeFromSuperview()
-                    }
-                }
-                
                 if self.isLoadedNativeAd {
+                    
+                    //Remove Loader View
+                    switch loaderType {
+                    case .Shimmer:
+                        parentView.removeShimmerViewForAdType()
+                    case .AdsByDeveloper:
+                        parentView.removeAdByDeveloperViewForAd()
+                    case .Custom:
+                        if let loader = customLoader {
+                            loader.removeFromSuperview()
+                        }
+                    }
+                    
                     if adType == .custom_Native {
                         parentView.setup_NativeCustomAdView(adView: nativeAdView!, starRatingHeight: starRatingHeight,starRatingTintColor: starRatingColor) {
                             isAdShown(true)
@@ -378,9 +379,26 @@ extension GoogleAd_Manager
                         }
                     }
                     
+                    self.nativeAd_LoadDone = {
+                        isNewLoad()
+                    }
+                    
                 }
                 else {
                     self.nativeAd_LoadDone = {
+                        
+                        //Remove Loader View
+                        switch loaderType {
+                        case .Shimmer:
+                            parentView.removeShimmerViewForAdType()
+                        case .AdsByDeveloper:
+                            parentView.removeAdByDeveloperViewForAd()
+                        case .Custom:
+                            if let loader = customLoader {
+                                loader.removeFromSuperview()
+                            }
+                        }
+                        
                         if adType == .custom_Native {
                             parentView.setup_NativeCustomAdView(adView: nativeAdView!, starRatingHeight: starRatingHeight,starRatingTintColor: starRatingColor) {
                                 isAdShown(true)
@@ -395,9 +413,6 @@ extension GoogleAd_Manager
                 }
                 self.nativeAd_Reload = {
                     isClick()
-                }
-                self.nativeAd_LoadDone = {
-                    isNewLoad()
                 }
             }
         }

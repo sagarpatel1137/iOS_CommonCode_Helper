@@ -25,6 +25,7 @@
                 <outlet property="backButtonWidthCons" destination="20C-VX-xTq" id="TVw-xu-Lf0"/>
                 <outlet property="borderSepratorHeight" destination="5sR-6k-Es4" id="U79-b6-jub"/>
                 <outlet property="btnBack" destination="QSc-yr-Ywz" id="SdI-rh-6Wb"/>
+                <outlet property="btnBackLeading" destination="M8U-w4-DWt" id="7pJ-Cv-Syh"/>
                 <outlet property="charCountLbl" destination="pt2-Vg-d8v" id="EDa-iF-76t"/>
                 <outlet property="imgPlaceholder" destination="vfw-g6-g0q" id="4nZ-Cc-ziD"/>
                 <outlet property="navigationBarHeightCons" destination="NtD-wB-QrQ" id="wr0-7r-tru"/>

@@ -54,13 +54,18 @@ public class ThankYouVC: UIViewController {
     
     public override func viewDidLoad() {
         super.viewDidLoad()
-                
+        
         if self.subCloseCompletionBlock == .restoreSuccess {
             AddFirebaseEvent(eventName: .SubThankYouShow, parameters: [
                 "sku" : "RESTORE",
                 "type" : "RESTORE"
             ])
         } else if self.subCloseCompletionBlock == .purchaseSuccess, let param = self.param {
+            AddFirebaseEvent(eventName: .SubThankYouShow, parameters: [
+                "sku" : param["sku"] ?? "",
+                "type" : param["type"] ?? ""
+            ])
+        } else if self.subCloseCompletionBlock == .trialSuccess, let param = self.param {
             AddFirebaseEvent(eventName: .SubThankYouShow, parameters: [
                 "sku" : param["sku"] ?? "",
                 "type" : param["type"] ?? ""

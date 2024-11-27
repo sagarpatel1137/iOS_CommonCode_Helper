@@ -107,7 +107,7 @@ public class RevenueCat_Manager : NSObject {
     }
     
     //MARK: - Get Offerings
-    public func GetAllAvailablePackages(complition : @escaping(Bool,Error?)-> Void)
+    public func GetAllAvailablePackages(completion : @escaping(Bool,Error?)-> Void)
     {
         if RevenueCat_Manager.AvailableProducts.count == 0
         {
@@ -115,7 +115,7 @@ public class RevenueCat_Manager : NSObject {
                 
                 if let err = error {
                     print("Vasundhara 🏢 - Revenue Get Package Error ⚠️⚠️⚠️: \(err)")
-                    complition(false,err)
+                    completion(false,err)
                     return
                 }
                 
@@ -213,17 +213,17 @@ public class RevenueCat_Manager : NSObject {
                             self.isYearDiscountIntroductoryAvailable = true
                         }
                         self.GetPackageDetail {
-                            complition(true,nil)
+                            completion(true,nil)
                         }
                     }
                 }
                 else{
-                    complition(false,nil)
+                    completion(false,nil)
                 }
             }
         }
         else{
-            complition(true,nil)
+            completion(true,nil)
         }
     }
     

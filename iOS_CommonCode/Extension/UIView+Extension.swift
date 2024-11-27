@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import AVFoundation
 
 extension UIView {
     @IBInspectable var CRadiusBottom: CGFloat {
@@ -35,6 +36,17 @@ extension UIView {
                 // Fallback on earlier versions
             }
             layer.cornerRadius =  UIDevice.current.isiPhone ? newValue : (newValue*1.5)
+        }
+    }
+    
+    @IBInspectable var subCornerRadius: CGFloat {
+        get
+        {
+            return self.layer.cornerRadius
+        }
+        set
+        {
+            self.layer.cornerRadius = UIDevice.current.isiPhone ? newValue : (newValue*1.5)
         }
     }
 }

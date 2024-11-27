@@ -29,30 +29,30 @@ public struct UICustomizationSubRatingData {
 public class SubRatingCell: UICollectionViewCell {
     
     //MARK: - IBOutlet(s).
-    @IBOutlet weak var imgQuate: UIImageView!
-    @IBOutlet weak var imgQuate3: UIImageView!
-    @IBOutlet weak var imgLikeSub: UIImageView!
-    @IBOutlet weak var mainContentView: UIView!
-    @IBOutlet weak var mainStackView: UIStackView!
+    @IBOutlet public weak var imgQuate: UIImageView!
+    @IBOutlet public weak var imgQuate3: UIImageView!
+    @IBOutlet public weak var imgLikeSub: UIImageView!
+    @IBOutlet public weak var mainContentView: UIView!
+    @IBOutlet public weak var mainStackView: UIStackView!
     
     //View 1
-    @IBOutlet weak var view1ImageRating: UIImageView!
-    @IBOutlet weak var viewRating1: UIView!
-    @IBOutlet weak var view1TitleLabel: UILabel!
-    @IBOutlet weak var view1SubTitleLabel: UILabel!
+    @IBOutlet public weak var view1ImageRating: UIImageView!
+    @IBOutlet public weak var viewRating1: UIView!
+    @IBOutlet public weak var view1TitleLabel: UILabel!
+    @IBOutlet public weak var view1SubTitleLabel: UILabel!
     
     //View 2
-    @IBOutlet weak var view2ImagePlaceholder: UIImageView!
-    @IBOutlet weak var viewRating2: UIView!
-    @IBOutlet weak var ratingCountLabel: UILabel!
-    @IBOutlet weak var satisfiedCustLabel: UILabel!
-    @IBOutlet weak var ratingCountView: UIView!
+    @IBOutlet public weak var view2ImagePlaceholder: UIImageView!
+    @IBOutlet public weak var viewRating2: UIView!
+    @IBOutlet public weak var ratingCountLabel: UILabel!
+    @IBOutlet public weak var satisfiedCustLabel: UILabel!
+    @IBOutlet public weak var ratingCountView: UIView!
     
     //View 3
-    @IBOutlet weak var viewRating3: UIView!
-    @IBOutlet weak var lblTitle: UILabel!
-    @IBOutlet weak var lblDetail: UILabel!
-    @IBOutlet weak var lblName: UILabel!
+    @IBOutlet public weak var viewRating3: UIView!
+    @IBOutlet public weak var lblTitle: UILabel!
+    @IBOutlet public weak var lblDetail: UILabel!
+    @IBOutlet public weak var lblName: UILabel!
     
     static let identifier = "SubRatingCell"
     

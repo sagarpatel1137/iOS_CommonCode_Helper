@@ -50,6 +50,7 @@ public struct UICustomizationFeedback {
     public var titleTextAlignment: NSTextAlignment?
     public var viewSeparatorColor: UIColor?
     public var borderSepratorHeight: CGFloat?
+    public var btnBackLeading: CGFloat?
     public var imageEdgeInsets: UIEdgeInsets?
     public var buttonBGType: FeedbackButtonBGType = .image
     public var btnContinueSolidColor: UIColor?
@@ -58,7 +59,7 @@ public struct UICustomizationFeedback {
     public var btnContinueImageiPhone: UIImage?
     public var btnContinueImageiPad: UIImage?
     
-    public init(viewMainColor: UIColor? = nil, navigationBarHeight: CGFloat? = nil, backButtonWidth: CGFloat? = nil,  navigationBarBackground: UIColor? = nil, isNeedToAddBorderInField: Bool? = nil, whyUseTextFieldColor: UIColor? = nil ,isShowNavigationBarShadow: Bool? = nil, attributedPlaceholder: NSAttributedString? = nil, placeholderColor: UIColor? = nil,titleTextAlignment: NSTextAlignment? = nil ,titleText: String? = nil, titleTextFont: UIFont? = nil, titleTextColor: UIColor? = nil, backButtonImage: UIImage? = nil, placeholderButtonImage: UIImage? = nil, shareExperienceText: String? = nil, shareExperienceFont: UIFont? = nil, shareExperienceTextColor: UIColor? = nil, whyUseText: String? = nil, whyUsePlaceholderText: String? = nil, whyUseTextFont: UIFont? = nil, whyUseTextFontTextfield: UIFont? = nil, whyUseTextColor: UIColor? = nil, suggestionText: String? = nil, suggestionPlaceholderText: String? = nil, suggestionTextFont: UIFont? = nil, suggestionTextFontTextfield: UIFont? = nil, suggestionTextColor: UIColor? = nil, limitTextFont: UIFont? = nil, limitTextColor: UIColor? = nil, submitText: String? = nil, submitTextFont: UIFont? = nil, submitTextColor: UIColor? = nil, viewSeparatorColor: UIColor? = nil, borderSepratorHeight: CGFloat? = nil, imageEdgeInsets: UIEdgeInsets? = nil, buttonBGType: FeedbackButtonBGType = .image,btnContinueSolidColor: UIColor? = nil, btnContinueFromColor: UIColor? = nil, btnContinueToColor: UIColor? = nil , btnContinueImageiPhone: UIImage? = nil, btnContinueImageiPad: UIImage? = nil) {
+    public init(viewMainColor: UIColor? = nil, navigationBarHeight: CGFloat? = nil, backButtonWidth: CGFloat? = nil,  navigationBarBackground: UIColor? = nil, isNeedToAddBorderInField: Bool? = nil, whyUseTextFieldColor: UIColor? = nil ,isShowNavigationBarShadow: Bool? = nil, attributedPlaceholder: NSAttributedString? = nil, placeholderColor: UIColor? = nil,titleTextAlignment: NSTextAlignment? = nil ,titleText: String? = nil, titleTextFont: UIFont? = nil, titleTextColor: UIColor? = nil, backButtonImage: UIImage? = nil, placeholderButtonImage: UIImage? = nil, shareExperienceText: String? = nil, shareExperienceFont: UIFont? = nil, shareExperienceTextColor: UIColor? = nil, whyUseText: String? = nil, whyUsePlaceholderText: String? = nil, whyUseTextFont: UIFont? = nil, whyUseTextFontTextfield: UIFont? = nil, whyUseTextColor: UIColor? = nil, suggestionText: String? = nil, suggestionPlaceholderText: String? = nil, suggestionTextFont: UIFont? = nil, suggestionTextFontTextfield: UIFont? = nil, suggestionTextColor: UIColor? = nil, limitTextFont: UIFont? = nil, limitTextColor: UIColor? = nil, submitText: String? = nil, submitTextFont: UIFont? = nil, submitTextColor: UIColor? = nil, viewSeparatorColor: UIColor? = nil, borderSepratorHeight: CGFloat? = nil, btnBackLeading: CGFloat? = nil, imageEdgeInsets: UIEdgeInsets? = nil, buttonBGType: FeedbackButtonBGType = .image,btnContinueSolidColor: UIColor? = nil, btnContinueFromColor: UIColor? = nil, btnContinueToColor: UIColor? = nil , btnContinueImageiPhone: UIImage? = nil, btnContinueImageiPad: UIImage? = nil) {
         self.viewMainColor = viewMainColor
         self.navigationBarHeight = navigationBarHeight
         self.backButtonWidth = backButtonWidth
@@ -94,6 +95,7 @@ public struct UICustomizationFeedback {
         self.submitTextColor = submitTextColor ?? .white
         self.viewSeparatorColor = viewSeparatorColor ?? .clear
         self.borderSepratorHeight = borderSepratorHeight ?? 0.0
+        self.btnBackLeading = btnBackLeading ?? 5.0
         self.imageEdgeInsets = imageEdgeInsets ?? .zero
         self.buttonBGType = buttonBGType
         self.btnContinueSolidColor = btnContinueSolidColor ?? .clear
@@ -127,6 +129,7 @@ public class FeedbackVC: UIViewController {
     @IBOutlet weak var navigationBarHeightCons: NSLayoutConstraint!
     @IBOutlet weak var backButtonWidthCons: NSLayoutConstraint!
     @IBOutlet weak var viewSeparator: UIView!
+    @IBOutlet weak var btnBackLeading: NSLayoutConstraint!
     @IBOutlet weak var borderSepratorHeight: NSLayoutConstraint!
     
     // MARK: - Public Properties
@@ -174,7 +177,9 @@ public class FeedbackVC: UIViewController {
         // Update Back Button Image
         btnBack.setImage(customization.backButtonImage, for: .normal)
         btnBack.imageEdgeInsets = customization.imageEdgeInsets ?? .zero
-        
+        if let btnBackLeading = customization.btnBackLeading {
+            self.btnBackLeading.constant = btnBackLeading
+        }
         // Update Placeholder Image
         imgPlaceholder.image = customization.placeholderButtonImage
         
