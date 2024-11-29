@@ -66,13 +66,13 @@ extension UIViewController
 
 extension UIViewController
 {
-    public func startLoader() {
+    public func Pod_startLoader() {
         DispatchQueue.main.async {
             MBProgressHUD.showAdded(to: self.view, animated: true)
         }
     }
     
-    public func stopLoader() {
+    public func Pod_stopLoader() {
         DispatchQueue.main.async {
             MBProgressHUD.hide(for: self.view, animated: true)
         }

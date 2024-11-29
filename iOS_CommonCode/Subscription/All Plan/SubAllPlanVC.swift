@@ -580,7 +580,7 @@ extension SubAllPlanVC
 extension SubAllPlanVC
 {
     func purchaseByRevenueKit() {
-        self.startLoader()
+        self.Pod_startLoader()
         if let tempPlan = selected_Plan
         {
             if let promoOffer = tempPlan.plan_Promotional_Offer.promoOffer, tempPlan.plan_Promotional_Offer.isPromotionalOffer && !tempPlan.plan_Free_Trail.isFreeTrail {
@@ -599,7 +599,7 @@ extension SubAllPlanVC
     
     func funManagePurchaseResponse(state: Bool, info: CustomerInfo?, error: Error?, isCancel: Bool) {
         
-        self.stopLoader()
+        self.Pod_stopLoader()
         if state {
             if !isCancel {
                 if let error = error  {
@@ -623,10 +623,10 @@ extension SubAllPlanVC
     
     func restoreByRevenueKit(){
         
-        self.startLoader()
+        self.Pod_startLoader()
                 
         RevenueCat_Manager.shared.restoreProduct { (state, info, error) in
-            self.stopLoader()
+            self.Pod_stopLoader()
             if error != nil {
                 self.systemAlert(title: "Error".localized(), message: "Something went wrong, Please try again.".localized(), actionDestructive: "OK".localized())
                 return

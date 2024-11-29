@@ -207,7 +207,7 @@ extension SubDiscountVC
     //MARK: - Revenue Cat Purchase
     func purchaseByRevenueKit() {
         
-        self.startLoader()
+        self.Pod_startLoader()
         if let tempPlan = selected_Plan
         {
             if let promoOffer = tempPlan.plan_Promotional_Offer.promoOffer, tempPlan.plan_Promotional_Offer.isPromotionalOffer && !tempPlan.plan_Free_Trail.isFreeTrail {
@@ -225,7 +225,7 @@ extension SubDiscountVC
     
     func funManagePurchaseResponse(state: Bool, info: CustomerInfo?, error: Error?, isCancel: Bool) {
         
-        self.stopLoader()
+        self.Pod_stopLoader()
         if state {
             if !isCancel {
                 if let error = error  {

@@ -118,11 +118,11 @@ extension UIView
         }
     }
     
-    func addBottomViewShadow() {
+    func addBottomViewShadow(shadowColorWithAlpha: UIColor = hexStringToUIColor(hex: "474747").withAlphaComponent(0.15)) {
         self.layer.shadowOffset = CGSize(width: 0, height: 3)
         self.layer.shadowOpacity = 0.35
         self.layer.shadowRadius = 3.0
-        self.layer.shadowColor = hexStringToUIColor(hex: "474747").withAlphaComponent(0.15).cgColor
+        self.layer.shadowColor = shadowColorWithAlpha.cgColor
     }
     
 }

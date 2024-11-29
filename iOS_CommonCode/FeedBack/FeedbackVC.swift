@@ -58,8 +58,9 @@ public struct UICustomizationFeedback {
     public var btnContinueToColor: UIColor?
     public var btnContinueImageiPhone: UIImage?
     public var btnContinueImageiPad: UIImage?
+    public var viewShadowColor: UIColor?
     
-    public init(viewMainColor: UIColor? = nil, navigationBarHeight: CGFloat? = nil, backButtonWidth: CGFloat? = nil,  navigationBarBackground: UIColor? = nil, isNeedToAddBorderInField: Bool? = nil, whyUseTextFieldColor: UIColor? = nil ,isShowNavigationBarShadow: Bool? = nil, attributedPlaceholder: NSAttributedString? = nil, placeholderColor: UIColor? = nil,titleTextAlignment: NSTextAlignment? = nil ,titleText: String? = nil, titleTextFont: UIFont? = nil, titleTextColor: UIColor? = nil, backButtonImage: UIImage? = nil, placeholderButtonImage: UIImage? = nil, shareExperienceText: String? = nil, shareExperienceFont: UIFont? = nil, shareExperienceTextColor: UIColor? = nil, whyUseText: String? = nil, whyUsePlaceholderText: String? = nil, whyUseTextFont: UIFont? = nil, whyUseTextFontTextfield: UIFont? = nil, whyUseTextColor: UIColor? = nil, suggestionText: String? = nil, suggestionPlaceholderText: String? = nil, suggestionTextFont: UIFont? = nil, suggestionTextFontTextfield: UIFont? = nil, suggestionTextColor: UIColor? = nil, limitTextFont: UIFont? = nil, limitTextColor: UIColor? = nil, submitText: String? = nil, submitTextFont: UIFont? = nil, submitTextColor: UIColor? = nil, viewSeparatorColor: UIColor? = nil, borderSepratorHeight: CGFloat? = nil, btnBackLeading: CGFloat? = nil, imageEdgeInsets: UIEdgeInsets? = nil, buttonBGType: FeedbackButtonBGType = .image,btnContinueSolidColor: UIColor? = nil, btnContinueFromColor: UIColor? = nil, btnContinueToColor: UIColor? = nil , btnContinueImageiPhone: UIImage? = nil, btnContinueImageiPad: UIImage? = nil) {
+    public init(viewMainColor: UIColor? = nil, navigationBarHeight: CGFloat? = nil, backButtonWidth: CGFloat? = nil,  navigationBarBackground: UIColor? = nil, isNeedToAddBorderInField: Bool? = nil, whyUseTextFieldColor: UIColor? = nil ,isShowNavigationBarShadow: Bool? = nil, attributedPlaceholder: NSAttributedString? = nil, placeholderColor: UIColor? = nil,titleTextAlignment: NSTextAlignment? = nil ,titleText: String? = nil, titleTextFont: UIFont? = nil, titleTextColor: UIColor? = nil, backButtonImage: UIImage? = nil, placeholderButtonImage: UIImage? = nil, shareExperienceText: String? = nil, shareExperienceFont: UIFont? = nil, shareExperienceTextColor: UIColor? = nil, whyUseText: String? = nil, whyUsePlaceholderText: String? = nil, whyUseTextFont: UIFont? = nil, whyUseTextFontTextfield: UIFont? = nil, whyUseTextColor: UIColor? = nil, suggestionText: String? = nil, suggestionPlaceholderText: String? = nil, suggestionTextFont: UIFont? = nil, suggestionTextFontTextfield: UIFont? = nil, suggestionTextColor: UIColor? = nil, limitTextFont: UIFont? = nil, limitTextColor: UIColor? = nil, submitText: String? = nil, submitTextFont: UIFont? = nil, submitTextColor: UIColor? = nil, viewSeparatorColor: UIColor? = nil, borderSepratorHeight: CGFloat? = nil, btnBackLeading: CGFloat? = nil, imageEdgeInsets: UIEdgeInsets? = nil, buttonBGType: FeedbackButtonBGType = .image,btnContinueSolidColor: UIColor? = nil, btnContinueFromColor: UIColor? = nil, btnContinueToColor: UIColor? = nil , btnContinueImageiPhone: UIImage? = nil, btnContinueImageiPad: UIImage? = nil, viewShadowColor: UIColor? = nil) {
         self.viewMainColor = viewMainColor
         self.navigationBarHeight = navigationBarHeight
         self.backButtonWidth = backButtonWidth
@@ -103,6 +104,7 @@ public struct UICustomizationFeedback {
         self.btnContinueToColor = btnContinueToColor ?? .clear
         self.btnContinueImageiPhone = btnContinueImageiPhone ?? ImageHelper.image(named: "ic_btn_bg")
         self.btnContinueImageiPad = btnContinueImageiPad ?? ImageHelper.image(named: "ic_btn_bg")
+        self.viewShadowColor = viewShadowColor ?? hexStringToUIColor(hex: "474747").withAlphaComponent(0.15)
     }
 }
 
@@ -147,6 +149,18 @@ public class FeedbackVC: UIViewController {
         updateUI()
     }
     
+    public override func viewWillLayoutSubviews() {
+        super.viewWillLayoutSubviews()
+        switch customization.buttonBGType {
+        case .gradientColor:
+            let from = self.customization.btnContinueFromColor ?? .clear
+            let to = self.customization.btnContinueToColor ?? .clear
+            self.submitButton.addGradient(colors: [from, to], cornerRadius: 20.0)
+        default:
+            break
+        }
+    }
+
     private func setUpUI() {
         
         submitButton.layer.cornerRadius = UIDevice.current.isiPhone ? 10 : 12
@@ -161,7 +175,7 @@ public class FeedbackVC: UIViewController {
         
         if customization.isShowNavigationBarShadow ?? true {
             DispatchQueue.main.async {
-                self.viewNavBar.addBottomViewShadow()
+                self.viewNavBar.addBottomViewShadow(shadowColorWithAlpha: self.customization.viewShadowColor!)
             }
         }
         addKeyboardObservers()
@@ -226,9 +240,7 @@ public class FeedbackVC: UIViewController {
         case .solidColor:
             self.submitButton.backgroundColor = customization.btnContinueSolidColor ?? .clear
         case .gradientColor:
-            let from = self.customization.btnContinueFromColor ?? .clear
-            let to = self.customization.btnContinueToColor ?? .clear
-            self.submitButton.addGradient(colors: [from, to], cornerRadius: 20.0)
+            break
         case .image:
             if UIDevice.current.isiPhone {
                 if let buttonImage = customization.btnContinueImageiPhone {
@@ -308,12 +320,12 @@ extension FeedbackVC {
         } else {
             if Reachability_Manager.isConnectedToNetwork() {
                 
-                self.startLoader()
+                self.Pod_startLoader()
                 
                 sendAppReview(review: suggetionTextView.text.trimmed(), subscriptionReview: "", useOfApp: self.whyUseTextField.text?.trimmed() ?? "") { success in
                     
                     AddFirebaseEvent(eventName: .FeedbackSubmit, parameters: ["success": success])
-                    self.stopLoader()
+                    self.Pod_stopLoader()
                     
                     if success {
                         DispatchQueue.main.async {

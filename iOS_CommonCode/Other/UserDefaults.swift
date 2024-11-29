@@ -8,10 +8,10 @@ import UIKit
 
 public var Pod_AppSuiteName : String {
     set{
-        UserDefaults.standard.set(newValue, forKey: "Pod_AppSuiteName")
+        UserDefaults.standard.set(newValue, forKey: Pod_AppPackageName)
     }
     get {
-        if let value = UserDefaults.standard.value(forKey: "Pod_AppSuiteName") as? String{
+        if let value = UserDefaults.standard.value(forKey: Pod_AppPackageName) as? String{
             return value
         }
         return ""
@@ -21,7 +21,7 @@ public var Pod_AppSuiteName : String {
 public var Pod_AppVersionCode : String {
     set{
         UserDefaults.standard.set(newValue, forKey: "Pod_AppVersionCode")
-        if let pod_AppSuiteName = UserDefaults(suiteName: "Pod_AppSuiteName") {
+        if let pod_AppSuiteName = UserDefaults(suiteName: Pod_AppPackageName) {
             pod_AppSuiteName.object(forKey: "Pod_AppVersionCode")
         }
     }
@@ -36,7 +36,7 @@ public var Pod_AppVersionCode : String {
 public var Pod_AppPackageName : String {
     set{
         UserDefaults.standard.set(newValue, forKey: "Pod_AppPackageName")
-        if let pod_AppSuiteName = UserDefaults(suiteName: "Pod_AppSuiteName") {
+        if let pod_AppSuiteName = UserDefaults(suiteName: Pod_AppPackageName) {
             pod_AppSuiteName.object(forKey: "Pod_AppPackageName")
         }
     }
@@ -51,7 +51,7 @@ public var Pod_AppPackageName : String {
 public var Pod_AppPrivacyPolicyURL : String {
     set{
         UserDefaults.standard.set(newValue, forKey: "Pod_AppPrivacyPolicyURL")
-        if let pod_AppSuiteName = UserDefaults(suiteName: "Pod_AppSuiteName") {
+        if let pod_AppSuiteName = UserDefaults(suiteName: Pod_AppPackageName) {
             pod_AppSuiteName.object(forKey: "Pod_AppPrivacyPolicyURL")
         }
     }
@@ -66,7 +66,7 @@ public var Pod_AppPrivacyPolicyURL : String {
 public var Pod_AppTermsAnsConditionURL : String {
     set{
         UserDefaults.standard.set(newValue, forKey: "Pod_AppTermsAnsConditionURL")
-        if let pod_AppSuiteName = UserDefaults(suiteName: "Pod_AppSuiteName") {
+        if let pod_AppSuiteName = UserDefaults(suiteName: Pod_AppPackageName) {
             pod_AppSuiteName.object(forKey: "Pod_AppTermsAnsConditionURL")
         }
     }
@@ -81,7 +81,7 @@ public var Pod_AppTermsAnsConditionURL : String {
 public var Pod_FirebaseAppName : String {
     set{
         UserDefaults.standard.set(newValue, forKey: "Pod_FirebaseAppName")
-        if let pod_AppSuiteName = UserDefaults(suiteName: "Pod_AppSuiteName") {
+        if let pod_AppSuiteName = UserDefaults(suiteName: Pod_AppPackageName) {
             pod_AppSuiteName.object(forKey: "Pod_FirebaseAppName")
         }
     }
@@ -96,7 +96,7 @@ public var Pod_FirebaseAppName : String {
 public var Pod_AppLaungauge_Code : String {
     set{
         UserDefaults.standard.set(newValue, forKey: "Pod_AppLaungauge_Code")
-        if let pod_AppSuiteName = UserDefaults(suiteName: "Pod_AppSuiteName") {
+        if let pod_AppSuiteName = UserDefaults(suiteName: Pod_AppPackageName) {
             pod_AppSuiteName.object(forKey: "Pod_AppLaungauge_Code")
         }
     }
@@ -111,7 +111,7 @@ public var Pod_AppLaungauge_Code : String {
 public var isUserGivenRating : Bool {
     set {
         UserDefaults.standard.setValue(newValue, forKey: "isUserGivenRating")
-        if let pod_AppSuiteName = UserDefaults(suiteName: "Pod_AppSuiteName") {
+        if let pod_AppSuiteName = UserDefaults(suiteName: Pod_AppPackageName) {
             pod_AppSuiteName.object(forKey: "isUserGivenRating")
         }
     }
@@ -126,7 +126,7 @@ public var isUserGivenRating : Bool {
 public var isFeedbackSheetShown: Bool {
     set{
         UserDefaults.standard.set(newValue, forKey: "isFeedbackSheetShown")
-        if let pod_AppSuiteName = UserDefaults(suiteName: "Pod_AppSuiteName") {
+        if let pod_AppSuiteName = UserDefaults(suiteName: Pod_AppPackageName) {
             pod_AppSuiteName.object(forKey: "isFeedbackSheetShown")
         }
     }

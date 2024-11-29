@@ -179,10 +179,10 @@ extension GoogleAd_Manager
                                     loader.removeFromSuperview()
                                 }
                             }
+                            parentView.addSubview(self.bannerViewAd)
                         }
                         bannerAd_present!()
                     }
-                    parentView.addSubview(bannerViewAd)
                 }
                 else {
                     load_BannerAd()
@@ -198,9 +198,9 @@ extension GoogleAd_Manager
                                     loader.removeFromSuperview()
                                 }
                             }
+                            parentView.addSubview(self.bannerViewAd)
                         }
                     }
-                    parentView.addSubview(bannerViewAd)
                 }
             }
         }

@@ -63,7 +63,7 @@ public class webVC: UIViewController {
         
         updateUI()
         loadURL()
-        self.startLoader()
+        self.Pod_startLoader()
     }
     
     // MARK: - Update UI Method
@@ -104,13 +104,13 @@ public class webVC: UIViewController {
     }
     
     func showAlert() {
-        self.stopLoader()
+        self.Pod_stopLoader()
         let alert = UIAlertController(title: "Check your internet connection".localized(), message:"", preferredStyle: .alert)
         let cancel = UIAlertAction(title: "Cancel".localized(), style: .default) { _ in
             self.dismiss(animated: true, completion: nil)
         }
         let retry = UIAlertAction(title: "Retry".localized(), style: .cancel) { _ in
-            self.startLoader()
+            self.Pod_startLoader()
             self.loadURL()
         }
         alert.addAction(cancel)
@@ -140,6 +140,6 @@ extension webVC: WKNavigationDelegate {
     
     public func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
         print("webView : Finished Request")
-        self.stopLoader()
+        self.Pod_stopLoader()
     }
 }

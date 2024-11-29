@@ -418,7 +418,7 @@ extension SubTimelineVC
 extension SubTimelineVC
 {
     func purchaseByRevenueKit(){
-        self.startLoader()
+        self.Pod_startLoader()
         if let tempPlan = selected_Plan
         {
             RevenueCat_Manager.shared.purchaseProduct(ProductID: tempPlan.plan_Id) { [self] (state, info, error,isCancel) in
@@ -429,7 +429,7 @@ extension SubTimelineVC
     
     func funManagePurchaseResponse(state: Bool, info: CustomerInfo?, error: Error?, isCancel: Bool) {
         
-        self.stopLoader()
+        self.Pod_stopLoader()
         if state {
             if !isCancel {
                 if let error = error  {
@@ -454,9 +454,9 @@ extension SubTimelineVC
     
     func restoreByRevenueKit() {
         
-        self.startLoader()
+        self.Pod_startLoader()
         RevenueCat_Manager.shared.restoreProduct { (state, info, error) in
-            self.stopLoader()
+            self.Pod_stopLoader()
             if error != nil {
                 self.systemAlert(title: "Error".localized(), message: "Something went wrong, Please try again.".localized(), actionDestructive: "OK".localized())
                 return

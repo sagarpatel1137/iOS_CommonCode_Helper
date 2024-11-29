@@ -15,7 +15,7 @@ public let notificationPurchaseSuccessfully = Notification.Name("InAppPurchaseSu
 public var Purchase_flag: Bool {
     set{
         UserDefaults.standard.set(newValue, forKey: "Purchase_flag")
-        if let pod_AppSuiteName = UserDefaults(suiteName: "Pod_AppSuiteName") {
+        if let pod_AppSuiteName = UserDefaults(suiteName: Pod_AppPackageName) {
             pod_AppSuiteName.object(forKey: "Purchase_flag")
         }
     }
