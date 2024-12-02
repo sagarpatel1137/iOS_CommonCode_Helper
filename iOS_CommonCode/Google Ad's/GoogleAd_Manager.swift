@@ -152,7 +152,7 @@ extension GoogleAd_Manager
             
             
             if !Purchase_flag {
-            
+                
                 switch loaderType {
                 case .Shimmer:
                     parentView.addShimmerViewForAdType(adType: .banner_Adaptive)
@@ -179,10 +179,10 @@ extension GoogleAd_Manager
                                     loader.removeFromSuperview()
                                 }
                             }
-                            parentView.addSubview(self.bannerViewAd)
                         }
                         bannerAd_present!()
                     }
+                    parentView.addSubview(self.bannerViewAd)
                 }
                 else {
                     load_BannerAd()
@@ -205,7 +205,6 @@ extension GoogleAd_Manager
             }
         }
     }
-    
     
     public func funShowInterstitialAd(rootVC: UIViewController, isWaitUntillShow: Bool = false, isPresentAd : @escaping ((Bool) -> Void),adDidDismiss : @escaping (() -> Void),didFailToPresent : @escaping ((String) -> Void))
     {

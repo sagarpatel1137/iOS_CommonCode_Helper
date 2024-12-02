@@ -207,7 +207,7 @@ public class SubMorePlanVC: UIViewController {
         
         arrPlansList.removeAll()
         
-        if (self.customizationSubMorePlan?.sixBoxDynamicPlan.count ?? 0) > 0 && self.customizationSubMorePlan?.sixBoxDynamicPlan.count == 3 {
+        if let array = self.customizationSubMorePlan?.sixBoxDynamicPlan, (array.count == 3) && array.filter({$0 > 3}).count == 0 && array.filter({$0 < 0}).count == 0 && Array(Set(array)).count == 3 {
             self.arrPlansList = [
                 defaultPlans[(self.customizationSubMorePlan?.sixBoxDynamicPlan[0])!],
                 defaultPlans[(self.customizationSubMorePlan?.sixBoxDynamicPlan[1])!],
@@ -239,12 +239,20 @@ public class SubMorePlanVC: UIViewController {
         }
         
         let sixBoxDynamicPlanSelectedIndex = self.customizationSubMorePlan?.sixBoxDynamicPlanSelectedIndex ?? 0
-        selected_Plan = arrPlansList[sixBoxDynamicPlanSelectedIndex].plan
-        setPlanDetails(sixBoxDynamicPlanSelectedIndex)
+        var index = 1
+        if sixBoxDynamicPlanSelectedIndex >= 0, sixBoxDynamicPlanSelectedIndex <= 2 {
+            selected_Plan = arrPlansList[sixBoxDynamicPlanSelectedIndex].plan
+            index = sixBoxDynamicPlanSelectedIndex
+        } else {
+            selected_Plan = arrPlansList[1].plan
+            index = 1
+        }
+        
+        setPlanDetails(index)
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.0) { [weak self] in
             guard let self = self else { return }
             self.isFromIntial = true
-            self.btnProductClicked(self.arrPlanBtn[sixBoxDynamicPlanSelectedIndex])
+            self.btnProductClicked(self.arrPlanBtn[index])
         }
     }
     

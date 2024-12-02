@@ -148,28 +148,41 @@ extension UIViewController
         isOpenFrom: String,
         completionTimeline: @escaping (SubCloseCompletionBlock, [String: String]?) -> Void
     ) {
-        let subTimelineVC = SubTimelineVC()
-        subTimelineVC.viewAllPlanType = viewAllPlanType
-        subTimelineVC.featureList = featureList
-        subTimelineVC.arrFeature = arrFeature
-        subTimelineVC.arrReview = arrReview
-        subTimelineVC.subsciptionContinueBtnTextIndex = subsciptionContinueBtnTextIndex
-        subTimelineVC.enableRatingAutoScroll = enableRatingAutoScroll
-        subTimelineVC.isRatingScrollEnable = isRatingScrollEnable
-        subTimelineVC.isPresentSubAlertSheet = isPresentSubAlertSheet
-        subTimelineVC.customizationSubTimelineTheme = customizationSubTimelineTheme ?? UICustomizationSubTimelineTheme()
-        subTimelineVC.customizationSubRatingData = customizationSubRatingData
-        subTimelineVC.customizationSubMorePlan = customizationSubMorePlan
-        subTimelineVC.customizationWebViewData = customizationWebViewData
-        subTimelineVC.customizationAllPlan = customizationAllPlan
-        subTimelineVC.lifetimeDiscountVal = lifetimeDiscountVal
-        subTimelineVC.isOpenFrom = isOpenFrom
-        subTimelineVC.completionTimeline = { (result, param) in
-            completionTimeline(result, param)
+        if SubscriptionConst.isGet {
+            let subTimelineVC = SubTimelineVC()
+            subTimelineVC.viewAllPlanType = viewAllPlanType
+            subTimelineVC.featureList = featureList
+            subTimelineVC.arrFeature = arrFeature
+            subTimelineVC.arrReview = arrReview
+            subTimelineVC.subsciptionContinueBtnTextIndex = subsciptionContinueBtnTextIndex
+            subTimelineVC.enableRatingAutoScroll = enableRatingAutoScroll
+            subTimelineVC.isRatingScrollEnable = isRatingScrollEnable
+            subTimelineVC.isPresentSubAlertSheet = isPresentSubAlertSheet
+            subTimelineVC.customizationSubTimelineTheme = customizationSubTimelineTheme ?? UICustomizationSubTimelineTheme()
+            subTimelineVC.customizationSubRatingData = customizationSubRatingData
+            subTimelineVC.customizationSubMorePlan = customizationSubMorePlan
+            subTimelineVC.customizationWebViewData = customizationWebViewData
+            subTimelineVC.customizationAllPlan = customizationAllPlan
+            subTimelineVC.lifetimeDiscountVal = lifetimeDiscountVal
+            subTimelineVC.isOpenFrom = isOpenFrom
+            subTimelineVC.completionTimeline = { (result, param) in
+                completionTimeline(result, param)
+            }
+            subTimelineVC.modalPresentationStyle = .fullScreen
+            subTimelineVC.modalTransitionStyle = .crossDissolve
+            self.present(subTimelineVC, animated: true, completion: nil)
+        } else {
+            if Reachability_Manager.isConnectedToNetwork() {
+//                self.view.makeToast("Something went to wrong..!".localized(), duration: 4.0)
+                completionTimeline(.unknown, nil)
+                if !SubscriptionConst.isGet {
+                    RevenueCat_Manager.shared.GetAllAvailablePackages { (state, error) in }
+                }
+            } else {
+//                self.view.makeToast("Please Check Internet Connection".localized(), duration: 4.0)
+                completionTimeline(.unknown, nil)
+            }
         }
-        subTimelineVC.modalPresentationStyle = .fullScreen
-        subTimelineVC.modalTransitionStyle = .crossDissolve
-        self.present(subTimelineVC, animated: true, completion: nil)
     }
     
     public func openSubMorePlanVC(
@@ -185,22 +198,34 @@ extension UIViewController
         DispatchQueue.main.async { [weak self] in
             
             guard let self = self else { return }
-            
-            let subAllPlanVC = SubMorePlanVC()
-            subAllPlanVC.isFromTimeline = isFromTimeline
-            subAllPlanVC.arrReview = arrReview
-            subAllPlanVC.isPresentSubAlertSheet = isPresentSubAlertSheet
-            subAllPlanVC.customizationSubMorePlan = customizationSubMorePlan
-            subAllPlanVC.customizationSubRatingData = customizationSubRatingData
-            subAllPlanVC.customizationSubRatingData = customizationSubRatingData
-            subAllPlanVC.customizationWebViewData = customizationWebViewData
-            subAllPlanVC.isOpenFrom = isOpenFrom
-            subAllPlanVC.completionMorePlan = { (result, param) in
-                completionMorePlan(result, param)
+            if SubscriptionConst.isGet {
+                let subAllPlanVC = SubMorePlanVC()
+                subAllPlanVC.isFromTimeline = isFromTimeline
+                subAllPlanVC.arrReview = arrReview
+                subAllPlanVC.isPresentSubAlertSheet = isPresentSubAlertSheet
+                subAllPlanVC.customizationSubMorePlan = customizationSubMorePlan
+                subAllPlanVC.customizationSubRatingData = customizationSubRatingData
+                subAllPlanVC.customizationSubRatingData = customizationSubRatingData
+                subAllPlanVC.customizationWebViewData = customizationWebViewData
+                subAllPlanVC.isOpenFrom = isOpenFrom
+                subAllPlanVC.completionMorePlan = { (result, param) in
+                    completionMorePlan(result, param)
+                }
+                subAllPlanVC.modalPresentationStyle = .fullScreen
+                subAllPlanVC.modalTransitionStyle = .crossDissolve
+                self.present(subAllPlanVC, animated: true, completion: nil)
+            } else {
+                if Reachability_Manager.isConnectedToNetwork() {
+                    self.view.makeToast("Something went to wrong..!".localized(), duration: 4.0)
+                    completionMorePlan(.unknown, nil)
+                    if !SubscriptionConst.isGet {
+                        RevenueCat_Manager.shared.GetAllAvailablePackages { (state, error) in }
+                    }
+                } else {
+                    self.view.makeToast("Please Check Internet Connection".localized(), duration: 4.0)
+                    completionMorePlan(.unknown, nil)
+                }
             }
-            subAllPlanVC.modalPresentationStyle = .fullScreen
-            subAllPlanVC.modalTransitionStyle = .crossDissolve
-            self.present(subAllPlanVC, animated: true, completion: nil)
         }
     }
     
@@ -212,35 +237,48 @@ extension UIViewController
         customizationAllPlan: UICustomizationAllPlan?,
         customizationSubRatingData: UICustomizationSubRatingData?,
         customizationWebViewData: UICustomizationWebView? = nil,
-        enableRatingAutoScroll: Bool = true,
+        enableRatingAutoScroll: Bool = false,
         isRatingScrollEnable: Bool = true,
         isPresentSubAlertSheet: Bool = true,
         lifetimeDiscountVal: Int = 90,
         isOpenFrom: String,
-        completionMorePlan: @escaping (SubCloseCompletionBlock, [String: String]?) -> Void
+        completionAllPlan: @escaping (SubCloseCompletionBlock, [String: String]?) -> Void
     ) {
         DispatchQueue.main.async { [weak self] in
             
             guard let self = self else { return }
-            let subAllPlanVC = SubAllPlanVC()
-            subAllPlanVC.isFromTimeline = isFromTimeline
-            subAllPlanVC.arrFeature = arrFeature
-            subAllPlanVC.arrReview = arrReview
-            subAllPlanVC.subsciptionContinueBtnTextIndex = subsciptionContinueBtnTextIndex
-            subAllPlanVC.customizationAllPlan = customizationAllPlan
-            subAllPlanVC.customizationSubRatingData = customizationSubRatingData
-            subAllPlanVC.customizationWebViewData = customizationWebViewData
-            subAllPlanVC.enableRatingAutoScroll = enableRatingAutoScroll
-            subAllPlanVC.isRatingScrollEnable = isRatingScrollEnable
-            subAllPlanVC.isPresentSubAlertSheet = isPresentSubAlertSheet
-            subAllPlanVC.lifetimeDiscountVal = lifetimeDiscountVal
-            subAllPlanVC.isOpenFrom = isOpenFrom
-            subAllPlanVC.completionMorePlan = { (result, param) in
-                completionMorePlan(result, param)
+            if SubscriptionConst.isGet {
+                let subAllPlanVC = SubAllPlanVC()
+                subAllPlanVC.isFromTimeline = isFromTimeline
+                subAllPlanVC.arrFeature = arrFeature
+                subAllPlanVC.arrReview = arrReview
+                subAllPlanVC.subsciptionContinueBtnTextIndex = subsciptionContinueBtnTextIndex
+                subAllPlanVC.customizationAllPlan = customizationAllPlan
+                subAllPlanVC.customizationSubRatingData = customizationSubRatingData
+                subAllPlanVC.customizationWebViewData = customizationWebViewData
+                subAllPlanVC.enableRatingAutoScroll = enableRatingAutoScroll
+                subAllPlanVC.isRatingScrollEnable = isRatingScrollEnable
+                subAllPlanVC.isPresentSubAlertSheet = isPresentSubAlertSheet
+                subAllPlanVC.lifetimeDiscountVal = lifetimeDiscountVal
+                subAllPlanVC.isOpenFrom = isOpenFrom
+                subAllPlanVC.completionMorePlan = { (result, param) in
+                    completionAllPlan(result, param)
+                }
+                subAllPlanVC.modalPresentationStyle = .fullScreen
+                subAllPlanVC.modalTransitionStyle = .crossDissolve
+                self.present(subAllPlanVC, animated: true, completion: nil)
+            } else {
+                if Reachability_Manager.isConnectedToNetwork() {
+                    self.view.makeToast("Something went to wrong..!".localized(), duration: 4.0)
+                    completionAllPlan(.unknown, nil)
+                    if !SubscriptionConst.isGet {
+                        RevenueCat_Manager.shared.GetAllAvailablePackages { (state, error) in }
+                    }
+                } else {
+                    self.view.makeToast("Please Check Internet Connection".localized(), duration: 4.0)
+                    completionAllPlan(.unknown, nil)
+                }
             }
-            subAllPlanVC.modalPresentationStyle = .fullScreen
-            subAllPlanVC.modalTransitionStyle = .crossDissolve
-            self.present(subAllPlanVC, animated: true, completion: nil)
         }
     }
     
@@ -249,15 +287,28 @@ extension UIViewController
         isOpenFrom: String,
         completionDiscount: @escaping (SubCloseCompletionBlock, [String: String]?) -> Void
     ) {
-        let vc = SubDiscountVC()
-        vc.customizationSubDiscountTheme = customizationSubDiscountTheme ?? UICustomizationSubDiscountTheme()
-        vc.isOpenFrom = isOpenFrom
-        vc.completionDiscount = { (result, param) in
-            completionDiscount(result, param)
+        if SubscriptionConst.isGet {
+            let vc = SubDiscountVC()
+            vc.customizationSubDiscountTheme = customizationSubDiscountTheme ?? UICustomizationSubDiscountTheme()
+            vc.isOpenFrom = isOpenFrom
+            vc.completionDiscount = { (result, param) in
+                completionDiscount(result, param)
+            }
+            vc.modalPresentationStyle = .overFullScreen
+            vc.modalTransitionStyle = .crossDissolve
+            self.present(vc, animated: true, completion: nil)
+        } else {
+            if Reachability_Manager.isConnectedToNetwork() {
+                self.view.makeToast("Something went to wrong..!".localized(), duration: 4.0)
+                completionDiscount(.unknown, nil)
+                if !SubscriptionConst.isGet {
+                    RevenueCat_Manager.shared.GetAllAvailablePackages { (state, error) in }
+                }
+            } else {
+                self.view.makeToast("Please Check Internet Connection".localized(), duration: 4.0)
+                completionDiscount(.unknown, nil)
+            }
         }
-        vc.modalPresentationStyle = .overFullScreen
-        vc.modalTransitionStyle = .crossDissolve
-        self.present(vc, animated: true, completion: nil)
     }
     
     public func openThankYouVC(
