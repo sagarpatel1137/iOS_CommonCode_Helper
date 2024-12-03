@@ -74,9 +74,7 @@ extension OneSignal_Manager : OSPushSubscriptionObserver {
 public var OneSignalId_PlayerId : String? {
     set {
         UserDefaults.standard.setValue(newValue, forKey: "oneSignalPlayerId")
-        if let pod_AppSuiteName = UserDefaults(suiteName: Pod_AppPackageName) {
-            pod_AppSuiteName.object(forKey: "oneSignalPlayerId")
-        }
+        SetValueToSuitNameUserDefualt(value: newValue, key: "oneSignalPlayerId")
     }
     get{
         UserDefaults.standard.value(forKey: "oneSignalPlayerId") as? String
@@ -86,9 +84,7 @@ public var OneSignalId_PlayerId : String? {
 public var OneSignalId_UserState : String? {
     set {
         UserDefaults.standard.setValue(newValue, forKey: "OneSignalId_UserState")
-        if let pod_AppSuiteName = UserDefaults(suiteName: Pod_AppPackageName) {
-            pod_AppSuiteName.object(forKey: "OneSignalId_UserState")
-        }
+        SetValueToSuitNameUserDefualt(value: newValue, key: "OneSignalId_UserState")
     }
     get{
         UserDefaults.standard.value(forKey: "OneSignalId_UserState") as? String
@@ -98,9 +94,7 @@ public var OneSignalId_UserState : String? {
 public var OneSignalId_ExternalId : String? {
     set {
         UserDefaults.standard.setValue(newValue, forKey: "OneSignalId_ExternalId")
-        if let pod_AppSuiteName = UserDefaults(suiteName: Pod_AppPackageName) {
-            pod_AppSuiteName.object(forKey: "OneSignalId_ExternalId")
-        }
+        SetValueToSuitNameUserDefualt(value: newValue, key: "OneSignalId_ExternalId")
     }
     get{
         UserDefaults.standard.value(forKey: "OneSignalId_ExternalId") as? String

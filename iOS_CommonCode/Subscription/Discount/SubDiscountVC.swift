@@ -19,14 +19,18 @@ public struct UICustomizationSubDiscountTheme {
     public var imgButtonTryNow: UIImage?
     public var imgBtnClose: UIImage?
     public var lblPriceColor: UIColor?
+    public var lblGetLifetimeColor: UIColor?
+    public var lblDontMissColor: UIColor?
     
-    public init(popupImageBG: UIImage? = nil, popupImageTopBG: UIImage? = nil, subPopupImageBG: UIImage? = nil, imgButtonTryNow: UIImage? = nil, imgBtnClose: UIImage? = nil, lblPriceColor: UIColor? = nil) {
+    public init(popupImageBG: UIImage? = nil, popupImageTopBG: UIImage? = nil, subPopupImageBG: UIImage? = nil, imgButtonTryNow: UIImage? = nil, imgBtnClose: UIImage? = nil, lblPriceColor: UIColor? = nil, lblGetLifetimeColor: UIColor? = nil, lblDontMissColor: UIColor? = nil) {
         self.popupImageBG = popupImageBG ?? ImageHelper.image(named: "ic_sub_popup_bg")
         self.popupImageTopBG = popupImageTopBG ?? ImageHelper.image(named: "ic_sub_popup_top")
         self.subPopupImageBG = subPopupImageBG ?? ImageHelper.image(named: "ic_sub_popup_offer_bg")
         self.imgButtonTryNow = imgButtonTryNow ?? ImageHelper.image(named: "Pod_sub_discount_btn")
         self.imgBtnClose = imgBtnClose ?? ImageHelper.image(named: "ic_sub_popup_close")
         self.lblPriceColor = lblPriceColor ?? hexStringToUIColor(hex: "D10366")
+        self.lblGetLifetimeColor = lblGetLifetimeColor ?? hexStringToUIColor(hex: "210C1F")
+        self.lblDontMissColor = lblDontMissColor ?? hexStringToUIColor(hex: "210C1F")
     }
 }
 
@@ -102,6 +106,9 @@ public class SubDiscountVC: UIViewController {
         if let imgBtnClose = customizationSubDiscountTheme.imgBtnClose {
             self.btnClose.setImage(imgBtnClose, for: .normal)
         }
+        
+        lblGetLifetime.textColor = customizationSubDiscountTheme.lblGetLifetimeColor ?? hexStringToUIColor(hex: "210C1F")
+        lblDontMiss.textColor = customizationSubDiscountTheme.lblDontMissColor ?? hexStringToUIColor(hex: "210C1F")
     }
     
     private func setUpUI() {

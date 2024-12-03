@@ -712,16 +712,12 @@ extension RevenueCat_Manager
                         print("Vasundhara 🏢 - Revenue PurchaserInfo Sync Error ⚠️⚠️⚠️: \(error!)")
                         completion(false,error)
                         UserDefaults.standard.setValue(true, forKey: "appOpenFirstTime")
-                        if let pod_AppSuiteName = UserDefaults(suiteName: Pod_AppPackageName) {
-                            pod_AppSuiteName.object(forKey: "appOpenFirstTime")
-                        }
+                        SetValueToSuitNameUserDefualt(value: true, key: "appOpenFirstTime")
                         return
                     }
                     RevenueCat_Manager.purchaseInfo = purchaserInfo!
                     UserDefaults.standard.setValue(true, forKey: "appOpenFirstTime")
-                    if let pod_AppSuiteName = UserDefaults(suiteName: Pod_AppPackageName) {
-                        pod_AppSuiteName.object(forKey: "appOpenFirstTime")
-                    }
+                    SetValueToSuitNameUserDefualt(value: true, key: "appOpenFirstTime")
                     completion(true,nil)
                 }
             }
