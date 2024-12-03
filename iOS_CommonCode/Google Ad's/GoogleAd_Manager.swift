@@ -59,6 +59,7 @@ public class GoogleAd_Manager : NSObject {
     
     //Adaptive BannerAd
     private var bannerViewAd : GADBannerView!
+    private var isRequeSendForLoad_BannerAd = false
     private var bannerAd_present : (() -> Void)?
     private var isBannerAdLoaded = false
     
@@ -168,19 +169,19 @@ extension GoogleAd_Manager
                 
                 if isBannerAdLoaded {
                     if bannerAd_present != nil {
-                        DispatchQueue.main.async {
-                            switch loaderType {
-                            case .Shimmer:
-                                parentView.removeShimmerViewForAdType()
-                            case .AdsByDeveloper:
-                                parentView.removeAdByDeveloperViewForAd()
-                            case .Custom:
-                                if let loader = customLoader {
-                                    loader.removeFromSuperview()
-                                }
+                        bannerAd_present!()
+                    }
+                    DispatchQueue.main.async {
+                        switch loaderType {
+                        case .Shimmer:
+                            parentView.removeShimmerViewForAdType()
+                        case .AdsByDeveloper:
+                            parentView.removeAdByDeveloperViewForAd()
+                        case .Custom:
+                            if let loader = customLoader {
+                                loader.removeFromSuperview()
                             }
                         }
-                        bannerAd_present!()
                     }
                     parentView.addSubview(self.bannerViewAd)
                 }
@@ -465,7 +466,8 @@ extension GoogleAd_Manager
         
         DispatchQueue.main.async { [weak self] in
             guard let self = self else { return }
-            if !Purchase_flag && !isBannerAdLoaded {
+            if !Purchase_flag && !isBannerAdLoaded && !isRequeSendForLoad_BannerAd {
+                isRequeSendForLoad_BannerAd = true
                 bannerViewAd = GADBannerView()
                 bannerViewAd.delegate = self
                 bannerViewAd.adUnitID = Banner_ID
@@ -659,11 +661,13 @@ extension GoogleAd_Manager
 extension GoogleAd_Manager : GADBannerViewDelegate
 {
     public func bannerViewDidRecordClick(_ bannerView: GADBannerView) {
+        isRequeSendForLoad_BannerAd = false
         isAdClickedAndRedirected = true
     }
     
     public func bannerViewDidReceiveAd(_ bannerView: GADBannerView) {
         
+        isRequeSendForLoad_BannerAd = false
         if !Purchase_flag {
             bannerViewAd = bannerView
             isBannerAdLoaded = true
@@ -674,6 +678,7 @@ extension GoogleAd_Manager : GADBannerViewDelegate
     }
     
     public func bannerView(_ bannerView: GADBannerView, didFailToReceiveAdWithError error: Error) {
+        isRequeSendForLoad_BannerAd = false
         load_BannerAd()
     }
 }

@@ -86,6 +86,7 @@ extension UIViewController
         isOpenFrom: String,
         bgColor: UIColor? = nil,
         textColor: UIColor? = nil,
+        modalTransitionStyle: UIModalTransitionStyle = .crossDissolve,
         complition: ((RatingResponse)-> Void)? = nil
     ) {
         let vc = RatingVC()
@@ -100,15 +101,15 @@ extension UIViewController
             complition?(ratingResponse)
         }
         vc.modalPresentationStyle = .overFullScreen
-        vc.modalTransitionStyle = .crossDissolve
+        vc.modalTransitionStyle = modalTransitionStyle
         self.present(vc, animated: true, completion: nil)
     }
     
-    public func openFeedbackVC(customization: UICustomizationFeedback? = nil) {
+    public func openFeedbackVC(customization: UICustomizationFeedback? = nil, modalTransitionStyle: UIModalTransitionStyle = .crossDissolve) {
         let feedbackVC = FeedbackVC()
         feedbackVC.customization = customization ?? UICustomizationFeedback()
         feedbackVC.modalPresentationStyle = .overFullScreen
-        feedbackVC.modalTransitionStyle = .crossDissolve
+        feedbackVC.modalTransitionStyle = modalTransitionStyle
         self.present(feedbackVC, animated: true, completion: nil)
     }
     
@@ -116,6 +117,7 @@ extension UIViewController
         titleStr: String,
         urlStr: String,
         customization: UICustomizationWebView? = nil,
+        modalTransitionStyle: UIModalTransitionStyle = .crossDissolve,
         completion: (()-> Void)? = nil
     ) {
         let webVC = webVC()
@@ -123,7 +125,7 @@ extension UIViewController
         webVC.urlStr = urlStr
         webVC.customization = customization ?? UICustomizationWebView()
         webVC.modalPresentationStyle = .overFullScreen
-        webVC.modalTransitionStyle = .crossDissolve
+        webVC.modalTransitionStyle = modalTransitionStyle
         webVC.completionBack = {
             completion?()
         }
@@ -146,6 +148,7 @@ extension UIViewController
         customizationAllPlan: UICustomizationAllPlan?,
         lifetimeDiscountVal: Int = 80,
         isOpenFrom: String,
+        modalTransitionStyle: UIModalTransitionStyle = .crossDissolve,
         completionTimeline: @escaping (SubCloseCompletionBlock, [String: String]?) -> Void
     ) {
         if SubscriptionConst.isGet {
@@ -169,7 +172,7 @@ extension UIViewController
                 completionTimeline(result, param)
             }
             subTimelineVC.modalPresentationStyle = .fullScreen
-            subTimelineVC.modalTransitionStyle = .crossDissolve
+            subTimelineVC.modalTransitionStyle = modalTransitionStyle
             self.present(subTimelineVC, animated: true, completion: nil)
         } else {
             if Reachability_Manager.isConnectedToNetwork() {
@@ -193,6 +196,7 @@ extension UIViewController
         customizationSubRatingData: UICustomizationSubRatingData?,
         customizationWebViewData: UICustomizationWebView? = nil,
         isOpenFrom: String,
+        modalTransitionStyle: UIModalTransitionStyle = .crossDissolve,
         completionMorePlan: @escaping (SubCloseCompletionBlock, [String: String]?) -> Void
     ) {
         DispatchQueue.main.async { [weak self] in
@@ -212,7 +216,7 @@ extension UIViewController
                     completionMorePlan(result, param)
                 }
                 subAllPlanVC.modalPresentationStyle = .fullScreen
-                subAllPlanVC.modalTransitionStyle = .crossDissolve
+                subAllPlanVC.modalTransitionStyle = modalTransitionStyle
                 self.present(subAllPlanVC, animated: true, completion: nil)
             } else {
                 if Reachability_Manager.isConnectedToNetwork() {
@@ -242,6 +246,7 @@ extension UIViewController
         isPresentSubAlertSheet: Bool = true,
         lifetimeDiscountVal: Int = 90,
         isOpenFrom: String,
+        modalTransitionStyle: UIModalTransitionStyle = .crossDissolve,
         completionAllPlan: @escaping (SubCloseCompletionBlock, [String: String]?) -> Void
     ) {
         DispatchQueue.main.async { [weak self] in
@@ -265,7 +270,7 @@ extension UIViewController
                     completionAllPlan(result, param)
                 }
                 subAllPlanVC.modalPresentationStyle = .fullScreen
-                subAllPlanVC.modalTransitionStyle = .crossDissolve
+                subAllPlanVC.modalTransitionStyle = modalTransitionStyle
                 self.present(subAllPlanVC, animated: true, completion: nil)
             } else {
                 if Reachability_Manager.isConnectedToNetwork() {
@@ -285,6 +290,7 @@ extension UIViewController
     public func openSubDiscountVC(
         customizationSubDiscountTheme: UICustomizationSubDiscountTheme? = nil,
         isOpenFrom: String,
+        modalTransitionStyle: UIModalTransitionStyle = .crossDissolve,
         completionDiscount: @escaping (SubCloseCompletionBlock, [String: String]?) -> Void
     ) {
         if SubscriptionConst.isGet {
@@ -295,7 +301,7 @@ extension UIViewController
                 completionDiscount(result, param)
             }
             vc.modalPresentationStyle = .overFullScreen
-            vc.modalTransitionStyle = .crossDissolve
+            vc.modalTransitionStyle = modalTransitionStyle
             self.present(vc, animated: true, completion: nil)
         } else {
             if Reachability_Manager.isConnectedToNetwork() {
@@ -316,6 +322,7 @@ extension UIViewController
         customizationSubThankYouData: UICustomizationSubThankYouData? = nil,
         subCloseCompletionBlock: SubCloseCompletionBlock,
         param: [String: String]?,
+        modalTransitionStyle: UIModalTransitionStyle = .crossDissolve,
         completion: (()-> Void)? = nil
     ) {
         let thankYouVC = ThankYouVC()
@@ -324,7 +331,7 @@ extension UIViewController
         thankYouVC.subCloseCompletionBlock = subCloseCompletionBlock
         thankYouVC.param = param
         thankYouVC.modalPresentationStyle = .fullScreen
-        thankYouVC.modalTransitionStyle = .crossDissolve
+        thankYouVC.modalTransitionStyle = modalTransitionStyle
         thankYouVC.completionGetStart = {
             completion?()
         }
