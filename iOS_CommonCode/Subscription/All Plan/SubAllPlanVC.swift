@@ -145,7 +145,8 @@ public class SubAllPlanVC: UIViewController {
     public var lifetimeDiscountVal = 80
     public var isOpenFrom = ""
     public var isPresentSubAlertSheet = true
-
+    public var modalTransitionStyleForWebVC: UIModalTransitionStyle = .crossDissolve
+    
     //MARK: -
     public override var prefersStatusBarHidden: Bool {
         return true
@@ -412,11 +413,11 @@ public class SubAllPlanVC: UIViewController {
     
     @IBAction func btnPrivacyAction(_ sender: Any) {
         
-        self.openWebVC(titleStr: "Privacy Policy".localized(), urlStr: Pod_AppPrivacyPolicyURL, customization: self.customizationWebViewData)
+        self.openWebVC(titleStr: "Privacy Policy".localized(), urlStr: Pod_AppPrivacyPolicyURL, customization: self.customizationWebViewData, modalTransitionStyle: self.modalTransitionStyleForWebVC)
     }
     
     @IBAction func btnTermsAction(_ sender: Any) {
-        self.openWebVC(titleStr:"Terms of Use".localized(), urlStr: Pod_AppTermsAnsConditionURL, customization: self.customizationWebViewData)
+        self.openWebVC(titleStr:"Terms of Use".localized(), urlStr: Pod_AppTermsAnsConditionURL, customization: self.customizationWebViewData, modalTransitionStyle: self.modalTransitionStyleForWebVC)
     }
 }
 

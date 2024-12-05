@@ -140,6 +140,7 @@ public class FeedbackVC: UIViewController {
     
     public override func viewDidLoad() {
         super.viewDidLoad()
+        AddFirebaseEvent(eventName: .FeedbackShow)
         if let navigationBarHeight = customization.navigationBarHeight {
             self.navigationBarHeightCons.constant = navigationBarHeight
         }

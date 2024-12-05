@@ -47,5 +47,6 @@ enum EventsValues: String {
     case RatingLater                        =    "_RATING_DIALOG_LATER"
     
     // Feedback
+    case FeedbackShow                      =    "_FEEDBACK"
     case FeedbackSubmit                    =    "_FEEDBACK_SUBMIT"
 }

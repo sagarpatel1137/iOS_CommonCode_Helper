@@ -149,7 +149,7 @@ extension GoogleAd_Manager
 {
     public func funShowBannerAd(parentView: UIView, loaderType: LoaderType = .AdsByDeveloper, adByDeveloperTextColor: UIColor? = nil, customLoader: UIView? = nil)
     {
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.0) { [self] in
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.25) { [self] in
             
             
             if !Purchase_flag {
@@ -460,12 +460,13 @@ extension GoogleAd_Manager
 {
     private func load_BannerAd()
     {
-        if Banner_ID == "" {
-            fatalError("Vasundhara 🏢 - Google Ad : BannerAd Id Not Initialise Properly.")
-        }
-        
         DispatchQueue.main.async { [weak self] in
             guard let self = self else { return }
+            
+            if Banner_ID == "" {
+                fatalError("Vasundhara 🏢 - Google Ad : BannerAd Id Not Initialise Properly.")
+            }
+            
             if !Purchase_flag && !isBannerAdLoaded && !isRequeSendForLoad_BannerAd {
                 isRequeSendForLoad_BannerAd = true
                 bannerViewAd = GADBannerView()

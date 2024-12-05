@@ -171,6 +171,7 @@ extension UIViewController
             subTimelineVC.completionTimeline = { (result, param) in
                 completionTimeline(result, param)
             }
+            subTimelineVC.modalTransitionStyleForWebVC = modalTransitionStyle
             subTimelineVC.modalPresentationStyle = .fullScreen
             subTimelineVC.modalTransitionStyle = modalTransitionStyle
             self.present(subTimelineVC, animated: true, completion: nil)
@@ -215,6 +216,7 @@ extension UIViewController
                 subAllPlanVC.completionMorePlan = { (result, param) in
                     completionMorePlan(result, param)
                 }
+                subAllPlanVC.modalTransitionStyleForWebVC = modalTransitionStyle
                 subAllPlanVC.modalPresentationStyle = .fullScreen
                 subAllPlanVC.modalTransitionStyle = modalTransitionStyle
                 self.present(subAllPlanVC, animated: true, completion: nil)
@@ -269,6 +271,7 @@ extension UIViewController
                 subAllPlanVC.completionMorePlan = { (result, param) in
                     completionAllPlan(result, param)
                 }
+                subAllPlanVC.modalTransitionStyleForWebVC = modalTransitionStyle
                 subAllPlanVC.modalPresentationStyle = .fullScreen
                 subAllPlanVC.modalTransitionStyle = modalTransitionStyle
                 self.present(subAllPlanVC, animated: true, completion: nil)

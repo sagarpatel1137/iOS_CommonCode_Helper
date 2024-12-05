@@ -153,7 +153,8 @@ public class SubTimelineVC: UIViewController {
     public var lifetimeDiscountVal = 80
     public var isOpenFrom = ""
     public var isPresentSubAlertSheet = true
-
+    public var modalTransitionStyleForWebVC: UIModalTransitionStyle = .crossDissolve
+    
     public override var prefersStatusBarHidden: Bool {
         return true
     }
@@ -375,11 +376,11 @@ public class SubTimelineVC: UIViewController {
     }
     
     @IBAction func btnTermasofUse(_ sender: UIButton) {
-        self.openWebVC(titleStr:"Terms of Use".localized(), urlStr: Pod_AppTermsAnsConditionURL, customization: self.customizationWebViewData)
+        self.openWebVC(titleStr:"Terms of Use".localized(), urlStr: Pod_AppTermsAnsConditionURL, customization: self.customizationWebViewData, modalTransitionStyle: self.modalTransitionStyleForWebVC)
     }
     
     @IBAction func btnPrivacyPolicy(_ sender: UIButton) {
-        self.openWebVC(titleStr: "Privacy Policy".localized(), urlStr: Pod_AppPrivacyPolicyURL, customization: self.customizationWebViewData)
+        self.openWebVC(titleStr: "Privacy Policy".localized(), urlStr: Pod_AppPrivacyPolicyURL, customization: self.customizationWebViewData, modalTransitionStyle: self.modalTransitionStyleForWebVC)
     }
 }
 

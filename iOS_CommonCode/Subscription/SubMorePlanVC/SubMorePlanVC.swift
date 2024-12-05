@@ -124,7 +124,8 @@ public class SubMorePlanVC: UIViewController {
     public var customizationWebViewData: UICustomizationWebView?
     public var isPresentSubAlertSheet = true
     public var isOpenFrom = ""
-
+    public var modalTransitionStyleForWebVC: UIModalTransitionStyle = .crossDissolve
+    
     //MARK: -
     var arrReview: [ReviewModel] = []
     private var isFromIntial = false
@@ -565,11 +566,11 @@ extension SubMorePlanVC
     }
     
     @IBAction func btnPrivacyAction(_ sender: Any) {
-        self.openWebVC(titleStr: "Privacy Policy".localized(), urlStr: Pod_AppPrivacyPolicyURL, customization: self.customizationWebViewData)
+        self.openWebVC(titleStr: "Privacy Policy".localized(), urlStr: Pod_AppPrivacyPolicyURL, customization: self.customizationWebViewData, modalTransitionStyle: self.modalTransitionStyleForWebVC)
     }
     
     @IBAction func btnTermsAction(_ sender: Any) {
-        self.openWebVC(titleStr:"Terms of Use".localized(), urlStr: Pod_AppTermsAnsConditionURL, customization: self.customizationWebViewData)
+        self.openWebVC(titleStr:"Terms of Use".localized(), urlStr: Pod_AppTermsAnsConditionURL, customization: self.customizationWebViewData, modalTransitionStyle: self.modalTransitionStyleForWebVC)
     }
 }
 

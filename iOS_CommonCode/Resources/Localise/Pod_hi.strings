@@ -1,0 +1,125 @@
+
+//Force Update
+"Update Required" = "अपडेट आवश्यक है";
+"We've noticed that you've been using the deprecated application version for a long time. Please update to the latest version and enjoy the app." = "हमने देखा है कि आप लंबे समय से पुराने एप्लिकेशन संस्करण का उपयोग कर रहे हैं। कृपया नवीनतम संस्करण में अपडेट करें और ऐप का आनंद लें।";
+"Update" = "अपडेट करें";
+"Cancel" = "रद्द करें";
+
+//Rating
+"Enjoying the app?" = "ऐप का आनंद ले रहे हैं?";
+"Let us know by leaving a 5 star rating" = "5 स्टार रेटिंग देकर हमें बताएं";
+"Ask me later!" = "बाद में मुझसे पूछें!";
+
+//Feedback - Alert
+"Not interested?" = "दिलचस्पी नहीं है?";
+"Please share why" = "कृपया बताएं क्यों";
+"Don't know what it is" = "पता नहीं यह क्या है";
+"Too expensive" = "बहुत महंगा है";
+"I don't pay for apps" = "मैं ऐप्स के लिए भुगतान नहीं करता";
+"I need to try it first" = "मुझे पहले इसे आज़माना होगा";
+
+//Feedback - Screen
+"Feedback" = "प्रतिक्रिया";
+"Share your experience with us" = "अपना अनुभव हमारे साथ साझा करें";
+"What is your Profession?" = "आपका पेशा क्या है?";
+"Write your Suggestions" = "अपने सुझाव लिखें";
+"Submit" = "सबमिट करें";
+"Write Here..." = "यहाँ लिखें...";
+"Write Here your suggestion/Feedback..." = "यहाँ अपना सुझाव/प्रतिक्रिया लिखें...";
+"Please enter text" = "कृपया पाठ दर्ज करें";
+"Please enter your suggestions" = "कृपया अपने सुझाव दर्ज करें";
+"Feedback sent successfully" = "प्रतिक्रिया सफलतापूर्वक भेजी गई";
+"Check your internet connection" = "अपना इंटरनेट कनेक्शन जांचें";
+"Retry" = "पुनः प्रयास करें";
+"OK" = "ठीक है";
+
+//Language
+"Change Language" = "भाषा बदलें";
+
+//Timeline
+"HAVE DOUBTS?" = "संदेह है?";
+"Start with a free trial" = "निःशुल्क परीक्षण के साथ शुरू करें";
+"View All Plans" = "सभी योजनाएँ देखें";
+"NOW" = "अभी";
+"Today: Get Instant Access" = "आज: तुरंत पहुँच पाएँ";
+"Day 2: Trial Reminder" = "दिन 2: परीक्षण अनुस्मारक";
+"Day 3: Premium Begins" = "दिन 3: प्रीमियम शुरू होता है";
+"Day 5: Trial Reminder" = "दिन 5: परीक्षण अनुस्मारक";
+"Day 7: Premium Begins" = "दिन 7: प्रीमियम शुरू होता है";
+"Unlock all the features." = "सभी सुविधाएँ अनलॉक करें।";
+"Get a reminder about when your free trial will end. Cancel anytime in 15 seconds." = "अपने निःशुल्क परीक्षण के समाप्त होने के बारे में अनुस्मारक प्राप्त करें। 15 सेकंड में कभी भी रद्द करें।";
+"Your trial will convert to full price unless cancelled." = "आपका परीक्षण रद्द किए जाने तक पूर्ण मूल्य में परिवर्तित हो जाएगा।";
+
+//All Plan
+"Unlock All Features" = "सभी सुविधाएँ अनलॉक करें";
+"Best Value" = "सर्वोत्तम मूल्य";
+"Most Popular" = "सबसे लोकप्रिय";
+"Recommend" = "अनुशंसित";
+"Lifetime" = "आजीवन";
+"Yearly" = "वार्षिक";
+"Monthly" = "मासिक";
+"Weekly" = "साप्ताहिक";
+"Pay once, enjoy forever" = "एक बार भुगतान करें, हमेशा के लिए आनंद लें";
+"Enjoy forever" = "हमेशा के लिए आनंद लें";
+"OFF" = "बंद";
+"Weekly" = "साप्ताहिक";
+"Monthly" = "मासिक";
+"Yearly" = "वार्षिक";
+"by" = "द्वारा";
+
+//Sub Discount
+"Exclusive Deal" = "विशेष डील";
+"Limited Time Offer Specially For You!" = "सीमित समय के लिए विशेष ऑफर आपके लिए!";
+"Don't Miss Out!" = "इसे न चूकें!";
+"TRY NOW" = "अभी आज़माएँ";
+
+//Subscription
+"day" = "दिन";
+"days" = "दिन";
+"week" = "सप्ताह";
+"month" = "महीना";
+"year" = "वर्ष";
+"Day" = "दिन";
+"Days" = "दिन";
+"Week" = "सप्ताह";
+"Month" = "महीना";
+"Year" = "वर्ष";
+"Continue" = "जारी रखें";
+"Pay Nothing Now" = "अभी कुछ भी भुगतान न करें";
+"Cancel anytime. Secure with App Store" = "किसी भी समय रद्द करें। ऐप स्टोर के साथ सुरक्षित";
+"Restore" = "पुनर्स्थापित करें";
+"Terms of Use" = "उपयोग की शर्तें";
+"Privacy Policy" = "गोपनीयता नीति";
+"per" = "प्रति";
+"Subscription will auto-renew, Cancel anytime." = "सदस्यता स्वतः नवीनीकृत हो जाएगी, किसी भी समय रद्द करें।";
+"Start My Free Trial" = "मेरा निःशुल्क परीक्षण शुरू करें";
+"Try" = "कोशिश करें";
+"for" = "के लिए";
+"Payment is charged after" = "भुगतान के बाद शुल्क लिया जाता है";
+"cancel anytime." = "किसी भी समय रद्द करें।";
+"free" = "निःशुल्क";
+"then" = "फिर";
+"use" = "उपयोग करें";
+"upto" = "जीवन भर की खरीदारी तक";
+"Lifetime Purchase" = "किसी भी समय रद्द करें";
+"Cancel Anytime" = "दिन";
+
+//Alert
+"Sorry can't connect iTunes Store" = "क्षमा करें, iTunes स्टोर से कनेक्ट नहीं हो पा रहा";
+"OK" = "ठीक है";
+"Alert" = "चेतावनी";
+"Purchase failed or something went wrong." = "खरीदारी विफल हो गई या कुछ गलत हो गया।";
+"Check your internet connection" = "अपना इंटरनेट कनेक्शन जांचें";
+"Error" = "त्रुटि";
+"Restore failed Or Nothing to Restore First Purchase." = "पुनर्स्थापना विफल हो गई या पहली खरीद को पुनर्स्थापित करने के लिए कुछ भी नहीं।";
+
+// New Added
+"Something went wrong!" = "कुछ गलत हो गया!";
+"Purchase" = "खरीदें";
+"Trending" = "ट्रेंडिंग";
+"Save" = "सहेजें";
+"Thank You For Subscription" = "सदस्यता के लिए धन्यवाद";
+"Now you can enjoy the service!" = "अब आप सेवा का आनंद ले सकते हैं!";
+"Get Started" = "शुरू करें";
+
+"Restore Purchase" = "पुनःस्थापन क्रय";

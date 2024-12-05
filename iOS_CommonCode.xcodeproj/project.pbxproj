@@ -174,6 +174,7 @@
 		81CAB5FD2C6DF4FF0050F848 /* UIDevice+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81CAB5FC2C6DF4FF0050F848 /* UIDevice+Extension.swift */; };
 		81CAB6002C6E193E0050F848 /* OneSignal_Manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81CAB5FF2C6E193E0050F848 /* OneSignal_Manager.swift */; };
 		81CAB6022C6E20DB0050F848 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81CAB6012C6E20DB0050F848 /* UIViewController+Extension.swift */; };
+		81EDD3062D0183FA007CD7CC /* Pod_hi.strings in Resources */ = {isa = PBXBuildFile; fileRef = 81EDD3052D0183FA007CD7CC /* Pod_hi.strings */; };
 		D391513D4F19B006A2E9AF44 /* Pods_iOS_CommonCode.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06E918F9F432D213EFDB89A3 /* Pods_iOS_CommonCode.framework */; };
 /* End PBXBuildFile section */
 
@@ -363,6 +364,7 @@
 		81CAB5FC2C6DF4FF0050F848 /* UIDevice+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIDevice+Extension.swift"; sourceTree = "<group>"; };
 		81CAB5FF2C6E193E0050F848 /* OneSignal_Manager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneSignal_Manager.swift; sourceTree = "<group>"; };
 		81CAB6012C6E20DB0050F848 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
+		81EDD3052D0183FA007CD7CC /* Pod_hi.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Pod_hi.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -642,6 +644,7 @@
 		81B0F2F92CB0FF7F0014E08A /* Localise */ = {
 			isa = PBXGroup;
 			children = (
+				81EDD3052D0183FA007CD7CC /* Pod_hi.strings */,
 				81B0F3032CB0FFD40014E08A /* Pod_en.strings */,
 				81B0F3082CB0FFD40014E08A /* Pod_pt.strings */,
 				81B0F2FE2CB0FFD40014E08A /* Pod_da.strings */,
@@ -1068,6 +1071,7 @@
 				81049FBA2CC8DC5100602057 /* Avenir-Medium.ttf in Resources */,
 				81C580382CD8A7BD0027FAE3 /* ic_sub_popup_top.svg in Resources */,
 				81C580092CD8A37E0027FAE3 /* ic_shield.pdf in Resources */,
+				81EDD3062D0183FA007CD7CC /* Pod_hi.strings in Resources */,
 				81049FBB2CC8DC5100602057 /* WorkSans-Bold.ttf in Resources */,
 				81049FBC2CC8DC5100602057 /* WorkSans-Regular.ttf in Resources */,
 				81049FBD2CC8DC5100602057 /* WorkSans-SemiBold.ttf in Resources */,
