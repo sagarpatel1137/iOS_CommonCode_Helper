@@ -106,7 +106,7 @@
 
 //Alert
 "Sorry can't connect iTunes Store" = "죄송합니다. iTunes Store에 연결할 수 없습니다.";
-"OK" = "OK";
+"OK" = "확인";
 "Alert" = "알림";
 "Purchase failed or something went wrong." = "구매에 실패했거나 문제가 발생했습니다.";
 "Check your internet connection" = "인터넷 연결을 확인하세요.";

@@ -78,15 +78,12 @@ For Subscription</string>
                             </userDefinedRuntimeAttributes>
                         </label>
                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sub_thankyou_Bg" translatesAutoresizingMaskIntoConstraints="NO" id="c73-dH-ku0">
-                            <rect key="frame" x="88" y="208.66666666666666" width="217" height="341.66666666666674"/>
-                            <constraints>
-                                <constraint firstAttribute="width" secondItem="c73-dH-ku0" secondAttribute="height" multiplier="59:93" id="B0h-wf-Li5"/>
-                            </constraints>
+                            <rect key="frame" x="20" y="208.66666666666666" width="353" height="341.66666666666674"/>
                         </imageView>
                     </subviews>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <constraints>
-                        <constraint firstItem="c73-dH-ku0" firstAttribute="centerX" secondItem="ZD0-cX-a7U" secondAttribute="centerX" id="1Yt-Iu-w9b"/>
+                        <constraint firstItem="c73-dH-ku0" firstAttribute="leading" secondItem="ZD0-cX-a7U" secondAttribute="leading" constant="20" id="2HA-vU-KRW"/>
                         <constraint firstAttribute="trailing" secondItem="p31-fY-ZBL" secondAttribute="trailing" constant="20" id="EkW-W3-Ff5">
                             <variation key="heightClass=regular-widthClass=regular" constant="30"/>
                         </constraint>
@@ -101,6 +98,7 @@ For Subscription</string>
                             <variation key="heightClass=regular-widthClass=regular" constant="70"/>
                         </constraint>
                         <constraint firstItem="c73-dH-ku0" firstAttribute="height" secondItem="ZD0-cX-a7U" secondAttribute="height" multiplier="0.55" id="czH-uc-IUj"/>
+                        <constraint firstAttribute="trailing" secondItem="c73-dH-ku0" secondAttribute="trailing" constant="20" id="jOJ-Ho-EKh"/>
                         <constraint firstAttribute="trailing" secondItem="0CC-h3-f3s" secondAttribute="trailing" constant="20" id="k1L-Zf-2cX"/>
                         <constraint firstItem="0CC-h3-f3s" firstAttribute="leading" secondItem="ZD0-cX-a7U" secondAttribute="leading" constant="20" id="nCY-6e-od5"/>
                         <constraint firstItem="6RH-C7-V5C" firstAttribute="width" secondItem="p31-fY-ZBL" secondAttribute="width" id="qqB-85-PRZ"/>

@@ -106,7 +106,7 @@
 
 //Alert
 "Sorry can't connect iTunes Store" = "Lo sentimos, no puedo conectarme a iTunes Store";
-"OK" = "OK";
+"OK" = "Aceptar";
 "Alert" = "Alerta";
 "Purchase failed or something went wrong." = "La compra falló o algo salió mal.";
 "Check your internet connection" = "Verifique su conexión a Internet";

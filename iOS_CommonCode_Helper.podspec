@@ -2,7 +2,7 @@
 Pod::Spec.new do |spec|
 
 spec.name              = "iOS_CommonCode_Helper"
-spec.version           = "2.0.3"
+spec.version           = "2.0.4"
 spec.summary           = "CommonCode Code iOS"
 spec.description       = <<-DESC
 Common Code for Vasundhara iOS App Developing.
