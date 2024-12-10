@@ -680,7 +680,7 @@ extension GoogleAd_Manager : GADBannerViewDelegate
     
     public func bannerView(_ bannerView: GADBannerView, didFailToReceiveAdWithError error: Error) {
         isRequeSendForLoad_BannerAd = false
-        load_BannerAd()
+//        load_BannerAd()
     }
 }
 

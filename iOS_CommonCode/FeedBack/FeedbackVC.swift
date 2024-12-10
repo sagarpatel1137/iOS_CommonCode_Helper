@@ -26,6 +26,7 @@ public struct UICustomizationFeedback {
     public var shareExperienceText: String?
     public var shareExperienceFont: UIFont?
     public var shareExperienceTextColor: UIColor?
+    public var textViewBgColor: UIColor?
     public var whyUseText: String?
     public var whyUsePlaceholderText: String?
     public var whyUseTextFont: UIFont?
@@ -60,7 +61,7 @@ public struct UICustomizationFeedback {
     public var btnContinueImageiPad: UIImage?
     public var viewShadowColor: UIColor?
     
-    public init(viewMainColor: UIColor? = nil, navigationBarHeight: CGFloat? = nil, backButtonWidth: CGFloat? = nil,  navigationBarBackground: UIColor? = nil, isNeedToAddBorderInField: Bool? = nil, whyUseTextFieldColor: UIColor? = nil ,isShowNavigationBarShadow: Bool? = nil, attributedPlaceholder: NSAttributedString? = nil, placeholderColor: UIColor? = nil,titleTextAlignment: NSTextAlignment? = nil ,titleText: String? = nil, titleTextFont: UIFont? = nil, titleTextColor: UIColor? = nil, backButtonImage: UIImage? = nil, placeholderButtonImage: UIImage? = nil, shareExperienceText: String? = nil, shareExperienceFont: UIFont? = nil, shareExperienceTextColor: UIColor? = nil, whyUseText: String? = nil, whyUsePlaceholderText: String? = nil, whyUseTextFont: UIFont? = nil, whyUseTextFontTextfield: UIFont? = nil, whyUseTextColor: UIColor? = nil, suggestionText: String? = nil, suggestionPlaceholderText: String? = nil, suggestionTextFont: UIFont? = nil, suggestionTextFontTextfield: UIFont? = nil, suggestionTextColor: UIColor? = nil, limitTextFont: UIFont? = nil, limitTextColor: UIColor? = nil, submitText: String? = nil, submitTextFont: UIFont? = nil, submitTextColor: UIColor? = nil, viewSeparatorColor: UIColor? = nil, borderSepratorHeight: CGFloat? = nil, btnBackLeading: CGFloat? = nil, imageEdgeInsets: UIEdgeInsets? = nil, buttonBGType: FeedbackButtonBGType = .image,btnContinueSolidColor: UIColor? = nil, btnContinueFromColor: UIColor? = nil, btnContinueToColor: UIColor? = nil , btnContinueImageiPhone: UIImage? = nil, btnContinueImageiPad: UIImage? = nil, viewShadowColor: UIColor? = nil) {
+    public init(viewMainColor: UIColor? = nil, navigationBarHeight: CGFloat? = nil, backButtonWidth: CGFloat? = nil,  navigationBarBackground: UIColor? = nil, isNeedToAddBorderInField: Bool? = nil, whyUseTextFieldColor: UIColor? = nil ,isShowNavigationBarShadow: Bool? = nil, attributedPlaceholder: NSAttributedString? = nil, placeholderColor: UIColor? = nil,titleTextAlignment: NSTextAlignment? = nil ,titleText: String? = nil, titleTextFont: UIFont? = nil, titleTextColor: UIColor? = nil, backButtonImage: UIImage? = nil, placeholderButtonImage: UIImage? = nil, shareExperienceText: String? = nil, shareExperienceFont: UIFont? = nil, shareExperienceTextColor: UIColor? = nil, textViewBgColor: UIColor? = nil, whyUseText: String? = nil, whyUsePlaceholderText: String? = nil, whyUseTextFont: UIFont? = nil, whyUseTextFontTextfield: UIFont? = nil, whyUseTextColor: UIColor? = nil, suggestionText: String? = nil, suggestionPlaceholderText: String? = nil, suggestionTextFont: UIFont? = nil, suggestionTextFontTextfield: UIFont? = nil, suggestionTextColor: UIColor? = nil, limitTextFont: UIFont? = nil, limitTextColor: UIColor? = nil, submitText: String? = nil, submitTextFont: UIFont? = nil, submitTextColor: UIColor? = nil, viewSeparatorColor: UIColor? = nil, borderSepratorHeight: CGFloat? = nil, btnBackLeading: CGFloat? = nil, imageEdgeInsets: UIEdgeInsets? = nil, buttonBGType: FeedbackButtonBGType = .image,btnContinueSolidColor: UIColor? = nil, btnContinueFromColor: UIColor? = nil, btnContinueToColor: UIColor? = nil , btnContinueImageiPhone: UIImage? = nil, btnContinueImageiPad: UIImage? = nil, viewShadowColor: UIColor? = nil) {
         self.viewMainColor = viewMainColor
         self.navigationBarHeight = navigationBarHeight
         self.backButtonWidth = backButtonWidth
@@ -70,6 +71,7 @@ public struct UICustomizationFeedback {
         self.isShowNavigationBarShadow = isShowNavigationBarShadow ?? true
         self.attributedPlaceholder = attributedPlaceholder
         self.placeholderColor = placeholderColor
+        self.textViewBgColor = textViewBgColor
         self.titleTextAlignment = titleTextAlignment
         self.titleText = titleText ?? "Feedback"
         self.titleTextFont = titleTextFont ?? setCustomFont_WithoutRatio(name: .PlusJakartaSans_ExtraBold, iPhoneSize: 17, iPadSize: 22)
@@ -264,6 +266,10 @@ public class FeedbackVC: UIViewController {
             self.suggestionView.layer.borderWidth = 1.0
             self.suggestionView.layer.borderColor = hexStringToUIColor(hex: "595F91").cgColor
             self.suggestionView.backgroundColor = hexStringToUIColor(hex: "2A2C3E")
+        }
+        if let bgColor = customization.textViewBgColor {
+            self.whyUseView.backgroundColor = bgColor
+            self.suggestionView.backgroundColor = bgColor
         }
         if let attributedPlaceholder = customization.attributedPlaceholder {
             whyUseTextField.attributedPlaceholder = attributedPlaceholder
