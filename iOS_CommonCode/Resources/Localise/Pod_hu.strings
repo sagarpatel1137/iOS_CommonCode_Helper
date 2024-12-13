@@ -1,0 +1,124 @@
+
+//Force Update
+"Update Required" = "Frissítés szükséges";
+"We've noticed that you've been using the deprecated application version for a long time. Please update to the latest version and enjoy the app." = "Észrevettük, hogy már régóta az elavult alkalmazásverziót használja. Kérjük, frissítsen a legújabb verzióra, és élvezze az alkalmazást.";
+"Update" = "Frissítés";
+"Cancel" = "Mégsem";
+
+//Rating
+"Enjoying the app?" = "Élvezed az alkalmazást?";
+"Let us know by leaving a 5 star rating" = "Értesítsen minket 5 csillagos értékeléssel";
+"Ask me later!" = "Kérdezz később!";
+
+//Feedback - Alert
+"Not interested?" = "Nem érdekel?";
+"Please share why" = "Kérlek oszd meg miért";
+"Don't know what it is" = "Nem tudom, mi az";
+"Too expensive" = "Túl drága";
+"I don't pay for apps" = "Nem fizetek az alkalmazásokért";
+"I need to try it first" = "Először ki kell próbálnom";
+
+//Feedback - Screen
+"Feedback" = "Visszacsatolás";
+"Share your experience with us" = "Ossza meg velünk tapasztalatait";
+"What is your Profession?" = "Mi a szakmád?";
+"Write your Suggestions" = "Írja meg javaslatait";
+"Submit" = "Beküld";
+"Write Here..." = "Írj ide...";
+"Write Here your suggestion/Feedback..." = "Írja ide javaslatát/visszajelzését...";
+"Please enter text" = "Kérjük, írjon be szöveget";
+"Please enter your suggestions" = "Kérjük, adja meg javaslatait";
+"Feedback sent successfully" = "A visszajelzés sikeresen elküldve";
+"Check your internet connection" = "Ellenőrizze az internetkapcsolatot";
+"Retry" = "Próbálja újra";
+"OK" = "RENDBEN";
+
+//Language
+"Change Language" = "Nyelv módosítása";
+
+//Timeline
+"HAVE DOUBTS?" = "VAN KÉTSÉGEI?";
+"Start with a free trial" = "Kezdje egy ingyenes próbaverzióval";
+"View All Plans" = "Az összes terv megtekintése";
+"NOW" = "JELENLEG";
+"Today: Get Instant Access" = "Még ma: Azonnali hozzáférés";
+"Day 2: Trial Reminder" = "2. nap: Próbaemlékeztető";
+"Day 3: Premium Begins" = "3. nap: A prémium kezdete";
+"Day 5: Trial Reminder" = "5. nap: Próbaemlékeztető";
+"Day 7: Premium Begins" = "7. nap: A prémium kezdete";
+"Unlock all the features." = "Oldja fel az összes funkciót.";
+"Get a reminder about when your free trial will end. Cancel anytime in 15 seconds." = "Kérjen emlékeztetőt az ingyenes próbaidőszak lejártáról. Bármikor lemondható 15 másodpercen belül.";
+"Your trial will convert to full price unless cancelled." = "A próbaidőszak teljes árúvá válik, hacsak le nem mondják.";
+
+//All Plan
+"Unlock All Features" = "Oldja fel az összes szolgáltatást";
+"Best Value" = "Legjobb érték";
+"Most Popular" = "Legnépszerűbb";
+"Recommend" = "Ajánlom";
+"Lifetime" = "Élettartam";
+"Yearly" = "Évi";
+"Monthly" = "Havi";
+"Weekly" = "Heti";
+"Pay once, enjoy forever" = "Fizessen egyszer, élvezze örökké";
+"Enjoy forever" = "Élvezze örökké";
+"OFF" = "LE";
+"Weekly" = "Heti";
+"Monthly" = "Havi";
+"Yearly" = "Évi";
+"by" = "által";
+
+//Sub Discount
+"Exclusive Deal" = "Exkluzív ajánlat";
+"Limited Time Offer Specially For You!" = "Korlátozott idejű ajánlat kifejezetten Önnek!";
+"Don't Miss Out!" = "Ne maradj le!";
+"TRY NOW" = "PRÓBÁLJA MEG";
+
+//Subscription
+"day" = "nap";
+"days" = "napokon";
+"week" = "hét";
+"month" = "hónap";
+"year" = "év";
+"Day" = "Nap";
+"Days" = "Napok";
+"Week" = "Hét";
+"Month" = "Hónap";
+"Year" = "Év";
+"Continue" = "Folytatás";
+"Pay Nothing Now" = "Most ne fizessen semmit";
+"Cancel anytime. Secure with App Store" = "Bármikor lemondhatja. Biztonságos az App Store segítségével";
+"Restore" = "Visszaállítás";
+"Terms of Use" = "Felhasználási feltételek";
+"Privacy Policy" = "Adatvédelmi szabályzat";
+"per" = "per";
+"Subscription will auto-renew, Cancel anytime." = "Az előfizetés automatikusan megújul, bármikor lemondható.";
+"Start My Free Trial" = "Indítsa el az ingyenes próbaverziómat";
+"Try" = "Megpróbál";
+"for" = "számára";
+"Payment is charged after" = "A fizetés után kerül felszámításra";
+"cancel anytime." = "bármikor lemondhatja.";
+"free" = "ingyenes";
+"then" = "majd";
+"use" = "használat";
+"upto" = "ig";
+"Lifetime Purchase" = "Élettartamra szóló vásárlás";
+"Cancel Anytime" = "Bármikor lemondhatja";
+
+//Alert
+"Sorry can't connect iTunes Store" = "Sajnos nem lehet csatlakozni az iTunes Store-hoz";
+"Alert" = "Éber";
+"Purchase failed or something went wrong." = "A vásárlás sikertelen, vagy valami elromlott.";
+"Check your internet connection" = "Ellenőrizze az internetkapcsolatot";
+"Error" = "Hiba";
+"Restore failed Or Nothing to Restore First Purchase." = "A visszaállítás sikertelen vagy semmi az első vásárlás visszaállításához.";
+
+// New Added
+"Something went wrong!" = "Valami elromlott!";
+"Purchase" = "Vásárlás";
+"Trending" = "Felkapott";
+"Save" = "Megtakarítás";
+"Thank You For Subscription" = "Köszönjük az előfizetést";
+"Now you can enjoy the service!" = "Most már élvezheti a szolgáltatást!";
+"Get Started" = "Kezdje el";
+
+"Restore Purchase" = "Vásárlás visszaállítása";

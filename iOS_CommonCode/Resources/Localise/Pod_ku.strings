@@ -1,0 +1,124 @@
+
+//Force Update
+"Update Required" = "Nûvekirin Pêdivî ye";
+"We've noticed that you've been using the deprecated application version for a long time. Please update to the latest version and enjoy the app." = "Me ferq kir ku we demek dirêj guhertoya serîlêdanê ya nepenî bikar tîne. Ji kerema xwe guhertoya herî dawî nûve bikin û ji sepanê kêfê bikin.";
+"Update" = "Rojanekirin";
+"Cancel" = "Bişûndekirin";
+
+//Rating
+"Enjoying the app?" = "Ma hûn ji sepanê kêfxweş dibin?";
+"Let us know by leaving a 5 star rating" = "Bi hiştina nirxek 5 stêrk bi me bidin zanîn";
+"Ask me later!" = "Paşê ji min bipirse!";
+
+//Feedback - Alert
+"Not interested?" = "Ne eleqedar in?";
+"Please share why" = "Ji kerema xwe çima parve bikin";
+"Don't know what it is" = "Nizanim çi ye";
+"Too expensive" = "Pir biha";
+"I don't pay for apps" = "Ez ji bo sepanan pere nadim";
+"I need to try it first" = "Divê ez pêşî biceribînim";
+
+//Feedback - Screen
+"Feedback" = "Feedback";
+"Share your experience with us" = "Tecrûbeya xwe bi me re parve bikin";
+"What is your Profession?" = "Karê te çi ye?";
+"Write your Suggestions" = "Pêşniyarên xwe binivîsin";
+"Submit" = "Nermijîn";
+"Write Here..." = "Li vir binivîse ...";
+"Write Here your suggestion/Feedback..." = "Pêşniyara/Bersiva xwe li vir binivîsin...";
+"Please enter text" = "Ji kerema xwe nivîsê binivîse";
+"Please enter your suggestions" = "Ji kerema xwe pêşniyarên xwe binivîse";
+"Feedback sent successfully" = "Bersiv bi serkeftî hat şandin";
+"Check your internet connection" = "Pêwendiya xweya înternetê kontrol bikin";
+"Retry" = "Ji nû ve biceribîne";
+"OK" = "OK";
+
+//Language
+"Change Language" = "Ziman biguherînin";
+
+//Timeline
+"HAVE DOUBTS?" = "GUMAN HENE?";
+"Start with a free trial" = "Bi ceribandinek belaş dest pê bikin";
+"View All Plans" = "Hemî Planan Binêre";
+"NOW" = "NIHA";
+"Today: Get Instant Access" = "Îro: Gihîştina Tavilê bistînin";
+"Day 2: Trial Reminder" = "Roja 2: Bîranîna Dadgehê";
+"Day 3: Premium Begins" = "Roja 3: Premium Dest pê dike";
+"Day 5: Trial Reminder" = "Roja 5: Bîranîna Dadgehê";
+"Day 7: Premium Begins" = "Roja 7: Premium Dest pê dike";
+"Unlock all the features." = "Hemî taybetmendiyan vekin.";
+"Get a reminder about when your free trial will end. Cancel anytime in 15 seconds." = "Di derbarê kengê ceribandina weya belaş dê biqede bîranînek bistînin. Di 15 çirkeyan de her dem betal bikin.";
+"Your trial will convert to full price unless cancelled." = "Heya ku neyê betal kirin ceribandina we dê bibe bihayê tevahî.";
+
+//All Plan
+"Unlock All Features" = "Hemî Taybetmendiyan vekin";
+"Best Value" = "Best Value";
+"Most Popular" = "Herî Popular";
+"Recommend" = "Pêşnîyarkirin";
+"Lifetime" = "Lifetime";
+"Yearly" = "Salane";
+"Monthly" = "Mehane";
+"Weekly" = "Heftane";
+"Pay once, enjoy forever" = "Carekê bidin, her û her kêfê bikin";
+"Enjoy forever" = "Enjoy her û her";
+"OFF" = "JI";
+"Weekly" = "Heftane";
+"Monthly" = "Mehane";
+"Yearly" = "Salane";
+"by" = "ji";
+
+//Sub Discount
+"Exclusive Deal" = "Deal Exclusive";
+"Limited Time Offer Specially For You!" = "Pêşniyara Demjimêra Bisînor Bi taybetî Ji bo We!";
+"Don't Miss Out!" = "Ji dest nede!";
+"TRY NOW" = "NIHA biceribîne";
+
+//Subscription
+"day" = "roj";
+"days" = "rojan";
+"week" = "hefte";
+"month" = "meh";
+"year" = "sal";
+"Day" = "Roj";
+"Days" = "Days";
+"Week" = "Hefte";
+"Month" = "Meh";
+"Year" = "Sal";
+"Continue" = "Berdewamkirin";
+"Pay Nothing Now" = "Naha Tiştek Nadin";
+"Cancel anytime. Secure with App Store" = "Her dem betal bike. Bi App Store re ewleh bikin";
+"Restore" = "Nûvdekirin";
+"Terms of Use" = "Mercên Bikaranînê";
+"Privacy Policy" = "Privacy Policy";
+"per" = "her";
+"Subscription will auto-renew, Cancel anytime." = "Abonet dê bixweber nûve bike, her dem betal bike.";
+"Start My Free Trial" = "Doza Min a Belaş dest pê bikin";
+"Try" = "Bazarkirin";
+"for" = "bo";
+"Payment is charged after" = "Dûv re pere tê dayîn";
+"cancel anytime." = "her dem betal bike.";
+"free" = "belaş";
+"then" = "paşan";
+"use" = "bikaranîn";
+"upto" = "heta";
+"Lifetime Purchase" = "Kirîna Lifetime";
+"Cancel Anytime" = "Her dem betal bike";
+
+//Alert
+"Sorry can't connect iTunes Store" = "Mixabin nikare iTunes Store ve girêbide";
+"Alert" = "Hişyar";
+"Purchase failed or something went wrong." = "Kirîn têk çû an tiştek xelet çû.";
+"Check your internet connection" = "Pêwendiya xweya înternetê kontrol bikin";
+"Error" = "Şaşî";
+"Restore failed Or Nothing to Restore First Purchase." = "Vegerandin têk çû An Tiştek ku Kirîna Yekem Vegerîne.";
+
+// New Added
+"Something went wrong!" = "Tiştek xelet derket!";
+"Purchase" = "Kirrîn";
+"Trending" = "Trending";
+"Save" = "Rizgarkirin";
+"Thank You For Subscription" = "Ji bo Tevlêbûnê Spas dikim";
+"Now you can enjoy the service!" = "Niha hûn dikarin karûbarê xweş bikin!";
+"Get Started" = "Dest pê bike";
+
+"Restore Purchase" = "Restore Kirînê";

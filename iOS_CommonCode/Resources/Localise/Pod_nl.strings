@@ -1,0 +1,124 @@
+
+//Force Update
+"Update Required" = "Update vereist";
+"We've noticed that you've been using the deprecated application version for a long time. Please update to the latest version and enjoy the app." = "We hebben gemerkt dat u al lange tijd de verouderde versie van de applicatie gebruikt. Werk bij naar de nieuwste versie en geniet van de app.";
+"Update" = "Update";
+"Cancel" = "Annuleren";
+
+//Rating
+"Enjoying the app?" = "Vindt u de app leuk?";
+"Let us know by leaving a 5 star rating" = "Laat het ons weten door een beoordeling van 5 sterren achter te laten";
+"Ask me later!" = "Vraag het me later!";
+
+//Feedback - Alert
+"Not interested?" = "Geen interesse?";
+"Please share why" = "Geef aan waarom";
+"Don't know what it is" = "Weet niet wat het is";
+"Too expensive" = "Te duur";
+"I don't pay for apps" = "Ik betaal niet voor apps";
+"I need to try it first" = "Ik moet het eerst proberen";
+
+//Feedback - Screen
+"Feedback" = "Feedback";
+"Share your experience with us" = "Deel uw ervaring met ons";
+"What is your Profession?" = "Wat is uw beroep?";
+"Write your Suggestions" = "Schrijf uw suggesties";
+"Submit" = "Verzenden";
+"Write Here..." = "Schrijf hier...";
+"Write Here your suggestion/Feedback..." = "Schrijf hier uw suggestie/feedback...";
+"Please enter text" = "Voer tekst in";
+"Please enter your suggestions" = "Voer uw suggesties in";
+"Feedback sent successfully" = "Feedback succesvol verzonden";
+"Check your internet connection" = "Controleer uw internetverbinding";
+"Retry" = "Opnieuw proberen";
+"OK" = "OK";
+
+//Language
+"Change Language" = "Taal wijzigen";
+
+//Timeline
+"HAVE DOUBTS?" = "TWIJFELT?";
+"Start with a free trial" = "Start met een gratis proefperiode";
+"View All Plans" = "Bekijk alle abonnementen";
+"NOW" = "NU";
+"Today: Get Instant Access" = "Vandaag: krijg direct toegang";
+"Day 2: Trial Reminder" = "Dag 2: herinnering proefperiode";
+"Day 3: Premium Begins" = "Dag 3: Premium begint";
+"Day 5: Trial Reminder" = "Dag 5: herinnering proefperiode";
+"Day 7: Premium Begins" = "Dag 7: Premium begint";
+"Unlock all the features." = "Ontgrendel alle functies. Ontvang een herinnering over wanneer uw gratis proefperiode afloopt. Annuleer op elk gewenst moment binnen 15 seconden.";
+"Get a reminder about when your free trial will end. Cancel anytime in 15 seconds." = "Uw proefperiode wordt omgezet naar de volledige prijs, tenzij geannuleerd.";
+"Your trial will convert to full price unless cancelled." = "Ontgrendel alle functies";
+
+//All Plan
+"Unlock All Features" = "Beste waarde";
+"Best Value" = "Meest populair";
+"Most Popular" = "Aanbevelen";
+"Recommend" = "Levenslang";
+"Lifetime" = "Jaarlijks";
+"Yearly" = "Maandelijks";
+"Monthly" = "Wekelijks";
+"Weekly" = "Betaal eenmalig, geniet voor altijd";
+"Pay once, enjoy forever" = "Geniet voor altijd";
+"Enjoy forever" = "KORTING";
+"OFF" = "Wekelijks";
+"Weekly" = "Maandelijks";
+"Monthly" = "Jaarlijks";
+"Yearly" = "by";
+"by" = "Exclusieve deal";
+
+//Sub Discount
+"Exclusive Deal" = "Tijdelijke aanbieding speciaal voor u!";
+"Limited Time Offer Specially For You!" = "Mis het niet!";
+"Don't Miss Out!" = "PROBEER NU";
+"TRY NOW" = "dag";
+
+//Subscription
+"day" = "dagen";
+"days" = "week";
+"week" = "maand";
+"month" = "jaar";
+"year" = "Dag";
+"Day" = "Dagen";
+"Days" = "Week";
+"Week" = "Maand";
+"Month" = "Jaar";
+"Year" = "Doorgaan";
+"Continue" = "Betaal nu niets";
+"Pay Nothing Now" = "Annuleer op elk gewenst moment. Beveiligd met App Store";
+"Cancel anytime. Secure with App Store" = "Herstellen";
+"Restore" = "Gebruiksvoorwaarden";
+"Terms of Use" = "Privacybeleid";
+"Privacy Policy" = "per";
+"per" = "Abonnement wordt automatisch verlengd, annuleer op elk gewenst moment.";
+"Subscription will auto-renew, Cancel anytime." = "Start mijn gratis proefperiode";
+"Start My Free Trial" = "Proberen";
+"Try" = "voor";
+"for" = "Betaling wordt in rekening gebracht na";
+"Payment is charged after" = "annuleer op elk gewenst moment.";
+"cancel anytime." = "gratis";
+"free" = "dan";
+"then" = "gebruik";
+"use" = "tot";
+"upto" = "Levenslange aankoop";
+"Lifetime Purchase" = "Annuleer op elk gewenst moment";
+"Cancel Anytime" = "Sorry, kan iTunes Store niet verbinden";
+
+//Alert
+"Sorry can't connect iTunes Store" = "Waarschuwing";
+"Alert" = "Aankoop mislukt of er is iets misgegaan.";
+"Purchase failed or something went wrong." = "Controleer uw internetverbinding";
+"Check your internet connection" = "Fout";
+"Error" = "Herstellen mislukt of niets om te herstellen Eerste aankoop.";
+"Restore failed Or Nothing to Restore First Purchase." = "Er is iets misgegaan!";
+
+// New Added
+"Something went wrong!" = "Aankoop";
+"Purchase" = "Trending";
+"Trending" = "Opslaan";
+"Save" = "Bedankt voor uw abonnement";
+"Thank You For Subscription" = "Nu kunt u genieten van de service!";
+"Now you can enjoy the service!" = "Aan de slag";
+"Get Started" = "Aankoop herstellen";
+
+"Restore Purchase" = "Update vereist";

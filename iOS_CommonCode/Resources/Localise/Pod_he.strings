@@ -1,0 +1,124 @@
+
+//Force Update
+"Update Required" = "נדרש עדכון";
+"We've noticed that you've been using the deprecated application version for a long time. Please update to the latest version and enjoy the app." = "שמנו לב שאתה משתמש בגרסת היישום שהוצאה משימוש במשך זמן רב. אנא עדכן לגרסה העדכנית ביותר ותהנה מהאפליקציה.";
+"Update" = "לְעַדְכֵּן";
+"Cancel" = "לְבַטֵל";
+
+//Rating
+"Enjoying the app?" = "נהנה מהאפליקציה?";
+"Let us know by leaving a 5 star rating" = "ספר לנו על ידי השארת דירוג 5 כוכבים";
+"Ask me later!" = "תשאל אותי אחר כך!";
+
+//Feedback - Alert
+"Not interested?" = "לא מעוניין?";
+"Please share why" = "אנא שתפו מדוע";
+"Don't know what it is" = "לא יודע מה זה";
+"Too expensive" = "יקר מדי";
+"I don't pay for apps" = "אני לא משלם על אפליקציות";
+"I need to try it first" = "אני צריך לנסות את זה קודם";
+
+//Feedback - Screen
+"Feedback" = "מָשׁוֹב";
+"Share your experience with us" = "שתף אותנו בחוויה שלך";
+"What is your Profession?" = "מה המקצוע שלך?";
+"Write your Suggestions" = "כתוב את ההצעות שלך";
+"Submit" = "לְהַגִישׁ";
+"Write Here..." = "כתבו כאן...";
+"Write Here your suggestion/Feedback..." = "כתוב כאן את ההצעה/משוב שלך...";
+"Please enter text" = "נא להזין טקסט";
+"Please enter your suggestions" = "אנא הכנס את ההצעות שלך";
+"Feedback sent successfully" = "המשוב נשלח בהצלחה";
+"Check your internet connection" = "בדוק את חיבור האינטרנט שלך";
+"Retry" = "נסה שוב";
+"OK" = "בְּסֵדֶר";
+
+//Language
+"Change Language" = "שנה שפה";
+
+//Timeline
+"HAVE DOUBTS?" = "לְהִתְלַבֵּט?";
+"Start with a free trial" = "התחל עם ניסיון חינם";
+"View All Plans" = "הצג את כל התוכניות";
+"NOW" = "עַכשָׁיו";
+"Today: Get Instant Access" = "היום: קבל גישה מיידית";
+"Day 2: Trial Reminder" = "יום 2: תזכורת לניסיון";
+"Day 3: Premium Begins" = "יום 3: פרימיום מתחיל";
+"Day 5: Trial Reminder" = "יום 5: תזכורת לניסיון";
+"Day 7: Premium Begins" = "יום 7: פרימיום מתחיל";
+"Unlock all the features." = "בטל את הנעילה של כל התכונות.";
+"Get a reminder about when your free trial will end. Cancel anytime in 15 seconds." = "קבל תזכורת לגבי מתי תסתיים תקופת הניסיון בחינם שלך. בטל בכל עת תוך 15 שניות.";
+"Your trial will convert to full price unless cancelled." = "תקופת הניסיון שלך תומר למחיר מלא אלא אם תבוטל.";
+
+//All Plan
+"Unlock All Features" = "בטל את הנעילה של כל התכונות";
+"Best Value" = "התמורה הטובה ביותר";
+"Most Popular" = "הכי פופולרי";
+"Recommend" = "לְהַמלִיץ";
+"Lifetime" = "מֶשֶׁך הָחַיִים";
+"Yearly" = "שְׁנָתִי";
+"Monthly" = "יַרחוֹן";
+"Weekly" = "שְׁבוּעִי";
+"Pay once, enjoy forever" = "שלם פעם אחת, תהנה לנצח";
+"Enjoy forever" = "תהנה לנצח";
+"OFF" = "כבוי";
+"Weekly" = "שְׁבוּעִי";
+"Monthly" = "יַרחוֹן";
+"Yearly" = "שְׁנָתִי";
+"by" = "עַל יְדֵי";
+
+//Sub Discount
+"Exclusive Deal" = "עסקה בלעדית";
+"Limited Time Offer Specially For You!" = "מבצע לזמן מוגבל במיוחד בשבילך!";
+"Don't Miss Out!" = "אל תפספסו!";
+"TRY NOW" = "נסה עכשיו";
+
+//Subscription
+"day" = "יְוֹם";
+"days" = "ימים";
+"week" = "שָׁבוּעַ";
+"month" = "חוֹדֶשׁ";
+"year" = "שָׁנָה";
+"Day" = "יְוֹם";
+"Days" = "ימים";
+"Week" = "שָׁבוּעַ";
+"Month" = "חוֹדֶשׁ";
+"Year" = "שָׁנָה";
+"Continue" = "לְהַמשִׁיך";
+"Pay Nothing Now" = "לא לשלם כלום עכשיו";
+"Cancel anytime. Secure with App Store" = "בטל בכל עת. מאובטח עם App Store";
+"Restore" = "לְשַׁחְזֵר";
+"Terms of Use" = "תנאי שימוש";
+"Privacy Policy" = "מדיניות פרטיות";
+"per" = "לְכָל";
+"Subscription will auto-renew, Cancel anytime." = "המנוי יתחדש אוטומטית, יבטל בכל עת.";
+"Start My Free Trial" = "התחל את תקופת הניסיון בחינם שלי";
+"Try" = "לְנַסוֹת";
+"for" = "עֲבוּר";
+"Payment is charged after" = "התשלום נגבה לאחר";
+"cancel anytime." = "לבטל בכל עת.";
+"free" = "לְשַׁחְרֵר";
+"then" = "אָז";
+"use" = "לְהִשְׁתַמֵשׁ";
+"upto" = "עד";
+"Lifetime Purchase" = "רכישה לכל החיים";
+"Cancel Anytime" = "בטל בכל עת";
+
+//Alert
+"Sorry can't connect iTunes Store" = "מצטער לא יכול לחבר את iTunes Store";
+"Alert" = "עֵרָנִי";
+"Purchase failed or something went wrong." = "הרכישה נכשלה או שמשהו השתבש.";
+"Check your internet connection" = "בדוק את חיבור האינטרנט שלך";
+"Error" = "שְׁגִיאָה";
+"Restore failed Or Nothing to Restore First Purchase." = "השחזור נכשל או שום דבר כדי לשחזר רכישה ראשונה.";
+
+// New Added
+"Something went wrong!" = "משהו השתבש!";
+"Purchase" = "לִרְכּוֹשׁ";
+"Trending" = "מגמות";
+"Save" = "לְהַצִיל";
+"Thank You For Subscription" = "תודה על המנוי";
+"Now you can enjoy the service!" = "עכשיו אתה יכול ליהנות מהשירות!";
+"Get Started" = "התחל";
+
+"Restore Purchase" = "שחזר רכישה";

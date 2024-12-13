@@ -61,11 +61,11 @@
 "Weekly" = "Settimanale";
 "Pay once, enjoy forever" = "Paga una volta, goditi per sempre";
 "Enjoy forever" = "Goditi per sempre";
-"OFF" = "OFF";
+"OFF" = "SPENTO";
 "Weekly" = "Settimanale";
 "Monthly" = "Mensile";
 "Yearly" = "Annuale";
-"by" = "by";
+"by" = "di";
 
 //Sub Discount
 "Exclusive Deal" = "Offerta esclusiva";

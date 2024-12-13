@@ -222,13 +222,13 @@ extension UIViewController
                 self.present(subAllPlanVC, animated: true, completion: nil)
             } else {
                 if Reachability_Manager.isConnectedToNetwork() {
-                    self.view.makeToast("Something went to wrong..!".localized(), duration: 4.0)
+                    self.view.makeToast_Pod("Something went to wrong..!".localized(), duration: 4.0)
                     completionMorePlan(.unknown, nil)
                     if !SubscriptionConst.isGet {
                         RevenueCat_Manager.shared.GetAllAvailablePackages { (state, error) in }
                     }
                 } else {
-                    self.view.makeToast("Please Check Internet Connection".localized(), duration: 4.0)
+                    self.view.makeToast_Pod("Please Check Internet Connection".localized(), duration: 4.0)
                     completionMorePlan(.unknown, nil)
                 }
             }
@@ -277,13 +277,13 @@ extension UIViewController
                 self.present(subAllPlanVC, animated: true, completion: nil)
             } else {
                 if Reachability_Manager.isConnectedToNetwork() {
-                    self.view.makeToast("Something went to wrong..!".localized(), duration: 4.0)
+                    self.view.makeToast_Pod("Something went to wrong..!".localized(), duration: 4.0)
                     completionAllPlan(.unknown, nil)
                     if !SubscriptionConst.isGet {
                         RevenueCat_Manager.shared.GetAllAvailablePackages { (state, error) in }
                     }
                 } else {
-                    self.view.makeToast("Please Check Internet Connection".localized(), duration: 4.0)
+                    self.view.makeToast_Pod("Please Check Internet Connection".localized(), duration: 4.0)
                     completionAllPlan(.unknown, nil)
                 }
             }
@@ -308,13 +308,13 @@ extension UIViewController
             self.present(vc, animated: true, completion: nil)
         } else {
             if Reachability_Manager.isConnectedToNetwork() {
-                self.view.makeToast("Something went to wrong..!".localized(), duration: 4.0)
+                self.view.makeToast_Pod("Something went to wrong..!".localized(), duration: 4.0)
                 completionDiscount(.unknown, nil)
                 if !SubscriptionConst.isGet {
                     RevenueCat_Manager.shared.GetAllAvailablePackages { (state, error) in }
                 }
             } else {
-                self.view.makeToast("Please Check Internet Connection".localized(), duration: 4.0)
+                self.view.makeToast_Pod("Please Check Internet Connection".localized(), duration: 4.0)
                 completionDiscount(.unknown, nil)
             }
         }

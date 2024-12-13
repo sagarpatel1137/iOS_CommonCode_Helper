@@ -114,6 +114,7 @@ public class FeedbackVC: UIViewController {
     
     // MARK: - Outlet
     @IBOutlet weak var scrollFeedback: UIScrollView!
+    @IBOutlet weak var viewShadow: UIView!
     @IBOutlet weak var viewNavBar: UIView!
     @IBOutlet weak var btnBack: UIButton!
     @IBOutlet weak var imgPlaceholder: UIImageView!
@@ -178,7 +179,7 @@ public class FeedbackVC: UIViewController {
         
         if customization.isShowNavigationBarShadow ?? true {
             DispatchQueue.main.async {
-                self.viewNavBar.addBottomViewShadow(shadowColorWithAlpha: self.customization.viewShadowColor!)
+                self.viewShadow.addBottomViewShadow(shadowColorWithAlpha: self.customization.viewShadowColor!)
             }
         }
         addKeyboardObservers()
@@ -321,9 +322,9 @@ extension FeedbackVC {
     
     @IBAction func submitButtonClicked(_ sender: UIButton) {
         if (whyUseTextField.text?.trimmed().isEmpty ?? false) {
-            self.view.makeToast("Please enter text".localized(), position: .center)
+            self.view.makeToast_Pod("Please enter text".localized(), position: .center)
         } else if (suggetionTextView.text.trimmed().isEmpty) {
-            self.view.makeToast("Please enter your suggestions".localized(), position: .center)
+            self.view.makeToast_Pod("Please enter your suggestions".localized(), position: .center)
         } else {
             if Reachability_Manager.isConnectedToNetwork() {
                 
@@ -336,14 +337,14 @@ extension FeedbackVC {
                     
                     if success {
                         DispatchQueue.main.async {
-                            self.view.makeToast("Feedback sent successfully".localized(), position: .center)
+                            self.view.makeToast_Pod("Feedback sent successfully".localized(), position: .center)
                             DispatchQueue.main.asyncAfter(deadline: .now()+1) {
                                 self.dismiss(animated: true)
                             }
                         }
                     } else {
                         DispatchQueue.main.async {
-                            self.view.makeToast("Something went wrong!".localized(), position: .center)
+                            self.view.makeToast_Pod("Something went wrong!".localized(), position: .center)
                         }
                     }
                 }

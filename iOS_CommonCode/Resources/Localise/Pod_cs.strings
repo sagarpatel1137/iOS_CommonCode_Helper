@@ -1,0 +1,123 @@
+
+//Force Update
+"Update Required" = "Je vyžadována aktualizace";
+"We've noticed that you've been using the deprecated application version for a long time. Please update to the latest version and enjoy the app." = "Všimli jsme si, že již delší dobu používáte zastaralou verzi aplikace. Aktualizujte na nejnovější verzi a užijte si aplikaci.";
+"Update" = "Aktualizovat";
+"Cancel" = "Zrušit";
+
+//Rating
+"Enjoying the app?" = "Baví vás aplikace?";
+"Let us know by leaving a 5 star rating" = "Dejte nám vědět zanecháním 5hvězdičkového hodnocení";
+"Ask me later!" = "Zeptejte se mě později!";
+
+//Feedback - Alert
+"Not interested?" = "nemáte zájem?";
+"Please share why" = "Podělte se prosím proč";
+"Don't know what it is" = "Nevím, co to je";
+"Too expensive" = "Příliš drahé";
+"I don't pay for apps" = "Neplatím za aplikace";
+"I need to try it first" = "Musím to nejdřív vyzkoušet";
+
+//Feedback - Screen
+"Feedback" = "Zpětná vazba";
+"Share your experience with us" = "Podělte se s námi o své zkušenosti";
+"What is your Profession?" = "Jaká je vaše profese?";
+"Write your Suggestions" = "Napište své návrhy";
+"Submit" = "Předložit";
+"Write Here..." = "Pište sem...";
+"Write Here your suggestion/Feedback..." = "Sem napište svůj názor/návrh...";
+"Please enter text" = "Zadejte text";
+"Please enter your suggestions" = "Zadejte své návrhy";
+"Feedback sent successfully" = "Zpětná vazba byla úspěšně odeslána";
+"Check your internet connection" = "Zkontrolujte připojení k internetu";
+"Retry" = "Zkuste to znovu";
+"OK" = "OK";
+
+//Language
+"Change Language" = "Změnit jazyk";
+
+//Timeline
+"HAVE DOUBTS?" = "MÁTE POCHYBNOSTI?";
+"Start with a free trial" = "Začněte s bezplatnou zkušební verzí";
+"View All Plans" = "Zobrazit všechny plány";
+"NOW" = "TEĎ";
+"Today: Get Instant Access" = "Dnes: Získejte okamžitý přístup";
+"Day 2: Trial Reminder" = "Den 2: Připomenutí zkušební verze";
+"Day 3: Premium Begins" = "Den 3: Premium začíná";
+"Day 5: Trial Reminder" = "5. den: Upomínka na zkoušku";
+"Day 7: Premium Begins" = "Den 7: Premium začíná";
+"Unlock all the features." = "Odemkněte všechny funkce.";
+"Get a reminder about when your free trial will end. Cancel anytime in 15 seconds." = "Získejte připomenutí, kdy vaše bezplatná zkušební verze skončí. Zrušit kdykoli do 15 sekund.";
+"Your trial will convert to full price unless cancelled." = "Pokud nebude zrušena, vaše zkušební verze bude převedena na plnou cenu.";
+
+//All Plan
+"Unlock All Features" = "Odemkněte všechny funkce";
+"Best Value" = "Nejlepší hodnota";
+"Most Popular" = "Nejoblíbenější";
+"Recommend" = "Doporučit";
+"Lifetime" = "Celý život";
+"Yearly" = "Roční";
+"Monthly" = "Měsíční";
+"Weekly" = "Týdně";
+"Pay once, enjoy forever" = "Zaplaťte jednou, užívejte si navždy";
+"Enjoy forever" = "Užívejte si navždy";
+"OFF" = "VYPNUTO";
+"Weekly" = "Týdně";
+"Monthly" = "Měsíční";
+"Yearly" = "Roční";
+"by" = "podle";
+
+//Sub Discount
+"Exclusive Deal" = "Exkluzivní nabídka";
+"Limited Time Offer Specially For You!" = "Časově omezená nabídka speciálně pro vás!";
+"Don't Miss Out!" = "Nenechte si ujít!";
+"TRY NOW" = "ZKUSTE HNED";
+
+//Subscription
+"day" = "den";
+"days" = "dní";
+"week" = "týden";
+"month" = "měsíc";
+"year" = "rok";
+"Day" = "Den";
+"Days" = "Dny";
+"Week" = "Týden";
+"Month" = "Měsíc";
+"Year" = "Rok";
+"Continue" = "Pokračovat";
+"Pay Nothing Now" = "Neplaťte nic";
+"Cancel anytime. Secure with App Store" = "Kdykoli zrušit. Zabezpečení pomocí App Store";
+"Restore" = "Obnovit";
+"Terms of Use" = "Podmínky použití";
+"Privacy Policy" = "Zásady ochrany osobních údajů";
+"per" = "za";
+"Subscription will auto-renew, Cancel anytime." = "Předplatné se automaticky obnoví, lze jej kdykoli zrušit.";
+"Start My Free Trial" = "Spusťte bezplatnou zkušební verzi";
+"Try" = "Pokus";
+"for" = "pro";
+"Payment is charged after" = "Platba se účtuje po";
+"cancel anytime." = "kdykoli zrušit.";
+"free" = "uvolnit";
+"then" = "pak";
+"use" = "použití";
+"upto" = "až";
+"Lifetime Purchase" = "Doživotní nákup";
+"Cancel Anytime" = "Zrušit kdykoli";
+
+//Alert
+"Sorry can't connect iTunes Store" = "Je nám líto, nelze se připojit k iTunes Store";
+"Alert" = "Upozornění";
+"Purchase failed or something went wrong." = "Nákup se nezdařil nebo se něco pokazilo.";
+"Check your internet connection" = "Zkontrolujte připojení k internetu";
+"Error" = "Chyba";
+"Restore failed Or Nothing to Restore First Purchase." = "Obnovení se nezdařilo Nebo nic k obnovení prvního nákupu.";
+
+// New Added
+"Something went wrong!" = "Něco se pokazilo!";
+"Purchase" = "Nákup";
+"Trending" = "Trendy";
+"Save" = "Uložit";
+"Thank You For Subscription" = "Děkujeme za předplatné";
+"Now you can enjoy the service!" = "Nyní si můžete službu užívat!";
+"Get Started" = "Začněte";
+"Restore Purchase" = "Obnovit nákup";

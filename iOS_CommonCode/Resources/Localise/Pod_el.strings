@@ -1,0 +1,123 @@
+
+//Force Update
+"Update Required" = "Απαιτείται ενημέρωση";
+"We've noticed that you've been using the deprecated application version for a long time. Please update to the latest version and enjoy the app." = "Παρατηρήσαμε ότι χρησιμοποιείτε την καταργημένη έκδοση της εφαρμογής για μεγάλο χρονικό διάστημα. Ενημερώστε στην πιο πρόσφατη έκδοση και απολαύστε την εφαρμογή.";
+"Update" = "Εκσυγχρονίζω";
+"Cancel" = "Ματαίωση";
+
+//Rating
+"Enjoying the app?" = "Απολαμβάνετε την εφαρμογή;";
+"Let us know by leaving a 5 star rating" = "Ενημερώστε μας αφήνοντας μια βαθμολογία 5 αστέρων";
+"Ask me later!" = "Ρωτήστε με αργότερα!";
+
+//Feedback - Alert
+"Not interested?" = "Δεν ενδιαφέρεστε;";
+"Please share why" = "Παρακαλώ κοινοποιήστε το γιατί";
+"Don't know what it is" = "Δεν ξέρω τι είναι";
+"Too expensive" = "Πολύ ακριβό";
+"I don't pay for apps" = "Δεν πληρώνω για εφαρμογές";
+"I need to try it first" = "Πρέπει να το δοκιμάσω πρώτα";
+
+//Feedback - Screen
+"Feedback" = "Ανατροφοδότηση";
+"Share your experience with us" = "Μοιραστείτε την εμπειρία σας μαζί μας";
+"What is your Profession?" = "Ποιο είναι το Επάγγελμά σας;";
+"Write your Suggestions" = "Γράψτε τις Προτάσεις σας";
+"Submit" = "Υποτάσσομαι";
+"Write Here..." = "Γράψε εδώ...";
+"Write Here your suggestion/Feedback..." = "Γράψτε εδώ την πρόταση/σχόλιά σας...";
+"Please enter text" = "Εισαγάγετε κείμενο";
+"Please enter your suggestions" = "Εισαγάγετε τις προτάσεις σας";
+"Feedback sent successfully" = "Τα σχόλια στάλθηκαν με επιτυχία";
+"Check your internet connection" = "Ελέγξτε τη σύνδεσή σας στο διαδίκτυο";
+"Retry" = "Δοκιμάζω πάλι";
+"OK" = "ΕΝΤΑΞΕΙ";
+
+//Language
+"Change Language" = "Αλλαγή γλώσσας";
+
+//Timeline
+"HAVE DOUBTS?" = "ΕΧΕΤΕ ΑΜΦΙΒΟΛΙΕΣ;";
+"Start with a free trial" = "Ξεκινήστε με μια δωρεάν δοκιμή";
+"View All Plans" = "Δείτε όλα τα σχέδια";
+"NOW" = "ΤΩΡΑ";
+"Today: Get Instant Access" = "Σήμερα: Αποκτήστε Άμεση Πρόσβαση";
+"Day 2: Trial Reminder" = "Ημέρα 2: Υπενθύμιση δοκιμής";
+"Day 3: Premium Begins" = "Ημέρα 3: Ξεκινά το Premium";
+"Day 5: Trial Reminder" = "Ημέρα 5: Υπενθύμιση δοκιμής";
+"Day 7: Premium Begins" = "Ημέρα 7: Ξεκινά το Premium";
+"Unlock all the features." = "Ξεκλειδώστε όλες τις δυνατότητες.";
+"Get a reminder about when your free trial will end. Cancel anytime in 15 seconds." = "Λάβετε υπενθύμιση για το πότε θα λήξει η δωρεάν δοκιμή σας. Ακύρωση ανά πάσα στιγμή σε 15 δευτερόλεπτα.";
+"Your trial will convert to full price unless cancelled." = "Η δοκιμή σας θα μετατραπεί σε πλήρη τιμή, εκτός εάν ακυρωθεί.";
+
+//All Plan
+"Unlock All Features" = "Ξεκλειδώστε όλες τις δυνατότητες";
+"Best Value" = "Καλύτερη Αξία";
+"Most Popular" = "Δημοφιλέστερο";
+"Recommend" = "Συνιστώ";
+"Lifetime" = "Διάρκεια ζωής";
+"Yearly" = "Ετήσια";
+"Monthly" = "Μηνιαίος";
+"Weekly" = "Εβδομαδιαίος";
+"Pay once, enjoy forever" = "Πληρώστε μια φορά, απολαύστε για πάντα";
+"Enjoy forever" = "Απολαύστε για πάντα";
+"OFF" = "ΜΑΚΡΙΑ ΑΠΟ";
+"Weekly" = "Εβδομαδιαίος";
+"Monthly" = "Μηνιαίος";
+"Yearly" = "Ετήσια";
+"by" = "με";
+
+//Sub Discount
+"Exclusive Deal" = "Αποκλειστική προσφορά";
+"Limited Time Offer Specially For You!" = "Προσφορά περιορισμένου χρόνου ειδικά για εσάς!";
+"Don't Miss Out!" = "Μην το χάσετε!";
+"TRY NOW" = "ΔΟΚΙΜΑΣΤΕ ΤΩΡΑ";
+
+//Subscription
+"day" = "ημέρα";
+"days" = "ημέρες";
+"week" = "εβδομάδα";
+"month" = "μήνας";
+"year" = "έτος";
+"Day" = "Ημέρα";
+"Days" = "Μέρες";
+"Week" = "Εβδομάδα";
+"Month" = "Μήνας";
+"Year" = "Ετος";
+"Continue" = "Συνεχίζω";
+"Pay Nothing Now" = "Πληρώστε τίποτα τώρα";
+"Cancel anytime. Secure with App Store" = "Ακύρωση ανά πάσα στιγμή. Ασφαλίστε με το App Store";
+"Restore" = "Επαναφέρω";
+"Terms of Use" = "Όροι Χρήσης";
+"Privacy Policy" = "Πολιτική Απορρήτου";
+"per" = "ανά";
+"Subscription will auto-renew, Cancel anytime." = "Η συνδρομή θα ανανεωθεί αυτόματα, Ακύρωση ανά πάσα στιγμή.";
+"Start My Free Trial" = "Ξεκινήστε τη δωρεάν δοκιμή μου";
+"Try" = "Δοκιμή";
+"for" = "για";
+"Payment is charged after" = "Η πληρωμή χρεώνεται μετά";
+"cancel anytime." = "ακύρωση ανά πάσα στιγμή.";
+"free" = "δωρεάν";
+"then" = "τότε";
+"use" = "χρήση";
+"upto" = "μέχρι";
+"Lifetime Purchase" = "Αγορά δια βίου";
+"Cancel Anytime" = "Ακύρωση ανά πάσα στιγμή";
+
+//Alert
+"Sorry can't connect iTunes Store" = "Δυστυχώς δεν είναι δυνατή η σύνδεση του iTunes Store";
+"Alert" = "Συναγερμός";
+"Purchase failed or something went wrong." = "Η αγορά απέτυχε ή κάτι πήγε στραβά.";
+"Check your internet connection" = "Ελέγξτε τη σύνδεσή σας στο διαδίκτυο";
+"Error" = "Σφάλμα";
+"Restore failed Or Nothing to Restore First Purchase." = "Η επαναφορά απέτυχε ή τίποτα για την επαναφορά της πρώτης αγοράς.";
+
+// New Added
+"Something went wrong!" = "Κάτι πήγε στραβά!";
+"Purchase" = "Αγορά";
+"Trending" = "Τάσεις";
+"Save" = "Εκτός";
+"Thank You For Subscription" = "Σας ευχαριστούμε για τη συνδρομή";
+"Now you can enjoy the service!" = "Τώρα μπορείτε να απολαύσετε την υπηρεσία!";
+"Get Started" = "Ξεκινήστε";
+"Restore Purchase" = "Επαναφορά αγοράς";

@@ -1,0 +1,124 @@
+
+//Force Update
+"Update Required" = "Oppdatering kreves";
+"We've noticed that you've been using the deprecated application version for a long time. Please update to the latest version and enjoy the app." = "Vi har lagt merke til at du har brukt den utdaterte applikasjonsversjonen i lang tid. Oppdater til den nyeste versjonen og nyt appen.";
+"Update" = "Oppdater";
+"Cancel" = "Kansellere";
+
+//Rating
+"Enjoying the app?" = "Liker du appen?";
+"Let us know by leaving a 5 star rating" = "Gi oss beskjed ved å gi en 5-stjerners rangering";
+"Ask me later!" = "Spør meg senere!";
+
+//Feedback - Alert
+"Not interested?" = "Ikke interessert?";
+"Please share why" = "Del gjerne hvorfor";
+"Don't know what it is" = "Vet ikke hva det er";
+"Too expensive" = "For dyrt";
+"I don't pay for apps" = "Jeg betaler ikke for apper";
+"I need to try it first" = "Jeg må prøve det først";
+
+//Feedback - Screen
+"Feedback" = "Tilbakemelding";
+"Share your experience with us" = "Del opplevelsen din med oss";
+"What is your Profession?" = "Hva er ditt yrke?";
+"Write your Suggestions" = "Skriv dine forslag";
+"Submit" = "Send inn";
+"Write Here..." = "Skriv her...";
+"Write Here your suggestion/Feedback..." = "Skriv ditt forslag/tilbakemelding her...";
+"Please enter text" = "Vennligst skriv inn tekst";
+"Please enter your suggestions" = "Skriv inn forslagene dine";
+"Feedback sent successfully" = "Tilbakemelding sendt";
+"Check your internet connection" = "Sjekk internettforbindelsen din";
+"Retry" = "Prøv på nytt";
+"OK" = "OK";
+
+//Language
+"Change Language" = "Endre språk";
+
+//Timeline
+"HAVE DOUBTS?" = "HAR TILL?";
+"Start with a free trial" = "Start med en gratis prøveperiode";
+"View All Plans" = "Se alle planer";
+"NOW" = "NÅ";
+"Today: Get Instant Access" = "I dag: Få umiddelbar tilgang";
+"Day 2: Trial Reminder" = "Dag 2: Prøvepåminnelse";
+"Day 3: Premium Begins" = "Dag 3: Premium begynner";
+"Day 5: Trial Reminder" = "Dag 5: Prøvepåminnelse";
+"Day 7: Premium Begins" = "Dag 7: Premium begynner";
+"Unlock all the features." = "Lås opp alle funksjonene.";
+"Get a reminder about when your free trial will end. Cancel anytime in 15 seconds." = "Få en påminnelse om når den gratis prøveperioden din avsluttes. Avbryt når som helst innen 15 sekunder.";
+"Your trial will convert to full price unless cancelled." = "Prøveperioden din konverteres til full pris med mindre den kanselleres.";
+
+//All Plan
+"Unlock All Features" = "Lås opp alle funksjoner";
+"Best Value" = "Best verdi";
+"Most Popular" = "Mest populær";
+"Recommend" = "Anbefale";
+"Lifetime" = "Levetid";
+"Yearly" = "Årlig";
+"Monthly" = "Månedlig";
+"Weekly" = "Ukentlig";
+"Pay once, enjoy forever" = "Betal én gang, nyt for alltid";
+"Enjoy forever" = "Nyt for alltid";
+"OFF" = "AV";
+"Weekly" = "Ukentlig";
+"Monthly" = "Månedlig";
+"Yearly" = "Årlig";
+"by" = "ved";
+
+//Sub Discount
+"Exclusive Deal" = "Eksklusiv avtale";
+"Limited Time Offer Specially For You!" = "Tidsbegrenset tilbud spesielt for deg!";
+"Don't Miss Out!" = "Ikke gå glipp av det!";
+"TRY NOW" = "PRØV NÅ";
+
+//Subscription
+"day" = "dag";
+"days" = "dager";
+"week" = "uke";
+"month" = "måned";
+"year" = "år";
+"Day" = "Dag";
+"Days" = "Dager";
+"Week" = "Uke";
+"Month" = "Måned";
+"Year" = "År";
+"Continue" = "Fortsette";
+"Pay Nothing Now" = "Betal ingenting nå";
+"Cancel anytime. Secure with App Store" = "Avbryt når som helst. Sikker med App Store";
+"Restore" = "Restaurere";
+"Terms of Use" = "Vilkår for bruk";
+"Privacy Policy" = "Personvernerklæring";
+"per" = "per";
+"Subscription will auto-renew, Cancel anytime." = "Abonnementet fornyes automatisk, kanselleres når som helst.";
+"Start My Free Trial" = "Start min gratis prøveversjon";
+"Try" = "Prøve";
+"for" = "til";
+"Payment is charged after" = "Betaling belastes etter";
+"cancel anytime." = "kanseller når som helst.";
+"free" = "gratis";
+"then" = "da";
+"use" = "bruk";
+"upto" = "opp til";
+"Lifetime Purchase" = "Livstidskjøp";
+"Cancel Anytime" = "Avbryt når som helst";
+
+//Alert
+"Sorry can't connect iTunes Store" = "Kan dessverre ikke koble til iTunes Store";
+"Alert" = "Varsle";
+"Purchase failed or something went wrong." = "Kjøpet mislyktes eller noe gikk galt.";
+"Check your internet connection" = "Sjekk internettforbindelsen din";
+"Error" = "Feil";
+"Restore failed Or Nothing to Restore First Purchase." = "Gjenoppretting mislyktes eller ingenting å gjenopprette første kjøp.";
+
+// New Added
+"Something went wrong!" = "Noe gikk galt!";
+"Purchase" = "Kjøpe";
+"Trending" = "På vei opp";
+"Save" = "Spare";
+"Thank You For Subscription" = "Takk for abonnement";
+"Now you can enjoy the service!" = "Nå kan du nyte tjenesten!";
+"Get Started" = "Kom i gang";
+
+"Restore Purchase" = "Gjenopprett kjøp";

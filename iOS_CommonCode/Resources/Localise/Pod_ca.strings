@@ -1,0 +1,123 @@
+
+//Force Update
+"Update Required" = "Actualització necessària";
+"We've noticed that you've been using the deprecated application version for a long time. Please update to the latest version and enjoy the app." = "Hem observat que fa molt de temps que utilitzeu la versió obsoleta de l'aplicació. Si us plau, actualitzeu a la darrera versió i gaudiu de l'aplicació.";
+"Update" = "Actualització";
+"Cancel" = "Cancel·la";
+
+//Rating
+"Enjoying the app?" = "Gaudeix de l'aplicació?";
+"Let us know by leaving a 5 star rating" = "Fes-nos-ho saber deixant una puntuació de 5 estrelles";
+"Ask me later!" = "Pregunta'm més tard!";
+
+//Feedback - Alert
+"Not interested?" = "No t'interessa?";
+"Please share why" = "Si us plau, comparteix per què";
+"Don't know what it is" = "No sé què és";
+"Too expensive" = "Massa car";
+"I don't pay for apps" = "No pago les aplicacions";
+"I need to try it first" = "Primer ho he de provar";
+
+//Feedback - Screen
+"Feedback" = "Feedback";
+"Share your experience with us" = "Comparteix la teva experiència amb nosaltres";
+"What is your Profession?" = "Quina és la teva Professió?";
+"Write your Suggestions" = "Escriu els teus suggeriments";
+"Submit" = "Envia";
+"Write Here..." = "Escriu aquí...";
+"Write Here your suggestion/Feedback..." = "Escriu aquí el teu suggeriment/opinió...";
+"Please enter text" = "Introduïu text";
+"Please enter your suggestions" = "Introduïu els vostres suggeriments";
+"Feedback sent successfully" = "Els comentaris s'han enviat correctament";
+"Check your internet connection" = "Comproveu la vostra connexió a Internet";
+"Retry" = "Torna-ho a provar";
+"OK" = "D'acord";
+
+//Language
+"Change Language" = "Canviar Idioma";
+
+//Timeline
+"HAVE DOUBTS?" = "TENIU DUBTES?";
+"Start with a free trial" = "Comenceu amb una prova gratuïta";
+"View All Plans" = "Veure tots els plans";
+"NOW" = "ARA";
+"Today: Get Instant Access" = "Avui: obteniu accés instantani";
+"Day 2: Trial Reminder" = "Dia 2: recordatori de la prova";
+"Day 3: Premium Begins" = "Dia 3: Comença Premium";
+"Day 5: Trial Reminder" = "Dia 5: recordatori de la prova";
+"Day 7: Premium Begins" = "Dia 7: Comença Premium";
+"Unlock all the features." = "Desbloqueja totes les funcions.";
+"Get a reminder about when your free trial will end. Cancel anytime in 15 seconds." = "Obteniu un recordatori sobre quan finalitzarà la vostra prova gratuïta. Cancel·la en qualsevol moment en 15 segons.";
+"Your trial will convert to full price unless cancelled." = "La prova es convertirà en preu complet tret que es cancel·li.";
+
+//All Plan
+"Unlock All Features" = "Desbloqueja totes les funcions";
+"Best Value" = "Millor relació qualitat-preu";
+"Most Popular" = "El més popular";
+"Recommend" = "Recomanar";
+"Lifetime" = "Tota la vida";
+"Yearly" = "Anualment";
+"Monthly" = "Mensualment";
+"Weekly" = "Setmanalment";
+"Pay once, enjoy forever" = "Paga una vegada, gaudeix per sempre";
+"Enjoy forever" = "Gaudeix per sempre";
+"OFF" = "OFF";
+"Weekly" = "Setmanalment";
+"Monthly" = "Mensualment";
+"Yearly" = "Anualment";
+"by" = "per";
+
+//Sub Discount
+"Exclusive Deal" = "Oferta exclusiva";
+"Limited Time Offer Specially For You!" = "Oferta per temps limitat especialment per a tu!";
+"Don't Miss Out!" = "No et perdis!";
+"TRY NOW" = "PROVA ARA";
+
+//Subscription
+"day" = "dia";
+"days" = "dies";
+"week" = "setmana";
+"month" = "mes";
+"year" = "any";
+"Day" = "Dia";
+"Days" = "Dies";
+"Week" = "Setmana";
+"Month" = "Mes";
+"Year" = "Any";
+"Continue" = "Continua";
+"Pay Nothing Now" = "No pagueu res ara";
+"Cancel anytime. Secure with App Store" = "Cancel·la en qualsevol moment. Segur amb App Store";
+"Restore" = "Restaurar";
+"Terms of Use" = "Condicions d'ús";
+"Privacy Policy" = "Política de privadesa";
+"per" = "per";
+"Subscription will auto-renew, Cancel anytime." = "La subscripció es renovarà automàticament, es cancel·larà en qualsevol moment.";
+"Start My Free Trial" = "Inicieu la meva prova gratuïta";
+"Try" = "Prova";
+"for" = "per";
+"Payment is charged after" = "El pagament es cobra després";
+"cancel anytime." = "cancel·lar en qualsevol moment.";
+"free" = "lliure";
+"then" = "aleshores";
+"use" = "utilitzar";
+"upto" = "fins a";
+"Lifetime Purchase" = "Compra de tota la vida";
+"Cancel Anytime" = "Cancel·la en qualsevol moment";
+
+//Alert
+"Sorry can't connect iTunes Store" = "No puc connectar iTunes Store";
+"Alert" = "Alerta";
+"Purchase failed or something went wrong." = "La compra ha fallat o alguna cosa ha anat malament.";
+"Check your internet connection" = "Comproveu la vostra connexió a Internet";
+"Error" = "Error";
+"Restore failed Or Nothing to Restore First Purchase." = "La restauració ha fallat o res per restaurar la primera compra.";
+
+// New Added
+"Something went wrong!" = "Alguna cosa va fallar!";
+"Purchase" = "Compra";
+"Trending" = "Tendència";
+"Save" = "Desa";
+"Thank You For Subscription" = "Gràcies per la subscripció";
+"Now you can enjoy the service!" = "Ara pots gaudir del servei!";
+"Get Started" = "Comença";
+"Restore Purchase" = "Restaurar la compra";

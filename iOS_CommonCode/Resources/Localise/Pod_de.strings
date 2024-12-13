@@ -1,0 +1,123 @@
+
+//Force Update
+"Update Required" = "Update erforderlich";
+"We've noticed that you've been using the deprecated application version for a long time. Please update to the latest version and enjoy the app." = "Wir haben festgestellt, dass Sie die veraltete Anwendungsversion schon seit langem verwenden. Bitte aktualisieren Sie auf die neueste Version und genießen Sie die App.";
+"Update" = "Update";
+"Cancel" = "Abbrechen";
+
+//Rating
+"Enjoying the app?" = "Gefällt Ihnen die App?";
+"Let us know by leaving a 5 star rating" = "Lassen Sie es uns wissen, indem Sie eine 5-Sterne-Bewertung hinterlassen.";
+"Ask me later!" = "Fragen Sie mich später!";
+
+//Feedback - Alert
+"Not interested?" = "Kein Interesse?";
+"Please share why" = "Bitte teilen Sie uns mit, warum";
+"Don't know what it is" = "Ich weiß nicht, was es ist";
+"Too expensive" = "Zu teuer";
+"I don't pay for apps" = "Ich bezahle nicht für Apps";
+"I need to try it first" = "Ich muss es erst ausprobieren";
+
+//Feedback - Screen
+"Feedback" = "Feedback";
+"Share your experience with us" = "Teilen Sie Ihre Erfahrungen mit uns";
+"What is your Profession?" = "Was ist Ihr Beruf?";
+"Write your Suggestions" = "Schreiben Sie Ihre Vorschläge";
+"Submit" = "Senden";
+"Write Here..." = "Schreiben Sie hier...";
+"Write Here your suggestion/Feedback..." = "Schreiben Sie hier Ihren Vorschlag/Ihr Feedback...";
+"Please enter text" = "Bitte geben Sie Text ein";
+"Please enter your suggestions" = "Bitte geben Sie Ihre Vorschläge ein";
+"Feedback sent successfully" = "Feedback erfolgreich gesendet";
+"Check your internet connection" = "Überprüfen Sie Ihre Internetverbindung";
+"Retry" = "Erneut versuchen";
+"OK" = "OK";
+
+//Language
+"Change Language" = "Sprache ändern";
+
+//Timeline
+"HAVE DOUBTS?" = "HABEN SIE ZWEIFEL?";
+"Start with a free trial" = "Starten Sie mit einer kostenlosen Testversion";
+"View All Plans" = "Alle Pläne anzeigen";
+"NOW" = "JETZT";
+"Today: Get Instant Access" = "Heute: Sofortigen Zugriff erhalten";
+"Day 2: Trial Reminder" = "Tag 2: Testerinnerung";
+"Day 3: Premium Begins" = "Tag 3: Premium beginnt";
+"Day 5: Trial Reminder" = "Tag 5: Testerinnerung";
+"Day 7: Premium Begins" = "Tag 7: Premium beginnt";
+"Unlock all the features." = "Schalten Sie alle Funktionen frei.";
+"Get a reminder about when your free trial will end. Cancel anytime in 15 seconds." = "Erhalten Sie eine Erinnerung, wann Ihre kostenlose Testversion endet. Sie können jederzeit innerhalb von 15 Sekunden kündigen.";
+"Your trial will convert to full price unless cancelled." = "Ihre Testversion wird zum vollen Preis angeboten, sofern Sie sie nicht kündigen.";
+
+//All Plan
+"Unlock All Features" = "Alle Funktionen freischalten";
+"Best Value" = "Bestes Preis-Leistungs-Verhältnis";
+"Most Popular" = "Beliebteste";
+"Recommend" = "Empfohlen";
+"Lifetime" = "Lebenslang";
+"Yearly" = "Jährlich";
+"Monthly" = "Monatlich";
+"Weekly" = "Wöchentlich";
+"Pay once, enjoy forever" = "Einmal zahlen, für immer genießen";
+"Enjoy forever" = "Für immer genießen";
+"OFF" = "AUS";
+"Weekly" = "Wöchentlich";
+"Monthly" = "Monatlich";
+"Yearly" = "Jährlich";
+"by" = "von";
+
+//Sub Discount
+"Exclusive Deal" = "Exklusives Angebot";
+"Limited Time Offer Specially For You!" = "Zeitlich begrenztes Angebot speziell für Sie!";
+"Don't Miss Out!" = "Verpassen Sie es nicht!";
+"TRY NOW" = "JETZT TESTEN";
+
+//Subscription
+"day" = "Tag";
+"days" = "Tage";
+"week" = "Woche";
+"month" = "Monat";
+"year" = "Jahr";
+"Day" = "Tag";
+"Days" = "Tage";
+"Week" = "Woche";
+"Month" = "Monat";
+"Year" = "Jahr";
+"Continue" = "Fortfahren";
+"Pay Nothing Now" = "Jetzt nichts bezahlen";
+"Cancel anytime. Secure with App Store" = "Jederzeit kündbar. Sicher mit App Store";
+"Restore" = "Wiederherstellen";
+"Terms of Use" = "Nutzungsbedingungen";
+"Privacy Policy" = "Datenschutzrichtlinie";
+"per" = "pro";
+"Subscription will auto-renew, Cancel anytime." = "Abonnement wird automatisch verlängert, jederzeit kündbar.";
+"Start My Free Trial" = "Meine kostenlose Testversion starten";
+"Try" = "Ausprobieren";
+"for" = "für";
+"Payment is charged after" = "Zahlung wird nach";
+"cancel anytime." = "jederzeit kündbar berechnet.";
+"free" = "kostenlos";
+"then" = "dann";
+"use" = "nutzen";
+"upto" = "bis";
+"Lifetime Purchase" = "Lebenslanger Kauf";
+"Cancel Anytime" = "Jederzeit kündbar";
+
+//Alert
+"Sorry can't connect iTunes Store" = "Leider kann keine Verbindung zum iTunes Store hergestellt werden.";
+"Alert" = "Warnung";
+"Purchase failed or something went wrong." = "Der Kauf ist fehlgeschlagen oder etwas ist schiefgelaufen.";
+"Check your internet connection" = "Überprüfen Sie Ihre Internetverbindung.";
+"Error" = "Fehler";
+"Restore failed Or Nothing to Restore First Purchase." = "Wiederherstellung fehlgeschlagen oder nichts zum Wiederherstellen des ersten Kaufs.";
+
+// New Added
+"Something went wrong!" = "Etwas ist schiefgelaufen!";
+"Purchase" = "Kaufen";
+"Trending" = "Trends";
+"Save" = "Speichern";
+"Thank You For Subscription" = "Danke für Ihr Abonnement";
+"Now you can enjoy the service!" = "Jetzt können Sie den Service nutzen!";
+"Get Started" = "Erste Schritte";
+"Restore Purchase" = "Kauf wiederherstellen";

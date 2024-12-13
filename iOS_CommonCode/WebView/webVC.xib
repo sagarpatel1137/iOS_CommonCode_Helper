@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -14,7 +14,7 @@
         </array>
     </customFonts>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="webVC" customModule="iOS_CommonCode_Helper" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="webVC" customModule="iOS_CommonCode" customModuleProvider="target">
             <connections>
                 <outlet property="backButtonWidth" destination="d5S-nY-3MV" id="z2X-Tp-Hh9"/>
                 <outlet property="btnBack" destination="OsK-wn-874" id="gaZ-54-UMA"/>
@@ -62,6 +62,8 @@
                         <constraint firstItem="OsK-wn-874" firstAttribute="centerY" secondItem="fFs-qD-uP4" secondAttribute="centerY" id="4bW-0v-O1A"/>
                         <constraint firstItem="Izc-ab-0dQ" firstAttribute="centerY" secondItem="fFs-qD-uP4" secondAttribute="centerY" id="6fw-RW-izN"/>
                         <constraint firstItem="Izc-ab-0dQ" firstAttribute="centerX" secondItem="fFs-qD-uP4" secondAttribute="centerX" id="8wS-CC-uDy"/>
+                        <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Izc-ab-0dQ" secondAttribute="trailing" constant="8" id="G5W-1X-4Tm"/>
+                        <constraint firstItem="Izc-ab-0dQ" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="OsK-wn-874" secondAttribute="trailing" constant="8" id="IK9-GG-XMG"/>
                         <constraint firstItem="OsK-wn-874" firstAttribute="leading" secondItem="fFs-qD-uP4" secondAttribute="leading" constant="12" id="duC-xe-Rpu"/>
                         <constraint firstAttribute="height" constant="44" id="sVC-tP-PVq"/>
                     </constraints>

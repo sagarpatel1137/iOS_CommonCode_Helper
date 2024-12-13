@@ -1,0 +1,124 @@
+
+//Force Update
+"Update Required" = "Päivitys vaaditaan";
+"We've noticed that you've been using the deprecated application version for a long time. Please update to the latest version and enjoy the app." = "Olemme huomanneet, että olet käyttänyt vanhentunutta sovellusversiota pitkään. Päivitä uusimpaan versioon ja nauti sovelluksesta.";
+"Update" = "Päivittää";
+"Cancel" = "Peruuttaa";
+
+//Rating
+"Enjoying the app?" = "Nautitko sovelluksesta?";
+"Let us know by leaving a 5 star rating" = "Kerro meille jättämällä 5 tähden luokitus";
+"Ask me later!" = "Kysy myöhemmin!";
+
+//Feedback - Alert
+"Not interested?" = "Ei kiinnosta?";
+"Please share why" = "Jaa miksi";
+"Don't know what it is" = "En tiedä mikä se on";
+"Too expensive" = "Liian kallis";
+"I don't pay for apps" = "En maksa sovelluksista";
+"I need to try it first" = "Minun täytyy kokeilla sitä ensin";
+
+//Feedback - Screen
+"Feedback" = "Palaute";
+"Share your experience with us" = "Jaa kokemuksesi kanssamme";
+"What is your Profession?" = "Mikä on ammattisi?";
+"Write your Suggestions" = "Kirjoita ehdotuksesi";
+"Submit" = "Lähetä";
+"Write Here..." = "Kirjoita tähän...";
+"Write Here your suggestion/Feedback..." = "Kirjoita tähän ehdotuksesi/palautteesi...";
+"Please enter text" = "Kirjoita teksti";
+"Please enter your suggestions" = "Kirjoita ehdotuksesi";
+"Feedback sent successfully" = "Palautteen lähetys onnistui";
+"Check your internet connection" = "Tarkista Internet-yhteytesi";
+"Retry" = "Yritä uudelleen";
+"OK" = "OK";
+
+//Language
+"Change Language" = "Vaihda kieli";
+
+//Timeline
+"HAVE DOUBTS?" = "ONKO EPÄRÄYKSIÄ?";
+"Start with a free trial" = "Aloita ilmaisella kokeilulla";
+"View All Plans" = "Näytä kaikki suunnitelmat";
+"NOW" = "NYT";
+"Today: Get Instant Access" = "Tänään: Hanki välitön käyttö";
+"Day 2: Trial Reminder" = "Päivä 2: Kokeilumuistutus";
+"Day 3: Premium Begins" = "Päivä 3: Premium alkaa";
+"Day 5: Trial Reminder" = "Päivä 5: Kokeilumuistutus";
+"Day 7: Premium Begins" = "Päivä 7: Premium alkaa";
+"Unlock all the features." = "Avaa kaikki ominaisuudet.";
+"Get a reminder about when your free trial will end. Cancel anytime in 15 seconds." = "Saat muistutuksen siitä, milloin ilmainen kokeilujaksosi päättyy. Peruuta milloin tahansa 15 sekunnissa.";
+"Your trial will convert to full price unless cancelled." = "Kokeilujaksosi muunnetaan täysihintaiseksi, ellei sitä peruuteta.";
+
+//All Plan
+"Unlock All Features" = "Avaa kaikki ominaisuudet";
+"Best Value" = "Paras arvo";
+"Most Popular" = "Suosituin";
+"Recommend" = "Suositella";
+"Lifetime" = "Elinikäinen";
+"Yearly" = "Vuosittain";
+"Monthly" = "Kuukausittain";
+"Weekly" = "Viikoittain";
+"Pay once, enjoy forever" = "Maksa kerran, nauti ikuisesti";
+"Enjoy forever" = "Nauti ikuisesti";
+"OFF" = "POIS";
+"Weekly" = "Viikoittain";
+"Monthly" = "Kuukausittain";
+"Yearly" = "Vuosittain";
+"by" = "kirjoittaja";
+
+//Sub Discount
+"Exclusive Deal" = "Ainutlaatuinen tarjous";
+"Limited Time Offer Specially For You!" = "Rajoitetun ajan tarjous erityisesti sinulle!";
+"Don't Miss Out!" = "Älä missaa!";
+"TRY NOW" = "KOKEILE NYT";
+
+//Subscription
+"day" = "päivä";
+"days" = "päivää";
+"week" = "viikko";
+"month" = "kuukausi";
+"year" = "vuosi";
+"Day" = "Päivä";
+"Days" = "päivää";
+"Week" = "Viikko";
+"Month" = "Kuukausi";
+"Year" = "vuosi";
+"Continue" = "Jatkaa";
+"Pay Nothing Now" = "Älä maksa nyt mitään";
+"Cancel anytime. Secure with App Store" = "Peru milloin tahansa. Suojaa App Storesta";
+"Restore" = "Palauttaa";
+"Terms of Use" = "Käyttöehdot";
+"Privacy Policy" = "Tietosuojakäytäntö";
+"per" = "per";
+"Subscription will auto-renew, Cancel anytime." = "Tilaus uusitaan automaattisesti. Peruuta milloin tahansa.";
+"Start My Free Trial" = "Aloita ilmainen kokeilujaksoni";
+"Try" = "Yrittää";
+"for" = "varten";
+"Payment is charged after" = "Maksu veloitetaan jälkeen";
+"cancel anytime." = "peruuttaa milloin tahansa.";
+"free" = "ilmainen";
+"then" = "sitten";
+"use" = "käyttää";
+"upto" = "asti";
+"Lifetime Purchase" = "Elinikäinen osto";
+"Cancel Anytime" = "Peruuta milloin tahansa";
+
+//Alert
+"Sorry can't connect iTunes Store" = "Valitettavasti iTunes Storen yhdistäminen ei onnistu";
+"Alert" = "Varoitus";
+"Purchase failed or something went wrong." = "Osto epäonnistui tai jokin meni pieleen.";
+"Check your internet connection" = "Tarkista Internet-yhteytesi";
+"Error" = "Virhe";
+"Restore failed Or Nothing to Restore First Purchase." = "Palautus epäonnistui tai ei mitään ensimmäisen oston palauttamiseksi.";
+
+// New Added
+"Something went wrong!" = "Jotain meni pieleen!";
+"Purchase" = "Ostaa";
+"Trending" = "Trendaavat";
+"Save" = "Tallentaa";
+"Thank You For Subscription" = "Kiitos tilauksesta";
+"Now you can enjoy the service!" = "Nyt voit nauttia palvelusta!";
+"Get Started" = "Aloita";
+
+"Restore Purchase" = "Palauta ostos";

@@ -175,6 +175,20 @@
 		81CAB6002C6E193E0050F848 /* OneSignal_Manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81CAB5FF2C6E193E0050F848 /* OneSignal_Manager.swift */; };
 		81CAB6022C6E20DB0050F848 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81CAB6012C6E20DB0050F848 /* UIViewController+Extension.swift */; };
 		81EDD3062D0183FA007CD7CC /* Pod_hi.strings in Resources */ = {isa = PBXBuildFile; fileRef = 81EDD3052D0183FA007CD7CC /* Pod_hi.strings */; };
+		81FAF3172D0B0281007368D2 /* Pod_no.strings in Resources */ = {isa = PBXBuildFile; fileRef = 81FAF3152D0B0281007368D2 /* Pod_no.strings */; };
+		81FAF3182D0B0281007368D2 /* Pod_cs.strings in Resources */ = {isa = PBXBuildFile; fileRef = 81FAF30A2D0B0281007368D2 /* Pod_cs.strings */; };
+		81FAF3192D0B0281007368D2 /* Pod_he.strings in Resources */ = {isa = PBXBuildFile; fileRef = 81FAF30E2D0B0281007368D2 /* Pod_he.strings */; };
+		81FAF31A2D0B0281007368D2 /* Pod_fi.strings in Resources */ = {isa = PBXBuildFile; fileRef = 81FAF30D2D0B0281007368D2 /* Pod_fi.strings */; };
+		81FAF31B2D0B0281007368D2 /* Pod_nl.strings in Resources */ = {isa = PBXBuildFile; fileRef = 81FAF3142D0B0281007368D2 /* Pod_nl.strings */; };
+		81FAF31C2D0B0281007368D2 /* Pod_ms.strings in Resources */ = {isa = PBXBuildFile; fileRef = 81FAF3132D0B0281007368D2 /* Pod_ms.strings */; };
+		81FAF31D2D0B0281007368D2 /* Pod_el.strings in Resources */ = {isa = PBXBuildFile; fileRef = 81FAF30C2D0B0281007368D2 /* Pod_el.strings */; };
+		81FAF31E2D0B0281007368D2 /* Pod_hu.strings in Resources */ = {isa = PBXBuildFile; fileRef = 81FAF3102D0B0281007368D2 /* Pod_hu.strings */; };
+		81FAF31F2D0B0281007368D2 /* Pod_id.strings in Resources */ = {isa = PBXBuildFile; fileRef = 81FAF3112D0B0281007368D2 /* Pod_id.strings */; };
+		81FAF3202D0B0281007368D2 /* Pod_hr.strings in Resources */ = {isa = PBXBuildFile; fileRef = 81FAF30F2D0B0281007368D2 /* Pod_hr.strings */; };
+		81FAF3212D0B0281007368D2 /* Pod_de.strings in Resources */ = {isa = PBXBuildFile; fileRef = 81FAF30B2D0B0281007368D2 /* Pod_de.strings */; };
+		81FAF3222D0B0281007368D2 /* Pod_pl.strings in Resources */ = {isa = PBXBuildFile; fileRef = 81FAF3162D0B0281007368D2 /* Pod_pl.strings */; };
+		81FAF3232D0B0281007368D2 /* Pod_ca.strings in Resources */ = {isa = PBXBuildFile; fileRef = 81FAF3092D0B0281007368D2 /* Pod_ca.strings */; };
+		81FAF3242D0B0281007368D2 /* Pod_ku.strings in Resources */ = {isa = PBXBuildFile; fileRef = 81FAF3122D0B0281007368D2 /* Pod_ku.strings */; };
 		D391513D4F19B006A2E9AF44 /* Pods_iOS_CommonCode.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06E918F9F432D213EFDB89A3 /* Pods_iOS_CommonCode.framework */; };
 /* End PBXBuildFile section */
 
@@ -365,6 +379,20 @@
 		81CAB5FF2C6E193E0050F848 /* OneSignal_Manager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneSignal_Manager.swift; sourceTree = "<group>"; };
 		81CAB6012C6E20DB0050F848 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 		81EDD3052D0183FA007CD7CC /* Pod_hi.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Pod_hi.strings; sourceTree = "<group>"; };
+		81FAF3092D0B0281007368D2 /* Pod_ca.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Pod_ca.strings; sourceTree = "<group>"; };
+		81FAF30A2D0B0281007368D2 /* Pod_cs.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Pod_cs.strings; sourceTree = "<group>"; };
+		81FAF30B2D0B0281007368D2 /* Pod_de.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Pod_de.strings; sourceTree = "<group>"; };
+		81FAF30C2D0B0281007368D2 /* Pod_el.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Pod_el.strings; sourceTree = "<group>"; };
+		81FAF30D2D0B0281007368D2 /* Pod_fi.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Pod_fi.strings; sourceTree = "<group>"; };
+		81FAF30E2D0B0281007368D2 /* Pod_he.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Pod_he.strings; sourceTree = "<group>"; };
+		81FAF30F2D0B0281007368D2 /* Pod_hr.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Pod_hr.strings; sourceTree = "<group>"; };
+		81FAF3102D0B0281007368D2 /* Pod_hu.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Pod_hu.strings; sourceTree = "<group>"; };
+		81FAF3112D0B0281007368D2 /* Pod_id.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Pod_id.strings; sourceTree = "<group>"; };
+		81FAF3122D0B0281007368D2 /* Pod_ku.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Pod_ku.strings; sourceTree = "<group>"; };
+		81FAF3132D0B0281007368D2 /* Pod_ms.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Pod_ms.strings; sourceTree = "<group>"; };
+		81FAF3142D0B0281007368D2 /* Pod_nl.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Pod_nl.strings; sourceTree = "<group>"; };
+		81FAF3152D0B0281007368D2 /* Pod_no.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Pod_no.strings; sourceTree = "<group>"; };
+		81FAF3162D0B0281007368D2 /* Pod_pl.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Pod_pl.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -644,6 +672,20 @@
 		81B0F2F92CB0FF7F0014E08A /* Localise */ = {
 			isa = PBXGroup;
 			children = (
+				81FAF3092D0B0281007368D2 /* Pod_ca.strings */,
+				81FAF30A2D0B0281007368D2 /* Pod_cs.strings */,
+				81FAF30B2D0B0281007368D2 /* Pod_de.strings */,
+				81FAF30C2D0B0281007368D2 /* Pod_el.strings */,
+				81FAF30D2D0B0281007368D2 /* Pod_fi.strings */,
+				81FAF30E2D0B0281007368D2 /* Pod_he.strings */,
+				81FAF30F2D0B0281007368D2 /* Pod_hr.strings */,
+				81FAF3102D0B0281007368D2 /* Pod_hu.strings */,
+				81FAF3112D0B0281007368D2 /* Pod_id.strings */,
+				81FAF3122D0B0281007368D2 /* Pod_ku.strings */,
+				81FAF3132D0B0281007368D2 /* Pod_ms.strings */,
+				81FAF3142D0B0281007368D2 /* Pod_nl.strings */,
+				81FAF3152D0B0281007368D2 /* Pod_no.strings */,
+				81FAF3162D0B0281007368D2 /* Pod_pl.strings */,
 				81EDD3052D0183FA007CD7CC /* Pod_hi.strings */,
 				81B0F3032CB0FFD40014E08A /* Pod_en.strings */,
 				81B0F3082CB0FFD40014E08A /* Pod_pt.strings */,
@@ -1013,6 +1055,20 @@
 				81C580812CD8AB5A0027FAE3 /* ic_sub_plan_0.svg in Resources */,
 				81C580822CD8AB5A0027FAE3 /* ic_subblack_data_cloud_sync.svg in Resources */,
 				81C580832CD8AB5A0027FAE3 /* ic_4_star.svg in Resources */,
+				81FAF3172D0B0281007368D2 /* Pod_no.strings in Resources */,
+				81FAF3182D0B0281007368D2 /* Pod_cs.strings in Resources */,
+				81FAF3192D0B0281007368D2 /* Pod_he.strings in Resources */,
+				81FAF31A2D0B0281007368D2 /* Pod_fi.strings in Resources */,
+				81FAF31B2D0B0281007368D2 /* Pod_nl.strings in Resources */,
+				81FAF31C2D0B0281007368D2 /* Pod_ms.strings in Resources */,
+				81FAF31D2D0B0281007368D2 /* Pod_el.strings in Resources */,
+				81FAF31E2D0B0281007368D2 /* Pod_hu.strings in Resources */,
+				81FAF31F2D0B0281007368D2 /* Pod_id.strings in Resources */,
+				81FAF3202D0B0281007368D2 /* Pod_hr.strings in Resources */,
+				81FAF3212D0B0281007368D2 /* Pod_de.strings in Resources */,
+				81FAF3222D0B0281007368D2 /* Pod_pl.strings in Resources */,
+				81FAF3232D0B0281007368D2 /* Pod_ca.strings in Resources */,
+				81FAF3242D0B0281007368D2 /* Pod_ku.strings in Resources */,
 				81C580842CD8AB5A0027FAE3 /* ic_subblack_cloud_bg.png in Resources */,
 				81C580862CD8AB5A0027FAE3 /* ic_subblack_area_bg.png in Resources */,
 				81C580872CD8AB5A0027FAE3 /* ic_sub_plan_0_sel.svg in Resources */,

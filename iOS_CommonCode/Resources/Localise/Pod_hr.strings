@@ -1,0 +1,124 @@
+
+//Force Update
+"Update Required" = "Potrebno ažuriranje";
+"We've noticed that you've been using the deprecated application version for a long time. Please update to the latest version and enjoy the app." = "Primijetili smo da već duže vrijeme koristite zastarjelu verziju aplikacije. Ažurirajte na najnoviju verziju i uživajte u aplikaciji.";
+"Update" = "Ažurirati";
+"Cancel" = "Otkazati";
+
+//Rating
+"Enjoying the app?" = "Uživate u aplikaciji?";
+"Let us know by leaving a 5 star rating" = "Javite nam ostavljajući ocjenu od 5 zvjezdica";
+"Ask me later!" = "Pitaj me kasnije!";
+
+//Feedback - Alert
+"Not interested?" = "Niste zainteresirani?";
+"Please share why" = "Molimo podijelite zašto";
+"Don't know what it is" = "Ne znam što je to";
+"Too expensive" = "Preskupo";
+"I don't pay for apps" = "Ne plaćam aplikacije";
+"I need to try it first" = "Prvo ga moram isprobati";
+
+//Feedback - Screen
+"Feedback" = "Povratne informacije";
+"Share your experience with us" = "Podijelite svoje iskustvo s nama";
+"What is your Profession?" = "Koja je vaša profesija?";
+"Write your Suggestions" = "Napišite svoje prijedloge";
+"Submit" = "Pošalji";
+"Write Here..." = "Pišite ovdje...";
+"Write Here your suggestion/Feedback..." = "Ovdje napišite svoj prijedlog/povratnu informaciju...";
+"Please enter text" = "Molimo unesite tekst";
+"Please enter your suggestions" = "Unesite svoje prijedloge";
+"Feedback sent successfully" = "Povratne informacije su uspješno poslane";
+"Check your internet connection" = "Provjerite internetsku vezu";
+"Retry" = "Pokušaj ponovo";
+"OK" = "U REDU";
+
+//Language
+"Change Language" = "Promjena jezika";
+
+//Timeline
+"HAVE DOUBTS?" = "IMATE SUMNJE?";
+"Start with a free trial" = "Započnite s besplatnim probnim razdobljem";
+"View All Plans" = "Pogledajte sve planove";
+"NOW" = "SADA";
+"Today: Get Instant Access" = "Danas: Ostvarite trenutni pristup";
+"Day 2: Trial Reminder" = "2. dan: Podsjetnik na suđenje";
+"Day 3: Premium Begins" = "Dan 3: Premium počinje";
+"Day 5: Trial Reminder" = "Dan 5: Podsjetnik na suđenje";
+"Day 7: Premium Begins" = "Dan 7: Premium počinje";
+"Unlock all the features." = "Otključajte sve značajke.";
+"Get a reminder about when your free trial will end. Cancel anytime in 15 seconds." = "Dobijte podsjetnik o tome kada će vaše besplatno probno razdoblje završiti. Otkažite bilo kada u roku od 15 sekundi.";
+"Your trial will convert to full price unless cancelled." = "Vaše će se probno razdoblje pretvoriti u punu cijenu osim ako se ne otkaže.";
+
+//All Plan
+"Unlock All Features" = "Otključajte sve značajke";
+"Best Value" = "Najbolja vrijednost";
+"Most Popular" = "Najpopularniji";
+"Recommend" = "Preporučiti";
+"Lifetime" = "Životni vijek";
+"Yearly" = "Godišnje";
+"Monthly" = "Mjesečno";
+"Weekly" = "Tjedni";
+"Pay once, enjoy forever" = "Platite jednom, uživajte zauvijek";
+"Enjoy forever" = "Uživaj zauvijek";
+"OFF" = "ISKLJUČENO";
+"Weekly" = "Tjedni";
+"Monthly" = "Mjesečno";
+"Yearly" = "Godišnje";
+"by" = "po";
+
+//Sub Discount
+"Exclusive Deal" = "Ekskluzivna ponuda";
+"Limited Time Offer Specially For You!" = "Vremenski ograničena ponuda posebno za vas!";
+"Don't Miss Out!" = "Ne propustite!";
+"TRY NOW" = "PROBAJTE SADA";
+
+//Subscription
+"day" = "dan";
+"days" = "dana";
+"week" = "tjedan";
+"month" = "mjesec";
+"year" = "godina";
+"Day" = "Dan";
+"Days" = "dana";
+"Week" = "Tjedan";
+"Month" = "Mjesec";
+"Year" = "Godina";
+"Continue" = "Nastaviti";
+"Pay Nothing Now" = "Ne plaćajte ništa sada";
+"Cancel anytime. Secure with App Store" = "Otkaži bilo kada. Zaštitite se uz App Store";
+"Restore" = "Vratiti";
+"Terms of Use" = "Uvjeti korištenja";
+"Privacy Policy" = "Politika privatnosti";
+"per" = "po";
+"Subscription will auto-renew, Cancel anytime." = "Pretplata će se automatski obnoviti, otkazati bilo kada.";
+"Start My Free Trial" = "Pokreni Moje besplatno probno razdoblje";
+"Try" = "Probati";
+"for" = "za";
+"Payment is charged after" = "Plaćanje se naplaćuje nakon";
+"cancel anytime." = "otkazati bilo kada.";
+"free" = "besplatno";
+"then" = "zatim";
+"use" = "koristiti";
+"upto" = "do";
+"Lifetime Purchase" = "Doživotna kupnja";
+"Cancel Anytime" = "Otkaži bilo kada";
+
+//Alert
+"Sorry can't connect iTunes Store" = "Nažalost, ne mogu se povezati s iTunes Storeom";
+"Alert" = "uzbuna";
+"Purchase failed or something went wrong." = "Kupnja nije uspjela ili je nešto pošlo po zlu.";
+"Check your internet connection" = "Provjerite internetsku vezu";
+"Error" = "Greška";
+"Restore failed Or Nothing to Restore First Purchase." = "Vraćanje nije uspjelo ili ništa za vraćanje prve kupnje.";
+
+// New Added
+"Something went wrong!" = "Nešto nije u redu!";
+"Purchase" = "Kupiti";
+"Trending" = "U trendu";
+"Save" = "Uštedjeti";
+"Thank You For Subscription" = "Hvala na pretplati";
+"Now you can enjoy the service!" = "Sada možete uživati ​​u usluzi!";
+"Get Started" = "Započnite";
+
+"Restore Purchase" = "Obnovi kupnju";

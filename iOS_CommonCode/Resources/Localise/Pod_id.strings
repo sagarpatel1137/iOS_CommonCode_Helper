@@ -1,0 +1,124 @@
+
+//Force Update
+"Update Required" = "Diperlukan Pembaruan";
+"We've noticed that you've been using the deprecated application version for a long time. Please update to the latest version and enjoy the app." = "Kami telah memperhatikan bahwa Anda telah menggunakan versi aplikasi yang sudah tidak digunakan lagi untuk waktu yang lama. Harap perbarui ke versi terbaru dan nikmati aplikasinya.";
+"Update" = "Perbarui";
+"Cancel" = "Batal";
+
+//Rating
+"Enjoying the app?" = "Menikmati aplikasinya?";
+"Let us know by leaving a 5 star rating" = "Beri tahu kami dengan memberikan peringkat bintang 5";
+"Ask me later!" = "Tanyakan saya nanti!";
+
+//Feedback - Alert
+"Not interested?" = "Tidak tertarik?";
+"Please share why" = "Harap bagikan alasannya";
+"Don't know what it is" = "Tidak tahu apa itu";
+"Too expensive" = "Terlalu mahal";
+"I don't pay for apps" = "Saya tidak membayar untuk aplikasi";
+"I need to try it first" = "Saya perlu mencobanya terlebih dahulu";
+
+//Feedback - Screen
+"Feedback" = "Umpan Balik";
+"Share your experience with us" = "Bagikan pengalaman Anda dengan kami";
+"What is your Profession?" = "Apa Profesi Anda?";
+"Write your Suggestions" = "Tulis Saran Anda";
+"Submit" = "Kirim";
+"Write Here..." = "Tulis Di Sini...";
+"Write Here your suggestion/Feedback..." = "Tulis Saran/Umpan Balik Anda di Sini...";
+"Please enter text" = "Harap masukkan teks";
+"Please enter your suggestions" = "Harap masukkan saran Anda";
+"Feedback sent successfully" = "Umpan balik berhasil dikirim";
+"Check your internet connection" = "Periksa koneksi internet Anda";
+"Retry" = "Coba lagi";
+"OK" = "Oke";
+
+//Language
+"Change Language" = "Ubah Bahasa";
+
+//Timeline
+"HAVE DOUBTS?" = "RAGU? Mulailah dengan uji coba gratis";
+"Start with a free trial" = "Lihat Semua Paket";
+"View All Plans" = "SEKARANG";
+"NOW" = "Hari Ini: Dapatkan Akses Instan";
+"Today: Get Instant Access" = "Hari 2: Pengingat Uji Coba";
+"Day 2: Trial Reminder" = "Hari 3: Premium Dimulai";
+"Day 3: Premium Begins" = "Hari 5: Pengingat Uji Coba";
+"Day 5: Trial Reminder" = "Hari 7: Premium Dimulai";
+"Day 7: Premium Begins" = "Buka semua fitur.";
+"Unlock all the features." = "Dapatkan pengingat tentang kapan uji coba gratis Anda akan berakhir. Batalkan kapan saja dalam 15 detik.";
+"Get a reminder about when your free trial will end. Cancel anytime in 15 seconds." = "Uji coba Anda akan diubah ke harga penuh kecuali dibatalkan.";
+"Your trial will convert to full price unless cancelled." = "Buka Semua Fitur";
+
+//All Plan
+"Unlock All Features" = "Nilai Terbaik";
+"Best Value" = "Paling Populer";
+"Most Popular" = "Rekomendasikan";
+"Recommend" = "Seumur Hidup";
+"Lifetime" = "Tahunan";
+"Yearly" = "Bulanan";
+"Monthly" = "Mingguan";
+"Weekly" = "Bayar sekali, nikmati selamanya";
+"Pay once, enjoy forever" = "Nikmati selamanya";
+"Enjoy forever" = "DISKON";
+"OFF" = "Mingguan";
+"Weekly" = "Bulanan";
+"Monthly" = "Tahunan";
+"Yearly" = "oleh";
+"by" = "Penawaran Eksklusif";
+
+//Sub Discount
+"Exclusive Deal" = "Penawaran Waktu Terbatas Khusus untuk Anda!";
+"Limited Time Offer Specially For You!" = "Jangan Lewatkan!";
+"Don't Miss Out!" = "COBA SEKARANG";
+"TRY NOW" = "hari";
+
+//Subscription
+"day" = "hari-hari";
+"days" = "minggu";
+"week" = "bulan";
+"month" = "tahun";
+"year" = "Hari";
+"Day" = "Hari";
+"Days" = "Minggu";
+"Week" = "Bulan";
+"Month" = "Tahun";
+"Year" = "Lanjutkan";
+"Continue" = "Tidak Membayar Sekarang";
+"Pay Nothing Now" = "Batalkan kapan saja. Aman dengan App Store";
+"Cancel anytime. Secure with App Store" = "Pulihkan";
+"Restore" = "Persyaratan Penggunaan";
+"Terms of Use" = "Kebijakan Privasi";
+"Privacy Policy" = "per";
+"per" = "Langganan akan otomatis diperbarui, Batalkan kapan saja.";
+"Subscription will auto-renew, Cancel anytime." = "Mulai Uji Coba Gratis Saya";
+"Start My Free Trial" = "Coba";
+"Try" = "untuk";
+"for" = "Pembayaran akan ditagih setelah";
+"Payment is charged after" = "batalkan kapan saja.";
+"cancel anytime." = "gratis";
+"free" = "lalu";
+"then" = "gunakan";
+"use" = "hingga";
+"upto" = "Pembelian Seumur Hidup";
+"Lifetime Purchase" = "Batalkan Kapan Saja";
+"Cancel Anytime" = "Maaf tidak dapat terhubung ke iTunes Store";
+
+//Alert
+"Sorry can't connect iTunes Store" = "Peringatan";
+"Alert" = "Pembelian gagal atau terjadi kesalahan.";
+"Purchase failed or something went wrong." = "Periksa koneksi internet Anda";
+"Check your internet connection" = "Kesalahan";
+"Error" = "Pemulihan gagal Atau Tidak Ada yang Dapat Dipulihkan untuk Memulihkan Pembelian Pertama.";
+"Restore failed Or Nothing to Restore First Purchase." = "Ada yang salah!";
+
+// New AddPembelianed
+"Something went wrong!" = "Tren";
+"Purchase" = "Simpan";
+"Trending" = "Terima Kasih Atas Langganan";
+"Save" = "Sekarang Anda dapat menikmati layanannya!";
+"Thank You For Subscription" = "Mulai";
+"Now you can enjoy the service!" = "Pulihkan Pembelian";
+"Get Started" = "Diperlukan Pembaruan";
+
+"Restore Purchase" = "Kami telah memperhatikan bahwa Anda telah menggunakan versi aplikasi yang sudah tidak digunakan lagi untuk waktu yang lama. Harap perbarui ke versi terbaru dan nikmati aplikasinya.";
