@@ -729,7 +729,7 @@ extension RevenueCat_Manager
         
     }
 }
-
+/*
 extension RevenueCat_Manager {
     func updateContinueButtonTitle(_ subsciptionContinueBtnText: Int) -> String {
         
@@ -776,3 +776,4 @@ extension RevenueCat_Manager {
         return buttoText
     }
 }
+*/

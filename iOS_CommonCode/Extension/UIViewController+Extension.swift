@@ -142,7 +142,7 @@ extension UIViewController
         isPresentSubAlertSheet: Bool = true,
         isRatingScrollEnable: Bool = true,
         customizationSubTimelineTheme: UICustomizationSubTimelineTheme? = nil,
-        customizationSubMorePlan: UICustomizationSubMorePlan? = nil,
+        customizationSubMorePlan: UICustomizationSubMorePlan?,
         customizationSubRatingData: UICustomizationSubRatingData?,
         customizationWebViewData: UICustomizationWebView? = nil,
         customizationAllPlan: UICustomizationAllPlan?,
@@ -192,6 +192,7 @@ extension UIViewController
     public func openSubMorePlanVC(
         isFromTimeline: Bool,
         arrReview: [ReviewModel],
+        subsciptionContinueBtnTextIndex: Int,
         isPresentSubAlertSheet: Bool = true,
         customizationSubMorePlan: UICustomizationSubMorePlan?,
         customizationSubRatingData: UICustomizationSubRatingData?,
@@ -204,22 +205,23 @@ extension UIViewController
             
             guard let self = self else { return }
             if SubscriptionConst.isGet {
-                let subAllPlanVC = SubMorePlanVC()
-                subAllPlanVC.isFromTimeline = isFromTimeline
-                subAllPlanVC.arrReview = arrReview
-                subAllPlanVC.isPresentSubAlertSheet = isPresentSubAlertSheet
-                subAllPlanVC.customizationSubMorePlan = customizationSubMorePlan
-                subAllPlanVC.customizationSubRatingData = customizationSubRatingData
-                subAllPlanVC.customizationSubRatingData = customizationSubRatingData
-                subAllPlanVC.customizationWebViewData = customizationWebViewData
-                subAllPlanVC.isOpenFrom = isOpenFrom
-                subAllPlanVC.completionMorePlan = { (result, param) in
+                let subMorePlanVC = SubMorePlanVC()
+                subMorePlanVC.isFromTimeline = isFromTimeline
+                subMorePlanVC.arrReview = arrReview
+                subMorePlanVC.subsciptionContinueBtnTextIndex = subsciptionContinueBtnTextIndex
+                subMorePlanVC.isPresentSubAlertSheet = isPresentSubAlertSheet
+                subMorePlanVC.customizationSubMorePlan = customizationSubMorePlan
+                subMorePlanVC.customizationSubRatingData = customizationSubRatingData
+                subMorePlanVC.customizationSubRatingData = customizationSubRatingData
+                subMorePlanVC.customizationWebViewData = customizationWebViewData
+                subMorePlanVC.isOpenFrom = isOpenFrom
+                subMorePlanVC.completionMorePlan = { (result, param) in
                     completionMorePlan(result, param)
                 }
-                subAllPlanVC.modalTransitionStyleForWebVC = modalTransitionStyle
-                subAllPlanVC.modalPresentationStyle = .fullScreen
-                subAllPlanVC.modalTransitionStyle = modalTransitionStyle
-                self.present(subAllPlanVC, animated: true, completion: nil)
+                subMorePlanVC.modalTransitionStyleForWebVC = modalTransitionStyle
+                subMorePlanVC.modalPresentationStyle = .fullScreen
+                subMorePlanVC.modalTransitionStyle = modalTransitionStyle
+                self.present(subMorePlanVC, animated: true, completion: nil)
             } else {
                 if Reachability_Manager.isConnectedToNetwork() {
                     self.view.makeToast_Pod("Something went to wrong..!".localized(), duration: 4.0)

@@ -20,7 +20,6 @@ public struct UICustomizationSubMorePlan {
     public var arrStrListFeatures: [String]
     public var sixBoxDynamicPlan: [Int]
     public var sixBoxDynamicPlanSelectedIndex: Int
-    public var subsciptionContinueBtnText: Int
     
     public var buttonBGType: ButtonBGType = .animateJson
     public var btnContinueSolidColor: UIColor?
@@ -31,13 +30,12 @@ public struct UICustomizationSubMorePlan {
     public var btnJsonFilenameiPhone: String?
     public var btnJsonFilenameiPad: String?
     
-    public init(arrImgListFeatures: [UIImage], arrImgListFeatures_BG: [UIImage], arrStrListFeatures: [String], sixBoxDynamicPlan: [Int], sixBoxDynamicPlanSelectedIndex: Int, subsciptionContinueBtnText: Int, buttonBGType: ButtonBGType = .animateJson, btnContinueSolidColor: UIColor? = nil, btnContinueFromColor: UIColor? = nil, btnContinueToColor: UIColor? = nil, btnContinueImageiPhone: UIImage? = nil, btnContinueImageiPad: UIImage? = nil, btnJsonFilenameiPhone: String? = nil, btnJsonFilenameiPad: String? = nil) {
+    public init(arrImgListFeatures: [UIImage], arrImgListFeatures_BG: [UIImage], arrStrListFeatures: [String], sixBoxDynamicPlan: [Int], sixBoxDynamicPlanSelectedIndex: Int, buttonBGType: ButtonBGType = .animateJson, btnContinueSolidColor: UIColor? = nil, btnContinueFromColor: UIColor? = nil, btnContinueToColor: UIColor? = nil, btnContinueImageiPhone: UIImage? = nil, btnContinueImageiPad: UIImage? = nil, btnJsonFilenameiPhone: String? = nil, btnJsonFilenameiPad: String? = nil) {
         self.arrImgListFeatures = arrImgListFeatures
         self.arrImgListFeatures_BG = arrImgListFeatures_BG
         self.arrStrListFeatures = arrStrListFeatures
         self.sixBoxDynamicPlan = sixBoxDynamicPlan
         self.sixBoxDynamicPlanSelectedIndex = sixBoxDynamicPlanSelectedIndex
-        self.subsciptionContinueBtnText = subsciptionContinueBtnText
         self.buttonBGType = buttonBGType
         self.btnContinueSolidColor = btnContinueSolidColor ?? .clear
         self.btnContinueFromColor = btnContinueFromColor ?? .clear
@@ -119,6 +117,7 @@ public class SubMorePlanVC: UIViewController {
     var isFromTimeline = false
     var completionMorePlan: ((SubCloseCompletionBlock, [String: String]?)->())?
     
+    public var subsciptionContinueBtnTextIndex = 0
     public var customizationSubMorePlan: UICustomizationSubMorePlan?
     public var customizationSubRatingData: UICustomizationSubRatingData?
     public var customizationWebViewData: UICustomizationWebView?
@@ -292,7 +291,7 @@ public class SubMorePlanVC: UIViewController {
             img.image = self.customizationSubMorePlan?.arrImgListFeatures_BG[i]
         }
         
-        lblSubscribe.text = RevenueCat_Manager.shared.updateContinueButtonTitle(self.customizationSubMorePlan?.subsciptionContinueBtnText ?? 0)
+        lblSubscribe.text = "Continue".localized().uppercased()
         lblRestore.text = "Restore".localized() + " "
         lblTerms.text = "Terms of Use".localized() + " "
         lblPrivacy.text = "Privacy Policy".localized() + " "
@@ -734,7 +733,7 @@ extension SubMorePlanVC {
     private func setPlanDetails(_ selectedIndex: Int) {
         DispatchQueue.main.async { [self] in
             
-            lblSubscribe.text = RevenueCat_Manager.shared.updateContinueButtonTitle(self.customizationSubMorePlan?.subsciptionContinueBtnText ?? 0)
+            lblSubscribe.text = "Continue".localized().uppercased()
             lblFreeTrial.text = "Subscription will auto-renew, Cancel anytime.".localized() + " "
             lblPayNothingNow.isHidden = true
             lblPayNothingNow.isHidden = true
@@ -757,6 +756,12 @@ extension SubMorePlanVC {
             let selectPlanPrice = selected_Plan.plan_Price_String
             
             if selected_Plan.plan_Free_Trail.isFreeTrail {
+                if subsciptionContinueBtnTextIndex == 1 {
+                    lblSubscribe.text = "Start My Free Trial".localized().uppercased() + " "
+                }
+                else if subsciptionContinueBtnTextIndex == 2 {
+                    lblSubscribe.text = "\("Try".localized()) \(selected_Plan.plan_Free_Trail.duration) \(selected_Plan.plan_Free_Trail.unittype.localized()) \("for".localized()) \(selected_Plan.plan_Currancy_Code)0"
+                }
                 lblPayNothingNow.text = "Pay Nothing Now".localized()
                 lblPayNothingNow.isHidden = false
                 lblSubRenew_Top.constant = UIDevice.current.isiPad ? 18.0 : 14.0
@@ -800,7 +805,6 @@ extension SubMorePlanVC {
                 lblFreeTrial.text = str
             }
             else if selected_Plan.plan_Type == .lifetime {
-                lblSubscribe.text = "Continue".localized().uppercased()
                 lblFreeTrial.text = "Lifetime Purchase".localized() + " "
                 if !lblFreeTrial.isHidden {
                     let str = "\(selectPlanPrice) \("for".localized()) \("Lifetime".localized().lowercased()) \("use".localized())"

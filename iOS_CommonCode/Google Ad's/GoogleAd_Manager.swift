@@ -199,6 +199,7 @@ extension GoogleAd_Manager
                                     loader.removeFromSuperview()
                                 }
                             }
+                            self.bannerAd_present = nil
                             parentView.addSubview(self.bannerViewAd)
                         }
                     }

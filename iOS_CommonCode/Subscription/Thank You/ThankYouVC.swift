@@ -9,13 +9,15 @@ import UIKit
 
 //MARK: Cusmization
 public struct UICustomizationSubThankYouTheme {
+    public var mainViewColor: UIColor?
     public var textColor: UIColor?
     public var btnGetStartedTextColor: UIColor?
     public var btnGetStartedFromColor: UIColor?
     public var btnGetStartedToColor: UIColor?
     public var imgPlaceholder: UIImage?
     
-    public init(textColor: UIColor? = nil, btnGetStartedTextColor: UIColor? = nil, btnGetStartedFromColor: UIColor? = nil, btnGetStartedToColor: UIColor? = nil, imgPlaceholder: UIImage? = nil) {
+    public init(mainViewColor: UIColor? = nil, textColor: UIColor? = nil, btnGetStartedTextColor: UIColor? = nil, btnGetStartedFromColor: UIColor? = nil, btnGetStartedToColor: UIColor? = nil, imgPlaceholder: UIImage? = nil) {
+        self.mainViewColor = textColor ?? .white
         self.textColor = textColor ?? .black
         self.btnGetStartedTextColor = btnGetStartedTextColor ?? .white
         self.btnGetStartedFromColor = btnGetStartedFromColor ?? hexStringToUIColor(hex: "00C6FB")
@@ -118,6 +120,7 @@ public class ThankYouVC: UIViewController {
 extension ThankYouVC {
     private func updateUI() {
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.0) {
+            self.view.backgroundColor = self.customizationSubThankYouTheme.mainViewColor ?? .white
             self.lblTitle.textColor = self.customizationSubThankYouTheme.textColor ?? .black
             let from = self.customizationSubThankYouTheme.btnGetStartedFromColor ?? hexStringToUIColor(hex: "00C6FB")
             let to = self.customizationSubThankYouTheme.btnGetStartedToColor ?? hexStringToUIColor(hex: "005BEA")

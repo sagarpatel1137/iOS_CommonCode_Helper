@@ -13,6 +13,7 @@ import SwiftConfettiView
 import RevenueCat
 
 public struct UICustomizationSubDiscountTheme {
+    public var mainViewColor: UIColor?
     public var popupImageBG: UIImage?
     public var popupImageTopBG: UIImage?
     public var subPopupImageBG: UIImage?
@@ -22,7 +23,8 @@ public struct UICustomizationSubDiscountTheme {
     public var lblGetLifetimeColor: UIColor?
     public var lblDontMissColor: UIColor?
     
-    public init(popupImageBG: UIImage? = nil, popupImageTopBG: UIImage? = nil, subPopupImageBG: UIImage? = nil, imgButtonTryNow: UIImage? = nil, imgBtnClose: UIImage? = nil, lblPriceColor: UIColor? = nil, lblGetLifetimeColor: UIColor? = nil, lblDontMissColor: UIColor? = nil) {
+    public init(mainViewColor: UIColor? = nil, popupImageBG: UIImage? = nil, popupImageTopBG: UIImage? = nil, subPopupImageBG: UIImage? = nil, imgButtonTryNow: UIImage? = nil, imgBtnClose: UIImage? = nil, lblPriceColor: UIColor? = nil, lblGetLifetimeColor: UIColor? = nil, lblDontMissColor: UIColor? = nil) {
+        self.mainViewColor = mainViewColor ?? .black.withAlphaComponent(0.5)
         self.popupImageBG = popupImageBG ?? ImageHelper.image(named: "ic_sub_popup_bg")
         self.popupImageTopBG = popupImageTopBG ?? ImageHelper.image(named: "ic_sub_popup_top")
         self.subPopupImageBG = subPopupImageBG ?? ImageHelper.image(named: "ic_sub_popup_offer_bg")
@@ -87,6 +89,8 @@ public class SubDiscountVC: UIViewController {
     //MARK: - Set Up
     
     private func updateUI() {
+        self.view.backgroundColor = self.customizationSubDiscountTheme.mainViewColor ?? .black
+        
         if let popupImageBG = customizationSubDiscountTheme.popupImageBG {
             self.imgPopupImage.image = popupImageBG
         }

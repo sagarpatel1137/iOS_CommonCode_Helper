@@ -188,6 +188,10 @@ public class SubTimelineVC: UIViewController {
         super.viewDidLayoutSubviews()
         self.viewContinue.layer.cornerRadius = self.viewContinue.bounds.height/2
         self.viewContinue.clipsToBounds = true
+        self.viewShield.layer.cornerRadius = self.viewShield.bounds.height/2
+        self.viewLock.layer.cornerRadius = self.viewLock.bounds.height/2
+        self.viewProgress.layer.cornerRadius = self.viewProgress.bounds.width/2
+        self.btnMorePlans.titleLabel?.adjustsFontSizeToFitWidth = true
     }
     
     deinit {
@@ -196,20 +200,14 @@ public class SubTimelineVC: UIViewController {
     
     //MARK: - Set Up
     private func setUpUI() {
-        DispatchQueue.main.async { [weak self] in
-            guard let self = self else { return }
-            self.viewShield.layer.cornerRadius = self.viewShield.bounds.height/2
-            self.viewLock.layer.cornerRadius = self.viewLock.bounds.height/2
-            self.viewProgress.layer.cornerRadius = self.viewProgress.bounds.width/2
-            self.btnMorePlans.titleLabel?.adjustsFontSizeToFitWidth = true
-            self.btnMorePlans.titleLabel?.minimumScaleFactor = 0.5
-            self.btnPrivacyPolicy.titleLabel?.numberOfLines = 0
-            self.btnTermsOfUse.titleLabel?.numberOfLines = 0
-            
-            self.btnMorePlans.isHidden = false
-            self.lblFreeTrialText.text = nil
-            self.btnClose.setImage(ImageHelper.image(named: "ic_sub_close")!, for: .normal)
-        }
+        btnMorePlans.titleLabel?.adjustsFontSizeToFitWidth = true
+        btnMorePlans.titleLabel?.minimumScaleFactor = 0.5
+        btnPrivacyPolicy.titleLabel?.numberOfLines = 0
+        btnTermsOfUse.titleLabel?.numberOfLines = 0
+        
+        btnMorePlans.isHidden = false
+        lblFreeTrialText.text = nil
+        btnClose.setImage(ImageHelper.image(named: "ic_sub_close")!, for: .normal)
     }
     
     private func setUpText() {
@@ -324,6 +322,7 @@ public class SubTimelineVC: UIViewController {
     private func openSubMorePlanVC() {
         self.openSubMorePlanVC(isFromTimeline: true,
                                arrReview: self.arrReview,
+                               subsciptionContinueBtnTextIndex: subsciptionContinueBtnTextIndex,
                                isPresentSubAlertSheet: isPresentSubAlertSheet,
                                customizationSubMorePlan: customizationSubMorePlan,
                                customizationSubRatingData: customizationSubRatingData,
