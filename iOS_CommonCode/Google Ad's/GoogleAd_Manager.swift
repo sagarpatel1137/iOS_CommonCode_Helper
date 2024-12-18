@@ -149,8 +149,7 @@ extension GoogleAd_Manager
 {
     public func funShowBannerAd(parentView: UIView, loaderType: LoaderType = .AdsByDeveloper, adByDeveloperTextColor: UIColor? = nil, customLoader: UIView? = nil)
     {
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.25) { [self] in
-            
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.0) { [self] in
             
             if !Purchase_flag {
                 
@@ -166,28 +165,11 @@ extension GoogleAd_Manager
                         fatalError("Vasundhara 🏢 - Google Banner Ad : customLoader View Missing.")
                     }
                 }
-                
-                if isBannerAdLoaded {
-                    if bannerAd_present != nil {
-                        bannerAd_present!()
-                    }
-                    DispatchQueue.main.async {
-                        switch loaderType {
-                        case .Shimmer:
-                            parentView.removeShimmerViewForAdType()
-                        case .AdsByDeveloper:
-                            parentView.removeAdByDeveloperViewForAd()
-                        case .Custom:
-                            if let loader = customLoader {
-                                loader.removeFromSuperview()
-                            }
+                if Reachability_Manager.isConnectedToNetwork() {
+                    if isBannerAdLoaded {
+                        if bannerAd_present != nil {
+                            bannerAd_present!()
                         }
-                    }
-                    parentView.addSubview(self.bannerViewAd)
-                }
-                else {
-                    load_BannerAd()
-                    bannerAd_present = {
                         DispatchQueue.main.async {
                             switch loaderType {
                             case .Shimmer:
@@ -199,8 +181,25 @@ extension GoogleAd_Manager
                                     loader.removeFromSuperview()
                                 }
                             }
-                            self.bannerAd_present = nil
-                            parentView.addSubview(self.bannerViewAd)
+                        }
+                        parentView.addSubview(self.bannerViewAd)
+                    } else {
+                        load_BannerAd()
+                        bannerAd_present = {
+                            DispatchQueue.main.async {
+                                switch loaderType {
+                                case .Shimmer:
+                                    parentView.removeShimmerViewForAdType()
+                                case .AdsByDeveloper:
+                                    parentView.removeAdByDeveloperViewForAd()
+                                case .Custom:
+                                    if let loader = customLoader {
+                                        loader.removeFromSuperview()
+                                    }
+                                }
+                                self.bannerAd_present = nil
+                                parentView.addSubview(self.bannerViewAd)
+                            }
                         }
                     }
                 }
@@ -681,7 +680,6 @@ extension GoogleAd_Manager : GADBannerViewDelegate
     
     public func bannerView(_ bannerView: GADBannerView, didFailToReceiveAdWithError error: Error) {
         isRequeSendForLoad_BannerAd = false
-//        load_BannerAd()
     }
 }
 
