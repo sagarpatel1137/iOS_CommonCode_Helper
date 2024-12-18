@@ -17,7 +17,7 @@ public struct UICustomizationSubThankYouTheme {
     public var imgPlaceholder: UIImage?
     
     public init(mainViewColor: UIColor? = nil, textColor: UIColor? = nil, btnGetStartedTextColor: UIColor? = nil, btnGetStartedFromColor: UIColor? = nil, btnGetStartedToColor: UIColor? = nil, imgPlaceholder: UIImage? = nil) {
-        self.mainViewColor = textColor ?? .white
+        self.mainViewColor = mainViewColor ?? .white
         self.textColor = textColor ?? .black
         self.btnGetStartedTextColor = btnGetStartedTextColor ?? .white
         self.btnGetStartedFromColor = btnGetStartedFromColor ?? hexStringToUIColor(hex: "00C6FB")
@@ -121,7 +121,7 @@ extension ThankYouVC {
     private func updateUI() {
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.0) {
             self.view.backgroundColor = self.customizationSubThankYouTheme.mainViewColor ?? .white
-            self.lblTitle.textColor = self.customizationSubThankYouTheme.textColor ?? .black
+            self.lblTitle.textColor = self.customizationSubThankYouTheme.textColor ?? .white
             let from = self.customizationSubThankYouTheme.btnGetStartedFromColor ?? hexStringToUIColor(hex: "00C6FB")
             let to = self.customizationSubThankYouTheme.btnGetStartedToColor ?? hexStringToUIColor(hex: "005BEA")
             self.btnStart.addGradient(colors: [from, to])
