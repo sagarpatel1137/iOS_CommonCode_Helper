@@ -142,6 +142,17 @@ extension GoogleAd_Manager
             }
         }
     }
+    
+    public func funIsRewardedIntAdAvailable(completion: @escaping (()->())) {
+        if rewardedIntAd != nil {
+            completion()
+        } else {
+            load_RewardedIntAd()
+            rewardedIntAd_LoadDone = {
+                completion()
+            }
+        }
+    }
 }
 
 //MARK: - Ad Show
@@ -578,9 +589,9 @@ extension GoogleAd_Manager
         }
         
         rewardedIntAd = nil
-        if !Purchase_flag && Reachability_Manager.isConnectedToNetwork() && !isRequeSendForLoad_RewardedAd
+        if !Purchase_flag && Reachability_Manager.isConnectedToNetwork() && !isRequeSendForLoad_RewardedIntAd
         {
-            isRequeSendForLoad_RewardedAd = true
+            isRequeSendForLoad_RewardedIntAd = true
             let request = GADRequest()
             
             GADRewardedInterstitialAd.load(withAdUnitID: RewardedInt_ID, request: request) { [self] (ad, error) in
@@ -589,7 +600,7 @@ extension GoogleAd_Manager
                     load_RewardedIntAd()
                     return
                 }
-                isRequeSendForLoad_RewardedAd = false
+                isRequeSendForLoad_RewardedIntAd = false
                 rewardedIntAd = ad!
                 rewardedIntAd?.fullScreenContentDelegate = self
                 

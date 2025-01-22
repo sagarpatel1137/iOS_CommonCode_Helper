@@ -147,6 +147,7 @@ extension UIViewController
         customizationWebViewData: UICustomizationWebView? = nil,
         customizationAllPlan: UICustomizationAllPlan?,
         lifetimeDiscountVal: Int = 80,
+        selectedPlanIndex: Int,
         isOpenFrom: String,
         modalTransitionStyle: UIModalTransitionStyle = .crossDissolve,
         completionTimeline: @escaping (SubCloseCompletionBlock, [String: String]?) -> Void
@@ -167,6 +168,7 @@ extension UIViewController
             subTimelineVC.customizationWebViewData = customizationWebViewData
             subTimelineVC.customizationAllPlan = customizationAllPlan
             subTimelineVC.lifetimeDiscountVal = lifetimeDiscountVal
+            subTimelineVC.selectedPlanIndex = selectedPlanIndex
             subTimelineVC.isOpenFrom = isOpenFrom
             subTimelineVC.completionTimeline = { (result, param) in
                 completionTimeline(result, param)

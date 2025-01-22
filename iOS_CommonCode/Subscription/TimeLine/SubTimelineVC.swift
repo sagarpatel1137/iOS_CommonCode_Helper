@@ -154,6 +154,16 @@ public class SubTimelineVC: UIViewController {
     public var isOpenFrom = ""
     public var isPresentSubAlertSheet = true
     public var modalTransitionStyleForWebVC: UIModalTransitionStyle = .crossDissolve
+    public var selectedPlanIndex = 1
+    
+    /*
+    enum PlansType: Int {
+        case week = 3
+        case month = 1
+        case year = 2
+        case lifetime = 0
+    }
+     */
     
     public override var prefersStatusBarHidden: Bool {
         return true
@@ -162,10 +172,16 @@ public class SubTimelineVC: UIViewController {
     //MARK: -
     public override func viewDidLoad() {
         super.viewDidLoad()
-        
-        selected_Plan = SubscriptionConst.ActivePlans.one_Month
-
-        AddFirebaseEvent(eventName: .SubMonthltyTimeLimeShow, parameters: ["from": self.isOpenFrom])
+        if selectedPlanIndex == 2 {
+            selected_Plan = SubscriptionConst.ActivePlans.one_Year
+            AddFirebaseEvent(eventName: .SubYearlyTimeLimeShow, parameters: ["from": self.isOpenFrom])
+        } else if selectedPlanIndex == 3 {
+            selected_Plan = SubscriptionConst.ActivePlans.one_Week
+            AddFirebaseEvent(eventName: .SubWeeklyTimeLimeShow, parameters: ["from": self.isOpenFrom])
+        } else {
+            selected_Plan = SubscriptionConst.ActivePlans.one_Month
+            AddFirebaseEvent(eventName: .SubMonthltyTimeLimeShow, parameters: ["from": self.isOpenFrom])
+        }
         
         AddNotification()
         
@@ -368,11 +384,20 @@ public class SubTimelineVC: UIViewController {
     }
     
     @IBAction func btnStartAction(_ sender: UIButton) {
-        AddFirebaseEvent(eventName: .SubMonthltyTimeLimeClick, parameters: [
+        let param = [
             "from": self.isOpenFrom,
             "sku" : self.selected_Plan.plan_Id,
             "type" : self.selected_Plan.plan_Type.rawValue
-        ])
+        ]
+    
+        if selectedPlanIndex == 2 {
+            AddFirebaseEvent(eventName: .SubYearlyTimeLimeClick, parameters: param)
+        } else if selectedPlanIndex == 3 {
+            AddFirebaseEvent(eventName: .SubWeeklyTimeLimeClick, parameters: param)
+        } else {
+            AddFirebaseEvent(eventName: .SubMonthltyTimeLimeClick, parameters: param)
+        }
+        
         purchaseByRevenueKit()
     }
     
@@ -392,24 +417,34 @@ extension SubTimelineVC
     {
         self.startPriceLoader()
         
-        if SubscriptionConst.ActivePlans.one_Month.plan_Id != ""
+        if let plan = selected_Plan, selected_Plan.plan_Id != ""
         {
-            let monthPlan = SubscriptionConst.ActivePlans.one_Month
-            let freeTrialMonth = monthPlan.plan_Free_Trail
-            let tempMonthlyPriceString = monthPlan.plan_Price_String
+            let freeTrial = plan.plan_Free_Trail
+            let tempPriceString = plan.plan_Price_String
             
-            if freeTrialMonth.isFreeTrail {
-                self.lblFreeTrialText.text = "\(monthPlan.plan_Free_Trail.duration) \(monthPlan.plan_Free_Trail.unittype.localized()) \("free".localized()), \("then".localized()) \(tempMonthlyPriceString) \("per".localized()) \("month".localized())"
-                
+            if freeTrial.isFreeTrail {
+                if selectedPlanIndex == 2 {
+                    self.lblFreeTrialText.text = "\(plan.plan_Free_Trail.duration) \(plan.plan_Free_Trail.unittype.localized()) \("free".localized()), \("then".localized()) \(tempPriceString) \("per".localized()) \("year".localized())"
+                } else if selectedPlanIndex == 3 {
+                    self.lblFreeTrialText.text = "\(plan.plan_Free_Trail.duration) \(plan.plan_Free_Trail.unittype.localized()) \("free".localized()), \("then".localized()) \(tempPriceString) \("per".localized()) \("week".localized())"
+                } else {
+                    self.lblFreeTrialText.text = "\(plan.plan_Free_Trail.duration) \(plan.plan_Free_Trail.unittype.localized()) \("free".localized()), \("then".localized()) \(tempPriceString) \("per".localized()) \("month".localized())"
+                }
                 if subsciptionContinueBtnTextIndex == 1 {
                     self.lblStartTrial.text =  "Start My Free Trial".localized().uppercased() + " "
                 }
                 else if subsciptionContinueBtnTextIndex == 2 {
-                    self.lblStartTrial.text = "\("Try".localized()) \(monthPlan.plan_Free_Trail.duration) \(monthPlan.plan_Free_Trail.unittype.localized()) \("for".localized()) \(monthPlan.plan_Currancy_Code)0"
+                    self.lblStartTrial.text = "\("Try".localized()) \(plan.plan_Free_Trail.duration) \(plan.plan_Free_Trail.unittype.localized()) \("for".localized()) \(plan.plan_Currancy_Code)0"
                 }
             }
             else {
-                self.lblFreeTrialText.text = "\(tempMonthlyPriceString)/\("Month".localized()), \("Cancel Anytime".localized())."
+                if selectedPlanIndex == 2 {
+                    self.lblFreeTrialText.text = "\(tempPriceString)/\("Year".localized()), \("Cancel Anytime".localized())."
+                } else if selectedPlanIndex == 3 {
+                    self.lblFreeTrialText.text = "\(tempPriceString)/\("Week".localized()), \("Cancel Anytime".localized())."
+                } else {
+                    self.lblFreeTrialText.text = "\(tempPriceString)/\("Month".localized()), \("Cancel Anytime".localized())."
+                }
             }
         }
         self.stopPriceLoader()
@@ -486,7 +521,14 @@ extension SubTimelineVC
             "sku" : self.selected_Plan.plan_Id,
             "type" : self.selected_Plan.plan_Type.rawValue
         ]
-        AddFirebaseEvent(eventName: .SubMonthltyMonthTimeLimeTrial, parameters: param)
+        
+        if selectedPlanIndex == 2 {
+            AddFirebaseEvent(eventName: .SubWeeklyWeekTimeLimeTrial, parameters: param)
+        } else if selectedPlanIndex == 3 {
+            AddFirebaseEvent(eventName: .SubYearlyYearTimeLimeTrial, parameters: param)
+        } else {
+            AddFirebaseEvent(eventName: .SubMonthltyMonthTimeLimeTrial, parameters: param)
+        }
         
         scheduleFreeTrialNotification(noOfDays: selected_Plan.plan_Free_Trail.duration)
         

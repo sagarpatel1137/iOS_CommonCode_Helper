@@ -16,9 +16,17 @@ func AddFirebaseEvent(eventName: EventsValues, parameters: [String:Any] = [:]) {
 enum EventsValues: String {
     
     // Timeline
-    case SubMonthltyTimeLimeShow            =    "_TIMELINE_SUBS"
-    case SubMonthltyTimeLimeClick           =    "_TIMELINE_SUBS_CLICK"
-    case SubMonthltyMonthTimeLimeTrial      =    "_TIMELINE_SUBS_TRIAL"
+    case SubMonthltyTimeLimeShow            =    "_TIMELINE_MONTHLY_SUBS"
+    case SubMonthltyTimeLimeClick           =    "_TIMELINE_MONTHLY_SUBS_CLICK"
+    case SubMonthltyMonthTimeLimeTrial      =    "_TIMELINE_MONTHLY_SUBS_TRIAL"
+    
+    case SubYearlyTimeLimeShow              =    "_TIMELINE_YEARLY_SUBS"
+    case SubYearlyTimeLimeClick             =    "_TIMELINE_YEARLY_SUBS_CLICK"
+    case SubYearlyYearTimeLimeTrial         =    "_TIMELINE_YEARLY_SUBS_TRIAL"
+    
+    case SubWeeklyTimeLimeShow              =    "_TIMELINE_WEEKLY_SUBS"
+    case SubWeeklyTimeLimeClick             =    "_TIMELINE_WEEKLY_SUBS_CLICK"
+    case SubWeeklyWeekTimeLimeTrial         =    "_TIMELINE_WEEKLY_SUBS_TRIAL"
     
     // All Plan
     case SubAllPlanShow                     =    "_ALL_PLAN_SUBS"
